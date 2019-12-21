@@ -33,7 +33,7 @@ public class ArchiveUtil {
             byte[] buffer = new byte[1024];
             int read = -1;
             while ((read = bis.read(buffer)) != -1) {
-                gcos.write(buffer, 0 , read);
+                gcos.write(buffer, 0, read);
             }
             gcos.flush();
         } finally {
