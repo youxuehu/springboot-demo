@@ -1,6 +1,5 @@
 package com.example.springbootdemo.common.hadoop1;
 
-import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.*;
@@ -17,7 +16,7 @@ import java.util.Map;
 /**
  * hadoop1.2.1 客户端连接
  */
-@Component
+//@Component
 public class HadoopUtil implements InitializingBean {
 
     @Value("${hdfs.master}")
