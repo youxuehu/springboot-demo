@@ -3,11 +3,14 @@ package com.example.springbootdemo.utils.http;
 import org.apache.http.HttpException;
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
+import org.apache.http.client.HttpClient;
 import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.utils.URIBuilder;
+import org.apache.http.conn.ssl.NoopHostnameVerifier;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
+import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,6 +28,10 @@ public class HttpUtils {
     public HttpResponseParam post2Parameter(HttpRequestParams req, int connectTimeout, int connectionRequestTimeout) {
         HttpResponseParam res = new HttpResponseParam();
         try (CloseableHttpClient httpClient = HttpClientBuilder.create().build()) {
+            //http
+            HttpClient h = HttpClients.createDefault();
+            //https
+            HttpClient h2 = HttpClients.custom().setSSLHostnameVerifier(new NoopHostnameVerifier()).build();
             URIBuilder builder = new URIBuilder(req.getUrl());
             Map<String, String> bodys = req.getParams();
             if (bodys != null && bodys.size()  > 0) {
