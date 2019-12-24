@@ -10,8 +10,8 @@ import java.util.List;
 import java.util.Map;
 
 
-@RestController
-@RequestMapping("/hive2")
+//@RestController
+//@RequestMapping("/hive2")
 public class HiveController {
 
     @Autowired
