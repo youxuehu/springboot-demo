@@ -6,6 +6,8 @@ import org.apache.commons.compress.compressors.gzip.GzipCompressorOutputStream;
 import org.apache.commons.io.IOUtils;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ArchiveUtil {
 
@@ -65,7 +67,40 @@ public class ArchiveUtil {
         }
     }
 
+    public static void test() {
+        List<String> cmds = new ArrayList<>();
+        cmds.add("/bin/sh");
+        cmds.add("-c");
+        cmds.add("cd /Users/youxuehu/IdeaProjects/springboot-demo/src/main/java/com/example/springbootdemo/utils && cat ArchiveUtil.java");
+        try {
+            boolean b = runShell(cmds);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static boolean runShell(List<String> cmds) throws Exception{
+        ProcessBuilder processBuilder = new ProcessBuilder();
+        processBuilder.command(cmds);
+        processBuilder.redirectErrorStream(true);
+        boolean success = false;
+        Process process = processBuilder.start();
+        int returnCode = process.waitFor();
+        InputStream inputStream = process.getInputStream();
+        List<String> readLines = IOUtils.readLines(inputStream, "utf-8");
+        for (String line : readLines) {
+            System.out.println(line);
+        }
+        process.destroy();
+        if (0 == returnCode) {
+            success = true;
+        }
+        return success;
+    }
+
     public static void main(String[] args) throws Exception {
-        generateTargz(new File("/Users/youxuehu/IdeaProjects/springboot-demo/target/classes"));
+//        generateTargz(new File("/Users/youxuehu/IdeaProjects/springboot-demo/target/classes"));
+        test();
     }
 }
