@@ -164,6 +164,13 @@
             <version>0.98.24-hadoop2</version>
         </dependency>
 
+        <!--storm-->
+        <dependency>
+            <groupId>org.apache.storm</groupId>
+            <artifactId>storm-core</artifactId>
+            <version>0.9.3</version>
+        </dependency>
+
     </dependencies>
     <build>
         <plugins>
