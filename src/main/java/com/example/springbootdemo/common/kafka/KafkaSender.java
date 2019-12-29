@@ -10,7 +10,7 @@ import org.springframework.util.concurrent.ListenableFuture;
 
 import java.util.Date;
 
-@Service
+//@Service
 public class KafkaSender {
 
     @Autowired
