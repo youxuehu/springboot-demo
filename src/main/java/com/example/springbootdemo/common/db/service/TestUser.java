@@ -8,7 +8,7 @@ import org.springframework.util.CollectionUtils;
 
 import java.util.List;
 
-@Component
+//@Component
 public class TestUser implements InitializingBean {
     @Autowired
     private UserService userService;
