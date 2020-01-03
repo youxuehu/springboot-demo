@@ -1,10 +1,13 @@
 package com.example.springbootdemo.utils.http;
 
+import org.apache.commons.io.IOUtils;
+import org.apache.http.HttpEntity;
 import org.apache.http.HttpException;
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.config.RequestConfig;
+import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.conn.ssl.NoopHostnameVerifier;
@@ -15,6 +18,9 @@ import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.InputStream;
+import java.net.URI;
+import java.util.List;
 import java.util.Map;
 
 public class HttpUtils {
@@ -65,5 +71,31 @@ public class HttpUtils {
             e.printStackTrace();
         }
         return res;
+    }
+
+    public static void doGet(String url) throws Exception {
+        HttpClient httpClient;
+        if (url.startsWith("https")) {
+            httpClient = HttpClients.custom().setSSLHostnameVerifier(new NoopHostnameVerifier()).build();
+        } else {
+            httpClient = HttpClients.createDefault();
+        }
+        HttpGet httpGet = new HttpGet(url);
+        HttpResponse response = httpClient.execute(httpGet);
+        HttpEntity entity = response.getEntity();
+        InputStream inputStream = entity.getContent();
+        List<String> lines = IOUtils.readLines(inputStream);
+        for (String line : lines) {
+            System.out.println(line);
+        }
+    }
+
+
+    public static void main(String[] args) {
+        try {
+            doGet("https://www.baidu.com");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
