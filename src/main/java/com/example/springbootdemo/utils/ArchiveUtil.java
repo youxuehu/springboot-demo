@@ -67,7 +67,7 @@ public class ArchiveUtil {
         }
     }
 
-    public static void test() {
+    public static void generateTargz() {
         List<String> cmds = new ArrayList<>();
         cmds.add("/bin/sh");
         cmds.add("-c");
@@ -101,6 +101,6 @@ public class ArchiveUtil {
 
     public static void main(String[] args) throws Exception {
 //        generateTargz(new File("/Users/youxuehu/IdeaProjects/springboot-demo/target/classes"));
-        test();
+        generateTargz();
     }
 }
