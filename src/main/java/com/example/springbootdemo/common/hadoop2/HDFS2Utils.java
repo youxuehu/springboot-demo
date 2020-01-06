@@ -1,19 +1,23 @@
 package com.example.springbootdemo.common.hadoop2;
 
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.io.IOUtils;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.*;
+import org.apache.hadoop.io.IOUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
+import java.io.FileOutputStream;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.List;
 
 @Component
 @Slf4j
+@Order(0)
 public class HDFS2Utils implements ApplicationRunner {
 
     @Value("${hdfs.master}")
@@ -37,17 +41,26 @@ public class HDFS2Utils implements ApplicationRunner {
         }
         fsos.writeUTF(builder.toString());
         fsos.flush();
-        FSDataInputStream fsis = fs.open(new Path("/tiger/node/1.txt"));
-        List<String> readLines = IOUtils.readLines(fsis, "utf-8");
+        InputStream inputStream = fs.open(new Path("/tiger/node/1.txt"));
+        List<String> readLines = org.apache.commons.io.IOUtils.readLines(inputStream, "utf-8");
         for (String line : readLines) {
             System.out.println(line);
         }
+        /**
+         * 使用流的方式下载文件
+         */
+        //读取HDFS上的文件
+        //在本地创建一个文件，返回输出流
+        OutputStream outputStream = new FileOutputStream("/Users/youxuehu/IdeaProjects/springboot-demo/src/main/java/com/example/springbootdemo/common/hadoop2/word.txt");
+        IOUtils.copyBytes(inputStream, outputStream, 4096, true);
+
     }
 
     public void readFile(String path) throws Exception {
         FileSystem fs = FileSystem.get(configuration);
         FSDataInputStream inputStream = fs.open(new Path(path));
-        List<String> readLines = IOUtils.readLines(inputStream, "UTF-8");
+        List<String> readLines = org.apache.commons.io.IOUtils.readLines(inputStream, "UTF-8");
+        IOUtils.readFully(inputStream, new byte[2048], 0, 0);
         for (String line : readLines) {
             log.info("{}", line);
         }
@@ -62,8 +75,8 @@ public class HDFS2Utils implements ApplicationRunner {
 
     public void uploadFIle(InputStream inputStream, String fileName) throws Exception {
         FileSystem fs = FileSystem.get(configuration);
-        FSDataOutputStream outputStream = fs.create(new Path("/" + fileName));
-        IOUtils.copyLarge(inputStream, outputStream, new byte[2048]);
+        OutputStream outputStream = fs.create(new Path("/" + fileName));
+        IOUtils.copyBytes(inputStream, outputStream, 4096, false);
         log.info("{}", "upload file success");
     }
 

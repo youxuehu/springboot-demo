@@ -77,8 +77,8 @@ public class ExcelUtils {
     }
 
     public static void main(String[] args) {
-        readExcelFile();
-        //writeExcelFile();
+        //readExcelFile();
+        writeExcelFile();
 
     }
 
