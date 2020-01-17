@@ -21,35 +21,35 @@ import java.util.List;
 @SpringBootApplication
 //@ComponentScan("com.tiger.elasticsearch")
 @MapperScan(basePackages={"com.example.springbootdemo.**.mapper"})
-@Order(1)
+//@Order(1)
 public class SpringbootDemoApplication implements ApplicationRunner {
 
     public static void main(String[] args) {
         SpringApplication.run(SpringbootDemoApplication.class, args);
     }
 
-    @Resource
-    HDFS2Utils hdfs2Utils;
+//    @Resource
+//    HDFS2Utils hdfs2Utils;
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        InputStream inputStream = null;
-        File file = null;
-        try {
-            file = new File("/Users/youxuehu/Desktop/export.xlsx");
-            hdfs2Utils.uploadFIle(file.getAbsolutePath(), "/");
-            inputStream = new FileInputStream(file);
-            LocalWareExcelListener<LocalWareDTO> localWareExcelListener = new LocalWareExcelListener<>();
-            Boolean flag = ExcelUtils.readExcel(inputStream, LocalWareDTO.class,1,localWareExcelListener);
-            List<LocalWareDTO> datas = localWareExcelListener.getDatas();
-            if(flag){
-//                log.info("{}", datas);
-                log.info("解析数据行数为:{}",datas.size());
-            }
-//            hdfs2Utils.uploadFIle(inputStream, file.getName());
-        } catch (Exception e) {
-            log.info("{}", e);
-        }
+//        InputStream inputStream = null;
+//        File file = null;
+//        try {
+//            file = new File("/Users/youxuehu/Desktop/export.xlsx");
+//            hdfs2Utils.uploadFIle(file.getAbsolutePath(), "/");
+//            inputStream = new FileInputStream(file);
+//            LocalWareExcelListener<LocalWareDTO> localWareExcelListener = new LocalWareExcelListener<>();
+//            Boolean flag = ExcelUtils.readExcel(inputStream, LocalWareDTO.class,1,localWareExcelListener);
+//            List<LocalWareDTO> datas = localWareExcelListener.getDatas();
+//            if(flag){
+////                log.info("{}", datas);
+//                log.info("解析数据行数为:{}",datas.size());
+//            }
+////            hdfs2Utils.uploadFIle(inputStream, file.getName());
+//        } catch (Exception e) {
+//            log.info("{}", e);
+//        }
 
     }
 }
