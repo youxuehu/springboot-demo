@@ -13,6 +13,7 @@ import java.util.List;
 public class IndexController {
     @GetMapping("/index")
     public String index(Model model) {
+        model.addAttribute("userName", "李四");
         List<User> users = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
             User u = new User();
