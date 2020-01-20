@@ -14,7 +14,7 @@ public class SortUtils {
         }
     }
 
-    public static void quick(int begin, int end) {
+    public static void quick(int begin, int end, int[] arrs) {
         int i = begin;
         int j = end;
         if (i >= j) {
@@ -36,14 +36,13 @@ public class SortUtils {
         }
         j++;
         i--;
-        quick(begin, i);
-        quick(j, end);
+        quick(begin, i, arrs);
+        quick(j, end, arrs);
     }
-    static int[] arrs = {222,1,3,100,9,0};
     public static void main(String[] args) {
-//        int[] arrs = {222,1,3,100,9,0};
+        int[] arrs = {222,1,3,100,9,0};
 //        popo(arrs);
-        quick(0, arrs.length -1);
+        quick(0, arrs.length -1, arrs);
         for (int arr: arrs) {
             System.out.println(arr);
         }
