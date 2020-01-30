@@ -12,6 +12,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.annotation.Order;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 import javax.annotation.Resource;
 import java.io.*;
@@ -22,6 +23,7 @@ import java.util.List;
 //@ComponentScan("com.tiger.elasticsearch")
 @MapperScan(basePackages={"com.example.springbootdemo.**.mapper"})
 //@Order(1)
+@EnableScheduling
 public class SpringbootDemoApplication implements ApplicationRunner {
 
     public static void main(String[] args) {
