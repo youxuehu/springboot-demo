@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.Date;
 
-@Component
+//@Component
 public class ScheduleService {
     @Scheduled(fixedRate = 2000)
     public void fixedRate() {
@@ -18,5 +18,9 @@ public class ScheduleService {
     @Scheduled(initialDelay = 2000,fixedDelay = 2000)
     public void initialDelay() {
         System.out.println("initialDelay>>>"+new Date());
+    }
+    @Scheduled(cron = "0/5 * * * * *")
+    public void cron() {
+        System.out.println(new Date());
     }
 }
