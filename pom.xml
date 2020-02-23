@@ -16,9 +16,54 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <scala.version>2.11.4</scala.version>
+        <spark.version>2.0.0</spark.version>
+        <spark.artifact>2.11</spark.artifact>
+        <hbase.version>1.2.2</hbase.version>
+        <hadoop.version>2.6.0</hadoop.version>
+        <dependency.scope>compile</dependency.scope>
     </properties>
 
     <dependencies>
+
+        <!-- scala  spark  -->
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+            <version>${scala.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-core_${spark.artifact}</artifactId>
+            <version>${spark.version}</version>
+            <scope>${dependency.scope}</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-sql_${spark.artifact}</artifactId>
+            <version>${spark.version}</version>
+            <scope>${dependency.scope}</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-hive_${spark.artifact}</artifactId>
+            <version>${spark.version}</version>
+            <scope>${dependency.scope}</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-mllib_${spark.artifact}</artifactId>
+            <version>${spark.version}</version>
+            <scope>${dependency.scope}</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-streaming-kafka-0-8_2.11</artifactId>
+            <version>${spark.version}</version>
+            <scope>${dependency.scope}</scope>
+        </dependency>
+
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-quartz</artifactId>
@@ -310,6 +355,9 @@
 
     </dependencies>
     <build>
+        <sourceDirectory>src/main/scala</sourceDirectory>
+        <testSourceDirectory>src/test/scala</testSourceDirectory>
+
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
@@ -327,6 +375,25 @@
             </resource>
         </resources>
         <plugins>
+            <plugin>
+                <groupId>org.scala-tools</groupId>
+                <artifactId>maven-scala-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>compile</goal>
+                            <goal>testCompile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <scalaVersion>${scala.version}</scalaVersion>
+                    <args>
+                        <arg>-target:jvm-${maven.compiler.target}</arg>
+                    </args>
+                </configuration>
+            </plugin>
+
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
