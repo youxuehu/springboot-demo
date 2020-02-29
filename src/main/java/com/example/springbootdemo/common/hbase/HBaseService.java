@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Service
+//@Service
 @Slf4j
 public class HBaseService implements ApplicationRunner {
 
