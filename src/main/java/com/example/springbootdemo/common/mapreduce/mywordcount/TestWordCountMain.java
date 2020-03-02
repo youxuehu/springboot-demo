@@ -14,7 +14,7 @@ public class TestWordCountMain {
     public static void main(String[] args) {
         try {
             Configuration conf = new Configuration();
-            conf.set("fs.defaultFS", "hdfs://master7:9000");
+            conf.set("fs.defaultFS", "hdfs://master72:8020");
             conf.setBoolean("dfs.support.append", true);
             System.setProperty("HADOOP_USER_NAME", "root");
             BasicConfigurator.configure();
@@ -24,12 +24,12 @@ public class TestWordCountMain {
             job.setJarByClass(TestWordCountMain.class);
             job.setInputFormatClass(TextInputFormat.class);
 
-            Path srcPath1 = new Path("hdfs://master7:9000/The_Man_of_Property.txt");
+            Path srcPath1 = new Path("hdfs://master72:8020/wordcount.txt");
 //			Path srcPath2 = new Path("hdfs://192.168.0.4:9000/dir01/c.txt");
             TextInputFormat.addInputPath(job, srcPath1);
 
             job.setOutputFormatClass(TextOutputFormat.class);
-            Path resultPath = new Path("/result/myfriend1");
+            Path resultPath = new Path("/result/testwordcount");
 
             boolean b = fs.exists(resultPath);
             if (b) {

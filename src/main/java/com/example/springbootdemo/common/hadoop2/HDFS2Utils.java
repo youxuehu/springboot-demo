@@ -15,9 +15,9 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.List;
 
-//@Component
+@Component
 @Slf4j
-//@Order(0)
+@Order(0)
 public class HDFS2Utils implements ApplicationRunner {
 
     @Value("${hdfs.master}")

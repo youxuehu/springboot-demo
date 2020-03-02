@@ -19,7 +19,7 @@ object WordCount {
       .map((_,1)).reduceByKey(_+_).map{x =>
       x._1 + "\t" + x._2
     }
-    data.saveAsTextFile("hdfs://master72:8020/wordcount_output")
+    data.saveAsTextFile("hdfs://master72:8020/wordcount_output2")
   }
 
 }

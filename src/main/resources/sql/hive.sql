@@ -17,3 +17,7 @@ delete from test001 where id = 2;
 
 
 drop table userinfos;
+
+-- 创建文本文件的表，
+create table xiaojun(id int,cont string) row format delimited fields terminated by ',' stored as textfile;
+

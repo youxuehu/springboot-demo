@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>uploadPage</h1>
+    <form id="form1" enctype="multipart/form-data" method="post" action="/file/uploadToHdfs">
+        <div class="row">
+            <label>Select a File to Upload</label><br>
+            <input type="file" name="file" id="file">
+        </div>
+        <div id="fileName"></div>
+        <div id="fileSize"></div>
+        <div id="fileType"></div>
+        <div class="row">
+            <input type="submit" value="Upload">
+        </div>
+        <div id="progressNumber"></div>
+    </form>
+</body>
+</html>
