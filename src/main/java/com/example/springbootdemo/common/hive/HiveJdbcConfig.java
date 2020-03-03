@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 
-@Configuration
+//@Configuration
 public class HiveJdbcConfig {
 
     @Value("${hive.url}")

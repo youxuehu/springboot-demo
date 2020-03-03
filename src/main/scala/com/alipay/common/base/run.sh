@@ -1,0 +1,1 @@
+./bin/spark-submit --class com.alipay.common.WordCount  --master spark://master7:7077  --driver-java-options "-Xdebug  -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8888" /usr/local/src/springboot-demo-0.0.1-SNAPSHOT.jar

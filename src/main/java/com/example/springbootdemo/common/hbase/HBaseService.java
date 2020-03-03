@@ -23,14 +23,10 @@ import java.util.stream.Collectors;
 @Slf4j
 public class HBaseService implements ApplicationRunner {
 
-
     @Autowired
     private HbaseTemplate hbaseTemplate;
 
-
-
     public void readTable(String tableName, String rowName) {
-
         hbaseTemplate.execute(tableName, new TableCallback<Object>() {
             @Override
             public Object doInTable(HTableInterface hTableInterface) throws Throwable {
