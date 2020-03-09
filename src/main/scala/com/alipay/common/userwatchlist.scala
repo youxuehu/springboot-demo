@@ -12,8 +12,8 @@ object userwatchlist {
     //conf.setMaster("local[2]")
     conf.setAppName("userwatchlist")
     val sc = new SparkContext(conf)
-    val input_path = sc.textFile("hdfs://master:9000/train_new.data")
-    val output_path = "hdfs://master:9000/userwatchlist_result1"
+    val input_path = sc.textFile("hdfs://master72:8020/train_new.data")
+    val output_path = "hdfs://master72:8020/userwatchlist_result1"
     input_path.filter{x =>
       val ss = x.split("\t")
       ss(2).toDouble > 2.0

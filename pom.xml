@@ -131,10 +131,10 @@
                 </exclusion>
             </exclusions>
         </dependency>
-<!--        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>-->
+        <!--        <dependency>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-data-jpa</artifactId>
+                </dependency>-->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
@@ -213,17 +213,17 @@
             </exclusions>
         </dependency>
 
-<!--        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-jdbc</artifactId>
-            <version>2.1.2.RELEASE</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.slf4j</groupId>
-                    <artifactId>slf4j-log4j12</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>-->
+        <!--        <dependency>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-jdbc</artifactId>
+                    <version>2.1.2.RELEASE</version>
+                    <exclusions>
+                        <exclusion>
+                            <groupId>org.slf4j</groupId>
+                            <artifactId>slf4j-log4j12</artifactId>
+                        </exclusion>
+                    </exclusions>
+                </dependency>-->
 
         <dependency>
             <groupId>org.springframework.data</groupId>
@@ -388,10 +388,25 @@
             <artifactId>guava</artifactId>
             <version>23.0</version>
         </dependency>
+        <!--热部署jar-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- pagehelper 分页插件 -->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper-spring-boot-starter</artifactId>
+            <version>1.2.13</version>
+        </dependency>
+
     </dependencies>
     <build>
-<!--        <sourceDirectory>src/main/scala</sourceDirectory>-->
-<!--        <testSourceDirectory>src/test/scala</testSourceDirectory>-->
+        <!--        <sourceDirectory>src/main/scala</sourceDirectory>-->
+        <!--        <testSourceDirectory>src/test/scala</testSourceDirectory>-->
 
         <resources>
             <resource>
@@ -429,35 +444,47 @@
                 </configuration>
             </plugin>
 
-<!--            <plugin>-->
-<!--                <groupId>org.springframework.boot</groupId>-->
-<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
-<!--            </plugin>-->
-<!--            <plugin>-->
-<!--                <groupId>org.mybatis.generator</groupId>-->
-<!--                <artifactId>mybatis-generator-maven-plugin</artifactId>-->
-<!--                <version>1.3.2</version>-->
-<!--                <configuration>-->
-<!--                    <configurationFile>src/main/resources/mybatis/generatorConfig.xml</configurationFile>-->
-<!--                    <verbose>true</verbose>-->
-<!--                    <overwrite>true</overwrite>-->
-<!--                </configuration>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <id>Generate MyBatis Artifacts</id>-->
-<!--                        <goals>-->
-<!--                            <goal>generate</goal>-->
-<!--                        </goals>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--                <dependencies>-->
-<!--                    <dependency>-->
-<!--                        <groupId>org.mybatis.generator</groupId>-->
-<!--                        <artifactId>mybatis-generator-core</artifactId>-->
-<!--                        <version>1.3.2</version>-->
-<!--                    </dependency>-->
-<!--                </dependencies>-->
-<!--            </plugin>-->
+    <!--        <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.springframework</groupId>
+                        <artifactId>springloaded</artifactId>
+                        <version>1.2.8.RELEASE</version>
+                    </dependency>
+                </dependencies>
+            </plugin>-->
+
+                        <!--<plugin>
+                            <groupId>org.springframework.boot</groupId>
+                            <artifactId>spring-boot-maven-plugin</artifactId>
+                        </plugin>
+                        <plugin>
+                            <groupId>org.mybatis.generator</groupId>
+                            <artifactId>mybatis-generator-maven-plugin</artifactId>
+                            <version>1.3.2</version>
+                            <configuration>
+                                <configurationFile>src/main/resources/mybatis/generatorConfig.xml</configurationFile>
+                                <verbose>true</verbose>
+                                <overwrite>true</overwrite>
+                            </configuration>
+                            <executions>
+                                <execution>
+                                    <id>Generate MyBatis Artifacts</id>
+                                    <goals>
+                                        <goal>generate</goal>
+                                    </goals>
+                                </execution>
+                            </executions>
+                            <dependencies>
+                                <dependency>
+                                    <groupId>org.mybatis.generator</groupId>
+                                    <artifactId>mybatis-generator-core</artifactId>
+                                    <version>1.3.2</version>
+                                </dependency>
+                            </dependencies>
+                        </plugin>-->
         </plugins>
     </build>
 

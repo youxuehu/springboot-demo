@@ -6,6 +6,9 @@ class  WordCount{
 
 }
 
+/**
+ * 统计 word count
+ */
 object WordCount {
   def main(args: Array[String]): Unit = {
 //    println("123")

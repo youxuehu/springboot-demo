@@ -28,10 +28,6 @@ public class SpringbootDemoApplication implements ApplicationRunner {
 
     public static void main(String[] args) {
         SpringApplication.run(SpringbootDemoApplication.class, args);
-
-        for (int i = 1; i <= 100; i++) {
-            System.out.println(i + ",zhangsan"+i);
-        }
     }
 
 //    @Resource

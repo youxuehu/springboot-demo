@@ -11,8 +11,10 @@ import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.ArrayList;
 import java.util.List;
 
 @Component
@@ -104,5 +106,51 @@ public class HDFS2Utils implements ApplicationRunner {
         configuration.set("fs.defaultFS", hdfsMaster);
         configuration.setBoolean("dfs.support.append", true);
         System.setProperty("HADOOP_USER_NAME", "root");
+    }
+
+    /**
+     * 列出hdfs上所有的文件，打印出文件的全路径
+     * @param path
+     * @param files
+     * @throws Exception
+     */
+    public void fetchFiles(String path, List<String> files) throws Exception {
+        FileSystem fs = FileSystem.get(configuration);
+        FileStatus[] fileStatuses = fs.listStatus(new Path(path));
+        for (FileStatus status : fileStatuses) {
+            System.out.println(status.getPath().toString());
+            files.add(status.getPath().toString());
+            if (fs.isDirectory(new Path(status.getPath().toString()))) {
+                fetchFileDirs(status.getPath().toString(), files);
+            }
+        }
+    }
+
+    /**
+     * 列出hdfs上所有的文件夹目录
+     * @param path
+     * @param dirs
+     * @throws Exception
+     */
+    public void fetchFileDirs(String path, List<String> dirs) throws Exception {
+        FileSystem fs = FileSystem.get(configuration);
+        FileStatus[] fileStatuses = fs.listStatus(new Path(path));
+        for (FileStatus status : fileStatuses) {
+            if (fs.isDirectory(new Path(status.getPath().toString()))) {
+                System.out.println(status.getPath().toString());
+                dirs.add(status.getPath().toString());
+                fetchFileDirs(status.getPath().toString(), dirs);
+            }
+        }
+    }
+
+    public boolean isExistsFile(String path) throws Exception {
+        FileSystem fs = FileSystem.get(configuration);
+        return fs.exists(new Path(path));
+    }
+
+    public void delete(String hdfsPath) throws Exception {
+        FileSystem fs = FileSystem.get(configuration);
+        fs.deleteOnExit(new Path(hdfsPath));
     }
 }
