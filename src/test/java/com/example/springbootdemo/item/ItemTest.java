@@ -1,7 +1,5 @@
 package com.example.springbootdemo.item;
 
-import com.example.springbootdemo.common.db.dao.user.model.User;
-import com.example.springbootdemo.common.db.service.UserService;
 import com.example.springbootdemo.common.elasticsearch.Item;
 import com.example.springbootdemo.common.elasticsearch.ItemRepository;
 import lombok.extern.slf4j.Slf4j;
