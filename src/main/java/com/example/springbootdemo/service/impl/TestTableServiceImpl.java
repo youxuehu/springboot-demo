@@ -28,9 +28,15 @@ public class TestTableServiceImpl implements TestTableService {
         }
         PageHelper.startPage(pageIndex, pageSize);
         TestTableExample testTableExample = new TestTableExample();
+        TestTableExample.Criteria criteria = testTableExample.createCriteria();
+        TestTableExample.Criteria criteria1 = testTableExample.or();
+        TestTableExample.Criteria criteria2 = testTableExample.or();
         if (StringUtils.isNotBlank(keyword)) {
-            testTableExample.createCriteria().andTestNameLike(keyword);
+            criteria.andTestNameLike("%"+keyword+"%");
+            criteria1.andTestNameLike("%"+keyword+"%");
+            criteria2.andTestNameLike("%"+keyword+"%");
         }
+
         List<TestTable> testTables = testTableMapper.selectByExample(testTableExample);
         return new PageInfo<TestTable>(testTables);
     }
