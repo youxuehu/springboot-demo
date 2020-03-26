@@ -12,9 +12,9 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
-@Service
+//@Service
 public class TestHbase  implements ApplicationRunner {
-    @Autowired
+//    @Autowired
     private HbaseTemplate hbaseTemplate;
     @Override
     public void run(ApplicationArguments args) throws Exception {

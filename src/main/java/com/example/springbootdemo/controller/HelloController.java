@@ -13,6 +13,11 @@ import java.util.Optional;
 @RestController
 public class HelloController {
 
+    @RequestMapping("/get")
+    public String get() {
+        return "Hello SpringBoot";
+    }
+
     @RequestMapping("/hello")
     public String hello() {
         // 非空判断
