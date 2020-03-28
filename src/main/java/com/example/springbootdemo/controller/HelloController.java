@@ -2,6 +2,8 @@ package com.example.springbootdemo.controller;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,6 +14,14 @@ import java.util.Optional;
 
 @RestController
 public class HelloController {
+
+    static Logger log = LoggerFactory.getLogger(HelloController.class);
+
+    @RequestMapping("/")
+    public String index() {
+        log.info("Hello Docker!");
+        return "Hello Docker!";
+    }
 
     @RequestMapping("/get")
     public String get() {
