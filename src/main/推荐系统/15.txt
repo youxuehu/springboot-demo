@@ -1,0 +1,1830 @@
+上课资料：网盘-QQ群公告
+
+上课时间：周日上午8:00-12:30
+
+上课方式：
+1.互动，积极反馈，0-1，准备表述
+2.坚持
+3.热情，100%，18个周末
+4.空杯心态
+5.痛并快乐着，上课特点，突出重点，快乐学习。
+
+干货：
+开发语言：linux、python、java、c++、shell、sql、scala
+开发工具：linux、hadoop、spark、pytorch
+开发方式：shell、vim、IDE（idea、pycharm）
+
+案例：举一反三，扩展能力支撑职业道路越走越宽
+
+
+今天内容：
+1、开学典礼、注意事项
+2、常见业务和课程设计介绍
+3、linux和python开发基础
+4、MapReduce
+
+推荐流程
+第1阶段：召回阶段（粗排）：用token检索item，本质是找候选的过程（模型简单，几亿规模到几百）
+第2阶段：过滤阶段
+第3阶段：排序阶段（精排）：把好的item排在前面（复杂的模型）
+第4阶段：截断阶段：取top
+
+------------------------------------------------------
+linux教程
+https://www.runoob.com/linux/linux-command-manual.html
+文章
+问题1：文章中有多少个单词
+cat The_Man_of_Property.txt | grep -Eo '\w+' |wc -l
+
+问题2：文章中单词去重后，有多少个单词
+cat The_Man_of_Property.txt | grep -Eo '\w+' |sort |uniq |wc -l 
+
+问题3：文章当中出现频次最高的单词是哪个
+cat The_Man_of_Property.txt | grep -Eo '\w+' |sort |uniq -c |sort -k1 -nr |head  
+
+python教程
+https://www.runoob.com/python/python-command-line-arguments.html
+
+import sys
+
+word_dict = {}
+with open('The_Man_of_Property.txt', 'r') as fd:
+    for line in fd:
+        ss = line.strip().split(' ')
+        for w in ss:
+            if w.strip() not in word_dict:
+                word_dict[w.strip()] = 1
+            else:
+                word_dict[w.strip()] += 1
+
+#for k, v in word_dict.items():
+    #print(k, v)
+
+word_list = [ (k, int(v)) for k, v in word_dict.items() ]
+word_list = sorted(word_list, key=lambda x:x[1], reverse=True)
+print word_list[0]
+#for aaa in word_list:
+    #print aaa
+#    print '\t'.join([aaa[0], str(aaa[1])])
+
+-------------------------------------------------------------------------
+MapReduce
+
+1、集群共同点：3个角色，master、slave，client
+2、本地调试
+ cat The_Man_of_Property.txt |python map_new.py |sort |python red_new.py >1.dat
+3、切片和map之间是一一对应的
+4、block（64m）和 record
+5、MapReduce属于多进程模式
+6、Streaming框架，为其他非java语言设计
+7、MapReduce包括主jobtracker和从tasktracker
+
+
+HDFS页面：http://192.168.226.10:50070/dfshealth.html#tab-overview
+yarn 页面：http://master:8080/cluster
+http://master:8088/proxy/application_1578181013021_0001/
+
+实践
+1.wordcount
+2.全排序
+https://blog.csdn.net/Jameslvt/article/details/80925933
+partition是做分桶，key是做排序的
+3.白名单分发
+4.数据压缩
+5.join
+
+
+作业：
+共同好友
+A:B,C,D,F,E,O A的好友有：BCD...
+B:A,C,E,K
+C:F,A,D,I
+D:A,E,F,L
+E:B,C,D,M,L
+F:A,B,C,D,E,O,M
+G:A,C,D,E,F
+H:A,C,D,E,O
+I:A,O
+J:B,O
+K:A,C,D
+L:D,E,F
+M:E,F,G
+O:A,H,I,J
+
+输出所有的共同好友
+AB：C，E
+AC:F，D
+
+两轮MR。
+
+
+下次安排
+1.hdfs yarn
+2.自然语言入门 TFIDF
+3.中文分词
+
+A:B,C,D,F,E,O A的好友有：BCD...
+B:A,C,E,K
+C:F,A,D,I
+
+
+BC  A
+BD  A
+BF  A
+
+1.MAP 输入
+MAP输出  一个好友+人
+B\tA
+C\tA
+D\tA
+...
+C\tB
+...
+C\tD
+C\t
+.....
+
+reduce的输入
+reduce的输出  一个好友，拥有这个好友的所有人（所有好友有c的人都在这里面）
+C\tA,B,D 
+
+2.MAP 输入 ：第1轮MR的red的输出
+map的输出：A_B里面共同好友的一个
+A_B\tC
+A_D\tC
+B_D\tC
+...
+A_B\tX
+reduce 输入
+reduce输出   A_B的所有共同好友
+A_B\tC,E   
+
+
+-----------------------------------------------------
+1、NLP（自然语言处理）
+tfidf，关键词提取，LCS最长公共子序列
+2、中文分词
+	结巴
+	HMM
+3、实践
+	MR tfidf
+	MR LCS计算文本相似度
+	MR 结巴分词
+
+tfidf 为后续的 bm25，word2vect，中文分词做铺垫
+
+1、文本相似度
+（1）文本相似，但语义不相似
+	例子：我吃饱饭了   ——我吃不饱饭
+（2）语义相似，但文本不相似
+	例子：歌神   —— 张学友
+2、解决问题的方案
+（1） 文本相似：
+	LCS最大公共子序列
+	利用中文分词
+（2）语义相似：依靠用户行为
+	基于共现的行为（推荐-协同过滤，word2vect）
+	
+3、如何计算相似度
+	（1）余弦相似度cos
+	举例 A （1,2,3） B（2,3,4）
+	cos（A,B） = 分子 / 分母 = 20 / 20.12
+	分子：A*B = 1*2 + 2*3 +3*4 = 20
+	分母：||A|| * ||B||  = 3.74 *5.38 = 20.12
+	          ||A|| = sqrt(1*1 +2*2 +3*3) = 3.74
+	          ||B|| = sqrt(2*2 + 3*3 + 4*4) = 5.38
+
+把句子向量化 onehot  word2vect 
+
+今天 \天气\ 特别 \好
+onehot 
+顺序编号
+
+4、TFIDF 一个词在一篇文章当中的重要性
+找出一篇文章的核心词（前提有很多的文章）
+1.词频 这个词在这篇文章出现的次数     "的了 and"
+2.这个词在本篇文章出现次数多，但是在其他文章出现次数要少
+
+1.TF   词频 某个词在一个文章中出现的次数
+2.IDF 反文档频率 某个词，被多少文章包含
+
+TF = 某个词在当前文章出现次数 / 当前文章的总词数
+IDF = log(文档总数 / （包含该词的文档数 +1）)  取值范围 （log1=0，log(文档总数)）
+
+TF* IDF
+
+一篇文章自动摘要
+1）确定一批关键词（tfidf）
+2）包含关键词的句子找出来
+3）对句子处理，排序（关键词越多，权重越大）
+4）把句子汇总，就是摘要
+
+
+10篇文章
+美国   TF  不一样
+          IDF  一样
+
+实践
+
+
+LCS  最大公共子序列（业务紧密联系）
+A：我很喜欢看电影，最喜欢看《我不是药神》
+B：我很喜欢看电影，最喜欢看《我不是潘金莲》
+LCS（A,B）我很喜欢看电影，最喜欢看《我不是》
+
+文本相似度 = 2* LCS（A,B） / (len(A) + len(B))
+
+目的：从字面衡量文本相似度的方法之一，动态规划的思路。 viterbi算法。
+
+-----------------------------
+中文分词
+
+结婚的和尚未结婚的
+结婚的 \ 和 \ 尚未\ 结婚的
+结婚的 \ 和尚 \ 未结婚的
+
+
+S  single
+B  begin
+M middle
+E end
+
+
+C = 广州本田雅阁汽车
+S1 = 广州 \ 本田 \ 雅阁 \ 汽车
+S2 = 广州 \ 本田雅阁 \ 汽车
+S3 = 广州本田 \ 雅阁 \ 汽车
+
+朴素贝叶斯公式
+p(A,B) =  p(A) * p(B | A)
+p(A | B) = p(A,B) / p(B) = p(A) * p(B | A) / p(B)
+
+P(S1 | C) = p( S1, C) / p(C) = p( S1) * p(C | S1) / p(C)  
+P(S2 | C) = p( S2, C) / p(C) = p( S2) * p(C | S2) / p(C)  
+P(S3 | C) = p( S3, C) / p(C) = p( S3) * p(C | S3) / p(C)  
+
+P(S | C) ：有一个句子C，得到切分方案S的概率
+P(C | S) ：有一个切分方案S,得到原始句子C的概率 =1 
+P(C)：原始句子C出现的概率，是一个固定值，大家都相等
+P（S|C ）~= P(S)
+
+P(S1) P(S2) P(S3) 
+
+P(S1 = 广州 \ 本田 \ 雅阁 \ 汽车) = p(广州) * p(本田) * p（雅阁）*p(汽车)   独立性假设
+P（A，B） = P（A） *  P(B) 只有A和B相互独立时满足
+
+P(S2 = 广州 \ 本田 雅阁 \ 汽车) = p(广州) * p(本田雅阁)*p(汽车)
+p(广州) ？
+p(本田) 
+ p(本田雅阁)
+
+假设有1w篇文章，里面总共有m个词，其中"广州"出现了n次
+p(广州)  = n / m 
+
+分子：广州在语料库中出现的次数
+分母：语料库的总词数，可能会比较大
+P会比较小，连乘更小，接近0
+
+log
+对P取log，再比较
+log(a * b) = log(a) + log(b)
+log( p(广州) * p(本田) * p（雅阁）*p(汽车)) = log(p(广州) ) + log（p(本田) ）+。。。。
+为什么取log
+1.log是增函数，可以保证大小顺序一致，实际当中不关心概率值是多少，只是比较大小
+取log好处
+1.防止数据向下溢出
+2.乘法变成加法运算速度快
+
+
+独立性假设有些不合理 -——》概率语言模型（本田后面跟雅阁的概率 > 本田后面跟奔驰的概率）
+语言模型：
+一元模型Unigram：词之间是相互独立的
+	p（w1,w2,w3） = p(w1) *p(w2)*p(w3)
+
+二元模型Bigram： 当前词只依赖于前1个单词  ——一阶马尔科夫模型
+	p（w1,w2,w3） = p(w1) *p(w2|w1)*p(w3|w2)
+三元模型Trigram： 当前词只依赖于前2个单词 —— 二阶马尔科夫模型
+               p（w1,w2,w3） = p(w1) *p(w2|w1)*p(w3|w2,w1)
+N元模型N-gram： 当前词只依赖于前（N-1）个单词  ——N-1阶马尔科夫模型
+
+什么是模型
+p(w1) = 0.1
+p(w2) = 0.2
+p(w2 | w1) = 0.3
+
+
+
+作业：
+1、实现LCS，并且返回任一最长公共子序列
+X=<A, B, C, B, D, A, B>   Y=<B, D, C, A, B, A>
+输出任一结果，包括长度以及子序列是什么
+结果：BCBA，BCAB，BDAB
+2、连续子串最大和
+给定由n个整数(可能为负整数)组成的序列，求该序列的连续子段的和的最大值。  
+{-4, 11，-2, 13，-7，-3，12} 的最大子串和为24
+
+c [-4, 11, 9, 22, 15, 12, 24] 
+max(c) 24
+
+c的意义 到某一个元素为止，并且包含这个元素的连续字段的最大值
+-4
+max（11 ， -4+11） = 11
+max（-2， 11-2） = 9
+max（13, 9+13） =22
+max（-7, 22-7）=15
+
+
+
+下周安排
+1.中文分词——HMM
+2.hdfs +yarn
+
+
+
+
+
+-----------------------------------
+结巴分词背后实现的原理
+结巴分为两个阶段：
+1.基于本地词库，前向遍历的方式构造DAG图出来，进行最优路径的选择（求概率）
+2.如果词库不够大，HMM隐马模型
+
+
+马尔科夫模型是单序列模型
+天气预报
+晴天 风 阴天 下雨 晴天
+
+参数
+1.状态：每一个词
+2.初始概率：p
+3.状态转移概率：p(w2|w1) 今天是晴天，明天下雨的概率
+
+
+隐马尔科夫模型 ——双序列问题
+
+HMM
+观测序列：可以观察到的，中文输入法的拼音，翻译前的语言，每个字，每个字
+状态序列：希望得到的，中文输入法的汉字，翻译后的语言，分词（每个字要不要停顿bmes），词性（n,v.）
+
+分词：
+B - begin
+M - middle
+E - end
+S - single
+
+观测序列：我喜欢广州本田
+状态序列：SBEBMME
+对应的分词结果
+我 \ 喜欢 \ 广州本田
+
+参数：
+1.初始概率：状态是初始的概率，M，分词4个
+2.转移概率：状态到状态的概率，M*M
+3.发射概率：状态到观测的概率，观测值的数量是N，N*M
+
+三个基本问题（概率语言模型）
+1.模型参数估计  M个初始概率 + M*M个状态转移概率 + N*M个发射概率
+      已知观测序列和状态序列，最大似然法
+      初始概率: p(B) = B在句子开头的次数 / 句子开头的总次数
+	     p(M) = M在句子开头的次数 / 句子开头的总次数 = 0
+      转移概率：p(B->M) =  B后面是M的次数  / B 出现的次数
+                      p(M->B) = 0 
+      发射概率  p(B->广) =  状态是B，观测是广的出现次数/ B出现的次数
+
+      已知观测序列，EM
+2.给定模型，计算一个观测序列的概率，广州本田雅阁汽车这句话出现的概率。
+     暴力求解时间复杂度高，用前向算法和后向算法求解 DP
+3.给定模型和观测序列，找到最优的隐藏状态序列（词性标注，分词）
+     viterbi算法
+
+
+结巴模型
+/root/codes/fenci_test/jieba-master/jieba/finalseg
+prob_start.py
+prob_trans.py
+prob_emit.py  
+
+------------------------------
+HDFS1.0
+1、HDFS是大数据分布式存储
+2、Namenode是主，Datanode是从
+3、Namenode是一个进程，在某一个机器（主节点）上，维护内存
+     内存里有2份重要的数据
+     （1）文件名 -> block数据块的映射关系   /movies.csv
+      （2）block数据块 -> datanode节点地址映射关系 （namenode不存数据块）
+      配合着访问对应的datanode
+       block数据块 ->真实数据存放的本地地址
+4、数据块的副本：默认是3个模本  
+5、hadoop集群不适合存储大量的小文件
+    （1）资源浪费
+    （2）Namenode资源有限
+    （3）集群里存在大量压缩的小文件，启动MR的时候，会产生大量的map进程
+    （4）集群里存在大文件，启动MR时，并发能力不够，导致运行慢
+6、1.0里面只有一个NN，2.0里面会有多个NN，当时zookeeper没有
+7、SecondaryNameNode：其实不是namenode的备份 
+     存在的意义：备份，数据恢复
+8、数据完整性校验：校验数据是否损坏
+     用什么方法：crc32算法产生校验和 hash值
+     存在几种校验的逻辑?
+     (1）client写校验和，datanode来校验
+   （2）Datanode存在后台进程，定期检查
+9、可靠性保证：
+    （1）心跳：DN -NN
+    （2）数据完整性：crc32
+    （3）空间回收   hadoop fs -ls /Trash -skipTrash 直接删，不进回收站
+    （4）副本 
+    （5）SNN
+    （6）快照：备份，但不是直接的数据拷贝，只是记录状态（存block的指针）
+      ln -s aa bb aa是文件 bb是指针 软连接
+10、HDFS的block数据块不适合做什么？
+     （1）多个人写
+     （2）被修改
+     （3）大量随机读，对大数据文件的处理，应该是顺序读取
+11、HDFS是个集群，MR的计算框架
+      主 Jobtracker   Namenode
+      从 tasktracker  Datanode
+     就近原则：本地化，数据不移动，任务可移动
+
+
+作业：
+viterbi算法伪代码
+#初始概率
+for  y in states:
+	V[0][y] = start_p(y) * emit_p[y][obs[0]]
+
+#viterbi
+for t in range(1,len(obs)):
+	for y in states:
+		V[t][y] = max([V[t-1][y0] * trans_p[y0][y] *emit_p[y][obs[t]]  for y0 in states])
+return max(V[len(obs)-1][y0]  for y0 in states)
+
+
+
+下周计划：
+hdfs2.0
+yarn
+spark
+
+----------------------------------------
+HDFS2.0
+1.HA来解决单点故障问题（使用两个NN，1个Active NN 1个Standby NN）
+2.数据一致性是如何保证的？
+   （1）共享网络文件系统（NFS）文件名 -> block数据块的映射关系
+   （2）DataNode向两个NN（active，standby）同时发送心跳，block数据块 -> datanode节点地址映射关系
+3.故障转移
+利用zookeeper来保证
+4.JN：如果利用NFS共享网络文件系统——集群，好处是数据统一存储
+5.JN：实际上是利用QJM（只有投票，没有存储），投票原则，机器数量是2n+1，好处是节约资源
+         QJM（最低法定人数管理机制——少数服从多数）
+         优点：
+	（1）不需要额外配置共享存储，节约成本
+	（2）没有单点问题
+	（3）灵活的系统配置
+
+6.集群配置
+（1）NN和JN通常配置不在同一个机器上，JN和DN在一起
+（2）FC和NN在同一台机器上
+（3）RM和NN在同一台机器
+（4）NM和DN在同一台机器；就近原则
+（5）zk独立维护一套集群
+
+7.联邦
+好处：减轻单一NN压力，将一部风文件转移到其他的NN来管理
+有利于集群的横向扩展，突破了单台NN的限制
+性能提升
+资源隔离
+联邦的本质：元数据的管理和存储得到了解耦，但是真实数据还是共享的
+
+8.快照
+数据备份、灾备、快速恢复
+快照的创建是瞬间完成的，效率高
+快照的本质只记录block列表和大小，并不涉及数据的复制
+
+9.缓存：访问速度快
+namenode管理datanode上的缓存是以block的形式
+哪些数据需要缓存？ 热点数据
+2个缓存：
+（1）client侧：自动缓存常用数据
+（2）DataNode侧：手动缓存，强制把路径提前缓存住
+
+10.ACL 权限控制
+drwxr-xr-x - root supergroup  /music.data
+rwx owner
+r-x 同组人
+r-x 其他组人
+
+
+
+YARN
+1、Yarn定位：分布式操作系统
+     作用：资源整合，让系统资源最大化利用
+     同一套硬件集群上可以同时运行多个任务（MR，spark，storm）
+
+2.RM是yarn的主
+   1.0 Jobtracker  tasktracker
+   2.0 ResourceManger  NodeManager 
+
+   Jobtracker  具备2大功能：资源管理，任务调度
+   ResourceManger (RM) 只是Jobtracker 中的资源管理的角色
+  ApplicationManager（AM） 负责Jobtracker 任务调度的角色
+  NodeManager （NM）相当于1.0中的tasktracker，接受RM的请求，分配container资源，通过心跳汇报给RM，并且管理节点内部的资源利用情况
+
+
+Application master 与RM和NM的通信
+
+3. RM和AM本质上是对JobTracker的绝对权力的肢解
+   AM是一个任务的主，但也是一个普通的container
+4.container：本质是个进程。是有NM启动的，真正运行任务的地方
+  hadoop 1.0 slot是资源，map有map slot，reduce 有reduce slot，两个不能互相使用
+  slot是资源的调配单元，slot决定cpu和内存的大小
+  假设：一个slot代表是2G内存和1个CPU
+  一个任务需要1G内存，1个cpu，出现资源碎片，资源利用率低
+ 一个任务需要3G内存，出现抢占其他任务的资源，集群资源利用率过高
+
+1个节点，16个cpu，32G内存，机器上配了4个shot，相当于一个slot是4个cpu，8g内存（等量划分）
+
+hadoop2.0没有slot的概念，取而代之的是container
+container是有NM启动
+
+5.容错
+（1）RM挂掉怎么办？
+	主备切换
+（2）NM挂了怎么办？
+	NM上有AM：整个任务就挂了
+	NM上没有AM：整个任务不会挂
+（3）AM挂了怎么办？
+	RM上重启AM
+
+6.调度器
+(1)FIFO
+(2)Capacity
+(3)Fair
+
+
+spark
+
+1、spark运行模式
+（1）本地模式
+（2）standalone模式：独立集群（封闭）
+（3）yarn模式
+   1）yarn client   AM（driver）在提交任务的本地启动——交互调试方便
+   2）yarn cluster  AM（driver）在某一个NM启动
+
+
+spark core
+1、spark是计算框架
+     MR也是一个计算框架（批量），spark-core是基础框架。可以支持批量+实时（streaming）
+     spark速度快，MR中间环节数据结果落地，spark计算过程主要的数据流转由内存完成（减少对hdfs的依赖）
+     MR：多进程模型
+	优点：进程之间隔离，任务更加稳定
+	缺点：每个任务的启动时间长，不适合做低延迟的任务
+     spark：多线程模型
+	优点:速度快，适合低延迟，开发成本低
+	缺点：稳定性差
+2、算子
+     1）Transformation ：转换算子，该转换并不触发提交作业
+	Transformation 操作是延迟计算——懒惰机制
+	val lines = text.filter(x=>x.contains("abc"))
+	lines.first
+	算子细分：
+	单独对Value处理
+	a)一对一：map（每一行都做处理，行与行是相互独立）
+                  一对多：faltmap（中文分词）
+               b）多对一：union（两个rdd变成1个rdd）
+	c）多对多：groupby
+	d）输出是输入的子集：filter，distinct
+	e）cache类：cache，persist
+              k-v形式 （key-》value）
+	a）一对一：mapvalues（只对value处理）
+	b）单个聚集
+		reduceByKey
+		combineByKey
+		partitionBy
+	c）两个聚集
+		CoGroup
+	d）连接
+		join leftOutJoin rightOutJoin
+
+     2）Action：行动算子，会触发SparkContext提交作业，并将数据输出到spark系统
+	a)无输出
+		foreach（for循环，处理数据）
+	b）HDFS
+		saveAsTextFile
+	c）统计类
+		count，collect（数据结果或直接显示在终端），take
+	
+    ReduceByKey 和GroupByKey的区别，两个都要做shuffle
+    1.ReduceByKey 在shuffle之前会先做合并，减少了shuffle的io传输，所以效率高
+    2.GroupByKey不能够自定义函数，我们需要先用GroupByKey生成RDD，然后对此RDD通过map进行自定义函数操作
+
+3、RDD（弹性分布式数据集）
+RDD是什么
+1）弹性
+	a）内存和磁盘之间同步数据
+	b）RDD可以变成另外一个RDD
+	c）RDD内部存储数据类型丰富
+2）存什么数据
+	RDD不存数据，只存数据的分区信息和读取方法
+	依赖
+	a）顶部RDD（无上游，数据来源于HDFS）
+	b）非顶部RDD：记录自己来源于谁——血统 lineage
+	宽依赖和窄依赖
+	窄依赖：以流水线的方式计算分区
+	宽依赖：必须计算好父分区数据，然后进行shuffle
+               失效问题处理：
+	窄依赖：只需要计算丢失RDD分区的父分区，而且不同节点之间是可以并行的
+	宽依赖：单个节点失效，可能导致这个RDD的所有祖先丢失部分的分区重新计算
+
+4、参数
+内存分配
+executor的内存分成3个部分
+	1）executor内存【20%】：执行内存，join都在这部分内存执行，shuffle也会缓存在这个内存取，如果内存满，写磁盘
+	2）storage内存【60%】cache，persist，broadcast
+	3）other内存，留给应用程序自己的，往往占用空间比较小
+1）spark-1.6.0以前的版本，每类的内存是相互隔离的，导致内存利用率不高
+2）spark-1.6.0以上的版本，executor内存和storage内存之间是可以互相借用的，提高利用率，减少了OOM
+提交类参数：
+1）executor-memory：每个executor内存多大
+2）num-executors：多少个executor进程
+3）executor-cores：每个executor有多少个core，最好不要设置1，一般设置为2-4
+
+5、提交任务（spark-submit）
+提交任务需要Context上下文
+
+下周安排
+实践：Scala+python
+1、wordcount
+2、用户行为分析
+3、pyspark
+4、基于MR完成中文批量分词
+5、基于pyspark完成中文批量分词
+NB、Kmeans
+
+作业：
+安装环境+scala代码+预习
+
+-------------------------------------------------------------------------
+分类算法
+label：
+二分类：点击率预估，性别预测
+多分类：年龄预测，文本（经济、体育、政治、军事），视频
+
+特征:公司的业务能获取到的数据，淘宝，滴滴
+特征没有泛化能力，1  139.。。  weight——>0.1
+label:准确 数据清洗
+特征：手机上安装app
+效果
+优化
+
+NB独立性假设
+
+p(yi | X) = p(yi, X) / p(X) = p(yi) * p(X | yi) / p(X)
+
+
+p(yi | X) 后验
+p(X) 常量C，而且分母是一样
+p(yi) = yi / y  标签yi的先验概率
+p(X | yi)  = p(x1,x2,...xn |yi) =  p(x1 | yi) * p(x2 | yi) * ...* p(xn | yi) 似然函数
+取log
+log(a*b) = log(a) + log(b)
+ 
+最终比较大小
+p(y1 | X)
+p(y2 | X)
+
+p(军事 | X) = p(军事) * p(x1 | 军事) * p(x2 | 军事) * ... *  p(xn | 军事)
+p(经济 | X)
+p(教育 | X)
+
+model
+1.p(yi)  1:0.3 2:0.3 3:0.4 
+2.p(xj | yi) X * Y   词的数量 * lable数量
+    体育  姚明：0.1     银行：0.01
+    经济  姚明：0.005 银行：0.1
+    军事  姚明：0.001 银行：0.002
+
+混淆矩阵
+准确率  分母：模型预测的数量
+召回率  分母：实际的数量
+
+深化：
+多项式NB
+文章中出现的单词，允许重复
+
+ p(yi) =类别yi下词的总数 / 整个训练样本的词总数
+
+p(xj | yi) = 类别yi下词xj在各个文章中出现的次数求和  / 类别yi下单词总数
+p(X | yi)  = p(x1,x2,...xn |yi) =  p(x1 | yi) * p(x2 | yi) * ...* p(xn | yi)
+
+平滑
+p(xj | yi) = （类别yi下词xj在各个文章中出现的次数求和 + 1 ） / (类别yi下单词总数 + |V|)
+
+|V| 所有单词去重之后的总数量，也就是词表大小
+
+约束条件
+sum p(xj | yi)  =1    p(x1 | yi) +p(x2 | yi) +p(x3 | yi) .... =1
+j
+
+伯努利NB
+文章中的单词，出现多次，只算一个
+p(yi) =类别yi下文章总数  / 整个训练样本的文章总数
+
+p(xj | yi) = 类别yi下包含xj的文章数  / 类别yi下文章数 
+平滑
+p(xj | yi) = (类别yi下包含xj的文章数 +1)  / （类别yi下文章数 +2）
+
+约束条件
+p(xj =1 | yi) + p(xj=0 | yi) =1 
+
+伯努利分布  p（x=正） =1-p（x=负）
+二项式分布
+多项式分布  
+
+sklearn
+
+
+DataConvert.py
+WordList   数组
+WordIDDic 字典  key->word  value->word_id
+
+
+NB.py
+p(yi)  ->ClassProb[classid] 
+p(xj | yi)-> ClassFeaProb[classid][wid]
+
+
+
+
+spark 
+实践：Scala+python
+1、wordcount
+
+package com.badou.sparkdemo
+
+import org.apache.spark.{SparkConf, SparkContext}
+
+object wordcount {
+  def main(args:Array[String]):Unit = {
+    println("123")
+    val conf = new SparkConf()
+    conf.setMaster("local[2]")
+    conf.setAppName("wordcount")
+    val sc = new SparkContext(conf)
+    val rdd = sc.textFile("/root/codes/mapreduce_wordcount_python")
+    val data = rdd.flatMap(_.split(" "))
+      .map((_,1)).reduceByKey(_+_).map{x =>
+      x._1 + "\t" + x._2
+    }
+    data.saveAsTextFile("/root/codes/spark_data/wordcount_output3")
+  }
+}
+
+2、用户行为分析（统计每个用户历史观看列表，将评分低的电影过滤掉，并且按照评分做排序，最终取top5出来）
+package com.badou.sparkdemo
+
+import org.apache.spark.{SparkConf, SparkContext}
+
+object userwatchlist {
+  def main(args:Array[String]):Unit = {
+    println("123")
+    val conf = new SparkConf()
+    //conf.setMaster("local[2]")
+    conf.setAppName("userwatchlist")
+    val sc = new SparkContext(conf)
+    val input_path = sc.textFile("hdfs://master:9000/train_new.data")
+    val output_path = "hdfs://master:9000/userwatchlist_result1"
+    input_path.filter{x =>
+      val ss = x.split("\t")
+      ss(2).toDouble > 2.0
+    }.map{x =>
+      val ss = x.split("\t")
+      val userid = ss(0).toString
+      val itemid = ss(1).toString
+      val score = ss(2).toString
+      (userid,(itemid,score))
+    }.groupByKey().map{x =>
+      val userid = x._1
+      val item_score_tuple_list = x._2
+      val tmp_arr = item_score_tuple_list.toArray.sortWith(_._2 > _._2)
+      var watchlen = tmp_arr.length
+      if (watchlen > 5) {watchlen = 5}
+      //top 5
+      val strbuf = new StringBuilder
+      for (i<-0 until watchlen){
+        strbuf ++= tmp_arr(i)._1
+        strbuf.append(":")
+        strbuf ++= tmp_arr(i)._2
+        strbuf.append(" ")
+      }
+      userid + "\t" + strbuf
+    }.saveAsTextFile(output_path)
+  }
+}
+
+http://192.168.226.10:8088/ 
+http://192.168.226.10:8080/index.html
+run.sh 脚本
+/usr/local/src/hadoop-2.6.5/bin/hadoop fs -rmr /userwatchlist_result
+
+/usr/local/src/spark-1.6.0-bin-hadoop2.6/bin/spark-submit \
+    --master yarn-cluster \
+    --num-executors 2 \
+    --executor-memory 1g \
+    --executor-cores 1 \
+    --driver-memory 1g \
+    --class com.badou.base.userwatchlist /root/IdeaProjects/SparkTest/target/SparkTest-1.0-SNAPSHOT.jar
+
+
+#/usr/local/src/spark-1.6.0-bin-hadoop2.6/bin/spark-submit \
+    #--master spark://master:7077 \
+    #--num-executors 2 \
+    #--executor-memory 1g \
+    #--executor-cores 1 \
+    #--driver-memory 1g \
+    #--class com.badou.base.userwatchlist /root/IdeaProjects/base/target/base-1.0-SNAPSHOT.jar
+
+3、pyspark
+pyspark wordcount_1.py 
+pyspark wordcount_2.py 
+pyspark wordcount_3.py 
+
+
+4、基于MR完成中文批量分词
+把jieba传到各个节点上
+tar cvzf jieba.tgz jieba
+
+脚本里面先xvzf
+
+
+5、基于pyspark完成中文批量分词
+jieba.tgz 做分发
+1）命令行 
+pyspark wordseg_jieba_cluster.py  --py-files jieba.tgz  
+2）代码配置 （sc.addFile("jieba.tgz")）
+
+
+
+
+
+下周安排
+HIVE、Kmeans
+作业：
+NB代码
+
+
+------------------------------------------
+hive
+1.hive 是什么? 一个sql解析引擎，讲sql翻译成MR
+2.hive中的表来描述数据的结构（元数据），只有表的定义，数据实际上是存放在hdfs
+3.hive内容是读多写少，不支持对数据的改写update和删除。
+4.hive和传统sql的区别
+      HQL ：读时模式，只有数据读的时候，hive才会做检查（数据字段，schema） 
+      优势：写到磁盘的速度快（写的时候不需要检查）
+      SQL：写时模式，写的时候做数据处理（为后续查询性能，建立索引，压缩），写时会花费时间
+      优势：读取的时候速度快
+5.可扩展性
+     UDF：用户自定义函数，一对一的，常用select语句，对查询结构做格式化处理
+     UDAF：用户自定义的聚合函数，多对一，需要和group by 连用
+     UDTF：用户自定义的生成函数，一对多，分词
+6.hive的系统架构
+    三个角色
+   （1） 用户接口 cli（终端，UI，JDBC）
+    （2）driver语句转化，将用户查询转化成相应的任务，是整个hive的核心
+    （3）数据存储：实际数据存储在hdfs + 元数据（代表表结构）
+	元数据（metastore）：表结构信息
+	    本地：单用户模式（默认），多用户模式（mysql）
+	    远程：多用户模式（mysql）
+7.hive数据管理
+    （1）table 
+ 	内部表：MANAGED_TABLE
+                       加载：数据加载过程中，实际的数据会被移动到数仓的目录中，之后对数据的访问直接在数仓目录中
+	       删除内部表：表中的数据和元数据会同时被删除（硬链接）
+	外部表：EXTERNAL_TABLE
+	       加载：数据加载过程中，实际数据不会被移动到数仓目录
+	       删除外部表：元数据被删除，但是实际数据仍然存在（软连接）更安全
+   desc formatted rating_table_ex;
+
+    （2）partition：辅助查询，缩小查询范围，加快检索速度。最常用做partition的字段时间。
+select * from table where p_date between '20200101' and '20200229' ;
+    （3）bucket
+	1)控制输出文件的数量，类似reduce操作
+	2)采样
+8.优化
+（1）map的优化-并发度调整
+set mapred.max.split.size=100000000;    每个map处理最大文件大小，单位B
+set mapred.min.split.size.per.node=100000000; 节点中可以处理最小的文件大小
+set mapred.min.split.size.per.rack=100000000; 机架中可以处理最小的文件大小
+hive.map.aggr=true   -combine 优化，-map端聚合
+（2）reduce 优化
+set mapred.reduce.tasks=10
+（3）痛点1：跑hive与遇到只有1个reduce的现象
+	1）没有group by-有聚合函数，要求有group by
+	2）order by 最指定字段进行排序，会产生1个reduce（全局排序）
+	优化方法使用distribute by  和 sort by 来代替
+	distribute by ：控制map端如何拆分数据给reduce，可以想象成partition
+ 	sort by：不是全局排序，保证每个reduce内部是排序的。
+	distribute by 放在sort by 之前
+看每年的气温，要求气温从高到低排列
+select year,temperature from table distribute by year sort by year asc, temperature desc;
+select year,temperature from table  order by year asc, temperature desc;
+（4）痛点2：加快查询速度
+加速方法
+	1）分区 partition
+	2）笛卡尔积，join 没有on，或者on无效。
+	3）map-join：指定小表，内存处理，通常小表大小不超过1G，由于map里面进行了join操作，省去了reduce，运行的效率会提高。
+    streamtable ：指定大表，尽量不存内存
+	4）union all （不去重） 和union（去重）
+	5）multi insert 
+	6）Automatic merge ：多个小文件进行合并
+	hive.merge.size.per.task = 256*1000*1000 合并文件的大小
+
+	7）multi-count distinct 负载均衡，中间加了一个reduce，相当于多了一轮mr，MR随机分发key，均匀分发。
+	负载均衡，第一个reduce做聚合。本来一个MR做的事情，现在变成2个MR来完成
+	set hive.groupby.skewindata=true;
+
+（5）痛点3 join操作
+    1）语句优化
+ 	a)多表连接，顺序问题  a left join b  on a.=b. left c  on a.=c.
+     2)条件判断 条件在 on和where 
+	左右关联时
+	1.条件不为主表条件（不是限制主表），放在on或者where 里是一样的
+	2.条件为主表条件，放在on 后面，结果为主表全量，放在where后为主表条件筛选后的结果。
+
+主要目标：解决数据倾斜问题：
+总结：
+1）大表和小表之间的关联
+	mapjoin让小表进入内存
+2）大表和大表做关联
+	trick方法：随机数，数据预剪枝
+3）特殊值
+4）空间换时间
+
+
+下次课
+hive 执行框架
+
+
+------
+实践
+
+1.hive安装
+apache-hive-1.2.2-bin.tar.gz 
+tar xvzf apache-hive-1.2.2-bin.tar.gz 
+http://www.eu.apache.org/dist/hive/stable/apache-hive-1.2.2-bin.tar.gz
+
+
+cp hive-default.xml.template    hive-site.xml
+%s/${system:user.name}/root/g
+%s/${system:java.io.tmpdir}/hive/g
+
+同时在 hive-site.xml 添加关于元数据管理的配置
+<property>
+      <name>javax.jdo.option.ConnectionURL</name>
+      <value>jdbc:mysql://localhost:3306/hive?createDatabaseIfNotExist=true</value>
+      <description>JDBC connect string for a JDBC metastore</description>
+  </property>
+  <property>
+      <name>javax.jdo.option.ConnectionDriverName</name>
+      <value>com.mysql.jdbc.Driver</value>
+      <description>Driver class name for a JDBC metastore</description>
+  </property>
+  <property>
+      <name>javax.jdo.option.ConnectionUserName</name>
+      <value>root</value>
+      <description>Username to use against metastore database</description>
+  </property>
+  <property>
+      <name>javax.jdo.option.ConnectionPassword</name>
+      <value>111111</value>
+      <description>password to use against metastore database</description>
+  </property>
+
+
+cp hive-env.sh.template    hive-env.sh 
+HADOOP_HOME=/usr/local/src/hadoop-2.6.5
+JAVA_HOME=/usr/local/src/jdk1.8.0_172
+HIVE_HOME=/usr/local/src/apache-hive-1.2.2-bin
+
+mysql-connector-java-5.1.41-bin.jar拷贝到hive的lib目录中
+
+2.mysql的安装
+yum install mysql-server  mysql
+
+启动
+systemctl start  mariadb
+检查mysql是否启动成功
+netstat -antup |grep 3306
+创建账户和密码
+mysqladmin -u root passwd
+
+修改bashrc 
+export HIVE_HOME=/usr/local/src/apache-hive-1.2.2-bin
+export PATH="$HIVE_HOME/bin:$PATH"
+
+
+3.数据集
+
+4.创建表
+1）movie表
+
+CREATE Table movie_table
+(movieid STRING,
+title STRING,
+genres STRING
+)
+row format delimited fields terminated by ',' 
+stored as textfile
+location '/movie_table'
+
+hadoop fs -mkdir -p /movie_table
+hadoop fs -put movies.csv  /movie_table
+
+    
+数据导入导出
+join操作
+
+5.产生新表
+create table behavior_table as 
+select A.movieid, A.title, B.userid, B.rating 
+from
+(select movieid, title from movie_table) A
+inner join
+(select userid, movieid, rating from rating_table_ex ) B
+on A.movieid = B.movieid
+limit 100;
+
+6.数据导出
+   1）导出到本地
+         INSERT OVERWRITE LOCAL DIRECTORY '/root/codes/hive_test/tmp' SELCT * FROM movie_table  ;
+        hive -e "select * from movie_table " >a.txt
+   2）导出到hdfs
+          INSERT OVERWRITE DIRECTORY '/movie_data' SELCT * FROM movie_table  ;
+7.数据导入
+   1）从本地批量往table导入数据
+         LOAD DATA LOCAL INPATH '/root/codes/hive_test/ml-latest-small/ratings.csv' OVERWRITE INTO TABLE rating_table_ex ;
+   2)从hdfs批量往table中导入数据
+         LOAD DATA INPATH '/rating_table'  OVERWRITE INTO TABLE rating_table_ex ;
+
+
+8.partition 
+
+CREATE Table rating_table_p
+(userid STRING,
+movieid STRING,
+rating STRING,
+ts STRING
+)
+partitioned by (dt STRING)
+row format delimited fields terminated by '\t' 
+lines terminated by '\n'
+
+LOAD DATA LOCAL INPATH '/root/codes/hive_test/ml-latest-small/2003-09.data' OVERWRITE INTO TABLE rating_table_p partition (dt='2003-09-01') ;
+LOAD DATA LOCAL INPATH '/root/codes/hive_test/ml-latest-small/2003-10.data.small' OVERWRITE INTO TABLE rating_table_p partition (dt='2003-10-01') ;
+
+
+9.bucket
+set hive.enforce.bucketing=true;
+CREATE Table rating_table_b
+(userid STRING,
+movieid STRING,
+rating STRING,
+ts STRING
+)
+clustered by (userid) into 16 buckets;
+
+from rating_table_ex  
+insert overwrite table rating_table_b 
+select userid, movieid, rating, ts ;
+
+检查数据
+ hadoop fs -ls /user/hive/warehouse/rating_table_b
+采样：
+select * from rating_table_b tablesample(bucket 3 out of 16 on userid) limit 10;
+数据位于
+hadoop fs -cat /user/hive/warehouse/rating_table_b/000002_0 |head -20
+常用的采样方法：
+random  >0.9
+
+10.transform  python awk
+hive 的udf是通过java编写的，同时hive提供了另外一种方式（支持多语言），有达到类似的目的
+
+1）shell -awk 
+cat transform.awk 
+{
+    print $1"_"$2
+}
+echo "aa bb cc" |awk -f transform.awk 
+aa_bb
+add file /root/codes/hive_test/transform/transform.awk  ;
+select transform(movieid,title) using "awk -f transform.awk"  as aa from movie_table limit 10;
+
+2)python
+cat transform.py 
+import sys
+
+for line in sys.stdin:
+    ss = line.strip().split('\t')
+    print '_'.join([ss[0].strip(), ss[1].strip()])
+
+add file /root/codes/hive_test/transform/transform.py  ;
+select transform(movieid,title) using "python transform.py"  as aa from movie_table limit 10;
+
+
+3)wordcount
+创建表，把文章导入
+ create table docs (line string);
+LOAD DATA LOCAL INPATH '/root/codes/hive_test/The_Man_of_Property.txt' OVERWRITE INTO TABLE docs;
+
+再创建一张表，存放结果
+create table word_count(word string, cnt int) row format delimited fields  terminated by '\t' ;
+
+add file /root/codes/hive_test/transform_wc/mapper.py;
+add file /root/codes/hive_test/transform_wc/red.py;
+ select transform(line) using "python mapper.py" as word,count from docs limit 10;
+
+insert overwrite table word_count 
+select transform(M.word, M.count)   using "python red.py" as w, c
+from
+(select transform(line) using "python mapper.py" as word,count 
+from docs 
+cluster by word 
+)M 
+
+
+进入到reduce的数据形式，然后使用red.py能得到word count
+1.相同的key在同一个reduce里面
+2.需要让相同的key在一起
+
+
+11.窗口函数
+ rank  相同的值排序的结果一样，而且下一个不同值是跳着排序的  1、1、3
+dese_rank 相同的值排序的结果一样，下一个不同值不跳跃  1、1、2
+row_number over(partition by uid oder by score desc) 不管排名是否一样，都按照顺序，1,2,3
+代码经常会加限定  where rowNum=1
+
+
+select * from name_id_score ;
+OK
+tony    21254   85
+peter   21256   80
+lily    21255   85
+matt    21257   86
+vivi    21258   90
+tim     21259   90
+ane     21253   75
+ana     21260   78
+select name, id, score, rank() over (order by score) as rank from name_id_score;
+select name, id, score, dense_rank() over (order by score) as dense_number from name_id_score;
+select name, id, score, row_number() over (order by score) as rowNUM from name_id_score;
+
+场景：分析每一个人最后看到的视频id
+
+
+log Hive表  
+user_id1，photo_id, ts, click
+user_id2，photo_id, ts, follow
+user_id1，photo_id, ts, click
+
+
+=>
+select A.uid, A.photo_id
+from 
+(select *,
+row_number over(partition by uid oder by ts desc) as rowNum
+from table 
+)A
+where  rowNum=1;
+
+user_id1，photo_id, ts, click , 1
+user_id2，photo_id, ts, follow,1
+user_id1，photo_id, ts, click, 2 
+
+
+
+
+12 行转列 列转行
+select concat_ws(',','1','2','3','4','5','6','7','8','9') from b_tmp limit 3;
+select split(concat_ws(',','1','2','3','4','5','6','7','8','9'),',')[2] from b_tmp limit 3;
+select explode(split(concat_ws(',','1','2','3','4','5','6','7','8','9'),',')) from b_tmp limit 8;
+select s.*,sp from b_tmp s lateral view  explode(split(concat_ws(',','1','2','3','4','5','6','7','8','9'),',')) t as sp limit 8;
+
+select t, count(1) from (select explode(split(genres,'\\|')) as t  from movie_table) A group by t;
+
+作业，返回每一门课程和对应的最高分的学生的姓名
+
+按照\t分割
+zhangsan        math:90,english:60
+lisi    chinese:80,math:66,english:77
+wangwu  chinese:66,math:55,english:80
+
+========================================
+hbase
+1.Hbase 是一个高可靠性、高性能、面向列、可伸缩、实时读写的分布式数据库
+   hdfs 文件存储系统、MR处理海量数据、ZK分布式协同服务
+2.Hbase 存储海量稀疏数据，用户画像，用户对电影的评分数据
+3.与传统关系型数据库（mysql、oracle）的对比：从存储结构上
+        行存储（关系型数据库）
+	优点：保证数据完整性，写入时候做检查
+	缺点：读取的时候，会产生冗余信息
+        列存储（Nosql）
+	优点：读取的时候，不产生冗余信息
+	缺点：写的时候不校验，不能保证数据的完整性
+4.Hbase优点
+	存储海量数据
+	快速随机访问（内存中的数）——HDFS通常要求顺序读取
+	可以并行大量的改写（内存中）
+5.Hbase的结构（逻辑模型）（主要是从用户角度考虑，我们使用hbase）
+
+rowKey ->Column Family -> Column Qualifer
+
+rowKey:
+	1）按照字典顺序排序
+	2）决定一行数据的唯一标识
+	3）最多只能存储64k的字节数据
+Column Family：列族  CF1，CF2
+	1）列归属于列族，列族必须在创建表时做为schema定义预先给出
+	2）family是一级列
+ Column Qualifer：列
+	1）列名以列族做为前缀，看代码  CF1：c1，CF2：c2
+	2）Qualifer是二级列
+单元格：
+	有 rowKey，Column ，version 唯一确定
+
+比如音乐数据放在hbase 元信息（名称，类型，歌手，地域），统计信息（展示次数，点击，收藏）
+
+6.三维有序
+ 	rowKey 升序，Column升序 ，时间戳降序
+
+7.Hbase的物理模型（主要从实现habse的角度）
+	regionserver 代表节点，存储多个region，是hbase最核心模块，负责维护分配给自己的region，并且响应用户的读写请求
+	Hregionserver 代表进程，包含多个HRegion （类似于hdfs：Datanode-Block的关系）
+	HRegion包含多个Hstore，Hstore对应着table的Column Family，
+	Hstore有两部分组成，MemStore和StoreFile
+	HRegion是Hbase分布式存储和负载均衡的最小单元
+
+8.Hbase架构 （client、Hmaster（hbase主）、HRegionServer（hbase从）、zookeeper（协调不同机器的工作））
+9.寻址   
+	client会有自己的缓存，缓存rowkey->Hregion的映射
+	client客户端对hbase操作时，通过zk获取到Hregion的地址
+10.读数据  内存（blockcache，memstore） +hdfs 
+	
+11.容错，机器挂了，数据并不丢失，HLOG日志机制，避免数据丢失
+	WAL预写日志:先写HLOG，然后在写memstore，最重要的作用是灾难恢复
+	一个regionserver上所有的region共享一个HLOG
+12.hbase表的设计
+	rowkey ip 192.168.1.x，顺序，所有北京在一个region，访问压力不均匀
+	倒序 x.1.861,291 目的：负载均衡，均匀访问
+	rowkey ：加密（MD5，crc32）
+	rowkey  设计需要遵守的规则
+	1.长度，过长内存利用率降低，按照8个字节的整数倍可以获取到最佳性能
+	2.分散，热点不要紧挨着
+	3.唯一，独一无二
+	Coulumn Family 设计，CF数量 1-2个。
+	如果hbase有多个cf，当某个cf发生flush，其他cf也会关联触发flush
+
+
+
+
+
+
+实践：
+1.hbase安装   hbase-0.98.6-hadoop2.tgz ，要求zk先装好
+1）保证hadoop启动
+2）保证zk启动完成  zookeeper-3.4.5 
+	1.修改zk配置文件 
+	cp  zoo_sample.cfg zoo.cfg
+server.0=master:8880:7770
+server.1=slave1:8881:7771
+server.2=slave2:8882:7772
+	2.在安装目录下面，创建myid，里面分别填写数字，（每个机器一一对应）
+	3.分别在所有节点执行
+		./bin/zkServer.sh start
+		./bin/zkServer.sh status
+
+3)hbase 启动完成
+	1.habse-env.sh 设置环境变量
+	export JAVA_HOME=/usr/local/src/jdk1.8.0_172
+	export HBASE_MANAGES_ZK=false
+	2.hbase-site.xml
+	<configuration>
+     <property>
+         <name>hbase.rootdir</name>
+         <value>hdfs://master:9000/hbase</value>
+     </property>
+     <property>
+         <name>hbase.cluster.distributed</name>
+         <value>true</value>
+     </property>
+     <property>
+         <name>hbase.zookeeper.quorum</name>
+         <value>master,slave1,slave2</value>
+     </property>
+     <property>
+         <name>hbase.master.maxclockskew</name>
+         <value>150000</value>
+     </property>
+     <!--<property>-->
+         <!--<name>dfs.replication</name>-->
+         <!--<value>2</value>-->
+     <!--</property>-->
+ </configuration>
+
+	3. cat regionservers 
+	slave1
+	slave2
+	4.把hbase目录，分发到其他节点上 scp
+	5.启动hbase 只需要在master执行
+	./bin/start-hbase.sh
+	6.验证hbase
+	 hbase shell  
+	>status
+	
+
+下周安排
+hbase实践
+hive 转换mr的过程
+分类模型
+推荐
+音乐推荐系统
+
+
+
+
+
+
+2.hbase shell操作
+3.python + hbase
+4.mr + hbase 
+5.hive + hbase
+
+------------------------------------------
+决策树
+ID3
+C45
+CART
+
+
+熵
+不确定性的度量，熵越大，不确定性越大。（氧气和氮气的混合状态）熵的减少需要做功。
+H =- Σp(i) logp(i)           
+min(H) = 0 纯净，完全确定    
+max(H)= -log(1/N)=logN 完全不确定，均匀的所有的p(i)相等，比如有N个类别，p(i)=1/N
+
+
+信息增益
+
+挑哪一个属性先分裂？
+信息增益最大的属性
+
+缺点：
+选择信息增益最大的属性，但是没有对属性的取值数量做限制。年龄3个，学生2个，属性A1000个，倾向于选择属性取值多的。
+
+label feature
+男     id：1001
+女     id：1002
+
+这种情况ID3算法倾向于首选id来分裂，分裂后每一个节点上面有多个样本？1。
+问题在于使用ID类特征没有泛化能力。
+
+
+C45
+H(AB) 加权的熵=50/100*H(A) + 50/100*H(B)
+ID3:   H - H(A,D) = -log0.5      越大越好
+C45:  [ H - H(A,D)  ] /  H(A)     越大越好
+
+H(A,D)  加权平均的与类别有关。
+H(A) 只是属性的熵，与类别无关
+比如id类的属性，N个id，每一个的概率是1/N, H(A）=logN 为最大。
+
+买和不买，根据这两个的概率套熵的公式算出来为0.9544
+E(年龄)=0.375*0.9183+0.25*0+ 0.375*0.9157=0.687   每个属性里面label的熵的加权平均
+G(年龄)=0.9544-0.6877=0.2667  
+M(年龄) = - Σp(i) logp(i)  = -[0.375 * log0,375 + 0.25 * log0.25 +0.375 * log0,375 ]   每个属性的熵
+ratio = G(年龄) / M(年龄) 
+
+所以说 比如id类的属性，M（id）= logN 最大值，ratio（id）为最小，不选id。
+
+
+剪枝 ：目的防止过拟合
+预剪枝
+后剪枝
+
+https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeRegressor.html#sklearn.tree.DecisionTreeRegressor
+
+逻辑回归
+
+线性回归
+y=f(x,w)
+y:男或者女
+男是1女是0
+x：
+某一个样本
+特征                特征取值      w
+身高                180              0.7
+体重                 70kg           0.6
+肤色                                    0.4
+音色                                    0.8
+年龄                 30               0.01
+是否戴眼镜       是               0.3
+
+∑w*x = 180*0.7 + 70 * 0.6 + ... + 1*0.3
+b = 0.4 偏置，整体偏向
+
+
+模型：
+身高->0.7
+体重->0.6
+
+当一个样本，170cm,70kg
+p（y=1|x,w）=sigmoid（0.7*170+0.6*70)
+
+学出w 和b，再来一条样本，做预测。
+
+逻辑回归
+p(y=1 | x) = wx
+wx [ -∞ ，+∞]
+exp(wx)  [0, +∞]
+p(y=1 | x)  [0,1]
+p(y=0 | x)  [0,1]
+p(y=1 | x)  / p(y=0 | x)    [0, +∞]
+p(y=1 | x)  / p(y=0 | x) = exp(wx) 
+p(y=1 | x)  / [1-p(y=1 | x) ] = exp(wx) 
+a/(1-a) =exp(wx) 
+a = (1-a) exp(wx) 
+a+a exp(wx)  =  exp(wx) 
+a = exp(wx) / (1+exp(wx) )
+=> p(y=1 | x) = 1 / [1+exp(-wx) ] = sigmoid(wx)
+
+p(y=0 | x) =1- 1 / [1+exp(-wx) ] = 1-sigmoid(wx)
+
+sigmoid(t) = 1 / (1+exp(-t))
+
+最大似然
+10次抽样，取出8黑2白，计算抽一次是黑球的概率。p(黑) ，那么总共有多少个黑球，20*p(黑)
+P = p(黑)**8 *（1-p(黑)）**2      y= x**8 *(1-x) **2 = x**8 *（x**2-2x+1）=x**10-2x**9+x**8 似然函数
+最大化P   最大似然
+求导令导数等于0
+y' = 10x**9-18x**8+8x**7 = 0
+x=0
+x!=0 10x**2 -18x+8 =0
+5x**2 -9x +4 =0
+(5x-4)(x-1) = 0 
+x = 0.8
+x = 1
+
+逻辑回归的似然函数
+N个样本，M个正样本，N-M负样本
+P = p(y=1 | x,w) ** M *  p(y=0 | x,w) ** (N-M)
+
+P = p(y=1 | x,w) * ... *  p(y=0 | x,w) *  所有样本的概率连乘
+
+最大化P
+相当于最小化负对数似然 
+-log（P） = - ∑[ I(yi=1)logp(y=1 | x,w) +I(yi=0)log(p(y=0 | x,w) ]
+
+I(yi=1) 取值如下
+1 ,如果yi=1
+0,else
+
+
+最终计算w，有多少个特征就有多少个w
+猜，先给定初值，w=[1,1,1,...1] ,带入损失函数计算损失，迭代更新。梯度下降法。
+
+凸函数f（x）
+函数上面2个点 x1,f(x1)  x2，f(x2)
+两点连线，[y-f(x1)]/(x1-x) = [y-f(x2)]/(x2-x)   z(x)
+
+f(（x1+x2）/ 2) 函数上的点
+[f(x1) + f(x2)] /2  直线上的点
+f(（x1+x2）/2) < [f(x1) + f(x2)] /2  凸函数
+
+凸优化问题
+1.方向    
+2.步长
+3.收敛性   需要证明
+
+方向导数本质是一个数值
+梯度是一个向量
+梯度下降法
+方向：梯度的反方向
+步长：固定值，折半查找
+
+
+F(w)=-log（P） = - ∑[ I(yi=1)logp(y=1 | x,w) +I(yi=0)log(p(y=0 | x,w) ]
+
+F'(w) =  - 
+
+logp'(y=1 | x,w) =d log sigmoid(wx) /dw = 1/sigmoid(wx) *[dsigmoid(wx) /dw] =  [1-sigmoid(wx) ] x 
+
+logp'(y=0 | x,w) =d log 1-sigmoid(wx) /dw = -1/ [1-sigmoid(wx) ] sigmoid(wx) *  [1-sigmoid(wx) ] x 
+=- sigmoid(wx)  x
+最终：
+ -[yi-sigmoid(wx) ] x 
+
+
+d sigmoid(wx) /dw = d( 1 / [1+exp(-wx) ]) / dw =
+
+1 / [1+exp(-wx)]   1/[1+exp(-wx)]**2 *exp(-wx) x = exp(-wx) x  / [1+exp(-wx)]**2  
+= 1/ [1+exp(-wx)] *  exp(-wx) x / [1+exp(-wx)] 
+= sigmoid(wx) *  [1-sigmoid(wx) ] x 
+
+
+下周安排
+1.逻辑回归实践
+2.推荐系统 CB CF
+
+
+下下周 项目 音乐推荐系统
+
+
+--------------------------
+推荐算法
+
+（1）基于内容
+（2）基于协同
+（3）基于分解
+
+
+都需要计算物品之间的相似度
+协同不通过物品的特征来计算物品之间的相似度
+
+
+
+无个性化到有个性化，需要引入人的信息，用到用户的历史行为
+用户画像
+1.历史行为：观看，收藏，购买，点击，点赞，关注
+2.用户注册数据，年龄性别兴趣
+3.社交信息，关系数据
+
+马太效应：看什么推什么导致的，多样性差
+多样性 ：探索和利用 EE，对用户比较确定的兴趣要利用，容易腻；还要探索用户的兴趣。 体育 人文。
+
+非个性化和个性化的比较
+官网首页，大多是非个性化，个性化容易暴露隐私，多是大制作，高知名度的作品曝光。
+app端个性化比较多。
+
+
+相似度
+1.欧式距离,衡量两点之间的距离，每个坐标上取值相减，求平方和，最后输出平方根
+问题：结果是一个数，不是在0-1之间。倒数   1/(1+d)，该值越大的话，d越小，越相似
+
+2.余弦相似度，度量两个向量之间的夹角，在计算文本、用户、物品之间相似度常用
+与向量长度无关，因为做了归一化。
+A （1,2）  B（4,5）,评分区间[0,5] 计算A和B的相似度  cos(A,B) = (1*4+2*5)/sqrt(5*41) = 0.98 
+很明显的是A对这两个电影都不喜欢，但是B对这两个电影都比较喜欢。所以不能认为AB相似
+解决方案：都减去电影评分的均值，之后再计算相似度
+item1 1.5  item2 1.5
+A -> (-0.5,0.5) B->(2.5,3.5)  cos(A,B) 
+
+3.皮尔逊相似度,向量各自减去均值（人的打分习惯），再计算余弦相似度[-1,1],度量两个随机变量是否在同增同减
+A:1.5
+B:4.5
+A -> (-0.5,0.5) B->(-0.5,0.5)  cos(A,B) =1
+
+4.杰卡德相似度jaccard,两个集合交集元素的个数在并集中所占的比例，比如用户的收藏、购买行为
+适合于数据类型是布尔值
+A（0,0,1） B（0,1,1） 1 / 2 
+
+
+
+基于协同的推荐
+
+协同过滤  CF     评分矩阵
+            film
+user1   5	4  2
+user2   4  ?   1  
+...
+usern
+
+
+USER base    计算的是user之间的相似度
+ITEM base     计算的是item之间的相似度
+这两个都只需要评分矩阵就可计算，不需要用户的特征，也不需要item的特征。
+
+sim(u1,u2)
+sim(i1,i2) 
+
+A (5,1,？2,2)   ->(5,1,2,2)
+B(1,5,2,5,5)     ->(1,5,5,5)
+分子30
+分母sqrt(25+1+4+4) *sqrt(1+25+25+25) =sqrt(34*76)
+cos(A,B) = 30/sqrt(34*76)
+
+
+推荐user：微博好友推荐，领英，PYMK
+推荐item：淘宝、京东、视频
+
+基于内容的推荐和item-base推荐的区别
+
+
+基于内容的推荐：通过item分析，分词tfidf等，需要用到item的特征
+item-base推荐：通过共同的用户评分来计算的物品之间的相似度。
+
+实践： Itembase MR实现
+
+计算 item1  和item2 的相似度，首先需要把共同评价这两个商品的用户找到
+u1 item1  0.1   item2 0.2 
+u2 item1 0.2   item2 0.4
+u3 item1 0.3  item2 0.3
+计算 item1  和item2 的相似度 
+item1  （0.1,0.2,0.3）
+item2   （0.2,0.4,0.3）
+[0.1 *0.2 +0.2*0.4 +0.3*0.3 ]/( |item1| * |item2|)
+
+分母：先用一步MR来实现，算出每一个item的模。
+
+原始输入：
+1,100001,5   ->1,100001,0.2
+
+5/ |100001| =0.2
+
+第一步：先得到每个物品归一化后的分数，输出 user item score_new
+
+近似，用所有的用户对商品的评分的模，代替了共同用户对商品评分的模
+
+A (5,1,？2,2)   ->(5,1,2,2)
+B(1,5,2,5,5)     ->(1,5,5,5)
+分子30
+分母sqrt(25+1+4+4) *sqrt(1+25+25+25) =sqrt(34*76)
+cos(A,B) = 30/sqrt(34*76)
+
+=>sqrt(25+1+0+4+4) *sqrt(1+25+4+25+25)
+
+A (5,1,？2,2)  ->(5/sqrt(34),1/sqrt(34), ?, 2/sqrt(34), 2/sqrt(34))
+B(1,5,2,5,5)  -> (1/sqrt(80),5/sqrt(80), 2/sqrt(80), 5/sqrt(80), 5/sqrt(80))
+sim(AB) = 5/sqrt(34) *1/sqrt(80) + 1/sqrt(34)*5/sqrt(80) + 2/sqrt(34)* 5/sqrt(80)+ 2/sqrt(34)* 5/sqrt(80)
+
+第二步：找到有共同人的商品，计算点乘，然后输出item1 item2 s*s2
+
+算的是  U1  item1_item2  5/sqrt(34) *1/sqrt(80)
+            U2  item1_item2   1/sqrt(34)*5/sqrt(80) 
+
+第三步： item1_item2 求和 s1*s2
+
+item1_item2  5/sqrt(34) *1/sqrt(80)
+item1_item2    1/sqrt(34)*5/sqrt(80) 
+item1_item2     2/sqrt(34)* 5/sqrt(80)
+item1_item2      2/sqrt(34)* 5/sqrt(80)
+
+作业
+运行代码  ->spark scala 比较运行速度 ->hive 
+
+下周安排
+音乐推荐系统实战
+
+LR做评论好评差评分析，LR用法。
+特别棒  w正向 ->好评
+
+====================================
+f(w,x) = w1*x + w2 *x**2 +w3*x**3 + w4*x**4 +...+ wn*x**n
+减少特征的数量，w少 ，x是特征的取值
+
+L(w,x) = Σ[f(w,x)-y]**2   最小二乘的损失函数
+最终要求出w。 agrmin L(w,x)  求出一组w，使得L（w，x）最小。
+
+w越多损失函数越小。
+特征->特征名称
+特征取值->x
+特征权重->w
+
+L(w,x) = Σ[f(w,x)-y]**2   最小二乘的损失函数
+=>L(w,x) = Σ[f(w,x)-y]**2 +||w||**2
+
+|w1| + |w2| =C  
+
+w1,w2>0  w1+w2=C
+w1>0,w2<0  w1-w2 =C
+。。。
+
+w1**2 + w2**2 =C
+
+
+1.首先损失函数最小值一定是在最小二乘函数与正则函数交点位置
+
+ Σ[f(w,x)-y]**2  等高线为什么是同心椭圆
+
+心指的是最小值，有一个w1和w2，使得函数=0
+
+a*w1**2+b*w2**2 =C  椭圆
+
+离散化->所有的特征取值只有0或者1
+178->1000:1
+179->1001:1
+
+=====================
+推荐系统实战项目
+
+1.准备数据
+（1）用户画像数据 user_profile.data
+00ea9a2fe9c6810aab440c4d8c050000,女,26-35,20000-100000,江苏
+01a0ae50fd4b9ef6ed04c22a7e421000,女,36-45,0-2000,河北
+userid,性别，年龄，收入，地域
+（2）物品元数据 music_meta
+0093709100韩国少女时代最新回归新专主打《I GOT A BOY》韩国少女时代最新回归新专主打《I GOT A BOY》304少女时代,鹿晗,韩国,exo综艺,最新回归,exo快乐大本营,吴世勋,fx组合,音悦台
+itemid,name,desc,时长，地域，标签
+（3）用户行为数据 user_watch_pref.sml
+01e069ed67600f1914e64c0fe773094440903091011519
+01d86fc1401b283d5828c293be290e0861928091017512
+userid,itemid,用户对该物品的收听时长，时间（小时）
+
+首先，把3份数据，融合到一份数据当中，pre_base_data/gen_base.py
+merge_base.data
+01e069ed67600f1914e64c0fe773094440903091011519女0-1810000-20000江西大美妞 大哲2013最新伤感歌曲网络歌曲DJ舞曲 大连翻译248大美妞,流行
+
+2.【召回】CB算法
+（1）希望得到item-item相似矩阵
+pre_data_for_cb/gen_cb_train.py 
+得到结果（token,itemid,score的形式）
+重要程度name，desc，tags不同的系数，tags没有分词，需要引入idf_dict
+翻译,4090309101,0.561911164569
+DJ,4090309101,0.896607562717
+大哲,4090309101,0.896607562717
+
+（2）计算出item-item相似度并建索引
+=>三轮MR计算得到item与item之间的相似度  cb.result
+
+执行gen_reclist.py  ->cb_reclist.redis
+SET CB_1048509232 9462709139:0.149846_5455509102:0.137716_1361809225:0.121193_2249309233:0.114974_1561109110:0.108036_0003209109:0.0927_0327509231:0.086353_1566709225:0.007811_3128509225:0.006734_7001009238:0.006215
+下面插入数据库（建索引的过程）
+（1）提前工作
+redis：redis-2.8.3.tar.gz 
+解压，安装（make）得到bin文件
+redis-cli ：客户端
+redis-server ：服务端
+启动数据库 nohup ./src/redis-server &
+（2）灌数据
+格式转换
+yum install unix2dos
+unix2dos cb_reclist.redis 
+
+ cat cb_reclist.redis | /usr/local/src/redis-2.8.3/src/redis-cli --pipe
+
+
+
+3.【召回】CF算法
+（1）userid,itemid,score 整理出数据，希望得到item-item相似矩阵
+执行gen_cf_train.py 产生cf_train.data
+（2）计算出item-item相似度并建索引
+gen_reclist.py  ->cf_reclist.redis
+（3）格式转换
+unix2dos cf_reclist.redis 
+（4）批量灌库
+cat cf_reclist.redis | /usr/local/src/redis-2.8.3/src/redis-cli --pipe
+
+4.排序
+
+需要一个model
+训练数据集
+label   feature
+gen_samples.py  产生samples.data   libsvm形式
+黄家驹1993演唱会高清视频
+黄家驹 /1993 /演唱会/ 高清/ 视频
+100:0.2333 101:0.8  1000:1  50:1 10:1
+
+python lr_new.py ../data/samples.data
+
+5.组装推荐系统实践：
+（1）解析请求：userid，itemid
+http://master:9988?userid=abc&itemid=111
+
+userid=abc
+itemid=111
+
+（2）加载模型：加载model.w model.b
+（3）检索候选集合：分别利用cb和cf去redis里面检索数据库，得到item->item1 item2 item3..
+（4）获取用户特征
+（5）获取物品特征
+不是请求的物品特征，而且候选列表里的物品，因为接下来要计算点击率排序
+（6）打分sigmoid排序
+prediction = 1/[1+exp(-wx)]
+
+w是模型，已经加载了
+x是特征值，用户和物品，也已经加载。
+（7）top-n截断
+（8）数据包装 itemid->name 返回
+（9）浏览器验证
+http://master7:9988?userid=002db7d2360562dd16828c4b91402000&itemid=3880409156
+
+roc auc 准确率召回率，离散化，特征选择  1h，NLP项目
+1.训练模型，特征是如何得到
+2.整个流程
+
+
+下周安排  组件
+hbase实践
+flume
+zk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
