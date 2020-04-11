@@ -3,35 +3,35 @@
 <generatorConfiguration>
     <!-- classPathEntry:数据库的JDBC驱动,换成你自己的驱动位置 -->
     <classPathEntry
-            location="/Users/youxuehu/.m2/repository/mysql/mysql-connector-java/5.1.47/mysql-connector-java-5.1.47.jar" />
+            location="/Users/lvshuihan/.m2/repository/mysql/mysql-connector-java/8.0.18/mysql-connector-java-8.0.18.jar" />
     <context id="mysql2Tables" targetRuntime="MyBatis3">
         <!-- 去除自动生成的注释 -->
         <commentGenerator>
             <property name="suppressAllComments" value="false" />
         </commentGenerator>
 
-        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://master7:3306/db1" userId="root"
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:30306/k8s" userId="root"
                         password="zhf123..">
         </jdbcConnection>
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false" />
         </javaTypeResolver>
         <!-- targetProject:自动生成代码的位置 -->
-        <javaModelGenerator targetPackage="com.example.springbootdemo.common.db.dao.odps.model"
+        <javaModelGenerator targetPackage="com.example.springbootdemo.common.db.dao.userinfos.model"
                             targetProject="src/main/java">
             <property name="enableSubPackages" value="true" />
             <property name="trimStrings" value="true" />
         </javaModelGenerator>
-        <sqlMapGenerator targetPackage="com.example.springbootdemo.common.db.dao.odps.mapper.xml"
+        <sqlMapGenerator targetPackage="com.example.springbootdemo.common.db.dao.userinfos.mapper.xml"
                          targetProject="src/main/java">
             <property name="enableSubPackages" value="true" />
         </sqlMapGenerator>
         <javaClientGenerator type="MAPPER"
-                             targetPackage="com.example.springbootdemo.common.db.dao.odps.mapper" targetProject="src/main/java">
+                             targetPackage="com.example.springbootdemo.common.db.dao.userinfos.mapper" targetProject="src/main/java">
             <property name="enableSubPackages" value="true" />
         </javaClientGenerator>
         <!-- tableName:用于自动生成代码的数据库表；domainObjectName:对应于数据库表的javaBean类名-->
-        <table tableName="odps" domainObjectName="Odps" />
+        <table tableName="userinfos" domainObjectName="Userinfos" />
     </context>
 </generatorConfiguration>
