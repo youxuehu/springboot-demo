@@ -1,0 +1,10 @@
+k8s 部署服务步骤：
+
+kubectl apply -f nginx.yaml
+kubectl get deployments nginx
+kubectl expose deployment nginx --type=NodePort --name=nginx-service
+kubectl describe services nginx-service
+
+NodePort:               <unset> 31496/TCP
+
+http://localhot:31496
