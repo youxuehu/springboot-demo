@@ -1815,7 +1815,279 @@ hbase实践
 flume
 zk
 
+--------------------------------------------------------
 
+hive
+作业，返回每一门课程和对应的最高分的学生的姓名
+
+按照\t分割
+zhangsan        math:90,english:60
+lisi    chinese:80,math:66,english:77
+wangwu  chinese:66,math:55,english:80
+
+两步：
+1.lateral view explode
+2.ROW_NUMBER() over
+
+--create table student_score_tmp1 (
+--      name string,
+--      scores string
+--)
+--ROW FORMAT delimited
+--fields terminated by '\t'
+--COLLECTION ITEMS TERMINATED BY ','
+--stored as textfile
+--location '/student_score_tmp1';
+--;
+
+select course,name, score from
+(
+    select b.course, b.name, b.score,
+    ROW_NUMBER() over (partition by course order by score desc) rowNum
+    from
+    (
+        select s.name, split(a,':')[0] as course, split(a,':')[1] as score
+        from student_score_tmp1 s lateral view explode(split(s.scores,',')) t as a
+    )b
+) c
+where c.rowNum=1
+
+
+
+create table student_score_tmp (
+      name string,
+      scores Map<string, int>
+)
+ROW FORMAT delimited
+fields terminated by '\t'
+COLLECTION ITEMS TERMINATED BY ','
+MAP KEYS TERMINATED BY ':'
+stored as textfile
+location '/student_score_tmp';
+
+select course,name,score
+from
+(select name,course,score,ROW_NUMBER() over (partition by course order by score desc) rowNum
+    from student_score_tmp
+    lateral view explode(scores) s as course,score
+)a
+where rowNum=1
+;
+
+
+
+
+hbase 实践
+
+
+hbase 安装
+hbase shell
+ 启动 ./bin/start-hbase.sh
+./bin/hbase shell
+删除表格
+>disable 'm_table'
+>drop 'm_table'
+
+创建表格
+>create 'm_table','meta_data','action'
+>desc 'm_table'
+> alter 'm_table' ,{NAME => 'cf_new'}
+> alter 'm_table' ,{NAME => 'cf_new',METHOD=>'delete'}
+查看数据
+>count 'm_table'
+写数据
+>put 'm_table','1001','meta_data:name','zhang3'
+
+查看数据
+>get 'm_table', '1001'
+
+alter 'm_table',{NAME=>'meta_data',VERSIONS=>3}
+put 'm_table','1001','meta_data:name','wang5'
+
+获取指定版本号的数据
+get 'm_table' ,'1001',{COLUMN=>'meta_data:name',VERSIONS=>3}
+
+get 'm_table' ,'1001',{COLUMN=>'meta_data:name',TIMESTAMP=>1586653302748}
+
+通过明确的value，反查记录
+scan 'm_table' ,FILTER=>"ValueFilter(=,'binary:li4')"
+
+通过value慢匹配，反查记录
+scan 'm_table' ,FILTER=>"ValueFilter(=,'substring:wang')"
+
+两个条件同时限制，对列名的前缀做校验
+scan 'm_table' ,FILTER=>"ValueFilter(=,'substring:wang') AND ColumnPrefixFilter('na')"
+
+scan 'm_table' ,FILTER=>"PrefixFilter('10')"
+scan 'm_table',{STARTROW=>'1002'}
+put 'm_table','user|4001','meta_data:name','666'
+
+正则过滤
+import org.apache.hadoop.hbase.filter.RegexStringComparator
+import org.apache.hadoop.hbase.filter.CompareFilter
+import org.apache.hadoop.hbase.filter.SubstringComparator
+import org.apache.hadoop.hbase.filter.RowFilter
+
+scan "m_table", {FILTER=>RowFilter.new(CompareFilter::CompareOp.valueOf('EQUAL'), RegexStringComparator.new('^user\|\d+$'))}
+
+清空词表
+>truncate 'm_table'
+
+pthon + hbase
+需要依赖模块  python不能直接对hbase操作
+下载thrift-0.8.0.tar.gz
+解压
+1)configure
+2)make
+3)make install
+下载hbase-0.98.24-src.tar.gz 源码包，不是安装包
+解压，进入目录，在进入子目录中hbase-thrift/src/main/resources/org/apache/hadoop/hbase/thrift
+
+thrift --gen py Hbase.thrift   产生gen-py
+把gen-py目录下的hbase拷贝出来
+把thrift-0.8.0目录下面的lib/py/build/lib.linux-x86_64-2.6/thrift 拷贝出来
+
+启动thrift服务
+ /usr/local/src/hbase-0.98.6-hadoop2/bin/hbase-daemon.sh start thrift
+1）创建表格
+python create_table.py
+2）写数据
+python insert_data.py
+3）读数据
+python get_one_line.py
+4）扫描数据
+python scan_many_lines.py
+
+MR + hbase
+bash run.sh
+
+hive +hbase
+
+创建hbase表
+create 'classes' ,'user'
+put 'classes','001','user:name','lili'
+put 'classes','001','user:age','10'
+
+
+CREATE EXTERNAL Table classes(id int, name string, age int)
+STORED BY 'org.apache.hadoop.hive.hbase.HBaseStorageHandler'
+WITH SERDEPROPERTIES("hbase.columns.mapping"=":key,user:name,user:age")
+TBLPROPERTIES("hbase.table.name"="classes")
+
+put 'classes','003','user:name','tony'
+insert into table classes select userid,10 from rating_table_b limit 10;
+
+
+-----------------------------------------
+flume
+1.flume是什么？
+flume是一个分布式的高可靠的高可用的系统，将大批量的的日志数据收集，聚合，移动到数据中心的系统。
+日志收集和汇总工具
+2.flume的可信任性 channel
+channel分两种
+1）memory channel ：数据放在内存，快，但有丢失风险
+2）file channel 数据放在磁盘，慢，但是安全
+3）当数据传输完后，数据在channel当中删除
+
+3.web->nginx -> log data ->flume ->kafka ->storm (spark streaming) ->hbase /hdfs
+4.flume 支持水平扩展，垂直扩展
+5.flume里最基本的数据单元是Event
+6.Event有两个部分组成（数据部分body+可选的头部head）
+head：目的具备路由选择功能（可选，可以是空）
+body：必备，包含实际数据
+7.agent内部分为3个模块，source，channel，sink
+source：数据源，一个flume的源头。
+channel：存储池
+sink：取出channel中的数据，把数据（event）放置到外部的数据介质上
+8.拦截器（interceptor）取出有效的信息
+– Timestamp Interceptor：在event的header中添加一个key叫：timestamp,value为当前的时间戳
+– Host Interceptor：在event的header中添加一个key叫：host,value为当前机器的hostname或者ip
+– Static Interceptor：可以在event的header中添加自定义的key和value
+– Regex Filtering Interceptor：通过正则来清洗或包含匹配的events
+– Regex Extractor Interceptor：通过正则表达式来在header中添加指定的key,value则为正则匹配的部分
+9.选择器（selector）
+1)Replicating Channel Selector (default)：将source过来的events发往所有channel
+2)Multiplexing Channel Selector：而Multiplexing 可以选择该发往哪些channel
+
+
+
+flume实践
+1、本地运行
+（1） Netcat
+./bin/flume-ng agent --conf conf --conf-file ./conf/flume_netcat.conf --name a1 -Dflume.root.logger=INFO,console
+发数据：telnet master 44444
+（2）exec
+./bin/flume-ng agent --conf conf --conf-file ./conf/flume_exec.conf --name a1 -Dflume.root.logger=INFO,console
+发数据：echo "666" >>1.log
+（3）输出到hdfs
+./bin/flume-ng agent --conf conf --conf-file ./conf/flume.conf --name a1 -Dflume.root.logger=INFO,console
+
+发数据：echo "666" >>1.log
+hadoop fs -text /flume/20-04-12/1130/badou-.1586662216460
+
+2.集群运行
+（1）故障转移
+event通过一个channel流向sink，在sink组内根据优先级选择具体的sink，一个失败后再转向另一个sink。
+
+master：
+./bin/flume-ng agent --conf conf --conf-file ./conf/agent_agent_collector_base/flume-client.properties --name agent1 -Dflume.root.logger=INFO,console
+
+slave1：
+ ./bin/flume-ng agent --conf conf --conf-file ./conf/agent_agent_collector_base/flume-server.properties --name a1 -Dflume.root.logger=INFO,console
+
+slave2：
+ ./bin/flume-ng agent --conf conf --conf-file ./conf/agent_agent_collector_base/flume-server.properties --name a1 -Dflume.root.logger=INFO,console
+
+（2）负载均衡
+master：
+./bin/flume-ng agent --conf conf --conf-file ./conf/agent_agent_collector_base/flume-client.properties_loadbalance --name a1 -Dflume.root.logger=INFO,console
+slave1：
+ ./bin/flume-ng agent --conf conf --conf-file ./conf/agent_agent_collector_base/flume-server.properties --name a1 -Dflume.root.logger=INFO,console
+
+slave2：
+ ./bin/flume-ng agent --conf conf --conf-file ./conf/agent_agent_collector_base/flume-server.properties --name a1 -Dflume.root.logger=INFO,console
+
+（3）拦截和过滤（interceptor）
+
+1）timestamp
+
+./bin/flume-ng agent --conf conf --conf-file ./conf/interceptor_test/flume_ts_interceptor.conf --name a1 -Dflume.root.logger=INFO,console
+发送数据：
+curl -X POST -d '[{"header":{"hadoop1":"hadoop1 is header"},"body":"hello"}]' http://master:52020
+
+
+
+（4）复制和复用 selector
+1）复制
+master：
+./bin/flume-ng agent --conf conf --conf-file ./conf/selector_test/flume_client_replicating.conf --name a1 -Dflume.root.logger=INFO,console
+发送数据：
+echo "good" |nc master 50000
+
+slave1:
+ ./bin/flume-ng agent --conf conf --conf-file ./conf/selector_test/flume_server.conf --name a1 -Dflume.root.logger=INFO,console
+
+slave2:
+ ./bin/flume-ng agent --conf conf --conf-file ./conf/selector_test/flume_server.conf --name a2 -Dflume.root.logger=INFO,console
+
+2）复用
+
+master：
+./bin/flume-ng agent --conf conf --conf-file ./conf/selector_test/flume_client__multiplexing.conf --name a1 -Dflume.root.logger=INFO,console
+发送数据：
+curl -X POST -d '[{"header":{"are you ok":"OK","hadoop1":"hadoop1 is header"},"body":"hello"}]' http://master:50000
+
+slave1:
+ ./bin/flume-ng agent --conf conf --conf-file ./conf/selector_test/flume_server.conf --name a1 -Dflume.root.logger=INFO,console
+
+slave2:
+ ./bin/flume-ng agent --conf conf --conf-file ./conf/selector_test/flume_server.conf --name a2 -Dflume.root.logger=INFO,console
+
+
+下周计划
+flume实践
+zk
+kafka
 
 
 
