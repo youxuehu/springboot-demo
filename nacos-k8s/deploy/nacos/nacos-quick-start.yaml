@@ -6,6 +6,7 @@ metadata:
   labels:
     app: nacos-headless
 spec:
+  type: NodePort
   ports:
     - port: 8848
       name: server

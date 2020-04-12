@@ -22,6 +22,7 @@
         <hbase.version>1.2.2</hbase.version>
         <hadoop.version>2.6.0</hadoop.version>
         <dependency.scope>compile</dependency.scope>
+        <spring-cloud-alibaba.version>2.2.0.RELEASE</spring-cloud-alibaba.version>
     </properties>
 
     <dependencies>
@@ -421,7 +422,25 @@
 <!--            <version>1.0.2</version>-->
             <version>1.0.3-SNAPSHOT</version>
         </dependency>
+        <!--nacos-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
     </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <build>
         <!--        <sourceDirectory>src/main/scala</sourceDirectory>-->
         <!--        <testSourceDirectory>src/test/scala</testSourceDirectory>-->
@@ -539,5 +558,33 @@
             </plugin>-->
         </plugins>
     </build>
+
+    <repositories>
+        <repository>
+            <id>aliyun-repos</id>
+            <name>aliyun-repos</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>aliyun-plugin</id>
+            <name>aliyun-plugin</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
 
 </project>

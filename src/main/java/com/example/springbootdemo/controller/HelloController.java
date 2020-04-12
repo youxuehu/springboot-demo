@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
 import java.util.Optional;
 
@@ -21,6 +22,12 @@ public class HelloController {
     public String index() {
         log.info("Hello Docker!");
         return "Hello Docker!";
+    }
+
+    @RequestMapping("/k8s")
+    public String k8s(HttpServletRequest request) {
+        log.info("Hello k8s!");
+        return "Hello k8s! URL:" + request.getRequestURL().toString();
     }
 
     @RequestMapping("/get")

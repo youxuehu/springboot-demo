@@ -11,27 +11,27 @@
         </commentGenerator>
 
         <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
-                        connectionURL="jdbc:mysql://localhost:30306/k8s" userId="root"
-                        password="zhf123..">
+                        connectionURL="jdbc:mysql://10.110.155.66:3306/nacos_devtest?serverTimezone=UTC&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false" userId="nacos"
+                        password="nacos">
         </jdbcConnection>
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false" />
         </javaTypeResolver>
         <!-- targetProject:自动生成代码的位置 -->
-        <javaModelGenerator targetPackage="com.example.springbootdemo.common.db.dao.userinfos.model"
+        <javaModelGenerator targetPackage="com.example.springbootdemo.common.db.dao.configinfo.model"
                             targetProject="src/main/java">
             <property name="enableSubPackages" value="true" />
             <property name="trimStrings" value="true" />
         </javaModelGenerator>
-        <sqlMapGenerator targetPackage="com.example.springbootdemo.common.db.dao.userinfos.mapper.xml"
+        <sqlMapGenerator targetPackage="com.example.springbootdemo.common.db.dao.configinfo.mapper.xml"
                          targetProject="src/main/java">
             <property name="enableSubPackages" value="true" />
         </sqlMapGenerator>
         <javaClientGenerator type="MAPPER"
-                             targetPackage="com.example.springbootdemo.common.db.dao.userinfos.mapper" targetProject="src/main/java">
+                             targetPackage="com.example.springbootdemo.common.db.dao.configinfo.mapper" targetProject="src/main/java">
             <property name="enableSubPackages" value="true" />
         </javaClientGenerator>
         <!-- tableName:用于自动生成代码的数据库表；domainObjectName:对应于数据库表的javaBean类名-->
-        <table tableName="userinfos" domainObjectName="Userinfos" />
+        <table tableName="config_info" domainObjectName="ConfigInfo" />
     </context>
 </generatorConfiguration>
