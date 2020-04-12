@@ -1829,16 +1829,15 @@ wangwu  chinese:66,math:55,english:80
 1.lateral view explode
 2.ROW_NUMBER() over
 
---create table student_score_tmp1 (
---      name string,
---      scores string
---)
---ROW FORMAT delimited
---fields terminated by '\t'
---COLLECTION ITEMS TERMINATED BY ','
---stored as textfile
---location '/student_score_tmp1';
---;
+create table student_score_tmp (
+      name string,
+      scores string
+)
+ROW FORMAT delimited
+fields terminated by '\t'
+COLLECTION ITEMS TERMINATED BY ','
+stored as textfile
+location '/student_score_tmp';
 
 select course,name, score from
 (
@@ -1865,6 +1864,8 @@ MAP KEYS TERMINATED BY ':'
 stored as textfile
 location '/student_score_tmp';
 
+-- 输出结果到HDFS
+insert overwrite directory "/tmp/out/"
 select course,name,score
 from
 (select name,course,score,ROW_NUMBER() over (partition by course order by score desc) rowNum
@@ -1873,6 +1874,11 @@ from
 )a
 where rowNum=1
 ;
+
+insert overwrite directory "/tmp/out/"
+select name,course,score,ROW_NUMBER() over (partition by course order by score desc) rowNum
+    from student_score_tmp
+    lateral view explode(scores) s as course,score;
 
 
 
