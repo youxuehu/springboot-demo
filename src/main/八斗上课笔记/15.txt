@@ -2020,16 +2020,19 @@ sink：取出channel中的数据，把数据（event）放置到外部的数据�
 flume实践
 1、本地运行
 （1） Netcat
-./bin/flume-ng agent --conf conf --conf-file ./conf/flume_netcat.conf --name a1 -Dflume.root.logger=INFO,console
+./bin/flume-ng agent --conf conf --conf-file ./conf/flume-netcat.conf --name agent -Dflume.root.logger=INFO,console
 发数据：telnet master 44444
 （2）exec
-./bin/flume-ng agent --conf conf --conf-file ./conf/flume_exec.conf --name a1 -Dflume.root.logger=INFO,console
+./bin/flume-ng agent --conf conf --conf-file ./conf/flume-exec.conf --name agent -Dflume.root.logger=INFO,console
 发数据：echo "666" >>1.log
 （3）输出到hdfs
-./bin/flume-ng agent --conf conf --conf-file ./conf/flume.conf --name a1 -Dflume.root.logger=INFO,console
+./bin/flume-ng agent --conf conf --conf-file ./conf/flume-avro.conf --name agent -Dflume.root.logger=INFO,console
 
 发数据：echo "666" >>1.log
 hadoop fs -text /flume/20-04-12/1130/badou-.1586662216460
+
+（4） 监控文件并输入hdfs
+./bin/flume-ng agent --conf conf --conf-file ./conf/flume-exec-hdfs.conf --name exec-hdfs-agent -Dflume.root.logger=INFO,console
 
 2.集群运行
 （1）故障转移
