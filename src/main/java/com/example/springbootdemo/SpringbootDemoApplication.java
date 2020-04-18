@@ -28,10 +28,15 @@ public class SpringbootDemoApplication implements ApplicationRunner {
 
     public static void main(String[] args) {
         SpringApplication.run(SpringbootDemoApplication.class, args);
+        System.out.println(ss);
     }
 
 //    @Resource
 //    HDFS2Utils hdfs2Utils;
+//    zhangsan	math:90,english:60
+//    lisi	chinese:80,math:66,english:77
+//    wangwu  chinese:66,math:55,english:80
+    static String ss = "zhangsan\tmath:90,english:60\nlisi\tchinese:80,math:66,english:77\nwangwu\tchinese:66,math:55,english:80";
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
