@@ -423,10 +423,10 @@
             <version>1.0.3-SNAPSHOT</version>
         </dependency>
         <!--nacos-->
-        <dependency>
+<!--        <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-        </dependency>
+        </dependency>-->
     </dependencies>
 
     <dependencyManagement>
