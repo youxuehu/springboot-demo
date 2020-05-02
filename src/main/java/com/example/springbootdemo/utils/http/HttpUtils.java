@@ -27,11 +27,11 @@ public class HttpUtils {
 
     private static Logger LOG = LoggerFactory.getLogger(HttpUtils.class);
 
-    public HttpResponseParam post4Para(HttpRequestParams req) {
+    public static HttpResponseParam post4Para(HttpRequestParams req) {
         return post2Parameter(req, 5000, 5000);
     }
 
-    public HttpResponseParam post2Parameter(HttpRequestParams req, int connectTimeout, int connectionRequestTimeout) {
+    public static HttpResponseParam post2Parameter(HttpRequestParams req, int connectTimeout, int connectionRequestTimeout) {
         HttpResponseParam res = new HttpResponseParam();
         try (CloseableHttpClient httpClient = HttpClientBuilder.create().build()) {
             //http

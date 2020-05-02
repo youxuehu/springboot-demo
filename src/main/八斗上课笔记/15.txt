@@ -2020,19 +2020,16 @@ sink：取出channel中的数据，把数据（event）放置到外部的数据�
 flume实践
 1、本地运行
 （1） Netcat
-./bin/flume-ng agent --conf conf --conf-file ./conf/flume-netcat.conf --name agent -Dflume.root.logger=INFO,console
+./bin/flume-ng agent --conf conf --conf-file ./conf/flume_netcat.conf --name a1 -Dflume.root.logger=INFO,console
 发数据：telnet master 44444
 （2）exec
-./bin/flume-ng agent --conf conf --conf-file ./conf/flume-exec.conf --name agent -Dflume.root.logger=INFO,console
+./bin/flume-ng agent --conf conf --conf-file ./conf/flume_exec.conf --name a1 -Dflume.root.logger=INFO,console
 发数据：echo "666" >>1.log
 （3）输出到hdfs
-./bin/flume-ng agent --conf conf --conf-file ./conf/flume-avro.conf --name agent -Dflume.root.logger=INFO,console
+./bin/flume-ng agent --conf conf --conf-file ./conf/flume.conf --name a1 -Dflume.root.logger=INFO,console
 
 发数据：echo "666" >>1.log
 hadoop fs -text /flume/20-04-12/1130/badou-.1586662216460
-
-（4） 监控文件并输入hdfs
-./bin/flume-ng agent --conf conf --conf-file ./conf/flume-exec-hdfs.conf --name exec-hdfs-agent -Dflume.root.logger=INFO,console
 
 2.集群运行
 （1）故障转移
@@ -2064,6 +2061,62 @@ slave2：
 发送数据：
 curl -X POST -d '[{"header":{"hadoop1":"hadoop1 is header"},"body":"hello"}]' http://master:52020
 
+2）Host interceptor
+
+./bin/flume-ng agent --conf conf --conf-file ./conf/interptor_test/flume_hostname_interceptor.conf --name a1 -Dflume.root.logger=INFO,console
+发送数据：
+echo "abc123" |nc master 52020
+
+3）static interceptor
+在event的header当中添加自定义的key和value
+ ./bin/flume-ng agent --conf conf --conf-file ./conf/interceptor_test/flume_static_interceptor.conf --name a1 -Dflume.root.logger=INFO,console
+发送数据：
+curl -X POST -d '[{"header":{"hadoop1":"hadoop1 is header"},"body":"hello"}]' http://master:52020
+
+4）Regex Filtering interceptor
+通过正则来清洗event，做过滤
+./bin/flume-ng agent --conf conf --conf-file ./conf/interceptor_test/flume_regex_interceptor.conf --name a1 -Dflume.root.logger=INFO,console
+发送数据
+curl -X POST -d '[{"header":{"hadoop1":"hadoop1 is header"},"body":"hello"}]' http://master:52020
+curl -X POST -d '[{"header":{"hadoop1":"hadoop1 is header"},"body":"123"}]' http://master:52020
+
+5）Regex Extractor interceptor
+通过正则表达式来在header当中添加指定的key、value
+这里的key和value是通过正则匹配提取出来的
+./bin/flume-ng agent --conf conf --conf-file ./conf/interceptor_test/flume_regex_interceptor.conf_extractor --name a1 -Dflume.root.logger=INFO,console
+
+发送数据：
+curl -X POST -d '[{"header":{"hadoop1":"hadoop1 is header"},"body":"hello"}]' http://master:52020
+curl -X POST -d '[{"header":{"hadoop1":"hadoop1 is header"},"body":"1:s2:3"}]' http://master:52020
+curl -X POST -d '[{"header":{"hadoop1":"hadoop1 is header"},"body":"h1:2:3"}]' http://master:52020
+
+
+conf/interceptor_test/flume_regex_interceptor.conf_extractor
+a1.sources = r1
+a1.sinks = k1
+a1.channels = c1
+
+a1.sources.r1.type = http
+a1.sources.r1.host = master
+a1.sources.r1.port = 52020
+a1.sources.r1.channels = c1
+
+a1.sources.r1.interceptors = i1
+a1.sources.r1.interceptors.i1.type = regex_extractor
+a1.sources.r1.interceptors.i1.regex = (\\d):(\\d):(\\d)
+a1.sources.r1.interceptors.i1.serializers = s1 s2 s3
+a1.sources.r1.interceptors.i1.serializers.s1.name = one
+a1.sources.r1.interceptors.i1.serializers.s2.name = two
+a1.sources.r1.interceptors.i1.serializers.s3.name = three
+
+a1.sinks.k1.type = logger
+
+a1.channels.c1.type = memory
+a1.channels.c1.capacity = 1000
+a1.channels.c1.transactionCapacity = 100
+
+a1.sources.r1.channels = c1
+a1.sinks.k1.channel = c1
 
 
 （4）复制和复用 selector
@@ -2097,7 +2150,190 @@ slave2:
 flume实践
 zk
 kafka
+---------------------------
+zookeeper
 
+1、Zookeeper是一个分布式锁，对集群的稳定性起关键作用
+2、一个松散耦合的分布式系统中粗粒度锁以及可靠性存储（低容量）的系统
+	松散耦合：对硬件要求不严格
+	分布式：多节点
+	粗粒度锁：节点之间在物理状态下，通过这把锁来维持生态
+	存储：类似数据库，共享资源角色
+3、数据模型：必须指定绝对路径在访问节点
+4、节点类型：
+	永久Persistent
+	临时Ephemeral
+	序列Sequence
+
+     永久、临时、永久&序列、临时&序列
+5、监控：
+	监控数据（getData）
+	监控节点是否存在（exists）
+	监控父节点下面子节点列表是否发生变化（getChildren）
+
+6、权限控制
+	ACL：访问控制链
+	定义权限是通过3元组的方式
+	（schema：expression：perms）->（模式、用户、权限）
+	模式：world,auth,digest,host,IP
+	权限：create,read,write,delete,admin
+
+
+
+
+
+应用场景
+1.配置管理   永久节点+getData
+2.集群管理   临时节点 +顺序节点+getChildren
+	选主场景、分布式lock
+3.队列管理
+	（1）同步队列：全员到齐才能使用
+	（2）FIFO队列：生产者、消费者模式
+
+实践：
+
+1、自主
+选主的过程
+cd zookeeper
+./bin/zkCli.sh
+
+ls
+ls /app/workers
+python main.py
+
+2、第三方
+
+pip install kazoo
+
+python test_basic.py
+ls /badou/nine/node
+
+修改配置，看zk数据变化,做配置分发
+python test_blacklist.py
+
+get /badou/nine/node
+
+测试锁
+两个节点竞争锁
+
+python test_lock.py
+
+
+--------------------------------
+kafka
+1、分布式消息队列系统，提供数据分布式缓存功能
+2、消息持久化，可以达到o（1）的访问速度，预读后写
+     针对磁盘的顺序访问，可能比随机的内存访问要快。
+3、基本组件：
+	broker：每一台机器
+	producer：生产者
+	consumer：消费者
+	topic：虚拟概念，P和C都要指定topic
+	partition：物理概念，文件夹
+4、partition
+	存储，实现负载均衡，保证消息的顺序性
+	顺序性保证：局部顺序性
+5、topic和partition的关系
+	一个topic有1个或者多个partition
+6、partition有2个组成部分
+	（1）index log （定位索引信息）
+	（2）message log（存储真实的数据）
+	查找：二分法+顺序遍历
+7、多副本-高可用
+	topic，定义topic有5个partition和3个replication
+	kafka分配replication的算法：
+	假设有N个broker，第i个partition会分配到i%N的broker上
+	将第i个partition的第j个replication会分配到（i+j）%N的broker上
+	如果里面有M个replication，其中一个是leader，其他的M-1是follower
+
+8、不同的topic的消息是分布存储
+9、偏移量offset，定位数据读取的位置
+     不仅要确定读offset的位置，更要确定是哪个partition中读
+10、无论有没有消费，消息会被清除
+	（1）周期:7天
+	（2）最大数据量
+11、kafka的最基本的数据单元——message
+       最大的消费的message不超过1M
+
+12、consumer
+      consumer group
+      如果consumer group里面消费者个数大于topic的partition数量，那么就会存在某些consumer没有消费
+
+13、kafka的消息是无状态的，消费必须自己维护已消费的状态
+14、kafka集群内部，topic是有多个partition的，为了达到高可用的目的
+	ISR集合，只有在该集合的follower才有机会成为leader
+	AR
+15、如何判断follower活着
+	（1）心跳
+	（2）如果slave能紧随leader更新，不落得太远
+	如果挂掉，需要从ISR中剔除slave
+
+-------------
+实践
+首先，把zookeeper启动好
+
+一、单机版
+（1）开启进程
+./bin/kafka-server-start.sh  config/server.properties
+（2）查看topic列表
+./bin/kafka-topics.sh --list --zookeeper localhost:2181
+（3）创建topic
+./bin/kafka-topics.sh --create --zookeeper localhost:2181 --partitions 1 --replication-factor 1 --topic topic_0419_s
+（4）查看topic描述
+./bin/kafka-topics.sh --describe --zookeeper localhost:2181 --topic topic_0419_s
+（5）发送信息
+./bin/kafka-console-producer.sh --broker-list localhost:9092 --topic topic_0419_s
+（6）接受信息
+./bin/kafka-console-consumer.sh  --zookeeper localhost:2181 --topic topic_0419_s
+（7）删除topic
+./bin/kafka-topics.sh --delete --zookeeper localhost:2181 --topic topic_0419_s
+
+二、集群版
+把每台机器的config/server.properties 中的broker.id进行调整
+master：0
+slave1:1
+slave2:2
+启动：3台机器都输入
+./bin/kafka-server-start.sh  config/server.properties
+创建topic
+./bin/kafka-topics.sh --create --zookeeper localhost:2181 --partitions 5 --replication-factor 3 --topic topic_0419_m
+
+查看描述
+./bin/kafka-topics.sh --describe --zookeeper localhost:2181 --topic topic_0419_m
+
+
+
+
+三、自主producer、consumer
+python consumer_kafka.py
+python producer_kafka.py
+
+指定partition发送
+ python producer_kafka_2.py
+producer.send('topic_0419_m', key='100', value='bbb')
+
+指定partition和offset 读
+python consumer_kafka_2.py
+consumer.seek(TopicPartition(topic=u'topic_0419_m', partition=3), 5)  #重置偏移量
+
+
+json ——字典，结构化的数据形式进程传输（问题：明文，数量大，解码慢）
+protobuf （pb 格式）——结构化的数据形式传输，加密，解码快
+
+
+四、flume+kafka
+ ./bin/flume-ng agent --conf conf --conf-file ./conf/flume_kafka.conf --name a1 -Dflume.root.logger=INFO,console
+
+保证数据均匀发送
+./bin/flume-ng agent --conf conf --conf-file ./conf/flume_kafka_2.conf --name a1 -Dflume.root.logger=INFO,console
+
+UUID拦截器
+
+
+
+下周安排
+sparksql
+spark streaming
 
 
 
