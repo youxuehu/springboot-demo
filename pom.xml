@@ -26,7 +26,11 @@
     </properties>
 
     <dependencies>
-
+        <dependency>
+            <groupId>org.example</groupId>
+            <artifactId>spark-scala</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
         <!-- scala  spark  -->
         <dependency>
             <groupId>org.scala-lang</groupId>

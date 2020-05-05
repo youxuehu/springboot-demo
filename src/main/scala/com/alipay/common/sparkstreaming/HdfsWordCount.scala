@@ -16,7 +16,7 @@ object HdfsWordCount {
 
     //新建StreamingContext
     val ssc = new StreamingContext(args(0), "HdfsWordCount", Seconds(args(2).toInt),
-      System.getenv("SPARK_HOME"), StreamingContext.jarOfClass(this.getClass))
+      System.getenv("SPARK_HOME"))
     //创建FileInputDStream，并指向特定目录
     new StreamingContext("")
     val lines = ssc.textFileStream(args(1))

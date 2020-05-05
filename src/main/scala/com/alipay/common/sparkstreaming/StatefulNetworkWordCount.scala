@@ -24,7 +24,7 @@ object StatefulNetworkWordCount {
 
     //创建StreamingContext
     val ssc = new StreamingContext(args(0), "StatefulNetworkWordCount",
-      Seconds(args(3).toInt), System.getenv("SPARK_HOME"), StreamingContext.jarOfClass(this.getClass))
+      Seconds(args(3).toInt), System.getenv("SPARK_HOME"))
     ssc.checkpoint(".")
 
     //创建NetworkInputDStream，需要指定ip和端口

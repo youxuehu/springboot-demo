@@ -1,12 +1,11 @@
 package com.alipay.common.sparkstreaming
 
-import org.apache.spark.Logging
 import org.apache.log4j.{Level, Logger}
-
+import org.apache.spark.Logging
 /**
  * Chen Chao
  */
-object StreamingExamples extends Logging {
+object StreamingExamples extends  Logging {
   /** Set reasonable logging levels for streaming if the user has not configured log4j. */
   def setStreamingLogLevels() {
     val log4jInitialized = Logger.getRootLogger.getAllAppenders.hasMoreElements
