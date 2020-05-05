@@ -53,6 +53,13 @@
         </dependency>
         <dependency>
             <groupId>org.apache.spark</groupId>
+            <artifactId>spark-streaming_${spark.artifact}</artifactId>
+            <version>${spark.version}</version>
+            <scope>${dependency.scope}</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.spark</groupId>
             <artifactId>spark-sql_${spark.artifact}</artifactId>
             <version>${spark.version}</version>
             <scope>${dependency.scope}</scope>
