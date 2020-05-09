@@ -41,20 +41,19 @@ public class JavaSparkHiveExample {
     public static void main(String[] args) {
         // $example on:spark_hive$
         // warehouseLocation points to the default location for managed databases and tables
-        String warehouseLocation = new File("spark-warehouse").getAbsolutePath();
         SparkSession spark = SparkSession
                 .builder()
                 .appName("Java Spark Hive Example")
                 .master("local[*]")
-                .config("spark.sql.warehouse.dir", warehouseLocation)
+                .config("spark.sql.warehouse.dir", "hdfs://leader:9000/hive/warehouse")
                 .enableHiveSupport()
                 .getOrCreate();
 
-        spark.sql("CREATE TABLE IF NOT EXISTS src (key INT, value STRING) USING hive");
-        spark.sql("LOAD DATA LOCAL INPATH 'examples/src/main/resources/kv1.txt' INTO TABLE src");
+//        spark.sql("CREATE TABLE IF NOT EXISTS src (key INT, value STRING) USING hive");
+//        spark.sql("LOAD DATA LOCAL INPATH '/home/tiger/springboot-demo/src/main/java/com/example/springbootdemo/common/sparksql/src.txt' INTO TABLE src");
 
         // Queries are expressed in HiveQL
-        spark.sql("SELECT * FROM src").show();
+        spark.sql("SELECT * FROM test001").show();
         // +---+-------+
         // |key|  value|
         // +---+-------+
@@ -64,7 +63,7 @@ public class JavaSparkHiveExample {
         // ...
 
         // Aggregation queries are also supported.
-        spark.sql("SELECT COUNT(*) FROM src").show();
+//        spark.sql("SELECT COUNT(*) FROM src").show();
         // +--------+
         // |count(1)|
         // +--------+
@@ -72,13 +71,13 @@ public class JavaSparkHiveExample {
         // +--------+
 
         // The results of SQL queries are themselves DataFrames and support all normal functions.
-        Dataset<Row> sqlDF = spark.sql("SELECT key, value FROM src WHERE key < 10 ORDER BY key");
+//        Dataset<Row> sqlDF = spark.sql("SELECT key, value FROM src WHERE key < 10 ORDER BY key");
 
         // The items in DataFrames are of type Row, which lets you to access each column by ordinal.
-        Dataset<String> stringsDS = sqlDF.map(
-                (MapFunction<Row, String>) row -> "Key: " + row.get(0) + ", Value: " + row.get(1),
-                Encoders.STRING());
-        stringsDS.show();
+//        Dataset<String> stringsDS = sqlDF.map(
+//                (MapFunction<Row, String>) row -> "Key: " + row.get(0) + ", Value: " + row.get(1),
+//                Encoders.STRING());
+//        stringsDS.show();
         // +--------------------+
         // |               value|
         // +--------------------+
@@ -88,18 +87,18 @@ public class JavaSparkHiveExample {
         // ...
 
         // You can also use DataFrames to create temporary views within a SparkSession.
-        List<Record> records = new ArrayList<>();
-        for (int key = 1; key < 100; key++) {
-            Record record = new Record();
-            record.setKey(key);
-            record.setValue("val_" + key);
-            records.add(record);
-        }
-        Dataset<Row> recordsDF = spark.createDataFrame(records, Record.class);
-        recordsDF.createOrReplaceTempView("records");
+//        List<Record> records = new ArrayList<>();
+//        for (int key = 1; key < 100; key++) {
+//            Record record = new Record();
+//            record.setKey(key);
+//            record.setValue("val_" + key);
+//            records.add(record);
+//        }
+//        Dataset<Row> recordsDF = spark.createDataFrame(records, Record.class);
+//        recordsDF.createOrReplaceTempView("records");
 
         // Queries can then join DataFrames data with data stored in Hive.
-        spark.sql("SELECT * FROM records r JOIN src s ON r.key = s.key").show();
+//        spark.sql("SELECT * FROM records r JOIN src s ON r.key = s.key").show();
         // +---+------+---+------+
         // |key| value|key| value|
         // +---+------+---+------+
