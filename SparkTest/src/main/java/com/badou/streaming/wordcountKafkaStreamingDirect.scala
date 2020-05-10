@@ -16,7 +16,7 @@ object wordcountKafkaStreamingDirect {
 
     val ssc = new StreamingContext(sparkConf, Seconds(5))
 
-    val brokers = "192.168.226.10:9092";
+    val brokers = "leader:9092";
     val topics = "kafka_streaming_topic_0510";
     val topicSet = topics.split(",").toSet
     val kafkaParams = Map[String, String]("metadata.broker.list" -> brokers)

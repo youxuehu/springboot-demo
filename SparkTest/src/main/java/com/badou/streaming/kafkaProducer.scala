@@ -17,7 +17,7 @@ object kafkaProducer {
   def ProducerSender(args: ArrayBuffer[String]): Unit = {
     if (args != null) {
       // val brokers = "192.168.226.10:9092,192.168.226.11:9092,192.168.226.12:9092"
-      val brokers = "192.168.226.10:9092"
+      val brokers = "leader:9092"
       // Zookeeper connection properties
       val props = new HashMap[String, Object]()
       props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, brokers)

@@ -20,7 +20,7 @@ object wordCount {
     val words = lines.flatMap(_.split(" "))
     val wordCounts = words.map(x => (x, 1)).reduceByKey(_ + _)
     wordCounts.print()
-    wordCounts.saveAsTextFiles("hdfs://master:9000/stream_out", "doc")
+    wordCounts.saveAsTextFiles("hdfs://leader:9000/stream_out", "doc")
     ssc.start()
     ssc.awaitTermination()
   }

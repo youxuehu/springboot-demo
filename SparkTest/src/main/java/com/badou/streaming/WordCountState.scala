@@ -20,14 +20,14 @@ object WordCountState {
 
     val sparkConf = new SparkConf().setMaster("local[2]").setAppName("NetworkWordCount")
     val ssc = new StreamingContext(sparkConf, Seconds(5))
-    ssc.checkpoint("hdfs://master:9000/hdfs_checkpoint")
+    ssc.checkpoint("hdfs://leader:9000/hdfs_checkpoint")
 
     val lines = ssc.socketTextStream(args(0), args(1).toInt, StorageLevel.MEMORY_AND_DISK_SER)
     val words = lines.flatMap(_.split(" "))
     //val wordCounts = words.map(x => (x, 1)).reduceByKey(_ + _)
     val wordCounts = words.map(x => (x, 1)).updateStateByKey(updateFunction _)
     wordCounts.print()
-    wordCounts.saveAsTextFiles("hdfs://master:9000/stream_stats_out", "doc")
+    wordCounts.saveAsTextFiles("hdfs://leader:9000/stream_stats_out", "doc")
     ssc.start()
     ssc.awaitTermination()
   }

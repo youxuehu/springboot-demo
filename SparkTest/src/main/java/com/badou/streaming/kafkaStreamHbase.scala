@@ -11,7 +11,7 @@ object HbaseHandler {
     // Hbase配置
     val tableName = "sparkstream_kafkahbase_table" // 定义表名
     val hbaseConf = HBaseConfiguration.create()
-    hbaseConf.set("hbase.zookeeper.quorum", "master,slave1,slave2")
+    hbaseConf.set("hbase.zookeeper.quorum", "leader,worker1,worker2")
     hbaseConf.set("hbase.zookeeper.property.clientPort", "2181")
     hbaseConf.set("hbase.defaults.for.version.skip", "true")
     val hTable = new HTable(hbaseConf, tableName)
@@ -29,15 +29,15 @@ object HbaseHandler {
 object kafkaStreamHbase {
   def main(args: Array[String]) {
 
-    val zkQuorum = "master:2181,slave1:2181,slave2:2181"
+    val zkQuorum = "leader:2181,worker1:2181,worker2:2181"
     val group = "group_1"
-    val topics = "kafka_streaming_topic_0519"
+    val topics = "kafka_streaming_topic_0510"
     val numThreads = 1
-    var output="hdfs://master:9000/stream_out/spark-log.txt"
+    var output="hdfs://leader:9000/stream_out/spark-log.txt"
 
     val sparkConf = new SparkConf().setAppName("kafkaStreamHbase").setMaster("local[2]")
     val ssc =  new StreamingContext(sparkConf, Seconds(10))
-    ssc.checkpoint("hdfs://master:9000/hdfs_checkpoint")
+    ssc.checkpoint("hdfs://leader:9000/hdfs_checkpoint")
 
     val topicpMap = topics.split(",").map((_,numThreads.toInt)).toMap
     val lines = KafkaUtils.createStream(ssc, zkQuorum, group, topicpMap).map(_._2)

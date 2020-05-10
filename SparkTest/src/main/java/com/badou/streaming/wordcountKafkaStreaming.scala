@@ -18,9 +18,9 @@ object wordcountKafkaStreaming {
 
     val sparkConf = new SparkConf().setMaster("local[2]").setAppName("wordcountKafkaStreaming").set("spark.cores.max", "8")
     val ssc = new StreamingContext(sparkConf, Seconds(5))
-    ssc.checkpoint("hdfs://master:9000/hdfs_checkpoint")
+    ssc.checkpoint("hdfs://leader:9000/hdfs_checkpoint")
 
-    val zkQuorum = "master:2181,slave1:2181,slave2:2181"
+    val zkQuorum = "leader:2181,worker1:2181,worker2:2181"
     val groupId = "group_1"
 
     // val lines = ssc.socketTextStream(args(0), args(1).toInt, StorageLevel.MEMORY_AND_DISK_SER)

@@ -1,11 +1,4 @@
-/**
- * /usr/local/src/spark-2.0.2-bin-hadoop2.6/bin/spark-submit --master local[2] --class com.alipay.common.Test11StreamingWordCount ~/springboot-demo-0.0.1-SNAPSHOT.jar
- */
-
-package com.alipay.common
-
-import java.text.SimpleDateFormat
-import java.util.Date
+package com.alipay.common.sparkstreaming.sparkstreaming2
 
 import org.apache.spark.streaming.{Seconds, StreamingContext}
 
@@ -38,18 +31,17 @@ object SparkStreamTest {
     // Spark Streaming needs at least two working thread
     val sc = new StreamingContext("local[2]", "NetworkWordCount", Seconds(10) )
     // Create a DStream that will connect to serverIP:serverPort, like localhost:9999
-    val lines = sc.socketTextStream("master", 9999)
+    val lines = sc.socketTextStream("leader", 9999)
     // Split each line into words
     // 以空格把收到的每一行数据分割成单词
     val words = lines.flatMap(_.split(" "))
     // 在本批次内计单词的数目
     val wordCounts = words.map(x => (x, 1)).reduceByKey(_ + _)
     // 打印每个RDD中的前10个元素到控制台
-//    wordCounts.print()
-    wordCounts.repartition(1).saveAsTextFiles("hdfs://master:9000/spark-stream/data/")
+    wordCounts.print()
+    wordCounts.repartition(1).saveAsTextFiles("hdfs://leader:9000/spark-stream/data/")
     sc.start()
     sc.awaitTermination()
   }
 
 }
-
