@@ -5,10 +5,10 @@ import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-@Service
+//@Service
 @Slf4j
 public class TestKafka implements InitializingBean {
-    @Autowired
+//    @Autowired
     KafkaSender sender;
 
     @Override
