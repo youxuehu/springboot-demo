@@ -14,14 +14,17 @@ import backtype.storm.tuple.Fields;
 import backtype.storm.tuple.Tuple;
 import backtype.storm.tuple.Values;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 统计word count
- * 固定数据源
+ * 统计文件中数据的word count
  */
-public class WordCountTopologyMain {
+public class WordCountTopologyMain2 {
     public static void main(String[] args) throws AlreadyAliveException, InvalidTopologyException {
         // 1、准备一个 TopologyBuilder
         TopologyBuilder topologyBuilder = new TopologyBuilder();
@@ -61,12 +64,21 @@ public class WordCountTopologyMain {
     }
     static class MySpout  extends BaseRichSpout {
         SpoutOutputCollector collector;
+        BufferedReader reader = null;
         public void open(Map map, TopologyContext context, SpoutOutputCollector collector) {
             this.collector = collector;
         }
+        String line = null;
         public void nextTuple() {
-            // 数据源 ，循环执行
-            collector.emit(new Values("Hello world tiger"));
+            try {
+                reader = new BufferedReader(new FileReader("/root/storm.log"));
+                while (null != (line = reader.readLine())) {
+                    // 数据源 ，循环执行
+                    collector.emit(new Values(line));
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             try {
                 // 每5秒处理一次
                 Thread.sleep(5000);
