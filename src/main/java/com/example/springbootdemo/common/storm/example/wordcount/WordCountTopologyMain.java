@@ -1,6 +1,7 @@
-package com.example.springbootdemo.common.storm.example;
+package com.example.springbootdemo.common.storm.example.wordcount;
 import backtype.storm.Config;
 import backtype.storm.LocalCluster;
+import backtype.storm.StormSubmitter;
 import backtype.storm.generated.AlreadyAliveException;
 import backtype.storm.generated.InvalidTopologyException;
 import backtype.storm.spout.SpoutOutputCollector;
@@ -13,20 +14,15 @@ import backtype.storm.topology.base.BaseRichSpout;
 import backtype.storm.tuple.Fields;
 import backtype.storm.tuple.Tuple;
 import backtype.storm.tuple.Values;
-import org.apache.hadoop.conf.Configuration;
-import org.apache.hadoop.fs.FileSystem;
-import org.apache.hadoop.fs.Path;
-import org.apache.hadoop.io.IOUtils;
 
-import java.io.*;
-import java.net.URI;
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 统计文件中数据的word count
+ * 统计word count
+ * 固定数据源
  */
-public class WordCountTopologyMain3 {
+public class WordCountTopologyMain {
     public static void main(String[] args) throws AlreadyAliveException, InvalidTopologyException {
         // 1、准备一个 TopologyBuilder
         TopologyBuilder topologyBuilder = new TopologyBuilder();
@@ -39,10 +35,10 @@ public class WordCountTopologyMain3 {
         config.setNumWorkers(2);
 
         //3、提交任务，分为本地模式、集群模式
-        // StormSubmitter.submitTopologyWithProgressBar("mywordcount",config,topologyBuilder.createTopology());
+         StormSubmitter.submitTopologyWithProgressBar("mywordcount",config,topologyBuilder.createTopology());
 
-        LocalCluster localCluster = new LocalCluster();
-        localCluster.submitTopology("mywordcount",config,topologyBuilder.createTopology());
+//        LocalCluster localCluster = new LocalCluster();
+//        localCluster.submitTopology("mywordcount",config,topologyBuilder.createTopology());
     }
     static class MyCountBolt extends BaseRichBolt {
         OutputCollector collector;
@@ -63,6 +59,15 @@ public class WordCountTopologyMain3 {
         }
         public void declareOutputFields(OutputFieldsDeclarer outputFieldsDeclarer) {
         }
+
+        public MyCountBolt() {
+            super();
+        }
+
+        @Override
+        public void cleanup() {
+            super.cleanup();
+        }
     }
     static class MySpout  extends BaseRichSpout {
         SpoutOutputCollector collector;
@@ -70,32 +75,46 @@ public class WordCountTopologyMain3 {
             this.collector = collector;
         }
         public void nextTuple() {
-            InputStream inputStream = null;
-            try {
-                Configuration conf = new Configuration();
-                FileSystem fileSystem = FileSystem.get(URI.create("hdfs://master:9000/wc.txt"), conf);
-                inputStream = fileSystem.open(new Path("hdfs://master:9000/wc.txt"));
-                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
-                String line = null;
-                while (null == (line = bufferedReader.readLine())) {
-                    // 数据源 ，循环执行
-                    collector.emit(new Values(line));
-                    Thread.sleep(100);
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            // 数据源 ，循环执行
+            collector.emit(new Values("Hello world tiger"));
             try {
                 // 每5秒处理一次
-                Thread.sleep(1000);
+                Thread.sleep(5000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
-            } finally {
-                IOUtils.closeStream(inputStream);
             }
         }
         public void declareOutputFields(OutputFieldsDeclarer declarer) {
             declarer.declare(new Fields("firstStorm"));
+        }
+
+        public MySpout() {
+            super();
+        }
+
+        @Override
+        public void close() {
+            super.close();
+        }
+
+        @Override
+        public void activate() {
+            super.activate();
+        }
+
+        @Override
+        public void deactivate() {
+            super.deactivate();
+        }
+
+        @Override
+        public void ack(Object msgId) {
+            super.ack(msgId);
+        }
+
+        @Override
+        public void fail(Object msgId) {
+            super.fail(msgId);
         }
     }
     static class MySplitBolt extends BaseRichBolt {
@@ -112,6 +131,15 @@ public class WordCountTopologyMain3 {
         }
         public void declareOutputFields(OutputFieldsDeclarer outputFieldsDeclarer) {
             outputFieldsDeclarer.declare(new Fields("word","num"));
+        }
+
+        public MySplitBolt() {
+            super();
+        }
+
+        @Override
+        public void cleanup() {
+            super.cleanup();
         }
     }
 }
