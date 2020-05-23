@@ -88,9 +88,12 @@ public class TestZK implements Watcher {
     public static void main(String[] args) {
         TestZK zk = new TestZK();
         zk.createConnect("master:2181", 5000);
-
-        zk.createPath("/data", "1111");
-        zk.readNode("/data");
+        String s = zk.existsNode("/aa");
+        System.out.printf(s);
+        String s1 = zk.readNode("/aa");
+        System.out.printf(s1);
+        zk.createPath("/aa", "1111");
+        zk.readNode("/aa");
         while (zk.bk) {
             System.out.print(".");
             try {
