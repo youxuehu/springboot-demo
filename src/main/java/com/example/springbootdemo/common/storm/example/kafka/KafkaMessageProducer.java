@@ -20,26 +20,28 @@ public class KafkaMessageProducer {
         producer = new Producer<Integer, String>(new ProducerConfig(props));
     }
     public static void main(String[] args) {
-        KafkaMessageProducer sp=new KafkaMessageProducer();
+        KafkaMessageProducer sp = new KafkaMessageProducer();
         //定义topic
         String topic="storm-kafka-topic1";
-        //开始时间统计
-        long startTime = System.currentTimeMillis();
-        //定义要发送给topic的消息
-        String messageStr = "This is a message";
-        List<KeyedMessage<Integer, String>> datalist = new ArrayList<KeyedMessage<Integer, String>>();
+        for (int i = 0; i < 100; i++) {
+            //开始时间统计
+            long startTime = System.currentTimeMillis();
+            //定义要发送给topic的消息
+            String messageStr = "This is a message\n";
+            List<KeyedMessage<Integer, String>> datalist = new ArrayList<KeyedMessage<Integer, String>>();
 
-        //构建消息对象
-        KeyedMessage<Integer, String> data = new KeyedMessage<Integer, String>(topic, messageStr);
-        datalist.add(data);
+            //构建消息对象
+            KeyedMessage<Integer, String> data = new KeyedMessage<Integer, String>(topic, messageStr);
+            datalist.add(data);
 
-        //结束时间统计
-        long endTime = System.currentTimeMillis();
-        KeyedMessage<Integer, String> data1 = new KeyedMessage<Integer, String>(topic, "用时" + (endTime-startTime)/1000.0);
-        datalist.add(data1);
-
-        //推送消息到broker
-        producer.send(data);
+            //结束时间统计
+            long endTime = System.currentTimeMillis();
+            KeyedMessage<Integer, String> data1 = new KeyedMessage<Integer, String>(topic, "用时" + (endTime - startTime) / 1000.0);
+            datalist.add(data1);
+            System.out.println(datalist);
+            //推送消息到broker
+            producer.send(datalist);
+        }
         producer.close();
     }
 }

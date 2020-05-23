@@ -18,7 +18,7 @@ public class KafkaMessageSaveBolt extends BaseBasicBolt {
         System.out.println("output:" + word);
         try {
             //输出数据到本地文件
-            DataOutputStream dataOutputStream = new DataOutputStream(new FileOutputStream("kafkastorm.out"));
+            DataOutputStream dataOutputStream = new DataOutputStream(new FileOutputStream("kafkastorm.out", true));
             dataOutputStream.writeUTF("output:" + word);
             dataOutputStream.close();
         } catch (IOException e) {
