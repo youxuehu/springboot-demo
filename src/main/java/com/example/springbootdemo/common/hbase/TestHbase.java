@@ -2,9 +2,8 @@ package com.example.springbootdemo.common.hbase;
 
 import org.apache.hadoop.hbase.client.HTableInterface;
 import org.apache.hadoop.hbase.client.Put;
+import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.ApplicationArguments;
-import org.springframework.boot.ApplicationRunner;
 import org.springframework.data.hadoop.hbase.HbaseTemplate;
 import org.springframework.data.hadoop.hbase.TableCallback;
 import org.springframework.stereotype.Service;
@@ -12,15 +11,11 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
-//@Service
-public class TestHbase  implements ApplicationRunner {
-//    @Autowired
+@Service
+public class TestHbase  implements InitializingBean {
+
+    @Autowired
     private HbaseTemplate hbaseTemplate;
-    @Override
-    public void run(ApplicationArguments args) throws Exception {
-//        insertTableData();
-//        insertUserinfo();
-    }
 
     private void insertUserinfo() {
         hbaseTemplate.execute("userinfos5", new TableCallback<Object>() {
@@ -74,5 +69,11 @@ public class TestHbase  implements ApplicationRunner {
                 return true;
             }
         });
+    }
+
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        //        insertTableData();
+//        insertUserinfo();
     }
 }

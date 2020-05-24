@@ -7,6 +7,7 @@ import org.apache.hadoop.hbase.KeyValue;
 import org.apache.hadoop.hbase.client.*;
 import org.apache.hadoop.hbase.filter.*;
 import org.apache.hadoop.hbase.util.Bytes;
+import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -14,94 +15,100 @@ import org.springframework.data.hadoop.hbase.HbaseTemplate;
 import org.springframework.data.hadoop.hbase.RowMapper;
 import org.springframework.data.hadoop.hbase.TableCallback;
 import org.springframework.stereotype.Service;
+import org.springframework.util.CollectionUtils;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-//@Service
+@Service
 @Slf4j
-public class HBaseService implements ApplicationRunner {
+public class HBaseService implements InitializingBean {
 
     @Autowired
     private HbaseTemplate hbaseTemplate;
 
     public void readTable(String tableName, String rowName) {
-        hbaseTemplate.execute(tableName, new TableCallback<Object>() {
-            @Override
-            public Object doInTable(HTableInterface hTableInterface) throws Throwable {
-                Get get = new Get("123".getBytes());
-                Result result = hTableInterface.get(get);
-                List<Cell> cells = result.listCells();
-                for (Cell cell : cells) {
-                    byte[] value = cell.getValue();
-//                    System.out.println(Bytes.toString(value));
-                    byte[] qualifier = cell.getQualifier();
-                    System.out.println(Bytes.toString(qualifier));
-                    long timestamp = cell.getTimestamp();
-                    System.out.println(timestamp);
+        try {
+            hbaseTemplate.execute(tableName, new TableCallback<Object>() {
+                @Override
+                public Object doInTable(HTableInterface hTableInterface) throws Throwable {
+                    Get get = new Get("r1".getBytes());
+                    Result result = hTableInterface.get(get);
+                    List<Cell> cells = result.listCells();
+                    if (CollectionUtils.isEmpty(cells)) {
+                        return null;
+                    }
+                    for (Cell cell : cells) {
+                        byte[] value = cell.getValue();
+    //                    System.out.println(Bytes.toString(value));
+                        byte[] qualifier = cell.getQualifier();
+                        System.out.println(Bytes.toString(qualifier));
+                        long timestamp = cell.getTimestamp();
+                        System.out.println(timestamp);
+                    }
+                    return null;
                 }
-                return null;
-            }
-        });
+            });
 
-        hbaseTemplate.execute(tableName, new TableCallback<Object>() {
-            @Override
-            public Object doInTable(HTableInterface hTableInterface) throws Throwable {
-                List<Put> puts = new ArrayList<>();
-                for (int i = 0; i < 100; i++) {
-                    Put put = new Put("123".getBytes());
-                    put.add("meta_data".getBytes(), ("person"+i).getBytes(), ("jack_ma"+i).getBytes());
-                    puts.add(put);
+            hbaseTemplate.execute(tableName, new TableCallback<Object>() {
+                @Override
+                public Object doInTable(HTableInterface hTableInterface) throws Throwable {
+                    List<Put> puts = new ArrayList<>();
+                    for (int i = 0; i < 100; i++) {
+                        Put put = new Put("r1".getBytes());
+                        put.add("meta_data".getBytes(), ("person"+i).getBytes(), ("jack_ma"+i).getBytes());
+                        puts.add(put);
+                    }
+    //                Put put = new Put("123".getBytes());
+    //                put.add("meta_data".getBytes(), "company2".getBytes(), "ant".getBytes());
+    //                Put put2 = new Put("123".getBytes());
+    //                put2.add("meta_data".getBytes(), "company3".getBytes(), "mayi".getBytes());
+    //                Put put3 = new Put("123".getBytes());
+    //                put3.add("meta_data".getBytes(), "company4".getBytes(), "alibbaa".getBytes());
+    //                List<Put> puts = new ArrayList<>();
+    //                puts.add(put);
+    //                puts.add(put2);
+    //                puts.add(put3);
+                    hTableInterface.put(puts);
+    //                hTableInterface.put(put2);
+    //                hTableInterface.put(put3);
+                    return true;
                 }
-//                Put put = new Put("123".getBytes());
-//                put.add("meta_data".getBytes(), "company2".getBytes(), "ant".getBytes());
-//                Put put2 = new Put("123".getBytes());
-//                put2.add("meta_data".getBytes(), "company3".getBytes(), "mayi".getBytes());
-//                Put put3 = new Put("123".getBytes());
-//                put3.add("meta_data".getBytes(), "company4".getBytes(), "alibbaa".getBytes());
-//                List<Put> puts = new ArrayList<>();
-//                puts.add(put);
-//                puts.add(put2);
-//                puts.add(put3);
-                hTableInterface.put(puts);
-//                hTableInterface.put(put2);
-//                hTableInterface.put(put3);
-                return true;
-            }
-        });
-        hbaseTemplate.find(tableName, new Scan(), new RowMapper<Object>() {
-            @Override
-            public Object mapRow(Result result, int i) throws Exception {
-                List<KeyValue> list = result.list();
-                for (KeyValue keyValue : list) {
+            });
+            hbaseTemplate.find(tableName, new Scan(), new RowMapper<Object>() {
+                @Override
+                public Object mapRow(Result result, int i) throws Exception {
+                    List<KeyValue> list = result.list();
+                    for (KeyValue keyValue : list) {
 
-                    byte[] key = keyValue.getKey();
-                    System.out.println(new String(key));
+                        byte[] key = keyValue.getKey();
+                        System.out.println(new String(key));
+                    }
+                    return null;
                 }
-                return null;
-            }
-        });
+            });
 
 
+            Object o = hbaseTemplate.get(tableName, rowName, new RowMapper<Object>() {
 
-
-        Object o = hbaseTemplate.get(tableName, rowName, new RowMapper<Object>() {
-
-            @Override
-            public Object mapRow(Result result, int i) throws Exception {
-                System.out.println("i = "+i);
-                List<Cell> cells = result.listCells();
-                for (Cell cell : cells) {
-                    byte[] valueArray = cell.getValueArray();
-//                    System.out.println(new String(valueArray));
-                    byte[] value = cell.getValue();
-//                    System.out.println("========");
-                    System.out.println(new String(value));
+                @Override
+                public Object mapRow(Result result, int i) throws Exception {
+                    System.out.println("i = "+i);
+                    List<Cell> cells = result.listCells();
+                    for (Cell cell : cells) {
+                        byte[] valueArray = cell.getValueArray();
+    //                    System.out.println(new String(valueArray));
+                        byte[] value = cell.getValue();
+    //                    System.out.println("========");
+                        System.out.println(new String(value));
+                    }
+                    return cells;
                 }
-                return cells;
-            }
-        });
+            });
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 
@@ -139,8 +146,8 @@ public class HBaseService implements ApplicationRunner {
     }
 
     @Override
-    public void run(ApplicationArguments args) throws Exception {
-        List<Result> results = getRowKeyAndColumn("music_table", "111", "111", "meta_data", "email");
+    public void afterPropertiesSet() throws Exception {
+        List<Result> results = getRowKeyAndColumn("table_book", "111", "111", "meta_data", "email");
         results.forEach(rs -> {
             List<Cell> cells = rs.listCells();
             cells.forEach(cell -> {
@@ -158,6 +165,6 @@ public class HBaseService implements ApplicationRunner {
             });
         });
 
-        readTable("music_table", "111");
+        readTable("table_book", "r1");
     }
 }
