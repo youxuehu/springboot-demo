@@ -14,8 +14,8 @@ import storm.kafka.ZkHosts;
 public class StormKafkaHbase {
     public static void main(String[] args) throws Exception {
 
-        String topic = "topic_0517_hbase";
-        String zkRoot = "/topic_0517_hbase";
+        String topic = "storm-kafka-hbase-20200524";
+        String zkRoot = "/storm-kafka-hbase-20200524";
         String spoutId = "kafkaSpout";
 
         BrokerHosts brokerHosts = new ZkHosts("master:2181");

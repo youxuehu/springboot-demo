@@ -1,11 +1,14 @@
 package com.example.springbootdemo.common.storm.example.hbase;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.TypeReference;
+import org.apache.commons.lang.StringUtils;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.HBaseConfiguration;
+import org.apache.hadoop.hbase.HColumnDescriptor;
+import org.apache.hadoop.hbase.HTableDescriptor;
+import org.apache.hadoop.hbase.TableName;
 import org.apache.hadoop.hbase.client.*;
 import backtype.storm.topology.BasicOutputCollector;
 import backtype.storm.topology.OutputFieldsDeclarer;
@@ -15,64 +18,60 @@ import org.apache.hadoop.hbase.util.Bytes;
 
 public class PrinterBolt extends BaseBasicBolt {
 
-    public static final String TableName = "table_book";
-    public static Connection connection;
-    public static Configuration conf;
-    public static Admin admin;
-
-    public static void selectRowKey(String tablename, String rowKey) throws IOException {
-        connection = ConnectionFactory.createConnection(conf);
-        admin = connection.getAdmin();
-        insert();
-    }
-
-    private static void insert() throws IOException {
-        System.out.println("[hbaseoperation] start insert...");
-        Table table = connection.getTable(org.apache.hadoop.hbase.TableName.valueOf("table_book"));
-        List<Put> putList = new ArrayList<Put>();
-        Put put1;
-        put1 = new Put(Bytes.toBytes("row1"));
-        put1.addColumn(Bytes.toBytes("columnfamily_1"), Bytes.toBytes("name"), Bytes.toBytes("<<Java In Action>>"));
-        put1.addColumn(Bytes.toBytes("columnfamily_1"), Bytes.toBytes("price"), Bytes.toBytes("98.50"));
-        put1.addColumn(Bytes.toBytes("columnfamily_2"), Bytes.toBytes("author"), Bytes.toBytes("Tom"));
-        put1.addColumn(Bytes.toBytes("columnfamily_2"), Bytes.toBytes("version"), Bytes.toBytes("3 thrd"));
-        put1.addColumn(Bytes.toBytes("columnfamily_3"), Bytes.toBytes("discount"), Bytes.toBytes("5%"));
-
-        Put put2;
-        put2 = new Put(Bytes.toBytes("row2"));
-        put2.addColumn(Bytes.toBytes("columnfamily_1"), Bytes.toBytes("name"), Bytes.toBytes("<<C++ Prime>>"));
-        put2.addColumn(Bytes.toBytes("columnfamily_1"), Bytes.toBytes("price"), Bytes.toBytes("68.88"));
-        put2.addColumn(Bytes.toBytes("columnfamily_2"), Bytes.toBytes("author"), Bytes.toBytes("Jimmy"));
-        put2.addColumn(Bytes.toBytes("columnfamily_2"), Bytes.toBytes("version"), Bytes.toBytes("5 thrd"));
-        put2.addColumn(Bytes.toBytes("columnfamily_3"), Bytes.toBytes("discount"), Bytes.toBytes("15%"));
-
-        Put put3;
-        put3 = new Put(Bytes.toBytes("row3"));
-        put3.addColumn(Bytes.toBytes("columnfamily_1"), Bytes.toBytes("name"), Bytes.toBytes("<<Hadoop in Action>>"));
-        put3.addColumn(Bytes.toBytes("columnfamily_1"), Bytes.toBytes("price"), Bytes.toBytes("78.92"));
-        put3.addColumn(Bytes.toBytes("columnfamily_2"), Bytes.toBytes("author"), Bytes.toBytes("Kitty"));
-        put3.addColumn(Bytes.toBytes("columnfamily_2"), Bytes.toBytes("version"), Bytes.toBytes("2 thrd"));
-        put3.addColumn(Bytes.toBytes("columnfamily_3"), Bytes.toBytes("discount"), Bytes.toBytes("20%"));
-        putList.add(put1);
-        putList.add(put2);
-        putList.add(put3);
-        table.put(putList);
-        System.out.println("[hbaseoperation] start insert...");
-    }
+    public final String tableName = "storm_kafka_hbase_20200524";
+    public Connection connection;
+    public Configuration conf;
+    public Admin admin;
 
     @Override
     public void execute(Tuple tuple, BasicOutputCollector collector) {
-        System.out.println(tuple.getString(0));
         conf = HBaseConfiguration.create();
         conf.set("hbase.master", "master:60000");
         conf.set("hbase.zookeeper.quorum", "master:2181,slave1:2181,slave2:2181");
         try {
-            System.out.println("[1]=============");
-            selectRowKey(TableName, tuple.getString(0));
-            System.out.println("[2]=============");
+            connection = ConnectionFactory.createConnection(conf);
+            admin = connection.getAdmin();
+            insertHbaseTable(tableName, tuple.getString(0));
         } catch (Exception e) {
-            System.out.println("[3]=============");
-            System.out.println(tuple);
+            e.printStackTrace();
+        } finally {
+            if (null != admin) {
+                try {
+                    admin.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (null != connection) {
+                try {
+                    connection.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    private void insertHbaseTable(String tableName, String data) {
+        try {
+            if (StringUtils.isBlank(data)) {
+                return;
+            }
+            Message message = JSON.parseObject(data, new TypeReference<Message>() {
+            });
+            if (!admin.tableExists(TableName.valueOf(tableName))) {
+                HTableDescriptor hTableDescriptor = new HTableDescriptor(tableName);
+                hTableDescriptor.addFamily(new HColumnDescriptor("message"));
+                admin.createTable(hTableDescriptor);
+            }
+            Table table = connection.getTable(TableName.valueOf(tableName));
+            String rowKey = "strom_kafka_hbase_" + System.currentTimeMillis();
+            Put put = new Put(Bytes.toBytes(rowKey));
+            put.addColumn(Bytes.toBytes("message"), Bytes.toBytes("name"), Bytes.toBytes(message.getName()));
+            put.addColumn(Bytes.toBytes("message"), Bytes.toBytes("age"), Bytes.toBytes(message.getAge()));
+            put.addColumn(Bytes.toBytes("message"), Bytes.toBytes("gender"), Bytes.toBytes(message.getGender()));
+            table.put(put);
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
