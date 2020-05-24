@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/zk")
 public class ZKController {
 
-    @Autowired
+//    @Autowired
     private ZookeeperLock zklock;
 
     @GetMapping("/lock")

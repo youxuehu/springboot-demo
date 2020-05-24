@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@Component
+//@Component
 public class ZkService implements InitializingBean, Watcher {
 
     private static final Logger LOG = LoggerFactory.getLogger(ZkService.class);

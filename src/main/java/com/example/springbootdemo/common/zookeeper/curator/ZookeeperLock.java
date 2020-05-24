@@ -17,12 +17,12 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
-@Service
+//@Service
 public class ZookeeperLock implements Lock {
 
     Logger LOG = LoggerFactory.getLogger(ZookeeperLock.class);
 
-    @Autowired
+//    @Autowired
     CuratorFramework zkClient;
 
     @Value("${zookeeper.lockpath}")

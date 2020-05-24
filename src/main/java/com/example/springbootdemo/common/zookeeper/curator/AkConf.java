@@ -8,13 +8,13 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration
+//@Configuration
 public class AkConf {
 
     @Value("${connection}")
     private String connection;
 
-    @Bean
+//    @Bean
     public CuratorFramework curatorFramework() {
         // 重试时间1000，重试3次
         RetryPolicy retryPolicy = new ExponentialBackoffRetry(1000, 3);

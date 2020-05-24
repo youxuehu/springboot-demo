@@ -9,12 +9,12 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+//@Service
 public class ZkManager implements InitializingBean {
 
     Logger LOG = LoggerFactory.getLogger(ZkManager.class);
 
-    @Autowired
+//    @Autowired
     ZkService zkService;
 
     public void createNode() {
