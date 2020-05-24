@@ -36,7 +36,7 @@ public class StudentController {
 
     @GetMapping("start")
     public boolean start() {
-//        studentThriftServer.start();
+        studentThriftServer.start();
         return true;
     }
 
