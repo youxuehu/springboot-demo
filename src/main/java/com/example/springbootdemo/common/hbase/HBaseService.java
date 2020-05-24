@@ -21,11 +21,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Service
+//@Service
 @Slf4j
 public class HBaseService implements InitializingBean {
 
-    @Autowired
+//    @Autowired
     private HbaseTemplate hbaseTemplate;
 
     public void readTable(String tableName, String rowName) {
@@ -165,6 +165,6 @@ public class HBaseService implements InitializingBean {
             });
         });
 
-        readTable("table_book", "r1");
+//        readTable("table_book", "r1");
     }
 }

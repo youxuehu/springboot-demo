@@ -1,5 +1,8 @@
 package com.example.springbootdemo.common.hbase;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.serializer.SerializerFeature;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.hadoop.hbase.client.HTableInterface;
 import org.apache.hadoop.hbase.client.Put;
 import org.springframework.beans.factory.InitializingBean;
@@ -12,29 +15,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
+@Slf4j
 public class TestHbase  implements InitializingBean {
 
     @Autowired
     private HbaseTemplate hbaseTemplate;
 
     private void insertUserinfo() {
-        hbaseTemplate.execute("userinfos5", new TableCallback<Object>() {
+        hbaseTemplate.execute("userinfos", new TableCallback<Object>() {
             @Override
             public Object doInTable(HTableInterface hTableInterface) throws Throwable {
                 List<Put> puts = new ArrayList<>();
                 for (int i = 1; i <= 1000; i++) {
                     Put put = new Put(("jack_row_key" + i).getBytes());
                     put.add("info".getBytes(), ("name").getBytes(), ("jack"+i).getBytes());
+                    put.add("info".getBytes(), ("age").getBytes(), (""+i).getBytes());
                     puts.add(put);
                 }
+                log.info("{}", JSON.toJSONString(puts, SerializerFeature.PrettyFormat));
                 hTableInterface.put(puts);
-                List<Put> puts2 = new ArrayList<>();
-                for (int i = 1; i <= 1000; i++) {
-                    Put put = new Put(("jack_row_key" + i).getBytes());
-                    put.add("info".getBytes(), ("age").getBytes(), (""+i).getBytes());
-                    puts2.add(put);
-                }
-                hTableInterface.put(puts2);
                 return true;
             }
         });
@@ -74,6 +73,6 @@ public class TestHbase  implements InitializingBean {
     @Override
     public void afterPropertiesSet() throws Exception {
         //        insertTableData();
-//        insertUserinfo();
+        insertUserinfo();
     }
 }
