@@ -1,0 +1,21 @@
+# 在一个文件中指定多个环境
+
+spring:
+  profiles:
+    active: dev
+
+---
+spring:
+  profiles: dev
+server:
+  port: 8888
+  servlet:
+    context-path: xxx
+
+---
+spring:
+  profiles: prod
+server:
+  port: 9999
+  servlet:
+    context-path: xxx
