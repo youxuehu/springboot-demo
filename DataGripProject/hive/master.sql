@@ -152,3 +152,30 @@ select a.id, a.name,p.gender from hive_2020.student a full join
 -- 每个join会起一个map reduce
 
 -- 注意： 多表连接时，建议将大表放在后面，可以提高查询效率
+
+----------hive hbase 整合------------
+-- 创建hbase表
+create 'hbase_20200531',{NAME => 'f1',VERSIONS => 1},{NAME => 'f2',VERSIONS => 1},
+{NAME => 'f3',VERSIONS => 1}
+-- put
+put 'hbase_20200531','lxw1234.com','f1:c1','name1'
+put 'hbase_20200531','lxw1234.com','f1:c2','name2'
+put 'hbase_20200531','lxw1234.com','f2:c1','age1'
+put 'hbase_20200531','lxw1234.com','f2:c2','age2'
+put 'hbase_20200531','lxw1234.com','f3:c1','job1'
+put 'hbase_20200531','lxw1234.com','f3:c2','job2'
+put 'hbase_20200531','lxw1234.com','f3:c3','job3'
+
+-- hive hbase
+SET hbase.zookeeper.quorum=master:2181,slave1:2181,slave2:2181;
+SET zookeeper.znode.parent=/hbase;
+ADD jar /usr/local/src/apache-hive-1.2.2-bin/lib/hive-hbase-handler-1.2.2.jar;
+CREATE EXTERNAL TABLE hbase_20200531 (
+    rowkey string,
+    f1 map<STRING,STRING>,
+    f2 map<STRING,STRING>,
+    f3 map<STRING,STRING>
+) STORED BY 'org.apache.hadoop.hive.hbase.HBaseStorageHandler'
+WITH SERDEPROPERTIES ("hbase.columns.mapping" = ":key,f1:,f2:,f3:")
+TBLPROPERTIES ("hbase.table.name" = "hbase_20200531");
+select * from hbase_20200531;
