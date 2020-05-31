@@ -17,7 +17,7 @@ import java.net.UnknownHostException;
  * tcp 方式
  * 官方4.0不建议使用； 官方将在elasticsearch8版本中删除
  */
-@Configuration
+//@Configuration
 public class TransportClientConfig extends ElasticsearchConfigurationSupport {
 
     @Bean("client")
