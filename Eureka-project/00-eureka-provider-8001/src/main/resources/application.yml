@@ -6,4 +6,21 @@ spring:
 eureka:
   client:
     service-url:
-     defaultZone: http://localhost:8000/eureka
+     defaultZone: http://localhost:8000/eureka,http://localhost:8100/eureka
+
+# 服务下架  POST http://localhost:8001/actuator/shutdown
+
+# 服务下线  POST http://localhost:8001/actuator/service-registry
+# Content-Type: application/json
+# 下线：param {"status":""DOWN}
+# 上线：param {"status":""UP}
+management:
+  # 开启所有监控终端
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  # 开启shutdown监控
+  endpoint:
+    shutdown:
+      enabled: true

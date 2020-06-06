@@ -5,7 +5,14 @@ spring:
     name: 00-eureka-server-8000
 eureka:
   client:
+    # 不注册自己
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://localhost:8000/eureka
+      # eureka 集群
+      defaultZone: http://localhost:8000/eureka,http://localhost:8100/eureka
+  server:
+    # 自我保护阈值设置, 默认是0.85
+#    renewal-percent-threshold: 0.75
+    # 关闭自我保护机制，默认是开启的，不建议关闭
+#    enable-self-preservation: false
