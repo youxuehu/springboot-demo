@@ -7,6 +7,9 @@ import org.apache.hadoop.mapreduce.Reducer;
 import java.io.IOException;
 import java.util.Iterator;
 
+/**
+ * @author youxuehu
+ */
 public class MyWordCountReducer extends Reducer<Text, IntWritable, Text, IntWritable> {
 
     @Override

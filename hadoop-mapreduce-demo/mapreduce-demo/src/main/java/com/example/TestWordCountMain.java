@@ -11,8 +11,9 @@ import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
 import org.apache.log4j.BasicConfigurator;
 
 /**
-
- /usr/local/src/hadoop-2.6.5/share/hadoop/*.jar
+ * /usr/local/src/hadoop-2.6.5/share/hadoop/*.jar
+ *
+ * @author youxuehu
  */
 public class TestWordCountMain {
     public static void main(String[] args) {
@@ -56,4 +57,4 @@ public class TestWordCountMain {
             e.printStackTrace();
         }
     }
-    }
+}

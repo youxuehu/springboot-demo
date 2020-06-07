@@ -8,6 +8,9 @@ import org.apache.hadoop.mapreduce.Mapper;
 import java.io.IOException;
 
 
+/**
+ * @author youxuehu
+ */
 public class MyWordCountMapper extends Mapper<LongWritable, Text, Text, IntWritable> {
 
     @Override
