@@ -41,6 +41,9 @@ public class Main {
             Path in2 = new Path("hdfs://master:9000/avg2/");
             MultipleInputs.addInputPath(job, in1, TextInputFormat.class);
             MultipleInputs.addInputPath(job, in2, TextInputFormat.class);
+
+//            MultipleInputs.addInputPath(job, in1, TextInputFormat.class, Map1.class);
+//            MultipleInputs.addInputPath(job, in2, TextInputFormat.class, Map2.class);
             // 执行输出格式
             job.setOutputFormatClass(TextOutputFormat.class);
             // 输出路径
