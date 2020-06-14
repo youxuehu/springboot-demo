@@ -1,4 +1,4 @@
-package com.example;
+package com.example.wordcount.mac;
 
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;
