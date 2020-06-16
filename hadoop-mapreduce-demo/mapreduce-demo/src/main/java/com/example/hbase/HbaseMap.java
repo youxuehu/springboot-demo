@@ -1,5 +1,4 @@
 package com.example.hbase;
-
 import org.apache.hadoop.hbase.Cell;
 import org.apache.hadoop.hbase.CellUtil;
 import org.apache.hadoop.hbase.client.Result;
@@ -7,10 +6,8 @@ import org.apache.hadoop.hbase.io.ImmutableBytesWritable;
 import org.apache.hadoop.hbase.mapreduce.TableMapper;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
-
 import java.io.IOException;
 import java.util.List;
-
 /**
  *  * 继承的是hbase中提供的TableMapper类，其实这个类也是继承的MapReduce类。 后边跟的两个泛型参数指定类型是mapper输
  *  * 出的数据类型，该类型必须继承自Writable类， 例如可能用到的put和delete就可以。 需要注意的是要和initTableMapperJob
@@ -18,10 +15,8 @@ import java.util.List;
  *  *
  */
 public class HbaseMap  extends TableMapper<Text, IntWritable> {
-    //  key：  代表hbase中的每一行的key  value：代表此key对于的值（column）
     @Override
-    protected void map(ImmutableBytesWritable key, Result value,
-                       Context context)
+    protected void map(ImmutableBytesWritable key, Result value, Context context)
             throws IOException, InterruptedException {
         System.out.println(new String(key.get())+"---->"+value.size());
         List<Cell> cells = value.listCells();
