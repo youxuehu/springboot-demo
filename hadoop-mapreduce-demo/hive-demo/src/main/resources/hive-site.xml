@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+    <property>
+        <name>javax.jdo.option.ConnectionURL</name>
+        <value>jdbc:mysql://master:3306/hive_db?createDatabaseIfNotExist=true&amp;useSSL=false</value>
+    </property>
+    <property>
+        <name>javax.jdo.option.ConnectionDriverName</name>
+        <value>com.mysql.jdbc.Driver</value>
+    </property>
+    <property>
+        <name>javax.jdo.option.ConnectionUserName</name>
+        <value>root</value>
+    </property>
+    <property>
+        <name>javax.jdo.option.ConnectionPassword</name>
+        <value>zhf123..</value>
+    </property>
+    <property>
+        <name>hive.metastore.warehouse.dir</name>
+        <value>/hive/warehouse</value>
+    </property>
+    <property>
+        <name>hive.exec.scratchdir</name>
+        <value>/hive/tmp</value>
+    </property>
+    <property>
+        <name>hive.metastore.uris</name>
+        <value>thrift://master:9083</value>
+    </property>
+    <property>
+        <name>hive.querylog.location</name>
+        <value>/usr/hive/log</value>
+    </property>
+    <property>
+        <name>hive.hwi.listen.host</name>
+        <value>0.0.0.0</value>
+    </property>
+    <property>
+        <name>hive.hwi.listen.port</name>
+        <value>9999</value>
+    </property>
+    <property>
+        <name>hive.hwi.war.file</name>
+        <value>lib/hive-hwi-1.2.1.war</value>
+    </property>
+</configuration>
