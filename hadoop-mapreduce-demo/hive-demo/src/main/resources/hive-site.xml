@@ -45,4 +45,25 @@
         <name>hive.hwi.war.file</name>
         <value>lib/hive-hwi-1.2.1.war</value>
     </property>
+    <!-- authentication -->
+    <property>
+        <name>hive.server2.authentication</name>
+        <value>CUSTOM</value>
+    </property>
+    <property>
+        <name>hive.server2.custom.authentication.class</name>
+        <value>com.example.hive.imac.AuthLogin</value>
+    </property>
+    <property>
+        <name>hive.dw.mysql.url</name>
+        <value>jdbc:mysql://leader:3306/hive_db</value>
+    </property>
+    <property>
+        <name>hive.dw.mysql.user</name>
+        <value>root</value>
+    </property>
+    <property>
+        <name>hive.dw.mysql.pwd</name>
+        <value>zhf123..</value>
+    </property>
 </configuration>
