@@ -1754,7 +1754,7 @@ redis-server ：服务端
 启动数据库 nohup ./src/redis-server &
 （2）灌数据
 格式转换
-yum install unix2dos
+pip install unix2dos 
 unix2dos cb_reclist.redis 
 
  cat cb_reclist.redis | /usr/local/src/redis-2.8.3/src/redis-cli --pipe
@@ -1803,7 +1803,7 @@ x是特征值，用户和物品，也已经加载。
 （7）top-n截断
 （8）数据包装 itemid->name 返回
 （9）浏览器验证
-http://master7:9988?userid=002db7d2360562dd16828c4b91402000&itemid=3880409156
+http://master:9988?userid=002db7d2360562dd16828c4b91402000&itemid=3880409156
 
 roc auc 准确率召回率，离散化，特征选择  1h，NLP项目
 1.训练模型，特征是如何得到
@@ -1826,25 +1826,26 @@ lisi    chinese:80,math:66,english:77
 wangwu  chinese:66,math:55,english:80
 
 两步：
-1.lateral view explode
+1.lateral view explode 
 2.ROW_NUMBER() over
 
-create table student_score_tmp (
-      name string,
-      scores string
-)
-ROW FORMAT delimited
-fields terminated by '\t'
-COLLECTION ITEMS TERMINATED BY ','
-stored as textfile
-location '/student_score_tmp';
+--create table student_score_tmp1 (
+--      name string,
+--      scores string
+--)
+--ROW FORMAT delimited
+--fields terminated by '\t'
+--COLLECTION ITEMS TERMINATED BY ','
+--stored as textfile
+--location '/student_score_tmp1';
+--;
 
 select course,name, score from
 (
-    select b.course, b.name, b.score,
+    select b.course, b.name, b.score, 
     ROW_NUMBER() over (partition by course order by score desc) rowNum
     from
-    (
+    (  
         select s.name, split(a,':')[0] as course, split(a,':')[1] as score
         from student_score_tmp1 s lateral view explode(split(s.scores,',')) t as a
     )b
@@ -1864,21 +1865,14 @@ MAP KEYS TERMINATED BY ':'
 stored as textfile
 location '/student_score_tmp';
 
--- 输出结果到HDFS
-insert overwrite directory "/tmp/out/"
 select course,name,score
 from
 (select name,course,score,ROW_NUMBER() over (partition by course order by score desc) rowNum
-    from student_score_tmp
+    from student_score_tmp 
     lateral view explode(scores) s as course,score
 )a
 where rowNum=1
 ;
-
-insert overwrite directory "/tmp/out/"
-select name,course,score,ROW_NUMBER() over (partition by course order by score desc) rowNum
-    from student_score_tmp
-    lateral view explode(scores) s as course,score;
 
 
 
@@ -1889,7 +1883,7 @@ hbase 实践
 hbase 安装
 hbase shell
  启动 ./bin/start-hbase.sh
-./bin/hbase shell
+./bin/hbase shell 
 删除表格
 >disable 'm_table'
 >drop 'm_table'
@@ -1939,7 +1933,7 @@ scan "m_table", {FILTER=>RowFilter.new(CompareFilter::CompareOp.valueOf('EQUAL')
 清空词表
 >truncate 'm_table'
 
-pthon + hbase
+pthon + hbase 
 需要依赖模块  python不能直接对hbase操作
 下载thrift-0.8.0.tar.gz
 解压
@@ -1949,12 +1943,12 @@ pthon + hbase
 下载hbase-0.98.24-src.tar.gz 源码包，不是安装包
 解压，进入目录，在进入子目录中hbase-thrift/src/main/resources/org/apache/hadoop/hbase/thrift
 
-thrift --gen py Hbase.thrift   产生gen-py
+thrift --gen py Hbase.thrift   产生gen-py 
 把gen-py目录下的hbase拷贝出来
 把thrift-0.8.0目录下面的lib/py/build/lib.linux-x86_64-2.6/thrift 拷贝出来
 
 启动thrift服务
- /usr/local/src/hbase-0.98.6-hadoop2/bin/hbase-daemon.sh start thrift
+ /usr/local/src/hbase-0.98.6-hadoop2/bin/hbase-daemon.sh start thrift 
 1）创建表格
 python create_table.py
 2）写数据
@@ -1964,7 +1958,7 @@ python get_one_line.py
 4）扫描数据
 python scan_many_lines.py
 
-MR + hbase
+MR + hbase 
 bash run.sh
 
 hive +hbase
@@ -1995,7 +1989,7 @@ channel分两种
 2）file channel 数据放在磁盘，慢，但是安全
 3）当数据传输完后，数据在channel当中删除
 
-3.web->nginx -> log data ->flume ->kafka ->storm (spark streaming) ->hbase /hdfs
+3.web->nginx -> log data ->flume ->kafka ->storm (spark streaming) ->hbase /hdfs 
 4.flume 支持水平扩展，垂直扩展
 5.flume里最基本的数据单元是Event
 6.Event有两个部分组成（数据部分body+可选的头部head）
@@ -2021,14 +2015,14 @@ flume实践
 1、本地运行
 （1） Netcat
 ./bin/flume-ng agent --conf conf --conf-file ./conf/flume_netcat.conf --name a1 -Dflume.root.logger=INFO,console
-发数据：telnet master 44444
+发数据：telnet master 44444 
 （2）exec
 ./bin/flume-ng agent --conf conf --conf-file ./conf/flume_exec.conf --name a1 -Dflume.root.logger=INFO,console
-发数据：echo "666" >>1.log
+发数据：echo "666" >>1.log 
 （3）输出到hdfs
 ./bin/flume-ng agent --conf conf --conf-file ./conf/flume.conf --name a1 -Dflume.root.logger=INFO,console
 
-发数据：echo "666" >>1.log
+发数据：echo "666" >>1.log 
 hadoop fs -text /flume/20-04-12/1130/badou-.1586662216460
 
 2.集群运行
@@ -2046,7 +2040,7 @@ slave2：
 
 （2）负载均衡
 master：
-./bin/flume-ng agent --conf conf --conf-file ./conf/agent_agent_collector_base/flume-client.properties_loadbalance --name a1 -Dflume.root.logger=INFO,console
+./bin/flume-ng agent --conf conf --conf-file ./conf/agent_agent_collector_base/flume-client.properties_loadbalance --name a1 -Dflume.root.logger=INFO,console 
 slave1：
  ./bin/flume-ng agent --conf conf --conf-file ./conf/agent_agent_collector_base/flume-server.properties --name a1 -Dflume.root.logger=INFO,console
 
@@ -2055,32 +2049,32 @@ slave2：
 
 （3）拦截和过滤（interceptor）
 
-1）timestamp
+1）timestamp 
 
 ./bin/flume-ng agent --conf conf --conf-file ./conf/interceptor_test/flume_ts_interceptor.conf --name a1 -Dflume.root.logger=INFO,console
 发送数据：
 curl -X POST -d '[{"header":{"hadoop1":"hadoop1 is header"},"body":"hello"}]' http://master:52020
 
-2）Host interceptor
+2）Host interceptor 
 
 ./bin/flume-ng agent --conf conf --conf-file ./conf/interptor_test/flume_hostname_interceptor.conf --name a1 -Dflume.root.logger=INFO,console
 发送数据：
-echo "abc123" |nc master 52020
+echo "abc123" |nc master 52020 
 
 3）static interceptor
 在event的header当中添加自定义的key和value
- ./bin/flume-ng agent --conf conf --conf-file ./conf/interceptor_test/flume_static_interceptor.conf --name a1 -Dflume.root.logger=INFO,console
+ ./bin/flume-ng agent --conf conf --conf-file ./conf/interceptor_test/flume_static_interceptor.conf --name a1 -Dflume.root.logger=INFO,console 
 发送数据：
 curl -X POST -d '[{"header":{"hadoop1":"hadoop1 is header"},"body":"hello"}]' http://master:52020
 
 4）Regex Filtering interceptor
 通过正则来清洗event，做过滤
-./bin/flume-ng agent --conf conf --conf-file ./conf/interceptor_test/flume_regex_interceptor.conf --name a1 -Dflume.root.logger=INFO,console
+./bin/flume-ng agent --conf conf --conf-file ./conf/interceptor_test/flume_regex_interceptor.conf --name a1 -Dflume.root.logger=INFO,console 
 发送数据
 curl -X POST -d '[{"header":{"hadoop1":"hadoop1 is header"},"body":"hello"}]' http://master:52020
-curl -X POST -d '[{"header":{"hadoop1":"hadoop1 is header"},"body":"123"}]' http://master:52020
+curl -X POST -d '[{"header":{"hadoop1":"hadoop1 is header"},"body":"123"}]' http://master:52020  
 
-5）Regex Extractor interceptor
+5）Regex Extractor interceptor 
 通过正则表达式来在header当中添加指定的key、value
 这里的key和value是通过正则匹配提取出来的
 ./bin/flume-ng agent --conf conf --conf-file ./conf/interceptor_test/flume_regex_interceptor.conf_extractor --name a1 -Dflume.root.logger=INFO,console
@@ -2091,7 +2085,7 @@ curl -X POST -d '[{"header":{"hadoop1":"hadoop1 is header"},"body":"1:s2:3"}]' h
 curl -X POST -d '[{"header":{"hadoop1":"hadoop1 is header"},"body":"h1:2:3"}]' http://master:52020
 
 
-conf/interceptor_test/flume_regex_interceptor.conf_extractor
+conf/interceptor_test/flume_regex_interceptor.conf_extractor 
 a1.sources = r1
 a1.sinks = k1
 a1.channels = c1
@@ -2164,7 +2158,7 @@ zookeeper
 	永久Persistent
 	临时Ephemeral
 	序列Sequence
-
+	
      永久、临时、永久&序列、临时&序列
 5、监控：
 	监控数据（getData）
@@ -2205,8 +2199,8 @@ python main.py
 
 pip install kazoo
 
-python test_basic.py
-ls /badou/nine/node
+python test_basic.py 
+ls /badou/nine/node 
 
 修改配置，看zk数据变化,做配置分发
 python test_blacklist.py
@@ -2245,7 +2239,7 @@ kafka
 	假设有N个broker，第i个partition会分配到i%N的broker上
 	将第i个partition的第j个replication会分配到（i+j）%N的broker上
 	如果里面有M个replication，其中一个是leader，其他的M-1是follower
-
+	
 8、不同的topic的消息是分布存储
 9、偏移量offset，定位数据读取的位置
      不仅要确定读offset的位置，更要确定是哪个partition中读
@@ -2284,7 +2278,7 @@ kafka
 （5）发送信息
 ./bin/kafka-console-producer.sh --broker-list localhost:9092 --topic topic_0419_s
 （6）接受信息
-./bin/kafka-console-consumer.sh  --zookeeper localhost:2181 --topic topic_0419_s
+./bin/kafka-console-consumer.sh  --zookeeper localhost:2181 --topic topic_0419_s 
 （7）删除topic
 ./bin/kafka-topics.sh --delete --zookeeper localhost:2181 --topic topic_0419_s
 
@@ -2306,10 +2300,10 @@ slave2:2
 
 三、自主producer、consumer
 python consumer_kafka.py
-python producer_kafka.py
+python producer_kafka.py 
 
 指定partition发送
- python producer_kafka_2.py
+ python producer_kafka_2.py 
 producer.send('topic_0419_m', key='100', value='bbb')
 
 指定partition和offset 读
@@ -2322,8 +2316,8 @@ protobuf （pb 格式）——结构化的数据形式传输，加密，解码�
 
 
 四、flume+kafka
- ./bin/flume-ng agent --conf conf --conf-file ./conf/flume_kafka.conf --name a1 -Dflume.root.logger=INFO,console
-
+ ./bin/flume-ng agent --conf conf --conf-file ./conf/flume_kafka.conf --name a1 -Dflume.root.logger=INFO,console	
+	
 保证数据均匀发送
 ./bin/flume-ng agent --conf conf --conf-file ./conf/flume_kafka_2.conf --name a1 -Dflume.root.logger=INFO,console
 
@@ -2335,11 +2329,765 @@ UUID拦截器
 sparksql
 spark streaming
 
+spark streaming
+1、Spark Streaming 是spark体系当中一个流式处理框架
+2、Spark core 是核心的计算引擎
+      Storm：数据呈水流状
+      Streaming：按照时间维度了离散化
+3、Spark Core开发的时候，就是开发的RDD（DAG图）
+    Spark-core：RDD开发，RDD-DAG图
+    Spark-Streaming：Dstream开发，DstreamGraph
+
+Dstream代表了一系列的RDD ，每个RDD是一个特定时间维度
+RDD = Dstream at batch T 
+
+4、Dstream算子与RDD算子的区别
+      RDD算子分为两类：transformation 和action
+      Dstream算子也是分为两类：
+	（1）transformation  
+	（2）output（输出算子）
+	       1）saveAsTextFiles
+	       2) forEachRDD：数据对接外部API（Hbase、Spark Sql，mysql，kafka）
+
+5、时间窗口
+
+batchDuration
+任务：统计最近1小时的乘客发单数量，要求每10分钟更新一次
+          窗口总长度：1小时
+          滑动的时间间隔：10分钟
+6、架构
+master 、worker、client
+对数据的监控有两种模式
+	被动模式：receiver
+	优点：快
+	缺点：占用系统资源
+   
+	主动模式：direct 轮训
+	优点：节省系统资源
+	缺点：慢
+
+7、容错-WAL
+
+
+实践
+1.基本demo -wordcount
+  无状态的：wordCount
+	发送数据  nc -l 9999
+  有状态的：wordCountState
+   updateStateByKey
+
+2.时间窗口
+30,10 统计窗口的时间，窗口更新的时间
+bash run.sh 1>1.og 2>2.log
+tailf 1.log
+reducebykeyandwindow 只在dstream上有
+参考代码：
+被动模式wordCountKafkaStreaming
+主动模式wordCountKafkaStreamingDirect
+
+3.kafka+streaming
+启动kafka
+./bin/kafka-server-start.sh  config/server.properties
+查看topic列表
+./bin/kafka-topics.sh --list --zookeeper localhost:2181
+创建topic
+./bin/kafka-topics.sh --create --zookeeper localhost:2181 --partitions 1 --replication-factor 1 --topic kafka_streaming_topic_0510
+查看topic描述
+./bin/kafka-topics.sh --describe --zookeeper localhost:2181 --topic kafka_streaming_topic_0510
+发送信息
+./bin/kafka-console-producer.sh --broker-list localhost:9092 --topic kafka_streaming_topic_0510
+
+receive模式local >=2
+参考代码：kafkaStreamKafka
+
+4.kafka+streaming+kafka
+./bin/kafka-console-producer.sh --broker-list localhost:9092 --topic kafka_streaming_topic_0510
+./bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic kafka_streaming_topic_0510
+
+5.kafka+streaming+hbase	
+./bin/kafka-console-producer.sh --broker-list localhost:9092 --topic kafka_streaming_topic_0511
+aaa|bbb|ccc
+
+参考代码：kafkaStreamHbase
+
+
+---------------------------
+Spark Sql
+1、处理结构化的数据
+通常工业界，需要将非结构化的数据转换成结构化的数据，然后进一步的计算和处理
+2、Hive存储数据有几个层次
+     table、partition、buckets、hdfs
+     spark sql 可以和hive相结合使用
+3、spark streaming 中模板称为是Dstream
+    spark sql新的概念，DataFrame（当做一个table-关系表）
+
+4、处理数据步骤
+（1）读入：SQLContext，HiveContext
+（2）处理：DataFrame
+（3）输出：SQLContext，HiveContext
+5、DataFrame数据来源：数据源多样
+（1）外部数据源SQLContext：HDFS、网络接口、Mysql
+（2）Hive数据源HiveContext：Hive
+两者的关系：HiveContext继承于SQLContext，SQLContext支持的语法更多，但是不支持HQL，HiveContext仅支持HQL
+6、DataFrame是分布式table，并不是spark独创，也不装真正的数据，而是转换关系和描述
+7、RDD和DataFrame区别:
+      RDD是以行为单位读数据（record）
+      DataFrame包含了每个record的元数据信息，可以进行列优化
+	
+8、RDD与DataFrame的相同：懒惰机制
+9、DataSet，spark1.6之后，也是一个分布式数据集
+10、spark sql处理核心：catalyst工作流程
+优化点：
+（1）基于规则：经验式、启发式地优化思路，更多地依靠前辈总结出来的优化规则，简单易行且能够
+覆盖到大部分优化逻辑
+（2）基于代价：代价模型，调整join顺序  BroadcastHashJoin还是SortMergeJoin
+11、数据处理的流程
+（1）Parser
+（2）Analyzer
+（3）Optimizer
+（4）Physical Planning
+
+12、内存管理： Tungsten Off-heap内存管理
+
+
+实践
+1.基本demo
+处理数据（原文本、hive）
+1）从hdfs原始text文本中读数据
+2）从hdfs原始text文本中读json数据
+3）从hive中读数据
+
+
+
+# terminal test
+/usr/local/src/spark-1.6.0-bin-hadoop2.6/bin/spark-sql \
+    --master local[2] \
+    --jars /usr/local/src/spark-1.6.0-bin-hadoop2.6/lib/mysql-connector-java-5.1.41-bin.jar
+
+spark sql  select rating, count(*) from rating_table_b group by rating limit 100;
+hive select rating, count(*) from rating_table_b group by rating limit 100;
+
+2.streaming+spark sql
+
+sqlAndStreamingWC
+nc -l 9999
+
+edit 
+configuration program  arguments 
+master 9999
+
+3.streaming+spark sql +hbase
+
+
+下周计划：
+组件
+logserver
+
+flink
+es
+算法  gbdt xgb dnn rnn lstm 情感分析
+
+storm
+1.storm和mapreduce对比，storm面向实时处理，MR面向批量处理
+MR
+    优点：稳定、吞吐能力强
+    缺点：时效性差
+storm
+    优点：时效性强，毫秒级别
+    缺点：增量式处理，没有结束的状态
+
+2.storm：
+    没有持久化
+    可靠性：保证消息得到处理
+    本地模式
+    原语：spout 和bolt 
+
+3.storm的基本概念
+  streams：消息流
+  Spouts：消息源，对接数据源（hbase，kafka，http）
+                发送多条流，每条数据打包成tuple，数据成功或者错误都有spout统一收集
+  Bolts：消息处理者，过滤，访问外部，数据格式化，聚合，业务处理。发送多条流
+  tuple：最基本的数据单元
+  Topology：网络拓扑
+  Grouping：Shuffle、Fields
+  
+4.storm架构
+主节点：nimbus——分配工作
+	如果挂了（fast-fail-无状态特点）
+	分发代码，分配任务，监控
+从节点：supervisor
+	如果挂了（fast-fail-无状态特点）
+	监控worker工作
+worker：工作进程
+Task：线程
+	spout bolt
+zookeeper协调
+
+5.容错
+（1）架构容错
+	
+（2）数据容错
+       （a）timeout
+       （b）ack机制——自身也是线程（特殊的task）
+	ack task的个数
+	如何保证一个消息被成功处理的？  （异或）
+
+
+实践
+
+storm 安装启动
+首先启动zk
+storm.yaml 配置，同步到slave 1 2上
+机器列表、master、从节点上启动的进程端口号
+
+启动
+master
+python bin/storm nimbus &
+python bin/storm ui &
+python bin/storm logviewer &
+杀掉
+kill `ps aux | fgrep storm | fgrep -v 'fgrep' | awk '{print $2}'`
+
+
+slave
+python bin/storm supervisor &
+python bin/storm logviewer &
+
+杀掉
+kill `ps aux | fgrep storm | fgrep -v 'fgrep' | awk '{print $2}'`
+
+
+监控页面观察：
+http://192.168.226.10:8080/index.html
+
+地址被占用，  spark停止 
+
+
+1.storm wordcount
+
+2.storm kafka
+启动
+./bin/kafka-server-start.sh  config/server.properties
+查看
+./bin/kafka-topics.sh --list --zookeeper localhost:2181
+发送信息
+./bin/kafka-console-producer.sh --broker-list localhost:9092 --topic topic_0517_multibrokers 
+
+
+3.storm & http
+
+ ./bin/kafka-console-producer.sh --broker-list localhost:9092 --topic topic_0517_jieba
+南京市长江大桥真长
+
+4.storm & hbase
+./bin/kafka-console-producer.sh --broker-list localhost:9092 --topic topic_0517_hbase
+1100
+
+思考：
+店小二上架新商品信息，如何能够实时推荐该商品出来。
+召回分支：基于内容的推荐 ；
+最终一个用户点击了itemA：港台音乐，可以把新商品推荐出来。背后数据库里面
+ itemA：itemB，item_new
+item_new：港台十大金曲
+
+下周计划
+
+logserver 
+
+
+任务1.熟悉thrift，先基于python，打通client与server之间的交互
+（1）thrift下载编译源码包，进入到目录下
+./configure --with-cpp --with-boost --with-python --without-csharp --with-java --without-erlang --without-perl --without-php --without-php_extension --without-ruby --without-haskell  --without-go
+make
+make install
+（2）安装yum库
+yum install boost-devel-static libboost-dev libboost-test-dev libboost-program-options-dev libevent-dev automake libtool flex bison pkg-config g++ libssl-dev ant
+（3）安装python依赖的thrift模块
+pip install thrift==0.9.3
+（4）定义thrift接口
+cat RecSys.thrift
+service RecSys {
+    string rec_data(1:string data)
+}
+（5）针对接口：产出相对应的语言模块
+   thrift  -gen py RecSys.thrift 
+（6）开发client.py
+ cat client.py 
+#coding=utf=8
+
+import sys
+sys.path.append('../schema/gen-py')
+
+from thrift import Thrift
+from thrift.transport import TSocket
+from thrift.transport import TTransport
+from thrift.protocol import TBinaryProtocol
+
+from RecSys import RecSys
+
+
+try:
+    # 设置端口
+    transport = TSocket.TSocket('localhost', port=9090)
+
+    # 设置传输层
+    transport = TTransport.TBufferedTransport(transport)
+
+    # 设置传输协议
+    protocol = TBinaryProtocol.TBinaryProtocol(transport)
+
+    client = RecSys.Client(protocol)
+
+    transport.open()
+
+    rst = client.rec_data("are you ok!!!")
+    print "receive return data: ", rst
+
+    transport.close()
+
+except Thrift.TException, ex:
+    print "%s" % (ex.message)
+（7）开发server.py
+]# cat server.py 
+#coding=utf=8
+
+import sys
+sys.path.append('../schema/gen-py')
+
+from thrift.transport import TSocket
+from thrift.transport import TTransport
+from thrift.protocol import TBinaryProtocol
+from thrift.server import TServer
+
+from RecSys import RecSys
+from RecSys.ttypes import *
+
+class RecSysHandler(RecSys.Iface):
+    def rec_data(self, a):
+        print "Receive: %s" %(a)
+        return "I'm OK !!!"
+
+
+if __name__ == "__main__":
+
+    # 实例化handler
+    handler = RecSysHandler()
+
+    # 设置processor
+    processor = RecSys.Processor(handler)
+
+    # 设置端口
+    transport = TSocket.TServerSocket('localhost', port=9090)
+
+    # 设置传输层
+    tfactory = TTransport.TBufferedTransportFactory()
+
+    # 设置传输协议
+    pfactory = TBinaryProtocol.TBinaryProtocolFactory()
+
+    server = TServer.TThreadedServer(processor, transport, tfactory, pfactory)
+
+    print 'Starting the server...'
+    server.serve()
+    print 'done.'
 
 
 
 
+   python server.py
+   python client.py
+   python client.py
+   python client.py
 
+任务2.调通c++版网络交互，打通client与server之间的交互
+任务3.多语言互通
+（1）针对thrift schema文件，产生c++代码
+  thrift  -gen cpp RecSys.thrift 
+        进入gen-cpp目录，编译代码，生成server可执行文件
+ g++ *.cpp -lthrift -o server 
+        修改一下代码，完成数据的交互：
+ 23   void rec_data(std::string& _return, const std::string& data) {
+ 24     // Your implementation goes here
+ 25     // printf("rec_data\n");
+ 26       std::cout<< "Receive data:" << data << std::endl;
+ 27       _return = "I'm OK !!!";
+ 28   }
+    启动python client.py 与c++的server进行交互 
+
+g++ -I/usr/local/include/thrift/ Client.cpp RecSys.cpp  -lthrift -o client
+
+任务4.搭建nginx服务器（分发器）
+（1）安装nginx
+下载nginx：http://nginx.org/en/download.html
+./configure --prefix=/usr/local/nginx
+make
+make install
+（2）安装依赖包，pcre-devel zlib-devel
+yum install pcre-devel zlib-devel
+（3）启动nginx
+在/usr/local/nginx 执行 ./sbin/nginx
+netstat -antup |grep 80
+通过页面查看服务是否正常启动
+http://192.168.226.10/
+（4）开启Nginx的反向代理功能（负责分发请求，中间代理商）
+
+在/usr/local/nginx/conf目录下，修改nginx.conf
+添加如下的配置
+48         location ~ /badou_recsys$ {
+ 49             fastcgi_pass 127.0.0.1:8099;
+ 50             include fastcgi_params;
+ 51         }
+
+
+
+任务5.基于cgi完成独立server(公共网关协议，bin文件)
+（1）安装spawn-cgi
+  wget https://github.com/lighttpd/spawn-fcgi/archive/spawn-fcgi-1.6.4.tar.gz
+  安装spwan-cgi
+./autogen.sh
+./configure
+make
+make install
+
+（2）将自主研发的test代码，托管给spawn-cgi
+编译得到test的bin文件
+g++ test.cpp -lfcgi -o test
+正式托管：
+/usr/local/nginx/sbin/spawn-fcgi -a 127.0.0.1 -p 8099 -f /root/codes/logserver_test/cgi_demo/test 
+
+
+
+任务6.在服务server上，启动log服务，写入用户行为数据，方便数据挖掘、模型
+（1）安装glog工具
+   git clone  https://github.com/google/glog.git
+ ./autogen.sh
+./configure
+make
+make install
+（2）编译代码
+g++ client.cpp -lfcgi -lglog -o client
+（3）将自主研发的client代码，托管给cgi
+/usr/local/nginx/sbin/spawn-fcgi -a 127.0.0.1 -p 8099 -f /root/codes/logserver_test/cgi_demo/client
+
+任务7.将thrift和cgi进行联合打通，完成日志服务器
+（1）开发一个thrift、cgi、glog都涵盖的client
+g++ -I/usr/local/include/thrift/ client.cpp RecSys.cpp  -lthrift -lfcgi -lglog -o client
+
+（2）启动server
+（3）然后启动托管的client进程
+/usr/local/nginx/sbin/spawn-fcgi -a 127.0.0.1 -p 8099 -f /root/codes/logserver_test/schema/gen-cpp/client
+
+（4）观测glog日志滚动以及server的终端反馈
+（5）编译维护，开发Makefile
+
+任务8.性能测试，压测，产生更多的用户行为数据，完成数据模拟
+
+（1）压测工具
+安装ab压测命令
+yum -y install httpd-tools
+（2）工具的使用
+ab -c 20 -n 5000 "http://192.168.226.10/badou_recsys?userid=123&itemid=456&action=click"
+（3）python c++ 性能对比
+
+（1）对c++的server进行压测
+ab -c 20 -n 5000 "http://192.168.226.10/badou_recsys?userid=123&itemid=456&action=click"
+（2）对python压测
+python main.py 9988
+ab -c 20 -n 500 "http://192.168.226.10:9988/?userid=zhangsan"
+cat request.py
+
+import os
+import sys
+import random
+
+
+base_url='http://192.168.226.10/badou_recsys?'
+
+action_type_list = ['show', 'click', 'collect', 'pay']
+ip_addr_list = ['10.1.1.3', '10.5.2.76', '10.1.2.90', '10.0.2.188', '10.10.1.19']
+
+url_list = []
+for i in range(1000):
+    userid = "userid=" + str(int(random.random() * 50))
+    itemid = "itemid=" + str(random.randint(30001, 30050))
+    action_type = "type=" + random.sample(action_type_list, 1)[0]
+    ip = "ip=" + random.sample(ip_addr_list, 1)[0]
+
+    url = "\"" + base_url +'&'.join([userid, itemid, action_type, ip]) + "\""
+    url_list.append(url)
+
+
+for i in url_list:
+    #os.system('ab -c 20 -n5000 ' + url)
+    os.system('curl ' + i)
+
+
+（3）模拟真实请求场景，目的获取丰富的多样性的日志，有助于后续流程
+任务9.利用flume，进行实时流的打通
+任务10.非结构化数据转成结构化数据，利用flume内部的转换，讲数据入库到hbase
+（1）先启动server
+（2）托管client，验证服务
+（3）启动flume
+./bin/flume-ng agent --conf conf --conf-file ./conf/logserver_flume_hbase/flume-server.properties  --name a1 -Dflume.root.logger=INFO,console
+./bin/flume-ng agent --conf conf --conf-file ./conf/logserver_flume_hbase/flume-client.properties --name a1 -Dflume.root.logger=INFO,console
+（4）查看hbase
+
+
+下周计划
+LR + gbdt +RF +lightgbm
+
+
+flink + es
+
+
+=============================
+集成学习
+1.bagging 和boosting 区别 
+bagging  - rf
+boosting  - adaboost、gbdt
+（1）样本选择上：bagging采取随机有放回的采样；boosting每一轮的样本是固定，只是改变样本的权重
+（2）样本权重上：bagging均匀的，boosting根据错误率调整
+（3）基分类器权重：bagging是一致，boosting不一样，误差小的基分类器的权重大
+（4）并行计算：bagging特别容易并行，boosting不容易，每个基分类器必须按照顺序迭代生成
+
+2.偏差和方差
+偏差：不同次采样时学习器预测均值和真实值之间的差距
+方差：不同次采样时学习器预测值之间的差距
+每个点是学习器预测值
+	
+3.xgboost和gbdt区别
+
+
+
+下周计划：
+xgboost 以及 lightgbm 原理，以及代码
+
+dnn
+cnn rnn
+MF，LR
+flink es
+
+
+-----------------------
+dnn
+1.获得模型
+python dump_model.py model/epoch_10_batch_id_20_acc_0.811.chkpt
+
+2.用模型来预测
+cat ./data/a8a |python predictor.py >a.txt 
+
+
+3.评估效果
+ cat a.txt | sort -t$' ' -k2g |awk -F' ' '($1==0){++x;a+=y;}($1==1){++y;}END{print 1.0-a/(x*y);}'  
+
+--------------------------------------------------
+BP
+MF
+向量 bm25
+
+
+向量+评论情感分析+关键词提取
+
+cnn rnn
+
+flink es
+
+
+l(f(x),y) = - [0*logf1(x) + 1*log(f2(x)) + 0 *log(f3(x))]
+
+偏导   
+
+--------------------------------
+CNN
+x size:  torch.Size([64, 1, 28, 28])
+conv1 size:  torch.Size([64, 20, 24, 24])
+pool size:  torch.Size([64, 20, 12, 12])
+conv2 size:  torch.Size([64, 50, 8, 8])
+pool size:  torch.Size([64, 50, 4, 4])
+view size:  torch.Size([64, 800])
+fc1 size:  torch.Size([64, 500])
+fc2 size:  torch.Size([64, 10])
+
+
+
+input  torch.Size([19, 32])
+emb  torch.Size([19, 32, 100])
+output  torch.Size([19, 32, 100])
+2
+output size:  torch.Size([19, 32, 100])
+decoded before size:  torch.Size([608, 100])
+decoded after size:  torch.Size([608, 316])
+#decoded after size:  torch.Size([608, 50000])
+
+
+一条样本
+特征：anarchism originated as a term of abuse first used against early
+label：originated as a term of abuse first used against early
+
+
+
+
+label  prediction
+0        0.09
+1        0.91
+1        0.45
+0        0.55
+
+
+阈值0.5,0.4
+实际 预测1  预测2
+0     0   0
+1     1   1
+1     0   1
+0     1   1
+
+
+0.001,0.002
+      
+
+auc的物理意义：正样本排在负样本前面的概率
+
+1.计算公式
+M个正样本，N个负样本，
+分母，总共有多少种排列方式（认为正样本都一样，负样本也都一样）
+从M个正样本中随机选出1个，从N个负样本中随机选出1个，看正样本排在负样本前面的概率
+即正样本的预测值大于负样本的预测值的概率。
+
+分母：总共有多少种，M * N
+分子：正样本的预测值大于负样本的预测值的数量
+
+按照预测值score从大到小排序，所有样本都有一个排序号，让score最大的样本的排序号为M+N
+
+预测值    label   rank
+score1    1         M+N
+score2    0         M+N-1
+score3    1         M+N-2
+score4    1         M+N-3
+....
+scoreM+N 0     1
+ 
+查数，sum（所有正样本）rank（i）-(M +M-1 +M-2+....+1 )
+
+
+2.给一个样本的实际label，以及模型预测出来的概率，计算出auc
+ cat a.txt | sort -t$' ' -k2g |awk -F' ' '($1==0){++x;a+=y;}($1==1){++y;}END{print 1.0-a/(x*y);}'  
+
+从小到大排序，x是负样本的数量，y是正样本的数量，a是每个负样本前面有多少个正样本，累计求和。
+最终auc=1 - a/(x*y)
+
+
+
+label  是否发单
+特征 里程数
+实际里程数  离散化值 后验的统计发单率   模型的权重
+1-2    1   
+2-3    2
+3-4    3
+
+
+
+input_labels size:  torch.Size([128])
+pos_labels size:  torch.Size([128, 6])
+neg_labels size:  torch.Size([128, 600])
+
+input_embedding size: torch.Size([128, 100])
+pos_embedding size: torch.Size([128, 6, 100])
+neg_embedding size: torch.Size([128, 600, 100])
+
+log_pos size: torch.Size([128, 6])
+log_neg size: torch.Size([128, 600])
+
+[128, 6, 100]
+[128, 100, 1]
+6 x 1
+
+[128, 6]
+
+log_pos size: torch.Size([128])
+log_neg size: torch.Size([128])
+loss size: torch.Size([128])
+
+
+----------------------------------------------
+flink
+
+flink-1.6.1-bin-hadoop26-scala_2.11.gz
+conf/flink-conf.yaml
+jobmanager.rpc.address: master
+
+slave
+slave1
+slave2
+
+scp -r flink-1.6.1 root@slave1:/usr/local/src
+scp -r flink-1.6.1 root@slave2:/usr/local/src
+
+./bin/start-cluster.sh 
+
+
+<dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-core</artifactId>
+            <version>1.6.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-clients_2.11</artifactId>
+            <version>1.6.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-streaming-scala_2.11</artifactId>
+            <version>1.6.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+            <version>2.11.4</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-compiler</artifactId>
+            <version>2.11.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-reflect</artifactId>
+            <version>2.11.4</version>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.12</version>
+        </dependency>
+
+
+
+
+6
+1000000 a
+1001000 a
+1002000 a
+1004000 a
+1005000 a
+1003000 a
+1003500 a
+1007000 a
+1008000 a
+1009000 a
+1010000 a
+
+
+window=5  watermark=2
+1001000 a         
+1002000 a
+1003000 a
+1005000 a
+1006000 a
+1004000 a
+1007000 a
 
 
 
