@@ -22,7 +22,7 @@ import java.nio.file.Paths;
 public class FileController {
 
     // 文件保存路径  主要需要自己先建立对应upload文件夹路径
-    private final static String FILE_UPLOAD_PATH = "/Users/youxuehu/SDK/upload/";
+    private final static String FILE_UPLOAD_PATH = "/tmp/";
 
     @Autowired
     private HDFS2Utils hdfs2Utils;
@@ -50,13 +50,13 @@ public class FileController {
 //        tempName.append(sdf.format(new Date())).append(r.nextInt(100)).append(suffixName);
 //        String newFileName = tempName.toString();
         // 保存文件
-        String hdfsPath = FILE_UPLOAD_PATH + fileName;
-        Path path = Paths.get(hdfsPath);
+//        String hdfsPath = FILE_UPLOAD_PATH + fileName;
+//        Path path = Paths.get(hdfsPath);
         try {
-            byte[] bytes = file.getBytes();
-            hdfs2Utils.delete(hdfsPath);
-            Files.write(path, bytes);
-            hdfs2Utils.uploadFIle(path.toAbsolutePath().toString(), "/");
+//            byte[] bytes = file.getBytes();
+//            hdfs2Utils.delete(hdfsPath);
+//            Files.write(path, bytes);
+            hdfs2Utils.uploadFIle(file.getInputStream(), fileName);
             res.put("success","true");
             res.put("data", "上传成功");
             return res;
@@ -66,11 +66,11 @@ public class FileController {
             res.put("data", "上传失败");
             return res;
         } finally {
-            try {
-                Files.deleteIfExists(path);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+//            try {
+//                Files.deleteIfExists(path);
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
         }
     }
 
@@ -79,7 +79,7 @@ public class FileController {
     public List<String> fetchFileDirs() {
         try {
             List<String> list = new ArrayList<>();
-            hdfs2Utils.fetchFiles("/", list);
+//            hdfs2Utils.fetchFiles("/", list);
             return list;
         } catch (Exception e) {
             e.printStackTrace();
@@ -89,9 +89,9 @@ public class FileController {
 
     @RequestMapping("/listDir")
     @ResponseBody
-    public List<String> listDir(@RequestParam(value = "path", required = true) String path) {
+    public List<HDFS2Utils.FileInfo> listDir(@RequestParam(value = "path", required = true) String path) {
         try {
-            List<String> list = new ArrayList<>();
+            List<HDFS2Utils.FileInfo> list = new ArrayList<>();
             hdfs2Utils.fetchFiles(path, list);
             return list;
         } catch (Exception e) {

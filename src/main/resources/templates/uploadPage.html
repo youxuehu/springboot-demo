@@ -17,10 +17,10 @@
             text-align: left;
             border: 1px solid #ccc;
         }
-        th {
-            background: #eee;
-            font-weight: normal;
-        }
+        /*th {*/
+        /*    background: #eee;*/
+        /*    font-weight: normal;*/
+        /*}*/
         tbody,tr {
             background: #fff;
         }
@@ -37,18 +37,19 @@
             <h1><input type="file" name="file" id="file" value="" placeholder="请选择"></h1>
         </div>
         <div class="row"  style="margin-top: 50px;">
-            <input type="button" id="uploadButton" value="上传文件" οnclick="postData();" style="width:100px;height:100px;">
+            <input type="button" id="uploadButton" value="上传文件" style="width:100px;height:50px;background-color: #00b3ee">
         </div>
         <div id="progressNumber"></div>
     </form>
-    <p id="uploadMessage"></p>
+    <h1 id="uploadMessage" style="color: red">111</h1>
     <br/><br/><br/><br/>
-    <button name="btn" value="查看目录">查看目录</button>
+    <button name="btn" id="seeDir" value="查看目录">查看目录</button>
     <br/>
     <table border="1">
         <thead>
             <th>
-                <td>路径</td>
+                <td>name</td>
+                <td>path</td>
             </th>
         </thead>
         <tbody id="tb">
@@ -57,32 +58,36 @@
     </table>
 
 </body>
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
 <script>
     $(function(){
-        var path = "/";
-        $("button").click(function(){
+        const path = "/";
+        $("#seeDir").click(function(){
             $.post("/file/listDir",{path:path},function(data,status){
                 data.forEach(item => {
                     console.log(item);
                     $("#tb").append("<tr>\n" +
-                                        "<td>"+item+"</td>\n" +
+                                        "<td>"+item.name+"</td>\n" +
+                                        "<td>"+item.path+"</td>\n" +
                                     "</tr>")
                 })
 
             });
         });
-
         $("#uploadButton").click(function () {
-            var fileInput = $("#file")[0].files[0];
-            console.info(fileInput['name']);
-            if(fileInput['name'] === ""){
-                $("#uploadMessage").innerText = "请选择文件！！";
-            }else{
-                var formData = new FormData()
+            // 判断文件是否为空
+            const fileInput = $('#file').get(0).files[0];
+            console.log('fileInput=' + fileInput)
+            if(fileInput){
+                const formData = new FormData()
                 formData.append("file", $("#file")[0].files[0]);
+                console.log('formData=' + formData)
                 if (formData == {}) {
-                    $("#uploadMessage").innerText = "请选择文件！！";
+                    alert("请选择文件！！")
+                    $("#uploadMessage").text("请选择文件！！");
                 }
                 $.ajax({
                     url: '/file/uploadToHdfs',
@@ -91,20 +96,22 @@
                     contentType: false,
                     processData: false,
                     success: function (res) {
+                        console.log('info: ' + res.toString());
                         if (res["success"] == "true") {
-                            // alert('成功');
-                            $("#uploadMessage").innerText = res['data'];
+                            alert('成功' + res['data']);
+                            $("#uploadMessage").text(res['data']);
                         } else if (res["success"] == "false") {
-                            // alert('失败');
-                            $("#uploadMessage").innerText = res['data'];
+                            alert('失败' + res['data']);
+                            $("#uploadMessage").text(res['data']);
                         } else {
                             console.log(res);
                         }
                     }
                 });
-
+            }else{
+                alert("请选择文件！！")
+                $("#uploadMessage").text("请选择文件！！");
             }
-
         })
     });
 </script>

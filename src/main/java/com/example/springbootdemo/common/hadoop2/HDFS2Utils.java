@@ -1,5 +1,8 @@
 package com.example.springbootdemo.common.hadoop2;
 
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.*;
@@ -114,16 +117,26 @@ public class HDFS2Utils implements ApplicationRunner {
      * @param files
      * @throws Exception
      */
-    public void fetchFiles(String path, List<String> files) throws Exception {
+    public void fetchFiles(String path, List<FileInfo> files) throws Exception {
         FileSystem fs = FileSystem.get(configuration);
         FileStatus[] fileStatuses = fs.listStatus(new Path(path));
         for (FileStatus status : fileStatuses) {
-            System.out.println(status.getPath().toString());
-            files.add(status.getPath().toString());
+//            System.out.println(status.getPath().toString());
+            FileInfo fileInfo = new FileInfo();
+            fileInfo.setName(status.getOwner());
+            fileInfo.setPath(status.getPath().toString());
+            files.add(fileInfo);
             if (fs.isDirectory(new Path(status.getPath().toString()))) {
-                fetchFileDirs(status.getPath().toString(), files);
+                fetchFiles(status.getPath().toString(), files);
             }
         }
+    }
+
+    @Data@Setter@Getter
+    public static class FileInfo {
+        private String name;
+        private String path;
+
     }
 
     /**
