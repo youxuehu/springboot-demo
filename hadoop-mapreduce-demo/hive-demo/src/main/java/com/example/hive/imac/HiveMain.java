@@ -1,9 +1,6 @@
 package com.example.hive.imac;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 /**
  *
@@ -58,6 +55,12 @@ public class HiveMain {
             getConnect();
             stmt.execute("create database if not exists hive_2020");
             System.out.println("Database userdb created successfully.");
+            System.out.println("show databases");
+            ResultSet databases = stmt.executeQuery("show databases");
+            while (databases.next()) {
+                String databaseName = databases.getString("database_name");
+                System.out.println(databaseName);
+            }
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -71,16 +74,19 @@ public class HiveMain {
         }
     }
     public static void main(String[] args) throws Exception {
-//        createDatabase();
-//        createTable();
-        insertTable();
+        createDatabase();
+        createTable();
+        for (int i = 2; i <= 10; i++) {
+            insertTable(i, "tom"+i);
+        }
+
     }
 
-    private static void insertTable() {
+    private static void insertTable(int id, String name) {
         try {
             getConnect();
-            stmt.execute("insert into table student values (33,'杰克2')");
-            System.out.println("insert table success");
+            stmt.execute(String.format("insert into table userinfo values (%d,'%s')", id, name));
+            System.out.println(String.format("insert table success."));
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -98,12 +104,17 @@ public class HiveMain {
         try {
             getConnect();
             stmt.execute(
-                    "create table if not exists student(\n" +
+                    "create table if not exists userinfo(\n" +
                     "    id int,\n" +
                     "    name string\n" +
-                    ") row format delimited fields terminated by ',' stored as textfile\n" +
-                    "location 'hdfs://master:9000/hive/warehouse/student'");
+                    ") row format delimited fields terminated by ',' stored as textfile\n");
             System.out.println("hive create table success");
+            System.out.println("show tables");
+            ResultSet tables = stmt.executeQuery("show tables");
+            while (tables.next()) {
+                String tabName = tables.getString("tab_name");
+                System.out.println(tabName);
+            }
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
