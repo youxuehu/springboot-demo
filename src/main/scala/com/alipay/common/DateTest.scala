@@ -9,6 +9,6 @@ class DateTest {
 
 object DateTest {
   def main(args: Array[String]): Unit = {
-    println(new SimpleDateFormat("yyyyMMddHHmmss").format(new Date()))
+    println(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss SSS").format(new Date()))
   }
 }

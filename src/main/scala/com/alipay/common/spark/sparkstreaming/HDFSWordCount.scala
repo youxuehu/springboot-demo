@@ -15,7 +15,7 @@ object HDFSWordCount {
   def main(args: Array[String]): Unit = {
     val conf = new SparkConf().setMaster("local[2]").setAppName("HDFSWordCount")
     val sc = new SparkContext(conf)
-    val ssc = new StreamingContext(sc,Seconds(2))
+    val ssc = new StreamingContext(sc,Seconds(10))
     /**
      * 数据的输入
      */

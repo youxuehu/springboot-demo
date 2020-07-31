@@ -31,7 +31,7 @@ object SparkOnHiveOps extends App{
    */
   //在hive中创建相应的表
   hiveContext.sql("DROP TABLE IF EXISTS teacher_basic")
-  hiveContext.sql("CREATE TABLE teacher_basic(" +
+  hiveContext.sql("CREATE TABLE if not exists teacher_basic(" +
     "name string, " +
     "age int, " +
     "married boolean, " +
