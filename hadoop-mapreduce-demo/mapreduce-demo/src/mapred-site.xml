@@ -18,13 +18,13 @@
 <configuration>
     <!-- 通知框架MR使用YARN -->
     <property>
-       <name>mapreduce.framework.name</name>
-       <value>yarn</value>
+        <name>mapreduce.framework.name</name>
+        <value>yarn</value>
     </property>
     <property>
         <!-- 指定resoucemanager 服务的地址 -->
         <name>yarn.resourcemanager.address</name>
-        <value>master:8032</value>
+        <value>leader:8032</value>
     </property>
     <property>
         <!-- 开启mapreduce的跨平台提交 -->
@@ -34,6 +34,6 @@
     <property>
         <!-- 指定jobhistory  服务的地址 -->
         <name>mapreduce.jobhistory.address</name>
-        <value>master:10020</value>
+        <value>leader:10020</value>
     </property>
 </configuration>
