@@ -19,11 +19,11 @@
     <!-- 指定HDFS老大（namenode）的通信地址 -->
     <property>
         <name>fs.defaultFS</name>
-        <value>hdfs://leader:9000</value>
+        <value>hdfs://localhost:9000</value>
     </property>
     <!-- 指定hadoop运行时产生文件的存储路径 -->
     <property>
         <name>hadoop.tmp.dir</name>
-        <value>/usr/local/src/hadoop-2.6.5/tmp</value>
+        <value>/Users/youxuehu/SDK/bigdata/hadoop-2.6.5/tmp</value>
     </property>
 </configuration>

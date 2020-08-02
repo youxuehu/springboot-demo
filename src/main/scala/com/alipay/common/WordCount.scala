@@ -7,27 +7,36 @@ class  WordCount{
 
 }
 
+// spark-submit --class org.apache.spark.examples.SparkPi --master local examples/jars/spark-examples_2.11-2.0.2.jar
+// spark-submit --class org.apache.spark.examples.SparkPi --master spark://localhost:7077 examples/jars/spark-examples_2.11-2.0.2.jar
+// spark-submit --class org.apache.spark.examples.SparkPi --master yarn-cluster examples/jars/spark-examples_2.11-2.0.2.jar
+// spark-submit --class org.apache.spark.examples.SparkPi --master yarn-client examples/jars/spark-examples_2.11-2.0.2.jar
 /**
  * 统计 word count
  */
 object WordCount {
   def main(args: Array[String]): Unit = {
     val conf = new SparkConf()
-    conf.setMaster("local[2]")
+    conf.setMaster("local")
     conf.setAppName("wordcount")
     val sc = new SparkContext(conf)
-    val rdd = sc.textFile("hdfs://leader:9000/wordcount.txt")
+    val rdd = sc.textFile("hdfs://localhost:9000/The_Man_of_Property.txt")
     val newRdd = rdd.repartition(1)
+    // 计算文章中单词出现的个数，并按照个数倒叙排序, 截取前10条数据
     val data = newRdd.flatMap(_.split(" "))
-      .map((_,1)).reduceByKey(_+_).map{x =>
-      x._1 + "\t" + x._2
-    }
+      .map((_,1)) // map  输出
+      .reduceByKey(_+_) // reduce计算
+      .sortBy(_._2,false) // sort排序
+      .take(10) // 取前10行
+      .map{x =>
+            x._1 + "\t" + x._2
+          }
     /**
      * hadoop
      */
     val hadoopConf = sc.hadoopConfiguration
     val hdfs = org.apache.hadoop.fs.FileSystem.get(hadoopConf)
-    val filePath = "hdfs://leader:9000/wordcount_output2"
+    val filePath = "hdfs://localhost:9000/tmp/wordcount"
     val path = new Path(filePath);
     if(hdfs.exists(path)){
       /**
@@ -35,7 +44,9 @@ object WordCount {
        */
       hdfs.delete(path)
     }
-    data.saveAsTextFile("hdfs://leader:9000/wordcount_output2")
     data.foreach(println)
+    // 将list转换成rdd
+    val new_data = sc.parallelize(data)
+    new_data.saveAsTextFile(filePath)
   }
 }
