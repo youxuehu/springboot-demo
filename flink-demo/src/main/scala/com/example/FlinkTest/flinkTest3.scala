@@ -15,9 +15,7 @@ object flinkTest3 {
 
     // method 3: seq
     val stream = env.generateSequence(1, 10)
-
     stream.print()
-
     env.execute("FlinkTestJob")
   }
 }
