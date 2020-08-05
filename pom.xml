@@ -26,6 +26,13 @@
     </properties>
 
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/com.mapr.hadoop/maprfs -->
+        <dependency>
+            <groupId>com.mapr.hadoop</groupId>
+            <artifactId>maprfs</artifactId>
+            <version>5.2.0-mapr</version>
+        </dependency>
+
         <!--H2 内存数据库-->
         <!-- 内存数据库h2-->
 <!--        <dependency>
