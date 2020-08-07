@@ -19,9 +19,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.InputStream;
-import java.net.URI;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 
 public class HttpUtils {
 
@@ -92,10 +93,58 @@ public class HttpUtils {
 
 
     public static void main(String[] args) {
-        try {
-            doGet("https://www.baidu.com");
-        } catch (Exception e) {
-            e.printStackTrace();
+        List<String> uris = Arrays.asList(
+                "http://localhost/model",
+                "http://localhost/get",
+                "http://localhost/k8s",
+                "http://localhost/hello",
+                "http://localhost"
+        );
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while (true) {
+                    try {
+                        int number = new Random().nextInt(uris.size() -1);
+                        System.out.println("number = " + number);
+                        doGet(uris.get(number));
+                        Thread.sleep(200);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }).start();
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while (true) {
+                    try {
+                        int number = new Random().nextInt(uris.size() -1) + 1;
+                        System.out.println("number = " + number);
+                        doGet(uris.get(number));
+                        Thread.sleep(100);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }).start();
+    }
+
+    static class NginxTask implements Runnable {
+
+        @Override
+        public void run() {
+            while (true) {
+                try {
+                    doGet("http://localhost");
+                    Thread.sleep(200);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 }
