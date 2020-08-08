@@ -1,0 +1,226 @@
+====================================安装开始====================================================================
+1、配置hadoop的环境变量
+2、解压sqoop的tar包：
+	[root@hadoop06 usr]# tar -zxvf sqoop-1.4.6.bin__hadoop-2.0.4-alpha.tar.gz
+3、将解压后的文件夹重命名
+	[root@hadoop06 usr]# mv ./sqoop-1.4.6.bin__hadoop-2.0.4-alpha ./sqoop-1.4.6
+4、配置sqoop的环境变量：（在~/.bashrc文件中配置）
+	[root@hadoop06 sqoop-1.4.6]# vi ~/.bashrc
+		CLASSPATH=.
+		JAVA_HOME=/usr/java/latest
+		HADOOP_HOME=/usr/hadoop-2.4.0
+		SQOOP_HOME=/usr/sqoop-1.4.6
+		PATH=$JAVA_HOME/bin:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$SQOOP_HOME/bin:$PATH
+		export JAVA_HOME
+		export HADOOP_HOME
+		export SQOOP_HOME
+		export PATH
+		export CLASSPATH
+	[root@hadoop06 sqoop-1.4.6]# source ~/.bashrc
+	[root@hadoop06 sqoop-1.4.6]# echo $SQOOP_HOME
+		/usr/sqoop-1.4.6
+5、在sqoop的conf目录中，修改sqoop_env.sh文件
+	[root@hadoop06 conf]# cp ./sqoop-env-template.sh ./sqoop-env.sh
+	[root@hadoop06 conf]# vi ./sqoop-env.sh
+		# Set Hadoop-specific environment variables here.
+		#Set path to where bin/hadoop is available
+		export HADOOP_COMMON_HOME=/usr/hadoop-2.4.0
+		#Set path to where hadoop-*-core.jar is available
+		export HADOOP_MAPRED_HOME=/usr/hadoop-2.4.0
+		#set the path to where bin/hbase is available
+		#export HBASE_HOME=/usr/hbase-1.2.4
+		#Set the path to where bin/hive is available
+		#export HIVE_HOME=/usr/hive-2.1.1
+		#Set the path for where zookeper config dir is
+		#export ZOOCFGDIR=/usr/zookeeper-3.4.8/conf
+
+		以上配置文件中使用的目录路径，也可以用~/.bashrc文件中定义的变量代理 ${HADOOP_HOME}
+6、检测sqoop是否启动安装成功
+	[root@hadoop06 sqoop-1.4.6]# ./bin/sqoop help
+
+	Warning: /usr/sqoop-1.4.6/../hcatalog does not exist! HCatalog jobs will fail.
+	Please set $HCAT_HOME to the root of your HCatalog installation.
+	Warning: /usr/sqoop-1.4.6/../accumulo does not exist! Accumulo imports will fail.
+	Please set $ACCUMULO_HOME to the root of your Accumulo installation.
+	17/03/04 02:07:13 INFO sqoop.Sqoop: Running Sqoop version: 1.4.6
+	usage: sqoop COMMAND [ARGS]
+
+	Available commands:
+	  codegen            Generate code to interact with database records
+	  create-hive-table  Import a table definition into Hive
+	  eval               Evaluate a SQL statement and display the results
+	  export             Export an HDFS directory to a database table
+	  help               List available commands
+	  import             Import a table from a database to HDFS
+	  import-all-tables  Import tables from a database to HDFS
+	  import-mainframe   Import datasets from a mainframe server to HDFS
+	  job                Work with saved jobs
+	  list-databases     List available databases on a server
+	  list-tables        List available tables in a database
+	  merge              Merge results of incremental imports
+	  metastore          Run a standalone Sqoop metastore
+	  version            Display version information
+
+	See 'sqoop help COMMAND' for information on a specific command
+
+===============================================安装结束=======================================================
+===============================================import export开始==========================================================
+sqoop连接mysql和hdfs
+	1、将mysql的驱动包拷贝到sqoop的lib目录下(mysql驱动包必须是5.1.32以上)
+	2、执行以下指令
+		1、显示帮助信息：
+			[root@hadoop06 sqoop-1.4.6]# ./bin/sqoop help
+			[root@hadoop06 sqoop-1.4.6]# ./bin/sqoop list-tables --help
+		1、显示mysql数据库中所有的库
+		[root@hadoop06 sqoop-1.4.6]# ./bin/sqoop list-databases --connect jdbc:mysql://192.168.46.141:3306/ --username root
+			17/03/04 02:25:08 INFO sqoop.Sqoop: Running Sqoop version: 1.4.6
+			17/03/04 02:25:08 WARN tool.BaseSqoopTool: Setting your password on the command-line is insecure. Consider using -P instead.
+			17/03/04 02:25:09 INFO manager.MySQLManager: Preparing to use a MySQL streaming resultset.
+			information_schema
+			ample_pay
+			edu_simple_pay
+			hive
+			hive122
+			mysql
+			performance_schema
+			test
+		2、显示特定数据库中的所有表
+			[root@hadoop06 sqoop-1.4.6]# ./bin/sqoop list-tables --connect jdbc:mysql://192.168.46.141:3306/tiger --username root --password root
+		3、将tiger库中的某个表中的数据导入到hdfs中
+[root@hadoop06 sqoop-1.4.6]# 将userinfos表中特定的列对应的数据以text形式导入到hdfs中指定的目录下。用一个map任务（默认4个）
+./bin/sqoop import --connect jdbc:mysql://192.168.46.141:3306/tiger --username root --password -m 1 --table userinfos  --columns id,username,password,email,mobile --delete-target-dir --target-dir /sqoop/tiger/userinfos  --as-textfile
+
+[root@hadoop06 sqoop-1.4.6]# 将userinfos表中所有列的数据以text形式导入到hdfs中指定的/sqoop/tiger目录下。导出的时候使用1个map任务
+./bin/sqoop import --connect jdbc:mysql://192.168.46.141:3306/tiger --username root -m 1 --table userinfos --delete-target-dir --warehouse-dir /sqoop/tiger --as-textfile
+
+[root@hadoop06 sqoop-1.4.6]# 将userinfos表中所有列的数据以text形式导入到hdfs中指定的/sqoop/tiger目录下。导出的时候使用1个map任务(属性以|分割，行以换行符分割)
+./bin/sqoop import --connect jdbc:mysql://192.168.46.141:3306/tiger --username root --password root -m 1 --table userinfos --delete-target-dir --warehouse-dir /sqoop/tiger --as-textfile --fields-terminated-by '|' --lines-terminated-by '\n'
+
+
+[root@hadoop06 sqoop-1.4.6]# 将userinfos表中id<4的数据以text形式导入到hdfs中指定的/sqoop/tiger目录下
+./bin/sqoop import --connect jdbc:mysql://192.168.46.141:3306/tiger --username root --password root -m 1 --table userinfos  --warehouse-dir /sqoop/tiger --delete-target-dir --as-textfile --where "id <4"
+
+[root@hadoop06 sqoop-1.4.6]# 将query语句的查询结果 以text的形式导入到hdfs中指定的目录下(必须指定target-dir,where 条件后面必须有\$CONDITIONS)
+./bin/sqoop import --connect jdbc:mysql://192.168.46.141:3306/tiger --username root --password root -m 1  --query "select * from userinfos where id <6 and  \$CONDITIONS"  --target-dir /sqoop/tiger/userinfos --delete-target-dir --as-textfile
+
+[root@hadoop06 sqoop-1.4.6]# 将query语句的查询结果 以text的形式导入到hdfs中指定的目录下，以id进行分片(必须指定target-dir,where 条件后面必须有\$CONDITIONS)
+./bin/sqoop import --connect jdbc:mysql://192.168.46.141:3306/tiger --username root -m 1  --query "select * from userinfos where id <6 and  \$CONDITIONS"  --target-dir /sqoop/split --delete-target-dir --as-textfile --split-by 'id'
+
+
+[root@hadoop06 sqoop-1.4.6]# 将tiger库下面除了userinfos表以外的其他中表数据以sequence的形式存储在hdfs中
+./bin/sqoop import-all-tables --connect jdbc:mysql://192.168.46.141:3306/tiger --username root --password root -m 2 --exclude-tables userinfos --warehouse-dir /sqoop/tiger --as-sequencefile
+
+[root@hadoop06 sqoop-1.4.6]# 将tiger库下面的userinfos表中所有列的数据以text形式导入到hdfs中指定的/sqoop/tiger目录下，并进行压缩存储
+./bin/sqoop import --connect jdbc:mysql://192.168.46.141:3306/tiger --username root --password root -m 1 --table userinfos  --warehouse-dir /sqoop/tiger --as-textfile -z
+
+[root@hadoop06 sqoop-1.4.6]#增量导入  where crt_date>="2015-11-25 12:41:40",时间要比id=3大一点,不然会把前面3条导进去
+./bin/sqoop import --connect jdbc:mysql://node1/hive --username root --password 123456 --table a  -m 1 --target-dir /test/a_2 --check-column crt_date  --incremental lastmodified  --last-value "2015-11-25 12:41:40"
+./bin/sqoop import --connect jdbc:mysql://localhost:3306/test --username root --password 123456  --target-dir person-mysql -m 1 --table person --null-string "" --null-non-string "false" --check-column "id" --incremental append --last-value 5
+
+[root@hadoop06 sqoop-1.4.6]#  (表连接导入)
+.bin/sqoop import --connect jdbc:mysql://10.95.3.49:3306/workflow --username shirdrn -P --query 'SELECT users.*, tags.tag FROM users JOIN tags ON (users.id = tags.user_id) WHERE $CONDITIONS' --split-by users.id --target-dir /hive/tag_db/user_tags  -- --default-character-set=utf-8
+
+
+[root@hadoop06 sqoop-1.4.6]#  (连接mysql执行sql语句)
+./bin/sqoop eval --connect jdbc:mysql://192.168.46.141:3306/tiger --username root --password root -e 'select * from userinfos where id <4'
+./bin/sqoop eval --connect jdbc:mysql://192.168.46.141:3306/tiger --username root --password root -e "insert into userinfos (username,password) values ('aa','aa')"
+./bin/sqoop eval --connect jdbc:mysql://192.168.46.141:3306/tiger --username root --password root -e "delete from userinfos where id = 29"
+		4、将hdfs中的数据导出到mysql的某个表中
+[root@hadoop06 sqoop-1.4.6]# 将/sqoop/tiger/userinfos 目录下面的所有数据导入到userinfos_02表中，使用默认的4个map任务
+./bin/sqoop export --connect jdbc:mysql://192.168.0.28:3306/tiger --username root --password root --table userinfos_02 --export-dir /sqoop/tiger/userinfos
+
+[root@hadoop06 sqoop-1.4.6]# 将/sqoop/tiger/userinfos 目录下面的所有数据导入到userinfos_02表中，使用自定义分隔符
+./bin/sqoop export --connect jdbc:mysql://192.168.0.28:3306/tiger --username root --password root --table userinfos_02 --export-dir /sqoop/tiger/userinfos --fields-terminated-by '|' --lines-terminated-by '\n'
+
+
+
+
+
+生成表对应的实体类
+./bin/sqoop codegen --connect jdbc:mysql://127.0.0.1:3306/tiger --username root --password root --table userinfos -bindir /root
+
+
+./bin/sqoop import --connect jdbc:mysql://127.0.0.1:3306/tiger --username root --password root -m 1 --table userinfos --delete-target-dir --warehouse-dir /sqoop/tiger111 --as-textfile
+===============================================import export 结束==========================================================
+===============================================job 开始==========================================================
+sqoop的作业：
+	1、作业的含义：Job存在的目的，是对频繁使用不变化的导入导出工作做自动化处理，例如创建一个Job每天做增量导入，导入最新的数据，这样的任务就可以使用Job来进行
+	2、job的操作
+		--create <job-id>            Create a new saved job
+		--delete <job-id>            Delete a saved job
+		--exec <job-id>              Run a saved job
+		--help                       Print usage instructions
+		--list                       List saved jobs
+		--meta-connect <jdbc-uri>    Specify JDBC connect string for the
+						metastore
+		--show <job-id>              Show the parameters for a saved job
+		--verbose                    Print more information while working
+		语法：  ./bin/sqoop job job-command tool-command tool-args
+[root@hadoop06 sqoop-1.4.6]# 创建一个job
+./bin/sqoop job --create myjob01  -- import --connect jdbc:mysql://127.0.0.1:3306/tiger --username root --password root -m 1 --table userinfos --delete-target-dir --warehouse-dir /sqoop/tiger/myjob --as-textfile
+[root@hadoop06 sqoop-1.4.6]# 显示所有的job
+./bin/sqoop job --list
+[root@hadoop06 sqoop-1.4.6]# 显示指定job的信息  （要求输入meta的密码，直接回车就行）
+./bin/sqoop job --show myjob01
+[root@hadoop06 sqoop-1.4.6]# 执行指定的job  （要求输入数据库的密码）
+./bin/sqoop job --exec myjob01
+[root@hadoop06 sqoop-1.4.6]# 删除指定的job  （要求输入数据库的密码）
+./bin/sqoop job --delete myjob01
+
+
+
+./bin/sqoop job --create myjob02  -- import --connect jdbc:mysql://192.168.0.28:3306/tiger --username root --password root -m 1 --table userinfos --delete-target-dir --warehouse-dir /sqoop/tiger --as-textfile
+./bin/sqoop job --create myjob03  -- import --connect jdbc:mysql://192.168.0.28:3306/tiger --username root --password root -m 1 --table userinfos --delete-target-dir --warehouse-dir /sqoop/tiger --as-textfile
+
+===============================================job 结束==========================================================
+===============================================sqoop  mysql hbase 开始==========================================================
+sqoop 将mysql数据导入到hbase中。。。
+	[root@hadoop06 sqoop-1.4.6]#
+./bin/sqoop import --connect jdbc:mysql://192.168.0.28:3306/tiger --username root --password root -m 1 --table userinfos --hbase-table t_user --column-family info --hbase-row-key id --hbase-create-table
+
+如果抛异常：自己在hbase中手动建表，建簇
+./bin/sqoop import --connect jdbc:mysql://192.168.0.28:3306/tiger --username root --password root -m 1 --table userinfos --hbase-table t_user --column-family info --hbase-row-key id
+
+sqoop将hbases数据导出到mysql中
+	程序没实现，需要自己先将hbase中的数据存储到hdfs上。让从hdfs导出到mysql中
+===============================================sqoop  mysql hbase 结束==========================================================
+===============================================sqoop  mysql hive 开始==========================================================
+sqoop中mysql的数据导入到hive中
+	1、默认field分隔符为'\001',行分割符为'\n'
+
+./bin/sqoop import
+	--connect jdbc:mysql://192.168.0.28:3306/tiger
+	--username root
+	--password root
+	-m 1
+	--table userinfos
+	--hive-import
+	--fields-terminated-by '|'
+	--lines-terminated-by '\n'
+	--create-hive-table
+	--hive-database db1
+	--hive-overwrite
+	--hive-partition-key pt1
+	--hive-partition-value pt1_value
+./bin/sqoop import --connect jdbc:mysql://192.168.0.28:3306/tiger --username root --password root -m 1 --table userinfos --hive-import
+./bin/sqoop import --connect jdbc:mysql://192.168.0.28:3306/tiger --username root --password root -m 1 --table userinfos --hive-import --create-hive-table --hive-database db2 --hive-overwrite --hive-partition-key pt1 --hive-partition-value pt2_value
+./bin/sqoop import --connect jdbc:mysql://192.168.0.28:3306/tiger --username root --password root -m 1 --table userinfos --hive-import --create-hive-table --hive-database db1 --hive-overwrite --fields-terminated-by '|' --lines-terminated-by '\n'
+
+
+导出：
+./bin/sqoop export --connect jdbc:mysql://192.168.0.28:3306/tiger --username root --password root -m 1 --table userinfos_02 --export-dir /user/hive-2.1.1/warehouse/userinfos  --input-fields-terminated-by '\001' --input-lines-terminated-by '\n'
+./bin/sqoop export --connect jdbc:mysql://192.168.0.28:3306/tiger --username root --password root -m 1 --table userinfos_02 --export-dir /user/hive-2.1.1/warehouse/db1.db/userinfos  --input-fields-terminated-by '|' --input-lines-terminated-by '\n'
+./bin/sqoop export --connect jdbc:mysql://192.168.0.28:3306/tiger --username root --password root -m 1 --table userinfos_02 --export-dir /user/hive-2.1.1/warehouse/db2.db/userinfos/pt1=pt2_value --input-fields-terminated-by '\001' --input-lines-terminated-by '\n'
+
+===============================================sqoop  mysql hive 结束==========================================================
+===============================================sqoop  零碎==========================================================
+1、将关系型数据的表结构复制到hive中,只是复制表的结构，表中的内容没有复制过去
+	./bin/sqoop create-hive-table –connect jdbc:mysql://localhost:3306/test –table sqoop_test –username root –password 123456 –hive-table test
+2、sqoop中import的原理（split-by）:
+	Sqoop在import时，需要制定split-by参数。Sqoop根据不同的split-by参数值来进行切分,然后将切分出来的区域分配到不同map中。
+	每个map中再处理数据库中获取的一行一行的值，写入到HDFS中。同时split-by根据不同的参数类型有不同的切分方法，如比较简单
+	的int型，Sqoop会取最大和最小split-by字段值，然后根据传入的num-mappers来确定划分几个区域。
+	比如select max(split_by),min(split-by) from得到的max(split-by)和min(split-by)分别为1000和1，而num-mappers为2的话，
+	则会分成两个区域(1,500)和(501-100),同时也会分成2个sql给2个map去进行导入操作，
+	分别为select XXX from table where split-by>=1 and split-by<500和select XXX from table where split-by>=501 and
+	split-by<=1000。最后每个map各自获取各自SQL中的数据进行导入工作。

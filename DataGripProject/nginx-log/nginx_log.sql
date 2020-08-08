@@ -1,4 +1,4 @@
-create external table nginx_log
+create external table if not exists nginx_log
 (
     ip string,
     request_time string,
@@ -17,12 +17,16 @@ select count(a.ip) from (select ip, count(ip) as ct from nginx_log group by ip) 
 -- 求PV
 select request_path, count(request_path) as ct from nginx_log group by request_path;
 
+create table if not exists nginx_uv2 (
+    ip string
+)stored as textfile;
+insert overwrite table nginx_uv select a.ip from (select ip, count(ip) as ct from nginx_log group by ip) as a;
 
 create table if not exists nginx_pv (
     request_path string,
     visit_count bigint
 )row format delimited fields terminated by '\t' stored as textfile;
-insert overwrite nginx_pv select request_path, count(request_path) as ct from nginx_log group by request_path;
+insert overwrite table nginx_pv select request_path, count(request_path) as ct from nginx_log group by request_path;
 
 
 -- hive 查询数据写入HDFS
