@@ -2,11 +2,11 @@
 sqoop list-tables --connect jdbc:mysql://localhost:3306/hive_db --username root --password zhf123.. --driver com.mysql.cj.jdbc.Driver
 
 -- hive表导入到mysql表
-create table if not exists pv (
+create table if not exists nginx_pv (
     request_path text,
     visit_count bigint
 );
-create table if not exists uv (
+create table if not exists nginx_uv (
     ip varchar(20)
 );
 

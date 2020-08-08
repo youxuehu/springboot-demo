@@ -16,12 +16,12 @@ alter table nginx_log change column byte_size byte_size string;
 select count(a.ip) from (select ip, count(ip) as ct from nginx_log group by ip) as a;
 -- 求PV
 select request_path, count(request_path) as ct from nginx_log group by request_path;
-
-create table if not exists nginx_uv2 (
+-- 创建UV信息存储表
+create table if not exists nginx_uv (
     ip string
 )stored as textfile;
 insert overwrite table nginx_uv select a.ip from (select ip, count(ip) as ct from nginx_log group by ip) as a;
-
+-- 创建PV信息存储表
 create table if not exists nginx_pv (
     request_path string,
     visit_count bigint
