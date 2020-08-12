@@ -6,7 +6,6 @@ class AdvApplicationTest {
 import java.sql.Date
 import java.util.Properties
 
-import com.alipay.common.spark.mysql.ConnectionPool
 import com.example.springbootdemo.spark.mysql.ConnectionPool
 import kafka.serializer.StringDecoder
 import org.apache.spark.rdd.RDD

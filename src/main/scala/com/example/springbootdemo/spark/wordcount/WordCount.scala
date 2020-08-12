@@ -5,7 +5,10 @@ import org.apache.spark.{SparkConf, SparkContext}
 
 /**
  * 统计 word count
+ *
  */
+// --input "hdfs://localhost:9000/Spark/Input/WordCount/*/"
+// --output "hdfs://localhost:9000/Spark/Output/WordCount"
 object WordCount {
   // spark-submit --class org.apache.spark.examples.SparkPi --master local examples/jars/spark-examples_2.11-2.0.2.jar
   // spark-submit --class org.apache.spark.examples.SparkPi --master spark://localhost:7077 examples/jars/spark-examples_2.11-2.0.2.jar
@@ -13,9 +16,10 @@ object WordCount {
   // spark-submit --class org.apache.spark.examples.SparkPi --master yarn-client examples/jars/spark-examples_2.11-2.0.2.jar
   def main(args: Array[String]): Unit = {
     val conf = new SparkConf()
-    conf.setMaster("local")
+//    conf.setMaster("local")
     conf.setAppName("wordcount")
     val sc = new SparkContext(conf)
+//    val input = args(0)
     val rdd = sc.textFile("hdfs://localhost:9000/Spark/Input/WordCount/*")
     val newRdd = rdd.repartition(1)
     // 计算文章中单词出现的个数，并按照个数倒叙排序, 截取前10条数据
