@@ -9,18 +9,27 @@ import org.apache.spark.{SparkConf, SparkContext}
  */
 // --input "hdfs://localhost:9000/Spark/Input/WordCount/*/"
 // --output "hdfs://localhost:9000/Spark/Output/WordCount"
+// spark-submit --class org.apache.spark.examples.SparkPi --master local examples/jars/spark-examples_2.11-2.0.2.jar
+// spark-submit --class org.apache.spark.examples.SparkPi --master spark://localhost:7077 examples/jars/spark-examples_2.11-2.0.2.jar
+// spark-submit --class org.apache.spark.examples.SparkPi --master yarn-cluster examples/jars/spark-examples_2.11-2.0.2.jar
+// spark-submit --class org.apache.spark.examples.SparkPi --master yarn-client examples/jars/spark-examples_2.11-2.0.2.jar
 object WordCount {
-  // spark-submit --class org.apache.spark.examples.SparkPi --master local examples/jars/spark-examples_2.11-2.0.2.jar
-  // spark-submit --class org.apache.spark.examples.SparkPi --master spark://localhost:7077 examples/jars/spark-examples_2.11-2.0.2.jar
-  // spark-submit --class org.apache.spark.examples.SparkPi --master yarn-cluster examples/jars/spark-examples_2.11-2.0.2.jar
-  // spark-submit --class org.apache.spark.examples.SparkPi --master yarn-client examples/jars/spark-examples_2.11-2.0.2.jar
   def main(args: Array[String]): Unit = {
     val conf = new SparkConf()
 //    conf.setMaster("local")
     conf.setAppName("wordcount")
     val sc = new SparkContext(conf)
-//    val input = args(0)
-    val rdd = sc.textFile("hdfs://localhost:9000/Spark/Input/WordCount/*")
+    var input = "hdfs://localhost:9000/Spark/Input/WordCount/*"
+    var output = "hdfs://localhost:9000/Spark/Output/WordCount"
+    // 接收输入参数
+    if (args.length == 1) {
+      input = args(0)
+    }
+    if (args.length == 2) {
+      input = args(0)
+      output = args(1)
+    }
+    val rdd = sc.textFile(input)
     val newRdd = rdd.repartition(1)
     // 计算文章中单词出现的个数，并按照个数倒叙排序, 截取前10条数据
     val data = newRdd.flatMap(_.split(" "))
@@ -33,8 +42,7 @@ object WordCount {
       }
     val hadoopConf = sc.hadoopConfiguration
     val hdfs = org.apache.hadoop.fs.FileSystem.get(hadoopConf)
-    val filePath = "hdfs://localhost:9000/Spark/Output/WordCount"
-    val path = new Path(filePath);
+    val path = new Path(output);
     if(hdfs.exists(path)){
       // 如果输出目录存在，则删除
       hdfs.delete(path)
@@ -43,6 +51,6 @@ object WordCount {
     // 将list转换成rdd
     val new_data = sc.parallelize(data.collect())
     // 最终结果写入HDFS
-    new_data.saveAsTextFile(filePath)
+    new_data.saveAsTextFile(output)
   }
 }
