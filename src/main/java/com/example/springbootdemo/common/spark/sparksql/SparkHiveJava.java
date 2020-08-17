@@ -1,4 +1,4 @@
-//package com.example.springbootdemo.common.sparksql;
+//package com.example.springbootdemo.common.spark.sparksql;
 //
 //import org.apache.spark.SparkConf;
 //import org.apache.spark.api.java.JavaSparkContext;

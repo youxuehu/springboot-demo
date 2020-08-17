@@ -1,0 +1,69 @@
+2020-08-17 21:54:34,368 [myid:] - INFO  [main:QuorumPeerConfig@101] - Reading configuration from: /Users/youxuehu/SDK/bigdata/zookeeper-3.4.5/bin/../conf/zoo.cfg
+2020-08-17 21:54:34,384 [myid:] - INFO  [main:DatadirCleanupManager@78] - autopurge.snapRetainCount set to 3
+2020-08-17 21:54:34,384 [myid:] - INFO  [main:DatadirCleanupManager@79] - autopurge.purgeInterval set to 0
+2020-08-17 21:54:34,384 [myid:] - INFO  [main:DatadirCleanupManager@101] - Purge task is not scheduled.
+2020-08-17 21:54:34,384 [myid:] - WARN  [main:QuorumPeerMain@113] - Either no config or no quorum defined in config, running  in standalone mode
+2020-08-17 21:54:34,398 [myid:] - INFO  [main:QuorumPeerConfig@101] - Reading configuration from: /Users/youxuehu/SDK/bigdata/zookeeper-3.4.5/bin/../conf/zoo.cfg
+2020-08-17 21:54:34,399 [myid:] - INFO  [main:ZooKeeperServerMain@95] - Starting server
+2020-08-17 21:54:34,433 [myid:] - INFO  [main:Environment@100] - Server environment:zookeeper.version=3.4.5-1392090, built on 09/30/2012 17:52 GMT
+2020-08-17 21:54:34,434 [myid:] - INFO  [main:Environment@100] - Server environment:host.name=youxuehudeimac.lan
+2020-08-17 21:54:34,434 [myid:] - INFO  [main:Environment@100] - Server environment:java.version=1.8.0_181
+2020-08-17 21:54:34,434 [myid:] - INFO  [main:Environment@100] - Server environment:java.vendor=Oracle Corporation
+2020-08-17 21:54:34,434 [myid:] - INFO  [main:Environment@100] - Server environment:java.home=/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/jre
+2020-08-17 21:54:34,434 [myid:] - INFO  [main:Environment@100] - Server environment:java.class.path=/Users/youxuehu/SDK/bigdata/zookeeper-3.4.5/bin/../build/classes:/Users/youxuehu/SDK/bigdata/zookeeper-3.4.5/bin/../build/lib/*.jar:/Users/youxuehu/SDK/bigdata/zookeeper-3.4.5/bin/../lib/slf4j-log4j12-1.6.1.jar:/Users/youxuehu/SDK/bigdata/zookeeper-3.4.5/bin/../lib/slf4j-api-1.6.1.jar:/Users/youxuehu/SDK/bigdata/zookeeper-3.4.5/bin/../lib/netty-3.2.2.Final.jar:/Users/youxuehu/SDK/bigdata/zookeeper-3.4.5/bin/../lib/log4j-1.2.15.jar:/Users/youxuehu/SDK/bigdata/zookeeper-3.4.5/bin/../lib/jline-0.9.94.jar:/Users/youxuehu/SDK/bigdata/zookeeper-3.4.5/bin/../zookeeper-3.4.5.jar:/Users/youxuehu/SDK/bigdata/zookeeper-3.4.5/bin/../src/java/lib/*.jar:/Users/youxuehu/SDK/bigdata/zookeeper-3.4.5/bin/../conf:
+2020-08-17 21:54:34,435 [myid:] - INFO  [main:Environment@100] - Server environment:java.library.path=/Users/youxuehu/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+2020-08-17 21:54:34,435 [myid:] - INFO  [main:Environment@100] - Server environment:java.io.tmpdir=/var/folders/fy/cbbn3gc137193c1bj7h9wg_c0000gn/T/
+2020-08-17 21:54:34,435 [myid:] - INFO  [main:Environment@100] - Server environment:java.compiler=<NA>
+2020-08-17 21:54:34,435 [myid:] - INFO  [main:Environment@100] - Server environment:os.name=Mac OS X
+2020-08-17 21:54:34,435 [myid:] - INFO  [main:Environment@100] - Server environment:os.arch=x86_64
+2020-08-17 21:54:34,436 [myid:] - INFO  [main:Environment@100] - Server environment:os.version=10.14.6
+2020-08-17 21:54:34,436 [myid:] - INFO  [main:Environment@100] - Server environment:user.name=youxuehu
+2020-08-17 21:54:34,436 [myid:] - INFO  [main:Environment@100] - Server environment:user.home=/Users/youxuehu
+2020-08-17 21:54:34,436 [myid:] - INFO  [main:Environment@100] - Server environment:user.dir=/Users/youxuehu/IdeaProjects/springboot-demo/src/main/java/com/example/springbootdemo/common/spark/sparksql
+2020-08-17 21:54:34,445 [myid:] - INFO  [main:ZooKeeperServer@726] - tickTime set to 2000
+2020-08-17 21:54:34,445 [myid:] - INFO  [main:ZooKeeperServer@735] - minSessionTimeout set to -1
+2020-08-17 21:54:34,445 [myid:] - INFO  [main:ZooKeeperServer@744] - maxSessionTimeout set to -1
+2020-08-17 21:54:34,471 [myid:] - INFO  [main:NIOServerCnxnFactory@94] - binding to port 0.0.0.0/0.0.0.0:2181
+2020-08-17 21:54:34,561 [myid:] - INFO  [main:FileSnap@83] - Reading snapshot /Users/youxuehu/SDK/bigdata/zookeeper-3.4.5/data/version-2/snapshot.2af
+2020-08-17 21:54:34,584 [myid:] - INFO  [main:FileTxnSnapLog@240] - Snapshotting: 0x2e1 to /Users/youxuehu/SDK/bigdata/zookeeper-3.4.5/data/version-2/snapshot.2e1
+2020-08-17 21:54:57,036 [myid:] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /0:0:0:0:0:0:0:1:50287
+2020-08-17 21:54:57,091 [myid:] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /0:0:0:0:0:0:0:1:50287
+2020-08-17 21:54:57,091 [myid:] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /127.0.0.1:50288
+2020-08-17 21:54:57,091 [myid:] - INFO  [SyncThread:0:FileTxnLog@199] - Creating new log file: log.2e2
+2020-08-17 21:54:57,092 [myid:] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /127.0.0.1:50288
+2020-08-17 21:54:57,100 [myid:] - INFO  [SyncThread:0:ZooKeeperServer@595] - Established session 0x173fcb347db0000 with negotiated timeout 40000 for client /0:0:0:0:0:0:0:1:50287
+2020-08-17 21:54:57,100 [myid:] - INFO  [SyncThread:0:ZooKeeperServer@595] - Established session 0x173fcb347db0001 with negotiated timeout 40000 for client /127.0.0.1:50288
+2020-08-17 21:54:57,107 [myid:] - INFO  [ProcessThread(sid:0 cport:-1)::PrepRequestProcessor@627] - Got user-level KeeperException when processing sessionid:0x173fcb347db0000 type:create cxid:0x1 zxid:0x2e4 txntype:-1 reqpath:n/a Error Path:/hbase Error:KeeperErrorCode = NodeExists for /hbase
+2020-08-17 21:54:58,572 [myid:] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /0:0:0:0:0:0:0:1:50289
+2020-08-17 21:54:58,572 [myid:] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /0:0:0:0:0:0:0:1:50289
+2020-08-17 21:54:58,579 [myid:] - INFO  [SyncThread:0:ZooKeeperServer@595] - Established session 0x173fcb347db0002 with negotiated timeout 40000 for client /0:0:0:0:0:0:0:1:50289
+2020-08-17 21:54:58,761 [myid:] - INFO  [ProcessThread(sid:0 cport:-1)::PrepRequestProcessor@627] - Got user-level KeeperException when processing sessionid:0x173fcb347db0000 type:create cxid:0x10 zxid:0x2e7 txntype:-1 reqpath:n/a Error Path:/hbase/master Error:KeeperErrorCode = NodeExists for /hbase/master
+2020-08-17 21:54:58,781 [myid:] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /127.0.0.1:50290
+2020-08-17 21:54:58,782 [myid:] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /127.0.0.1:50290
+2020-08-17 21:54:58,783 [myid:] - INFO  [SyncThread:0:ZooKeeperServer@595] - Established session 0x173fcb347db0003 with negotiated timeout 40000 for client /127.0.0.1:50290
+2020-08-17 21:54:58,880 [myid:] - INFO  [ProcessThread(sid:0 cport:-1)::PrepRequestProcessor@627] - Got user-level KeeperException when processing sessionid:0x173fcb347db0001 type:create cxid:0x7 zxid:0x2e9 txntype:-1 reqpath:n/a Error Path:/hbase/flush-table-proc/acquired Error:KeeperErrorCode = NodeExists for /hbase/flush-table-proc/acquired
+2020-08-17 21:54:58,910 [myid:] - INFO  [ProcessThread(sid:0 cport:-1)::PrepRequestProcessor@627] - Got user-level KeeperException when processing sessionid:0x173fcb347db0001 type:create cxid:0xa zxid:0x2ea txntype:-1 reqpath:n/a Error Path:/hbase/online-snapshot/acquired Error:KeeperErrorCode = NodeExists for /hbase/online-snapshot/acquired
+2020-08-17 21:55:16,004 [myid:] - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x173ed0d396a0005, timeout of 40000ms exceeded
+2020-08-17 21:55:16,005 [myid:] - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x173ed0d396a0003, timeout of 40000ms exceeded
+2020-08-17 21:55:16,005 [myid:] - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x173ed0d396a0004, timeout of 40000ms exceeded
+2020-08-17 21:55:16,005 [myid:] - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x173ed0d396a0002, timeout of 40000ms exceeded
+2020-08-17 21:55:16,005 [myid:] - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x173ed0d396a0001, timeout of 40000ms exceeded
+2020-08-17 21:55:16,005 [myid:] - INFO  [SessionTracker:ZooKeeperServer@325] - Expiring session 0x173ed0d396a0000, timeout of 40000ms exceeded
+2020-08-17 21:55:16,006 [myid:] - INFO  [ProcessThread(sid:0 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x173ed0d396a0005
+2020-08-17 21:55:16,006 [myid:] - INFO  [ProcessThread(sid:0 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x173ed0d396a0003
+2020-08-17 21:55:16,006 [myid:] - INFO  [ProcessThread(sid:0 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x173ed0d396a0004
+2020-08-17 21:55:16,006 [myid:] - INFO  [ProcessThread(sid:0 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x173ed0d396a0002
+2020-08-17 21:55:16,006 [myid:] - INFO  [ProcessThread(sid:0 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x173ed0d396a0001
+2020-08-17 21:55:16,007 [myid:] - INFO  [ProcessThread(sid:0 cport:-1)::PrepRequestProcessor@476] - Processed session termination for sessionid: 0x173ed0d396a0000
+2020-08-17 21:55:16,693 [myid:] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /127.0.0.1:50326
+2020-08-17 21:55:16,694 [myid:] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /127.0.0.1:50326
+2020-08-17 21:55:16,694 [myid:] - INFO  [SyncThread:0:ZooKeeperServer@595] - Established session 0x173fcb347db0004 with negotiated timeout 40000 for client /127.0.0.1:50326
+2020-08-17 21:55:16,767 [myid:] - INFO  [ProcessThread(sid:0 cport:-1)::PrepRequestProcessor@627] - Got user-level KeeperException when processing sessionid:0x173fcb347db0000 type:create cxid:0x30 zxid:0x2f6 txntype:-1 reqpath:n/a Error Path:/hbase/flush-table-proc/acquired Error:KeeperErrorCode = NodeExists for /hbase/flush-table-proc/acquired
+2020-08-17 21:55:16,774 [myid:] - INFO  [ProcessThread(sid:0 cport:-1)::PrepRequestProcessor@627] - Got user-level KeeperException when processing sessionid:0x173fcb347db0000 type:create cxid:0x36 zxid:0x2f7 txntype:-1 reqpath:n/a Error Path:/hbase/online-snapshot/acquired Error:KeeperErrorCode = NodeExists for /hbase/online-snapshot/acquired
+2020-08-17 21:55:20,925 [myid:] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxnFactory@197] - Accepted socket connection from /0:0:0:0:0:0:0:1:50327
+2020-08-17 21:55:20,925 [myid:] - INFO  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:ZooKeeperServer@839] - Client attempting to establish new session at /0:0:0:0:0:0:0:1:50327
+2020-08-17 21:55:20,926 [myid:] - INFO  [SyncThread:0:ZooKeeperServer@595] - Established session 0x173fcb347db0005 with negotiated timeout 40000 for client /0:0:0:0:0:0:0:1:50327
+2020-08-17 21:55:20,931 [myid:] - INFO  [ProcessThread(sid:0 cport:-1)::PrepRequestProcessor@627] - Got user-level KeeperException when processing sessionid:0x173fcb347db0005 type:create cxid:0x1 zxid:0x2f9 txntype:-1 reqpath:n/a Error Path:/hbase/replication/rs Error:KeeperErrorCode = NodeExists for /hbase/replication/rs
+2020-08-17 21:55:43,356 [myid:] - INFO  [ProcessThread(sid:0 cport:-1)::PrepRequestProcessor@627] - Got user-level KeeperException when processing sessionid:0x173fcb347db0001 type:setData cxid:0x38 zxid:0x303 txntype:-1 reqpath:n/a Error Path:/hbase/meta-region-server Error:KeeperErrorCode = NoNode for /hbase/meta-region-server
+2020-08-17 21:55:48,310 [myid:] - INFO  [ProcessThread(sid:0 cport:-1)::PrepRequestProcessor@627] - Got user-level KeeperException when processing sessionid:0x173fcb347db0000 type:create cxid:0xac2 zxid:0x310 txntype:-1 reqpath:n/a Error Path:/hbase/namespace/default Error:KeeperErrorCode = NodeExists for /hbase/namespace/default
+2020-08-17 21:55:48,316 [myid:] - INFO  [ProcessThread(sid:0 cport:-1)::PrepRequestProcessor@627] - Got user-level KeeperException when processing sessionid:0x173fcb347db0000 type:create cxid:0xac5 zxid:0x312 txntype:-1 reqpath:n/a Error Path:/hbase/namespace/hbase Error:KeeperErrorCode = NodeExists for /hbase/namespace/hbase
