@@ -736,7 +736,7 @@
             </resource>
         </resources>
         <plugins>
-            <plugin>
+           <!-- <plugin>
                 <groupId>org.scala-tools</groupId>
                 <artifactId>maven-scala-plugin</artifactId>
                 <version>2.15.2</version>
@@ -754,7 +754,7 @@
                         <arg>-target:jvm-${maven.compiler.target}</arg>
                     </args>
                 </configuration>
-            </plugin>
+            </plugin>-->
 
     <!--        <plugin>
                 <groupId>org.springframework.boot</groupId>
