@@ -2,17 +2,20 @@ package com.example.springbootdemo;
 
 import com.example.springbootdemo.common.hadoop2.HDFS2Utils;
 import com.example.springbootdemo.common.thrift.impl.StudentThriftServer;
+import com.example.springbootdemo.service.TestSpringService;
 import com.example.springbootdemo.utils.easyexcal.ExcelUtils;
 import com.example.springbootdemo.utils.easyexcal.LocalWareDTO;
 import com.example.springbootdemo.utils.easyexcal.LocalWareExcelListener;
 import lombok.extern.slf4j.Slf4j;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.kafka.KafkaAutoConfiguration;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.annotation.Order;
 import org.springframework.scheduling.annotation.EnableScheduling;
@@ -31,8 +34,12 @@ import java.util.List;
 public class SpringbootDemoApplication implements ApplicationRunner {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringbootDemoApplication.class, args);
-        System.out.println(ss);
+        ConfigurableApplicationContext applicationContext = SpringApplication.run(SpringbootDemoApplication.class, args);
+        ConfigurableListableBeanFactory beanFactory = applicationContext.getBeanFactory();
+        TestSpringService testSpringService = (TestSpringService) beanFactory.getBean("testSpringServiceImpl");
+        String message = testSpringService.sayHello("jack");
+        System.out.println(message);
+//        System.out.println(ss);
     }
 
 //    @Resource
