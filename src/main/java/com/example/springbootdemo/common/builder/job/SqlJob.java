@@ -1,13 +1,14 @@
 package com.example.springbootdemo.common.builder.job;
 
-public class SqlJob extends Job {
-    private String sqlContent;
+public class SqlJob extends AbstractJob implements Job {
 
-    public String getSqlContent() {
-        return sqlContent;
+    @Override
+    public String getJobId() {
+        return null;
     }
 
-    public void setSqlContent(String sqlContent) {
-        this.sqlContent = sqlContent;
+    @Override
+    public String getProject() {
+        return null;
     }
 }
