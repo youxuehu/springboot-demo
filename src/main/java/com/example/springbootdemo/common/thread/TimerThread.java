@@ -9,6 +9,8 @@ public class TimerThread {
 
     public static void main(String[] args) {
 
+        // jdk1.5之前的任务调度 Timer, 只支持单线程
+
         new Timer().schedule(new TimerTask() {
             @Override
             public void run() {
