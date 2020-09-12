@@ -1,6 +1,5 @@
 package com.example.springbootdemo.common.socket.rpc.ref;
 
-import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.Method;
 import java.util.Properties;
@@ -29,6 +28,7 @@ public class ClassLoadPropertiesResourcesTest {
             UserService userService = (UserService) clazz.newInstance();
             String resp = userService.queryById(1);
             System.out.println(resp);
+
         } catch (Exception e) {
             e.printStackTrace();
         }
