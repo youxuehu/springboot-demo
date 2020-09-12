@@ -35,8 +35,8 @@ public class SpringbootDemoApplication implements ApplicationRunner {
 
     public static void main(String[] args) {
         ConfigurableApplicationContext applicationContext = SpringApplication.run(SpringbootDemoApplication.class, args);
-        ConfigurableListableBeanFactory beanFactory = applicationContext.getBeanFactory();
-        TestSpringService testSpringService = (TestSpringService) beanFactory.getBean("testSpringServiceImpl");
+//        ConfigurableListableBeanFactory beanFactory = applicationContext.getBeanFactory();
+        TestSpringService testSpringService = (TestSpringService) applicationContext.getBean("testSpringServiceImpl");
         String message = testSpringService.sayHello("jack");
         System.out.println(message);
 //        System.out.println(ss);

@@ -1,4 +1,4 @@
-package com.example.springbootdemo;
+package com.example.springbootdemo.utils;
 
 import com.example.springbootdemo.utils.http.HttpUtils;
 
