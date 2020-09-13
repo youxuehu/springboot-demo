@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
                            http://www.springframework.org/schema/beans/spring-beans.xsd
                            http://www.springframework.org/schema/aop
-                           http://www.springframework.org/schema/aop/spring-aop.xsd">
+                           http://www.springframework.org/schema/aop/spring-aop.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd">
 
 
     <bean id="userService" class="org.example.beans.UserServiceImpl" init-method="init" destroy-method="destroy" scope="prototype">
@@ -36,7 +39,7 @@
     </bean>
 
     <!-- 编织： weave -->
-    <aop:config>
+    <aop:config proxy-target-class="true">
         <!-- 切入点： 追加额外功能的目标方法
                      指定目标中哪些方法需要额外功能
              表达式        expression(访问修饰符 返回值 包.类.方法名(参数表))
@@ -50,6 +53,25 @@
 
     <bean id="methodBeforeHandlerAOP" class="org.example.aop.MethodBeforeHandlerAOP"/>
     <bean id="afterReturnningAdviceAOP" class="org.example.aop.AfterReturnningAdviceAOP"/>
-    <bean id="methodInterceptorAOP" class="org.example.aop.MethodInterceptorAOP"/>
+    <bean id="methodInterceptorAOP" class="org.example.aop.MethodInterceptorAOP"
+          abstract="false" lazy-init="false" autowire="default"/>
+
+    <bean class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+
+        <property name="beanNames">
+            <list>
+                <value>userService</value>
+            </list>
+        </property>
+
+        <property name="interceptorNames">
+            <list>
+                <value>methodInterceptorAOP</value>
+            </list>
+        </property>
+    </bean>
+
+    <aop:aspectj-autoproxy proxy-target-class="true"/>
+    <context:component-scan base-package="org.example.**"/>
 
 </beans>

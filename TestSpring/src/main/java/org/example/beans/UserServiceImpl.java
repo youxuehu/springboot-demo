@@ -27,7 +27,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    @Log
+    @Log(title = "queryALl", function = "查询所有用户信息列表")
     public List<MyTab> queryAll() {
         return userDAO.queryAll();
     }
