@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:aop="http://www.springframework.org/schema/aop"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/aop
+                           http://www.springframework.org/schema/aop/spring-aop.xsd">
 
 
     <bean id="userService" class="org.example.beans.UserServiceImpl" init-method="init" destroy-method="destroy" scope="prototype">
@@ -31,5 +34,22 @@
     <bean id="transactionUtil" class="org.example.beans.utils.TransactionUtil">
            <property name="transactionManager" ref="transactionManager"/>
     </bean>
+
+    <!-- 编织： weave -->
+    <aop:config>
+        <!-- 切入点： 追加额外功能的目标方法
+                     指定目标中哪些方法需要额外功能
+             表达式        expression(访问修饰符 返回值 包.类.方法名(参数表))
+         -->
+        <aop:pointcut id="pc" expression="execution (* org.example.beans.*.*(..))"/>
+        <!--
+            组装
+        -->
+        <aop:advisor advice-ref="methodBeforeHandlerAOP" pointcut-ref="pc"/>
+    </aop:config>
+
+    <bean id="methodBeforeHandlerAOP" class="org.example.aop.MethodBeforeHandlerAOP"/>
+    <bean id="afterReturnningAdviceAOP" class="org.example.aop.AfterReturnningAdviceAOP"/>
+    <bean id="methodInterceptorAOP" class="org.example.aop.MethodInterceptorAOP"/>
 
 </beans>

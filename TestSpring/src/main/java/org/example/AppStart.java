@@ -3,7 +3,6 @@ package org.example;
 import com.alibaba.fastjson.JSON;
 import org.example.beans.UserService;
 import org.example.beans.dao.MyTab;
-import org.springframework.beans.BeansException;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.List;

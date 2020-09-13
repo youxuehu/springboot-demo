@@ -1,7 +1,9 @@
 package org.example.beans;
 
+import org.example.aop.Log;
 import org.example.beans.dao.MyTab;
 import org.example.beans.dao.UserDAO;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
@@ -25,8 +27,14 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    @Log
     public List<MyTab> queryAll() {
         return userDAO.queryAll();
+    }
+
+    @Override
+    public String sayHello(String name) {
+        return name + ", say hello";
     }
 
     public void setUserDAO(UserDAO userDAO) {

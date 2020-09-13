@@ -9,4 +9,18 @@ public interface UserService {
     void update();
 
     List<MyTab> queryAll();
+
+    String sayHello(String name);
+
+    default String testMethod() {
+        return "hello world";
+    }
+
+    static String staticMethod() {
+        return "static method";
+    }
+
+    String FLAG = "FLAG";
+
+
 }
