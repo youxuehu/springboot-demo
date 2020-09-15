@@ -10,6 +10,9 @@ public class MethodInterceptorAOP implements MethodInterceptor {
 
     @Override
     public Object invoke(MethodInvocation invocation) throws Throwable {
+        String className = invocation.getClass().getName();
+        String methodName = invocation.getMethod().getName();
+        System.out.println(className+ "." + methodName);
         System.out.println("<<<<<< before  invocation  [ " + invocation + "  ] >>>>>>>>>>>>>>");
         Method method = invocation.getMethod();
         Annotation[] annotations = method.getDeclaredAnnotations();

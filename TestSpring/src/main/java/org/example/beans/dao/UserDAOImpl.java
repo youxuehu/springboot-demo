@@ -41,7 +41,7 @@ public class UserDAOImpl implements UserDAO {
                 "insert into my_tab(test1) values('test-name');select * from my_tab;
          */
             jdbcTemplate.batchUpdate("insert into my_tab(test1) values('test-name');");
-            int i = 1 /0;
+//            int i = 1 /0;
             jdbcTemplate.batchUpdate("insert into my_tab(test1) values('test-name');");
             jdbcTemplate.batchUpdate("insert into my_tab(test1) values('test-name');");
             transactionUtil.commit();

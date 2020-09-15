@@ -84,4 +84,13 @@
         </property>
     </bean>
 
+
+    <bean id="commomEventBus" class="org.example.google.guave.event.CommomEventBus" init-method="init"/>
+    <bean id="eventBusRegister" class="org.example.google.guave.event.EventBusRegister" init-method="init">
+            <property name="commomEventBus" ref="commomEventBus"/>
+    </bean>
+    <bean id="publishEventBus" class="org.example.google.guave.event.PublishEventBus" init-method="init">
+        <property name="commomEventBus" ref="commomEventBus"/>
+    </bean>
+
 </beans>
