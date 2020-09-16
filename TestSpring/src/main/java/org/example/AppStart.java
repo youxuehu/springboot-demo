@@ -3,6 +3,7 @@ package org.example;
 import com.alibaba.fastjson.JSON;
 import org.example.beans.UserService;
 import org.example.beans.dao.MyTab;
+import org.example.beans.factory.MyClass;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.List;
@@ -19,6 +20,10 @@ public class AppStart {
         }
         List<MyTab> myTabList = userService.queryAll();
         System.out.println(JSON.toJSONString(myTabList, true));
+
+
+        MyClass myClass = applicationContext.getBean(MyClass.class);
+        System.out.println(myClass);
         applicationContext.close();
     }
 }

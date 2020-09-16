@@ -93,4 +93,7 @@
         <property name="commomEventBus" ref="commomEventBus"/>
     </bean>
 
+
+    <bean class="org.example.beans.factory.MyFactoryBean"/>
+
 </beans>
