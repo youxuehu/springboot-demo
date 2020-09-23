@@ -1,11 +1,11 @@
-package org.example.lock;
+package org.example.lock.mysql;
 
 import org.example.db.dao.bizlock.model.BizLock;
 import org.example.db.service.bizlock.BizLockService;
 
 import java.util.Date;
 
-public class DistributeLock {
+public class MySqlLock {
 
     private BizLockService bizLockService;
 

@@ -16,11 +16,22 @@
     <bean id="bizLockService" class="org.example.db.service.bizlock.impl.BizLockServiceImpl">
         <property name="bizLockMapper" ref="bizLockMapper"/>
     </bean>
-    <bean id="distributeLock" class="org.example.lock.DistributeLock">
+    <bean id="mySqlLock" class="org.example.lock.mysql.MySqlLock">
         <property name="bizLockService" ref="bizLockService"/>
     </bean>
-    <bean id="testLock" class="org.example.lock.TestLock" init-method="initLock">
-        <property name="distributeLock" ref="distributeLock"/>
+    <bean id="testMySqlLock" class="org.example.lock.mysql.TestMySqlLock">
+        <property name="mySqlLock" ref="mySqlLock"/>
+    </bean>
+
+
+    <bean id="jedisLockService" class="org.example.lock.redis.JedisLockServiceImpl">
+        <property name="host" value="127.0.0.1"/>
+        <property name="port" value="6379"/>
+        <property name="lockTimeOut" value="600"/>
+        <property name="perSleep" value="600"/>
+    </bean>
+    <bean id="testRedisLock" class="org.example.lock.redis.TestRedisLock" init-method="init">
+        <property name="lockService" ref="jedisLockService"/>
     </bean>
 
 </beans>

@@ -1,10 +1,10 @@
-package org.example.lock;
+package org.example.lock.mysql;
 
 import org.example.db.dao.bizlock.model.BizLock;
 
-public class TestLock {
+public class TestMySqlLock {
 
-    private DistributeLock distributeLock;
+    private MySqlLock mySqlLock;
 
     static final BizLock DEFAULTLOCK;
 
@@ -17,14 +17,14 @@ public class TestLock {
 
     }
 
-    enum BizEnum {
+    public enum BizEnum {
         BIZID, BIZTYPE, LOCKTYPE
     }
 
     int count = 0;
 
     public void execute() {
-        Boolean lock = distributeLock.tryLock(DEFAULTLOCK);
+        Boolean lock = mySqlLock.tryLock(DEFAULTLOCK);
         if (!lock) {
             System.out.println(Thread.currentThread().getName() + " <<<<<<<<<< 获取锁失败 >>>>>>>>>>>");
             return;
@@ -39,7 +39,7 @@ public class TestLock {
             }
             System.out.println(++count);
         } finally {
-            distributeLock.releaseLock(DEFAULTLOCK);
+            mySqlLock.releaseLock(DEFAULTLOCK);
         }
     }
 
@@ -60,7 +60,7 @@ public class TestLock {
         }
     }
 
-    public void setDistributeLock(DistributeLock distributeLock) {
-        this.distributeLock = distributeLock;
+    public void setMySqlLock(MySqlLock mySqlLock) {
+        this.mySqlLock = mySqlLock;
     }
 }

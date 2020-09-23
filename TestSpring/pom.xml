@@ -83,7 +83,6 @@
       <artifactId>guava</artifactId>
       <version>29.0-jre</version>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/dom4j/dom4j -->
     <dependency>
       <groupId>dom4j</groupId>
       <artifactId>dom4j</artifactId>
@@ -99,7 +98,17 @@
       <artifactId>mybatis-spring</artifactId>
       <version>2.0.5</version>
     </dependency>
+    <dependency>
+      <groupId>redis.clients</groupId>
+      <artifactId>jedis</artifactId>
+      <version>3.3.0</version>
+    </dependency>
 
+    <dependency>
+      <groupId>commons-lang</groupId>
+      <artifactId>commons-lang</artifactId>
+      <version>2.6</version>
+    </dependency>
   </dependencies>
 
   <build>
