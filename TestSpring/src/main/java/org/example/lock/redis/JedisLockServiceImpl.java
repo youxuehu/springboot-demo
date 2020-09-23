@@ -24,35 +24,36 @@ public class JedisLockServiceImpl implements LockService {
 
     /**
      * 得不到锁立即返回，得到锁返回设置的超时时间
+     *
      * @param key
      * @return
      */
     @Override
-    public long tryLock(String key){
+    public long tryLock(String key) {
         //得到锁后设置的过期时间，未得到锁返回0
         long expireTime = 0;
         Jedis jedis = null;
         jedis = new Jedis(host, port);
-        expireTime = System.currentTimeMillis() + lockTimeOut +1;
+        expireTime = System.currentTimeMillis() + lockTimeOut + 1;
         if (jedis.setnx(key, String.valueOf(expireTime)) == 1) {
             //得到了锁返回
             return expireTime;
-        }else  {
-            String curLockTimeStr =  jedis.get(key);
+        } else {
+            String curLockTimeStr = jedis.get(key);
             //判断是否过期
             if (StringUtils.isBlank(curLockTimeStr)
                     || System.currentTimeMillis() > Long.valueOf(curLockTimeStr)) {
-                expireTime = System.currentTimeMillis() + lockTimeOut +1;
+                expireTime = System.currentTimeMillis() + lockTimeOut + 1;
 
                 curLockTimeStr = jedis.getSet(key, String.valueOf(expireTime));
                 //仍然过期,则得到锁
                 if (StringUtils.isBlank(curLockTimeStr)
-                        || System.currentTimeMillis() > Long.valueOf(curLockTimeStr)){
+                        || System.currentTimeMillis() > Long.valueOf(curLockTimeStr)) {
                     return expireTime;
-                }else {
+                } else {
                     return 0;
                 }
-            }else {
+            } else {
                 return 0;
             }
         }
@@ -60,38 +61,39 @@ public class JedisLockServiceImpl implements LockService {
 
     /**
      * 得到锁返回设置的超时时间，得不到锁等待
+     *
      * @param key
      * @return
      * @throws InterruptedException
      */
     @Override
-    public long lock(String key) throws InterruptedException{
+    public long lock(String key) throws InterruptedException {
         long starttime = System.currentTimeMillis();
-        long sleep = (perSleep==0?lockTimeOut/10:perSleep);
+        long sleep = (perSleep == 0 ? lockTimeOut / 10 : perSleep);
         //得到锁后设置的过期时间，未得到锁返回0
         long expireTime = 0;
         Jedis jedis = new Jedis(host, port);
-        for (;;) {
-            expireTime = System.currentTimeMillis() + lockTimeOut +1;
+        for (; ; ) {
+            expireTime = System.currentTimeMillis() + lockTimeOut + 1;
             if (jedis.setnx(key, String.valueOf(expireTime)) == 1) {
                 //得到了锁返回
                 return expireTime;
-            }else  {
-                String curLockTimeStr =  jedis.get(key);
+            } else {
+                String curLockTimeStr = jedis.get(key);
                 //判断是否过期
                 if (StringUtils.isBlank(curLockTimeStr)
                         || System.currentTimeMillis() > Long.valueOf(curLockTimeStr)) {
-                    expireTime = System.currentTimeMillis() + lockTimeOut +1;
+                    expireTime = System.currentTimeMillis() + lockTimeOut + 1;
 
                     curLockTimeStr = jedis.getSet(key, String.valueOf(expireTime));
                     //仍然过期,则得到锁
                     if (StringUtils.isBlank(curLockTimeStr)
-                            || System.currentTimeMillis() > Long.valueOf(curLockTimeStr)){
+                            || System.currentTimeMillis() > Long.valueOf(curLockTimeStr)) {
                         return expireTime;
-                    }else {
+                    } else {
                         Thread.sleep(sleep);
                     }
-                }else {
+                } else {
                     Thread.sleep(sleep);
                 }
             }
@@ -106,17 +108,18 @@ public class JedisLockServiceImpl implements LockService {
 
     /**
      * 先判断自己运行时间是否超过了锁设置时间，是则不用解锁
+     *
      * @param key
      * @param expireTime
      */
     @Override
-    public void unlock(String key,long expireTime){
-        if (System.currentTimeMillis()-expireTime>0) {
-            return ;
+    public void unlock(String key, long expireTime) {
+        if (System.currentTimeMillis() - expireTime > 0) {
+            return;
         }
         Jedis jedis = new Jedis(host, port);
         String curLockTimeStr = jedis.get(key);
-        if (StringUtils.isNotBlank(curLockTimeStr)&&Long.valueOf(curLockTimeStr)>System.currentTimeMillis()) {
+        if (StringUtils.isNotBlank(curLockTimeStr) && Long.valueOf(curLockTimeStr) > System.currentTimeMillis()) {
             jedis.del(key);
         }
     }

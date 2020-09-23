@@ -29,7 +29,7 @@ public class TestRedisLock {
 
     public void init() {
         while (true) {
-            new Thread(){
+            new Thread() {
                 @Override
                 public void run() {
                     execute();
