@@ -30,8 +30,20 @@
         <property name="lockTimeOut" value="600"/>
         <property name="perSleep" value="600"/>
     </bean>
-    <bean id="testRedisLock" class="org.example.lock.redis.TestRedisLock" init-method="init">
+    <bean id="testRedisLock" class="org.example.lock.redis.TestRedisLock">
         <property name="lockService" ref="jedisLockService"/>
     </bean>
 
+    <bean id="memcachedService" class="org.example.lock.memcached.impl.MemcachedServiceImpl">
+        <property name="host" value="127.0.0.1"/>
+        <property name="port" value="11211"/>
+    </bean>
+
+    <bean id="memcachedLock" class="org.example.lock.memcached.impl.MemcachedLock">
+        <property name="memcachedService" ref="memcachedService"/>
+    </bean>
+
+    <bean id="testMemcachedLock" class="org.example.lock.memcached.impl.TestMemcachedLock" init-method="init">
+        <property name="memcachedLock" ref="memcachedLock"/>
+    </bean>
 </beans>
