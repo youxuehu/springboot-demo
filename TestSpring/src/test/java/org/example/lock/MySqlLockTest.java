@@ -5,6 +5,10 @@ import org.example.db.service.bizlock.BizLockService;
 import org.example.lock.mysql.TestMySqlLock;
 import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.util.CollectionUtils;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class MySqlLockTest {
 
@@ -19,7 +23,12 @@ public class MySqlLockTest {
         DEFAULTLOCK.setLockType(TestMySqlLock.BizEnum.LOCKTYPE.name());
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
         BizLockService bizLockService = (BizLockService) applicationContext.getBean("bizLockService");
-        bizLockService.delete();
+        List<BizLock> bizLockList = bizLockService.queryByBizIdAndBizTypeAndLockType(DEFAULTLOCK.getBizId(),
+                                                                                        DEFAULTLOCK.getBizType(),
+                                                                                        DEFAULTLOCK.getLockType());
+        if (!CollectionUtils.isEmpty(bizLockList)) {
+            bizLockService.deleteByIds(bizLockList.stream().map(BizLock::getId).collect(Collectors.toList()));
+        }
         bizLockService.insertSlector(DEFAULTLOCK);
     }
 

@@ -113,5 +113,6 @@
     </bean>
 
     <import resource="service-bean.xml"/>
+    <import resource="thread-pool.xml"/>
 
 </beans>

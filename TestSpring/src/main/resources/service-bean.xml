@@ -22,6 +22,9 @@
     <bean id="testMySqlLock" class="org.example.lock.mysql.TestMySqlLock">
         <property name="mySqlLock" ref="mySqlLock"/>
     </bean>
+    <bean id="cleanTaskService" class="org.example.db.service.cleantask.impl.CleanTaskServiceImpl">
+        <property name="cleanTaskMapper" ref="cleanTaskMapper"/>
+    </bean>
 
 
     <bean id="jedisLockService" class="org.example.lock.redis.JedisLockServiceImpl">
@@ -43,7 +46,7 @@
         <property name="memcachedService" ref="memcachedService"/>
     </bean>
 
-    <bean id="testMemcachedLock" class="org.example.lock.memcached.impl.TestMemcachedLock" init-method="init">
+    <bean id="testMemcachedLock" class="org.example.lock.memcached.impl.TestMemcachedLock">
         <property name="memcachedLock" ref="memcachedLock"/>
     </bean>
 </beans>

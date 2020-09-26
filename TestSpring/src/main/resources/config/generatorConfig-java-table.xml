@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration >
+    <context id="context1" >
+        <plugin type="org.example.db.plugins.PaginationPlugin" />
+        <commentGenerator>
+            <!-- 避免生成注解
+                   <propertyname="suppressDate" value="true" />
+                          -->
+            <property name="suppressAllComments" value="true" />
+        </commentGenerator>
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://192.168.0.128:3306/faceserver_xzk"
+                        userId="root"
+                        password="admin"
+        />
+        <!-- Model文件保存位置 -->
+        <javaModelGenerator targetPackage="com.epublic.cwa.dao.table.entity" targetProject="01.cwa-web\src\main\java-dao">
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+        <!-- 生成的mapper文件-->
+        <sqlMapGenerator targetPackage="com.epublic.cwa.dao.table.mapper" targetProject="01.cwa-web\src\main\java-dao" >
+        </sqlMapGenerator>
+        <!-- 生成的查询条件的类 -->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.epublic.cwa.dao.table.mapper" targetProject="01.cwa-web\src\main\java-dao">
+        </javaClientGenerator>
+        <!-- 该表作为字典表参考数据，不再使用
+               <tableschema="" tableName="CWA_SYS_ROLES" ></table>
+               <tableschema="" tableName="CWA_SYS_USER_ROLE" ></table>
+               -->
+        <table schema="" tableName="cwa_sys_functions" ></table>
+        <table schema="" tableName="CWA_SYS_ROLE_FUNCTION" ></table>
+        <table schema="" tableName="cwa_sys_users" ></table>
+        <table schema="" tableName="cwa_sys_model_view_dic" ></table>
+        <table schema="" tableName="cwa_dept" ></table>
+        <table schema="" tableName="CWA_USER" ></table>
+        <table schema="" tableName="cwa_sys_log" ></table>
+    </context>
+</generatorConfiguration>

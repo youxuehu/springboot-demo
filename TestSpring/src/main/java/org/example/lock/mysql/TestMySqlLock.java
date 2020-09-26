@@ -18,7 +18,10 @@ public class TestMySqlLock {
     }
 
     public enum BizEnum {
-        BIZID, BIZTYPE, LOCKTYPE
+        BIZID, BIZTYPE, LOCKTYPE,
+
+        THREAD_LOCK,
+        THREAD_LOCK_TYPE
     }
 
     int count = 0;
