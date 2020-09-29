@@ -768,13 +768,18 @@
                 </dependencies>
             </plugin>-->
 
-<!--           <plugin>
+            <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-               <configuration>
-                   <fork>true</fork>
-               </configuration>
-            </plugin>-->
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -800,14 +805,14 @@
                 </configuration>
             </plugin>
 
-            <!--<plugin>
+            <plugin>
                 <groupId>com.spotify</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>1.0.0</version>
                 <configuration>
                     <imageName>${project.groupId}.${project.artifactId}</imageName>
                     <dockerDirectory>src/main/docker</dockerDirectory>
-                    &lt;!&ndash;<dockerHost>http://k8s-slave1:2375</dockerHost>&ndash;&gt;
+                    <!--<dockerHost>http://k8s-slave1:2375</dockerHost>-->
                     <resources>
                         <resource>
                             <targetPath>/</targetPath>
@@ -832,7 +837,7 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>-->
+            </plugin>
 
              <!--<plugin>
                 <groupId>org.mybatis.generator</groupId>

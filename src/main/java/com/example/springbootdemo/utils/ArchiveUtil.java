@@ -1,13 +1,22 @@
 package com.example.springbootdemo.utils;
 
+import com.google.common.base.Predicate;
+import com.google.common.io.Files;
+import com.sun.xml.internal.messaging.saaj.util.ByteOutputStream;
 import org.apache.commons.compress.archivers.tar.TarArchiveEntry;
+import org.apache.commons.compress.archivers.tar.TarArchiveInputStream;
 import org.apache.commons.compress.archivers.tar.TarArchiveOutputStream;
+import org.apache.commons.compress.compressors.gzip.GzipCompressorInputStream;
 import org.apache.commons.compress.compressors.gzip.GzipCompressorOutputStream;
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 
 import java.io.*;
+import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class ArchiveUtil {
 
@@ -99,8 +108,40 @@ public class ArchiveUtil {
         return success;
     }
 
+    public static Map<String, String> fetchFileNameWithContext(String filePath) throws IOException {
+        Map<String, String> data = new HashMap<>();
+        TarArchiveInputStream tarArchiveInputStream = new TarArchiveInputStream(new GzipCompressorInputStream(new FileInputStream(filePath)));
+
+        TarArchiveEntry nextTarEntry = null;
+        while ((nextTarEntry = (TarArchiveEntry) tarArchiveInputStream.getNextEntry()) != null) {
+            if (nextTarEntry.getSize() > 0) {
+                data.put(nextTarEntry.getName(), new String(getContent(tarArchiveInputStream)));
+            }
+        }
+
+        return data;
+    }
+
+    public static byte[] getContent(InputStream inputStream) {
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+        try {
+            byte[] bytes = new byte[1024];
+            while (true) {
+                int len = inputStream.read(bytes);
+                if (len == -1) {
+                    break;
+                }
+                byteArrayOutputStream.write(bytes, 0, len);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return byteArrayOutputStream.toByteArray();
+    }
+
     public static void main(String[] args) throws Exception {
 //        generateTargz(new File("/Users/youxuehu/IdeaProjects/springboot-demo/target/classes"));
-        generateTargz();
+//        generateTargz();
+        fetchFileNameWithContext("/Users/youxuehu/cmake-3.6.0-Linux-x86_64.tar.gz");
     }
 }
