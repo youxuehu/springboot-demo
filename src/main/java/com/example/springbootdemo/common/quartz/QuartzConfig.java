@@ -7,7 +7,7 @@ import org.springframework.scheduling.quartz.*;
 
 import java.util.Date;
 
-@Configuration
+//@Configuration
 public class QuartzConfig {
     @Bean
     MethodInvokingJobDetailFactoryBean methodInvokingJobDetailFactoryBean() {

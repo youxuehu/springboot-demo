@@ -353,7 +353,7 @@
                     <artifactId>my-elasticsearch-starter</artifactId>
                     <version>1.0-SNAPSHOT</version>
                 </dependency>-->
-<!--        <dependency>
+        <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid-spring-boot-starter</artifactId>
             <version>1.1.10</version>
@@ -363,7 +363,7 @@
                     <artifactId>slf4j-log4j12</artifactId>
                 </exclusion>
             </exclusions>
-        </dependency>-->
+        </dependency>
 
         <!--        <dependency>
                     <groupId>org.springframework.boot</groupId>
@@ -706,6 +706,13 @@
             <artifactId>TestSpring</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>-->
+        <!-- https://mvnrepository.com/artifact/com.mchange/c3p0 -->
+        <dependency>
+            <groupId>com.mchange</groupId>
+            <artifactId>c3p0</artifactId>
+            <version>0.9.5.5</version>
+        </dependency>
+
     </dependencies>
 
     <dependencyManagement>
@@ -865,11 +872,11 @@
                         <artifactId>mybatis-generator-core</artifactId>
                         <version>1.3.2</version>
                     </dependency>
-        <!--            <dependency>
+                    <dependency>
                         <groupId>org.example</groupId>
                         <artifactId>TestSpring</artifactId>
                         <version>1.0-SNAPSHOT</version>
-                    </dependency>-->
+                    </dependency>
                 </dependencies>
             </plugin>
         </plugins>
