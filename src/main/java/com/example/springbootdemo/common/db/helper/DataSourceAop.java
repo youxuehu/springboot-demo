@@ -5,8 +5,8 @@ import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 
-@Aspect
-@Component
+//@Aspect
+//@Component
 public class DataSourceAop {
 
     @Pointcut("(execution(* com.example.springbootdemo.common.db.service..*.select*(..))) || (execution(* com.example.springbootdemo.common.db.service..*.query*(..))) || (execution(* com.example.springbootdemo.common.db.service..*.get*(..)))")

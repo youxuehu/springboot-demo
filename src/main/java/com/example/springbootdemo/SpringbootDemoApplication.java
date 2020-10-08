@@ -14,6 +14,7 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.kafka.KafkaAutoConfiguration;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
@@ -26,7 +27,7 @@ import java.io.*;
 import java.util.List;
 
 @Slf4j
-@SpringBootApplication(exclude = KafkaAutoConfiguration.class)
+@SpringBootApplication(exclude = {KafkaAutoConfiguration.class})
 //@ComponentScan("com.tiger.elasticsearch")
 @MapperScan(basePackages={"com.example.springbootdemo.**.mapper"})
 //@Order(1)
