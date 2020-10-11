@@ -49,4 +49,9 @@
     <bean id="testMemcachedLock" class="org.example.lock.memcached.impl.TestMemcachedLock">
         <property name="memcachedLock" ref="memcachedLock"/>
     </bean>
+
+    <bean class="org.example.MyApplicationContextAware" id="myApplicationContextAware"/>
+    <bean id="testService" class="org.example.service.impl.TestServiceImpl">
+        <property name="myApplicationContextAware" ref="myApplicationContextAware"/>
+    </bean>
 </beans>

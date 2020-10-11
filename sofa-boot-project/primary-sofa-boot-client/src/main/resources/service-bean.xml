@@ -8,7 +8,17 @@
                            http://sofastack.io/schema/sofaboot.xsd">
 
 
-    <sofa:reference id="helloSyncService" interface="org.example.service.HelloSyncService">
-        <sofa:binding.h2c/>
+    <sofa:reference jvm-first="false" id="helloSyncGenericServiceReference" interface="com.alipay.sofa.rpc.api.GenericService">
+        <sofa:binding.h2c>
+            <sofa:global-attrs generic-interface="org.example.service.HelloSyncService"/>
+        </sofa:binding.h2c>
     </sofa:reference>
+
+
+    <sofa:reference jvm-first="false" id="testGenericServiceReference" interface="com.alipay.sofa.rpc.api.GenericService">
+        <sofa:binding.h2c>
+            <sofa:global-attrs generic-interface="org.example.service.TestService"/>
+        </sofa:binding.h2c>
+    </sofa:reference>
+
 </beans>

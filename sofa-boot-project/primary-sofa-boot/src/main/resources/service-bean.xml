@@ -12,4 +12,10 @@
         <sofa:binding.h2c/>
     </sofa:service>
 
+
+    <bean id="testService" class="com.example.primarysofaboot.service.impl.TestServiceImpl"/>
+    <sofa:service ref="testService" interface="org.example.service.TestService">
+        <sofa:binding.h2c/>
+    </sofa:service>
+
 </beans>
