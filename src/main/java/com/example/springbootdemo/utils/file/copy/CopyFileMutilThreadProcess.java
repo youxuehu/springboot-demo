@@ -10,12 +10,12 @@ import java.util.concurrent.TimeUnit;
 
 public class CopyFileMutilThreadProcess {
 
-    static final int copySize = 10000;
+    static final long copySize = 1 * 1024;
 
     public static void main(String[] args) throws Exception {
 
-        File file1 = new File("/Users/youxuehu/The_Man_of_Property.txt");
-        File file2 = new File("/Users/youxuehu/IdeaProjects/springboot-demo/src/main/java/com/example/springbootdemo/utils/file/copy/2.txt");
+        File file1 = new File("/Users/youxuehu/IdeaProjects/springboot-demo/src/main/java/com/example/springbootdemo/utils/file/SplitFileUtil.java");
+        File file2 = new File("/Users/youxuehu/IdeaProjects/springboot-demo/src/main/java/com/example/springbootdemo/utils/file/SplitFileUtil2.java");
 
         RandomAccessFile randomAccessFile1 = new RandomAccessFile(file1, "r");
         RandomAccessFile randomAccessFile2 = new RandomAccessFile(file2, "rw");
@@ -29,7 +29,7 @@ public class CopyFileMutilThreadProcess {
         ThreadPoolExecutor pool = new ThreadPoolExecutor(bord, bord, 0, TimeUnit.SECONDS, new ArrayBlockingQueue<>(10000));
         try {
             for (int i = 1; i < bord; i++) {
-                pool.execute(new CopyFileThread(file1, file2, i * copySize * 1024));
+                pool.execute(new CopyFileThread(file1, file2, i * copySize));
             }
             randomAccessFile1.seek(0);
             randomAccessFile2.seek(0);
@@ -42,11 +42,8 @@ public class CopyFileMutilThreadProcess {
             }
             randomAccessFile1.close();
             randomAccessFile2.close();
-            Thread.sleep(3000);
             System.out.println("复制完成");
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         } finally {
             pool.shutdown();
@@ -72,11 +69,12 @@ public class CopyFileMutilThreadProcess {
 
         @Override
         public void run() {
+            System.out.println(Thread.currentThread().getName() + " >>>>>>>>>>");
             try {
                 randomAccessFile1.seek(startPoint);
                 randomAccessFile2.seek(startPoint);
                 byte[] bytes = new byte[1024];
-                int len = 0;
+                int len;
                 int maxSize = 0;
                 while ((len = randomAccessFile1.read(bytes)) != -1 && maxSize < copySize) {
                     randomAccessFile2.write(bytes, 0, len);
