@@ -1,4 +1,4 @@
-package com.example.springbootdemo.common.builder.job;
+package com.example.springbootdemo.common.设计模式.策略.builder.job;
 
 public class SqlJob extends AbstractJob implements Job {
 

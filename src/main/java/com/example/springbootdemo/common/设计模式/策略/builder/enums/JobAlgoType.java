@@ -1,4 +1,4 @@
-package com.example.springbootdemo.common.builder.enums;
+package com.example.springbootdemo.common.设计模式.策略.builder.enums;
 
 public enum JobAlgoType {
 

@@ -6,6 +6,9 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+/**
+ * 三个线程顺序交替执行
+ */
 public class ThreeJiaotiMain {
 
     public static void main(String[] args) {

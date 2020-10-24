@@ -1,7 +1,7 @@
-package com.example.springbootdemo.common.builder.proxy;
+package com.example.springbootdemo.common.设计模式.策略.builder.proxy;
 
-import com.example.springbootdemo.common.builder.JobBuilder;
-import com.example.springbootdemo.common.builder.enums.JobAlgoType;
+import com.example.springbootdemo.common.设计模式.策略.builder.JobBuilder;
+import com.example.springbootdemo.common.设计模式.策略.builder.enums.JobAlgoType;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
