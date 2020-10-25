@@ -1,22 +1,18 @@
 package com.example.springbootdemo.utils;
 
-import com.google.common.base.Predicate;
-import com.google.common.io.Files;
-import com.sun.xml.internal.messaging.saaj.util.ByteOutputStream;
 import org.apache.commons.compress.archivers.tar.TarArchiveEntry;
 import org.apache.commons.compress.archivers.tar.TarArchiveInputStream;
 import org.apache.commons.compress.archivers.tar.TarArchiveOutputStream;
 import org.apache.commons.compress.compressors.gzip.GzipCompressorInputStream;
 import org.apache.commons.compress.compressors.gzip.GzipCompressorOutputStream;
-import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
-
 import java.io.*;
-import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import static com.example.springbootdemo.utils.ShellUtil.runShell;
 
 public class ArchiveUtil {
 
@@ -82,30 +78,11 @@ public class ArchiveUtil {
         cmds.add("-c");
         cmds.add("cd /Users/youxuehu/IdeaProjects/springboot-demo/src/main/java/com/example/springbootdemo/utils && cat ArchiveUtil.java");
         try {
-            boolean b = runShell(cmds);
+            runShell(cmds);
 
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-
-    public static boolean runShell(List<String> cmds) throws Exception{
-        ProcessBuilder processBuilder = new ProcessBuilder();
-        processBuilder.command(cmds);
-        processBuilder.redirectErrorStream(true);
-        boolean success = false;
-        Process process = processBuilder.start();
-        int returnCode = process.waitFor();
-        InputStream inputStream = process.getInputStream();
-        List<String> readLines = IOUtils.readLines(inputStream, "utf-8");
-        for (String line : readLines) {
-            System.out.println(line);
-        }
-        process.destroy();
-        if (0 == returnCode) {
-            success = true;
-        }
-        return success;
     }
 
     public static Map<String, String> fetchFileNameWithContext(String filePath) throws IOException {

@@ -1,0 +1,3 @@
+yarn application -status application_1603522898313_0005
+yarn logs -applicationId application_1603522898313_0005
+yarn application -list -appStates all
