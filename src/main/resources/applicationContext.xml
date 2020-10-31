@@ -9,6 +9,8 @@
             <!-- 谁配置在前preHandle就先执行 -->
             <mvc:interceptor>
                 <mvc:mapping path="/**"/>
+                <mvc:exclude-mapping path="/login"/>
+                <mvc:exclude-mapping path="/doLogin"/>
                 <bean class="com.example.springbootdemo.intercepter.LoginCheckIntercepter"/>
             </mvc:interceptor>
             <mvc:interceptor>

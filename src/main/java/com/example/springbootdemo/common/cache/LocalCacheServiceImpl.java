@@ -1,23 +1,35 @@
 package com.example.springbootdemo.common.cache;
 
+import org.apache.commons.lang.StringUtils;
+import org.springframework.stereotype.Service;
+
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.*;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Future;
+import java.util.concurrent.ThreadFactory;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-public class LocalCache {
+@Service
+public class LocalCacheServiceImpl implements CacheService {
     private static final Map<String, CachedObj> CACHED = new ConcurrentHashMap<>();
     private AtomicBoolean atomicBoolean = new AtomicBoolean(false);
     public static void main(String[] args) {
-        LocalCache localCache = new LocalCache();
-        localCache.set("name", "jack", 7 * 1000L);
+        LocalCacheServiceImpl localCacheServiceImpl = new LocalCacheServiceImpl();
+        localCacheServiceImpl.set("name", "jack", 7 * 1000L);
         try {
             Thread.sleep(6 * 1000L);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        String name = localCache.get("name", String.class);
+        String name = localCacheServiceImpl.get("name", String.class);
         System.out.println("name=" + name);
     }
 
@@ -92,6 +104,9 @@ public class LocalCache {
     }
 
     private boolean checkCache(String key) {
+        if (StringUtils.isBlank(key)) {
+            return false;
+        }
         CachedObj cachedObj = CACHED.get(key);
         if (cachedObj == null) {
             return false;
@@ -103,7 +118,10 @@ public class LocalCache {
         return true;
     }
 
-    private void delete(String key) {
+    public void delete(String key) {
+        if (StringUtils.isBlank(key)) {
+            return;
+        }
         CachedObj cachedObj = CACHED.get(key);
         if (cachedObj != null) {
             CACHED.remove(key);
