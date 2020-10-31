@@ -86,6 +86,9 @@
                             console.log(res.toString());
                         }
                         $("#submitJob").attr("disabled",false)
+                    },
+                    error: function () {
+                        $("#Message").html("请求超时！")
                     }
                 })
 
@@ -117,7 +120,11 @@
                     $("#queryLog").attr("disabled",false)
                     const showContent = $("#Logs");
                     showContent[0].scrollTop = showContent[0].scrollHeight;
+                },
+                error: function () {
+                    $("#Logs").html("请求超时！")
                 }
+
             })
         }
         window.setInterval(check, 10000); //每秒执行一次
