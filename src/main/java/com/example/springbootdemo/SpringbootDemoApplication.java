@@ -18,6 +18,7 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.kafka.KafkaAutoConfiguration;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.ImportResource;
 import org.springframework.core.annotation.Order;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.stereotype.Controller;
@@ -32,6 +33,7 @@ import java.util.List;
 @MapperScan(basePackages={"com.example.springbootdemo.**.mapper"})
 //@Order(1)
 @EnableScheduling
+@ImportResource(locations = {"classpath:applicationContext.xml"})
 public class SpringbootDemoApplication implements ApplicationRunner {
 
     public static void main(String[] args) {
