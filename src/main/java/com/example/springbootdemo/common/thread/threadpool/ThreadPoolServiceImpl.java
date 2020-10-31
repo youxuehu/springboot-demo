@@ -61,6 +61,6 @@ public class ThreadPoolServiceImpl implements ThreadPoolService, InitializingBea
                 LOG.info(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = " + threadPoolExecutor.getTaskCount());
                 LOG.info(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = " + threadPoolExecutor.getCompletedTaskCount());
             }
-        }, 5, 5, TimeUnit.SECONDS);
+        }, 5, 50, TimeUnit.SECONDS);
     }
 }

@@ -6,6 +6,8 @@ import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.TimerTask;
 import java.util.concurrent.*;
 
@@ -22,6 +24,7 @@ public class SubmitTaskTest implements InitializingBean {
     @Override
     public void afterPropertiesSet() throws Exception {
         scheduledThreadPoolExecutor = new ScheduledThreadPoolExecutor(1);
+        List<Future<String>> futureList = new ArrayList<>();
         scheduledThreadPoolExecutor.scheduleWithFixedDelay(new TimerTask() {
             @Override
             public void run() {
@@ -39,16 +42,20 @@ public class SubmitTaskTest implements InitializingBean {
                             return "<<<<<<<<<<<<<<<<<<<<<<<<<<<<task [" + finalI + "] execute success>>>>>>>>>>>>>>>>>>>>>>>>>>>";
                         }
                     });
-                    try {
-                        String message = result.get();
-                        LOG.info(message);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    } catch (ExecutionException e) {
-                        e.printStackTrace();
-                    }
+                    futureList.add(result);
                 }
             }
-        }, 3, 3, TimeUnit.SECONDS);
+        }, 3, 30, TimeUnit.SECONDS);
+
+        for (Future<String> future : futureList) {
+            try {
+                String message = future.get();
+                LOG.info(message);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } catch (ExecutionException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }

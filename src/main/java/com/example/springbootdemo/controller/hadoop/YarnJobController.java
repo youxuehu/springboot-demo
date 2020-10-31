@@ -1,7 +1,9 @@
 package com.example.springbootdemo.controller.hadoop;
+import com.example.springbootdemo.controller.BaseController;
 import com.example.springbootdemo.controller.hadoop.param.TaskVO;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -14,19 +16,23 @@ import static com.example.springbootdemo.utils.ShellUtil.runShell;
 
 @Controller
 @RequestMapping("/yarn")
-public class YarnJobController {
+public class YarnJobController extends BaseController {
     @Value("${hadoop_client}")
     String hadoopClient;
     @Value("${yarn_client}")
     String yarnClient;
+
+    @RequestMapping("manager")
+    public String manager() {
+        return "HadoopManager";
+    }
     /**
      * 提交任务到yarn
      * @return
      */
     @RequestMapping("submit")
     @ResponseBody
-    public Object submit(@RequestBody TaskVO taskVO) {
-        Map<String, String> result = new HashMap<>();
+    public ModelMap submit(TaskVO taskVO) {
         List<String> cmds = new ArrayList<>();
         cmds.add("/bin/sh");
         cmds.add("-c");
@@ -36,18 +42,18 @@ public class YarnJobController {
         stringBuilder.append(taskVO.getInputPath() + " ");
         stringBuilder.append(taskVO.getOutputPath());
         cmds.add(hadoopClient+ stringBuilder.toString());
+        String appId = null;
         try {
             List<String> logs = runShell(cmds);
             for (String log : logs) {
                 if (log.contains("application_")) {
-                    result.put("appId", log.substring(log.indexOf("application_")));
-                    return result;
+                    appId = log.substring(log.indexOf("application_"));
                 }
             }
+            return success("appId", appId);
         } catch (Exception e) {
-            e.printStackTrace();
+            return error("errorMessage", e.toString());
         }
-        return null;
     }
 
     /**
