@@ -47,10 +47,9 @@ public class BaseController {
                 key = param[i];
             } else {
                 value = param[i];
-                data.put(key, value);
+                modelMap.put((String) key, value);
             }
         }
-        modelMap.put("data", data);
         modelMap.put("success", false);
         return modelMap;
     }

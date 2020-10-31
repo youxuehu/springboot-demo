@@ -1,16 +1,18 @@
 package com.example.springbootdemo.controller.hadoop.param;
 
+import org.springframework.web.multipart.MultipartFile;
+
 public class TaskVO {
-    private String jarPath;
+    private MultipartFile jarPath;
     private String className;
     private String inputPath;
     private String outputPath;
 
-    public String getJarPath() {
+    public MultipartFile getJarPath() {
         return jarPath;
     }
 
-    public void setJarPath(String jarPath) {
+    public void setJarPath(MultipartFile jarPath) {
         this.jarPath = jarPath;
     }
 

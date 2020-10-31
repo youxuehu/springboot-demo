@@ -162,8 +162,39 @@ public class HDFS2Utils implements ApplicationRunner {
         return fs.exists(new Path(path));
     }
 
+    /**
+     * 删除一个文件
+     * @param hdfsPath
+     * @throws Exception
+     */
     public void delete(String hdfsPath) throws Exception {
         FileSystem fs = FileSystem.get(configuration);
-        fs.deleteOnExit(new Path(hdfsPath));
+        // 递归删除
+        fs.delete(new Path(hdfsPath), true);
+    }
+
+    /**
+     * 删除整个目录
+     * @param hdfsPath
+     * @throws Exception
+     */
+    public void deleteWithDir(String hdfsPath) throws Exception {
+        FileSystem fs = FileSystem.get(configuration);
+        if (fs.isFile(new Path(hdfsPath))) {
+            fs.delete(new Path(hdfsPath));
+            return;
+        }
+        List<FileInfo> fileInfos = new ArrayList<>();
+        if (fs.isDirectory(new Path(hdfsPath))) {
+            fetchFiles(hdfsPath, fileInfos);
+        }
+        for (FileInfo fileInfo : fileInfos) {
+            fs.delete(new Path(fileInfo.getPath()));
+        }
+        List<String> dirs = new ArrayList<>();
+        fetchFileDirs(hdfsPath, dirs);
+        for (String dirPath : dirs) {
+            fs.delete(new Path(dirPath));
+        }
     }
 }
