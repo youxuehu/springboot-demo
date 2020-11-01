@@ -1,1 +1,39 @@
 mysqldump -uroot -pzhf123.. test > /root/test
+
+
+mysqldump -uroot -pzhf123.. baseAdmin > /root/baseAdmin
+mysqldump -uroot -pzhf123.. eladmin > /root/eladmin
+mysqldump -uroot -pzhf123.. hive_db > /root/hive_db
+mysqldump -uroot -pzhf123.. information_schema > /root/information_schema
+mysqldump -uroot -pzhf123.. quartz > /root/quartz
+mysqldump -uroot -pzhf123.. test_01 > /root/test_01
+mysqldump -uroot -pzhf123.. test_02 > /root/test_02
+mysqldump -uroot -pzhf123.. test_03 > /root/test_03
+mysqldump -uroot -pzhf123.. test_04 > /root/test_04
++--------------------+
+| Database           |
++--------------------+
+| baseAdmin          |
+| eladmin            |
+| hive_db            |
+| information_schema |
+| mysql              |
+| performance_schema |
+| quartz             |
+| sys                |
+| test               |
+| test_01            |
+| test_02            |
+| test_03            |
+| test_04            |
++--------------------+
+
+docker cp 61faf720d6d3:/root/baseAdmin .
+docker cp 61faf720d6d3:/root/eladmin .
+docker cp 61faf720d6d3:/root/hive_db .
+docker cp 61faf720d6d3:/root/information_schema .
+docker cp 61faf720d6d3:/root/quartz .
+docker cp 61faf720d6d3:/root/test_01 .
+docker cp 61faf720d6d3:/root/test_02 .
+docker cp 61faf720d6d3:/root/test_03 .
+docker cp 61faf720d6d3:/root/test_04 .
