@@ -31,6 +31,9 @@ public class LoginCheckIntercepter extends HandlerInterceptorAdapter {
     private boolean checkLogin(HttpServletRequest request) {
         String cacheKey = null;
         Cookie[] cookies = request.getCookies();
+        if (cookies == null) {
+            return true;
+        }
         for (Cookie cookie : cookies) {
             String name = cookie.getName();
             if (StringUtils.equals(SESSION_KET, name)) {
