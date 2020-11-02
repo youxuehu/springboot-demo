@@ -1,5 +1,7 @@
 package com.example.springbootdemo.intercepter;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.example.springbootdemo.common.cache.CacheService;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +20,18 @@ public class LoginCheckIntercepter extends HandlerInterceptorAdapter {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         System.out.println("登录拦截器");
         if (checkLogin(request)) {
-            redirect(request, response);
+            String accept = request.getHeader("accept");
+            if (StringUtils.isNotBlank(accept) && StringUtils.contains(accept, "json")) {
+                JSONObject errorJSONObject = new JSONObject();
+                errorJSONObject.put("errorMessage", "登录超时，请重新登录！");
+                response.setCharacterEncoding("utf-8");
+                response.setContentType("application/json;charset=utf-8");
+                response.getWriter().println(JSON.toJSONString(errorJSONObject));
+                response.getWriter().flush();
+                response.getWriter().close();
+            } else {
+                redirect(request, response);
+            }
             return false;
         }
         return true;
