@@ -54,6 +54,6 @@ public class LoginController extends BaseController {
         Cookie cookie = new Cookie(SESSION_KET, uuid);
         cookie.setMaxAge(24 * 3600 * 1000);
         response.addCookie(cookie);
-        cacheService.set(uuid, JSON.toJSONString(sessionInfo), 180 * 1000);
+        cacheService.set(uuid, JSON.toJSONString(sessionInfo), 3600 * 1000);
     }
 }

@@ -1,10 +1,11 @@
-package com.example.springbootdemo.common.quartz.componment;
+package com.example.springbootdemo.controller;
 import java.util.HashMap;
 import java.util.Map;
 
 import com.alibaba.fastjson.JSON;
 import com.example.springbootdemo.common.db.dao.quartz.jobandtrigger.model.JobAndTrigger;
 import com.example.springbootdemo.common.db.service.quartz.IJobAndTriggerService;
+import com.example.springbootdemo.common.quartz.componment.BaseJob;
 import com.github.pagehelper.PageInfo;
 import org.quartz.CronScheduleBuilder;
 import org.quartz.CronTrigger;
@@ -147,7 +148,6 @@ public class JobController
         Map<String, Object> map = new HashMap<String, Object>();
         map.put("JobAndTrigger", jobAndTrigger);
         map.put("number", jobAndTrigger.getTotal());
-        System.out.println(JSON.toJSONString(map, true));
         return map;
     }
 
