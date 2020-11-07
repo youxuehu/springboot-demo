@@ -1,4 +1,4 @@
-package com.example.springbootdemo.common.controller;
+package com.example.springbootdemo.controller;
 
 import com.example.springbootdemo.common.hadoop2.HDFS2Utils;
 import org.springframework.beans.factory.annotation.Autowired;
