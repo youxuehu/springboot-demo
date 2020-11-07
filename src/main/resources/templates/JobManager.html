@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:el="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>QuartzDemo</title>
@@ -86,6 +86,43 @@
             background-color: #e35885;
         }
     </style>
+    <style type="text/css">
+        #test #app ul li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #test #app {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+        }
+        #test #app .tab-tilte{
+            width: 100%;
+        }
+        #test #app .tab-tilte li{
+            float: left;
+            width: 25%;
+            text-align: center;
+            background-color:#f4f4f4;
+            cursor: pointer;
+        }
+        /* 点击对应的标题添加对应的背景颜色 */
+        #test #app .tab-tilte .active{
+            background-color: indianred;
+            color: indianred;
+        }
+        #test #app .tab-content #JobManagerDiv,#OtherDiv2,#OtherDiv3,#OtherDiv4{
+            width: 100%;
+            height: 100%;
+        }
+
+        #test #app .tab-content #OtherDiv2 .Hadoop-iframe{
+            width: 100%;
+            height: 600px;
+        }
+    </style>
 </head>
 <body>
 
@@ -94,162 +131,196 @@
     <!-- 菜单样式为active类 -->
     <nav v-bind:class="active" v-on:click.prevent>
         <!-- 当菜单链接被点击，调用makeActive方法 -->
-        <a href="#" class="home" v-on:click="makeHome()">home</a>
-        <a href="#" class="best" v-on:click="makeBest()">best</a>
+        <a href="#" class="home" v-on:click="makeHome()">JOB</a>
+        <a href="#" class="best" v-on:click="makeBest()">HADOOP</a>
         <a href="#" class="animal" v-on:click="makeAnimal()">animal</a>
         <a href="#" class="hello" v-on:click="makeHello()">hello</a>
     </nav>
-    <div>
-        <div id="top">
-            <el-button type="text" @click="search" style="color:white">查询</el-button>
-            <el-button type="text" @click="handleadd" style="color:white">添加</el-button>
-            <el-button type="text" @click="taskmanager" style="color:white">任务管理</el-button>
-            </span>
-        </div>
 
-        <br/>
 
-        <div>
+    <div id="app">
+        <ul class="tab-tilte">
+            <li @click="cur=0" :class="{active:cur==0}">标题一</li>
+            <li @click="cur=1" :class="{active:cur==1}">标题二</li>
+            <li @click="cur=2" :class="{active:cur==2}">标题三</li>
+            <li @click="cur=3" :class="{active:cur==3}">标题四</li>
+        </ul>
+        <div class="tab-content">
+            <div id="JobManagerDiv" v-show="cur==0">
 
-            <el-table
-                    ref="testTable"
-                    :data="tableData"
-                    style="width:100%;height: 500px;overflow: auto;"
-                    border
-            >
 
-                <el-table-column
-                        prop="job_NAME"
-                        label="任务名称"
-                        sortable
-                        show-overflow-tooltip>
-                </el-table-column>
+                <div>
+                    <div id="top">
+                        <el-input type="hidden" id="keyword">xxx</el-input>
+                        <el-button type="text" @click="search" style="color:white">查询</el-button>
+                        <el-button type="text" @click="handleadd" style="color:white">添加</el-button>
+                        <el-button type="text" @click="taskmanager" style="color:white">任务管理</el-button>
+                        </span>
+                    </div>
 
-                <el-table-column
-                        prop="job_GROUP"
-                        label="任务所在组"
-                        sortable>
-                </el-table-column>
+                    <br/>
 
-                <el-table-column
-                        prop="job_CLASS_NAME"
-                        label="任务类名"
-                        sortable>
-                </el-table-column>
+                    <div>
 
-                <el-table-column
-                        prop="trigger_NAME"
-                        label="触发器名称"
-                        sortable>
-                </el-table-column>
+                        <el-table
+                                ref="testTable"
+                                :data="tableData"
+                                style="width:100%;height: 500px;overflow: auto;"
+                                border
+                        >
 
-                <el-table-column
-                        prop="trigger_GROUP"
-                        label="触发器所在组"
-                        sortable>
-                </el-table-column>
+                            <el-table-column
+                                    prop="job_NAME"
+                                    label="任务名称"
+                                    sortable
+                                    show-overflow-tooltip>
+                            </el-table-column>
 
-                <el-table-column
-                        prop="cron_EXPRESSION"
-                        label="表达式"
-                        sortable>
-                </el-table-column>
+                            <el-table-column
+                                    prop="job_GROUP"
+                                    label="任务所在组"
+                                    sortable>
+                            </el-table-column>
 
-                <el-table-column
-                        prop="time_ZONE_ID"
-                        label="时区"
-                        sortable>
-                </el-table-column>
+                            <el-table-column
+                                    prop="job_CLASS_NAME"
+                                    label="任务类名"
+                                    sortable>
+                            </el-table-column>
 
-                <el-table-column label="操作" width="300">
-                    <template scope="scope">
-                        <el-button
-                                size="small"
-                                type="warning"
-                                @click="handlePause(scope.$index, scope.row)">暂停
-                        </el-button>
+                            <el-table-column
+                                    prop="trigger_NAME"
+                                    label="触发器名称"
+                                    sortable>
+                            </el-table-column>
 
-                        <el-button
-                                size="small"
-                                type="info"
-                                @click="handleResume(scope.$index, scope.row)">恢复
-                        </el-button>
+                            <el-table-column
+                                    prop="trigger_GROUP"
+                                    label="触发器所在组"
+                                    sortable>
+                            </el-table-column>
 
-                        <el-button
-                                size="small"
-                                type="danger"
-                                @click="handleDelete(scope.$index, scope.row)">删除
-                        </el-button>
+                            <el-table-column
+                                    prop="cron_EXPRESSION"
+                                    label="表达式"
+                                    sortable>
+                            </el-table-column>
 
-                        <el-button
-                                size="small"
-                                type="success"
-                                @click="handleUpdate(scope.$index, scope.row)">修改
-                        </el-button>
-                    </template>
-                </el-table-column>
-            </el-table>
+                            <el-table-column
+                                    prop="time_ZONE_ID"
+                                    label="时区"
+                                    sortable>
+                            </el-table-column>
 
-            <div align="center">
-                <el-pagination
-                        @size-change="handleSizeChange"
-                        @current-change="handleCurrentChange"
-                        :current-page="currentPage"
-                        :page-sizes="[10, 20, 30, 40]"
-                        :page-size="pagesize"
-                        layout="total, sizes, prev, pager, next, jumper"
-                        :total="totalCount">
-                </el-pagination>
+                            <el-table-column label="操作" width="300">
+                                <template scope="scope">
+                                    <el-button
+                                            size="small"
+                                            type="warning"
+                                            @click="handlePause(scope.$index, scope.row)">暂停
+                                    </el-button>
+
+                                    <el-button
+                                            size="small"
+                                            type="info"
+                                            @click="handleResume(scope.$index, scope.row)">恢复
+                                    </el-button>
+
+                                    <el-button
+                                            size="small"
+                                            type="danger"
+                                            @click="handleDelete(scope.$index, scope.row)">删除
+                                    </el-button>
+
+                                    <el-button
+                                            size="small"
+                                            type="success"
+                                            @click="handleUpdate(scope.$index, scope.row)">修改
+                                    </el-button>
+                                </template>
+                            </el-table-column>
+                        </el-table>
+
+                        <div align="center">
+                            <el-pagination
+                                    @size-change="handleSizeChange"
+                                    @current-change="handleCurrentChange"
+                                    :current-page="currentPage"
+                                    :page-sizes="[10, 20, 30, 40]"
+                                    :page-size="pagesize"
+                                    layout="total, sizes, prev, pager, next, jumper"
+                                    :total="totalCount">
+                            </el-pagination>
+                        </div>
+                    </div>
+
+                    <el-dialog title="添加任务" :visible.syn="dialogFormVisible">
+                        <el-form :model="form">
+                            <el-form-item label="任务名称" label-width="120px" style="width:60%">
+                                <el-input v-model="form.jobName" auto-complete="off"></el-input>
+                            </el-form-item>
+                            <el-form-item label="任务分组" label-width="120px" style="width:60%">
+                                <el-input v-model="form.jobGroup" auto-complete="off"></el-input>
+                            </el-form-item>
+                            <el-form-item label="表达式" label-width="120px" style="width:60%">
+                                <el-input v-model="form.cronExpression" auto-complete="off"></el-input>
+                            </el-form-item>
+                        </el-form>
+                        <div slot="footer" class="dialog-footer">
+                            <el-button @click="dialogFormVisible = false">取 消</el-button>
+                            <el-button type="primary" @click="add">确 定</el-button>
+                        </div>
+                    </el-dialog>
+
+                    <el-dialog title="登录超时" :visible.syn="dialogLoginTimeout" :showClose="false" width="40%">
+                        <div>登录超时，请重新登录</div>
+                        <div slot="footer" class="dialog-footer">
+                            <el-button type="primary" @click="redirectLogin">确 定</el-button>
+                        </div>
+                    </el-dialog>
+
+                    <el-dialog title="修改任务" :visible.syn="updateFormVisible">
+                        <el-form :model="updateform">
+                            <el-form-item label="表达式" label-width="120px" style="width:35%">
+                                <el-input v-model="updateform.cronExpression" auto-complete="off"></el-input>
+                            </el-form-item>
+                        </el-form>
+                        <div slot="footer" class="dialog-footer">
+                            <el-button @click="updateFormVisible = false">取 消</el-button>
+                            <el-button type="primary" @click="update">确 定</el-button>
+                        </div>
+                    </el-dialog>
+                </div>
+
+                <footer align="center">
+                    <p>&copy; Quartz 任务管理</p>
+                </footer>
+
+            </div>
+            <div id="OtherDiv2" v-show="cur==1">
+                <h1>OtherDiv2</h1>
+                <iframe th:src="@{../static/HadoopManager.html}" frameborder="0" scrolling="yes" class="Hadoop-iframe"></iframe>
+            </div>
+            <div id="OtherDiv3" v-show="cur==2">
+                <h1>OtherDiv3</h1>
+            </div>
+            <div id="OtherDiv4" v-show="cur==3">
+                <h1>OtherDiv4</h1>
             </div>
         </div>
-
-        <el-dialog title="添加任务" :visible.syn="dialogFormVisible">
-            <el-form :model="form">
-                <el-form-item label="任务名称" label-width="120px" style="width:60%">
-                    <el-input v-model="form.jobName" auto-complete="off"></el-input>
-                </el-form-item>
-                <el-form-item label="任务分组" label-width="120px" style="width:60%">
-                    <el-input v-model="form.jobGroup" auto-complete="off"></el-input>
-                </el-form-item>
-                <el-form-item label="表达式" label-width="120px" style="width:60%">
-                    <el-input v-model="form.cronExpression" auto-complete="off"></el-input>
-                </el-form-item>
-            </el-form>
-            <div slot="footer" class="dialog-footer">
-                <el-button @click="dialogFormVisible = false">取 消</el-button>
-                <el-button type="primary" @click="add">确 定</el-button>
-            </div>
-        </el-dialog>
-
-        <el-dialog title="登录超时" :visible.syn="dialogLoginTimeout" :showClose="false" width="40%">
-            <div>登录超时，请重新登录</div>
-            <div slot="footer" class="dialog-footer">
-                <el-button type="primary" @click="redirectLogin">确 定</el-button>
-            </div>
-        </el-dialog>
-
-        <el-dialog title="修改任务" :visible.syn="updateFormVisible">
-            <el-form :model="updateform">
-                <el-form-item label="表达式" label-width="120px" style="width:35%">
-                    <el-input v-model="updateform.cronExpression" auto-complete="off"></el-input>
-                </el-form-item>
-            </el-form>
-            <div slot="footer" class="dialog-footer">
-                <el-button @click="updateFormVisible = false">取 消</el-button>
-                <el-button type="primary" @click="update">确 定</el-button>
-            </div>
-        </el-dialog>
     </div>
+
+
 </div>
-<footer align="center">
-    <p>&copy; Quartz 任务管理</p>
-</footer>
+
 
 <script>
+
 
     var vue = new Vue({
         el: "#test",
         data: {
+            cur: 0,
             active: 'home',
             //表格当前页数据
             tableData: [],
