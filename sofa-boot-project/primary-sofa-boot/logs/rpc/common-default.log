@@ -1,0 +1,33 @@
+2020-11-12 21:43:42,756 INFO  main                             - Welcome! Loading SOFA RPC Framework : 5.4.7_20181025093119, PID is:3556
+2020-11-12 21:43:42,762 INFO  main                             - Install Module: fault-tolerance
+2020-11-12 21:43:42,767 INFO  main                             - Install Module: sofaTracer-resteasy
+2020-11-12 21:43:42,787 INFO  main                             - The module lookout does not need to be loaded.
+2020-11-12 21:43:42,787 INFO  main                             - Install Module: sofaTracer
+2020-11-12 21:43:42,792 INFO  main                             - Export provider config : org.example.service.HelloSyncService::h2c with bean id helloSyncService
+2020-11-12 21:43:42,803 INFO  main                             - Export provider config : org.example.service.TestService::h2c with bean id testService
+2020-11-12 21:43:43,245 INFO  main                             - service published.  interfaceId[org.example.service.TestService]; protocol[h2c]
+2020-11-12 21:43:43,247 INFO  main                             - service published.  interfaceId[org.example.service.HelloSyncService]; protocol[h2c]
+2020-11-12 22:00:35,385 WARN  SOFA-RPC-ShutdownHook            - SOFA RPC Framework catch JVM shutdown event, Run shutdown hook now.
+2020-11-12 22:00:35,386 INFO  Thread-7                         - Unexport provider config : org.example.service.TestService::h2c with bean id testService
+2020-11-12 22:00:35,393 INFO  Thread-7                         - Unexport provider config : org.example.service.HelloSyncService::h2c with bean id helloSyncService
+2020-11-12 22:00:35,413 INFO  SOFA-RPC-ShutdownHook            - Uninstall Module: fault-tolerance
+2020-11-12 22:00:35,413 INFO  SOFA-RPC-ShutdownHook            - Uninstall Module: sofaTracer-resteasy
+2020-11-12 22:00:35,413 INFO  SOFA-RPC-ShutdownHook            - Uninstall Module: sofaTracer
+2020-11-12 22:00:35,413 WARN  SOFA-RPC-ShutdownHook            - SOFA RPC Framework has been release all resources ...
+2020-11-12 22:00:43,776 INFO  main                             - Welcome! Loading SOFA RPC Framework : 5.4.7_20181025093119, PID is:3915
+2020-11-12 22:00:43,781 INFO  main                             - Install Module: fault-tolerance
+2020-11-12 22:00:43,786 INFO  main                             - Install Module: sofaTracer-resteasy
+2020-11-12 22:00:43,805 INFO  main                             - The module lookout does not need to be loaded.
+2020-11-12 22:00:43,805 INFO  main                             - Install Module: sofaTracer
+2020-11-12 22:00:43,810 INFO  main                             - Export provider config : org.example.service.HelloSyncService::h2c with bean id helloSyncService
+2020-11-12 22:00:43,821 INFO  main                             - Export provider config : org.example.service.TestService::h2c with bean id testService
+2020-11-12 22:00:44,246 INFO  main                             - service published.  interfaceId[org.example.service.TestService]; protocol[h2c]
+2020-11-12 22:00:44,247 INFO  main                             - service published.  interfaceId[org.example.service.HelloSyncService]; protocol[h2c]
+2020-11-12 22:01:25,925 INFO  SOFA-SEV-H2C-BIZ-12300-5-T2      - Load tracer impl success: sofaTracer, com.alipay.sofa.rpc.tracer.sofatracer.RpcSofaTracer@16b4210b
+2020-11-12 22:02:04,347 WARN  SOFA-RPC-ShutdownHook            - SOFA RPC Framework catch JVM shutdown event, Run shutdown hook now.
+2020-11-12 22:02:04,348 INFO  Thread-7                         - Unexport provider config : org.example.service.TestService::h2c with bean id testService
+2020-11-12 22:02:04,354 INFO  Thread-7                         - Unexport provider config : org.example.service.HelloSyncService::h2c with bean id helloSyncService
+2020-11-12 22:02:04,380 INFO  SOFA-RPC-ShutdownHook            - Uninstall Module: fault-tolerance
+2020-11-12 22:02:04,380 INFO  SOFA-RPC-ShutdownHook            - Uninstall Module: sofaTracer-resteasy
+2020-11-12 22:02:04,380 INFO  SOFA-RPC-ShutdownHook            - Uninstall Module: sofaTracer
+2020-11-12 22:02:04,380 WARN  SOFA-RPC-ShutdownHook            - SOFA RPC Framework has been release all resources ...

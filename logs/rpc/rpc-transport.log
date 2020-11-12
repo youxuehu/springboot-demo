@@ -1,0 +1,3 @@
+2020-11-12 21:41:28,458 INFO  SOFA-SEV-BOSS-12300-6-T1         com.alipay.sofa.rpc.transport.http.AbstractHttp2ServerTransport - HTTP/2 Server bind to 0.0.0.0:12300 success!
+2020-11-12 21:42:47,179 INFO  SOFA-RPC-ShutdownHook            com.alipay.sofa.rpc.transport.http.AbstractHttp2ServerTransport - Shutdown the SOFA RPC HTTP/2 server transport now...
+2020-11-12 21:42:47,200 INFO  SOFA-RPC-ShutdownHook            com.alipay.sofa.rpc.transport.ClientTransportFactory - Shutdown all client transport now!

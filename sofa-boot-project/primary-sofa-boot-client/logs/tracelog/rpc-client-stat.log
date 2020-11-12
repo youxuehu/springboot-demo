@@ -1,0 +1,1 @@
+{"time":"2020-11-12 22:01:48.806","stat.key":{"method":"$genericInvoke","local.app":"sofa-boot-demo-client","service":"org.example.service.HelloSyncService"},"count":1,"total.cost.milliseconds":167,"success":"Y"}

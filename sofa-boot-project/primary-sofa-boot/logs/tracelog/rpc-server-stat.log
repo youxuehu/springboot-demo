@@ -1,0 +1,1 @@
+{"time":"2020-11-12 22:01:43.805","stat.key":{"method":"sayHello","local.app":"sofa-boot-demo-server","remote.app":"sofa-boot-demo-client","service":"org.example.service.HelloSyncService"},"count":1,"total.cost.milliseconds":15,"success":"Y"}

@@ -1,0 +1,34 @@
+2020-11-12 21:43:43,230 INFO  main                             com.alipay.sofa.rpc.registry.local.LocalRegistryHelper - Load backup file from /Users/youxuehu/localFileRegistry/localRegistry.reg
+2020-11-12 21:43:43,232 INFO  main                             com.alipay.sofa.rpc.registry.local.LocalRegistry - RPC-00205: RPC 服务[org.example.service.TestService:1.0@h2c]发布开始 
+2020-11-12 21:43:43,232 INFO  main                             com.alipay.sofa.rpc.registry.local.LocalRegistry - RPC-00201: 发布 RPC 服务：服务名[org.example.service.TestService:1.0@h2c] 
+2020-11-12 21:43:43,245 INFO  main                             com.alipay.sofa.rpc.registry.local.LocalRegistryHelper - Write backup file to /Users/youxuehu/localFileRegistry/localRegistry.reg
+2020-11-12 21:43:43,245 INFO  main                             com.alipay.sofa.rpc.registry.local.LocalRegistry - RPC-00206: RPC 服务[org.example.service.TestService:1.0@h2c]发布结束 
+2020-11-12 21:43:43,246 INFO  main                             com.alipay.sofa.rpc.registry.local.LocalRegistry - RPC-00205: RPC 服务[org.example.service.HelloSyncService:1.0@h2c]发布开始 
+2020-11-12 21:43:43,246 INFO  main                             com.alipay.sofa.rpc.registry.local.LocalRegistry - RPC-00201: 发布 RPC 服务：服务名[org.example.service.HelloSyncService:1.0@h2c] 
+2020-11-12 21:43:43,246 INFO  main                             com.alipay.sofa.rpc.registry.local.LocalRegistryHelper - Write backup file to /Users/youxuehu/localFileRegistry/localRegistry.reg
+2020-11-12 21:43:43,247 INFO  main                             com.alipay.sofa.rpc.registry.local.LocalRegistry - RPC-00206: RPC 服务[org.example.service.HelloSyncService:1.0@h2c]发布结束 
+2020-11-12 22:00:35,392 INFO  SOFA-RPC-ShutdownHook            com.alipay.sofa.rpc.registry.local.LocalRegistryHelper - Write backup file to /Users/youxuehu/localFileRegistry/localRegistry.reg
+2020-11-12 22:00:35,392 INFO  SOFA-RPC-ShutdownHook            com.alipay.sofa.rpc.registry.local.LocalRegistry - RPC-00203: 注销 RPC 服务：服务名[org.example.service.TestService:1.0@h2c]	数量[1] 
+2020-11-12 22:00:35,393 INFO  Thread-7                         com.alipay.sofa.rpc.registry.local.LocalRegistryHelper - Write backup file to /Users/youxuehu/localFileRegistry/localRegistry.reg
+2020-11-12 22:00:35,393 INFO  Thread-7                         com.alipay.sofa.rpc.registry.local.LocalRegistry - RPC-00203: 注销 RPC 服务：服务名[org.example.service.TestService:1.0@h2c]	数量[1] 
+2020-11-12 22:00:35,393 INFO  SOFA-RPC-ShutdownHook            com.alipay.sofa.rpc.registry.local.LocalRegistryHelper - Write backup file to /Users/youxuehu/localFileRegistry/localRegistry.reg
+2020-11-12 22:00:35,394 INFO  SOFA-RPC-ShutdownHook            com.alipay.sofa.rpc.registry.local.LocalRegistry - RPC-00203: 注销 RPC 服务：服务名[org.example.service.HelloSyncService:1.0@h2c]	数量[1] 
+2020-11-12 22:00:35,394 INFO  Thread-7                         com.alipay.sofa.rpc.registry.local.LocalRegistryHelper - Write backup file to /Users/youxuehu/localFileRegistry/localRegistry.reg
+2020-11-12 22:00:35,394 INFO  Thread-7                         com.alipay.sofa.rpc.registry.local.LocalRegistry - RPC-00203: 注销 RPC 服务：服务名[org.example.service.HelloSyncService:1.0@h2c]	数量[1] 
+2020-11-12 22:00:44,231 INFO  main                             com.alipay.sofa.rpc.registry.local.LocalRegistryHelper - Load backup file from /Users/youxuehu/localFileRegistry/localRegistry.reg
+2020-11-12 22:00:44,233 INFO  main                             com.alipay.sofa.rpc.registry.local.LocalRegistry - RPC-00205: RPC 服务[org.example.service.TestService:1.0@h2c]发布开始 
+2020-11-12 22:00:44,233 INFO  main                             com.alipay.sofa.rpc.registry.local.LocalRegistry - RPC-00201: 发布 RPC 服务：服务名[org.example.service.TestService:1.0@h2c] 
+2020-11-12 22:00:44,245 INFO  main                             com.alipay.sofa.rpc.registry.local.LocalRegistryHelper - Write backup file to /Users/youxuehu/localFileRegistry/localRegistry.reg
+2020-11-12 22:00:44,246 INFO  main                             com.alipay.sofa.rpc.registry.local.LocalRegistry - RPC-00206: RPC 服务[org.example.service.TestService:1.0@h2c]发布结束 
+2020-11-12 22:00:44,246 INFO  main                             com.alipay.sofa.rpc.registry.local.LocalRegistry - RPC-00205: RPC 服务[org.example.service.HelloSyncService:1.0@h2c]发布开始 
+2020-11-12 22:00:44,246 INFO  main                             com.alipay.sofa.rpc.registry.local.LocalRegistry - RPC-00201: 发布 RPC 服务：服务名[org.example.service.HelloSyncService:1.0@h2c] 
+2020-11-12 22:00:44,247 INFO  main                             com.alipay.sofa.rpc.registry.local.LocalRegistryHelper - Write backup file to /Users/youxuehu/localFileRegistry/localRegistry.reg
+2020-11-12 22:00:44,247 INFO  main                             com.alipay.sofa.rpc.registry.local.LocalRegistry - RPC-00206: RPC 服务[org.example.service.HelloSyncService:1.0@h2c]发布结束 
+2020-11-12 22:02:04,353 INFO  SOFA-RPC-ShutdownHook            com.alipay.sofa.rpc.registry.local.LocalRegistryHelper - Write backup file to /Users/youxuehu/localFileRegistry/localRegistry.reg
+2020-11-12 22:02:04,353 INFO  SOFA-RPC-ShutdownHook            com.alipay.sofa.rpc.registry.local.LocalRegistry - RPC-00203: 注销 RPC 服务：服务名[org.example.service.TestService:1.0@h2c]	数量[1] 
+2020-11-12 22:02:04,353 INFO  Thread-7                         com.alipay.sofa.rpc.registry.local.LocalRegistryHelper - Write backup file to /Users/youxuehu/localFileRegistry/localRegistry.reg
+2020-11-12 22:02:04,353 INFO  Thread-7                         com.alipay.sofa.rpc.registry.local.LocalRegistry - RPC-00203: 注销 RPC 服务：服务名[org.example.service.TestService:1.0@h2c]	数量[1] 
+2020-11-12 22:02:04,354 INFO  SOFA-RPC-ShutdownHook            com.alipay.sofa.rpc.registry.local.LocalRegistryHelper - Write backup file to /Users/youxuehu/localFileRegistry/localRegistry.reg
+2020-11-12 22:02:04,354 INFO  SOFA-RPC-ShutdownHook            com.alipay.sofa.rpc.registry.local.LocalRegistry - RPC-00203: 注销 RPC 服务：服务名[org.example.service.HelloSyncService:1.0@h2c]	数量[1] 
+2020-11-12 22:02:04,354 INFO  Thread-7                         com.alipay.sofa.rpc.registry.local.LocalRegistryHelper - Write backup file to /Users/youxuehu/localFileRegistry/localRegistry.reg
+2020-11-12 22:02:04,354 INFO  Thread-7                         com.alipay.sofa.rpc.registry.local.LocalRegistry - RPC-00203: 注销 RPC 服务：服务名[org.example.service.HelloSyncService:1.0@h2c]	数量[1] 

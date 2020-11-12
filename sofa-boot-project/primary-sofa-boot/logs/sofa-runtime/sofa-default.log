@@ -1,0 +1,26 @@
+2020-11-12 21:43:41,795 INFO  main                             - SOFABoot Runtime Starting!
+2020-11-12 21:43:42,712 INFO  main                             - Registering component: service:org.example.service.HelloSyncService
+2020-11-12 21:43:42,712 INFO  main                             -  <<PreOut Binding [h2c] Begins - org.example.service.HelloSyncService.
+2020-11-12 21:43:42,790 INFO  main                             -  <<PreOut Binding [h2c] Ends - org.example.service.HelloSyncService.
+2020-11-12 21:43:42,790 INFO  main                             -  <<Out Binding [h2c] Begins - org.example.service.HelloSyncService.
+2020-11-12 21:43:42,801 INFO  main                             -  <<Out Binding [h2c] Ends - org.example.service.HelloSyncService.
+2020-11-12 21:43:42,801 INFO  main                             - Register Service - org.example.service.HelloSyncService
+2020-11-12 21:43:42,803 INFO  main                             - Registering component: service:org.example.service.TestService
+2020-11-12 21:43:42,803 INFO  main                             -  <<PreOut Binding [h2c] Begins - org.example.service.TestService.
+2020-11-12 21:43:42,803 INFO  main                             -  <<PreOut Binding [h2c] Ends - org.example.service.TestService.
+2020-11-12 21:43:42,803 INFO  main                             -  <<Out Binding [h2c] Begins - org.example.service.TestService.
+2020-11-12 21:43:42,803 INFO  main                             -  <<Out Binding [h2c] Ends - org.example.service.TestService.
+2020-11-12 21:43:42,804 INFO  main                             - Register Service - org.example.service.TestService
+2020-11-12 22:00:42,866 INFO  main                             - SOFABoot Runtime Starting!
+2020-11-12 22:00:43,732 INFO  main                             - Registering component: service:org.example.service.HelloSyncService
+2020-11-12 22:00:43,732 INFO  main                             -  <<PreOut Binding [h2c] Begins - org.example.service.HelloSyncService.
+2020-11-12 22:00:43,808 INFO  main                             -  <<PreOut Binding [h2c] Ends - org.example.service.HelloSyncService.
+2020-11-12 22:00:43,808 INFO  main                             -  <<Out Binding [h2c] Begins - org.example.service.HelloSyncService.
+2020-11-12 22:00:43,818 INFO  main                             -  <<Out Binding [h2c] Ends - org.example.service.HelloSyncService.
+2020-11-12 22:00:43,818 INFO  main                             - Register Service - org.example.service.HelloSyncService
+2020-11-12 22:00:43,820 INFO  main                             - Registering component: service:org.example.service.TestService
+2020-11-12 22:00:43,820 INFO  main                             -  <<PreOut Binding [h2c] Begins - org.example.service.TestService.
+2020-11-12 22:00:43,821 INFO  main                             -  <<PreOut Binding [h2c] Ends - org.example.service.TestService.
+2020-11-12 22:00:43,821 INFO  main                             -  <<Out Binding [h2c] Begins - org.example.service.TestService.
+2020-11-12 22:00:43,821 INFO  main                             -  <<Out Binding [h2c] Ends - org.example.service.TestService.
+2020-11-12 22:00:43,821 INFO  main                             - Register Service - org.example.service.TestService

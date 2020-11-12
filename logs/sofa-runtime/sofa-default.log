@@ -1,0 +1,13 @@
+2020-11-12 21:41:27,058 INFO  main                             - SOFABoot Runtime Starting!
+2020-11-12 21:41:27,933 INFO  main                             - Registering component: service:org.example.service.HelloSyncService
+2020-11-12 21:41:27,933 INFO  main                             -  <<PreOut Binding [h2c] Begins - org.example.service.HelloSyncService.
+2020-11-12 21:41:28,012 INFO  main                             -  <<PreOut Binding [h2c] Ends - org.example.service.HelloSyncService.
+2020-11-12 21:41:28,012 INFO  main                             -  <<Out Binding [h2c] Begins - org.example.service.HelloSyncService.
+2020-11-12 21:41:28,023 INFO  main                             -  <<Out Binding [h2c] Ends - org.example.service.HelloSyncService.
+2020-11-12 21:41:28,023 INFO  main                             - Register Service - org.example.service.HelloSyncService
+2020-11-12 21:41:28,025 INFO  main                             - Registering component: service:org.example.service.TestService
+2020-11-12 21:41:28,025 INFO  main                             -  <<PreOut Binding [h2c] Begins - org.example.service.TestService.
+2020-11-12 21:41:28,025 INFO  main                             -  <<PreOut Binding [h2c] Ends - org.example.service.TestService.
+2020-11-12 21:41:28,025 INFO  main                             -  <<Out Binding [h2c] Begins - org.example.service.TestService.
+2020-11-12 21:41:28,026 INFO  main                             -  <<Out Binding [h2c] Ends - org.example.service.TestService.
+2020-11-12 21:41:28,026 INFO  main                             - Register Service - org.example.service.TestService

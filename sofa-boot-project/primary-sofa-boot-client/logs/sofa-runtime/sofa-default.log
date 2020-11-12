@@ -1,0 +1,14 @@
+2020-11-12 21:45:46,618 INFO  main                             - SOFABoot Runtime Starting!
+2020-11-12 21:45:47,514 INFO  main                             - Registering component: reference:com.alipay.sofa.rpc.api.GenericService:#-574127339
+2020-11-12 21:45:47,515 INFO  main                             -  >>In Binding [h2c] Begins - com.alipay.sofa.rpc.api.GenericService.
+2020-11-12 21:45:48,214 INFO  main                             -  >>In Binding [h2c] Ends - com.alipay.sofa.rpc.api.GenericService.
+2020-11-12 21:45:48,216 INFO  main                             - Registering component: reference:com.alipay.sofa.rpc.api.GenericService:#-326498211
+2020-11-12 21:45:48,216 INFO  main                             -  >>In Binding [h2c] Begins - com.alipay.sofa.rpc.api.GenericService.
+2020-11-12 21:45:48,327 INFO  main                             -  >>In Binding [h2c] Ends - com.alipay.sofa.rpc.api.GenericService.
+2020-11-12 22:00:47,838 INFO  main                             - SOFABoot Runtime Starting!
+2020-11-12 22:00:48,737 INFO  main                             - Registering component: reference:com.alipay.sofa.rpc.api.GenericService:#1250675838
+2020-11-12 22:00:48,737 INFO  main                             -  >>In Binding [h2c] Begins - com.alipay.sofa.rpc.api.GenericService.
+2020-11-12 22:00:49,215 INFO  main                             -  >>In Binding [h2c] Ends - com.alipay.sofa.rpc.api.GenericService.
+2020-11-12 22:00:49,218 INFO  main                             - Registering component: reference:com.alipay.sofa.rpc.api.GenericService:#1498304966
+2020-11-12 22:00:49,218 INFO  main                             -  >>In Binding [h2c] Begins - com.alipay.sofa.rpc.api.GenericService.
+2020-11-12 22:00:49,325 INFO  main                             -  >>In Binding [h2c] Ends - com.alipay.sofa.rpc.api.GenericService.
