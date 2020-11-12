@@ -3,9 +3,11 @@ package com.example.springbootdemo.common.cache;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Service;
 
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ConcurrentHashMap;
@@ -126,6 +128,18 @@ public class LocalCacheServiceImpl implements CacheService {
         if (cachedObj != null) {
             CACHED.remove(key);
         }
+    }
+
+    @Override
+    public Set<String> like(String id) {
+        Set<String> keys = new HashSet<>();
+        for (Map.Entry<String, CachedObj> entry : CACHED.entrySet()) {
+            String key = entry.getKey();
+            if (StringUtils.contains(key, id)) {
+                keys.add(key);
+            }
+        }
+        return keys;
     }
 
     private class CachedObj {
