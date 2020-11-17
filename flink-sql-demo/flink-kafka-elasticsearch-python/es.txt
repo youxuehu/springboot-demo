@@ -1,0 +1,85 @@
+docker run --name elasticsearch  -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" -e "cluster.name=docker-cluster"  -e  ES_JAVA_OPTS="-Xms1024m -Xmx1024m" -d 121454ddad72
+docker run --name kibana -p 5601:5601 -d docker.elastic.co/kibana/kibana:7.8.0
+
+curl http://192.168.8.238:9200
+curl -s "http://192.168.8.238:9200/_cat/shards" | grep UNASSIGNED
+
+curl http://localhost:9200/_cat/health?v
+curl -XPUT http://localhost:9200/mydb?pretty
+curl http://localhost:9200/_cat/indices?v
+curl  -H "Content-Type:application/json" -XPUT http://localhost:9200/mydb/external/1?pretty -d '{"name": "成龙","age": 30,"date": "2018-04-12 12:01:01"}'
+curl  -H "Content-Type:application/json" -XPOST http://localhost:9200/mydb/external/ 1/_update?pretty -d '{"name": "成龙","age": 30,"date": "2018-04-12 12:01:01"}'
+curl  -H "Content-Type:application/json" -XDELETE http://localhost:9200/mydb/external/3?pretty
+curl  -H "Content-Type:application/json" -XGET http://localhost:9200/mydb/_search?pretty -d '{"query": {"match_all": {}}}'
+
+
+
+kibana操作
+
+GET mydb/_search
+{
+  "query": {
+    "match_all": {}
+  }
+}
+
+GET zhifou/_search
+{
+  "query": {
+    "match_all": {}
+  }
+}
+
+PUT zhifou/doc/1
+{
+  "name":"顾老二",
+  "age":30,
+  "from": "gu",
+  "desc": "皮肤黑、武器长、性格直",
+  "tags": ["黑", "长", "直"]
+}
+
+PUT zhifou/doc/2
+{
+  "name":"大娘子",
+  "age":18,
+  "from":"sheng",
+  "desc":"肤白貌美，娇憨可爱",
+  "tags":["白", "富","美"]
+}
+
+PUT zhifou/doc/3
+{
+  "name":"龙套偏房",
+  "age":22,
+  "from":"gu",
+  "desc":"mmp，没怎么看，不知道怎么形容",
+  "tags":["造数据", "真","难"]
+}
+
+PUT zhifou/doc/4
+{
+  "name":"石头",
+  "age":29,
+  "from":"gu",
+  "desc":"粗中有细，狐假虎威",
+  "tags":["粗", "大","猛"]
+}
+
+PUT zhifou/doc/5
+{
+  "name":"魏行首",
+  "age":25,
+  "from":"广云台",
+  "desc":"仿佛兮若轻云之蔽月,飘飘兮若流风之回雪,mmp，最后竟然没有嫁给顾老二！",
+  "tags":["闭月","羞花"]
+}
+
+
+GET zhifou/doc/1
+
+PUT zhifou/doc/1
+{
+  "desc":"皮肤很黄，武器很长，性格很直",
+  "tags":["很黄","很长", "很直"]
+}
