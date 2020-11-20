@@ -1,6 +1,22 @@
 docker run --name elasticsearch  -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" -e "cluster.name=docker-cluster"  -e  ES_JAVA_OPTS="-Xms1024m -Xmx1024m" -d 121454ddad72
 docker run --name kibana -p 5601:5601 -d docker.elastic.co/kibana/kibana:7.8.0
 
+docker pull docker.elastic.co/elasticsearch/elasticsearch:7.10.0
+docker run -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" docker.elastic.co/elasticsearch/elasticsearch:7.10.0
+
+
+
+docker pull docker.elastic.co/kibana/kibana:7.10.0
+docker run --link YOUR_ELASTICSEARCH_CONTAINER_NAME_OR_ID:elasticsearch -p 5601:5601 {docker-repo}:{version}
+
+
+
+docker pull docker.elastic.co/logstash/logstash:7.10.0
+
+
+
+
+curl -X GET "localhost:9200/_cat/nodes?v&pretty"
 curl http://192.168.8.238:9200
 curl -s "http://192.168.8.238:9200/_cat/shards" | grep UNASSIGNED
 
