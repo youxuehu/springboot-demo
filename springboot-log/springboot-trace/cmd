@@ -1,0 +1,44 @@
+docker pull elasticsearch:latest
+
+docker pull kibana:latest
+
+docker pull logstash:latest
+
+docker run --name elasticsearch \
+-v "$PWD/esdata":/usr/share/elasticsearch/data \
+-e  ES_JAVA_OPTS="-Xms1024m -Xmx1024m" \
+-p 9200:9200 \
+-p 9300:9300 \
+-d elasticsearch
+
+
+
+
+docker run --name kibana \
+--link elasticsearch:elasticsearch \
+-p 5601:5601 \
+-d kibana
+
+
+
+input{
+
+      file{
+            path=>"/tmp/nginx/logs/access.log"
+      }
+}output{
+
+      stdout{     } #日志输出到控制台
+
+      #输出到es
+      elasticsearch{
+            hosts=>"100.100.x.231"
+      }
+}
+curl   http://localhost:9200/_cat/health?v
+
+curl  http://localhost:9200/_cat/shards
+
+curl -XPUT http://localhost:9200/_settings?pretty -d '{ "index": { "number_of_replicas": 0 } }' -H "Content-Type: application/json"
+
+docker run --name logstash -it -v /Users/youxuehu/IdeaProjects/springboot-demo/springboot-log/springboot-trace/logs/info.log:/tmp/nginx/logs/info.log logstash
