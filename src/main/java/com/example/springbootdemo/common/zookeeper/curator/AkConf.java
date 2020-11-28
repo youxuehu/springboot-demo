@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 //@Configuration
 public class AkConf {
 
-    @Value("${connection}")
+    @Value("${zookeeper.host}")
     private String connection;
 
 //    @Bean

@@ -1,0 +1,21 @@
+2020-11-28 15:09:41,308 INFO  main                             - SOFABoot Runtime Starting!
+2020-11-28 15:33:44,839 INFO  main                             - SOFABoot Runtime Starting!
+2020-11-28 15:47:22,310 INFO  main                             - SOFABoot Runtime Starting!
+2020-11-28 15:49:49,439 INFO  main                             - SOFABoot Runtime Starting!
+2020-11-28 15:53:01,555 INFO  main                             - SOFABoot Runtime Starting!
+2020-11-28 15:55:55,207 INFO  main                             - SOFABoot Runtime Starting!
+2020-11-28 15:55:56,155 INFO  main                             - Registering component: reference:org.example.test.TestService:#414599042
+2020-11-28 15:55:56,155 INFO  main                             -  >>In Binding [jvm] Begins - org.example.test.TestService.
+2020-11-28 15:55:56,157 INFO  main                             -  >>In Binding [jvm] Ends - org.example.test.TestService.
+2020-11-28 15:58:09,571 INFO  main                             - SOFABoot Runtime Starting!
+2020-11-28 15:58:10,538 INFO  main                             - Registering component: reference:org.example.test.TestService:#414599042
+2020-11-28 15:58:10,539 INFO  main                             -  >>In Binding [jvm] Begins - org.example.test.TestService.
+2020-11-28 15:58:10,540 INFO  main                             -  >>In Binding [jvm] Ends - org.example.test.TestService.
+2020-11-28 16:00:55,848 INFO  main                             - SOFABoot Runtime Starting!
+2020-11-28 16:00:56,796 INFO  main                             - Registering component: reference:org.example.test.TestService:#414599042
+2020-11-28 16:00:56,796 INFO  main                             -  >>In Binding [jvm] Begins - org.example.test.TestService.
+2020-11-28 16:00:56,798 INFO  main                             -  >>In Binding [jvm] Ends - org.example.test.TestService.
+2020-11-28 16:11:11,096 INFO  main                             - SOFABoot Runtime Starting!
+2020-11-28 16:11:12,071 INFO  main                             - Registering component: reference:org.example.test.TestService:#414599042
+2020-11-28 16:11:12,071 INFO  main                             -  >>In Binding [jvm] Begins - org.example.test.TestService.
+2020-11-28 16:11:12,072 INFO  main                             -  >>In Binding [jvm] Ends - org.example.test.TestService.

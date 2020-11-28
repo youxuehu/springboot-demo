@@ -18,7 +18,7 @@ public class ZkService implements InitializingBean, Watcher {
 
     private static final Logger LOG = LoggerFactory.getLogger(ZkService.class);
 
-    @Value("${connection}")
+    @Value("${zookeeper.host}")
     private String connection;
 
     ZkClient zkClient;
