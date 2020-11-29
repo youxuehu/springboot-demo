@@ -1,3 +1,0 @@
-Module-Name=org.example.common.model
-Spring-Parent=org.example.common.dal
-Require-Module=org.example.biz.shared

@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:sofa="http://sofastack.io/schema/sofaboot"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
                            http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd
                            http://sofastack.io/schema/sofaboot
                            http://sofastack.io/schema/sofaboot.xsd">
 
-    <bean id="testService" class="org.example.test.impl.TestServiceImpl"/>
-    <sofa:service ref="testService" interface="org.example.test.TestService"/>
-
+        <sofa:reference interface="org.example.test.TestService" id="testService">
+            <sofa:binding.jvm/>
+        </sofa:reference>
 </beans>

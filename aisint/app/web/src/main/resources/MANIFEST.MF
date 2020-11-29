@@ -1,3 +1,0 @@
-Module-Name=org.example.web
-Spring-Parent=org.example.common.dal
-Require-Module=org.example.common.model
