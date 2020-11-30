@@ -12,9 +12,10 @@ docker run --link YOUR_ELASTICSEARCH_CONTAINER_NAME_OR_ID:elasticsearch -p 5601:
 
 
 docker pull docker.elastic.co/logstash/logstash:7.10.0
+docker run --rm -it -v ~/pipeline:/usr/share/logstash/pipeline/ --link bbbee556eaa1:192.168.8.238 --net no40-log-example_default docker.elastic.co/logstash/logstash:7.8.0
+docker run --rm -it --link bbbee556eaa1:192.168.8.238 --net no40-log-example_default docker.elastic.co/logstash/logstash:7.8.0
 
-
-
+no40-log-example_default
 
 curl -X GET "localhost:9200/_cat/nodes?v&pretty"
 curl http://192.168.8.238:9200
@@ -23,7 +24,7 @@ curl -s "http://192.168.8.238:9200/_cat/shards" | grep UNASSIGNED
 curl http://localhost:9200/_cat/health?v
 curl -XPUT http://localhost:9200/mydb?pretty
 curl http://localhost:9200/_cat/indices?v
-curl  -H "Content-Type:application/json" -XPUT http://localhost:9200/mydb/external/1?pretty -d '{"name": "成龙","age": 30,"date": "2018-04-12 12:01:01"}'
+curl  -H "Content-Type:application/json" -XPUT http://localhost:9200/mydb/external/2?pretty -d '{"name": "李连杰","age": 30,"date": "2020-04-12 12:01:01"}'
 curl  -H "Content-Type:application/json" -XPOST http://localhost:9200/mydb/external/ 1/_update?pretty -d '{"name": "成龙","age": 30,"date": "2018-04-12 12:01:01"}'
 curl  -H "Content-Type:application/json" -XDELETE http://localhost:9200/mydb/external/3?pretty
 curl  -H "Content-Type:application/json" -XGET http://localhost:9200/mydb/_search?pretty -d '{"query": {"match_all": {}}}'

@@ -9,7 +9,7 @@
 
     <bean id="predictFacade" class="org.example.impl.PredictFacadeImpl"/>
     <sofa:service ref="predictFacade" interface="org.example.PredictFacade">
-        <sofa:binding.rest/>
+        <sofa:binding.bolt/>
     </sofa:service>
 
 </beans>

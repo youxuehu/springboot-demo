@@ -5,34 +5,34 @@
     <classPathEntry
             location="/Users/youxuehu/.m2/repository/mysql/mysql-connector-java/8.0.18/mysql-connector-java-8.0.18.jar" />
     <context id="mysql2Tables" targetRuntime="MyBatis3">
-        <plugin type="org.example.db.plugins.PaginationPlugin" />
+        <plugin type="com.tiger.plugin.PaginationPlugin" />
         <!-- 去除自动生成的注释 -->
         <commentGenerator>
             <property name="suppressAllComments" value="false" />
         </commentGenerator>
 
         <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
-                        connectionURL="jdbc:mysql://localhost:3306/quartz?serverTimezone=UTC&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;allowPublicKeyRetrieval=true" userId="root"
+                        connectionURL="jdbc:mysql://localhost:3306/test?serverTimezone=UTC&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;allowPublicKeyRetrieval=true" userId="root"
                         password="zhf123..">
         </jdbcConnection>
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false" />
         </javaTypeResolver>
         <!-- targetProject:自动生成代码的位置 -->
-        <javaModelGenerator targetPackage="com.example.springbootdemo.common.db.dao.quartz.qrtzcalendars.model"
+        <javaModelGenerator targetPackage="org.example.db.person.model"
                             targetProject="src/main/java">
             <property name="enableSubPackages" value="true" />
             <property name="trimStrings" value="true" />
         </javaModelGenerator>
-        <sqlMapGenerator targetPackage="com.example.springbootdemo.common.db.dao.quartz.qrtzcalendars.mapper.xml"
+        <sqlMapGenerator targetPackage="org.example.db.person.mapper.xml"
                          targetProject="src/main/java">
             <property name="enableSubPackages" value="true" />
         </sqlMapGenerator>
         <javaClientGenerator type="MAPPER"
-                             targetPackage="com.example.springbootdemo.common.db.dao.quartz.qrtzcalendars.mapper" targetProject="src/main/java">
+                             targetPackage="org.example.db.person.mapper" targetProject="src/main/java">
             <property name="enableSubPackages" value="true" />
         </javaClientGenerator>
         <!-- tableName:用于自动生成代码的数据库表；domainObjectName:对应于数据库表的javaBean类名-->
-        <table tableName="QRTZ_CALENDARS" domainObjectName="QrtzCalendars" />
+        <table tableName="person" domainObjectName="Person" />
     </context>
 </generatorConfiguration>

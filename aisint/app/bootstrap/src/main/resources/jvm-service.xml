@@ -10,7 +10,8 @@
                            http://sofastack.io/schema/sofaboot
                            http://sofastack.io/schema/sofaboot.xsd">
 
-        <sofa:reference interface="org.example.test.TestService" id="testService">
+<!--        <sofa:reference interface="org.example.test.TestService" id="testService">
             <sofa:binding.jvm/>
         </sofa:reference>
+        <sofa:service ref="testService" interface="org.example.test.TestService"/>-->
 </beans>

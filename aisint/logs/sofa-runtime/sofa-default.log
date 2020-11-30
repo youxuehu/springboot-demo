@@ -1,0 +1,118 @@
+2020-11-29 12:53:25,082 INFO  main                             - SOFABoot Runtime Starting!
+2020-11-29 12:53:27,651 INFO  main                             - Registering component: reference:org.example.test.TestService:#414599042
+2020-11-29 12:53:27,651 INFO  main                             -  >>In Binding [jvm] Begins - org.example.test.TestService.
+2020-11-29 12:53:27,653 INFO  main                             -  >>In Binding [jvm] Ends - org.example.test.TestService.
+2020-11-29 13:53:44,574 INFO  main                             - SOFABoot Runtime Starting!
+2020-11-29 13:53:45,713 INFO  main                             - Registering component: reference:org.example.test.TestService:#414599042
+2020-11-29 13:53:45,714 INFO  main                             -  >>In Binding [jvm] Begins - org.example.test.TestService.
+2020-11-29 13:53:45,715 INFO  main                             -  >>In Binding [jvm] Ends - org.example.test.TestService.
+2020-11-29 13:55:43,006 INFO  main                             - SOFABoot Runtime Starting!
+2020-11-29 13:55:44,329 INFO  main                             - Registering component: reference:org.example.test.TestService:#414599042
+2020-11-29 13:55:44,329 INFO  main                             -  >>In Binding [jvm] Begins - org.example.test.TestService.
+2020-11-29 13:55:44,331 INFO  main                             -  >>In Binding [jvm] Ends - org.example.test.TestService.
+2020-11-29 13:55:44,338 INFO  main                             - Registering component: service:org.example.test.TestService
+2020-11-29 13:55:44,339 INFO  main                             -  <<PreOut Binding [jvm] Begins - org.example.test.TestService.
+2020-11-29 13:55:44,339 INFO  main                             -  <<PreOut Binding [jvm] Ends - org.example.test.TestService.
+2020-11-29 13:55:44,339 INFO  main                             -  <<Out Binding [jvm] Begins - org.example.test.TestService.
+2020-11-29 13:55:44,339 INFO  main                             -  <<Out Binding [jvm] Ends - org.example.test.TestService.
+2020-11-29 13:55:44,339 INFO  main                             - Register Service - org.example.test.TestService
+2020-11-29 13:57:05,569 INFO  main                             - SOFABoot Runtime Starting!
+2020-11-29 13:57:06,734 INFO  main                             - Registering component: reference:org.example.test.TestService:#414599042
+2020-11-29 13:57:06,734 INFO  main                             -  >>In Binding [jvm] Begins - org.example.test.TestService.
+2020-11-29 13:57:06,735 INFO  main                             -  >>In Binding [jvm] Ends - org.example.test.TestService.
+2020-11-29 13:57:06,747 INFO  main                             - Registering component: service:org.example.test.TestService
+2020-11-29 13:57:06,747 INFO  main                             -  <<PreOut Binding [jvm] Begins - org.example.test.TestService.
+2020-11-29 13:57:06,747 INFO  main                             -  <<PreOut Binding [jvm] Ends - org.example.test.TestService.
+2020-11-29 13:57:06,747 INFO  main                             -  <<Out Binding [jvm] Begins - org.example.test.TestService.
+2020-11-29 13:57:06,747 INFO  main                             -  <<Out Binding [jvm] Ends - org.example.test.TestService.
+2020-11-29 13:57:06,747 INFO  main                             - Register Service - org.example.test.TestService
+2020-11-29 14:04:43,631 INFO  main                             - SOFABoot Runtime Starting!
+2020-11-29 14:04:44,759 INFO  main                             - Registering component: reference:org.example.test.TestService:#414599042
+2020-11-29 14:04:44,760 INFO  main                             -  >>In Binding [jvm] Begins - org.example.test.TestService.
+2020-11-29 14:04:44,761 INFO  main                             -  >>In Binding [jvm] Ends - org.example.test.TestService.
+2020-11-29 14:04:44,773 INFO  main                             - Registering component: service:org.example.test.TestService
+2020-11-29 14:04:44,773 INFO  main                             -  <<PreOut Binding [jvm] Begins - org.example.test.TestService.
+2020-11-29 14:04:44,774 INFO  main                             -  <<PreOut Binding [jvm] Ends - org.example.test.TestService.
+2020-11-29 14:04:44,774 INFO  main                             -  <<Out Binding [jvm] Begins - org.example.test.TestService.
+2020-11-29 14:04:44,774 INFO  main                             -  <<Out Binding [jvm] Ends - org.example.test.TestService.
+2020-11-29 14:04:44,774 INFO  main                             - Register Service - org.example.test.TestService
+2020-11-29 14:06:45,219 INFO  main                             - SOFABoot Runtime Starting!
+2020-11-29 14:06:46,234 INFO  main                             - Registering component: reference:org.example.test.TestService:#414599042
+2020-11-29 14:06:46,234 INFO  main                             -  >>In Binding [jvm] Begins - org.example.test.TestService.
+2020-11-29 14:06:46,236 INFO  main                             -  >>In Binding [jvm] Ends - org.example.test.TestService.
+2020-11-29 14:06:46,247 INFO  main                             - Registering component: service:org.example.test.TestService
+2020-11-29 14:06:46,247 INFO  main                             -  <<PreOut Binding [jvm] Begins - org.example.test.TestService.
+2020-11-29 14:06:46,247 INFO  main                             -  <<PreOut Binding [jvm] Ends - org.example.test.TestService.
+2020-11-29 14:06:46,247 INFO  main                             -  <<Out Binding [jvm] Begins - org.example.test.TestService.
+2020-11-29 14:06:46,247 INFO  main                             -  <<Out Binding [jvm] Ends - org.example.test.TestService.
+2020-11-29 14:06:46,247 INFO  main                             - Register Service - org.example.test.TestService
+2020-11-29 14:08:46,551 INFO  main                             - SOFABoot Runtime Starting!
+2020-11-29 14:08:47,629 INFO  main                             - Registering component: reference:org.example.test.TestService:#414599042
+2020-11-29 14:08:47,629 INFO  main                             -  >>In Binding [jvm] Begins - org.example.test.TestService.
+2020-11-29 14:08:47,631 INFO  main                             -  >>In Binding [jvm] Ends - org.example.test.TestService.
+2020-11-29 14:08:47,641 INFO  main                             - Registering component: service:org.example.test.TestService
+2020-11-29 14:08:47,641 INFO  main                             -  <<PreOut Binding [jvm] Begins - org.example.test.TestService.
+2020-11-29 14:08:47,641 INFO  main                             -  <<PreOut Binding [jvm] Ends - org.example.test.TestService.
+2020-11-29 14:08:47,641 INFO  main                             -  <<Out Binding [jvm] Begins - org.example.test.TestService.
+2020-11-29 14:08:47,641 INFO  main                             -  <<Out Binding [jvm] Ends - org.example.test.TestService.
+2020-11-29 14:08:47,641 INFO  main                             - Register Service - org.example.test.TestService
+2020-11-29 14:12:10,521 INFO  main                             - SOFABoot Runtime Starting!
+2020-11-29 14:12:11,693 INFO  main                             - Registering component: reference:org.example.test.TestService:#414599042
+2020-11-29 14:12:11,693 INFO  main                             -  >>In Binding [jvm] Begins - org.example.test.TestService.
+2020-11-29 14:12:11,695 INFO  main                             -  >>In Binding [jvm] Ends - org.example.test.TestService.
+2020-11-29 14:12:11,705 INFO  main                             - Registering component: service:org.example.test.TestService
+2020-11-29 14:12:11,705 INFO  main                             -  <<PreOut Binding [jvm] Begins - org.example.test.TestService.
+2020-11-29 14:12:11,705 INFO  main                             -  <<PreOut Binding [jvm] Ends - org.example.test.TestService.
+2020-11-29 14:12:11,705 INFO  main                             -  <<Out Binding [jvm] Begins - org.example.test.TestService.
+2020-11-29 14:12:11,705 INFO  main                             -  <<Out Binding [jvm] Ends - org.example.test.TestService.
+2020-11-29 14:12:11,705 INFO  main                             - Register Service - org.example.test.TestService
+2020-11-29 14:13:24,207 INFO  main                             - SOFABoot Runtime Starting!
+2020-11-29 14:13:25,395 INFO  main                             - Registering component: reference:org.example.test.TestService:#414599042
+2020-11-29 14:13:25,396 INFO  main                             -  >>In Binding [jvm] Begins - org.example.test.TestService.
+2020-11-29 14:13:25,397 INFO  main                             -  >>In Binding [jvm] Ends - org.example.test.TestService.
+2020-11-29 14:13:25,408 INFO  main                             - Registering component: service:org.example.test.TestService
+2020-11-29 14:13:25,408 INFO  main                             -  <<PreOut Binding [jvm] Begins - org.example.test.TestService.
+2020-11-29 14:13:25,408 INFO  main                             -  <<PreOut Binding [jvm] Ends - org.example.test.TestService.
+2020-11-29 14:13:25,408 INFO  main                             -  <<Out Binding [jvm] Begins - org.example.test.TestService.
+2020-11-29 14:13:25,408 INFO  main                             -  <<Out Binding [jvm] Ends - org.example.test.TestService.
+2020-11-29 14:13:25,408 INFO  main                             - Register Service - org.example.test.TestService
+2020-11-29 14:15:18,110 INFO  main                             - SOFABoot Runtime Starting!
+2020-11-29 14:15:19,292 INFO  main                             - Registering component: reference:org.example.test.TestService:#414599042
+2020-11-29 14:15:19,292 INFO  main                             -  >>In Binding [jvm] Begins - org.example.test.TestService.
+2020-11-29 14:15:19,294 INFO  main                             -  >>In Binding [jvm] Ends - org.example.test.TestService.
+2020-11-29 14:15:19,304 INFO  main                             - Registering component: service:org.example.test.TestService
+2020-11-29 14:15:19,304 INFO  main                             -  <<PreOut Binding [jvm] Begins - org.example.test.TestService.
+2020-11-29 14:15:19,304 INFO  main                             -  <<PreOut Binding [jvm] Ends - org.example.test.TestService.
+2020-11-29 14:15:19,304 INFO  main                             -  <<Out Binding [jvm] Begins - org.example.test.TestService.
+2020-11-29 14:15:19,305 INFO  main                             -  <<Out Binding [jvm] Ends - org.example.test.TestService.
+2020-11-29 14:15:19,305 INFO  main                             - Register Service - org.example.test.TestService
+2020-11-29 15:16:34,997 INFO  main                             - SOFABoot Runtime Starting!
+2020-11-29 15:16:37,074 INFO  main                             - Registering component: reference:org.example.test.TestService:#414599042
+2020-11-29 15:16:37,074 INFO  main                             -  >>In Binding [jvm] Begins - org.example.test.TestService.
+2020-11-29 15:16:37,075 INFO  main                             -  >>In Binding [jvm] Ends - org.example.test.TestService.
+2020-11-29 15:16:37,085 INFO  main                             - Registering component: service:org.example.test.TestService
+2020-11-29 15:16:37,085 INFO  main                             -  <<PreOut Binding [jvm] Begins - org.example.test.TestService.
+2020-11-29 15:16:37,086 INFO  main                             -  <<PreOut Binding [jvm] Ends - org.example.test.TestService.
+2020-11-29 15:16:37,086 INFO  main                             -  <<Out Binding [jvm] Begins - org.example.test.TestService.
+2020-11-29 15:16:37,086 INFO  main                             -  <<Out Binding [jvm] Ends - org.example.test.TestService.
+2020-11-29 15:16:37,086 INFO  main                             - Register Service - org.example.test.TestService
+2020-11-29 15:24:28,338 INFO  main                             - SOFABoot Runtime Starting!
+2020-11-29 15:24:29,475 INFO  main                             - Registering component: reference:org.example.test.TestService:#414599042
+2020-11-29 15:24:29,475 INFO  main                             -  >>In Binding [jvm] Begins - org.example.test.TestService.
+2020-11-29 15:24:29,477 INFO  main                             -  >>In Binding [jvm] Ends - org.example.test.TestService.
+2020-11-29 15:24:29,488 INFO  main                             - Registering component: service:org.example.test.TestService
+2020-11-29 15:24:29,488 INFO  main                             -  <<PreOut Binding [jvm] Begins - org.example.test.TestService.
+2020-11-29 15:24:29,488 INFO  main                             -  <<PreOut Binding [jvm] Ends - org.example.test.TestService.
+2020-11-29 15:24:29,488 INFO  main                             -  <<Out Binding [jvm] Begins - org.example.test.TestService.
+2020-11-29 15:24:29,488 INFO  main                             -  <<Out Binding [jvm] Ends - org.example.test.TestService.
+2020-11-29 15:24:29,488 INFO  main                             - Register Service - org.example.test.TestService
+2020-11-29 15:36:26,189 INFO  main                             - SOFABoot Runtime Starting!
+2020-11-29 15:36:27,472 INFO  main                             - Registering component: reference:org.example.test.TestService:#414599042
+2020-11-29 15:36:27,472 INFO  main                             -  >>In Binding [jvm] Begins - org.example.test.TestService.
+2020-11-29 15:36:27,474 INFO  main                             -  >>In Binding [jvm] Ends - org.example.test.TestService.
+2020-11-29 15:36:27,483 INFO  main                             - Registering component: service:org.example.test.TestService
+2020-11-29 15:36:27,483 INFO  main                             -  <<PreOut Binding [jvm] Begins - org.example.test.TestService.
+2020-11-29 15:36:27,483 INFO  main                             -  <<PreOut Binding [jvm] Ends - org.example.test.TestService.
+2020-11-29 15:36:27,483 INFO  main                             -  <<Out Binding [jvm] Begins - org.example.test.TestService.
+2020-11-29 15:36:27,483 INFO  main                             -  <<Out Binding [jvm] Ends - org.example.test.TestService.
+2020-11-29 15:36:27,483 INFO  main                             - Register Service - org.example.test.TestService

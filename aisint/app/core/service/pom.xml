@@ -12,5 +12,10 @@
 
     <artifactId>app.core.service</artifactId>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>org.example</groupId>
+            <artifactId>app.common.dal</artifactId>
+        </dependency>
+    </dependencies>
 </project>
