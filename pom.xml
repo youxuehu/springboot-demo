@@ -846,7 +846,7 @@
                 <version>1.0.0</version>
                 <configuration>
                     <imageName>${project.groupId}.${project.artifactId}</imageName>
-                    <dockerDirectory>src/main/docker</dockerDirectory>
+                    <dockerDirectory>.</dockerDirectory>
                     <!--<dockerHost>http://k8s-slave1:2375</dockerHost>-->
                     <resources>
                         <resource>
@@ -864,7 +864,7 @@
                         <phase>package</phase>
                         <configuration>
                             <tasks>
-                                <copy todir="src/main/docker" file="target/${project.artifactId}-${project.version}.${project.packaging}"></copy>
+                                <copy todir="." file="target/${project.artifactId}-${project.version}.${project.packaging}"></copy>
                             </tasks>
                         </configuration>
                         <goals>
