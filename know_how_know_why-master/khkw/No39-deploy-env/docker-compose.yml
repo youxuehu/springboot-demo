@@ -44,20 +44,20 @@ services:
       HOSTNAME_COMMAND: "route -n | awk '/UG[ \t]/{print $$2}'"
       KAFKA_CREATE_TOPICS: "payment_msg:1:1"
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-     KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://127.0.0.1:9092
-     KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092
-   mysql:
-     image: mysql:5.7
-     container_name: mysql
-     volumes:
-       - ~/mysql/data/db:/var/lib/mysql/
-       - ~/mysql/mysql-3346.sock:/var/run/mysql.sock
-       - ~/mysql/data/conf:/etc/mysql/conf.d
-     ports:
-       - 3306:3306
-     command:
-       --default-authentication-plugin=mysql_native_password
-       --lower_case_table_names=1
-     environment:
-       MYSQL_ROOT_PASSWORD: 123456
-       TZ: Asia/Shanghai
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://127.0.0.1:9092
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092
+  mysql:
+    image: mysql:5.7
+    container_name: mysql
+    volumes:
+      - ~/mysql/data/db:/var/lib/mysql/
+      - ~/mysql/mysql-3346.sock:/var/run/mysql.sock
+      - ~/mysql/data/conf:/etc/mysql/conf.d
+    ports:
+      - 3306:3306
+    command:
+      --default-authentication-plugin=mysql_native_password
+      --lower_case_table_names=1
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      TZ: Asia/Shanghai

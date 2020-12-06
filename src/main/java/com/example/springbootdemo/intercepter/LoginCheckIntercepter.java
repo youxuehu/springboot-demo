@@ -38,7 +38,8 @@ public class LoginCheckIntercepter extends HandlerInterceptorAdapter {
     }
 
     private void redirect(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        response.sendRedirect("http://localhost:9090/login");
+        response.sendRedirect(request.getRequestURL().toString() + "/login");
+
     }
 
     private boolean checkLogin(HttpServletRequest request) {
