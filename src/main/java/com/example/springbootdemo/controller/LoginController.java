@@ -4,6 +4,8 @@ import com.alibaba.fastjson.JSON;
 import com.example.springbootdemo.common.cache.CacheService;
 import com.example.springbootdemo.controller.userinfos.param.SessionInfo;
 import org.apache.commons.lang.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,6 +19,7 @@ import static com.example.springbootdemo.utils.CommonConst.SESSION_KET;
 
 @Controller
 public class LoginController extends BaseController {
+    private static final Logger LOGGER = LoggerFactory.getLogger(LoginController.class);
     @Autowired
     CacheService cacheService;
     @RequestMapping("/login")
@@ -26,21 +29,24 @@ public class LoginController extends BaseController {
 
     @RequestMapping("/jobManager")
     public String jobManager() {
-        System.out.println("JobManager");
+        LOGGER.info("JobManager");
         return "JobManager";
     }
 
     @RequestMapping("/doLogin")
     public String doLogin(Model model, HttpServletRequest request, HttpServletResponse response, String userName, String password) {
         if (StringUtils.isBlank(userName)) {
+            LOGGER.error("userName不能为空");
             model.addAttribute("errorMessage", "userName不能为空");
             return "login";
         }
         if (StringUtils.isBlank(password)) {
+            LOGGER.error("password不能为空");
             model.addAttribute("errorMessage", "password不能为空");
             return "login";
         }
         if (!StringUtils.equals("admin", userName) || !StringUtils.equals("123456", password)) {
+            LOGGER.error("用户名或密码不正确");
             model.addAttribute("errorMessage", "用户名或密码不正确");
             return "login";
         }

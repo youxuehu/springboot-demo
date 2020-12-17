@@ -16,6 +16,8 @@ public class TestSpringServiceImpl implements TestSpringService {
     @Override
     public String sayHello(String name) {
         Map<String, Object> json = new HashMap<>();
+        json.put("name", "游学虎");
+        json.put("age", 20);
         String result = executionService.execute(JSON.toJSONString(json));
         return "name: " + name + " result" + result;
     }

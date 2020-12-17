@@ -1,0 +1,80 @@
+2020-12-17 22:30:46.284 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'helloController': Unsatisfied dependency expressed through field 'restTemplate'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.web.client.RestTemplate' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-12-17 22:30:46.303 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
+2020-12-17 22:30:46.303 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-2] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
+2020-12-17 22:30:46.304 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-3] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
+2020-12-17 22:30:46.304 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-4] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
+2020-12-17 22:30:46.305 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-5] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
+2020-12-17 22:44:30.042 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'helloController': Unsatisfied dependency expressed through field 'restTemplate'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.web.client.RestTemplate' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-12-17 22:44:30.062 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
+2020-12-17 22:44:30.062 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-2] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
+2020-12-17 22:44:30.062 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-3] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
+2020-12-17 22:44:30.063 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-4] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
+2020-12-17 22:44:30.063 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-5] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
+2020-12-17 22:51:52.465 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'helloController': Unsatisfied dependency expressed through field 'restTemplate'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.web.client.RestTemplate' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-12-17 22:51:52.484 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
+2020-12-17 22:51:52.484 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-2] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
+2020-12-17 22:51:52.485 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-3] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
+2020-12-17 22:51:52.485 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-4] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
+2020-12-17 22:51:52.486 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-5] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
+2020-12-17 22:54:42.869 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2020-12-17 22:54:42.870 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2020-12-17 22:54:42.871 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2020-12-17 22:54:42.872 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2020-12-17 22:54:42.873 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2020-12-17 22:54:42.873 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2020-12-17 22:54:42.874 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2020-12-17 22:54:42.875 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2020-12-17 23:00:58.392 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2020-12-17 23:00:58.393 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2020-12-17 23:00:58.394 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2020-12-17 23:00:58.395 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2020-12-17 23:00:58.395 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2020-12-17 23:00:58.396 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2020-12-17 23:00:58.397 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2020-12-17 23:00:58.398 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2020-12-17 23:03:55.558 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2020-12-17 23:03:55.559 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2020-12-17 23:03:55.560 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2020-12-17 23:03:55.561 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2020-12-17 23:03:55.562 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2020-12-17 23:03:55.563 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2020-12-17 23:03:55.564 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2020-12-17 23:03:55.565 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2020-12-17 23:07:19.871 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2020-12-17 23:07:19.872 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2020-12-17 23:07:19.873 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2020-12-17 23:07:19.874 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2020-12-17 23:07:19.874 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2020-12-17 23:07:19.875 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2020-12-17 23:07:19.876 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2020-12-17 23:07:19.877 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap

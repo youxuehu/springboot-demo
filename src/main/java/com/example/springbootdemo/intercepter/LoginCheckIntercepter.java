@@ -4,6 +4,8 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.example.springbootdemo.common.cache.CacheService;
 import org.apache.commons.lang.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 import javax.servlet.http.Cookie;
@@ -12,13 +14,14 @@ import javax.servlet.http.HttpServletResponse;
 import static com.example.springbootdemo.utils.CommonConst.SESSION_KET;
 
 public class LoginCheckIntercepter extends HandlerInterceptorAdapter {
-
+    private static final Logger LOGGER = LoggerFactory.getLogger(LoginCheckIntercepter.class);
     @Autowired
     CacheService cacheService;
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        System.out.println("登录拦截器");
+        LOGGER.info("登录拦截器");
+        LOGGER.info(request.getRequestURL().toString());
         if (checkLogin(request)) {
             String accept = request.getHeader("accept");
             if (StringUtils.isNotBlank(accept) && StringUtils.contains(accept, "json")) {
@@ -27,6 +30,7 @@ public class LoginCheckIntercepter extends HandlerInterceptorAdapter {
                 response.setCharacterEncoding("utf-8");
                 response.setContentType("application/json;charset=utf-8");
                 response.getWriter().println(JSON.toJSONString(errorJSONObject));
+                LOGGER.info(JSON.toJSONString(errorJSONObject));
                 response.getWriter().flush();
                 response.getWriter().close();
             } else {
@@ -39,7 +43,6 @@ public class LoginCheckIntercepter extends HandlerInterceptorAdapter {
 
     private void redirect(HttpServletRequest request, HttpServletResponse response) throws Exception {
         response.sendRedirect(request.getRequestURL().toString() + "/login");
-
     }
 
     private boolean checkLogin(HttpServletRequest request) {

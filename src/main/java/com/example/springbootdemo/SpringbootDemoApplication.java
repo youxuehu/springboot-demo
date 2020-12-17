@@ -2,12 +2,15 @@ package com.example.springbootdemo;
 
 import com.example.springbootdemo.common.hadoop2.HDFS2Utils;
 import com.example.springbootdemo.common.thrift.impl.StudentThriftServer;
+import com.example.springbootdemo.intercepter.AdminIntercepter;
 import com.example.springbootdemo.service.TestSpringService;
 import com.example.springbootdemo.utils.easyexcal.ExcelUtils;
 import com.example.springbootdemo.utils.easyexcal.LocalWareDTO;
 import com.example.springbootdemo.utils.easyexcal.LocalWareExcelListener;
 import lombok.extern.slf4j.Slf4j;
 import org.mybatis.spring.annotation.MapperScan;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.boot.ApplicationArguments;
@@ -35,14 +38,14 @@ import java.util.List;
 @EnableScheduling
 @ImportResource(locations = {"classpath:applicationContext.xml"})
 public class SpringbootDemoApplication implements ApplicationRunner {
+    private static final Logger LOGGER = LoggerFactory.getLogger(SpringbootDemoApplication.class);
 
     public static void main(String[] args) {
         ConfigurableApplicationContext applicationContext = SpringApplication.run(SpringbootDemoApplication.class, args);
 //        ConfigurableListableBeanFactory beanFactory = applicationContext.getBeanFactory();
         TestSpringService testSpringService = (TestSpringService) applicationContext.getBean("testSpringServiceImpl");
-        String message = testSpringService.sayHello("jack");
-        System.out.println(message);
-//        System.out.println(ss);
+        String message = testSpringService.sayHello(applicationContext.getApplicationName());
+        LOGGER.info(message);
     }
 
 //    @Resource
