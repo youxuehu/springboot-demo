@@ -7,6 +7,7 @@ import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -15,7 +16,7 @@ import static com.example.springbootdemo.utils.CommonConst.SESSION_KET;
 
 public class LoginCheckIntercepter extends HandlerInterceptorAdapter {
     private static final Logger LOGGER = LoggerFactory.getLogger(LoginCheckIntercepter.class);
-    @Autowired
+    @Autowired  @Qualifier("redisCacheServiceImpl")
     CacheService cacheService;
 
     @Override

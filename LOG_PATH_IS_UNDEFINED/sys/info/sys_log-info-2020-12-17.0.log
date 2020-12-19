@@ -1,0 +1,905 @@
+2020-12-17 22:30:41.768 [restartedMain] INFO  c.example.springbootdemo.SpringbootDemoApplication - Starting SpringbootDemoApplication on youxuehudeiMac.lan with PID 3808 (/Users/youxuehu/IdeaProjects/springboot-demo/target/classes started by youxuehu in /Users/youxuehu/IdeaProjects/springboot-demo)
+2020-12-17 22:30:41.780 [restartedMain] INFO  c.example.springbootdemo.SpringbootDemoApplication - No active profile set, falling back to default profiles: default
+2020-12-17 22:30:41.876 [restartedMain] INFO  o.s.boot.devtools.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar referenced one or more files that do not exist: file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_cs.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_de_DE.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_es.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_fr.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_hu.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_it.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_ja_JP.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_ko_KR.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_pl.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_pt_BR.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_ru.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_zh_CN.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_zh_TW.jar
+2020-12-17 22:30:41.877 [restartedMain] INFO  o.s.boot.devtools.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/youxuehu/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/jaxb-impl-2.2.3-1.jar referenced one or more files that do not exist: file:/Users/youxuehu/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/jaxb-api.jar,file:/Users/youxuehu/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/activation.jar,file:/Users/youxuehu/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/jsr173_1.0_api.jar,file:/Users/youxuehu/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/jaxb1-impl.jar
+2020-12-17 22:30:41.877 [restartedMain] INFO  o.s.boot.devtools.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2020-12-17 22:30:41.877 [restartedMain] INFO  o.s.boot.devtools.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/youxuehu/.m2/repository/com/mchange/c3p0/0.9.5.5/c3p0-0.9.5.5.jar referenced one or more files that do not exist: file:/Users/youxuehu/.m2/repository/com/mchange/c3p0/0.9.5.5/mchange-commons-java-0.2.19.jar
+2020-12-17 22:30:41.877 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-12-17 22:30:41.878 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-12-17 22:30:43.372 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-17 22:30:43.376 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-12-17 22:30:43.464 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 55ms. Found 0 repository interfaces.
+2020-12-17 22:30:43.972 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-17 22:30:44.590 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+2020-12-17 22:30:44.601 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+2020-12-17 22:30:44.602 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-12-17 22:30:44.602 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-12-17 22:30:44.699 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-12-17 22:30:44.699 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2821 ms
+2020-12-17 22:30:44.766 [restartedMain] INFO  org.quartz.ee.servlet.QuartzInitializerListener - Quartz Initializer Servlet loaded, initializing Scheduler...
+2020-12-17 22:30:44.826 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Using ConnectionProvider class 'org.quartz.utils.C3p0PoolingConnectionProvider' for data source 'qzDS'
+2020-12-17 22:30:44.936 [MLog-Init-Reporter] INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+2020-12-17 22:30:44.996 [restartedMain] INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.5 [built 11-December-2019 22:18:33 -0800; debug? true; trace: 10]
+2020-12-17 22:30:45.102 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2020-12-17 22:30:45.105 [restartedMain] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: restartedMain
+2020-12-17 22:30:45.114 [restartedMain] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-12-17 22:30:45.115 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2020-12-17 22:30:45.116 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2020-12-17 22:30:45.116 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - JobStoreTX initialized.
+2020-12-17 22:30:45.117 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 5 threads.
+  Using job-store 'org.quartz.impl.jdbcjobstore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2020-12-17 22:30:45.117 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'QuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2020-12-17 22:30:45.117 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2020-12-17 22:30:45.146 [restartedMain] INFO  c.m.v2.c3p0.impl.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge2niaevdtse136uo5i|7cb9794f, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge2niaevdtse136uo5i|7cb9794f, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/test?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 10, maxStatements -> 0, maxStatementsPerConnection -> 120, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2020-12-17 22:30:45.380 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Freed 0 triggers from 'acquired' / 'blocked' state.
+2020-12-17 22:30:45.393 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2020-12-17 22:30:45.394 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovery complete.
+2020-12-17 22:30:45.395 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 'complete' triggers.
+2020-12-17 22:30:45.397 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 stale fired job entries.
+2020-12-17 22:30:45.400 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2020-12-17 22:30:45.400 [restartedMain] INFO  org.quartz.ee.servlet.QuartzInitializerListener - Scheduler has been started...
+2020-12-17 22:30:45.400 [restartedMain] INFO  org.quartz.ee.servlet.QuartzInitializerListener - Storing the Quartz Scheduler Factory in the servlet context at key: org.quartz.impl.StdSchedulerFactory.KEY
+2020-12-17 22:30:45.509 [restartedMain] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2020-12-17 22:30:45.722 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-12-17 22:30:46.293 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2020-12-17 22:30:46.296 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2020-12-17 22:30:46.298 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED shutting down.
+2020-12-17 22:30:46.298 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED paused.
+2020-12-17 22:30:46.300 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED shutdown complete.
+2020-12-17 22:30:46.300 [restartedMain] INFO  org.quartz.ee.servlet.QuartzInitializerListener - Quartz Scheduler successful shutdown.
+2020-12-17 22:30:46.312 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-12-17 22:30:51.252 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 22:30:51.258 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 10
+2020-12-17 22:30:51.258 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 10
+2020-12-17 22:31:41.261 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 22:31:41.304 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 20
+2020-12-17 22:31:41.304 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 20
+2020-12-17 22:32:31.309 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 22:32:31.337 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 40
+2020-12-17 22:32:31.337 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 40
+2020-12-17 22:33:21.344 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 22:33:21.345 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 60
+2020-12-17 22:33:21.345 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 60
+2020-12-17 22:34:11.349 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 22:34:11.373 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 70
+2020-12-17 22:34:11.374 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 70
+2020-12-17 22:35:01.376 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 22:35:01.400 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 90
+2020-12-17 22:35:01.400 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 90
+2020-12-17 22:35:51.407 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 22:35:51.439 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 110
+2020-12-17 22:35:51.439 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 110
+2020-12-17 22:36:41.447 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 22:36:41.471 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 120
+2020-12-17 22:36:41.472 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 120
+2020-12-17 22:37:31.475 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 22:37:31.476 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 140
+2020-12-17 22:37:31.476 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 140
+2020-12-17 22:38:21.481 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 22:38:21.482 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 160
+2020-12-17 22:38:21.483 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 160
+2020-12-17 22:39:11.487 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 22:39:11.488 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 170
+2020-12-17 22:39:11.488 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 170
+2020-12-17 22:40:01.494 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 22:40:01.523 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 190
+2020-12-17 22:40:01.523 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 190
+2020-12-17 22:40:51.529 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 22:40:51.558 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 210
+2020-12-17 22:40:51.558 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 210
+2020-12-17 22:41:41.560 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 22:41:41.592 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 220
+2020-12-17 22:41:41.593 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 220
+2020-12-17 22:42:31.600 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 22:42:31.620 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 240
+2020-12-17 22:42:31.620 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 240
+2020-12-17 22:43:21.623 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 22:43:21.671 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 260
+2020-12-17 22:43:21.672 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 260
+2020-12-17 22:44:11.678 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 22:44:11.698 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 270
+2020-12-17 22:44:11.699 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 270
+2020-12-17 22:44:25.440 [restartedMain] INFO  c.example.springbootdemo.SpringbootDemoApplication - Starting SpringbootDemoApplication on youxuehudeiMac.lan with PID 4082 (/Users/youxuehu/IdeaProjects/springboot-demo/target/classes started by youxuehu in /Users/youxuehu/IdeaProjects/springboot-demo)
+2020-12-17 22:44:25.443 [restartedMain] INFO  c.example.springbootdemo.SpringbootDemoApplication - No active profile set, falling back to default profiles: default
+2020-12-17 22:44:25.504 [restartedMain] INFO  o.s.boot.devtools.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar referenced one or more files that do not exist: file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_cs.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_de_DE.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_es.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_fr.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_hu.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_it.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_ja_JP.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_ko_KR.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_pl.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_pt_BR.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_ru.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_zh_CN.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_zh_TW.jar
+2020-12-17 22:44:25.504 [restartedMain] INFO  o.s.boot.devtools.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/youxuehu/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/jaxb-impl-2.2.3-1.jar referenced one or more files that do not exist: file:/Users/youxuehu/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/jaxb-api.jar,file:/Users/youxuehu/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/activation.jar,file:/Users/youxuehu/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/jsr173_1.0_api.jar,file:/Users/youxuehu/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/jaxb1-impl.jar
+2020-12-17 22:44:25.504 [restartedMain] INFO  o.s.boot.devtools.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2020-12-17 22:44:25.504 [restartedMain] INFO  o.s.boot.devtools.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/youxuehu/.m2/repository/com/mchange/c3p0/0.9.5.5/c3p0-0.9.5.5.jar referenced one or more files that do not exist: file:/Users/youxuehu/.m2/repository/com/mchange/c3p0/0.9.5.5/mchange-commons-java-0.2.19.jar
+2020-12-17 22:44:25.505 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-12-17 22:44:25.505 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-12-17 22:44:27.032 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-17 22:44:27.036 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-12-17 22:44:27.105 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 52ms. Found 0 repository interfaces.
+2020-12-17 22:44:27.637 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-17 22:44:28.254 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+2020-12-17 22:44:28.264 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+2020-12-17 22:44:28.264 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-12-17 22:44:28.265 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-12-17 22:44:28.365 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-12-17 22:44:28.366 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2861 ms
+2020-12-17 22:44:28.445 [restartedMain] INFO  org.quartz.ee.servlet.QuartzInitializerListener - Quartz Initializer Servlet loaded, initializing Scheduler...
+2020-12-17 22:44:28.489 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Using ConnectionProvider class 'org.quartz.utils.C3p0PoolingConnectionProvider' for data source 'qzDS'
+2020-12-17 22:44:28.635 [MLog-Init-Reporter] INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+2020-12-17 22:44:28.705 [restartedMain] INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.5 [built 11-December-2019 22:18:33 -0800; debug? true; trace: 10]
+2020-12-17 22:44:28.803 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2020-12-17 22:44:28.806 [restartedMain] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: restartedMain
+2020-12-17 22:44:28.817 [restartedMain] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-12-17 22:44:28.817 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2020-12-17 22:44:28.818 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2020-12-17 22:44:28.819 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - JobStoreTX initialized.
+2020-12-17 22:44:28.819 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 5 threads.
+  Using job-store 'org.quartz.impl.jdbcjobstore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2020-12-17 22:44:28.820 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'QuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2020-12-17 22:44:28.820 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2020-12-17 22:44:28.852 [restartedMain] INFO  c.m.v2.c3p0.impl.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge2niaevebfytfl593o|d16f482, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge2niaevebfytfl593o|d16f482, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/test?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 10, maxStatements -> 0, maxStatementsPerConnection -> 120, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2020-12-17 22:44:29.109 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Freed 0 triggers from 'acquired' / 'blocked' state.
+2020-12-17 22:44:29.123 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2020-12-17 22:44:29.123 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovery complete.
+2020-12-17 22:44:29.125 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 'complete' triggers.
+2020-12-17 22:44:29.126 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 stale fired job entries.
+2020-12-17 22:44:29.130 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2020-12-17 22:44:29.130 [restartedMain] INFO  org.quartz.ee.servlet.QuartzInitializerListener - Scheduler has been started...
+2020-12-17 22:44:29.130 [restartedMain] INFO  org.quartz.ee.servlet.QuartzInitializerListener - Storing the Quartz Scheduler Factory in the servlet context at key: org.quartz.impl.StdSchedulerFactory.KEY
+2020-12-17 22:44:29.243 [restartedMain] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2020-12-17 22:44:29.442 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-12-17 22:44:30.051 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2020-12-17 22:44:30.054 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2020-12-17 22:44:30.056 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED shutting down.
+2020-12-17 22:44:30.056 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED paused.
+2020-12-17 22:44:30.058 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED shutdown complete.
+2020-12-17 22:44:30.058 [restartedMain] INFO  org.quartz.ee.servlet.QuartzInitializerListener - Quartz Scheduler successful shutdown.
+2020-12-17 22:44:30.071 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-12-17 22:44:35.007 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 22:44:35.013 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 10
+2020-12-17 22:44:35.013 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 10
+2020-12-17 22:45:25.015 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 22:45:25.030 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 20
+2020-12-17 22:45:25.030 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 20
+2020-12-17 22:46:15.037 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 22:46:15.037 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 40
+2020-12-17 22:46:15.037 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 40
+2020-12-17 22:47:05.039 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 22:47:05.040 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 60
+2020-12-17 22:47:05.040 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 60
+2020-12-17 22:47:55.042 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 22:47:55.043 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 70
+2020-12-17 22:47:55.043 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 70
+2020-12-17 22:48:45.050 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 22:48:45.056 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 90
+2020-12-17 22:48:45.056 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 90
+2020-12-17 22:49:35.063 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 22:49:35.069 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 110
+2020-12-17 22:49:35.069 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 110
+2020-12-17 22:50:25.074 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 22:50:25.080 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 120
+2020-12-17 22:50:25.080 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 120
+2020-12-17 22:51:15.092 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 22:51:15.098 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 140
+2020-12-17 22:51:15.098 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 140
+2020-12-17 22:51:48.298 [restartedMain] INFO  c.example.springbootdemo.SpringbootDemoApplication - Starting SpringbootDemoApplication on youxuehudeiMac.lan with PID 4232 (/Users/youxuehu/IdeaProjects/springboot-demo/target/classes started by youxuehu in /Users/youxuehu/IdeaProjects/springboot-demo)
+2020-12-17 22:51:48.302 [restartedMain] INFO  c.example.springbootdemo.SpringbootDemoApplication - No active profile set, falling back to default profiles: default
+2020-12-17 22:51:48.383 [restartedMain] INFO  o.s.boot.devtools.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar referenced one or more files that do not exist: file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_cs.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_de_DE.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_es.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_fr.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_hu.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_it.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_ja_JP.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_ko_KR.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_pl.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_pt_BR.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_ru.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_zh_CN.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_zh_TW.jar
+2020-12-17 22:51:48.383 [restartedMain] INFO  o.s.boot.devtools.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/youxuehu/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/jaxb-impl-2.2.3-1.jar referenced one or more files that do not exist: file:/Users/youxuehu/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/jaxb-api.jar,file:/Users/youxuehu/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/activation.jar,file:/Users/youxuehu/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/jsr173_1.0_api.jar,file:/Users/youxuehu/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/jaxb1-impl.jar
+2020-12-17 22:51:48.383 [restartedMain] INFO  o.s.boot.devtools.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2020-12-17 22:51:48.383 [restartedMain] INFO  o.s.boot.devtools.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/youxuehu/.m2/repository/com/mchange/c3p0/0.9.5.5/c3p0-0.9.5.5.jar referenced one or more files that do not exist: file:/Users/youxuehu/.m2/repository/com/mchange/c3p0/0.9.5.5/mchange-commons-java-0.2.19.jar
+2020-12-17 22:51:48.384 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-12-17 22:51:48.384 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-12-17 22:51:49.801 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-17 22:51:49.804 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-12-17 22:51:49.873 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 51ms. Found 0 repository interfaces.
+2020-12-17 22:51:50.375 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-17 22:51:50.910 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+2020-12-17 22:51:50.921 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+2020-12-17 22:51:50.922 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-12-17 22:51:50.922 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-12-17 22:51:51.019 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-12-17 22:51:51.019 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2635 ms
+2020-12-17 22:51:51.082 [restartedMain] INFO  org.quartz.ee.servlet.QuartzInitializerListener - Quartz Initializer Servlet loaded, initializing Scheduler...
+2020-12-17 22:51:51.112 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Using ConnectionProvider class 'org.quartz.utils.C3p0PoolingConnectionProvider' for data source 'qzDS'
+2020-12-17 22:51:51.220 [MLog-Init-Reporter] INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+2020-12-17 22:51:51.281 [restartedMain] INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.5 [built 11-December-2019 22:18:33 -0800; debug? true; trace: 10]
+2020-12-17 22:51:51.355 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2020-12-17 22:51:51.357 [restartedMain] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: restartedMain
+2020-12-17 22:51:51.366 [restartedMain] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-12-17 22:51:51.366 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2020-12-17 22:51:51.367 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2020-12-17 22:51:51.367 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - JobStoreTX initialized.
+2020-12-17 22:51:51.368 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 5 threads.
+  Using job-store 'org.quartz.impl.jdbcjobstore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2020-12-17 22:51:51.368 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'QuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2020-12-17 22:51:51.368 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2020-12-17 22:51:51.393 [restartedMain] INFO  c.m.v2.c3p0.impl.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge2niaevekxgn6hgy1m|71bd0e7e, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge2niaevekxgn6hgy1m|71bd0e7e, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/test?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 10, maxStatements -> 0, maxStatementsPerConnection -> 120, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2020-12-17 22:51:51.632 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Freed 0 triggers from 'acquired' / 'blocked' state.
+2020-12-17 22:51:51.645 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2020-12-17 22:51:51.646 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovery complete.
+2020-12-17 22:51:51.647 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 'complete' triggers.
+2020-12-17 22:51:51.649 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 stale fired job entries.
+2020-12-17 22:51:51.651 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2020-12-17 22:51:51.652 [restartedMain] INFO  org.quartz.ee.servlet.QuartzInitializerListener - Scheduler has been started...
+2020-12-17 22:51:51.652 [restartedMain] INFO  org.quartz.ee.servlet.QuartzInitializerListener - Storing the Quartz Scheduler Factory in the servlet context at key: org.quartz.impl.StdSchedulerFactory.KEY
+2020-12-17 22:51:51.756 [restartedMain] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2020-12-17 22:51:51.926 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-12-17 22:51:52.473 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2020-12-17 22:51:52.477 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2020-12-17 22:51:52.478 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED shutting down.
+2020-12-17 22:51:52.478 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED paused.
+2020-12-17 22:51:52.481 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED shutdown complete.
+2020-12-17 22:51:52.481 [restartedMain] INFO  org.quartz.ee.servlet.QuartzInitializerListener - Quartz Scheduler successful shutdown.
+2020-12-17 22:51:52.493 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-12-17 22:51:57.429 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 22:51:57.430 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 10
+2020-12-17 22:51:57.430 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 10
+2020-12-17 22:52:47.432 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 22:52:47.433 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 20
+2020-12-17 22:52:47.433 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 20
+2020-12-17 22:53:37.435 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 22:53:37.479 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 40
+2020-12-17 22:53:37.480 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 40
+2020-12-17 22:54:36.321 [restartedMain] INFO  c.example.springbootdemo.SpringbootDemoApplication - Starting SpringbootDemoApplication on youxuehudeiMac.lan with PID 4306 (/Users/youxuehu/IdeaProjects/springboot-demo/target/classes started by youxuehu in /Users/youxuehu/IdeaProjects/springboot-demo)
+2020-12-17 22:54:36.327 [restartedMain] INFO  c.example.springbootdemo.SpringbootDemoApplication - No active profile set, falling back to default profiles: default
+2020-12-17 22:54:36.408 [restartedMain] INFO  o.s.boot.devtools.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar referenced one or more files that do not exist: file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_cs.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_de_DE.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_es.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_fr.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_hu.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_it.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_ja_JP.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_ko_KR.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_pl.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_pt_BR.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_ru.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_zh_CN.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_zh_TW.jar
+2020-12-17 22:54:36.408 [restartedMain] INFO  o.s.boot.devtools.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/youxuehu/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/jaxb-impl-2.2.3-1.jar referenced one or more files that do not exist: file:/Users/youxuehu/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/jaxb-api.jar,file:/Users/youxuehu/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/activation.jar,file:/Users/youxuehu/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/jsr173_1.0_api.jar,file:/Users/youxuehu/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/jaxb1-impl.jar
+2020-12-17 22:54:36.408 [restartedMain] INFO  o.s.boot.devtools.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2020-12-17 22:54:36.408 [restartedMain] INFO  o.s.boot.devtools.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/youxuehu/.m2/repository/com/mchange/c3p0/0.9.5.5/c3p0-0.9.5.5.jar referenced one or more files that do not exist: file:/Users/youxuehu/.m2/repository/com/mchange/c3p0/0.9.5.5/mchange-commons-java-0.2.19.jar
+2020-12-17 22:54:36.408 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-12-17 22:54:36.409 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-12-17 22:54:38.220 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-17 22:54:38.224 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-12-17 22:54:38.292 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 51ms. Found 0 repository interfaces.
+2020-12-17 22:54:38.869 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-17 22:54:39.376 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+2020-12-17 22:54:39.388 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+2020-12-17 22:54:39.389 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-12-17 22:54:39.389 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-12-17 22:54:39.492 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-12-17 22:54:39.493 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3084 ms
+2020-12-17 22:54:39.557 [restartedMain] INFO  org.quartz.ee.servlet.QuartzInitializerListener - Quartz Initializer Servlet loaded, initializing Scheduler...
+2020-12-17 22:54:39.591 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Using ConnectionProvider class 'org.quartz.utils.C3p0PoolingConnectionProvider' for data source 'qzDS'
+2020-12-17 22:54:39.699 [MLog-Init-Reporter] INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+2020-12-17 22:54:39.774 [restartedMain] INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.5 [built 11-December-2019 22:18:33 -0800; debug? true; trace: 10]
+2020-12-17 22:54:39.880 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2020-12-17 22:54:39.883 [restartedMain] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: restartedMain
+2020-12-17 22:54:39.900 [restartedMain] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-12-17 22:54:39.901 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2020-12-17 22:54:39.903 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2020-12-17 22:54:39.905 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - JobStoreTX initialized.
+2020-12-17 22:54:39.906 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 5 threads.
+  Using job-store 'org.quartz.impl.jdbcjobstore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2020-12-17 22:54:39.907 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'QuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2020-12-17 22:54:39.907 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2020-12-17 22:54:39.944 [restartedMain] INFO  c.m.v2.c3p0.impl.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge2niaeveojgt1h31iec|74f03805, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge2niaeveojgt1h31iec|74f03805, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/test?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 10, maxStatements -> 0, maxStatementsPerConnection -> 120, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2020-12-17 22:54:40.233 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Freed 0 triggers from 'acquired' / 'blocked' state.
+2020-12-17 22:54:40.248 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2020-12-17 22:54:40.249 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovery complete.
+2020-12-17 22:54:40.250 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 'complete' triggers.
+2020-12-17 22:54:40.252 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 stale fired job entries.
+2020-12-17 22:54:40.255 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2020-12-17 22:54:40.255 [restartedMain] INFO  org.quartz.ee.servlet.QuartzInitializerListener - Scheduler has been started...
+2020-12-17 22:54:40.255 [restartedMain] INFO  org.quartz.ee.servlet.QuartzInitializerListener - Storing the Quartz Scheduler Factory in the servlet context at key: org.quartz.impl.StdSchedulerFactory.KEY
+2020-12-17 22:54:40.394 [restartedMain] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2020-12-17 22:54:40.646 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-12-17 22:54:41.143 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Using ConnectionProvider class 'org.quartz.utils.C3p0PoolingConnectionProvider' for data source 'qzDS'
+2020-12-17 22:54:41.169 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2020-12-17 22:54:41.169 [restartedMain] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: restartedMain
+2020-12-17 22:54:41.170 [restartedMain] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-12-17 22:54:41.170 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2020-12-17 22:54:41.170 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2020-12-17 22:54:41.170 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - JobStoreTX initialized.
+2020-12-17 22:54:41.170 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'schedulerFactory' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 5 threads.
+  Using job-store 'org.quartz.impl.jdbcjobstore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2020-12-17 22:54:41.170 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'schedulerFactory' initialized from an externally provided properties instance.
+2020-12-17 22:54:41.170 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2020-12-17 22:54:41.172 [restartedMain] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@4b1dd116
+2020-12-17 22:54:41.733 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-12-17 22:54:41.833 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-17 22:54:41.859 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-12-17 22:54:41.897 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2020-12-17 22:54:42.533 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2020-12-17 22:54:42.595 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-12-17 22:54:42.614 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-12-17 22:54:42.662 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-12-17 22:54:42.833 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: helloUsingGET_1
+2020-12-17 22:54:42.842 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: indexUsingGET_1
+2020-12-17 22:54:42.934 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: indexUsingGET_2
+2020-12-17 22:54:42.965 [restartedMain] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2020-12-17 22:54:42.974 [restartedMain] INFO  c.m.v2.c3p0.impl.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge2niaeveojgt1h31iec|31d9f55d, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge2niaeveojgt1h31iec|31d9f55d, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/test?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 10, maxStatements -> 0, maxStatementsPerConnection -> 120, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2020-12-17 22:54:42.993 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Freed 0 triggers from 'acquired' / 'blocked' state.
+2020-12-17 22:54:42.996 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2020-12-17 22:54:42.996 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovery complete.
+2020-12-17 22:54:42.998 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 'complete' triggers.
+2020-12-17 22:54:43.000 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 stale fired job entries.
+2020-12-17 22:54:43.002 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler schedulerFactory_$_NON_CLUSTERED started.
+2020-12-17 22:54:43.014 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+2020-12-17 22:54:43.052 [restartedMain] INFO  org.mortbay.log - Logging to Logger[org.mortbay.log] via org.mortbay.log.Slf4jLog
+2020-12-17 22:54:43.070 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
+2020-12-17 22:54:43.073 [restartedMain] INFO  c.example.springbootdemo.SpringbootDemoApplication - Started SpringbootDemoApplication in 7.359 seconds (JVM running for 8.204)
+2020-12-17 22:54:46.075 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 22:54:46.076 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 10
+2020-12-17 22:54:46.076 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 10
+2020-12-17 22:54:53.345 [http-nio-9090-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-17 22:54:53.373 [http-nio-9090-exec-1] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 22:54:53.373 [http-nio-9090-exec-1] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/
+2020-12-17 22:54:53.404 [http-nio-9090-exec-2] INFO  c.e.springbootdemo.intercepter.AdminIntercepter - Admin拦截器
+2020-12-17 22:54:54.878 [http-nio-9090-exec-3] INFO  c.e.springbootdemo.intercepter.AdminIntercepter - Admin拦截器
+2020-12-17 22:54:54.923 [http-nio-9090-exec-4] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 22:54:54.924 [http-nio-9090-exec-4] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/jobManager
+2020-12-17 22:54:54.924 [http-nio-9090-exec-4] INFO  c.e.springbootdemo.intercepter.AdminIntercepter - Admin拦截器
+2020-12-17 22:54:54.971 [http-nio-9090-exec-7] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 22:54:54.971 [http-nio-9090-exec-5] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 22:54:54.972 [http-nio-9090-exec-7] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/static/vue-resource.js
+2020-12-17 22:54:54.971 [http-nio-9090-exec-8] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 22:54:54.972 [http-nio-9090-exec-7] INFO  c.e.springbootdemo.intercepter.AdminIntercepter - Admin拦截器
+2020-12-17 22:54:54.971 [http-nio-9090-exec-6] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 22:54:54.972 [http-nio-9090-exec-5] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/static/index.css
+2020-12-17 22:54:54.972 [http-nio-9090-exec-8] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/static/index.js
+2020-12-17 22:54:54.972 [http-nio-9090-exec-6] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/static/vue.js
+2020-12-17 22:54:54.972 [http-nio-9090-exec-5] INFO  c.e.springbootdemo.intercepter.AdminIntercepter - Admin拦截器
+2020-12-17 22:54:54.972 [http-nio-9090-exec-8] INFO  c.e.springbootdemo.intercepter.AdminIntercepter - Admin拦截器
+2020-12-17 22:54:54.972 [http-nio-9090-exec-6] INFO  c.e.springbootdemo.intercepter.AdminIntercepter - Admin拦截器
+2020-12-17 22:54:55.043 [http-nio-9090-exec-9] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 22:54:55.043 [http-nio-9090-exec-9] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/static/HadoopManager.html
+2020-12-17 22:54:55.044 [http-nio-9090-exec-9] INFO  c.e.springbootdemo.intercepter.AdminIntercepter - Admin拦截器
+2020-12-17 22:54:55.098 [http-nio-9090-exec-10] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 22:54:55.098 [http-nio-9090-exec-10] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/static/HadoopManager.html
+2020-12-17 22:54:55.098 [http-nio-9090-exec-10] INFO  c.e.springbootdemo.intercepter.AdminIntercepter - Admin拦截器
+2020-12-17 22:54:55.121 [http-nio-9090-exec-1] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 22:54:55.121 [http-nio-9090-exec-1] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/job/queryjob
+2020-12-17 22:54:55.121 [http-nio-9090-exec-1] INFO  c.e.springbootdemo.intercepter.AdminIntercepter - Admin拦截器
+2020-12-17 22:54:55.155 [http-nio-9090-exec-2] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 22:54:55.155 [http-nio-9090-exec-2] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/static/fonts/element-icons.woff
+2020-12-17 22:54:55.155 [http-nio-9090-exec-2] INFO  c.e.springbootdemo.intercepter.AdminIntercepter - Admin拦截器
+2020-12-17 22:54:55.162 [http-nio-9090-exec-2] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 22:54:55.162 [http-nio-9090-exec-2] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/error
+2020-12-17 22:54:55.162 [http-nio-9090-exec-2] INFO  c.e.springbootdemo.intercepter.AdminIntercepter - Admin拦截器
+2020-12-17 22:54:55.177 [http-nio-9090-exec-3] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 22:54:55.180 [http-nio-9090-exec-3] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/static/jquery-3.5.1.min.js
+2020-12-17 22:54:55.184 [http-nio-9090-exec-3] INFO  c.e.springbootdemo.intercepter.AdminIntercepter - Admin拦截器
+2020-12-17 22:54:55.224 [http-nio-9090-exec-4] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 22:54:55.225 [http-nio-9090-exec-4] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/static/fonts/element-icons.ttf
+2020-12-17 22:54:55.225 [http-nio-9090-exec-4] INFO  c.e.springbootdemo.intercepter.AdminIntercepter - Admin拦截器
+2020-12-17 22:54:55.228 [http-nio-9090-exec-4] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 22:54:55.228 [http-nio-9090-exec-4] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/error
+2020-12-17 22:54:55.228 [http-nio-9090-exec-4] INFO  c.e.springbootdemo.intercepter.AdminIntercepter - Admin拦截器
+2020-12-17 22:54:55.474 [http-nio-9090-exec-1] INFO  c.example.springbootdemo.controller.JobController - map:
+2020-12-17 22:55:36.078 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 22:55:36.107 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 20
+2020-12-17 22:55:36.107 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 20
+2020-12-17 22:56:26.114 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 22:56:26.115 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 40
+2020-12-17 22:56:26.115 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 40
+2020-12-17 22:57:16.120 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 22:57:16.121 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 60
+2020-12-17 22:57:16.122 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 60
+2020-12-17 22:58:06.126 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 22:58:06.239 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 70
+2020-12-17 22:58:06.239 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 70
+2020-12-17 22:58:56.241 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 22:58:56.247 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 90
+2020-12-17 22:58:56.247 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 90
+2020-12-17 22:59:46.254 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 22:59:46.260 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 110
+2020-12-17 22:59:46.260 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 110
+2020-12-17 23:00:36.265 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 23:00:36.271 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 120
+2020-12-17 23:00:36.271 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 120
+2020-12-17 23:00:47.542 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler schedulerFactory_$_NON_CLUSTERED paused.
+2020-12-17 23:00:47.543 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2020-12-17 23:00:47.581 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-17 23:00:47.583 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler schedulerFactory_$_NON_CLUSTERED shutting down.
+2020-12-17 23:00:47.583 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler schedulerFactory_$_NON_CLUSTERED paused.
+2020-12-17 23:00:47.588 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler schedulerFactory_$_NON_CLUSTERED shutdown complete.
+2020-12-17 23:00:47.588 [SpringContextShutdownHook] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2020-12-17 23:00:47.604 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2020-12-17 23:00:47.620 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED shutting down.
+2020-12-17 23:00:47.620 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED paused.
+2020-12-17 23:00:47.621 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED shutdown complete.
+2020-12-17 23:00:47.621 [SpringContextShutdownHook] INFO  org.quartz.ee.servlet.QuartzInitializerListener - Quartz Scheduler successful shutdown.
+2020-12-17 23:00:52.465 [restartedMain] INFO  c.example.springbootdemo.SpringbootDemoApplication - Starting SpringbootDemoApplication on youxuehudeiMac.lan with PID 4443 (/Users/youxuehu/IdeaProjects/springboot-demo/target/classes started by youxuehu in /Users/youxuehu/IdeaProjects/springboot-demo)
+2020-12-17 23:00:52.468 [restartedMain] INFO  c.example.springbootdemo.SpringbootDemoApplication - No active profile set, falling back to default profiles: default
+2020-12-17 23:00:52.537 [restartedMain] INFO  o.s.boot.devtools.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar referenced one or more files that do not exist: file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_cs.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_de_DE.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_es.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_fr.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_hu.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_it.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_ja_JP.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_ko_KR.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_pl.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_pt_BR.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_ru.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_zh_CN.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_zh_TW.jar
+2020-12-17 23:00:52.538 [restartedMain] INFO  o.s.boot.devtools.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/youxuehu/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/jaxb-impl-2.2.3-1.jar referenced one or more files that do not exist: file:/Users/youxuehu/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/jaxb-api.jar,file:/Users/youxuehu/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/activation.jar,file:/Users/youxuehu/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/jsr173_1.0_api.jar,file:/Users/youxuehu/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/jaxb1-impl.jar
+2020-12-17 23:00:52.540 [restartedMain] INFO  o.s.boot.devtools.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2020-12-17 23:00:52.541 [restartedMain] INFO  o.s.boot.devtools.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/youxuehu/.m2/repository/com/mchange/c3p0/0.9.5.5/c3p0-0.9.5.5.jar referenced one or more files that do not exist: file:/Users/youxuehu/.m2/repository/com/mchange/c3p0/0.9.5.5/mchange-commons-java-0.2.19.jar
+2020-12-17 23:00:52.542 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-12-17 23:00:52.548 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-12-17 23:00:54.104 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-17 23:00:54.108 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-12-17 23:00:54.177 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 51ms. Found 0 repository interfaces.
+2020-12-17 23:00:54.682 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-17 23:00:55.215 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+2020-12-17 23:00:55.226 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+2020-12-17 23:00:55.226 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-12-17 23:00:55.226 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-12-17 23:00:55.324 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-12-17 23:00:55.324 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2775 ms
+2020-12-17 23:00:55.389 [restartedMain] INFO  org.quartz.ee.servlet.QuartzInitializerListener - Quartz Initializer Servlet loaded, initializing Scheduler...
+2020-12-17 23:00:55.420 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Using ConnectionProvider class 'org.quartz.utils.C3p0PoolingConnectionProvider' for data source 'qzDS'
+2020-12-17 23:00:55.525 [MLog-Init-Reporter] INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+2020-12-17 23:00:55.583 [restartedMain] INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.5 [built 11-December-2019 22:18:33 -0800; debug? true; trace: 10]
+2020-12-17 23:00:55.659 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2020-12-17 23:00:55.661 [restartedMain] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: restartedMain
+2020-12-17 23:00:55.670 [restartedMain] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-12-17 23:00:55.671 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2020-12-17 23:00:55.671 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2020-12-17 23:00:55.672 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - JobStoreTX initialized.
+2020-12-17 23:00:55.673 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 5 threads.
+  Using job-store 'org.quartz.impl.jdbcjobstore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2020-12-17 23:00:55.673 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'QuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2020-12-17 23:00:55.673 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2020-12-17 23:00:55.699 [restartedMain] INFO  c.m.v2.c3p0.impl.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge2niaevewlg51lhg59f|44c6500f, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge2niaevewlg51lhg59f|44c6500f, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/test?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 10, maxStatements -> 0, maxStatementsPerConnection -> 120, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2020-12-17 23:00:55.925 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Freed 0 triggers from 'acquired' / 'blocked' state.
+2020-12-17 23:00:55.939 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2020-12-17 23:00:55.939 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovery complete.
+2020-12-17 23:00:55.941 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 'complete' triggers.
+2020-12-17 23:00:55.942 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 stale fired job entries.
+2020-12-17 23:00:55.946 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2020-12-17 23:00:55.946 [restartedMain] INFO  org.quartz.ee.servlet.QuartzInitializerListener - Scheduler has been started...
+2020-12-17 23:00:55.946 [restartedMain] INFO  org.quartz.ee.servlet.QuartzInitializerListener - Storing the Quartz Scheduler Factory in the servlet context at key: org.quartz.impl.StdSchedulerFactory.KEY
+2020-12-17 23:00:56.054 [restartedMain] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2020-12-17 23:00:56.232 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-12-17 23:00:56.794 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Using ConnectionProvider class 'org.quartz.utils.C3p0PoolingConnectionProvider' for data source 'qzDS'
+2020-12-17 23:00:56.812 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2020-12-17 23:00:56.812 [restartedMain] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: restartedMain
+2020-12-17 23:00:56.813 [restartedMain] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-12-17 23:00:56.813 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2020-12-17 23:00:56.813 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2020-12-17 23:00:56.813 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - JobStoreTX initialized.
+2020-12-17 23:00:56.813 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'schedulerFactory' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 5 threads.
+  Using job-store 'org.quartz.impl.jdbcjobstore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2020-12-17 23:00:56.814 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'schedulerFactory' initialized from an externally provided properties instance.
+2020-12-17 23:00:56.814 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2020-12-17 23:00:56.815 [restartedMain] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@370b48a9
+2020-12-17 23:00:57.192 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-12-17 23:00:57.289 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-17 23:00:57.314 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-12-17 23:00:57.352 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2020-12-17 23:00:57.969 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2020-12-17 23:00:58.028 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-12-17 23:00:58.049 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-12-17 23:00:58.102 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-12-17 23:00:58.348 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: helloUsingGET_1
+2020-12-17 23:00:58.363 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: indexUsingGET_1
+2020-12-17 23:00:58.463 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: indexUsingGET_2
+2020-12-17 23:00:58.495 [restartedMain] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2020-12-17 23:00:58.504 [restartedMain] INFO  c.m.v2.c3p0.impl.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge2niaevewlg51lhg59f|2d355064, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge2niaevewlg51lhg59f|2d355064, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/test?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 10, maxStatements -> 0, maxStatementsPerConnection -> 120, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2020-12-17 23:00:58.524 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Freed 0 triggers from 'acquired' / 'blocked' state.
+2020-12-17 23:00:58.528 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2020-12-17 23:00:58.528 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovery complete.
+2020-12-17 23:00:58.530 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 'complete' triggers.
+2020-12-17 23:00:58.531 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 stale fired job entries.
+2020-12-17 23:00:58.533 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler schedulerFactory_$_NON_CLUSTERED started.
+2020-12-17 23:00:58.547 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+2020-12-17 23:00:58.584 [restartedMain] INFO  org.mortbay.log - Logging to Logger[org.mortbay.log] via org.mortbay.log.Slf4jLog
+2020-12-17 23:00:58.603 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
+2020-12-17 23:00:58.606 [restartedMain] INFO  c.example.springbootdemo.SpringbootDemoApplication - Started SpringbootDemoApplication in 6.717 seconds (JVM running for 7.541)
+2020-12-17 23:01:01.739 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 23:01:01.739 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 10
+2020-12-17 23:01:01.740 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 10
+2020-12-17 23:01:51.743 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 23:01:51.743 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 20
+2020-12-17 23:01:51.743 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 20
+2020-12-17 23:02:41.748 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 23:02:41.750 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 40
+2020-12-17 23:02:41.750 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 40
+2020-12-17 23:03:31.755 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 23:03:31.761 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 60
+2020-12-17 23:03:31.761 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 60
+2020-12-17 23:03:46.892 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler schedulerFactory_$_NON_CLUSTERED paused.
+2020-12-17 23:03:46.894 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2020-12-17 23:03:46.912 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-17 23:03:46.914 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler schedulerFactory_$_NON_CLUSTERED shutting down.
+2020-12-17 23:03:46.915 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler schedulerFactory_$_NON_CLUSTERED paused.
+2020-12-17 23:03:46.918 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler schedulerFactory_$_NON_CLUSTERED shutdown complete.
+2020-12-17 23:03:46.919 [SpringContextShutdownHook] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2020-12-17 23:03:46.930 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2020-12-17 23:03:46.940 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED shutting down.
+2020-12-17 23:03:46.940 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED paused.
+2020-12-17 23:03:46.941 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED shutdown complete.
+2020-12-17 23:03:46.941 [SpringContextShutdownHook] INFO  org.quartz.ee.servlet.QuartzInitializerListener - Quartz Scheduler successful shutdown.
+2020-12-17 23:03:49.433 [restartedMain] INFO  c.example.springbootdemo.SpringbootDemoApplication - Starting SpringbootDemoApplication on youxuehudeiMac.lan with PID 4498 (/Users/youxuehu/IdeaProjects/springboot-demo/target/classes started by youxuehu in /Users/youxuehu/IdeaProjects/springboot-demo)
+2020-12-17 23:03:49.438 [restartedMain] INFO  c.example.springbootdemo.SpringbootDemoApplication - No active profile set, falling back to default profiles: default
+2020-12-17 23:03:49.507 [restartedMain] INFO  o.s.boot.devtools.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar referenced one or more files that do not exist: file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_cs.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_de_DE.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_es.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_fr.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_hu.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_it.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_ja_JP.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_ko_KR.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_pl.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_pt_BR.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_ru.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_zh_CN.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_zh_TW.jar
+2020-12-17 23:03:49.508 [restartedMain] INFO  o.s.boot.devtools.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/youxuehu/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/jaxb-impl-2.2.3-1.jar referenced one or more files that do not exist: file:/Users/youxuehu/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/jaxb-api.jar,file:/Users/youxuehu/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/activation.jar,file:/Users/youxuehu/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/jsr173_1.0_api.jar,file:/Users/youxuehu/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/jaxb1-impl.jar
+2020-12-17 23:03:49.508 [restartedMain] INFO  o.s.boot.devtools.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2020-12-17 23:03:49.508 [restartedMain] INFO  o.s.boot.devtools.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/youxuehu/.m2/repository/com/mchange/c3p0/0.9.5.5/c3p0-0.9.5.5.jar referenced one or more files that do not exist: file:/Users/youxuehu/.m2/repository/com/mchange/c3p0/0.9.5.5/mchange-commons-java-0.2.19.jar
+2020-12-17 23:03:49.508 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-12-17 23:03:49.509 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-12-17 23:03:51.159 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-17 23:03:51.162 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-12-17 23:03:51.236 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 55ms. Found 0 repository interfaces.
+2020-12-17 23:03:51.772 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-17 23:03:52.335 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+2020-12-17 23:03:52.346 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+2020-12-17 23:03:52.346 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-12-17 23:03:52.346 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-12-17 23:03:52.441 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-12-17 23:03:52.441 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2932 ms
+2020-12-17 23:03:52.507 [restartedMain] INFO  org.quartz.ee.servlet.QuartzInitializerListener - Quartz Initializer Servlet loaded, initializing Scheduler...
+2020-12-17 23:03:52.541 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Using ConnectionProvider class 'org.quartz.utils.C3p0PoolingConnectionProvider' for data source 'qzDS'
+2020-12-17 23:03:52.650 [MLog-Init-Reporter] INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+2020-12-17 23:03:52.706 [restartedMain] INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.5 [built 11-December-2019 22:18:33 -0800; debug? true; trace: 10]
+2020-12-17 23:03:52.783 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2020-12-17 23:03:52.785 [restartedMain] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: restartedMain
+2020-12-17 23:03:52.794 [restartedMain] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-12-17 23:03:52.794 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2020-12-17 23:03:52.795 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2020-12-17 23:03:52.796 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - JobStoreTX initialized.
+2020-12-17 23:03:52.796 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 5 threads.
+  Using job-store 'org.quartz.impl.jdbcjobstore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2020-12-17 23:03:52.797 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'QuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2020-12-17 23:03:52.797 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2020-12-17 23:03:52.822 [restartedMain] INFO  c.m.v2.c3p0.impl.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge2niaevf0e49st5ung|575b338b, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge2niaevf0e49st5ung|575b338b, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/test?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 10, maxStatements -> 0, maxStatementsPerConnection -> 120, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2020-12-17 23:03:53.054 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Freed 0 triggers from 'acquired' / 'blocked' state.
+2020-12-17 23:03:53.068 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2020-12-17 23:03:53.069 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovery complete.
+2020-12-17 23:03:53.070 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 'complete' triggers.
+2020-12-17 23:03:53.071 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 stale fired job entries.
+2020-12-17 23:03:53.074 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2020-12-17 23:03:53.074 [restartedMain] INFO  org.quartz.ee.servlet.QuartzInitializerListener - Scheduler has been started...
+2020-12-17 23:03:53.075 [restartedMain] INFO  org.quartz.ee.servlet.QuartzInitializerListener - Storing the Quartz Scheduler Factory in the servlet context at key: org.quartz.impl.StdSchedulerFactory.KEY
+2020-12-17 23:03:53.179 [restartedMain] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2020-12-17 23:03:53.357 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-12-17 23:03:53.956 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Using ConnectionProvider class 'org.quartz.utils.C3p0PoolingConnectionProvider' for data source 'qzDS'
+2020-12-17 23:03:53.974 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2020-12-17 23:03:53.974 [restartedMain] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: restartedMain
+2020-12-17 23:03:53.975 [restartedMain] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-12-17 23:03:53.975 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2020-12-17 23:03:53.975 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2020-12-17 23:03:53.976 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - JobStoreTX initialized.
+2020-12-17 23:03:53.976 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'schedulerFactory' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 5 threads.
+  Using job-store 'org.quartz.impl.jdbcjobstore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2020-12-17 23:03:53.976 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'schedulerFactory' initialized from an externally provided properties instance.
+2020-12-17 23:03:53.976 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2020-12-17 23:03:53.977 [restartedMain] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@18af91fe
+2020-12-17 23:03:54.366 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-12-17 23:03:54.460 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-17 23:03:54.485 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-12-17 23:03:54.522 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2020-12-17 23:03:55.141 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2020-12-17 23:03:55.208 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-12-17 23:03:55.230 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-12-17 23:03:55.285 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-12-17 23:03:55.518 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: helloUsingGET_1
+2020-12-17 23:03:55.529 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: indexUsingGET_1
+2020-12-17 23:03:55.633 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: indexUsingGET_2
+2020-12-17 23:03:55.664 [restartedMain] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2020-12-17 23:03:55.673 [restartedMain] INFO  c.m.v2.c3p0.impl.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge2niaevf0e49st5ung|2ccefd69, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge2niaevf0e49st5ung|2ccefd69, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/test?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 10, maxStatements -> 0, maxStatementsPerConnection -> 120, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2020-12-17 23:03:55.692 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Freed 0 triggers from 'acquired' / 'blocked' state.
+2020-12-17 23:03:55.695 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2020-12-17 23:03:55.695 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovery complete.
+2020-12-17 23:03:55.697 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 'complete' triggers.
+2020-12-17 23:03:55.698 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 stale fired job entries.
+2020-12-17 23:03:55.700 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler schedulerFactory_$_NON_CLUSTERED started.
+2020-12-17 23:03:55.712 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+2020-12-17 23:03:55.750 [restartedMain] INFO  org.mortbay.log - Logging to Logger[org.mortbay.log] via org.mortbay.log.Slf4jLog
+2020-12-17 23:03:55.768 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
+2020-12-17 23:03:55.771 [restartedMain] INFO  c.example.springbootdemo.SpringbootDemoApplication - Started SpringbootDemoApplication in 7.05 seconds (JVM running for 7.981)
+2020-12-17 23:03:58.897 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 23:03:58.897 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 10
+2020-12-17 23:03:58.897 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 10
+2020-12-17 23:04:48.899 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 23:04:48.905 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 20
+2020-12-17 23:04:48.905 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 20
+2020-12-17 23:05:38.907 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 23:05:38.907 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 40
+2020-12-17 23:05:38.907 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 40
+2020-12-17 23:06:28.924 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 23:06:28.930 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 60
+2020-12-17 23:06:28.930 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 60
+2020-12-17 23:07:08.646 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler schedulerFactory_$_NON_CLUSTERED paused.
+2020-12-17 23:07:08.648 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2020-12-17 23:07:08.671 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-17 23:07:08.673 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler schedulerFactory_$_NON_CLUSTERED shutting down.
+2020-12-17 23:07:08.673 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler schedulerFactory_$_NON_CLUSTERED paused.
+2020-12-17 23:07:08.676 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler schedulerFactory_$_NON_CLUSTERED shutdown complete.
+2020-12-17 23:07:08.676 [SpringContextShutdownHook] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2020-12-17 23:07:08.690 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2020-12-17 23:07:08.710 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED shutting down.
+2020-12-17 23:07:08.710 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED paused.
+2020-12-17 23:07:08.710 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED shutdown complete.
+2020-12-17 23:07:08.710 [SpringContextShutdownHook] INFO  org.quartz.ee.servlet.QuartzInitializerListener - Quartz Scheduler successful shutdown.
+2020-12-17 23:07:13.736 [restartedMain] INFO  c.example.springbootdemo.SpringbootDemoApplication - Starting SpringbootDemoApplication on youxuehudeiMac.lan with PID 4571 (/Users/youxuehu/IdeaProjects/springboot-demo/target/classes started by youxuehu in /Users/youxuehu/IdeaProjects/springboot-demo)
+2020-12-17 23:07:13.741 [restartedMain] INFO  c.example.springbootdemo.SpringbootDemoApplication - No active profile set, falling back to default profiles: default
+2020-12-17 23:07:13.825 [restartedMain] INFO  o.s.boot.devtools.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar referenced one or more files that do not exist: file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_cs.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_de_DE.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_es.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_fr.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_hu.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_it.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_ja_JP.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_ko_KR.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_pl.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_pt_BR.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_ru.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_zh_CN.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_zh_TW.jar
+2020-12-17 23:07:13.825 [restartedMain] INFO  o.s.boot.devtools.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/youxuehu/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/jaxb-impl-2.2.3-1.jar referenced one or more files that do not exist: file:/Users/youxuehu/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/jaxb-api.jar,file:/Users/youxuehu/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/activation.jar,file:/Users/youxuehu/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/jsr173_1.0_api.jar,file:/Users/youxuehu/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/jaxb1-impl.jar
+2020-12-17 23:07:13.825 [restartedMain] INFO  o.s.boot.devtools.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2020-12-17 23:07:13.825 [restartedMain] INFO  o.s.boot.devtools.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/youxuehu/.m2/repository/com/mchange/c3p0/0.9.5.5/c3p0-0.9.5.5.jar referenced one or more files that do not exist: file:/Users/youxuehu/.m2/repository/com/mchange/c3p0/0.9.5.5/mchange-commons-java-0.2.19.jar
+2020-12-17 23:07:13.825 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-12-17 23:07:13.826 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-12-17 23:07:15.399 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-17 23:07:15.402 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-12-17 23:07:15.476 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 55ms. Found 0 repository interfaces.
+2020-12-17 23:07:15.992 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-12-17 23:07:16.547 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+2020-12-17 23:07:16.557 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+2020-12-17 23:07:16.558 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-12-17 23:07:16.558 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-12-17 23:07:16.650 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-12-17 23:07:16.650 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2824 ms
+2020-12-17 23:07:16.714 [restartedMain] INFO  org.quartz.ee.servlet.QuartzInitializerListener - Quartz Initializer Servlet loaded, initializing Scheduler...
+2020-12-17 23:07:16.744 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Using ConnectionProvider class 'org.quartz.utils.C3p0PoolingConnectionProvider' for data source 'qzDS'
+2020-12-17 23:07:16.851 [MLog-Init-Reporter] INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+2020-12-17 23:07:16.907 [restartedMain] INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.5 [built 11-December-2019 22:18:33 -0800; debug? true; trace: 10]
+2020-12-17 23:07:16.988 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2020-12-17 23:07:16.990 [restartedMain] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: restartedMain
+2020-12-17 23:07:16.999 [restartedMain] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-12-17 23:07:16.999 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2020-12-17 23:07:17.000 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2020-12-17 23:07:17.000 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - JobStoreTX initialized.
+2020-12-17 23:07:17.001 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 5 threads.
+  Using job-store 'org.quartz.impl.jdbcjobstore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2020-12-17 23:07:17.001 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'QuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2020-12-17 23:07:17.001 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2020-12-17 23:07:17.027 [restartedMain] INFO  c.m.v2.c3p0.impl.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge2niaevf4roi1kvmonx|4ea596b9, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge2niaevf4roi1kvmonx|4ea596b9, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/test?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 10, maxStatements -> 0, maxStatementsPerConnection -> 120, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2020-12-17 23:07:17.264 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Freed 0 triggers from 'acquired' / 'blocked' state.
+2020-12-17 23:07:17.278 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2020-12-17 23:07:17.278 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovery complete.
+2020-12-17 23:07:17.280 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 'complete' triggers.
+2020-12-17 23:07:17.281 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 stale fired job entries.
+2020-12-17 23:07:17.285 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2020-12-17 23:07:17.285 [restartedMain] INFO  org.quartz.ee.servlet.QuartzInitializerListener - Scheduler has been started...
+2020-12-17 23:07:17.285 [restartedMain] INFO  org.quartz.ee.servlet.QuartzInitializerListener - Storing the Quartz Scheduler Factory in the servlet context at key: org.quartz.impl.StdSchedulerFactory.KEY
+2020-12-17 23:07:17.387 [restartedMain] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2020-12-17 23:07:17.562 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-12-17 23:07:18.144 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Using ConnectionProvider class 'org.quartz.utils.C3p0PoolingConnectionProvider' for data source 'qzDS'
+2020-12-17 23:07:18.162 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2020-12-17 23:07:18.162 [restartedMain] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: restartedMain
+2020-12-17 23:07:18.163 [restartedMain] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-12-17 23:07:18.163 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2020-12-17 23:07:18.163 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2020-12-17 23:07:18.163 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - JobStoreTX initialized.
+2020-12-17 23:07:18.163 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'schedulerFactory' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 5 threads.
+  Using job-store 'org.quartz.impl.jdbcjobstore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2020-12-17 23:07:18.163 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'schedulerFactory' initialized from an externally provided properties instance.
+2020-12-17 23:07:18.163 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2020-12-17 23:07:18.165 [restartedMain] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@24f52bec
+2020-12-17 23:07:18.557 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-12-17 23:07:18.667 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-17 23:07:18.695 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-12-17 23:07:18.736 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2020-12-17 23:07:19.432 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2020-12-17 23:07:19.508 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-12-17 23:07:19.531 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-12-17 23:07:19.587 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-12-17 23:07:19.834 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: helloUsingGET_1
+2020-12-17 23:07:19.843 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: indexUsingGET_1
+2020-12-17 23:07:19.947 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: indexUsingGET_2
+2020-12-17 23:07:19.977 [restartedMain] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2020-12-17 23:07:19.986 [restartedMain] INFO  c.m.v2.c3p0.impl.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge2niaevf4roi1kvmonx|4c27e1a8, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge2niaevf4roi1kvmonx|4c27e1a8, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/test?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 10, maxStatements -> 0, maxStatementsPerConnection -> 120, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2020-12-17 23:07:20.006 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Freed 0 triggers from 'acquired' / 'blocked' state.
+2020-12-17 23:07:20.010 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2020-12-17 23:07:20.011 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovery complete.
+2020-12-17 23:07:20.012 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 'complete' triggers.
+2020-12-17 23:07:20.014 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 stale fired job entries.
+2020-12-17 23:07:20.016 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler schedulerFactory_$_NON_CLUSTERED started.
+2020-12-17 23:07:20.031 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+2020-12-17 23:07:20.072 [restartedMain] INFO  org.mortbay.log - Logging to Logger[org.mortbay.log] via org.mortbay.log.Slf4jLog
+2020-12-17 23:07:20.090 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
+2020-12-17 23:07:20.093 [restartedMain] INFO  c.example.springbootdemo.SpringbootDemoApplication - Started SpringbootDemoApplication in 6.941 seconds (JVM running for 7.765)
+2020-12-17 23:07:20.156 [restartedMain] INFO  c.example.springbootdemo.SpringbootDemoApplication - name:  result{"name":"游学虎","age":20}
+2020-12-17 23:07:23.085 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 23:07:23.086 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 10
+2020-12-17 23:07:23.086 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 10
+2020-12-17 23:07:32.156 [http-nio-9090-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-17 23:07:32.184 [http-nio-9090-exec-1] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:32.185 [http-nio-9090-exec-1] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/jobManager
+2020-12-17 23:07:32.207 [http-nio-9090-exec-2] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:32.208 [http-nio-9090-exec-2] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/error
+2020-12-17 23:07:32.212 [http-nio-9090-exec-3] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:32.212 [http-nio-9090-exec-3] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/error
+2020-12-17 23:07:32.216 [http-nio-9090-exec-4] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:32.216 [http-nio-9090-exec-4] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/error
+2020-12-17 23:07:32.221 [http-nio-9090-exec-5] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:32.221 [http-nio-9090-exec-5] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/error
+2020-12-17 23:07:32.225 [http-nio-9090-exec-6] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:32.225 [http-nio-9090-exec-6] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/error
+2020-12-17 23:07:32.229 [http-nio-9090-exec-7] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:32.229 [http-nio-9090-exec-7] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/error
+2020-12-17 23:07:32.233 [http-nio-9090-exec-8] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:32.233 [http-nio-9090-exec-8] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/error
+2020-12-17 23:07:32.237 [http-nio-9090-exec-9] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:32.237 [http-nio-9090-exec-9] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/error
+2020-12-17 23:07:32.241 [http-nio-9090-exec-10] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:32.242 [http-nio-9090-exec-10] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/error
+2020-12-17 23:07:32.245 [http-nio-9090-exec-1] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:32.245 [http-nio-9090-exec-1] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/error
+2020-12-17 23:07:32.249 [http-nio-9090-exec-2] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:32.249 [http-nio-9090-exec-2] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/error
+2020-12-17 23:07:32.253 [http-nio-9090-exec-3] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:32.253 [http-nio-9090-exec-3] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/error
+2020-12-17 23:07:32.259 [http-nio-9090-exec-4] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:32.259 [http-nio-9090-exec-4] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/error
+2020-12-17 23:07:32.263 [http-nio-9090-exec-5] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:32.263 [http-nio-9090-exec-5] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/error
+2020-12-17 23:07:32.266 [http-nio-9090-exec-6] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:32.267 [http-nio-9090-exec-6] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/error
+2020-12-17 23:07:32.270 [http-nio-9090-exec-7] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:32.270 [http-nio-9090-exec-7] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/error
+2020-12-17 23:07:32.274 [http-nio-9090-exec-8] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:32.275 [http-nio-9090-exec-8] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/error
+2020-12-17 23:07:32.278 [http-nio-9090-exec-9] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:32.278 [http-nio-9090-exec-9] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/error
+2020-12-17 23:07:32.282 [http-nio-9090-exec-10] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:32.282 [http-nio-9090-exec-10] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/error
+2020-12-17 23:07:33.360 [http-nio-9090-exec-1] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:33.360 [http-nio-9090-exec-1] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/error
+2020-12-17 23:07:33.364 [http-nio-9090-exec-2] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:33.364 [http-nio-9090-exec-2] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/error
+2020-12-17 23:07:33.370 [http-nio-9090-exec-3] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:33.371 [http-nio-9090-exec-3] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/error
+2020-12-17 23:07:33.381 [http-nio-9090-exec-4] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:33.382 [http-nio-9090-exec-4] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/error
+2020-12-17 23:07:33.387 [http-nio-9090-exec-5] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:33.387 [http-nio-9090-exec-5] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/error
+2020-12-17 23:07:33.392 [http-nio-9090-exec-6] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:33.392 [http-nio-9090-exec-6] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/error
+2020-12-17 23:07:33.396 [http-nio-9090-exec-7] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:33.396 [http-nio-9090-exec-7] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/error
+2020-12-17 23:07:33.401 [http-nio-9090-exec-8] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:33.401 [http-nio-9090-exec-8] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/error
+2020-12-17 23:07:33.405 [http-nio-9090-exec-9] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:33.405 [http-nio-9090-exec-9] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/error
+2020-12-17 23:07:33.409 [http-nio-9090-exec-10] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:33.410 [http-nio-9090-exec-10] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/error
+2020-12-17 23:07:33.416 [http-nio-9090-exec-1] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:33.417 [http-nio-9090-exec-1] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/error
+2020-12-17 23:07:33.420 [http-nio-9090-exec-2] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:33.420 [http-nio-9090-exec-2] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/error
+2020-12-17 23:07:33.424 [http-nio-9090-exec-3] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:33.424 [http-nio-9090-exec-3] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/error
+2020-12-17 23:07:33.427 [http-nio-9090-exec-4] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:33.427 [http-nio-9090-exec-4] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/error
+2020-12-17 23:07:33.430 [http-nio-9090-exec-5] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:33.430 [http-nio-9090-exec-5] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/error
+2020-12-17 23:07:33.433 [http-nio-9090-exec-6] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:33.434 [http-nio-9090-exec-6] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/error
+2020-12-17 23:07:33.437 [http-nio-9090-exec-7] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:33.437 [http-nio-9090-exec-7] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/error
+2020-12-17 23:07:33.440 [http-nio-9090-exec-8] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:33.440 [http-nio-9090-exec-8] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/error
+2020-12-17 23:07:33.444 [http-nio-9090-exec-9] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:33.444 [http-nio-9090-exec-9] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/error
+2020-12-17 23:07:33.447 [http-nio-9090-exec-10] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:33.447 [http-nio-9090-exec-10] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/error
+2020-12-17 23:07:35.236 [http-nio-9090-exec-1] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:35.236 [http-nio-9090-exec-1] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/
+2020-12-17 23:07:35.240 [http-nio-9090-exec-2] INFO  c.e.springbootdemo.intercepter.AdminIntercepter - Admin拦截器
+2020-12-17 23:07:36.746 [http-nio-9090-exec-3] INFO  c.e.springbootdemo.intercepter.AdminIntercepter - Admin拦截器
+2020-12-17 23:07:36.792 [http-nio-9090-exec-4] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:36.792 [http-nio-9090-exec-4] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/jobManager
+2020-12-17 23:07:36.792 [http-nio-9090-exec-4] INFO  c.e.springbootdemo.intercepter.AdminIntercepter - Admin拦截器
+2020-12-17 23:07:36.792 [http-nio-9090-exec-4] INFO  c.e.springbootdemo.controller.LoginController - JobManager
+2020-12-17 23:07:37.003 [http-nio-9090-exec-7] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:37.003 [http-nio-9090-exec-5] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:37.003 [http-nio-9090-exec-8] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:37.003 [http-nio-9090-exec-6] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:37.004 [http-nio-9090-exec-8] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/static/index.js
+2020-12-17 23:07:37.004 [http-nio-9090-exec-6] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/static/vue.js
+2020-12-17 23:07:37.004 [http-nio-9090-exec-7] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/static/vue-resource.js
+2020-12-17 23:07:37.004 [http-nio-9090-exec-8] INFO  c.e.springbootdemo.intercepter.AdminIntercepter - Admin拦截器
+2020-12-17 23:07:37.004 [http-nio-9090-exec-5] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/static/index.css
+2020-12-17 23:07:37.004 [http-nio-9090-exec-6] INFO  c.e.springbootdemo.intercepter.AdminIntercepter - Admin拦截器
+2020-12-17 23:07:37.004 [http-nio-9090-exec-7] INFO  c.e.springbootdemo.intercepter.AdminIntercepter - Admin拦截器
+2020-12-17 23:07:37.004 [http-nio-9090-exec-5] INFO  c.e.springbootdemo.intercepter.AdminIntercepter - Admin拦截器
+2020-12-17 23:07:37.118 [http-nio-9090-exec-9] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:37.118 [http-nio-9090-exec-9] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/static/HadoopManager.html
+2020-12-17 23:07:37.119 [http-nio-9090-exec-9] INFO  c.e.springbootdemo.intercepter.AdminIntercepter - Admin拦截器
+2020-12-17 23:07:37.169 [http-nio-9090-exec-10] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:37.169 [http-nio-9090-exec-10] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/static/HadoopManager.html
+2020-12-17 23:07:37.169 [http-nio-9090-exec-10] INFO  c.e.springbootdemo.intercepter.AdminIntercepter - Admin拦截器
+2020-12-17 23:07:37.190 [http-nio-9090-exec-1] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:37.190 [http-nio-9090-exec-1] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/job/queryjob
+2020-12-17 23:07:37.190 [http-nio-9090-exec-1] INFO  c.e.springbootdemo.intercepter.AdminIntercepter - Admin拦截器
+2020-12-17 23:07:37.215 [http-nio-9090-exec-2] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:37.215 [http-nio-9090-exec-2] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/static/fonts/element-icons.woff
+2020-12-17 23:07:37.216 [http-nio-9090-exec-2] INFO  c.e.springbootdemo.intercepter.AdminIntercepter - Admin拦截器
+2020-12-17 23:07:37.218 [http-nio-9090-exec-2] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:37.218 [http-nio-9090-exec-2] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/error
+2020-12-17 23:07:37.218 [http-nio-9090-exec-2] INFO  c.e.springbootdemo.intercepter.AdminIntercepter - Admin拦截器
+2020-12-17 23:07:37.242 [http-nio-9090-exec-3] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:37.242 [http-nio-9090-exec-3] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/static/jquery-3.5.1.min.js
+2020-12-17 23:07:37.242 [http-nio-9090-exec-3] INFO  c.e.springbootdemo.intercepter.AdminIntercepter - Admin拦截器
+2020-12-17 23:07:37.268 [http-nio-9090-exec-4] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:37.268 [http-nio-9090-exec-4] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/static/fonts/element-icons.ttf
+2020-12-17 23:07:37.268 [http-nio-9090-exec-4] INFO  c.e.springbootdemo.intercepter.AdminIntercepter - Admin拦截器
+2020-12-17 23:07:37.271 [http-nio-9090-exec-4] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:37.272 [http-nio-9090-exec-4] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/error
+2020-12-17 23:07:37.272 [http-nio-9090-exec-4] INFO  c.e.springbootdemo.intercepter.AdminIntercepter - Admin拦截器
+2020-12-17 23:07:37.482 [http-nio-9090-exec-1] INFO  c.example.springbootdemo.controller.JobController - map:
+2020-12-17 23:07:56.926 [http-nio-9090-exec-7] INFO  c.e.s.intercepter.LoginCheckIntercepter - 登录拦截器
+2020-12-17 23:07:56.926 [http-nio-9090-exec-7] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/
+2020-12-17 23:07:56.926 [http-nio-9090-exec-7] INFO  c.e.springbootdemo.intercepter.AdminIntercepter - Admin拦截器
+2020-12-17 23:07:56.927 [http-nio-9090-exec-7] INFO  c.e.springbootdemo.controller.HelloController - Hello Docker!
+2020-12-17 23:08:13.088 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 23:08:13.089 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 20
+2020-12-17 23:08:13.089 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 20
+2020-12-17 23:09:03.093 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 23:09:03.094 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 40
+2020-12-17 23:09:03.094 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 40
+2020-12-17 23:09:53.099 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 23:09:53.100 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 60
+2020-12-17 23:09:53.100 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 60
+2020-12-17 23:10:02.289 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler schedulerFactory_$_NON_CLUSTERED paused.
+2020-12-17 23:10:02.290 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2020-12-17 23:10:02.309 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-17 23:10:02.311 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler schedulerFactory_$_NON_CLUSTERED shutting down.
+2020-12-17 23:10:02.311 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler schedulerFactory_$_NON_CLUSTERED paused.
+2020-12-17 23:10:02.315 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler schedulerFactory_$_NON_CLUSTERED shutdown complete.
+2020-12-17 23:10:02.315 [SpringContextShutdownHook] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2020-12-17 23:10:02.324 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2020-12-17 23:10:02.335 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED shutting down.
+2020-12-17 23:10:02.335 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED paused.
+2020-12-17 23:10:02.336 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED shutdown complete.
+2020-12-17 23:10:02.336 [SpringContextShutdownHook] INFO  org.quartz.ee.servlet.QuartzInitializerListener - Quartz Scheduler successful shutdown.

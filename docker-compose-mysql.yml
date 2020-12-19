@@ -3,7 +3,7 @@ services:
   mysql:
     restart: always
     image: mysql:latest
-    container_name: youxuehu-mysql
+    container_name: mysql
     volumes:
       - ./dockercompose/mysql/data/db:/var/lib/mysql/
       - ./dockercompose/mysql/mysql-3346.sock:/var/run/mysql.sock
@@ -18,3 +18,15 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: zhf123..
       TZ: Asia/Shanghai
+  redis:
+    image: redis
+    restart: always
+    container_name: docker_redis
+    volumes:
+      - ./dockercompose/redis/data:/data
+      - ./dockercompose/redis/conf/redis.conf:/usr/local/etc/redis/redis.conf
+      - ./dockercompose/redis/logs:/logs
+    command:
+      redis-server /usr/local/etc/redis/redis.conf
+    ports:
+      - 6379:6379
