@@ -4,7 +4,7 @@ import nian.shop.entity.SecondUser;
 
 public class UserContext {
 	
-	private static ThreadLocal<SecondUser> userHolder = new ThreadLocal<>();
+	private static ThreadLocal<SecondUser> userHolder = new ThreadLocal<SecondUser>();
 	
 	public static void setUser(SecondUser user) {
 		userHolder.set(user);

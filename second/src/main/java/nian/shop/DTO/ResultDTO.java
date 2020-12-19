@@ -21,20 +21,20 @@ public class ResultDTO<T> implements Serializable {
 	}
 	
 	public static  <T> ResultDTO<T> fail(String msg){
-		ResultDTO<T> r = new ResultDTO<>();
+		ResultDTO<T> r = new ResultDTO<T>();
 		r.setCode(-1);
 		r.setMsg(msg);
 		
 		return r;
 	}
 	public static <T> ResultDTO<T> error(T errorInfo) {
-		ResultDTO<T> resultDTO = new ResultDTO<>(errorInfo);
+		ResultDTO<T> resultDTO = new ResultDTO<T>(errorInfo);
 		resultDTO.setCode(ResultCode.FAIL.getCode());
 		return resultDTO;
 	}
 	
 	public static ResultDTO<String> error(Integer code, String msg) {
-		ResultDTO<String> resultDTO = new ResultDTO<>();
+		ResultDTO<String> resultDTO = new ResultDTO<String>();
 		resultDTO.setCode(code);
 		resultDTO.setMsg(msg);
 		return resultDTO;

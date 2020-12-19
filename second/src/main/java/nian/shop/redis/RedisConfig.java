@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 import lombok.Data;
 
 @Component
-@ConfigurationProperties(prefix="redis.conf")
+@ConfigurationProperties(prefix="redis")
 @Data
 public class RedisConfig {
 	private String host;
@@ -15,4 +15,5 @@ public class RedisConfig {
 	private int poolMaxTotal;
 	private int poolMaxIdle;
 	private int poolMaxWait;
+	private String pass;
 }

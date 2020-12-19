@@ -73,7 +73,7 @@ public class SecondController implements InitializingBean {
 	RocketMQSender rocketMQSender;
 	
 	
-	private Map<Long, Boolean> localOverMap = new HashMap<>();
+	private Map<Long, Boolean> localOverMap = new HashMap<Long, Boolean>();
 	
     @PostMapping("/{path}/do_secondKill")
     @ResponseBody

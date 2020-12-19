@@ -23,7 +23,7 @@ import nian.shop.utils.MD5Util;
 */
 public class UserDataProduct {
 	private static void createUser(int count) throws Exception{
-		List<SecondUser> users = new ArrayList<>(count);
+		List<SecondUser> users = new ArrayList<SecondUser>(count);
 		//生成用户
 		for(int i = 0; i < count; i++) {
 			SecondUser user = new SecondUser();

@@ -164,7 +164,7 @@ public class SecondKillService {
 	private static int calculate(String s) {
         if(s == null || s.length() == 0) return 0;
         int len = s.length();
-        Stack<Integer> stack = new Stack<>();
+        Stack<Integer> stack = new Stack<Integer>();
         int num = 0;
         char sign = '+';
         for(int i = 0; i < len; i++) {

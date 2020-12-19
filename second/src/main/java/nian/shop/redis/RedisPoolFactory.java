@@ -2,11 +2,12 @@ package nian.shop.redis;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Service;
 
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
-
+@Configuration
 @Service
 public class RedisPoolFactory {
 	@Autowired
@@ -19,7 +20,7 @@ public class RedisPoolFactory {
 		jedispoolConfig.setMaxTotal(redisConfig.getPoolMaxTotal());
 		jedispoolConfig.setMaxWaitMillis(redisConfig.getPoolMaxWait() * 1000);
 		JedisPool jedisPool = new JedisPool(jedispoolConfig, redisConfig.getHost(), redisConfig.getPort(),
-				redisConfig.getTimeout() * 1000);
+				redisConfig.getTimeout() * 1000, redisConfig.getPass());
 		return jedisPool;
 
 	}
