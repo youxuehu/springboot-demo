@@ -882,3 +882,24 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 2020-12-17 23:07:56.926 [http-nio-9090-exec-7] INFO  c.e.s.intercepter.LoginCheckIntercepter - http://localhost:9090/
 2020-12-17 23:07:56.926 [http-nio-9090-exec-7] INFO  c.e.springbootdemo.intercepter.AdminIntercepter - Admin拦截器
 2020-12-17 23:07:56.927 [http-nio-9090-exec-7] INFO  c.e.springbootdemo.controller.HelloController - Hello Docker!
+2020-12-17 23:08:13.088 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 23:08:13.089 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 20
+2020-12-17 23:08:13.089 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 20
+2020-12-17 23:09:03.093 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 23:09:03.094 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 40
+2020-12-17 23:09:03.094 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 40
+2020-12-17 23:09:53.099 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = 0
+2020-12-17 23:09:53.100 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = 60
+2020-12-17 23:09:53.100 [pool-3-thread-1] INFO  c.e.s.c.thread.threadpool.ThreadPoolServiceImpl - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = 60
+2020-12-17 23:10:02.289 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler schedulerFactory_$_NON_CLUSTERED paused.
+2020-12-17 23:10:02.290 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2020-12-17 23:10:02.309 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-17 23:10:02.311 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler schedulerFactory_$_NON_CLUSTERED shutting down.
+2020-12-17 23:10:02.311 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler schedulerFactory_$_NON_CLUSTERED paused.
+2020-12-17 23:10:02.315 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler schedulerFactory_$_NON_CLUSTERED shutdown complete.
+2020-12-17 23:10:02.315 [SpringContextShutdownHook] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2020-12-17 23:10:02.324 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2020-12-17 23:10:02.335 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED shutting down.
+2020-12-17 23:10:02.335 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED paused.
+2020-12-17 23:10:02.336 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED shutdown complete.
+2020-12-17 23:10:02.336 [SpringContextShutdownHook] INFO  org.quartz.ee.servlet.QuartzInitializerListener - Quartz Scheduler successful shutdown.
