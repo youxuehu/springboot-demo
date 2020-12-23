@@ -39,6 +39,7 @@ public class MD5Util {
 		
 		System.out.println(addSaltProcess("123456")); //4672d95aab2010d7501dee60f1ef1ee9
 		System.out.println(constructDBPassword(addSaltProcess("123456"), "32165498"));
+		System.out.println(constructDBPassword(addSaltProcess("123456"), "g_passsword_salt"));
 	}
 	
 }

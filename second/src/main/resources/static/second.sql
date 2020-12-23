@@ -14,3 +14,4 @@ create table second_order( id bigint(20) not null auto_increment, user_id bigint
 
 create table second_user (id bigint(20) not null auto_increment primary key, nickname varchar(255),password varchar(255),salt varchar(255),head varchar(255),
 register_date datetime,last_login_date datetime,login_count bigint(20));
+insert into second_user values(16619794106,'小虎','123456','slat','head',now(),now(),0);
