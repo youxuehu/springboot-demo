@@ -3,6 +3,8 @@ package com.example.springbootdemo.intercepter;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.example.springbootdemo.common.cache.CacheService;
+import com.example.springbootdemo.controller.userinfos.param.SessionInfo;
+import com.example.springbootdemo.holder.ThreadLocalHolder;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -48,25 +50,32 @@ public class LoginCheckIntercepter extends HandlerInterceptorAdapter {
 
     private boolean checkLogin(HttpServletRequest request) {
         String cacheKey = null;
+        String cacheValue = getString(request, cacheKey);
+        ThreadLocalHolder.set(JSON.parseObject(cacheValue, SessionInfo.class));
+        if (cacheValue == null) return true;
+        if (StringUtils.isBlank(cacheValue)) {
+            return true;
+        }
+        return false;
+    }
+
+    private String getString(HttpServletRequest request, String cacheKey) {
         Cookie[] cookies = request.getCookies();
         if (cookies == null) {
-            return true;
+            return null;
         }
         for (Cookie cookie : cookies) {
             String name = cookie.getName();
             if (StringUtils.equals(SESSION_KET, name)) {
                 String value = cookie.getValue();
                 if (StringUtils.isBlank(value)) {
-                    return true;
+                    return null;
                 }
                 cacheKey = value;
             }
         }
         String cacheValue = cacheService.get(cacheKey, String.class);
-        if (StringUtils.isBlank(cacheValue)) {
-            return true;
-        }
-        return false;
+        return cacheValue;
     }
 
 }

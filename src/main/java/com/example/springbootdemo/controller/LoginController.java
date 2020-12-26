@@ -3,6 +3,7 @@ package com.example.springbootdemo.controller;
 import com.alibaba.fastjson.JSON;
 import com.example.springbootdemo.common.cache.CacheService;
 import com.example.springbootdemo.controller.userinfos.param.SessionInfo;
+import com.example.springbootdemo.holder.ThreadLocalHolder;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
