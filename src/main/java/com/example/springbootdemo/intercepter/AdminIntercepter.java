@@ -3,6 +3,7 @@ package com.example.springbootdemo.intercepter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
+import org.thymeleaf.util.StringUtils;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -12,6 +13,10 @@ public class AdminIntercepter extends HandlerInterceptorAdapter {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         LOGGER.info("Admin拦截器");
+        String requestURI = request.getRequestURI();
+        if (StringUtils.startsWith(requestURI, "/admin") && true) {
+
+        }
         return true;
     }
 

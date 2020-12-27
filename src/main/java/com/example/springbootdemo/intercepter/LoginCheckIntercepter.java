@@ -45,7 +45,10 @@ public class LoginCheckIntercepter extends HandlerInterceptorAdapter {
     }
 
     private void redirect(HttpServletRequest request, HttpServletResponse response) throws Exception {
-        response.sendRedirect(request.getRequestURL().toString() + "/login");
+        String requestURI = request.getRequestURI();
+        String requestURL = request.getRequestURL().toString();
+        String redirectURL = StringUtils.replace(requestURL, requestURI, "");
+        response.sendRedirect(redirectURL + "/login");
     }
 
     private boolean checkLogin(HttpServletRequest request) {
