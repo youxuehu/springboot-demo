@@ -12,27 +12,27 @@
         </commentGenerator>
 
         <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
-                        connectionURL="jdbc:mysql://localhost:3306/quartz?serverTimezone=UTC&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;allowPublicKeyRetrieval=true" userId="root"
+                        connectionURL="jdbc:mysql://localhost:3306/test?serverTimezone=UTC&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;allowPublicKeyRetrieval=true" userId="root"
                         password="zhf123..">
         </jdbcConnection>
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false" />
         </javaTypeResolver>
         <!-- targetProject:自动生成代码的位置 -->
-        <javaModelGenerator targetPackage="com.example.springbootdemo.common.db.dao.quartz.qrtzcalendars.model"
+        <javaModelGenerator targetPackage="com.example.springbootdemo.common.db.dao.admin.model"
                             targetProject="src/main/java">
             <property name="enableSubPackages" value="true" />
             <property name="trimStrings" value="true" />
         </javaModelGenerator>
-        <sqlMapGenerator targetPackage="com.example.springbootdemo.common.db.dao.quartz.qrtzcalendars.mapper.xml"
+        <sqlMapGenerator targetPackage="com.example.springbootdemo.common.db.dao.admin.mapper.xml"
                          targetProject="src/main/java">
             <property name="enableSubPackages" value="true" />
         </sqlMapGenerator>
         <javaClientGenerator type="MAPPER"
-                             targetPackage="com.example.springbootdemo.common.db.dao.quartz.qrtzcalendars.mapper" targetProject="src/main/java">
+                             targetPackage="com.example.springbootdemo.common.db.dao.admin.mapper" targetProject="src/main/java">
             <property name="enableSubPackages" value="true" />
         </javaClientGenerator>
         <!-- tableName:用于自动生成代码的数据库表；domainObjectName:对应于数据库表的javaBean类名-->
-        <table tableName="QRTZ_CALENDARS" domainObjectName="QrtzCalendars" />
+        <table tableName="admin" domainObjectName="Admin" />
     </context>
 </generatorConfiguration>

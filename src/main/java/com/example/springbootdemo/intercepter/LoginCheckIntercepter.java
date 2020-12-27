@@ -47,6 +47,9 @@ public class LoginCheckIntercepter extends HandlerInterceptorAdapter {
     private void redirect(HttpServletRequest request, HttpServletResponse response) throws Exception {
         String requestURI = request.getRequestURI();
         String requestURL = request.getRequestURL().toString();
+        if (StringUtils.equals(requestURI, "/")) {
+            response.sendRedirect(requestURL + "login");
+        }
         String redirectURL = StringUtils.replace(requestURL, requestURI, "");
         response.sendRedirect(redirectURL + "/login");
     }
