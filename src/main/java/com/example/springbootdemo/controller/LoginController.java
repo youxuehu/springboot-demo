@@ -2,6 +2,8 @@ package com.example.springbootdemo.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.example.springbootdemo.common.cache.CacheService;
+import com.example.springbootdemo.common.db.dao.admin.model.Admin;
+import com.example.springbootdemo.common.db.service.AdminService;
 import com.example.springbootdemo.controller.userinfos.param.SessionInfo;
 import com.example.springbootdemo.holder.ThreadLocalHolder;
 import org.apache.commons.lang.StringUtils;
@@ -24,6 +26,8 @@ public class LoginController extends BaseController {
     private static final Logger LOGGER = LoggerFactory.getLogger(LoginController.class);
     @Autowired @Qualifier("redisCacheServiceImpl")
     CacheService cacheService;
+    @Autowired
+    AdminService adminService;
     @RequestMapping("/login")
     public String login() {
         return "login";
@@ -47,12 +51,16 @@ public class LoginController extends BaseController {
             model.addAttribute("errorMessage", "password不能为空");
             return "login";
         }
-        if (!StringUtils.equals("admin", userName) || !StringUtils.equals("123456", password)) {
-            LOGGER.error("用户名或密码不正确");
-            model.addAttribute("errorMessage", "用户名或密码不正确");
-            return "login";
+        Admin admin = adminService.queryById(userName);
+        if (admin == null) {
+            throw new RuntimeException("用户" + userName + "不存在");
         }
-        SessionInfo sessionInfo = new SessionInfo("WB520289", userName);
+        String passWordDB = admin.getPassWord();
+        if (!StringUtils.equals(passWordDB, password)) {
+            LOGGER.error("用户名或密码不正确");
+            throw new RuntimeException("用户名或密码不正确");
+        }
+        SessionInfo sessionInfo = new SessionInfo(userName, admin.getNickName());
         storeCookie(request, response, sessionInfo);
         return "redirect:/jobManager";
     }

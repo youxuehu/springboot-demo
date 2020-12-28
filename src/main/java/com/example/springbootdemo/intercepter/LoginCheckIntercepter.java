@@ -55,6 +55,10 @@ public class LoginCheckIntercepter extends HandlerInterceptorAdapter {
     }
 
     private boolean checkLogin(HttpServletRequest request) {
+        String requestURI = request.getRequestURI();
+        if (requestURI.startsWith("/js") || requestURI.startsWith("/error")) {
+            return false;
+        }
         String cacheKey = null;
         String cacheValue = getString(request, cacheKey);
         ThreadLocalHolder.set(JSON.parseObject(cacheValue, SessionInfo.class));

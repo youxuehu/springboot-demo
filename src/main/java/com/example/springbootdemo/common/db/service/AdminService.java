@@ -7,4 +7,6 @@ import java.util.List;
 public interface AdminService {
 
     List<Admin> queryAdmins();
+
+    Admin queryById(String userName);
 }

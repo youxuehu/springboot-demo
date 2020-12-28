@@ -19,9 +19,12 @@
                      alert("password不为空！！")
                      return
                  }
+                 var salt = g_passsword_salt;
+                 var str = ""+salt.charAt(0)+salt.charAt(1) + password +salt.charAt(6) + salt.charAt(4);
+                 var passwordMd5 = md5(str);
                  const formData = new FormData()
                  formData.append("userName", userName);
-                 formData.append("password", password);
+                 formData.append("password", passwordMd5);
                  $.ajax({
                      url: '/doLogin',
                      type: 'post',
@@ -47,7 +50,7 @@
 </head>
 <body th:src="@{/bak.jpeg}">
 <form id="LoginForm2" name="LoginForm2" method="post">
-    用户名：<input type="text" name="userName" id="userName" value="admin0"/><br/><br/>
+    用户名：<input type="text" name="userName" id="userName" value="16000000000"/><br/><br/>
     密码：<input type="password" name="password" id="password" value="zhf123.."/><br/><br/>
     <input id="LoginButton" type="submit" value="登录"/>
 </form>

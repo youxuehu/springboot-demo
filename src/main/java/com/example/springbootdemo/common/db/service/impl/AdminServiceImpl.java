@@ -19,4 +19,9 @@ public class AdminServiceImpl implements AdminService {
         List<Admin> admins = adminMapper.selectByExample(new AdminExample());
         return CollectionUtils.isEmpty(admins) ? new ArrayList<>() : admins;
     }
+
+    @Override
+    public Admin queryById(String userName) {
+        return adminMapper.selectByPrimaryKey(Long.parseLong(userName));
+    }
 }

@@ -4,7 +4,7 @@ function g_showLoading(){
 	return idx;
 }
 //salt
-var g_passsword_salt="f9064abc"
+var g_passsword_salt="youxuehu"
 	
 // 获取url参数
 function g_getQueryString(name) {
