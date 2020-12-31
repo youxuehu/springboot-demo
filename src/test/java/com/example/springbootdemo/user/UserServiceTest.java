@@ -21,14 +21,16 @@ public class UserServiceTest {
     private UserService userService;
     @Test
     public void insertUser() {
-        User user = new User();
-        user.setId(100);
-        userService.insertUser(user);
+        for (int i = 0; i < 100; i++) {
+            User user = new User();
+            user.setId(i);
+            userService.insertUser(user);
+        }
     }
 
     @Test
     public void queryList() {
         List<User> users = userService.queryList();
-        log.info("{}", JSON.toJSONString(users));
+        log.info(JSON.toJSONString(users, true));
     }
 }
