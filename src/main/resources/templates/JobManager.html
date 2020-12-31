@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <title>QuartzDemo</title>
     <th:block th:fragment="common_header">
-    <link rel="stylesheet" th:href="@{../static/index.css}">
+    <link rel="stylesheet" th:href="@{/css/index.css}">
     </th:block>
     <th:block th:fragment="common_js">
-    <script type="text/javascript" th:src="@{../static/vue.js}" charset="utf-8"></script>
-    <script type="text/javascript" th:src="@{../static/vue-resource.js}" charset="utf-8"></script>
-    <script type="text/javascript" th:src="@{../static/index.js}" charset="utf-8"></script>
+    <script type="text/javascript" th:src="@{/js/vue.js}" charset="utf-8"></script>
+    <script type="text/javascript" th:src="@{/js/vue-resource.js}" charset="utf-8"></script>
+    <script type="text/javascript" th:src="@{/js/index.js}" charset="utf-8"></script>
     </th:block>
     <style>
         #top {
@@ -299,7 +299,7 @@
             </div>
             <div id="OtherDiv2" v-show="cur==1">
                 <h1>OtherDiv2</h1>
-                <iframe th:src="@{../static/HadoopManager.html}" frameborder="0" scrolling="yes" class="Hadoop-iframe"></iframe>
+                <iframe th:src="@{/page/HadoopManager.html}" frameborder="0" scrolling="yes" class="Hadoop-iframe"></iframe>
             </div>
             <div id="OtherDiv3" v-show="cur==2">
                 <h1>OtherDiv3</h1>
@@ -493,7 +493,7 @@
             },
 
             redirectLogin: function () {
-                location.href = 'http://localhost:8888/login'
+                window.location.href = '/login'
             }
         },
 

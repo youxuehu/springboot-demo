@@ -14,7 +14,9 @@ public class BaseController {
 
     protected ModelMap success(Object... param) {
         ModelMap modelMap = new ModelMap();
+        modelMap.put("success", true);
         if (param.length == 0) {
+            LOGGER.info(JSON.toJSONString(modelMap, true));
             return modelMap;
         }
         if (param.length % 2 == 1) {
@@ -32,14 +34,15 @@ public class BaseController {
             }
         }
         modelMap.put("data", data);
-        modelMap.put("success", true);
         LOGGER.info(JSON.toJSONString(modelMap, true));
         return modelMap;
     }
 
     protected ModelMap error(Object... param) {
         ModelMap modelMap = new ModelMap();
+        modelMap.put("success", false);
         if (param.length == 0) {
+            LOGGER.error(JSON.toJSONString(modelMap, true));
             return modelMap;
         }
         if (param.length % 2 == 1) {
@@ -56,7 +59,6 @@ public class BaseController {
                 modelMap.put((String) key, value);
             }
         }
-        modelMap.put("success", false);
         LOGGER.error(JSON.toJSONString(modelMap, true));
         return modelMap;
     }

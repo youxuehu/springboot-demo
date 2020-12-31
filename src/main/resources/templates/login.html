@@ -33,11 +33,13 @@
                      processData: false,
                      success: function (res) {
                          console.log("res:" + res)
+                         alert(res)
                          if (res['success'] == true) {
                              console.log("login success")
-                             $(location).attr('href', '/jobManager');
+                             window.location.href="/jobManager";
                              return;
                          } else {
+                             alert('login error')
                              console.log("login error")
                              $("#ErrorMessage").html(res['errorMessage'])
                              return;
@@ -49,10 +51,10 @@
     </script>
 </head>
 <body th:src="@{/bak.jpeg}">
-<form id="LoginForm2" name="LoginForm2" method="post">
+<form id="LoginForm2" name="LoginForm2">
     用户名：<input type="text" name="userName" id="userName" value="16000000000"/><br/><br/>
     密码：<input type="password" name="password" id="password" value="zhf123.."/><br/><br/>
-    <input id="LoginButton" type="submit" value="登录"/>
+    <input id="LoginButton" type="button" value="登录"/>
 </form>
 <div id="ErrorMessage">[[${errorMessage}]]</div>
 </body>

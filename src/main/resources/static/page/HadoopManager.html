@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Hadoop Manager</title>
+    <script src="/js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript">
+        let appId = ''
+        $(function(){
+            $("#submitJob").click(function () {
+                $("#submitJob").attr("disabled",true)
+                $("#Logs").html('')
+                $("#Message").html('')
+                $("#Status").html('')
+                const jarPath = $('#jarPath').get(0).files[0];
+                if (!jarPath) {
+                    alert("请选择文件！！")
+                    $("#submitJob").attr("disabled",false)
+                    return
+                }
+                const className = $("#className").val();
+                if (className === "") {
+                    alert("className不为空！！")
+                    $("#submitJob").attr("disabled",false)
+                    return
+                }
+                const inputPath = $("#inputPath").val();
+                if (inputPath === "") {
+                    alert("inputPath不为空！！")
+                    $("#submitJob").attr("disabled",false)
+                    return
+                }
+                const outputPath = $("#outputPath").val();
+                if (outputPath === "") {
+                    alert("outputPath不为空！！")
+                    $("#submitJob").attr("disabled",false)
+                    return
+                }
+                // $.post("/yarn/submit",
+                //     //发送给后端的数据
+                //     {
+                //         "jarPath":$("#jarPath")[0].files[0],
+                //         "className":className,
+                //         "inputPath":inputPath,
+                //         "outputPath":outputPath
+                //     },
+                //     function(data){
+                //         console.log(data)
+                //         console.log(data.data)
+                //         $("p").innerText = data.data
+                //     },"json"
+                // )
+                const formData = new FormData()
+                formData.append("jarPath", $("#jarPath")[0].files[0]);
+                formData.append("className", $("#className").val());
+                formData.append("inputPath", $("#inputPath").val());
+                formData.append("outputPath", $("#outputPath").val());
+                $.ajax({
+                    url: '/yarn/submit',
+                    type: 'post',
+                    data: formData,
+                    contentType: false,
+                    processData: false,
+                    success: function (res) {
+                        console.log('info: ' + res.toString());
+                        if (res["success"] == true) {
+                            appId = res['data'].appId
+                            $("#Message").html('application_id：' + appId)
+                            $.ajax({
+                                url: '/yarn/queryStatus?appId=' + appId,
+                                type: 'get',
+                                contentType: false,
+                                processData: false,
+                                success: function (res) {
+                                    if (res["success"] == true) {
+                                        $("#Status").html('执行状态：' + res['data'].status)
+                                    } else {
+                                        $("#Status").html('执行状态：' + res['errorMessage'])
+                                    }
+                                    $("#submitJob").attr("disabled",false)
+                                }
+                            });
+                        } else if (res["success"] == false) {
+                            $("#Message").html(res['errorMessage'])
+                        } else {
+                            console.log(res.toString());
+                        }
+                        $("#submitJob").attr("disabled",false)
+                    },
+                    error: function () {
+                        $("#Message").html("请求超时！")
+                    }
+                })
+
+            })
+            $("#queryLog").click(function () {
+                check()
+            })
+        })
+        function check() {
+            $("#queryLog").attr("disabled",true)
+            $("#Logs").html('')
+            if (appId === '') {
+                $("#Logs").html('你还没有执行任务，请先执行任务，appId not found')
+                $("#queryLog").attr("disabled",false)
+                return;
+            }
+            $.ajax({
+                url: '/yarn/queryLog?appId=' + appId,
+                type: 'get',
+                contentType: false,
+                processData: false,
+                success: function (res) {
+                    if (res["success"] == true) {
+                        console.log(res['data'].logs)
+                        $("#Logs").html(res['data'].logs)
+                    } else {
+                        $("#Logs").html(res['errorMessage'])
+                    }
+                    $("#queryLog").attr("disabled",false)
+                    const showContent = $("#Logs");
+                    showContent[0].scrollTop = showContent[0].scrollHeight;
+                },
+                error: function () {
+                    $("#Logs").html("请求超时！")
+                }
+
+            })
+        }
+        window.setInterval(check, 10000); //每秒执行一次
+    </script>
+</head>
+<body>
+    <form id="form" name="form">
+        jar包：<input type="file" id="jarPath" name="jarPath" /><br/>
+        类名：<input type="text" id="className" name="className" size="60" /><br/>
+        输入：<input type="text" id="inputPath" name="inputPath" size="60" /><br/>
+        输出：<input type="text" id="outputPath" name="outputPath" size="60" /><br/><br/>
+        <input id="submitJob" type="button" value="提交任务"/><br/>
+    </form>
+    <div id="Message" style="background-color: #0C0C0C; color: #9d261d; width: 100%; height: 100px;overflow-y: auto"></div>
+    <div id="Status" style="background-color: #0C0C0C; color: #9d261d; width: 100%; height: 100px;overflow-y: auto"></div>
+    <!-- <input id="queryLog" type="button" value="查看日志"/><br/><br/> -->
+    <div id="Logs" style="background-color: #0C0C0C; color: #9d261d; width: 100%; height: 500px;overflow: auto"></div>
+</body>
+</html>
