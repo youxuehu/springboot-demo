@@ -43,3 +43,12 @@ services:
     environment:
       - RABBITMQ_DEFAULT_USER=root
       - RABBITMQ_DEFAULT_PASS=root
+  zookeeper:
+    container_name: zookeeper
+    restart: always
+    image: zookeeper:3.6.1
+    volumes:
+      - ./dockercompose/zookeeper/data:/data
+      - ./dockercompose/zookeeper/datalog:/datalog
+    ports:
+      - "2181:2181"

@@ -385,3 +385,18 @@ Caused by: java.io.EOFException: Can not read response from server. Expected to 
 	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:44)
 	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:533)
 	... 15 common frames omitted
+2020-12-31 23:16:00.587 [QuartzScheduler_QuartzScheduler-NON_CLUSTERED_MisfireHandler] ERROR org.quartz.impl.jdbcjobstore.JobStoreTX - MisfireHandler: Error handling misfires: Failed to obtain DB connection from data source 'qzDS': java.sql.SQLException: com.mchange.v2.c3p0.ComboPooledDataSource[ identityToken -> 1hge2niae1ff753pa8b203|4cc1132, dataSourceName -> 1hge2niae1ff753pa8b203|4cc1132 ] has been closed() -- you can no longer use it.
+org.quartz.JobPersistenceException: Failed to obtain DB connection from data source 'qzDS': java.sql.SQLException: com.mchange.v2.c3p0.ComboPooledDataSource[ identityToken -> 1hge2niae1ff753pa8b203|4cc1132, dataSourceName -> 1hge2niae1ff753pa8b203|4cc1132 ] has been closed() -- you can no longer use it.
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.getConnection(JobStoreSupport.java:783)
+	at org.quartz.impl.jdbcjobstore.JobStoreTX.getNonManagedTXConnection(JobStoreTX.java:71)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3246)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.manage(JobStoreSupport.java:4012)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.run(JobStoreSupport.java:4033)
+Caused by: java.sql.SQLException: com.mchange.v2.c3p0.ComboPooledDataSource[ identityToken -> 1hge2niae1ff753pa8b203|4cc1132, dataSourceName -> 1hge2niae1ff753pa8b203|4cc1132 ] has been closed() -- you can no longer use it.
+	at com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.assertCpds(AbstractPoolBackedDataSource.java:512)
+	at com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getPoolManager(AbstractPoolBackedDataSource.java:524)
+	at com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getConnection(AbstractPoolBackedDataSource.java:140)
+	at org.quartz.utils.C3p0PoolingConnectionProvider.getConnection(C3p0PoolingConnectionProvider.java:223)
+	at org.quartz.utils.DBConnectionManager.getConnection(DBConnectionManager.java:108)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.getConnection(JobStoreSupport.java:780)
+	... 4 common frames omitted
