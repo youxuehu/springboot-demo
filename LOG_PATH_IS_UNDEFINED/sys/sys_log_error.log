@@ -1,4 +1,4 @@
-2020-12-31 22:13:03.497 [QuartzScheduler_QuartzScheduler-NON_CLUSTERED_MisfireHandler] ERROR org.quartz.impl.jdbcjobstore.JobStoreTX - Couldn't rollback jdbc connection. No operations allowed after connection closed.
+2021-01-01 18:18:49.591 [QuartzScheduler_QuartzScheduler-NON_CLUSTERED_MisfireHandler] ERROR org.quartz.impl.jdbcjobstore.JobStoreTX - Couldn't rollback jdbc connection. No operations allowed after connection closed.
 java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
@@ -30,7 +30,7 @@ Caused by: com.mysql.cj.exceptions.ConnectionIsClosedException: No operations al
 	at com.mysql.cj.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:576)
 	at com.mysql.cj.jdbc.ConnectionImpl.rollback(ConnectionImpl.java:1811)
 	... 11 common frames omitted
-Caused by: com.mysql.cj.exceptions.CJCommunicationsException: The last packet successfully received from the server was 1,988,608 milliseconds ago. The last packet sent successfully to the server was 1,988,609 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: The last packet successfully received from the server was 1,247,563 milliseconds ago. The last packet sent successfully to the server was 1,247,565 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -64,7 +64,7 @@ Caused by: java.io.EOFException: Can not read response from server. Expected to 
 	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:44)
 	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:533)
 	... 15 common frames omitted
-2020-12-31 22:13:03.505 [QuartzScheduler_QuartzScheduler-NON_CLUSTERED_MisfireHandler] ERROR org.quartz.impl.jdbcjobstore.JobStoreTX - MisfireHandler: Error handling misfires: Database error recovering from misfires.
+2021-01-01 18:18:49.608 [QuartzScheduler_QuartzScheduler-NON_CLUSTERED_MisfireHandler] ERROR org.quartz.impl.jdbcjobstore.JobStoreTX - MisfireHandler: Error handling misfires: Database error recovering from misfires.
 org.quartz.JobPersistenceException: Database error recovering from misfires.
 	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3274)
 	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.manage(JobStoreSupport.java:4012)
@@ -108,7 +108,7 @@ Caused by: com.mysql.cj.exceptions.ConnectionIsClosedException: No operations al
 	at com.mysql.cj.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:576)
 	at com.mysql.cj.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:1590)
 	... 6 common frames omitted
-Caused by: com.mysql.cj.exceptions.CJCommunicationsException: The last packet successfully received from the server was 1,988,608 milliseconds ago. The last packet sent successfully to the server was 1,988,609 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: The last packet successfully received from the server was 1,247,563 milliseconds ago. The last packet sent successfully to the server was 1,247,565 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -143,7 +143,7 @@ Caused by: java.io.EOFException: Can not read response from server. Expected to 
 	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:44)
 	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:533)
 	... 15 common frames omitted
-2020-12-31 22:42:02.523 [QuartzScheduler_QuartzSchedulerThread] ERROR org.quartz.impl.jdbcjobstore.JobStoreTX - Couldn't rollback jdbc connection. No operations allowed after connection closed.
+2021-01-01 18:51:34.048 [QuartzScheduler_schedulerFactory-NON_CLUSTERED_MisfireHandler] ERROR org.quartz.impl.jdbcjobstore.JobStoreTX - Couldn't rollback jdbc connection. No operations allowed after connection closed.
 java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
@@ -158,11 +158,11 @@ java.sql.SQLNonTransientConnectionException: No operations allowed after connect
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.invoke(AttributeRestoringConnectionInvocationHandler.java:73)
-	at com.sun.proxy.$Proxy108.rollback(Unknown Source)
+	at com.sun.proxy.$Proxy166.rollback(Unknown Source)
 	at org.quartz.impl.jdbcjobstore.JobStoreSupport.rollbackConnection(JobStoreSupport.java:3727)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.executeInNonManagedTXLock(JobStoreSupport.java:3886)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.acquireNextTriggers(JobStoreSupport.java:2802)
-	at org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:287)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3273)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.manage(JobStoreSupport.java:4012)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.run(JobStoreSupport.java:4033)
 Caused by: com.mysql.cj.exceptions.ConnectionIsClosedException: No operations allowed after connection closed.
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -175,7 +175,7 @@ Caused by: com.mysql.cj.exceptions.ConnectionIsClosedException: No operations al
 	at com.mysql.cj.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:576)
 	at com.mysql.cj.jdbc.ConnectionImpl.rollback(ConnectionImpl.java:1811)
 	... 11 common frames omitted
-Caused by: com.mysql.cj.exceptions.CJCommunicationsException: The last packet successfully received from the server was 1,739,060 milliseconds ago. The last packet sent successfully to the server was 1,739,061 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: The last packet successfully received from the server was 1,964,490 milliseconds ago. The last packet sent successfully to the server was 1,964,491 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -194,10 +194,10 @@ Caused by: com.mysql.cj.exceptions.CJCommunicationsException: The last packet su
 	at com.mchange.v2.c3p0.impl.NewProxyConnection.setAutoCommit(NewProxyConnection.java:1059)
 	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.setAutoCommit(AttributeRestoringConnectionInvocationHandler.java:98)
 	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.invoke(AttributeRestoringConnectionInvocationHandler.java:66)
-	at com.sun.proxy.$Proxy108.setAutoCommit(Unknown Source)
+	at com.sun.proxy.$Proxy166.setAutoCommit(Unknown Source)
 	at org.quartz.impl.jdbcjobstore.JobStoreSupport.getConnection(JobStoreSupport.java:804)
 	at org.quartz.impl.jdbcjobstore.JobStoreTX.getNonManagedTXConnection(JobStoreTX.java:71)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.executeInNonManagedTXLock(JobStoreSupport.java:3861)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3246)
 	... 2 common frames omitted
 Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
 	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:67)
@@ -209,14 +209,11 @@ Caused by: java.io.EOFException: Can not read response from server. Expected to 
 	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:44)
 	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:533)
 	... 15 common frames omitted
-2020-12-31 22:42:02.529 [QuartzScheduler_QuartzSchedulerThread] ERROR org.quartz.core.ErrorLogger - An error occurred while scanning for the next triggers to fire.
-org.quartz.JobPersistenceException: Couldn't acquire next trigger: No operations allowed after statement closed.
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.acquireNextTrigger(JobStoreSupport.java:2923)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport$41.execute(JobStoreSupport.java:2805)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport$41.execute(JobStoreSupport.java:2803)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.executeInNonManagedTXLock(JobStoreSupport.java:3864)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.acquireNextTriggers(JobStoreSupport.java:2802)
-	at org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:287)
+2021-01-01 18:51:34.051 [QuartzScheduler_schedulerFactory-NON_CLUSTERED_MisfireHandler] ERROR org.quartz.impl.jdbcjobstore.JobStoreTX - MisfireHandler: Error handling misfires: Database error recovering from misfires.
+org.quartz.JobPersistenceException: Database error recovering from misfires.
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3274)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.manage(JobStoreSupport.java:4012)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.run(JobStoreSupport.java:4033)
 Caused by: java.sql.SQLException: No operations allowed after statement closed.
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
@@ -224,12 +221,11 @@ Caused by: java.sql.SQLException: No operations allowed after statement closed.
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
 	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:82)
-	at com.mysql.cj.jdbc.StatementImpl.setLargeMaxRows(StatementImpl.java:2161)
-	at com.mysql.cj.jdbc.StatementImpl.setMaxRows(StatementImpl.java:1881)
-	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.setMaxRows(NewProxyPreparedStatement.java:2071)
-	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.selectTriggerToAcquire(StdJDBCDelegate.java:2604)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.acquireNextTrigger(JobStoreSupport.java:2844)
-	... 5 common frames omitted
+	at com.mysql.cj.jdbc.ClientPreparedStatement.setBigDecimal(ClientPreparedStatement.java:1420)
+	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.setBigDecimal(NewProxyPreparedStatement.java:405)
+	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.countMisfiredTriggersInState(StdJDBCDelegate.java:391)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3253)
+	... 2 common frames omitted
 Caused by: com.mysql.cj.exceptions.StatementIsClosedException: No operations allowed after statement closed.
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -238,9 +234,9 @@ Caused by: com.mysql.cj.exceptions.StatementIsClosedException: No operations all
 	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
 	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:85)
 	at com.mysql.cj.jdbc.StatementImpl.checkClosed(StatementImpl.java:340)
-	at com.mysql.cj.jdbc.StatementImpl.setLargeMaxRows(StatementImpl.java:2149)
-	... 9 common frames omitted
-2020-12-31 22:42:49.264 [QuartzScheduler_QuartzScheduler-NON_CLUSTERED_MisfireHandler] ERROR org.quartz.impl.jdbcjobstore.JobStoreTX - Couldn't rollback jdbc connection. No operations allowed after connection closed.
+	at com.mysql.cj.jdbc.ClientPreparedStatement.setBigDecimal(ClientPreparedStatement.java:1417)
+	... 5 common frames omitted
+2021-01-01 19:25:35.922 [QuartzScheduler_schedulerFactory-NON_CLUSTERED_MisfireHandler] ERROR org.quartz.impl.jdbcjobstore.JobStoreTX - Couldn't rollback jdbc connection. No operations allowed after connection closed.
 java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
@@ -255,7 +251,7 @@ java.sql.SQLNonTransientConnectionException: No operations allowed after connect
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.invoke(AttributeRestoringConnectionInvocationHandler.java:73)
-	at com.sun.proxy.$Proxy108.rollback(Unknown Source)
+	at com.sun.proxy.$Proxy166.rollback(Unknown Source)
 	at org.quartz.impl.jdbcjobstore.JobStoreSupport.rollbackConnection(JobStoreSupport.java:3727)
 	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3273)
 	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.manage(JobStoreSupport.java:4012)
@@ -272,7 +268,7 @@ Caused by: com.mysql.cj.exceptions.ConnectionIsClosedException: No operations al
 	at com.mysql.cj.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:576)
 	at com.mysql.cj.jdbc.ConnectionImpl.rollback(ConnectionImpl.java:1811)
 	... 11 common frames omitted
-Caused by: com.mysql.cj.exceptions.CJCommunicationsException: The last packet successfully received from the server was 3,759,498 milliseconds ago. The last packet sent successfully to the server was 3,759,499 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: The last packet successfully received from the server was 2,041,922 milliseconds ago. The last packet sent successfully to the server was 2,041,923 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -291,7 +287,7 @@ Caused by: com.mysql.cj.exceptions.CJCommunicationsException: The last packet su
 	at com.mchange.v2.c3p0.impl.NewProxyConnection.setAutoCommit(NewProxyConnection.java:1059)
 	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.setAutoCommit(AttributeRestoringConnectionInvocationHandler.java:98)
 	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.invoke(AttributeRestoringConnectionInvocationHandler.java:66)
-	at com.sun.proxy.$Proxy108.setAutoCommit(Unknown Source)
+	at com.sun.proxy.$Proxy166.setAutoCommit(Unknown Source)
 	at org.quartz.impl.jdbcjobstore.JobStoreSupport.getConnection(JobStoreSupport.java:804)
 	at org.quartz.impl.jdbcjobstore.JobStoreTX.getNonManagedTXConnection(JobStoreTX.java:71)
 	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3246)
@@ -306,97 +302,30 @@ Caused by: java.io.EOFException: Can not read response from server. Expected to 
 	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:44)
 	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:533)
 	... 15 common frames omitted
-2020-12-31 22:42:49.268 [QuartzScheduler_QuartzScheduler-NON_CLUSTERED_MisfireHandler] ERROR org.quartz.impl.jdbcjobstore.JobStoreTX - MisfireHandler: Error handling misfires: Database error recovering from misfires.
+2021-01-01 19:25:35.924 [QuartzScheduler_schedulerFactory-NON_CLUSTERED_MisfireHandler] ERROR org.quartz.impl.jdbcjobstore.JobStoreTX - MisfireHandler: Error handling misfires: Database error recovering from misfires.
 org.quartz.JobPersistenceException: Database error recovering from misfires.
 	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3274)
 	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.manage(JobStoreSupport.java:4012)
 	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.run(JobStoreSupport.java:4033)
-Caused by: java.sql.SQLException: A problem occurred while trying to acquire a cached PreparedStatement in a background thread.
-	at com.mchange.v2.c3p0.stmt.GooGooStatementCache.acquireStatement(GooGooStatementCache.java:571)
-	at com.mchange.v2.c3p0.stmt.GooGooStatementCache.checkoutStatement(GooGooStatementCache.java:204)
-	at com.mchange.v2.c3p0.impl.NewPooledConnection.checkoutStatement(NewPooledConnection.java:321)
-	at com.mchange.v2.c3p0.impl.NewProxyConnection.prepareStatement(NewProxyConnection.java:553)
-	at sun.reflect.GeneratedMethodAccessor104.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.invoke(AttributeRestoringConnectionInvocationHandler.java:73)
-	at com.sun.proxy.$Proxy108.prepareStatement(Unknown Source)
-	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.countMisfiredTriggersInState(StdJDBCDelegate.java:390)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3253)
-	... 2 common frames omitted
-Caused by: java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+Caused by: java.sql.SQLException: No operations allowed after statement closed.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:73)
-	at com.mysql.cj.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:1659)
-	at com.mysql.cj.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:1575)
-	at sun.reflect.GeneratedMethodAccessor104.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at com.mchange.v2.c3p0.stmt.GooGooStatementCache$1StmtAcquireTask.run(GooGooStatementCache.java:547)
-	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:696)
-Caused by: com.mysql.cj.exceptions.ConnectionIsClosedException: No operations allowed after connection closed.
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:82)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.setBigDecimal(ClientPreparedStatement.java:1420)
+	at com.mchange.v2.c3p0.impl.NewProxyPreparedStatement.setBigDecimal(NewProxyPreparedStatement.java:405)
+	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.countMisfiredTriggersInState(StdJDBCDelegate.java:391)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3253)
+	... 2 common frames omitted
+Caused by: com.mysql.cj.exceptions.StatementIsClosedException: No operations allowed after statement closed.
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
 	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
-	at com.mysql.cj.NativeSession.checkClosed(NativeSession.java:1171)
-	at com.mysql.cj.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:576)
-	at com.mysql.cj.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:1590)
-	... 6 common frames omitted
-Caused by: com.mysql.cj.exceptions.CJCommunicationsException: The last packet successfully received from the server was 3,759,498 milliseconds ago. The last packet sent successfully to the server was 3,759,499 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
-	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
-	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:539)
-	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:703)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:642)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:941)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryString(NativeProtocol.java:887)
-	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:1073)
-	at com.mysql.cj.jdbc.ConnectionImpl.setAutoCommit(ConnectionImpl.java:2046)
-	at com.mchange.v2.c3p0.impl.NewProxyConnection.setAutoCommit(NewProxyConnection.java:1059)
-	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.setAutoCommit(AttributeRestoringConnectionInvocationHandler.java:98)
-	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.invoke(AttributeRestoringConnectionInvocationHandler.java:66)
-	at com.sun.proxy.$Proxy108.setAutoCommit(Unknown Source)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.getConnection(JobStoreSupport.java:804)
-	at org.quartz.impl.jdbcjobstore.JobStoreTX.getNonManagedTXConnection(JobStoreTX.java:71)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3246)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.manage(JobStoreSupport.java:4012)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.run(JobStoreSupport.java:4033)
-Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
-	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:67)
-	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63)
-	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45)
-	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:52)
-	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:41)
-	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:54)
-	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:44)
-	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:533)
-	... 15 common frames omitted
-2020-12-31 23:16:00.587 [QuartzScheduler_QuartzScheduler-NON_CLUSTERED_MisfireHandler] ERROR org.quartz.impl.jdbcjobstore.JobStoreTX - MisfireHandler: Error handling misfires: Failed to obtain DB connection from data source 'qzDS': java.sql.SQLException: com.mchange.v2.c3p0.ComboPooledDataSource[ identityToken -> 1hge2niae1ff753pa8b203|4cc1132, dataSourceName -> 1hge2niae1ff753pa8b203|4cc1132 ] has been closed() -- you can no longer use it.
-org.quartz.JobPersistenceException: Failed to obtain DB connection from data source 'qzDS': java.sql.SQLException: com.mchange.v2.c3p0.ComboPooledDataSource[ identityToken -> 1hge2niae1ff753pa8b203|4cc1132, dataSourceName -> 1hge2niae1ff753pa8b203|4cc1132 ] has been closed() -- you can no longer use it.
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.getConnection(JobStoreSupport.java:783)
-	at org.quartz.impl.jdbcjobstore.JobStoreTX.getNonManagedTXConnection(JobStoreTX.java:71)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.doRecoverMisfires(JobStoreSupport.java:3246)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.manage(JobStoreSupport.java:4012)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.run(JobStoreSupport.java:4033)
-Caused by: java.sql.SQLException: com.mchange.v2.c3p0.ComboPooledDataSource[ identityToken -> 1hge2niae1ff753pa8b203|4cc1132, dataSourceName -> 1hge2niae1ff753pa8b203|4cc1132 ] has been closed() -- you can no longer use it.
-	at com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.assertCpds(AbstractPoolBackedDataSource.java:512)
-	at com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getPoolManager(AbstractPoolBackedDataSource.java:524)
-	at com.mchange.v2.c3p0.impl.AbstractPoolBackedDataSource.getConnection(AbstractPoolBackedDataSource.java:140)
-	at org.quartz.utils.C3p0PoolingConnectionProvider.getConnection(C3p0PoolingConnectionProvider.java:223)
-	at org.quartz.utils.DBConnectionManager.getConnection(DBConnectionManager.java:108)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.getConnection(JobStoreSupport.java:780)
-	... 4 common frames omitted
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:85)
+	at com.mysql.cj.jdbc.StatementImpl.checkClosed(StatementImpl.java:340)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.setBigDecimal(ClientPreparedStatement.java:1417)
+	... 5 common frames omitted
