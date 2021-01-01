@@ -33,7 +33,7 @@
                      processData: false,
                      success: function (res) {
                          console.log("res:" + res)
-                         alert(res)
+                         alert(JSON.stringify(res))
                          if (res['success'] == true) {
                              console.log("login success")
                              window.location.href="/jobManager";
