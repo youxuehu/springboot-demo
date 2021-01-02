@@ -1,11 +1,11 @@
 package com.example.springbootdemo.controller;
 
 import com.alibaba.fastjson.JSON;
+import com.example.springbootdemo.bloomFilter.BloomFilterCache;
 import com.example.springbootdemo.common.cache.CacheService;
 import com.example.springbootdemo.common.db.dao.admin.model.Admin;
 import com.example.springbootdemo.common.db.service.AdminService;
 import com.example.springbootdemo.controller.userinfos.param.SessionInfo;
-import com.example.springbootdemo.holder.ThreadLocalHolder;
 import com.example.springbootdemo.utils.MD5Util;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
@@ -48,25 +48,30 @@ public class LoginController extends BaseController {
     public ModelMap doLogin(Model model, HttpServletRequest request, HttpServletResponse response, String userName, String password) {
         if (StringUtils.isBlank(userName)) {
             LOGGER.error("userName不能为空");
-            model.addAttribute("errorMessage", "userName不能为空");
+//            model.addAttribute("errorMessage", "userName不能为空");
 //            return "login";
-            return error();
+            return error("errorMessage", "userName不能为空");
         }
         if (StringUtils.isBlank(password)) {
             LOGGER.error("password不能为空");
-            model.addAttribute("errorMessage", "password不能为空");
+//            model.addAttribute("errorMessage", "password不能为空");
 //            return "login";
-            return error();
+            return error("errorMessage", "password不能为空");
+        }
+        if (!BloomFilterCache.bloomFilter.check(userName)) {
+            LOGGER.error("该用户不存在（未通过布隆过滤器）");
+            return error("errorMessage", "该用户[" + userName + "]不存在（未通过布隆过滤器）");
         }
         Admin admin = adminService.queryById(userName);
         if (admin == null) {
-            throw new RuntimeException("用户" + userName + "不存在");
+            LOGGER.error("errorMessage", "用户" + userName + "不存在");
+            return error("errorMessage", "用户" + userName + "不存在");
         }
         String contractPassword = MD5Util.addSalt(password, admin.getSalt());
         String passWordDB = admin.getPassWord();
         if (!StringUtils.equals(passWordDB, contractPassword)) {
             LOGGER.error("用户名或密码不正确");
-            throw new RuntimeException("用户名或密码不正确");
+            return error("errorMessage", "用户名或密码不正确");
         }
         SessionInfo sessionInfo = new SessionInfo(userName, admin.getNickName());
         storeCookie(request, response, sessionInfo);
