@@ -5,6 +5,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.example.springbootdemo.common.cache.CacheService;
 import com.example.springbootdemo.controller.userinfos.param.SessionInfo;
 import com.example.springbootdemo.holder.ThreadLocalHolder;
+import com.example.springbootdemo.utils.CookieUtil;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -59,33 +60,18 @@ public class LoginCheckIntercepter extends HandlerInterceptorAdapter {
         if (requestURI.startsWith("/js") || requestURI.startsWith("/error")) {
             return false;
         }
-        String cacheKey = null;
-        String cacheValue = getString(request, cacheKey);
-        ThreadLocalHolder.set(JSON.parseObject(cacheValue, SessionInfo.class));
-        if (cacheValue == null) return true;
+        // 检查cookie是否存在
+        Cookie cookie = CookieUtil.getCookieByName(request, SESSION_KET);
+        if (cookie == null) {
+            return true;
+        }
+        // 检查缓存是否存在
+        String cacheValue = cacheService.get(cookie.getValue(), String.class);
         if (StringUtils.isBlank(cacheValue)) {
             return true;
         }
+        // 存线程里面
+        ThreadLocalHolder.set(JSON.parseObject(cacheValue, SessionInfo.class));
         return false;
     }
-
-    private String getString(HttpServletRequest request, String cacheKey) {
-        Cookie[] cookies = request.getCookies();
-        if (cookies == null) {
-            return null;
-        }
-        for (Cookie cookie : cookies) {
-            String name = cookie.getName();
-            if (StringUtils.equals(SESSION_KET, name)) {
-                String value = cookie.getValue();
-                if (StringUtils.isBlank(value)) {
-                    return null;
-                }
-                cacheKey = value;
-            }
-        }
-        String cacheValue = cacheService.get(cacheKey, String.class);
-        return cacheValue;
-    }
-
 }

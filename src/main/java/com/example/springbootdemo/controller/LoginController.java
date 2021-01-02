@@ -6,6 +6,7 @@ import com.example.springbootdemo.common.cache.CacheService;
 import com.example.springbootdemo.common.db.dao.admin.model.Admin;
 import com.example.springbootdemo.common.db.service.AdminService;
 import com.example.springbootdemo.controller.userinfos.param.SessionInfo;
+import com.example.springbootdemo.utils.CookieUtil;
 import com.example.springbootdemo.utils.MD5Util;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
@@ -33,7 +34,8 @@ public class LoginController extends BaseController {
     @Autowired
     AdminService adminService;
     @RequestMapping("/login")
-    public String login() {
+    public String login(HttpServletRequest request, HttpServletResponse response) {
+        LOGGER.info("登录");
         return "login";
     }
 
@@ -41,6 +43,13 @@ public class LoginController extends BaseController {
     public String jobManager() {
         LOGGER.info("JobManager");
         return "JobManager";
+    }
+
+    @RequestMapping("/logout")
+    public String logout(HttpServletRequest request, HttpServletResponse response) {
+        LOGGER.info("登出");
+        removeCookie(request, response);
+        return "redirect:/login";
     }
 
     @RequestMapping("/doLogin")
@@ -78,12 +87,19 @@ public class LoginController extends BaseController {
 //        return "redirect:/jobManager";
         return success();
     }
+
     private void storeCookie(HttpServletRequest request, HttpServletResponse response, SessionInfo sessionInfo) {
         String uuid = UUID.randomUUID().toString();
         request.setAttribute(SESSION_KET, uuid);
         Cookie cookie = new Cookie(SESSION_KET, uuid);
         cookie.setMaxAge(24 * 3600 * 1000);
         response.addCookie(cookie);
-        cacheService.set(uuid, JSON.toJSONString(sessionInfo), 3600 * 1000);
+        cacheService.set(uuid, JSON.toJSONString(sessionInfo), 1800 * 1000);
+    }
+
+    private void removeCookie(HttpServletRequest request, HttpServletResponse response) {
+        Cookie cookie = CookieUtil.getCookieByName(request, SESSION_KET);
+        cacheService.delete(cookie.getValue());
+        CookieUtil.deleteCookieByName(request, response, SESSION_KET);
     }
 }
