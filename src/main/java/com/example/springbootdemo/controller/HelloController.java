@@ -1,8 +1,6 @@
 package com.example.springbootdemo.controller;
 
-import lombok.Getter;
-import lombok.Setter;
-import org.apache.spark.sql.catalyst.expressions.String2StringExpression$class;
+import com.example.springbootdemo.controller.params.UserDemo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -69,13 +67,5 @@ public class HelloController {
         int i = 1 / 0;
         return "hello controller advice";
     }
-
-}
-
-@Setter
-@Getter
-class UserDemo {
-    private String name;
-    private String message;
 
 }
