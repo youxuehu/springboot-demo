@@ -57,7 +57,8 @@ public class LoginCheckIntercepter extends HandlerInterceptorAdapter {
 
     private boolean checkLogin(HttpServletRequest request) {
         String requestURI = request.getRequestURI();
-        if (requestURI.startsWith("/js") || requestURI.startsWith("/error")) {
+        if (requestURI.startsWith("/js") || requestURI.startsWith("/error") || requestURI.startsWith("/css")
+                || requestURI.startsWith("/favicon.ico")) {
             return false;
         }
         // 检查cookie是否存在

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http:www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+<!--    <link rel="stylesheet" th:href="@{/css/iview.css}">
+    <script type="text/javascript" th:src="@{/js/vue.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/iview.min.js}"></script>-->
+    <link rel="stylesheet" type="text/css" href="http://unpkg.com/view-design/dist/styles/iview.css">
+    <script type="text/javascript" src="http://vuejs.org/js/vue.min.js"></script>
+    <script type="text/javascript" src="http://unpkg.com/view-design/dist/iview.min.js"></script>
+
+<!--    <script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/common.js}"></script>
+    <script type="text/javascript" th:src="@{/js/md5.min.js}"></script>-->
+
+</head>
+<body>aaaaaaa
+    <Form ref="formInline" :model="formInline" :rules="ruleInline" inline>
+        <FormItem prop="user">
+            <Input type="text" v-model="formInline.user" placeholder="Username">
+            <Icon type="ios-person-outline" slot="prepend"></Icon>
+            </Input>
+        </FormItem>
+        <FormItem prop="password">
+            <Input type="password" v-model="formInline.password" placeholder="Password">
+            <Icon type="ios-lock-outline" slot="prepend"></Icon>
+            </Input>
+        </FormItem>
+        <FormItem>
+            <Button type="primary" @click="handleSubmit('formInline')">Signin</Button>
+        </FormItem>
+    </Form>
+<script>
+    var vue = new Vue({
+        data () {
+            return {
+                formInline: {
+                    user: '',
+                    password: ''
+                },
+                ruleInline: {
+                    user: [
+                        { required: true, message: 'Please fill in the user name', trigger: 'blur' }
+                    ],
+                    password: [
+                        { required: true, message: 'Please fill in the password.', trigger: 'blur' },
+                        { type: 'string', min: 6, message: 'The password length cannot be less than 6 bits', trigger: 'blur' }
+                    ]
+                }
+            }
+        },
+        methods: {
+            handleSubmit(name) {
+                this.$refs[name].validate((valid) => {
+                    if (valid) {
+                        this.$Message.success('Success!');
+                    } else {
+                        this.$Message.error('Fail!');
+                    }
+                })
+            }
+        }
+    })
+</script>
+</body>
+</html>

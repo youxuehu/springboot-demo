@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http:www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+
+    <script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/common.js}"></script>
+    <script type="text/javascript" th:src="@{/js/md5.min.js}"></script>
+
+    <script type="text/javascript">
+        $(function () {
+             $("#LoginButton").click(function () {
+                 const userName = $("#userName").val();
+                 if (userName === "" || userName.length < 1) {
+                     alert("userName不为空！！")
+                     $msgbox("userName不为空！！")
+                     return
+                 }
+                 const password = $("#password").val();
+                 if (password === "" || password.length < 1) {
+                     alert("password不为空！！")
+                     return
+                 }
+                 var salt = g_passsword_salt;
+                 var str = ""+salt.charAt(0)+salt.charAt(1) + password +salt.charAt(6) + salt.charAt(4);
+                 var passwordMd5 = md5(str);
+                 const formData = new FormData()
+                 formData.append("userName", userName);
+                 formData.append("password", passwordMd5);
+                 $.ajax({
+                     url: '/doLogin',
+                     type: 'post',
+                     data: formData,
+                     contentType: false,
+                     processData: false,
+                     success: function (res) {
+                         console.log("res:" + res)
+                         alert(JSON.stringify(res))
+                         if (res['success'] == true) {
+                             console.log("login success")
+                             window.location.href="/jobManager";
+                             return;
+                         } else {
+                             alert('登录失败' + res['errorMessage'])
+                             console.log("login error")
+                             $("#ErrorMessage").html(res['errorMessage'])
+                             return;
+                         }
+                     }
+                 })
+             })
+         })
+    </script>
+</head>
+<body th:src="@{/bak.jpeg}">
+<form id="LoginForm2" name="LoginForm2">
+    用户名：<input type="text" name="userName" id="userName" value="16000000000"/><br/><br/>
+    密码：<input type="password" name="password" id="password" value="zhf123.."/><br/><br/>
+    <input id="LoginButton" type="button" value="登录"/>
+</form>
+<div style="color:red" id="ErrorMessage">[[${errorMessage}]]</div>
+
+<div id="message">
+    <template>
+        <p>With desc</p>
+        <Button @click="info(false)">Info</Button>
+        <Button @click="success(false)">Success</Button>
+        <Button @click="warning(false)">Warning</Button>
+        <Button @click="error(false)">Error</Button>
+        <p>Only title</p>
+        <Button @click="info(true)">Info</Button>
+        <Button @click="success(true)">Success</Button>
+        <Button @click="warning(true)">Warning</Button>
+        <Button @click="error(true)">Error</Button>
+    </template>
+</div>
+<link rel="stylesheet" th:href="@{/css/iview.css}">
+<script type="text/javascript" th:src="@{/js/vue.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/iview.min.js}"></script>
+<script>
+        var vue = new Vue({
+            el: "#message",
+            methods: {
+                info (nodesc) {
+                    this.$Notice.info({
+                        title: 'Notification title',
+                        desc: nodesc ? '' : 'Here is the notification description. Here is the notification description. '
+                    });
+                },
+                success (nodesc) {
+                    this.$Notice.success({
+                        title: 'Notification title',
+                        desc: nodesc ? '' : 'Here is the notification description. Here is the notification description. '
+                    });
+                },
+                warning (nodesc) {
+                    this.$Notice.warning({
+                        title: 'Notification title',
+                        desc: nodesc ? '' : 'Here is the notification description. Here is the notification description. '
+                    });
+                },
+                error (nodesc) {
+                    this.$Notice.error({
+                        title: 'Notification title',
+                        desc: nodesc ? '' : 'Here is the notification description. Here is the notification description. '
+                    });
+                }
+            }
+        })
+</script>
+
+</body>
+</html>

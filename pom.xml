@@ -769,6 +769,22 @@
                 </includes>
                 <filtering>false</filtering>
             </resource>
+
+            <!-- vue 字体加载过滤 -->
+            <resource>
+                <directory>${project.basedir}/src/main/resources</directory>
+                <filtering>true</filtering>
+                <excludes>
+                    <exclude>static/js/element-ui/fonts/**</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <directory>${project.basedir}/src/main/resources</directory>
+                <filtering>false</filtering>
+                <includes>
+                    <include>static/js/element-ui/fonts/**</include>
+                </includes>
+            </resource>
         </resources>
         <plugins>
            <!-- <plugin>

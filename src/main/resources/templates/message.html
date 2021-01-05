@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http:www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" th:href="@{/css/iview.css}">
+    <script type="text/javascript" th:src="@{/js/vue.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/iview.min.js}"></script>
+<!--    <link rel="stylesheet" type="text/css" href="http://unpkg.com/view-design/dist/styles/iview.css">
+    <script type="text/javascript" src="http://vuejs.org/js/vue.min.js"></script>
+    <script type="text/javascript" src="http://unpkg.com/view-design/dist/iview.min.js"></script>-->
+
+</head>
+<body>
+
+<div id="message">
+    <template>
+        <p>With desc</p>
+        <Button @click="info(false)">Info</Button>
+        <Button @click="success(false)">Success</Button>
+        <Button @click="warning(false)">Warning</Button>
+        <Button @click="error(false)">Error</Button>
+        <p>Only title</p>
+        <Button @click="info(true)">Info</Button>
+        <Button @click="success(true)">Success</Button>
+        <Button @click="warning(true)">Warning</Button>
+        <Button @click="error(true)">Error</Button>
+    </template>
+</div>
+
+<script>
+        var vue = new Vue({
+            el: "#message",
+            methods: {
+                info (nodesc) {
+                    this.$Notice.info({
+                        title: 'Notification title',
+                        desc: nodesc ? '' : 'Here is the notification description. Here is the notification description. '
+                    });
+                },
+                success (nodesc) {
+                    this.$Notice.success({
+                        title: 'Notification title',
+                        desc: nodesc ? '' : 'Here is the notification description. Here is the notification description. '
+                    });
+                },
+                warning (nodesc) {
+                    this.$Notice.warning({
+                        title: 'Notification title',
+                        desc: nodesc ? '' : 'Here is the notification description. Here is the notification description. '
+                    });
+                },
+                error (nodesc) {
+                    this.$Notice.error({
+                        title: 'Notification title',
+                        desc: nodesc ? '' : 'Here is the notification description. Here is the notification description. '
+                    });
+                }
+            }
+        })
+</script>
+
+</body>
+</html>

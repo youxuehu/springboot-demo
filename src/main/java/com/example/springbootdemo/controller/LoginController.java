@@ -39,6 +39,12 @@ public class LoginController extends BaseController {
         return "login";
     }
 
+    @RequestMapping("/message")
+    public String message(HttpServletRequest request, HttpServletResponse response) {
+        LOGGER.info("message");
+        return "message";
+    }
+
     @RequestMapping("/jobManager")
     public String jobManager() {
         LOGGER.info("JobManager");
