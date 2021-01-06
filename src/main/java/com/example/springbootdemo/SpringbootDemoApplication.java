@@ -19,6 +19,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.kafka.KafkaAutoConfiguration;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ImportResource;
@@ -36,6 +37,7 @@ import java.util.List;
 @MapperScan(basePackages={"com.example.springbootdemo.**.mapper"})
 //@Order(1)
 @EnableScheduling
+@EnableCaching
 @ImportResource(locations = {"classpath:applicationContext.xml"})
 public class SpringbootDemoApplication implements ApplicationRunner {
     private static final Logger LOGGER = LoggerFactory.getLogger(SpringbootDemoApplication.class);

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>gmsg</title>
+<link href="http://cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="demo.css" rel="stylesheet" type="text/css">
+<link href="gmsg.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="demo">
+ 	<h3 class="demo-title">gmsg使用</h3>
+    <p>插件介绍：gmsg一款消息提示显示插件，可以右键查看源文件，看看具体用法,</p> 
+    <div class="gtitlebar left">
+		 <span class="title">1.一般的操作提示，可以添加shadow，增加阴影效果,配置maskLayer = true显示遮罩层</span>
+	</div> 
+    <button>操作成功</button>
+    <button>操作提醒</button>
+    <button>操作失败</button>
+    <button>确定操作</button>
+    <button>操作加载</button>
+    
+    <div class="gtitlebar left">
+		 <span class="title">2.配置position，默认是是center，center-top，bottom-right</span>
+	</div>
+	<button>中间显示</button>
+    <button>中上显示</button>
+    <button>底右显示</button>
+    
+    <div class="gtitlebar left">
+		 <span class="title">3.配置delayTime延时关闭时间，默认是2秒，当为-1时，不显示提示框，可以通过方法打开和关闭提示框</span>
+	</div>
+	<button>实例化加载</button>
+	<button>显示加载</button>
+	<button>关闭加载</button>
+    
+</div>
+
+</body>
+<script src="http://cdn.bootcss.com/jquery/3.0.0-beta1/jquery.js"></script>
+<script type = "text/javascript" src = "gmsg.js" ></script>
+<script type="text/javascript">
+
+
+$("button").on("click",function(){
+	
+	switch($(this).text()){
+	case "操作成功" :
+		$.gmsg({"theme" : "success"});
+		break ;
+	case "操作提醒" :
+		$.gmsg({"theme" : "warning"});
+		break ;
+	case "操作失败" :
+		$.gmsg({"theme" : "danger"});
+		break ;
+	case "确定操作" :
+		$.gmsg({"contentHtml" : "您确定要这么操作吗？","theme" : "confirm"});
+		break ;
+	case "操作加载" :
+		$.gmsg({ "theme" : "loading"});
+		break ;
+	case "中间显示":
+		$.gmsg({"position" : "center","showTitle" : true,"contentHtml":"系统消息到达","maskLayer" : false});
+		break ;
+    case "中上显示":
+    	$.gmsg({"position" : "center-top","showTitle" : true,"contentHtml":"系统消息到达","maskLayer" : false});
+		break ;
+    case "底右显示":
+    	 $.gmsg({"position" : "bottom-right","showTitle" : true,"contentHtml":"系统消息到达","maskLayer" : false});
+	    break ;
+    case "实例化加载":
+    	 $.gmsg({ "theme" : "loading","delayTime":-1,"maskLayer" : false});
+	    break ;
+    case "关闭加载":
+    	$.hideGmsg();
+	    break ;
+    case "显示加载":
+    	$.showGmsg();
+	    break ;
+	}
+	
+});
+</script>
+</html>

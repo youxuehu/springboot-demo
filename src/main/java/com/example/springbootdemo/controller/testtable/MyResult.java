@@ -1,15 +1,12 @@
 package com.example.springbootdemo.controller.testtable;
 
-import lombok.Getter;
-import lombok.Setter;
-
+import lombok.Data;
 import java.io.Serializable;
 
 /**
  * @param <T>
  */
-@Setter
-@Getter
+@Data
 public class MyResult<T> implements Serializable {
     private boolean success = false;
     private String errorCode;

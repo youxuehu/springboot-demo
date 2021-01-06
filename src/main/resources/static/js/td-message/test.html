@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="td-msessage.css" />
+</head>
+<body>
+<button id="btn">弹出</button>
+<!-- 引入jQuery -->
+<script src="https://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
+<!-- 引入td-message.js-->
+<script src="td-message.min.js"></script>
+<script>
+      $("#btn").click(function () {
+        $.message({
+          type: "error",
+          text: "错误消息提示",
+          duration: 2500,
+          positon: "top-right",
+          showClose: true
+        });
+      });
+    </script>
+</body>
+</html>

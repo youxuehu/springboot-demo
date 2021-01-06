@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>测试插件页面</title>
+    <script src="jquery-1.11.3.js"></script>
+    <script src="message.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+<!--<div>-->
+    <!--<div style="position:fixed;left:0;top:0;width:100%;height:100%;background: #000;opacity: .2;"></div>-->
+    <!--<div style="position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);padding:15px 20px;background:#fff;border-radius: 7px;">-->
+       <!--<div><i style="display:inline-block;width:24px;height:24px;background-image:url(messageBackground.png);background-position: -72px 0;vertical-align: middle;"></i><span style="margin:0 20px;display:inline-block;max-width: 300px;text-align: center;vertical-align: middle;">这只是简单的提示</span><i style="font-style: normal;">X</i></div>-->
+       <!--<div style="text-align: center;margin-top:20px;"><button style="background:#6cb5f4;border:1px solid #54a9f2;border-radius: 4px;padding:5px 12px;color:#fff;outline: none;cursor: pointer;margin:0 5px;">确定</button><button style="background:#fff;border:1px solid #ccc;border-radius: 4px;padding:5px 12px;color:#000;outline: none;cursor: pointer;margin:0 5px;">取消</button></div>-->
+    <!--</div>-->
+<!--</div>-->
+</body>
+<script>
+//    $.Message.Alert("我是",function(){
+//        console.log(222);
+//    });
+    $.Message.Confirm("ddfaf",function(){console.log(555)},function(){console.log(666)},"warn");
+        $.Message.Alert(function(){
+            console.log(55);
+        },88);
+//    $.Message.renderHtml({message:"nihaozhe是测试",iconType:"info",messType:"confirm"});
+</script>
+</html>
