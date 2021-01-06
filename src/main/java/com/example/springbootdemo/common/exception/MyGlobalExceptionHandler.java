@@ -1,6 +1,8 @@
 package com.example.springbootdemo.common.exception;
 
 import com.alibaba.fastjson.JSON;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -12,8 +14,10 @@ import java.util.Map;
 
 @ControllerAdvice
 public class MyGlobalExceptionHandler {
+    private static final Logger LOGGER = LoggerFactory.getLogger(MyGlobalExceptionHandler.class);
     @ExceptionHandler(Exception.class)
     public ModelAndView customException(Exception e) {
+        LOGGER.error("", e);
         ModelAndView modelAndView = new ModelAndView();
         ModelMap modelMap = modelAndView.getModelMap();
         modelMap.addAttribute("errorMessage", JSON.toJSONString(e, true));

@@ -45,6 +45,12 @@ public class LoginController extends BaseController {
         return "message";
     }
 
+    @RequestMapping("/websocket")
+    public String websocket(HttpServletRequest request, HttpServletResponse response) {
+        LOGGER.info("websocket");
+        return "websocket";
+    }
+
     @RequestMapping("/jobManager")
     public String jobManager() {
         LOGGER.info("JobManager");
