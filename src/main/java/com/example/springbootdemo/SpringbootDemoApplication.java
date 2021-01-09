@@ -1,35 +1,19 @@
 package com.example.springbootdemo;
 
-import com.example.springbootdemo.common.hadoop2.HDFS2Utils;
-import com.example.springbootdemo.common.thrift.impl.StudentThriftServer;
-import com.example.springbootdemo.intercepter.AdminIntercepter;
 import com.example.springbootdemo.service.TestSpringService;
-import com.example.springbootdemo.utils.easyexcal.ExcelUtils;
-import com.example.springbootdemo.utils.easyexcal.LocalWareDTO;
-import com.example.springbootdemo.utils.easyexcal.LocalWareExcelListener;
 import lombok.extern.slf4j.Slf4j;
 import org.mybatis.spring.annotation.MapperScan;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.kafka.KafkaAutoConfiguration;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ImportResource;
-import org.springframework.core.annotation.Order;
 import org.springframework.scheduling.annotation.EnableScheduling;
-import org.springframework.stereotype.Controller;
-
-import javax.annotation.Resource;
-import java.io.*;
-import java.util.List;
 
 @Slf4j
 @SpringBootApplication(exclude = {KafkaAutoConfiguration.class})

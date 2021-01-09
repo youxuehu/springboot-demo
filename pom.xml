@@ -774,20 +774,20 @@
             </resource>
 
             <!-- vue 字体加载过滤 -->
-            <resource>
+<!--            <resource>
                 <directory>${project.basedir}/src/main/resources</directory>
                 <filtering>true</filtering>
                 <excludes>
-                    <exclude>static/js/element-ui/fonts/**</exclude>
+                    <exclude>static/css/fonts/**</exclude>
                 </excludes>
             </resource>
             <resource>
                 <directory>${project.basedir}/src/main/resources</directory>
                 <filtering>false</filtering>
                 <includes>
-                    <include>static/js/element-ui/fonts/**</include>
+                    <include>static/css/fonts/**</include>
                 </includes>
-            </resource>
+            </resource>-->
         </resources>
         <plugins>
            <!-- <plugin>
@@ -833,7 +833,31 @@
                     </execution>
                 </executions>
             </plugin>
-
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <configuration>
+                    <resources>
+                        <resource>
+                            <directory>src/main/resources</directory>
+                            <filtering>true</filtering>
+                            <excludes>
+                                <exclude>**/font/**</exclude>
+                                <exclude>**/fonts/**</exclude>
+                            </excludes>
+                        </resource>
+                        <resource>
+                            <directory>src/main/resources</directory>
+                            <filtering>false</filtering>
+                            <includes>
+                                <include>**/font/**</include>
+                                <include>**/fonts/**</include>
+                            </includes>
+                        </resource>
+                    </resources>
+                    <encoding>utf-8</encoding>
+                    <useDefaultDelimiters>true</useDefaultDelimiters>
+                </configuration>
+            </plugin>
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

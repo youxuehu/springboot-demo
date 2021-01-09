@@ -1,7 +1,7 @@
 package com.example.springbootdemo.controller.odps;
 
 import com.example.springbootdemo.common.db.dao.odps.model.Odps;
-import com.example.springbootdemo.controller.testtable.MyResult;
+import com.example.springbootdemo.controller.params.MyResult;
 import com.example.springbootdemo.service.OdpsTableService;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;

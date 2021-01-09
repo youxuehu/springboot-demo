@@ -1,1245 +1,189 @@
-2021-01-06 14:56:57.535 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
-2021-01-06 14:56:57.953 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 14:56:57.954 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 14:56:57.955 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 14:56:57.955 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 14:56:57.956 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 14:56:57.957 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 14:56:57.958 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 14:56:57.958 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:05:04.006 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
-2021-01-06 15:05:04.343 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:05:04.344 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:05:04.345 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:05:04.346 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:05:04.347 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:05:04.347 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:05:04.348 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:05:04.349 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:06:41.059 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
-2021-01-06 15:06:41.396 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:06:41.397 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:06:41.398 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:06:41.399 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:06:41.400 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:06:41.400 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:06:41.401 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:06:41.402 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:07:54.197 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
-2021-01-06 15:07:54.538 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:07:54.539 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:07:54.540 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:07:54.540 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:07:54.541 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:07:54.542 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:07:54.542 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:07:54.543 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:09:55.302 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
-2021-01-06 15:09:55.638 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:09:55.639 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:09:55.639 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:09:55.640 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:09:55.641 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:09:55.642 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:09:55.642 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:09:55.643 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:20:20.219 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
-2021-01-06 15:20:20.557 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:20:20.558 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:20:20.559 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:20:20.559 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:20:20.560 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:20:20.561 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:20:20.561 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:20:20.562 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:22:22.977 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
-2021-01-06 15:22:23.307 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:22:23.308 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:22:23.309 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:22:23.310 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:22:23.311 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:22:23.311 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:22:23.312 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:22:23.313 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:27:21.540 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
-2021-01-06 15:27:21.886 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:27:21.887 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:27:21.888 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:27:21.889 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:27:21.889 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:27:21.890 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:27:21.891 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:27:21.891 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:29:58.357 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
-2021-01-06 15:29:58.700 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:29:58.701 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:29:58.702 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:29:58.703 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:29:58.703 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:29:58.706 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:29:58.707 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:29:58.707 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:37:39.478 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
-2021-01-06 15:37:39.836 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:37:39.837 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:37:39.838 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:37:39.838 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:37:39.839 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:37:39.840 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:37:39.841 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:37:39.841 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:41:23.773 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
-2021-01-06 15:41:24.125 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:41:24.126 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:41:24.127 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:41:24.128 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:41:24.129 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:41:24.129 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:41:24.130 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:41:24.131 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:44:47.486 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
-2021-01-06 15:44:47.837 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:44:47.838 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:44:47.839 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:44:47.840 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:44:47.841 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:44:47.841 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:44:47.842 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:44:47.843 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:49:32.721 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
-2021-01-06 15:49:33.065 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:49:33.066 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:49:33.067 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:49:33.068 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:49:33.068 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:49:33.069 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:49:33.070 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:49:33.070 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:51:32.719 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
-2021-01-06 15:51:33.051 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:51:33.052 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:51:33.053 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:51:33.053 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:51:33.054 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:51:33.055 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:51:33.055 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:51:33.056 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:52:59.129 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
-2021-01-06 15:52:59.461 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:52:59.461 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:52:59.462 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:52:59.463 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:52:59.464 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:52:59.464 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:52:59.465 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 15:52:59.466 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 16:00:46.842 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
-2021-01-06 16:00:47.175 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 16:00:47.176 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 16:00:47.176 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 16:00:47.177 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 16:00:47.178 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 16:00:47.178 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 16:00:47.179 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 16:00:47.180 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 16:26:00.269 [QuartzScheduler_QuartzSchedulerThread] WARN  org.quartz.impl.jdbcjobstore.JobStoreTX - Failed to override connection auto commit/transaction isolation.
-com.mysql.cj.jdbc.exceptions.CommunicationsException: The last packet successfully received from the server was 1,512,936 milliseconds ago. The last packet sent successfully to the server was 1,512,937 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
-	at com.mysql.cj.jdbc.ConnectionImpl.setAutoCommit(ConnectionImpl.java:2056)
-	at com.mchange.v2.c3p0.impl.NewProxyConnection.setAutoCommit(NewProxyConnection.java:1059)
-	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.setAutoCommit(AttributeRestoringConnectionInvocationHandler.java:98)
-	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.invoke(AttributeRestoringConnectionInvocationHandler.java:66)
-	at com.sun.proxy.$Proxy108.setAutoCommit(Unknown Source)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.getConnection(JobStoreSupport.java:804)
-	at org.quartz.impl.jdbcjobstore.JobStoreTX.getNonManagedTXConnection(JobStoreTX.java:71)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.executeInNonManagedTXLock(JobStoreSupport.java:3861)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.acquireNextTriggers(JobStoreSupport.java:2802)
-	at org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:287)
-Caused by: com.mysql.cj.exceptions.CJCommunicationsException: The last packet successfully received from the server was 1,512,936 milliseconds ago. The last packet sent successfully to the server was 1,512,937 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
-	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
-	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:539)
-	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:703)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:642)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:941)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryString(NativeProtocol.java:887)
-	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:1073)
-	at com.mysql.cj.jdbc.ConnectionImpl.setAutoCommit(ConnectionImpl.java:2046)
-	... 9 common frames omitted
-Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
-	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:67)
-	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63)
-	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45)
-	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:52)
-	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:41)
-	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:54)
-	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:44)
-	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:533)
-	... 15 common frames omitted
-2021-01-06 16:26:00.271 [QuartzScheduler_QuartzSchedulerThread] WARN  com.mchange.v2.c3p0.impl.NewPooledConnection - [c3p0] A PooledConnection that has already signalled a Connection error is still in use!
-2021-01-06 16:26:00.271 [QuartzScheduler_QuartzSchedulerThread] WARN  com.mchange.v2.c3p0.impl.NewPooledConnection - [c3p0] Another error has occurred [ java.sql.SQLException: A problem occurred while trying to acquire a cached PreparedStatement in a background thread. ] which will not be reported to listeners!
-java.sql.SQLException: A problem occurred while trying to acquire a cached PreparedStatement in a background thread.
-	at com.mchange.v2.c3p0.stmt.GooGooStatementCache.acquireStatement(GooGooStatementCache.java:571)
-	at com.mchange.v2.c3p0.stmt.GooGooStatementCache.checkoutStatement(GooGooStatementCache.java:204)
-	at com.mchange.v2.c3p0.impl.NewPooledConnection.checkoutStatement(NewPooledConnection.java:321)
-	at com.mchange.v2.c3p0.impl.NewProxyConnection.prepareStatement(NewProxyConnection.java:553)
-	at sun.reflect.GeneratedMethodAccessor39.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.invoke(AttributeRestoringConnectionInvocationHandler.java:73)
-	at com.sun.proxy.$Proxy108.prepareStatement(Unknown Source)
-	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.selectTriggerToAcquire(StdJDBCDelegate.java:2599)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.acquireNextTrigger(JobStoreSupport.java:2844)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport$41.execute(JobStoreSupport.java:2805)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport$41.execute(JobStoreSupport.java:2803)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.executeInNonManagedTXLock(JobStoreSupport.java:3864)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.acquireNextTriggers(JobStoreSupport.java:2802)
-	at org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:287)
-Caused by: java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:73)
-	at com.mysql.cj.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:1659)
-	at com.mysql.cj.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:1575)
-	at sun.reflect.GeneratedMethodAccessor39.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at com.mchange.v2.c3p0.stmt.GooGooStatementCache$1StmtAcquireTask.run(GooGooStatementCache.java:547)
-	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:696)
-Caused by: com.mysql.cj.exceptions.ConnectionIsClosedException: No operations allowed after connection closed.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
-	at com.mysql.cj.NativeSession.checkClosed(NativeSession.java:1171)
-	at com.mysql.cj.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:576)
-	at com.mysql.cj.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:1590)
-	... 6 common frames omitted
-Caused by: com.mysql.cj.exceptions.CJCommunicationsException: The last packet successfully received from the server was 1,512,936 milliseconds ago. The last packet sent successfully to the server was 1,512,937 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
-	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
-	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:539)
-	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:703)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:642)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:941)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryString(NativeProtocol.java:887)
-	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:1073)
-	at com.mysql.cj.jdbc.ConnectionImpl.setAutoCommit(ConnectionImpl.java:2046)
-	at com.mchange.v2.c3p0.impl.NewProxyConnection.setAutoCommit(NewProxyConnection.java:1059)
-	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.setAutoCommit(AttributeRestoringConnectionInvocationHandler.java:98)
-	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.invoke(AttributeRestoringConnectionInvocationHandler.java:66)
-	at com.sun.proxy.$Proxy108.setAutoCommit(Unknown Source)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.getConnection(JobStoreSupport.java:804)
-	at org.quartz.impl.jdbcjobstore.JobStoreTX.getNonManagedTXConnection(JobStoreTX.java:71)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.executeInNonManagedTXLock(JobStoreSupport.java:3861)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.acquireNextTriggers(JobStoreSupport.java:2802)
-	at org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:287)
-Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
-	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:67)
-	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63)
-	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45)
-	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:52)
-	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:41)
-	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:54)
-	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:44)
-	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:533)
-	... 15 common frames omitted
-2021-01-06 16:26:00.272 [QuartzScheduler_QuartzSchedulerThread] WARN  com.mchange.v2.c3p0.impl.NewPooledConnection - [c3p0] A PooledConnection that has already signalled a Connection error is still in use!
-2021-01-06 16:26:00.272 [QuartzScheduler_QuartzSchedulerThread] WARN  com.mchange.v2.c3p0.impl.NewPooledConnection - [c3p0] Another error has occurred [ java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed. ] which will not be reported to listeners!
-java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:73)
-	at com.mysql.cj.jdbc.ConnectionImpl.rollback(ConnectionImpl.java:1857)
-	at com.mchange.v2.c3p0.impl.NewProxyConnection.rollback(NewProxyConnection.java:1033)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.invoke(AttributeRestoringConnectionInvocationHandler.java:73)
-	at com.sun.proxy.$Proxy108.rollback(Unknown Source)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.rollbackConnection(JobStoreSupport.java:3727)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.executeInNonManagedTXLock(JobStoreSupport.java:3886)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.acquireNextTriggers(JobStoreSupport.java:2802)
-	at org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:287)
-Caused by: com.mysql.cj.exceptions.ConnectionIsClosedException: No operations allowed after connection closed.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
-	at com.mysql.cj.NativeSession.checkClosed(NativeSession.java:1171)
-	at com.mysql.cj.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:576)
-	at com.mysql.cj.jdbc.ConnectionImpl.rollback(ConnectionImpl.java:1811)
-	... 11 common frames omitted
-Caused by: com.mysql.cj.exceptions.CJCommunicationsException: The last packet successfully received from the server was 1,512,936 milliseconds ago. The last packet sent successfully to the server was 1,512,937 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
-	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
-	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:539)
-	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:703)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:642)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:941)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryString(NativeProtocol.java:887)
-	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:1073)
-	at com.mysql.cj.jdbc.ConnectionImpl.setAutoCommit(ConnectionImpl.java:2046)
-	at com.mchange.v2.c3p0.impl.NewProxyConnection.setAutoCommit(NewProxyConnection.java:1059)
-	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.setAutoCommit(AttributeRestoringConnectionInvocationHandler.java:98)
-	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.invoke(AttributeRestoringConnectionInvocationHandler.java:66)
-	at com.sun.proxy.$Proxy108.setAutoCommit(Unknown Source)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.getConnection(JobStoreSupport.java:804)
-	at org.quartz.impl.jdbcjobstore.JobStoreTX.getNonManagedTXConnection(JobStoreTX.java:71)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.executeInNonManagedTXLock(JobStoreSupport.java:3861)
-	... 2 common frames omitted
-Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
-	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:67)
-	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63)
-	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45)
-	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:52)
-	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:41)
-	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:54)
-	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:44)
-	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:533)
-	... 15 common frames omitted
-2021-01-06 16:26:00.273 [QuartzScheduler_QuartzSchedulerThread] WARN  com.mchange.v2.c3p0.impl.NewPooledConnection - [c3p0] A PooledConnection that has already signalled a Connection error is still in use!
-2021-01-06 16:26:00.273 [QuartzScheduler_QuartzSchedulerThread] WARN  com.mchange.v2.c3p0.impl.NewPooledConnection - [c3p0] Another error has occurred [ java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed. ] which will not be reported to listeners!
-java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:73)
-	at com.mysql.cj.jdbc.ConnectionImpl.setAutoCommit(ConnectionImpl.java:2056)
-	at com.mchange.v2.c3p0.impl.NewProxyConnection.setAutoCommit(NewProxyConnection.java:1059)
-	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.restoreOriginalAtributes(AttributeRestoringConnectionInvocationHandler.java:141)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.cleanupConnection(JobStoreSupport.java:3677)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.executeInNonManagedTXLock(JobStoreSupport.java:3896)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.acquireNextTriggers(JobStoreSupport.java:2802)
-	at org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:287)
-Caused by: com.mysql.cj.exceptions.ConnectionIsClosedException: No operations allowed after connection closed.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
-	at com.mysql.cj.NativeSession.checkClosed(NativeSession.java:1171)
-	at com.mysql.cj.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:576)
-	at com.mysql.cj.jdbc.ConnectionImpl.setAutoCommit(ConnectionImpl.java:2006)
-	... 6 common frames omitted
-Caused by: com.mysql.cj.exceptions.CJCommunicationsException: The last packet successfully received from the server was 1,512,936 milliseconds ago. The last packet sent successfully to the server was 1,512,937 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
-	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
-	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:539)
-	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:703)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:642)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:941)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryString(NativeProtocol.java:887)
-	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:1073)
-	at com.mysql.cj.jdbc.ConnectionImpl.setAutoCommit(ConnectionImpl.java:2046)
-	at com.mchange.v2.c3p0.impl.NewProxyConnection.setAutoCommit(NewProxyConnection.java:1059)
-	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.setAutoCommit(AttributeRestoringConnectionInvocationHandler.java:98)
-	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.invoke(AttributeRestoringConnectionInvocationHandler.java:66)
-	at com.sun.proxy.$Proxy108.setAutoCommit(Unknown Source)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.getConnection(JobStoreSupport.java:804)
-	at org.quartz.impl.jdbcjobstore.JobStoreTX.getNonManagedTXConnection(JobStoreTX.java:71)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.executeInNonManagedTXLock(JobStoreSupport.java:3861)
-	... 2 common frames omitted
-Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
-	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:67)
-	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63)
-	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45)
-	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:52)
-	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:41)
-	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:54)
-	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:44)
-	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:533)
-	... 15 common frames omitted
-2021-01-06 16:26:00.273 [QuartzScheduler_QuartzSchedulerThread] WARN  o.q.i.j.AttributeRestoringConnectionInvocationHandler - Failed restore connection's original auto commit setting.
-java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:73)
-	at com.mysql.cj.jdbc.ConnectionImpl.setAutoCommit(ConnectionImpl.java:2056)
-	at com.mchange.v2.c3p0.impl.NewProxyConnection.setAutoCommit(NewProxyConnection.java:1059)
-	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.restoreOriginalAtributes(AttributeRestoringConnectionInvocationHandler.java:141)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.cleanupConnection(JobStoreSupport.java:3677)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.executeInNonManagedTXLock(JobStoreSupport.java:3896)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.acquireNextTriggers(JobStoreSupport.java:2802)
-	at org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:287)
-Caused by: com.mysql.cj.exceptions.ConnectionIsClosedException: No operations allowed after connection closed.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
-	at com.mysql.cj.NativeSession.checkClosed(NativeSession.java:1171)
-	at com.mysql.cj.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:576)
-	at com.mysql.cj.jdbc.ConnectionImpl.setAutoCommit(ConnectionImpl.java:2006)
-	... 6 common frames omitted
-Caused by: com.mysql.cj.exceptions.CJCommunicationsException: The last packet successfully received from the server was 1,512,936 milliseconds ago. The last packet sent successfully to the server was 1,512,937 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
-	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
-	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:539)
-	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:703)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:642)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:941)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryString(NativeProtocol.java:887)
-	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:1073)
-	at com.mysql.cj.jdbc.ConnectionImpl.setAutoCommit(ConnectionImpl.java:2046)
-	at com.mchange.v2.c3p0.impl.NewProxyConnection.setAutoCommit(NewProxyConnection.java:1059)
-	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.setAutoCommit(AttributeRestoringConnectionInvocationHandler.java:98)
-	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.invoke(AttributeRestoringConnectionInvocationHandler.java:66)
-	at com.sun.proxy.$Proxy108.setAutoCommit(Unknown Source)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.getConnection(JobStoreSupport.java:804)
-	at org.quartz.impl.jdbcjobstore.JobStoreTX.getNonManagedTXConnection(JobStoreTX.java:71)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.executeInNonManagedTXLock(JobStoreSupport.java:3861)
-	... 2 common frames omitted
-Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
-	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:67)
-	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63)
-	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45)
-	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:52)
-	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:41)
-	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:54)
-	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:44)
-	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:533)
-	... 15 common frames omitted
-2021-01-06 16:42:25.952 [schedulerFactory_QuartzSchedulerThread] WARN  org.quartz.impl.jdbcjobstore.JobStoreTX - Failed to override connection auto commit/transaction isolation.
-com.mysql.cj.jdbc.exceptions.CommunicationsException: The last packet successfully received from the server was 985,672 milliseconds ago. The last packet sent successfully to the server was 985,673 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
-	at com.mysql.cj.jdbc.ConnectionImpl.setAutoCommit(ConnectionImpl.java:2056)
-	at com.mchange.v2.c3p0.impl.NewProxyConnection.setAutoCommit(NewProxyConnection.java:1059)
-	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.setAutoCommit(AttributeRestoringConnectionInvocationHandler.java:98)
-	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.invoke(AttributeRestoringConnectionInvocationHandler.java:66)
-	at com.sun.proxy.$Proxy169.setAutoCommit(Unknown Source)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.getConnection(JobStoreSupport.java:804)
-	at org.quartz.impl.jdbcjobstore.JobStoreTX.getNonManagedTXConnection(JobStoreTX.java:71)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.executeInNonManagedTXLock(JobStoreSupport.java:3861)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.acquireNextTriggers(JobStoreSupport.java:2802)
-	at org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:287)
-Caused by: com.mysql.cj.exceptions.CJCommunicationsException: The last packet successfully received from the server was 985,672 milliseconds ago. The last packet sent successfully to the server was 985,673 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
-	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
-	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:539)
-	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:703)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:642)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:941)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryString(NativeProtocol.java:887)
-	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:1073)
-	at com.mysql.cj.jdbc.ConnectionImpl.setAutoCommit(ConnectionImpl.java:2046)
-	... 9 common frames omitted
-Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
-	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:67)
-	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63)
-	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45)
-	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:52)
-	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:41)
-	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:54)
-	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:44)
-	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:533)
-	... 15 common frames omitted
-2021-01-06 16:42:25.956 [schedulerFactory_QuartzSchedulerThread] WARN  com.mchange.v2.c3p0.impl.NewPooledConnection - [c3p0] A PooledConnection that has already signalled a Connection error is still in use!
-2021-01-06 16:42:25.957 [schedulerFactory_QuartzSchedulerThread] WARN  com.mchange.v2.c3p0.impl.NewPooledConnection - [c3p0] Another error has occurred [ java.sql.SQLException: A problem occurred while trying to acquire a cached PreparedStatement in a background thread. ] which will not be reported to listeners!
-java.sql.SQLException: A problem occurred while trying to acquire a cached PreparedStatement in a background thread.
-	at com.mchange.v2.c3p0.stmt.GooGooStatementCache.acquireStatement(GooGooStatementCache.java:571)
-	at com.mchange.v2.c3p0.stmt.GooGooStatementCache.checkoutStatement(GooGooStatementCache.java:204)
-	at com.mchange.v2.c3p0.impl.NewPooledConnection.checkoutStatement(NewPooledConnection.java:321)
-	at com.mchange.v2.c3p0.impl.NewProxyConnection.prepareStatement(NewProxyConnection.java:553)
-	at sun.reflect.GeneratedMethodAccessor39.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.invoke(AttributeRestoringConnectionInvocationHandler.java:73)
-	at com.sun.proxy.$Proxy169.prepareStatement(Unknown Source)
-	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.selectTriggerToAcquire(StdJDBCDelegate.java:2599)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.acquireNextTrigger(JobStoreSupport.java:2844)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport$41.execute(JobStoreSupport.java:2805)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport$41.execute(JobStoreSupport.java:2803)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.executeInNonManagedTXLock(JobStoreSupport.java:3864)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.acquireNextTriggers(JobStoreSupport.java:2802)
-	at org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:287)
-Caused by: java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:73)
-	at com.mysql.cj.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:1659)
-	at com.mysql.cj.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:1575)
-	at sun.reflect.GeneratedMethodAccessor39.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at com.mchange.v2.c3p0.stmt.GooGooStatementCache$1StmtAcquireTask.run(GooGooStatementCache.java:547)
-	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:696)
-Caused by: com.mysql.cj.exceptions.ConnectionIsClosedException: No operations allowed after connection closed.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
-	at com.mysql.cj.NativeSession.checkClosed(NativeSession.java:1171)
-	at com.mysql.cj.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:576)
-	at com.mysql.cj.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:1590)
-	... 6 common frames omitted
-Caused by: com.mysql.cj.exceptions.CJCommunicationsException: The last packet successfully received from the server was 985,672 milliseconds ago. The last packet sent successfully to the server was 985,673 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
-	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
-	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:539)
-	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:703)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:642)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:941)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryString(NativeProtocol.java:887)
-	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:1073)
-	at com.mysql.cj.jdbc.ConnectionImpl.setAutoCommit(ConnectionImpl.java:2046)
-	at com.mchange.v2.c3p0.impl.NewProxyConnection.setAutoCommit(NewProxyConnection.java:1059)
-	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.setAutoCommit(AttributeRestoringConnectionInvocationHandler.java:98)
-	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.invoke(AttributeRestoringConnectionInvocationHandler.java:66)
-	at com.sun.proxy.$Proxy169.setAutoCommit(Unknown Source)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.getConnection(JobStoreSupport.java:804)
-	at org.quartz.impl.jdbcjobstore.JobStoreTX.getNonManagedTXConnection(JobStoreTX.java:71)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.executeInNonManagedTXLock(JobStoreSupport.java:3861)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.acquireNextTriggers(JobStoreSupport.java:2802)
-	at org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:287)
-Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
-	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:67)
-	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63)
-	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45)
-	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:52)
-	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:41)
-	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:54)
-	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:44)
-	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:533)
-	... 15 common frames omitted
-2021-01-06 16:42:25.957 [schedulerFactory_QuartzSchedulerThread] WARN  com.mchange.v2.c3p0.impl.NewPooledConnection - [c3p0] A PooledConnection that has already signalled a Connection error is still in use!
-2021-01-06 16:42:25.957 [schedulerFactory_QuartzSchedulerThread] WARN  com.mchange.v2.c3p0.impl.NewPooledConnection - [c3p0] Another error has occurred [ java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed. ] which will not be reported to listeners!
-java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:73)
-	at com.mysql.cj.jdbc.ConnectionImpl.rollback(ConnectionImpl.java:1857)
-	at com.mchange.v2.c3p0.impl.NewProxyConnection.rollback(NewProxyConnection.java:1033)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.invoke(AttributeRestoringConnectionInvocationHandler.java:73)
-	at com.sun.proxy.$Proxy169.rollback(Unknown Source)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.rollbackConnection(JobStoreSupport.java:3727)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.executeInNonManagedTXLock(JobStoreSupport.java:3886)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.acquireNextTriggers(JobStoreSupport.java:2802)
-	at org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:287)
-Caused by: com.mysql.cj.exceptions.ConnectionIsClosedException: No operations allowed after connection closed.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
-	at com.mysql.cj.NativeSession.checkClosed(NativeSession.java:1171)
-	at com.mysql.cj.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:576)
-	at com.mysql.cj.jdbc.ConnectionImpl.rollback(ConnectionImpl.java:1811)
-	... 11 common frames omitted
-Caused by: com.mysql.cj.exceptions.CJCommunicationsException: The last packet successfully received from the server was 985,672 milliseconds ago. The last packet sent successfully to the server was 985,673 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
-	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
-	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:539)
-	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:703)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:642)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:941)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryString(NativeProtocol.java:887)
-	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:1073)
-	at com.mysql.cj.jdbc.ConnectionImpl.setAutoCommit(ConnectionImpl.java:2046)
-	at com.mchange.v2.c3p0.impl.NewProxyConnection.setAutoCommit(NewProxyConnection.java:1059)
-	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.setAutoCommit(AttributeRestoringConnectionInvocationHandler.java:98)
-	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.invoke(AttributeRestoringConnectionInvocationHandler.java:66)
-	at com.sun.proxy.$Proxy169.setAutoCommit(Unknown Source)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.getConnection(JobStoreSupport.java:804)
-	at org.quartz.impl.jdbcjobstore.JobStoreTX.getNonManagedTXConnection(JobStoreTX.java:71)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.executeInNonManagedTXLock(JobStoreSupport.java:3861)
-	... 2 common frames omitted
-Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
-	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:67)
-	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63)
-	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45)
-	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:52)
-	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:41)
-	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:54)
-	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:44)
-	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:533)
-	... 15 common frames omitted
-2021-01-06 16:42:25.958 [schedulerFactory_QuartzSchedulerThread] WARN  com.mchange.v2.c3p0.impl.NewPooledConnection - [c3p0] A PooledConnection that has already signalled a Connection error is still in use!
-2021-01-06 16:42:25.959 [schedulerFactory_QuartzSchedulerThread] WARN  com.mchange.v2.c3p0.impl.NewPooledConnection - [c3p0] Another error has occurred [ java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed. ] which will not be reported to listeners!
-java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:73)
-	at com.mysql.cj.jdbc.ConnectionImpl.setAutoCommit(ConnectionImpl.java:2056)
-	at com.mchange.v2.c3p0.impl.NewProxyConnection.setAutoCommit(NewProxyConnection.java:1059)
-	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.restoreOriginalAtributes(AttributeRestoringConnectionInvocationHandler.java:141)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.cleanupConnection(JobStoreSupport.java:3677)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.executeInNonManagedTXLock(JobStoreSupport.java:3896)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.acquireNextTriggers(JobStoreSupport.java:2802)
-	at org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:287)
-Caused by: com.mysql.cj.exceptions.ConnectionIsClosedException: No operations allowed after connection closed.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
-	at com.mysql.cj.NativeSession.checkClosed(NativeSession.java:1171)
-	at com.mysql.cj.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:576)
-	at com.mysql.cj.jdbc.ConnectionImpl.setAutoCommit(ConnectionImpl.java:2006)
-	... 6 common frames omitted
-Caused by: com.mysql.cj.exceptions.CJCommunicationsException: The last packet successfully received from the server was 985,672 milliseconds ago. The last packet sent successfully to the server was 985,673 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
-	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
-	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:539)
-	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:703)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:642)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:941)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryString(NativeProtocol.java:887)
-	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:1073)
-	at com.mysql.cj.jdbc.ConnectionImpl.setAutoCommit(ConnectionImpl.java:2046)
-	at com.mchange.v2.c3p0.impl.NewProxyConnection.setAutoCommit(NewProxyConnection.java:1059)
-	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.setAutoCommit(AttributeRestoringConnectionInvocationHandler.java:98)
-	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.invoke(AttributeRestoringConnectionInvocationHandler.java:66)
-	at com.sun.proxy.$Proxy169.setAutoCommit(Unknown Source)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.getConnection(JobStoreSupport.java:804)
-	at org.quartz.impl.jdbcjobstore.JobStoreTX.getNonManagedTXConnection(JobStoreTX.java:71)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.executeInNonManagedTXLock(JobStoreSupport.java:3861)
-	... 2 common frames omitted
-Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
-	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:67)
-	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63)
-	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45)
-	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:52)
-	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:41)
-	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:54)
-	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:44)
-	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:533)
-	... 15 common frames omitted
-2021-01-06 16:42:25.959 [schedulerFactory_QuartzSchedulerThread] WARN  o.q.i.j.AttributeRestoringConnectionInvocationHandler - Failed restore connection's original auto commit setting.
-java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:73)
-	at com.mysql.cj.jdbc.ConnectionImpl.setAutoCommit(ConnectionImpl.java:2056)
-	at com.mchange.v2.c3p0.impl.NewProxyConnection.setAutoCommit(NewProxyConnection.java:1059)
-	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.restoreOriginalAtributes(AttributeRestoringConnectionInvocationHandler.java:141)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.cleanupConnection(JobStoreSupport.java:3677)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.executeInNonManagedTXLock(JobStoreSupport.java:3896)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.acquireNextTriggers(JobStoreSupport.java:2802)
-	at org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:287)
-Caused by: com.mysql.cj.exceptions.ConnectionIsClosedException: No operations allowed after connection closed.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
-	at com.mysql.cj.NativeSession.checkClosed(NativeSession.java:1171)
-	at com.mysql.cj.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:576)
-	at com.mysql.cj.jdbc.ConnectionImpl.setAutoCommit(ConnectionImpl.java:2006)
-	... 6 common frames omitted
-Caused by: com.mysql.cj.exceptions.CJCommunicationsException: The last packet successfully received from the server was 985,672 milliseconds ago. The last packet sent successfully to the server was 985,673 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
-	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
-	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:539)
-	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:703)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:642)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:941)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryString(NativeProtocol.java:887)
-	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:1073)
-	at com.mysql.cj.jdbc.ConnectionImpl.setAutoCommit(ConnectionImpl.java:2046)
-	at com.mchange.v2.c3p0.impl.NewProxyConnection.setAutoCommit(NewProxyConnection.java:1059)
-	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.setAutoCommit(AttributeRestoringConnectionInvocationHandler.java:98)
-	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.invoke(AttributeRestoringConnectionInvocationHandler.java:66)
-	at com.sun.proxy.$Proxy169.setAutoCommit(Unknown Source)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.getConnection(JobStoreSupport.java:804)
-	at org.quartz.impl.jdbcjobstore.JobStoreTX.getNonManagedTXConnection(JobStoreTX.java:71)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.executeInNonManagedTXLock(JobStoreSupport.java:3861)
-	... 2 common frames omitted
-Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
-	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:67)
-	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63)
-	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45)
-	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:52)
-	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:41)
-	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:54)
-	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:44)
-	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:533)
-	... 15 common frames omitted
-2021-01-06 16:52:27.981 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
-2021-01-06 16:52:28.333 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 16:52:28.334 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 16:52:28.335 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 16:52:28.336 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 16:52:28.336 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 16:52:28.337 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 16:52:28.338 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 16:52:28.338 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 16:55:49.330 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
-2021-01-06 16:55:49.711 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 16:55:49.712 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 16:55:49.713 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 16:55:49.713 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 16:55:49.714 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 16:55:49.715 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 16:55:49.715 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 16:55:49.716 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 17:08:31.693 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
-2021-01-06 17:08:32.070 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 17:08:32.071 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 17:08:32.072 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 17:08:32.072 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 17:08:32.073 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 17:08:32.074 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 17:08:32.074 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 17:08:32.075 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:12:54.690 [schedulerFactory_QuartzSchedulerThread] WARN  org.quartz.impl.jdbcjobstore.JobStoreTX - Failed to override connection auto commit/transaction isolation.
-com.mysql.cj.jdbc.exceptions.CommunicationsException: The last packet successfully received from the server was 3,862,462 milliseconds ago. The last packet sent successfully to the server was 3,862,463 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
-	at com.mysql.cj.jdbc.ConnectionImpl.setAutoCommit(ConnectionImpl.java:2056)
-	at com.mchange.v2.c3p0.impl.NewProxyConnection.setAutoCommit(NewProxyConnection.java:1059)
-	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.setAutoCommit(AttributeRestoringConnectionInvocationHandler.java:98)
-	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.invoke(AttributeRestoringConnectionInvocationHandler.java:66)
-	at com.sun.proxy.$Proxy174.setAutoCommit(Unknown Source)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.getConnection(JobStoreSupport.java:804)
-	at org.quartz.impl.jdbcjobstore.JobStoreTX.getNonManagedTXConnection(JobStoreTX.java:71)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.executeInNonManagedTXLock(JobStoreSupport.java:3861)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.acquireNextTriggers(JobStoreSupport.java:2802)
-	at org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:287)
-Caused by: com.mysql.cj.exceptions.CJCommunicationsException: The last packet successfully received from the server was 3,862,462 milliseconds ago. The last packet sent successfully to the server was 3,862,463 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
-	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
-	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:539)
-	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:703)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:642)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:941)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryString(NativeProtocol.java:887)
-	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:1073)
-	at com.mysql.cj.jdbc.ConnectionImpl.setAutoCommit(ConnectionImpl.java:2046)
-	... 9 common frames omitted
-Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
-	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:67)
-	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63)
-	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45)
-	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:52)
-	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:41)
-	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:54)
-	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:44)
-	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:533)
-	... 15 common frames omitted
-2021-01-06 18:12:54.711 [schedulerFactory_QuartzSchedulerThread] WARN  com.mchange.v2.c3p0.impl.NewPooledConnection - [c3p0] A PooledConnection that has already signalled a Connection error is still in use!
-2021-01-06 18:12:54.711 [schedulerFactory_QuartzSchedulerThread] WARN  com.mchange.v2.c3p0.impl.NewPooledConnection - [c3p0] Another error has occurred [ java.sql.SQLException: A problem occurred while trying to acquire a cached PreparedStatement in a background thread. ] which will not be reported to listeners!
-java.sql.SQLException: A problem occurred while trying to acquire a cached PreparedStatement in a background thread.
-	at com.mchange.v2.c3p0.stmt.GooGooStatementCache.acquireStatement(GooGooStatementCache.java:571)
-	at com.mchange.v2.c3p0.stmt.GooGooStatementCache.checkoutStatement(GooGooStatementCache.java:204)
-	at com.mchange.v2.c3p0.impl.NewPooledConnection.checkoutStatement(NewPooledConnection.java:321)
-	at com.mchange.v2.c3p0.impl.NewProxyConnection.prepareStatement(NewProxyConnection.java:553)
-	at sun.reflect.GeneratedMethodAccessor46.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.invoke(AttributeRestoringConnectionInvocationHandler.java:73)
-	at com.sun.proxy.$Proxy174.prepareStatement(Unknown Source)
-	at org.quartz.impl.jdbcjobstore.StdJDBCDelegate.selectTriggerToAcquire(StdJDBCDelegate.java:2599)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.acquireNextTrigger(JobStoreSupport.java:2844)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport$41.execute(JobStoreSupport.java:2805)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport$41.execute(JobStoreSupport.java:2803)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.executeInNonManagedTXLock(JobStoreSupport.java:3864)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.acquireNextTriggers(JobStoreSupport.java:2802)
-	at org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:287)
-Caused by: java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:73)
-	at com.mysql.cj.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:1659)
-	at com.mysql.cj.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:1575)
-	at sun.reflect.GeneratedMethodAccessor46.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at com.mchange.v2.c3p0.stmt.GooGooStatementCache$1StmtAcquireTask.run(GooGooStatementCache.java:547)
-	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:696)
-Caused by: com.mysql.cj.exceptions.ConnectionIsClosedException: No operations allowed after connection closed.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
-	at com.mysql.cj.NativeSession.checkClosed(NativeSession.java:1171)
-	at com.mysql.cj.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:576)
-	at com.mysql.cj.jdbc.ConnectionImpl.prepareStatement(ConnectionImpl.java:1590)
-	... 6 common frames omitted
-Caused by: com.mysql.cj.exceptions.CJCommunicationsException: The last packet successfully received from the server was 3,862,462 milliseconds ago. The last packet sent successfully to the server was 3,862,463 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
-	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
-	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:539)
-	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:703)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:642)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:941)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryString(NativeProtocol.java:887)
-	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:1073)
-	at com.mysql.cj.jdbc.ConnectionImpl.setAutoCommit(ConnectionImpl.java:2046)
-	at com.mchange.v2.c3p0.impl.NewProxyConnection.setAutoCommit(NewProxyConnection.java:1059)
-	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.setAutoCommit(AttributeRestoringConnectionInvocationHandler.java:98)
-	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.invoke(AttributeRestoringConnectionInvocationHandler.java:66)
-	at com.sun.proxy.$Proxy174.setAutoCommit(Unknown Source)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.getConnection(JobStoreSupport.java:804)
-	at org.quartz.impl.jdbcjobstore.JobStoreTX.getNonManagedTXConnection(JobStoreTX.java:71)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.executeInNonManagedTXLock(JobStoreSupport.java:3861)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.acquireNextTriggers(JobStoreSupport.java:2802)
-	at org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:287)
-Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
-	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:67)
-	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63)
-	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45)
-	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:52)
-	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:41)
-	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:54)
-	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:44)
-	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:533)
-	... 15 common frames omitted
-2021-01-06 18:12:54.712 [schedulerFactory_QuartzSchedulerThread] WARN  com.mchange.v2.c3p0.impl.NewPooledConnection - [c3p0] A PooledConnection that has already signalled a Connection error is still in use!
-2021-01-06 18:12:54.712 [schedulerFactory_QuartzSchedulerThread] WARN  com.mchange.v2.c3p0.impl.NewPooledConnection - [c3p0] Another error has occurred [ java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed. ] which will not be reported to listeners!
-java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:73)
-	at com.mysql.cj.jdbc.ConnectionImpl.rollback(ConnectionImpl.java:1857)
-	at com.mchange.v2.c3p0.impl.NewProxyConnection.rollback(NewProxyConnection.java:1033)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.invoke(AttributeRestoringConnectionInvocationHandler.java:73)
-	at com.sun.proxy.$Proxy174.rollback(Unknown Source)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.rollbackConnection(JobStoreSupport.java:3727)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.executeInNonManagedTXLock(JobStoreSupport.java:3886)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.acquireNextTriggers(JobStoreSupport.java:2802)
-	at org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:287)
-Caused by: com.mysql.cj.exceptions.ConnectionIsClosedException: No operations allowed after connection closed.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
-	at com.mysql.cj.NativeSession.checkClosed(NativeSession.java:1171)
-	at com.mysql.cj.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:576)
-	at com.mysql.cj.jdbc.ConnectionImpl.rollback(ConnectionImpl.java:1811)
-	... 11 common frames omitted
-Caused by: com.mysql.cj.exceptions.CJCommunicationsException: The last packet successfully received from the server was 3,862,462 milliseconds ago. The last packet sent successfully to the server was 3,862,463 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
-	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
-	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:539)
-	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:703)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:642)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:941)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryString(NativeProtocol.java:887)
-	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:1073)
-	at com.mysql.cj.jdbc.ConnectionImpl.setAutoCommit(ConnectionImpl.java:2046)
-	at com.mchange.v2.c3p0.impl.NewProxyConnection.setAutoCommit(NewProxyConnection.java:1059)
-	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.setAutoCommit(AttributeRestoringConnectionInvocationHandler.java:98)
-	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.invoke(AttributeRestoringConnectionInvocationHandler.java:66)
-	at com.sun.proxy.$Proxy174.setAutoCommit(Unknown Source)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.getConnection(JobStoreSupport.java:804)
-	at org.quartz.impl.jdbcjobstore.JobStoreTX.getNonManagedTXConnection(JobStoreTX.java:71)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.executeInNonManagedTXLock(JobStoreSupport.java:3861)
-	... 2 common frames omitted
-Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
-	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:67)
-	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63)
-	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45)
-	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:52)
-	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:41)
-	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:54)
-	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:44)
-	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:533)
-	... 15 common frames omitted
-2021-01-06 18:12:54.726 [schedulerFactory_QuartzSchedulerThread] WARN  com.mchange.v2.c3p0.impl.NewPooledConnection - [c3p0] A PooledConnection that has already signalled a Connection error is still in use!
-2021-01-06 18:12:54.727 [schedulerFactory_QuartzSchedulerThread] WARN  com.mchange.v2.c3p0.impl.NewPooledConnection - [c3p0] Another error has occurred [ java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed. ] which will not be reported to listeners!
-java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:73)
-	at com.mysql.cj.jdbc.ConnectionImpl.setAutoCommit(ConnectionImpl.java:2056)
-	at com.mchange.v2.c3p0.impl.NewProxyConnection.setAutoCommit(NewProxyConnection.java:1059)
-	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.restoreOriginalAtributes(AttributeRestoringConnectionInvocationHandler.java:141)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.cleanupConnection(JobStoreSupport.java:3677)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.executeInNonManagedTXLock(JobStoreSupport.java:3896)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.acquireNextTriggers(JobStoreSupport.java:2802)
-	at org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:287)
-Caused by: com.mysql.cj.exceptions.ConnectionIsClosedException: No operations allowed after connection closed.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
-	at com.mysql.cj.NativeSession.checkClosed(NativeSession.java:1171)
-	at com.mysql.cj.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:576)
-	at com.mysql.cj.jdbc.ConnectionImpl.setAutoCommit(ConnectionImpl.java:2006)
-	... 6 common frames omitted
-Caused by: com.mysql.cj.exceptions.CJCommunicationsException: The last packet successfully received from the server was 3,862,462 milliseconds ago. The last packet sent successfully to the server was 3,862,463 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
-	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
-	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:539)
-	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:703)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:642)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:941)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryString(NativeProtocol.java:887)
-	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:1073)
-	at com.mysql.cj.jdbc.ConnectionImpl.setAutoCommit(ConnectionImpl.java:2046)
-	at com.mchange.v2.c3p0.impl.NewProxyConnection.setAutoCommit(NewProxyConnection.java:1059)
-	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.setAutoCommit(AttributeRestoringConnectionInvocationHandler.java:98)
-	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.invoke(AttributeRestoringConnectionInvocationHandler.java:66)
-	at com.sun.proxy.$Proxy174.setAutoCommit(Unknown Source)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.getConnection(JobStoreSupport.java:804)
-	at org.quartz.impl.jdbcjobstore.JobStoreTX.getNonManagedTXConnection(JobStoreTX.java:71)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.executeInNonManagedTXLock(JobStoreSupport.java:3861)
-	... 2 common frames omitted
-Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
-	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:67)
-	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63)
-	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45)
-	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:52)
-	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:41)
-	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:54)
-	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:44)
-	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:533)
-	... 15 common frames omitted
-2021-01-06 18:12:54.728 [schedulerFactory_QuartzSchedulerThread] WARN  o.q.i.j.AttributeRestoringConnectionInvocationHandler - Failed restore connection's original auto commit setting.
-java.sql.SQLNonTransientConnectionException: No operations allowed after connection closed.
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:73)
-	at com.mysql.cj.jdbc.ConnectionImpl.setAutoCommit(ConnectionImpl.java:2056)
-	at com.mchange.v2.c3p0.impl.NewProxyConnection.setAutoCommit(NewProxyConnection.java:1059)
-	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.restoreOriginalAtributes(AttributeRestoringConnectionInvocationHandler.java:141)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.cleanupConnection(JobStoreSupport.java:3677)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.executeInNonManagedTXLock(JobStoreSupport.java:3896)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.acquireNextTriggers(JobStoreSupport.java:2802)
-	at org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:287)
-Caused by: com.mysql.cj.exceptions.ConnectionIsClosedException: No operations allowed after connection closed.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
-	at com.mysql.cj.NativeSession.checkClosed(NativeSession.java:1171)
-	at com.mysql.cj.jdbc.ConnectionImpl.checkClosed(ConnectionImpl.java:576)
-	at com.mysql.cj.jdbc.ConnectionImpl.setAutoCommit(ConnectionImpl.java:2006)
-	... 6 common frames omitted
-Caused by: com.mysql.cj.exceptions.CJCommunicationsException: The last packet successfully received from the server was 3,862,462 milliseconds ago. The last packet sent successfully to the server was 3,862,463 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
-	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
-	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
-	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:539)
-	at com.mysql.cj.protocol.a.NativeProtocol.checkErrorMessage(NativeProtocol.java:703)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendCommand(NativeProtocol.java:642)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryPacket(NativeProtocol.java:941)
-	at com.mysql.cj.protocol.a.NativeProtocol.sendQueryString(NativeProtocol.java:887)
-	at com.mysql.cj.NativeSession.execSQL(NativeSession.java:1073)
-	at com.mysql.cj.jdbc.ConnectionImpl.setAutoCommit(ConnectionImpl.java:2046)
-	at com.mchange.v2.c3p0.impl.NewProxyConnection.setAutoCommit(NewProxyConnection.java:1059)
-	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.setAutoCommit(AttributeRestoringConnectionInvocationHandler.java:98)
-	at org.quartz.impl.jdbcjobstore.AttributeRestoringConnectionInvocationHandler.invoke(AttributeRestoringConnectionInvocationHandler.java:66)
-	at com.sun.proxy.$Proxy174.setAutoCommit(Unknown Source)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.getConnection(JobStoreSupport.java:804)
-	at org.quartz.impl.jdbcjobstore.JobStoreTX.getNonManagedTXConnection(JobStoreTX.java:71)
-	at org.quartz.impl.jdbcjobstore.JobStoreSupport.executeInNonManagedTXLock(JobStoreSupport.java:3861)
-	... 2 common frames omitted
-Caused by: java.io.EOFException: Can not read response from server. Expected to read 4 bytes, read 0 bytes before connection was unexpectedly lost.
-	at com.mysql.cj.protocol.FullReadInputStream.readFully(FullReadInputStream.java:67)
-	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:63)
-	at com.mysql.cj.protocol.a.SimplePacketReader.readHeader(SimplePacketReader.java:45)
-	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:52)
-	at com.mysql.cj.protocol.a.TimeTrackingPacketReader.readHeader(TimeTrackingPacketReader.java:41)
-	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:54)
-	at com.mysql.cj.protocol.a.MultiPacketReader.readHeader(MultiPacketReader.java:44)
-	at com.mysql.cj.protocol.a.NativeProtocol.readMessage(NativeProtocol.java:533)
-	... 15 common frames omitted
-2021-01-06 18:17:49.864 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
-2021-01-06 18:17:50.241 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:17:50.242 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:17:50.243 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:17:50.244 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:17:50.245 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:17:50.246 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:17:50.247 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:17:50.247 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:30:09.972 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'documentationPluginsBootstrapper' defined in URL [jar:file:/Users/youxuehu/.m2/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/DocumentationPluginsBootstrapper.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webMvcRequestHandlerProvider' defined in URL [jar:file:/Users/youxuehu/.m2/repository/io/springfox/springfox-spring-web/2.9.2/springfox-spring-web-2.9.2.jar!/springfox/documentation/spring/web/plugins/WebMvcRequestHandlerProvider.class]: Unsatisfied dependency expressed through constructor parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [com/example/springbootdemo/common/config/WebMvcConfig.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'testTableController' method 
-com.example.springbootdemo.controller.testtable.TestTableController#insert(HttpServletRequest, String)
-to { /db/insert}: There is already 'testTableController' bean method
-com.example.springbootdemo.controller.testtable.TestTableController#update(HttpServletRequest, Long, String) mapped.
-2021-01-06 18:30:10.117 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.lang.Object.wait(Native Method)
- org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
-2021-01-06 18:30:10.118 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-2] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.lang.Object.wait(Native Method)
- org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
-2021-01-06 18:30:10.118 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-3] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.lang.Object.wait(Native Method)
- org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
-2021-01-06 18:30:10.119 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-4] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.lang.Object.wait(Native Method)
- org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
-2021-01-06 18:30:10.119 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-5] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.lang.Object.wait(Native Method)
- org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
-2021-01-06 18:30:10.119 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [C3P0PooledConnectionPoolManager[identityToken->1hge2niae1nq1d4cxmah4j|1a74ba5d]-AdminTaskTimer] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.lang.Object.wait(Native Method)
- java.util.TimerThread.mainLoop(Timer.java:552)
- java.util.TimerThread.run(Timer.java:505)
-2021-01-06 18:30:10.120 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [C3P0PooledConnectionPoolManager[identityToken->1hge2niae1nq1d4cxmah4j|1a74ba5d]-HelperThread-#0] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.lang.Object.wait(Native Method)
- com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:683)
-2021-01-06 18:30:10.120 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [C3P0PooledConnectionPoolManager[identityToken->1hge2niae1nq1d4cxmah4j|1a74ba5d]-HelperThread-#1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.lang.Object.wait(Native Method)
- com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:683)
-2021-01-06 18:30:10.121 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [C3P0PooledConnectionPoolManager[identityToken->1hge2niae1nq1d4cxmah4j|1a74ba5d]-HelperThread-#2] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.lang.Object.wait(Native Method)
- com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:683)
-2021-01-06 18:31:24.972 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
-2021-01-06 18:31:25.362 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:31:25.363 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:31:25.363 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:31:25.364 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:31:25.365 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:31:25.365 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:31:25.366 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:31:25.367 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:45:30.453 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
-2021-01-06 18:45:30.847 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:45:30.848 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:45:30.849 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:45:30.850 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:45:30.850 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:45:30.851 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:45:30.852 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:45:30.853 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:46:49.844 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
-2021-01-06 18:46:50.201 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:46:50.202 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:46:50.203 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:46:50.204 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:46:50.205 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:46:50.205 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:46:50.206 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:46:50.207 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:49:01.038 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
-2021-01-06 18:49:01.421 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:49:01.422 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:49:01.422 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:49:01.423 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:49:01.424 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:49:01.425 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:49:01.425 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:49:01.426 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:50:10.117 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
-2021-01-06 18:50:10.459 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:50:10.460 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:50:10.461 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:50:10.462 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:50:10.463 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:50:10.463 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:50:10.464 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:50:10.465 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:51:22.571 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
-2021-01-06 18:51:22.907 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:51:22.908 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:51:22.908 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:51:22.909 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:51:22.910 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:51:22.910 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:51:22.911 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:51:22.912 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:53:22.601 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
-2021-01-06 18:53:34.426 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
-2021-01-06 18:53:34.837 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:53:34.838 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:53:34.839 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:53:34.840 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:53:34.841 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:53:34.842 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:53:34.843 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 18:53:34.844 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 19:07:21.145 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
-2021-01-06 19:07:21.620 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 19:07:21.621 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 19:07:21.622 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 19:07:21.623 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 19:07:21.623 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 19:07:21.624 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 19:07:21.625 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 19:07:21.625 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 19:11:42.208 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
-2021-01-06 19:11:42.635 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 19:11:42.636 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 19:11:42.637 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 19:11:42.638 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 19:11:42.639 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 19:11:42.639 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 19:11:42.640 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 19:11:42.641 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 19:18:03.451 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
-2021-01-06 19:18:03.828 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 19:18:03.829 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 19:18:03.830 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 19:18:03.831 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 19:18:03.832 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 19:18:03.833 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 19:18:03.834 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 19:18:03.834 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 19:26:09.840 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
-2021-01-06 19:26:10.207 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 19:26:10.208 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 19:26:10.208 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 19:26:10.209 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 19:26:10.210 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 19:26:10.210 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 19:26:10.211 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-01-06 19:26:10.212 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:28:39.482 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-09 18:28:39.959 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:28:39.960 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:28:39.960 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:28:39.961 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:28:39.962 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:28:39.963 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:28:39.963 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:28:39.964 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:30:57.340 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-09 18:30:57.714 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:30:57.715 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:30:57.716 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:30:57.717 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:30:57.717 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:30:57.718 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:30:57.719 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:30:57.720 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:33:50.495 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-09 18:33:50.891 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:33:50.892 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:33:50.892 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:33:50.893 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:33:50.894 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:33:50.895 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:33:50.896 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:33:50.897 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:43:27.619 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-09 18:43:28.031 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:43:28.032 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:43:28.033 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:43:28.034 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:43:28.035 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:43:28.036 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:43:28.037 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:43:28.038 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:47:03.087 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-09 18:47:03.450 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:47:03.451 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:47:03.451 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:47:03.452 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:47:03.453 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:47:03.453 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:47:03.454 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:47:03.455 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:53:35.699 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-09 18:53:36.062 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:53:36.063 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:53:36.063 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:53:36.064 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:53:36.065 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:53:36.066 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:53:36.066 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:53:36.067 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:56:27.373 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-09 18:56:27.748 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:56:27.749 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:56:27.749 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:56:27.750 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:56:27.751 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:56:27.752 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:56:27.754 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:56:27.755 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:02:35.931 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-09 19:02:36.374 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:02:36.375 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:02:36.376 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:02:36.377 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:02:36.378 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:02:36.379 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:02:36.380 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:02:36.381 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:13:03.245 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-09 19:13:03.629 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:13:03.630 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:13:03.630 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:13:03.631 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:13:03.632 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:13:03.632 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:13:03.633 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:13:03.634 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:15:46.825 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-09 19:15:47.228 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:15:47.229 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:15:47.230 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:15:47.231 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:15:47.232 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:15:47.233 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:15:47.234 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:15:47.235 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:17:36.678 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-09 19:17:37.050 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:17:37.051 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:17:37.051 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:17:37.052 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:17:37.053 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:17:37.054 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:17:37.054 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:17:37.055 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:20:42.081 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-09 19:20:42.476 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:20:42.477 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:20:42.478 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:20:42.479 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:20:42.479 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:20:42.480 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:20:42.481 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:20:42.481 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:23:36.167 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-09 19:23:36.561 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:23:36.561 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:23:36.562 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:23:36.563 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:23:36.563 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:23:36.564 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:23:36.565 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:23:36.566 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:24:42.887 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-09 19:24:43.256 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:24:43.260 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:24:43.260 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:24:43.261 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:24:43.262 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:24:43.263 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:24:43.264 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:24:43.265 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:26:14.108 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-09 19:26:14.470 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:26:14.471 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:26:14.472 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:26:14.473 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:26:14.473 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:26:14.474 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:26:14.475 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:26:14.475 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:29:09.546 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-09 19:29:09.911 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:29:09.912 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:29:09.913 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:29:09.913 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:29:09.914 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:29:09.914 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:29:09.915 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:29:09.916 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:31:19.044 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-09 19:31:19.651 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:31:19.652 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:31:19.653 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:31:19.654 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:31:19.654 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:31:19.655 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:31:19.656 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:31:19.657 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:32:16.495 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-09 19:32:17.091 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:32:17.092 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:32:17.093 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:32:17.094 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:32:17.095 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:32:17.096 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:32:17.096 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:32:17.097 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:33:24.841 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-09 19:33:25.496 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:33:25.497 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:33:25.498 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:33:25.499 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:33:25.499 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:33:25.500 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:33:25.501 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:33:25.501 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:39:22.470 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-09 19:39:23.184 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:39:23.185 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:39:23.186 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:39:23.187 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:39:23.187 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:39:23.188 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:39:23.189 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:39:23.190 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:40:47.358 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-09 19:40:47.989 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:40:47.990 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:40:47.991 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:40:47.991 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:40:47.992 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:40:47.993 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:40:47.994 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:40:47.994 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
