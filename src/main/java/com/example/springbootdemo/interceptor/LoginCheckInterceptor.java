@@ -15,7 +15,7 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import static com.example.springbootdemo.utils.CommonConst.SESSION_KET;
+import static com.example.springbootdemo.utils.constant.CommonConst.SESSION_KET;
 
 public class LoginCheckInterceptor extends HandlerInterceptorAdapter {
     private static final Logger LOGGER = LoggerFactory.getLogger(LoginCheckInterceptor.class);
@@ -56,11 +56,6 @@ public class LoginCheckInterceptor extends HandlerInterceptorAdapter {
     }
 
     private boolean checkLogin(HttpServletRequest request) {
-        String requestURI = request.getRequestURI();
-        if (requestURI.startsWith("/js") || requestURI.startsWith("/error") || requestURI.startsWith("/css")
-                || requestURI.startsWith("/favicon.ico")) {
-            return false;
-        }
         // 检查cookie是否存在
         Cookie cookie = CookieUtil.getCookieByName(request, SESSION_KET);
         if (cookie == null) {

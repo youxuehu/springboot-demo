@@ -11,7 +11,12 @@
                 <mvc:mapping path="/**"/>
                 <mvc:exclude-mapping path="/login"/>
                 <mvc:exclude-mapping path="/doLogin"/>
+                <mvc:exclude-mapping path="/doLogin2"/>
                 <mvc:exclude-mapping path="/error"/>
+                <mvc:exclude-mapping path="/js/**"/>
+                <mvc:exclude-mapping path="/css/**"/>
+                <mvc:exclude-mapping path="/favicon.ico"/>
+                <mvc:exclude-mapping path="/changeLang"/>
                 <bean class="com.example.springbootdemo.interceptor.LoginCheckInterceptor"/>
             </mvc:interceptor>
             <mvc:interceptor>

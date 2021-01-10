@@ -4,16 +4,21 @@
     <meta charset="UTF-8">
     <title>Login Page</title>
     <link rel="stylesheet" th:href="@{/css/iview.css}">
-    <script type="text/javascript" th:src="@{/js/vue.min.js}"></script>
-    <script type="text/javascript" th:src="@{/js/iview.min.js}"></script>
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+    <script type="text/javascript" th:src="@{/js/vue.js}" charset="utf-8"></script>
+ <!--   <script type="text/javascript" th:src="@{/js/vue.min.js}" charset="utf-8"></script>-->
+    <script type="text/javascript" th:src="@{/js/iview.min.js}" charset="utf-8"></script>
+    <script type="text/javascript" th:src="@{/js/axios.min.js}" charset="utf-8"></script>
+    <script type="text/javascript" th:src="@{/js/vue-resource.js}" charset="utf-8"></script>
+    <script type="text/javascript" th:src="@{/js/index.js}" charset="utf-8"></script>
 <!--    <link rel="stylesheet" type="text/css" href="http://unpkg.com/view-design/dist/styles/iview.css">
     <script type="text/javascript" src="http://vuejs.org/js/vue.min.js"></script>
     <script type="text/javascript" src="http://unpkg.com/view-design/dist/iview.min.js"></script>-->
     <link rel="stylesheet" th:href="@{/js/td-message/td-msessage.css}" />
-    <script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
-    <script type="text/javascript" th:src="@{/js/common.js}"></script>
-    <script type="text/javascript" th:src="@{/js/md5.min.js}"></script>
-    <script type="text/javascript" th:src="@{/js/td-message/td-message.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/jquery.min.js}" charset="utf-8"></script>
+    <script type="text/javascript" th:src="@{/js/common.js}" charset="utf-8"></script>
+    <script type="text/javascript" th:src="@{/js/md5.min.js}" charset="utf-8"></script>
+    <script type="text/javascript" th:src="@{/js/td-message/td-message.min.js}" charset="utf-8"></script>
     <script type="text/javascript">
         $(function () {
              $("#LoginButton").click(function () {
@@ -49,8 +54,8 @@
                              window.location.href="/jobManager";
                              return;
                          } else {
-                             error('登录失败,' + res['errorMessage'])
-                             //alert('登录失败,' + res['errorMessage'])
+                             error(res['errorMessage'])
+                             //alert(res['errorMessage'])
                              console.log("login error")
                              //$("#ErrorMessage").html(res['errorMessage'])
                              return;
@@ -90,6 +95,9 @@
 <div style="color:red" id="ErrorMessage">[[${errorMessage}]]</div>
 <div id="message">
     <template>
+        <p>切换语言</p>
+        <Button @click="zh(false)">中文</Button>
+        <Button @click="en(false)">英文</Button>
         <p>With desc</p>
         <Button @click="info(false)">Info</Button>
         <Button @click="success(false)">Success</Button>
@@ -101,35 +109,125 @@
         <Button @click="warning(true)">Warning</Button>
         <Button @click="error(true)">Error</Button>
     </template>
-</div>
 
+    <el-form ref="formInline" :model="formInline" :rules="ruleInline">
+        <el-form-item label="name" label-width="120px" style="width:60%">
+            <el-input v-model="formInline.userName" placeholder="Username"></el-input>
+        </el-form-item>
+        <el-form-item label="pass" label-width="120px" style="width:60%">
+            <el-input type="password" v-model="formInline.password" placeholder="Password"></el-input>
+        </el-form-item>
+    </el-form>
+    <div slot="footer" class="dialog-footer">
+        <el-button type="primary" @click="handleSubmit('formInline')">Signin</el-button>
+    </div>
+</div>
 <script>
+
         var vue = new Vue({
             el: "#message",
+            data () {
+                return {
+                    formInline: {
+                        userName: '',
+                        password: ''
+                    },
+                    ruleInline: {
+                        userName: [
+                            { required: true, message: 'Please fill in the user name', trigger: 'blur' }
+                        ],
+                        password: [
+                            { required: true, message: 'Please fill in the password.', trigger: 'blur' },
+                            { type: 'string', min: 6, message: 'The password length cannot be less than 6 bits', trigger: 'blur' }
+                        ]
+                    }
+                }
+            },
             methods: {
+                zh (nodesc) {
+                    axios({
+                       method:'get',
+                        url:'changeLang?lang=zh'
+                    }).then(function(res){
+                        console.log(res.data.name);
+                    });
+                    this.$Notice.success({
+                        title: '消息提示',
+                        desc: nodesc ? '' : '这是中文. '
+                    });
+                },
+                en (nodesc) {
+                    axios({
+                       method:'get',
+                        url:'changeLang?lang=en'
+                    }).then(function(res){
+                        console.log(res.data.name);
+                    });
+                    this.$Notice.success({
+                        title: 'show message',
+                        desc: nodesc ? '' : 'this is english. '
+                    });
+                },
                 info (nodesc) {
                     this.$Notice.info({
-                        title: 'Notification title',
-                        desc: nodesc ? '' : 'Here is the notification description. Here is the notification description. '
+                        title: 'info title',
+                        desc: nodesc ? '' : 'Here is info. '
                     });
                 },
                 success (nodesc) {
                     this.$Notice.success({
-                        title: 'Notification title',
-                        desc: nodesc ? '' : 'Here is the notification description. Here is the notification description. '
+                        title: 'success title',
+                        desc: nodesc ? '' : 'Here is success. '
                     });
                 },
                 warning (nodesc) {
                     this.$Notice.warning({
-                        title: 'Notification title',
-                        desc: nodesc ? '' : 'Here is the notification description. Here is the notification description. '
+                        title: 'warning title',
+                        desc: nodesc ? '' : 'Here is warning. '
                     });
                 },
                 error (nodesc) {
                     this.$Notice.error({
-                        title: 'Notification title',
-                        desc: nodesc ? '' : 'Here is the notification description. Here is the notification description. '
+                        title: 'error title',
+                        desc: nodesc ? '' : 'Here is error. '
                     });
+                },
+                handleSubmit(name) {
+                    this.$refs[name].validate((valid) => {
+                        if (valid) {
+                            const userName = this.$refs[name].model.userName
+                            console.log(userName)
+                            const password = this.$refs[name].model.password
+                            var salt = g_passsword_salt;
+                            var str = ""+salt.charAt(0)+salt.charAt(1) + password +salt.charAt(6) + salt.charAt(4);
+                            var passwordMd5 = md5(str);
+                            axios.post('/doLogin2', {
+                                userName: userName,
+                                password: passwordMd5
+                              })
+                              .then(function (response) {
+                                    console.log(response)
+                                    console.log('hava'+response.data.success)
+                                    if (response.data.success == true) {
+
+                                        window.location.href="/jobManager";
+                                        return;
+                                    }
+                              })
+                              .catch(function (e) {
+                                    console.log(e)
+
+                              });
+
+                        } else {
+                            this.$Message.error('Fail!');
+                        }
+                        if (true) {
+                             this.$Message.success('Success!');
+                         } else {
+                            this.$Message.error('Fail!');
+                         }
+                    })
                 }
             }
         })

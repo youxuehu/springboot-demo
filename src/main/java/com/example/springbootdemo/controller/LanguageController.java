@@ -1,25 +1,34 @@
 package com.example.springbootdemo.controller;
 
-import com.example.springbootdemo.utils.SpringBeanUtil;
+import com.example.springbootdemo.utils.I18nMessageUtil;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import java.util.Locale;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import static com.example.springbootdemo.utils.constant.I18nConstant.SESSION_LANG_KEY;
 
 @Controller
-@RequestMapping("/lang")
 public class LanguageController {
 
     @Autowired
-    SpringBeanUtil springBeanUtil;
+    I18nMessageUtil i18nMessageUtil;
 
-    @RequestMapping
+    @RequestMapping("/lang")
     @ResponseBody
     public String lang(String lang) {
-        Locale locale = LocaleContextHolder.getLocale();
-        String message = springBeanUtil.getContext().getMessage("welcome", null, null, locale);
+        String message = i18nMessageUtil.getMessage("welcome");
         return message;
     }
+
+    @RequestMapping("/changeLang")
+    @ResponseBody
+    public String changeLang(HttpSession session, String lang) {
+        session.setAttribute(SESSION_LANG_KEY, lang);
+        return session.getAttribute(SESSION_LANG_KEY) == null ? "error" : (String) session.getAttribute(SESSION_LANG_KEY);
+    }
+
 }

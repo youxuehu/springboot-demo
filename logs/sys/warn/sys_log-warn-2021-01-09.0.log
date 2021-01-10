@@ -1,0 +1,189 @@
+2021-01-09 18:28:39.482 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-09 18:28:39.959 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:28:39.960 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:28:39.960 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:28:39.961 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:28:39.962 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:28:39.963 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:28:39.963 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:28:39.964 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:30:57.340 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-09 18:30:57.714 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:30:57.715 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:30:57.716 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:30:57.717 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:30:57.717 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:30:57.718 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:30:57.719 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:30:57.720 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:33:50.495 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-09 18:33:50.891 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:33:50.892 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:33:50.892 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:33:50.893 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:33:50.894 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:33:50.895 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:33:50.896 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:33:50.897 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:43:27.619 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-09 18:43:28.031 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:43:28.032 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:43:28.033 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:43:28.034 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:43:28.035 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:43:28.036 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:43:28.037 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:43:28.038 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:47:03.087 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-09 18:47:03.450 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:47:03.451 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:47:03.451 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:47:03.452 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:47:03.453 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:47:03.453 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:47:03.454 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:47:03.455 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:53:35.699 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-09 18:53:36.062 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:53:36.063 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:53:36.063 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:53:36.064 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:53:36.065 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:53:36.066 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:53:36.066 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:53:36.067 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:56:27.373 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-09 18:56:27.748 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:56:27.749 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:56:27.749 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:56:27.750 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:56:27.751 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:56:27.752 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:56:27.754 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 18:56:27.755 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:02:35.931 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-09 19:02:36.374 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:02:36.375 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:02:36.376 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:02:36.377 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:02:36.378 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:02:36.379 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:02:36.380 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:02:36.381 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:13:03.245 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-09 19:13:03.629 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:13:03.630 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:13:03.630 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:13:03.631 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:13:03.632 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:13:03.632 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:13:03.633 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:13:03.634 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:15:46.825 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-09 19:15:47.228 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:15:47.229 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:15:47.230 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:15:47.231 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:15:47.232 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:15:47.233 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:15:47.234 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:15:47.235 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:17:36.678 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-09 19:17:37.050 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:17:37.051 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:17:37.051 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:17:37.052 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:17:37.053 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:17:37.054 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:17:37.054 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:17:37.055 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:20:42.081 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-09 19:20:42.476 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:20:42.477 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:20:42.478 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:20:42.479 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:20:42.479 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:20:42.480 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:20:42.481 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:20:42.481 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:23:36.167 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-09 19:23:36.561 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:23:36.561 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:23:36.562 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:23:36.563 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:23:36.563 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:23:36.564 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:23:36.565 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:23:36.566 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:24:42.887 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-09 19:24:43.256 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:24:43.260 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:24:43.260 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:24:43.261 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:24:43.262 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:24:43.263 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:24:43.264 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:24:43.265 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:26:14.108 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-09 19:26:14.470 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:26:14.471 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:26:14.472 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:26:14.473 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:26:14.473 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:26:14.474 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:26:14.475 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:26:14.475 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:29:09.546 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-09 19:29:09.911 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:29:09.912 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:29:09.913 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:29:09.913 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:29:09.914 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:29:09.914 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:29:09.915 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:29:09.916 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:31:19.044 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-09 19:31:19.651 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:31:19.652 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:31:19.653 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:31:19.654 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:31:19.654 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:31:19.655 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:31:19.656 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:31:19.657 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:32:16.495 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-09 19:32:17.091 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:32:17.092 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:32:17.093 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:32:17.094 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:32:17.095 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:32:17.096 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:32:17.096 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:32:17.097 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:33:24.841 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-09 19:33:25.496 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:33:25.497 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:33:25.498 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:33:25.499 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:33:25.499 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:33:25.500 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:33:25.501 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:33:25.501 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:39:22.470 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-09 19:39:23.184 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:39:23.185 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:39:23.186 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:39:23.187 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:39:23.187 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:39:23.188 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:39:23.189 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:39:23.190 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:40:47.358 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-09 19:40:47.989 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:40:47.990 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:40:47.991 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:40:47.991 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:40:47.992 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:40:47.993 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:40:47.994 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-09 19:40:47.994 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
