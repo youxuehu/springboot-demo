@@ -1,12 +1,17 @@
 package com.example.springbootdemo.common.thread.threadpool;
 
+import com.example.springbootdemo.common.service.DbSaveFrontService;
+import com.example.springbootdemo.utils.enums.SwitchEnum;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.TimerTask;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
+
+import static com.example.springbootdemo.utils.constant.CommonConst.SCHEDULE_SWITCH;
 
 /**
  * 线程池创建
@@ -26,6 +31,13 @@ public class ThreadPoolServiceImpl implements ThreadPoolService, InitializingBea
     private ThreadPoolExecutor threadPoolExecutor;
 
     private ScheduledThreadPoolExecutor scheduledThreadPoolExecutor;
+
+    @Autowired
+    DbSaveFrontService dbSaveFrontService;
+
+    private boolean isOpen() {
+        return SwitchEnum.OPEN == SwitchEnum.valueOf(dbSaveFrontService.queryValueByKeyString(SCHEDULE_SWITCH));
+    }
 
     @Override
     public void submit(Runnable runnable) {
@@ -57,9 +69,11 @@ public class ThreadPoolServiceImpl implements ThreadPoolService, InitializingBea
         scheduledThreadPoolExecutor.scheduleWithFixedDelay(new TimerTask() {
             @Override
             public void run() {
-                LOG.info(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = " + threadPoolExecutor.getActiveCount());
-                LOG.info(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = " + threadPoolExecutor.getTaskCount());
-                LOG.info(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = " + threadPoolExecutor.getCompletedTaskCount());
+                if (isOpen()) {
+                    LOG.info(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread active count = " + threadPoolExecutor.getActiveCount());
+                    LOG.info(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread task count = " + threadPoolExecutor.getTaskCount());
+                    LOG.info(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>thread completed task count = " + threadPoolExecutor.getCompletedTaskCount());
+                }
             }
         }, 5, 50, TimeUnit.SECONDS);
     }
