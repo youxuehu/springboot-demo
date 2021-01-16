@@ -5,3 +5,8 @@ create table db_save_front(
     gmt_create timestamp null default current_timestamp,
     gmt_update timestamp null
 );
+
+create table permission(
+    id bigint primary key not null auto_increment,
+    userNumber varchar(255)
+);

@@ -19,20 +19,20 @@
             <property name="forceBigDecimals" value="false" />
         </javaTypeResolver>
         <!-- targetProject:自动生成代码的位置 -->
-        <javaModelGenerator targetPackage="com.example.springbootdemo.common.db.dao.dbsavefront.model"
+        <javaModelGenerator targetPackage="com.example.springbootdemo.common.db.dao.permission.model"
                             targetProject="src/main/java">
             <property name="enableSubPackages" value="true" />
             <property name="trimStrings" value="true" />
         </javaModelGenerator>
-        <sqlMapGenerator targetPackage="com.example.springbootdemo.common.db.dao.dbsavefront.mapper.xml"
+        <sqlMapGenerator targetPackage="com.example.springbootdemo.common.db.dao.permission.mapper.xml"
                          targetProject="src/main/java">
             <property name="enableSubPackages" value="true" />
         </sqlMapGenerator>
         <javaClientGenerator type="MAPPER"
-                             targetPackage="com.example.springbootdemo.common.db.dao.dbsavefront.mapper" targetProject="src/main/java">
+                             targetPackage="com.example.springbootdemo.common.db.dao.permission.mapper" targetProject="src/main/java">
             <property name="enableSubPackages" value="true" />
         </javaClientGenerator>
         <!-- tableName:用于自动生成代码的数据库表；domainObjectName:对应于数据库表的javaBean类名-->
-        <table tableName="db_save_front" domainObjectName="DbSaveFront" />
+        <table tableName="permission" domainObjectName="Permission" />
     </context>
 </generatorConfiguration>

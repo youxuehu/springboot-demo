@@ -17,6 +17,5 @@ public class NewJob implements BaseJob {
     public void execute(JobExecutionContext context)
             throws JobExecutionException {
         _log.error("New Job执行时间: " + new Date());
-
     }
 }

@@ -18,7 +18,7 @@ public class CookieUtil {
      * @return Cookie
      */
     public static Cookie getCookieByName(HttpServletRequest request, String name) {
-        Map<String, Cookie> cookieMap = ReadCookieMap(request);
+        Map<String, Cookie> cookieMap = readCookieMap(request);
         if (cookieMap.containsKey(name)) {
             Cookie cookie = (Cookie) cookieMap.get(name);
             return cookie;
@@ -27,13 +27,21 @@ public class CookieUtil {
         }
     }
 
+    public static String getValueCookieByName(HttpServletRequest request, String name) {
+        Cookie cookieByName = getCookieByName(request, name);
+        if (cookieByName == null) {
+            return null;
+        }
+        return cookieByName.getValue();
+    }
+
     /**
      * 将cookie封装到Map里面
      *
      * @param request
      * @return Map<String, Cookie>
      */
-    public static Map<String, Cookie> ReadCookieMap(HttpServletRequest request) {
+    public static Map<String, Cookie> readCookieMap(HttpServletRequest request) {
         Map<String, Cookie> cookieMap = new HashMap<String, Cookie>();
         Cookie[] cookies = request.getCookies();
         if (null != cookies) {
@@ -79,7 +87,7 @@ public class CookieUtil {
      * @param deleteKey 需要删除cookie的名称
      */
     public static void deleteCookieByName(HttpServletRequest request, HttpServletResponse response, String deleteKey) {
-        Map<String, Cookie> cookieMap = ReadCookieMap(request);
+        Map<String, Cookie> cookieMap = readCookieMap(request);
         for (String key : cookieMap.keySet()) {
             if (key == deleteKey && key.equals(deleteKey)) {
                 Cookie cookie = cookieMap.get(key);

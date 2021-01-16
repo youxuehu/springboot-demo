@@ -7,6 +7,7 @@ import com.example.springbootdemo.common.db.dao.quartz.jobandtrigger.model.JobAn
 import com.example.springbootdemo.common.db.service.quartz.IJobAndTriggerService;
 import com.example.springbootdemo.common.quartz.componment.BaseJob;
 import com.github.pagehelper.PageInfo;
+import org.apache.commons.lang3.StringUtils;
 import org.quartz.CronScheduleBuilder;
 import org.quartz.CronTrigger;
 import org.quartz.JobBuilder;
@@ -132,8 +133,8 @@ public class JobController {
 
 
     @GetMapping(value = "/queryjob")
-    public Map<String, Object> queryjob(@RequestParam(value = "pageNum") Integer pageNum, @RequestParam(value = "pageSize") Integer pageSize) {
-        PageInfo<JobAndTrigger> jobAndTrigger = iJobAndTriggerService.getJobAndTriggerDetails(pageNum, pageSize);
+    public Map<String, Object> queryjob(String keyword, Integer pageNum, Integer pageSize) {
+        PageInfo<JobAndTrigger> jobAndTrigger = iJobAndTriggerService.getJobAndTriggerDetails(keyword, pageNum, pageSize);
         Map<String, Object> map = new HashMap<String, Object>();
         map.put("JobAndTrigger", jobAndTrigger);
         map.put("number", jobAndTrigger.getTotal());

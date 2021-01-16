@@ -21,7 +21,9 @@
             </mvc:interceptor>
             <mvc:interceptor>
                 <mvc:mapping path="/**"/>
-                <bean class="com.example.springbootdemo.interceptor.AdminInterceptor"/>
+                <bean class="com.example.springbootdemo.interceptor.AdminInterceptor">
+
+                </bean>
             </mvc:interceptor>
             <mvc:interceptor>
                 <mvc:mapping path="/**"/>

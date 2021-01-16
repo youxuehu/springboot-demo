@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:el="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>QuartzDemo</title>
+    <th:block th:fragment="common_header">
+        <link rel="stylesheet" th:href="@{/css/index.css}">
+    </th:block>
+    <th:block th:fragment="common_js">
+        <script type="text/javascript" th:src="@{/js/vue.js}" charset="utf-8"></script>
+        <script type="text/javascript" th:src="@{/js/vue-resource.js}" charset="utf-8"></script>
+        <script type="text/javascript" th:src="@{/js/index.js}" charset="utf-8"></script>
+    </th:block>
+    <style>
+        #top {
+            background: #20A0FF;
+            padding: 5px;
+            overflow: hidden
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font: 15px/1.3 'Open Sans', sans-serif;
+            color: #5e5b64;
+            text-align: center;
+        }
+
+        a, a:visited {
+            outline: none;
+            color: #389dc1;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        section, footer, header, aside, nav {
+            display: block;
+        }
+
+        /*-------------------------
+            菜鸟
+        --------------------------*/
+
+        nav {
+            display: inline-block;
+            margin: 0px 0px 0px 0px;
+            background-color: #5597b4;
+            box-shadow: 0 1px 1px #ccc;
+            border-radius: 2px;
+            width: 100%;
+            height: 20%;
+        }
+
+        nav a {
+            display: inline-block;
+            padding: 50px 80px;
+            color: #fff !important;
+            font-weight: bold;
+            font-size: 16px;
+            text-decoration: none !important;
+            line-height: 1;
+            text-transform: uppercase;
+            background-color: transparent;
+            -webkit-transition: background-color 0.25s;
+            -moz-transition: background-color 0.25s;
+            transition: background-color 0.25s;
+        }
+
+        nav a:first-child {
+            border-radius: 2px 0 0 2px;
+        }
+
+        nav a:last-child {
+            border-radius: 0 2px 2px 0;
+        }
+
+        nav.home .home,
+        nav.best .best,
+        nav.animal .animal,
+        nav.hello .hello {
+            background-color: #e35885;
+        }
+    </style>
+    <style type="text/css">
+        #test #app ul li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #test #app {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+        }
+        #test #app .tab-tilte{
+            width: 100%;
+        }
+        #test #app .tab-tilte li{
+            float: left;
+            width: 25%;
+            text-align: center;
+            background-color:#f4f4f4;
+            cursor: pointer;
+        }
+        /* 点击对应的标题添加对应的背景颜色 */
+        #test #app .tab-tilte .active{
+            background-color: indianred;
+            color: indianred;
+        }
+        #test #app .tab-content #JobManagerDiv,#OtherDiv2,#OtherDiv3,#OtherDiv4{
+            width: 100%;
+            height: 100%;
+        }
+
+        #test #app .tab-content #OtherDiv2 .Hadoop-iframe{
+            width: 100%;
+            height: 600px;
+        }
+    </style>
+</head>
+<body>
+<div id="test">
+    <div id="app">
+        <div class="tab-content">
+            <div id="JobManagerDiv" v-show="cur==0">
+                <div>
+                    <div id="top">
+                        <el-form :model="searchForm">
+                            <el-form-item label="关键字查询" label-width="120px" style="width:60%; text-align: center">
+                                <el-input v-model="searchForm.keyword" auto-complete="off"></el-input>
+                            </el-form-item>
+                        </el-form>
+                        <el-button type="text" @click="search" style="color:white">查询</el-button>
+                        <el-button type="text" @click="handleadd" style="color:white">添加</el-button>
+                        </span>
+                    </div>
+                    <br/>
+                    <div>
+                        <el-table
+                                ref="testTable"
+                                :data="tableData"
+                                style="width:100%;height: 500px;overflow: auto;"
+                                border
+                        >
+                            <el-table-column
+                                    prop="keyName"
+                                    label="keyName"
+                                    sortable
+                                    show-overflow-tooltip>
+                            </el-table-column>
+                            <el-table-column label="操作" width="300">
+                                <template scope="scope">
+                                    <el-button
+                                            size="small"
+                                            type="warning"
+                                            @click="handlePause(scope.$index, scope.row)">暂停
+                                    </el-button>
+                                    <el-button
+                                            size="small"
+                                            type="info"
+                                            @click="handleResume(scope.$index, scope.row)">恢复
+                                    </el-button>
+                                    <el-button
+                                            size="small"
+                                            type="danger"
+                                            @click="handleDelete(scope.$index, scope.row)">删除
+                                    </el-button>
+                                    <el-button
+                                            size="small"
+                                            type="success"
+                                            @click="handleUpdate(scope.$index, scope.row)">修改
+                                    </el-button>
+                                </template>
+                            </el-table-column>
+                        </el-table>
+                    </div>
+                    <el-dialog title="添加任务" :visible.syn="dialogFormVisible">
+                        <el-form :model="form">
+                            <el-form-item label="任务名称" label-width="120px" style="width:60%">
+                                <el-input v-model="form.jobName" auto-complete="off"></el-input>
+                            </el-form-item>
+                            <el-form-item label="任务分组" label-width="120px" style="width:60%">
+                                <el-input v-model="form.jobGroup" auto-complete="off"></el-input>
+                            </el-form-item>
+                            <el-form-item label="表达式" label-width="120px" style="width:60%">
+                                <el-input v-model="form.cronExpression" auto-complete="off"></el-input>
+                            </el-form-item>
+                        </el-form>
+                        <div slot="footer" class="dialog-footer">
+                            <el-button @click="dialogFormVisible = false">取 消</el-button>
+                            <el-button type="primary" @click="add">确 定</el-button>
+                        </div>
+                    </el-dialog>
+                    <el-dialog title="登录超时" :visible.syn="dialogLoginTimeout" :showClose="false" width="40%">
+                        <div>登录超时，请重新登录</div>
+                        <div slot="footer" class="dialog-footer">
+                            <el-button type="primary" @click="redirectLogin">确 定</el-button>
+                        </div>
+                    </el-dialog>
+                    <el-dialog title="修改任务" :visible.syn="updateFormVisible">
+                        <el-form :model="updateform">
+                            <el-form-item label="表达式" label-width="120px" style="width:35%">
+                                <el-input v-model="updateform.cronExpression" auto-complete="off"></el-input>
+                            </el-form-item>
+                        </el-form>
+                        <div slot="footer" class="dialog-footer">
+                            <el-button @click="updateFormVisible = false">取 消</el-button>
+                            <el-button type="primary" @click="update">确 定</el-button>
+                        </div>
+                    </el-dialog>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var vue = new Vue({
+        el: "#test",
+        data: {
+            cur: 0,
+            active: 'home',
+            //表格当前页数据
+            tableData: [],
+            //请求的URL
+            url: 'job/queryjob',
+            //默认每页数据量
+            pagesize: 10,
+            //当前页码
+            currentPage: 1,
+            //查询的页码
+            start: 1,
+            //默认数据总数
+            totalCount: 1000,
+            //添加对话框默认可见性
+            dialogFormVisible: false,
+            dialogLoginTimeout: false,
+            //修改对话框默认可见性
+            updateFormVisible: false,
+            searchForm: {
+                keyword: ''
+            },
+            //提交的表单
+            form: {
+                jobName: '',
+                jobGroup: '',
+                cronExpression: '',
+            },
+            updateform: {
+                jobName: '',
+                jobGroup: '',
+                cronExpression: '',
+            },
+        },
+        methods: {
+            loadData: function (pageNum, pageSize) {
+
+                this.$http.get('job/queryjob?keyword=' + this.searchForm.keyword + '&' + 'pageNum=' + pageNum + '&pageSize=' + pageSize).then(function (res) {
+                    if (res.body.errorMessage) {
+                        this.dialogLoginTimeout = true
+                        return
+                    }
+                    this.tableData = res.body.JobAndTrigger.list;
+                    this.totalCount = res.body.number;
+                }, function () {
+                    console.log('failed');
+                });
+            },
+            //单行删除
+            handleDelete: function (index, row) {
+                this.$http.post('job/deletejob', {
+                    "jobClassName": row.job_NAME,
+                    "jobGroupName": row.job_GROUP
+                }, {emulateJSON: true}).then(function (res) {
+                    this.loadData(this.currentPage, this.pagesize);
+                }, function () {
+                    console.log('failed');
+                });
+            },
+            //暂停任务
+            handlePause: function (index, row) {
+                this.$http.post('job/pausejob', {
+                    "jobClassName": row.job_NAME,
+                    "jobGroupName": row.job_GROUP
+                }, {emulateJSON: true}).then(function (res) {
+                    this.loadData(this.currentPage, this.pagesize);
+                }, function () {
+                    console.log('failed');
+                });
+            },
+            //恢复任务
+            handleResume: function (index, row) {
+                this.$http.post('job/resumejob', {
+                    "jobClassName": row.job_NAME,
+                    "jobGroupName": row.job_GROUP
+                }, {emulateJSON: true}).then(function (res) {
+                    this.loadData(this.currentPage, this.pagesize);
+                }, function () {
+                    console.log('failed');
+                });
+            },
+            //搜索
+            search: function () {
+                this.loadData(this.currentPage, this.pagesize);
+            },
+            //弹出对话框
+            handleadd: function () {
+                this.dialogFormVisible = true;
+            },
+            //添加
+            add: function () {
+                this.$http.post('job/addjob', {
+                    "jobClassName": this.form.jobName,
+                    "jobGroupName": this.form.jobGroup,
+                    "cronExpression": this.form.cronExpression
+                }, {emulateJSON: true}).then(function (res) {
+                    console.log(res);
+                    this.loadData(this.currentPage, this.pagesize);
+                    this.dialogFormVisible = false;
+                }, function () {
+                    console.log('failed');
+                });
+            },
+            //更新
+            handleUpdate: function (index, row) {
+                console.log(row)
+                this.updateFormVisible = true;
+                this.updateform.jobName = row.job_CLASS_NAME;
+                this.updateform.jobGroup = row.job_GROUP;
+            },
+            //更新任务
+            update: function () {
+                this.$http.post
+                ('job/reschedulejob',
+                    {
+                        "jobClassName": this.updateform.jobName,
+                        "jobGroupName": this.updateform.jobGroup,
+                        "cronExpression": this.updateform.cronExpression
+                    }, {emulateJSON: true}
+                ).then(function (res) {
+                    this.loadData(this.currentPage, this.pagesize);
+                    this.updateFormVisible = false;
+                }, function () {
+                    console.log('failed');
+                });
+            },
+            //每页显示数据量变更
+            handleSizeChange: function (val) {
+                this.pagesize = val;
+                this.loadData(this.currentPage, this.pagesize);
+            },
+            //页码变更
+            handleCurrentChange: function (val) {
+                this.currentPage = val;
+                this.loadData(this.currentPage, this.pagesize);
+            },
+            taskmanager: function () {
+                location.href = '/yarn/manager'
+            },
+            redirectLogin: function () {
+                window.location.href = '/login'
+            }
+        },
+    });
+    vue.loadData(vue.currentPage, vue.pagesize);
+</script>
+</body>
+</html>

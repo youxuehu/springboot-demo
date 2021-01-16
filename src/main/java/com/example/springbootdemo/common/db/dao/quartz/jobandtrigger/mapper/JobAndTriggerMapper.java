@@ -4,5 +4,5 @@ import com.example.springbootdemo.common.db.dao.quartz.jobandtrigger.model.JobAn
 import java.util.List;
 
 public interface JobAndTriggerMapper {
-	List<JobAndTrigger> getJobAndTriggerDetails();
+	List<JobAndTrigger> getJobAndTriggerDetails(String keyword);
 }

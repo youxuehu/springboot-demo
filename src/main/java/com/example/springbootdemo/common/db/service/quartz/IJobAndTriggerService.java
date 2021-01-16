@@ -4,5 +4,5 @@ import com.example.springbootdemo.common.db.dao.quartz.jobandtrigger.model.JobAn
 import com.github.pagehelper.PageInfo;
 
 public interface IJobAndTriggerService {
-	PageInfo<JobAndTrigger> getJobAndTriggerDetails(int pageNum, int pageSize);
+	PageInfo<JobAndTrigger> getJobAndTriggerDetails(String keyword, Integer pageNum, Integer pageSize);
 }

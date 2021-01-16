@@ -152,7 +152,11 @@
 
                 <div>
                     <div id="top">
-                        <el-input type="hidden" id="keyword">xxx</el-input>
+                        <el-form :model="searchForm">
+                            <el-form-item label="关键字查询" label-width="120px" style="width:60%; text-align: center">
+                                <el-input v-model="searchForm.keyword" auto-complete="off"></el-input>
+                            </el-form-item>
+                        </el-form>
                         <el-button type="text" @click="search" style="color:white">查询</el-button>
                         <el-button type="text" @click="handleadd" style="color:white">添加</el-button>
                         <el-button type="text" @click="taskmanager" style="color:white">任务管理</el-button>
@@ -348,7 +352,9 @@
 
             //修改对话框默认可见性
             updateFormVisible: false,
-
+            searchForm: {
+                keyword: ''
+            },
             //提交的表单
             form: {
                 jobName: '',
@@ -378,7 +384,8 @@
             },
 
             loadData: function (pageNum, pageSize) {
-                this.$http.get('job/queryjob?' + 'pageNum=' + pageNum + '&pageSize=' + pageSize).then(function (res) {
+
+                this.$http.get('job/queryjob?keyword=' + this.searchForm.keyword + '&' + 'pageNum=' + pageNum + '&pageSize=' + pageSize).then(function (res) {
                     if (res.body.errorMessage) {
                         this.dialogLoginTimeout = true
                         return
