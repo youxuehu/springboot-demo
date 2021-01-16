@@ -1,6 +1,6 @@
 package com.example.springbootdemo;
 
-import com.example.springbootdemo.service.TestSpringService;
+import com.example.springbootdemo.common.service.TestSpringService;
 import lombok.extern.slf4j.Slf4j;
 import org.mybatis.spring.annotation.MapperScan;
 import org.slf4j.Logger;

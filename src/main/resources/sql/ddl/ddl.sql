@@ -1,0 +1,7 @@
+create table db_save_front(
+    id bigint primary key not null auto_increment,
+    key_string varchar(255) not null,
+    value_string varchar(511) not null,
+    gmt_create timestamp null default current_timestamp,
+    gmt_update timestamp null
+);

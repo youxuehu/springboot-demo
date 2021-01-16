@@ -2,7 +2,7 @@ package com.example.springbootdemo.controller.testtable;
 
 import com.example.springbootdemo.common.db.dao.testtable.model.TestTable;
 import com.example.springbootdemo.controller.params.MyResult;
-import com.example.springbootdemo.service.TestTableService;
+import com.example.springbootdemo.common.service.TestTableService;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
