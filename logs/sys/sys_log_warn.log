@@ -3019,3 +3019,53 @@ Caused by: java.io.EOFException: Can not read response from server. Expected to 
 2021-01-17 22:39:22.987 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
 2021-01-17 22:39:22.988 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
 2021-01-17 22:39:22.988 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-17 22:42:18.743 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-17 22:42:19.410 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-01-17 22:42:19.411 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-01-17 22:42:19.412 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-01-17 22:42:19.413 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-01-17 22:42:19.414 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-01-17 22:42:19.414 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-01-17 22:42:19.415 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-01-17 22:42:19.416 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-01-17 22:42:19.419 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-01-17 22:42:19.420 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-01-17 22:42:19.421 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-01-17 22:42:19.422 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-01-17 22:42:19.422 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-01-17 22:42:19.423 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-01-17 22:42:19.425 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-01-17 22:42:19.428 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-01-17 22:42:19.445 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-17 22:42:19.446 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-17 22:42:19.447 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-17 22:42:19.447 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-17 22:42:19.448 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-17 22:42:19.449 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-17 22:42:19.449 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-17 22:42:19.450 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-17 22:43:38.047 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-01-17 22:43:38.701 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-01-17 22:43:38.702 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-01-17 22:43:38.703 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-01-17 22:43:38.704 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-01-17 22:43:38.705 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-01-17 22:43:38.706 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-01-17 22:43:38.706 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-01-17 22:43:38.707 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-01-17 22:43:38.710 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-01-17 22:43:38.711 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-01-17 22:43:38.712 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-01-17 22:43:38.713 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-01-17 22:43:38.714 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-01-17 22:43:38.715 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-01-17 22:43:38.715 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-01-17 22:43:38.716 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-01-17 22:43:38.733 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-17 22:43:38.734 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-17 22:43:38.734 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-17 22:43:38.735 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-17 22:43:38.735 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-17 22:43:38.736 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-17 22:43:38.737 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-01-17 22:43:38.737 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
