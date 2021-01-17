@@ -20,9 +20,8 @@
                 <bean class="com.example.springbootdemo.interceptor.LoginCheckInterceptor"/>
             </mvc:interceptor>
             <mvc:interceptor>
-                <mvc:mapping path="/**"/>
+                <mvc:mapping path="/admin"/>
                 <bean class="com.example.springbootdemo.interceptor.AdminInterceptor">
-
                 </bean>
             </mvc:interceptor>
             <mvc:interceptor>

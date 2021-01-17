@@ -38,10 +38,19 @@ public class AdminInterceptor extends HandlerInterceptorAdapter {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 
         String sessionKey = CookieUtil.getValueCookieByName(request, SESSION_KET);
+        if (StringUtils.isBlank(sessionKey)) {
+            return false;
+        }
         String userInfo = cacheService.get(sessionKey, String.class);
         SessionInfo sessionInfo = JSON.parseObject(userInfo, new TypeReference<SessionInfo>() {
         });
+        if (sessionInfo == null) {
+            return false;
+        }
         String userName = sessionInfo.getUserId();
+        if (StringUtils.isBlank(userName)) {
+            return false;
+        }
         if (userName.equals(userNumber)) {
             return true;
         }
@@ -49,11 +58,15 @@ public class AdminInterceptor extends HandlerInterceptorAdapter {
         String requestURI = request.getRequestURI();
         if (StringUtils.startsWith(requestURI, "/admin") && !isAdmin(userName)) {
             response.sendRedirect("/login");
+            return false;
         }
         return true;
     }
 
     private boolean isAdmin(String userNumber) {
+        if (StringUtils.isBlank(userNumber)) {
+            return false;
+        }
         PermissionExample condition = new PermissionExample();
         condition.createCriteria().andUsernumberEqualTo(userNumber);
         List<Permission> permissions = permissionMapper.selectByExample(condition);

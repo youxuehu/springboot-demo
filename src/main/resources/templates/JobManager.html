@@ -153,8 +153,8 @@
                 <div>
                     <div id="top">
                         <el-form :model="searchForm">
-                            <el-form-item label="关键字查询" label-width="120px" style="width:60%; text-align: center">
-                                <el-input v-model="searchForm.keyword" auto-complete="off"></el-input>
+                            <el-form-item label="">
+                                <el-input v-model="searchForm.keyword" auto-complete="off" placeholder="请输入jobName"></el-input>
                             </el-form-item>
                         </el-form>
                         <el-button type="text" @click="search" style="color:white">查询</el-button>

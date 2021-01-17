@@ -24,13 +24,14 @@
              $("#LoginButton").click(function () {
                  const userName = $("#userName").val();
                  if (userName === "" || userName.length < 1) {
-                     alert("userName不为空！！")
+                     //alert("userName不为空！！")
                      $msgbox("userName不为空！！")
                      return
                  }
                  const password = $("#password").val();
                  if (password === "" || password.length < 1) {
-                     alert("password不为空！！")
+                     //alert("password不为空！！")
+                     $msgbox("password不为空！！")
                      return
                  }
                  var salt = g_passsword_salt;
@@ -93,23 +94,27 @@
     <input id="LoginButton" type="button" value="登录"/>
 </form>
 <div style="color:red" id="ErrorMessage">[[${errorMessage}]]</div>
+
 <div id="message">
+    <el-button @click="dialogFormVisible = true" type="primary">点击VUE登录</el-button>
     <template>
         <p>切换语言</p>
-        <Button @click="zh(false)">中文</Button>
-        <Button @click="en(false)">英文</Button>
-        <p>With desc</p>
-        <Button @click="info(false)">Info</Button>
-        <Button @click="success(false)">Success</Button>
-        <Button @click="warning(false)">Warning</Button>
-        <Button @click="error(false)">Error</Button>
-        <p>Only title</p>
-        <Button @click="info(true)">Info</Button>
-        <Button @click="success(true)">Success</Button>
-        <Button @click="warning(true)">Warning</Button>
-        <Button @click="error(true)">Error</Button>
+        <el-button @click="zh(false)">中文</el-button>
+        <el-button @click="en(false)">英文</el-button>
+        <p>显示描述</p>
+        <el-button @click="info(false)">Info</el-button>
+        <el-button @click="success(false)">Success</el-button>
+        <el-button @click="warning(false)">Warning</el-button>
+        <el-button @click="error(false)">Error</el-button>
+        <p>显示标题</p>
+        <el-button @click="info(true)">Info</el-button>
+        <el-button @click="success(true)">Success</el-button>
+        <el-button @click="warning(true)">Warning</el-button>
+        <el-button @click="error(true)">Error</el-button>
     </template>
-    <el-dialog :visible.syn="dialogFormVisible" title="登录" width="100%" height="100%">
+    <el-dialog :visible.syn="dialogFormVisible" title="登录" width="100%" height="100%" :show-close="true"
+               :before-close='closeDialog'
+               :close-on-press-escape="false" :close-on-click-modal="true">
         <el-form ref="formInline" :model="formInline" :rules="ruleInline">
             <el-form-item label="手机号码" style="width:100%">
                 <el-input v-model="formInline.userName" placeholder="Username" value="16000000000"></el-input>
@@ -119,7 +124,8 @@
             </el-form-item>
         </el-form>
         <div slot="footer" class="dialog-footer">
-            <el-button type="primary" @click="handleSubmit('formInline')" size="medium">登    录</el-button>
+            <el-button @click="dialogFormVisible = false">取 消</el-button>
+            <el-button type="primary" @click="handleSubmit('formInline')">登    录</el-button>
             <el-button type="primary" @click="zh(false)">中文</el-button>
             <el-button type="primary" @click="en(false)">英文</el-button>
         </div>
@@ -129,6 +135,7 @@
 
         var vue = new Vue({
             el: "#message",
+            dialogFormVisible: false,
             data: {
                 formInline: {
                     userName: '',
@@ -146,6 +153,10 @@
                 dialogFormVisible: true,
             },
             methods: {
+                //弹出login对话框
+                showLogin: function () {
+                    this.dialogFormVisible = true;
+                },
                 zh (nodesc) {
                     this.$http({
                        method:'get',
@@ -230,6 +241,5 @@
             }
         })
 </script>
-
 </body>
 </html>

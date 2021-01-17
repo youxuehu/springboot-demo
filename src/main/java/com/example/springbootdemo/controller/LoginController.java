@@ -49,6 +49,12 @@ public class LoginController extends BaseController {
     @Autowired
     I18nMessageUtil i18nMessageUtil;
 
+    @RequestMapping("/layout")
+    public String layout(HttpServletRequest request, HttpServletResponse response) {
+        LOGGER.info("layout");
+        return "layout";
+    }
+
     @RequestMapping("/admin")
     public String admin(HttpServletRequest request, HttpServletResponse response) {
         LOGGER.info("admin");

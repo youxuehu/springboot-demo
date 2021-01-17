@@ -39,6 +39,7 @@ public class LoginCheckInterceptor extends HandlerInterceptorAdapter {
                 response.getWriter().close();
             } else {
                 redirect(request, response);
+                return false;
             }
             return false;
         }

@@ -51,9 +51,22 @@ public class DbSaveFrontServiceImpl implements DbSaveFrontService {
     }
 
     @Override
-    public List<DbSaveFront> queryLikeKeyword(String keyword) {
+    public List<DbSaveFront> queryLikeKeyword(String keyword, Integer pageIndex, Integer pageSize) {
         DbSaveFrontExample condition = new DbSaveFrontExample();
-        condition.createCriteria().andKeyStringLike("%" + keyword + "%");
+        DbSaveFrontExample.Criteria criteria = condition.createCriteria();
+        if (pageIndex == null) {
+            pageIndex = 1;
+        }
+        if (pageSize == null) {
+            pageSize = 10;
+        }
+        if (StringUtils.isNotBlank(keyword)) {
+            criteria.andKeyStringLike("%" + keyword + "%");
+        }
+        // 分页
+        int offSet = pageIndex == 1 ? pageSize * (pageIndex - 1) : pageSize * (pageIndex - 1) + 1;
+        condition.setLimitStart(offSet);
+        condition.setLimitEnd(pageSize);
         List<DbSaveFront> dbSaveFronts = dbSaveFrontMapper.selectByExample(condition);
         return CollectionUtils.isEmpty(dbSaveFronts) ? null : dbSaveFronts;
     }
@@ -62,5 +75,23 @@ public class DbSaveFrontServiceImpl implements DbSaveFrontService {
     public boolean checkExists(String keyString) {
         String valueString = queryValueByKeyString(keyString);
         return StringUtils.isBlank(valueString) ? false : true;
+    }
+
+    @Override
+    public void deleteByKeyString(String keyString) {
+        DbSaveFrontExample condition = new DbSaveFrontExample();
+        DbSaveFrontExample.Criteria criteria = condition.createCriteria();
+        criteria.andKeyStringEqualTo(keyString);
+        dbSaveFrontMapper.deleteByExample(condition);
+    }
+
+    @Override
+    public Integer queryCountByKeyWord(String keyword) {
+        DbSaveFrontExample condition = new DbSaveFrontExample();
+        DbSaveFrontExample.Criteria criteria = condition.createCriteria();
+        if (StringUtils.isNotBlank(keyword)) {
+            criteria.andKeyStringLike("%" + keyword + "%");
+        }
+        return dbSaveFrontMapper.countByExample(condition);
     }
 }
