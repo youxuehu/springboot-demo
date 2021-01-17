@@ -20003,3 +20003,60 @@ Caused by: com.mysql.cj.exceptions.StatementIsClosedException: No operations all
 2021-01-17 22:43:41.939 [http-nio-9090-exec-3] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
 2021-01-17 22:43:41.967 [http-nio-9090-exec-5] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
 2021-01-17 22:43:41.968 [http-nio-9090-exec-5] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-17 22:45:08.128 [http-nio-9090-exec-9] INFO  c.e.s.interceptor.LoginCheckInterceptor - 登录拦截器
+2021-01-17 22:45:08.129 [http-nio-9090-exec-9] INFO  c.e.s.interceptor.LoginCheckInterceptor - http://localhost:9090/admin
+2021-01-17 22:45:08.148 [http-nio-9090-exec-9] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-17 22:45:08.148 [http-nio-9090-exec-9] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-17 22:45:08.150 [http-nio-9090-exec-9] INFO  c.e.springbootdemo.controller.LoginController - admin
+2021-01-17 22:45:08.189 [http-nio-9090-exec-1] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-17 22:45:08.188 [http-nio-9090-exec-10] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-17 22:45:08.189 [http-nio-9090-exec-1] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-17 22:45:08.189 [http-nio-9090-exec-4] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-17 22:45:08.189 [http-nio-9090-exec-10] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-17 22:45:08.189 [http-nio-9090-exec-4] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-17 22:45:08.189 [http-nio-9090-exec-3] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-17 22:45:08.190 [http-nio-9090-exec-3] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-17 22:45:08.190 [http-nio-9090-exec-2] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-17 22:45:08.191 [http-nio-9090-exec-2] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-17 22:45:08.191 [http-nio-9090-exec-4] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-17 22:45:08.191 [http-nio-9090-exec-4] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-17 22:45:08.194 [http-nio-9090-exec-8] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-17 22:45:08.194 [http-nio-9090-exec-8] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-17 22:45:08.194 [http-nio-9090-exec-6] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-17 22:45:08.195 [http-nio-9090-exec-6] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-17 22:45:08.194 [http-nio-9090-exec-1] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-17 22:45:08.195 [http-nio-9090-exec-1] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-17 22:45:08.355 [http-nio-9090-exec-9] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-17 22:45:08.355 [http-nio-9090-exec-9] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-17 22:45:08.360 [http-nio-9090-exec-5] INFO  c.e.s.interceptor.LoginCheckInterceptor - 登录拦截器
+2021-01-17 22:45:08.360 [http-nio-9090-exec-5] INFO  c.e.s.interceptor.LoginCheckInterceptor - http://localhost:9090/cache/savefront/queryByKeyword
+2021-01-17 22:45:08.363 [http-nio-9090-exec-5] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-17 22:45:08.363 [http-nio-9090-exec-5] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-17 22:45:40.318 [http-nio-9090-exec-3] INFO  c.e.s.interceptor.LoginCheckInterceptor - 登录拦截器
+2021-01-17 22:45:40.318 [http-nio-9090-exec-3] INFO  c.e.s.interceptor.LoginCheckInterceptor - http://localhost:9090/jobManager
+2021-01-17 22:45:40.321 [http-nio-9090-exec-3] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-17 22:45:40.322 [http-nio-9090-exec-3] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-17 22:45:40.322 [http-nio-9090-exec-3] INFO  c.e.springbootdemo.controller.LoginController - JobManager
+2021-01-17 22:45:40.462 [http-nio-9090-exec-10] INFO  c.e.s.interceptor.LoginCheckInterceptor - 登录拦截器
+2021-01-17 22:45:40.462 [http-nio-9090-exec-10] INFO  c.e.s.interceptor.LoginCheckInterceptor - http://localhost:9090/page/head.html
+2021-01-17 22:45:40.464 [http-nio-9090-exec-2] INFO  c.e.s.interceptor.LoginCheckInterceptor - 登录拦截器
+2021-01-17 22:45:40.464 [http-nio-9090-exec-2] INFO  c.e.s.interceptor.LoginCheckInterceptor - http://localhost:9090/page/HadoopManager.html
+2021-01-17 22:45:40.467 [http-nio-9090-exec-4] INFO  c.e.s.interceptor.LoginCheckInterceptor - 登录拦截器
+2021-01-17 22:45:40.468 [http-nio-9090-exec-4] INFO  c.e.s.interceptor.LoginCheckInterceptor - http://localhost:9090/job/queryjob
+2021-01-17 22:45:40.467 [http-nio-9090-exec-10] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-17 22:45:40.468 [http-nio-9090-exec-10] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-17 22:45:40.470 [http-nio-9090-exec-2] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-17 22:45:40.470 [http-nio-9090-exec-2] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-17 22:45:40.473 [http-nio-9090-exec-4] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-17 22:45:40.473 [http-nio-9090-exec-4] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-17 22:45:40.500 [http-nio-9090-exec-7] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-17 22:45:40.501 [http-nio-9090-exec-7] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-17 22:45:40.552 [http-nio-9090-exec-4] INFO  c.example.springbootdemo.controller.JobController - map:
+2021-01-17 22:46:05.069 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler schedulerFactory_$_NON_CLUSTERED paused.
+2021-01-17 22:46:05.070 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2021-01-17 22:46:05.071 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-17 22:46:05.073 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler schedulerFactory_$_NON_CLUSTERED shutting down.
+2021-01-17 22:46:05.073 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler schedulerFactory_$_NON_CLUSTERED paused.
+2021-01-17 22:46:05.076 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler schedulerFactory_$_NON_CLUSTERED shutdown complete.
+2021-01-17 22:46:05.076 [SpringContextShutdownHook] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2021-01-17 22:46:05.088 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
