@@ -5,14 +5,20 @@
     <title>QuartzDemo</title>
     <link rel="stylesheet" th:href="@{/css/iview.css}">
     <th:block th:fragment="common_header">
-        <link rel="stylesheet" th:href="@{/css/index.css}">
+       <!-- <link rel="stylesheet" th:href="@{/css/index.css}"> -->
+        <link rel="stylesheet" th:href="@{/css/1.4.2/index.css}">
     </th:block>
     <th:block th:fragment="common_js">
-        <script type="text/javascript" th:src="@{/js/vue.js}" charset="utf-8"></script>
+        <!--<script type="text/javascript" th:src="@{/js/vue.js}" charset="utf-8"></script> -->
+        <script type="text/javascript" th:src="@{/css/1.4.2/vue.js}" charset="utf-8"></script>
+       <!-- <script type="text/javascript" th:src="@{/js/index.js}" charset="utf-8"></script> -->
+        <script type="text/javascript" th:src="@{/css/1.4.2/index.js}" charset="utf-8"></script>
+
+
         <script type="text/javascript" th:src="@{/js/iview.min.js}"></script>
         <script type="text/javascript" th:src="@{/js/axios.min.js}" charset="utf-8"></script>
         <script type="text/javascript" th:src="@{/js/vue-resource.js}" charset="utf-8"></script>
-        <script type="text/javascript" th:src="@{/js/index.js}" charset="utf-8"></script>
+
     </th:block>
     <link rel="stylesheet" th:href="@{/js/td-message/td-msessage.css}" />
     <script type="text/javascript" th:src="@{/js/jquery.min.js}" charset="utf-8"></script>
@@ -189,6 +195,7 @@
                         </el-table>
                         <div align="center">
                             <el-pagination
+                                    background
                                     @size-change="handleSizeChange"
                                     @current-change="handleCurrentChange"
                                     :current-page="currentPage"
@@ -354,7 +361,7 @@
                     this.dialogFormVisible = false;
                     this.$message({
                         type: 'success',
-                        message: '添加成功' + JSON.stringify(res)
+                        message: '添加成功'
                     });
                 }, function (error) {
                     this.$message({
@@ -423,14 +430,23 @@
                 }, {emulateJSON: true}).then(function (res) {
                     console.log(res);
                     this.loadData(this.currentPage, this.pagesize);
-                    this.$message({
-                        type: 'success',
-                        message: '添加成功' + JSON.stringify(res)
+                    //this.$message({
+                    //    type: 'success',
+                    //    message: '添加成功'
+                    //});
+                    this.$notify({
+                      title: '成功',
+                      message: '添加成功',
+                      type: 'success'
                     });
                 }, function (error) {
-                    this.$message({
-                        type: 'error',
-                        message: '添加失败' + JSON.stringify(error)
+                    //this.$message({
+                    //    type: 'error',
+                    //    message: '添加失败' + JSON.stringify(error)
+                    //});
+                    this.$notify.error({
+                      title: '错误',
+                      message: '添加失败' + JSON.stringify(error)
                     });
                 });
             },
