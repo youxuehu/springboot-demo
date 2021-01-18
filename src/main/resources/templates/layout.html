@@ -21,10 +21,7 @@
 
     <link rel="stylesheet" th:href="@{/css/1.4.2/index.css}">
     <script type="text/javascript" th:src="@{/css/1.4.2/vue.js}" charset="utf-8"></script>
-       <script type="text/javascript" th:src="@{/css/1.4.2/index.js}" charset="utf-8"></script>
-
-
-
+    <script type="text/javascript" th:src="@{/css/1.4.2/index.js}" charset="utf-8"></script>
 
   <!--  <link rel="stylesheet" th:href="@{/js/td-message/td-msessage.css}" />
     <script type="text/javascript" th:src="@{/js/jquery.min.js}" charset="utf-8"></script>
@@ -33,102 +30,108 @@
     <script type="text/javascript" th:src="@{/js/td-message/td-message.min.js}" charset="utf-8"></script>-->
     <style>
       .el-header {
-        background-color: #B3C0D1;
-        color: #333;
+        background-color: #545c64;
+        color: #fff;
         line-height: 60px;
       }
+      .el-menu-vertical-demo:not(.el-menu--collapse) {
+        width: 200px;
+        min-height: 600px;
+      }
+
       .el-aside {
+        background-color: #D3DCE6;
         color: #333;
+        text-align: center;
+        line-height: 200px;
+      }
+
+      .el-main {
+        background-color: #E9EEF3;
+        color: #333;
+        text-align: center;
+        line-height: 160px;
+      }
+
+      body > .el-container {
+        margin-bottom: 40px;
+      }
+
+      .el-container:nth-child(5) .el-aside,
+      .el-container:nth-child(6) .el-aside {
+        line-height: 260px;
+      }
+
+      .el-container:nth-child(7) .el-aside {
+        line-height: 320px;
       }
     </style>
 </head>
 <body>
 <div id="layout">
-    <el-container style="border: 1px solid #eee; height: 700px;">
-        <el-aside width="200px" style="background-color: rgb(238, 241, 246);">
-            <el-menu :default-openeds="[]">
-                <el-submenu index="1">
-                    <template slot="title"><i class="el-icon-message"></i>导航一</template>
-                    <el-menu-item-group>
-                        <template slot="title">分组一</template>
-                        <el-menu-item index="1-1">选项1</el-menu-item>
-                        <el-menu-item index="1-2">选项2</el-menu-item>
-                    </el-menu-item-group>
-                    <el-menu-item-group title="分组2">
-                        <el-menu-item index="1-3">选项3</el-menu-item>
-                    </el-menu-item-group>
-                    <el-submenu index="1-4">
-                        <template slot="title">选项4</template>
-                        <el-menu-item index="1-4-1">选项4-1</el-menu-item>
-                    </el-submenu>
-                </el-submenu>
-                <el-submenu index="2">
-                    <template slot="title"><i class="el-icon-menu"></i>导航二</template>
-                    <el-menu-item-group>
-                        <template slot="title">分组一</template>
-                        <el-menu-item index="2-1">选项1</el-menu-item>
-                        <el-menu-item index="2-2">选项2</el-menu-item>
-                    </el-menu-item-group>
-                    <el-menu-item-group title="分组2">
-                        <el-menu-item index="2-3">选项3</el-menu-item>
-                    </el-menu-item-group>
-                    <el-submenu index="2-4">
-                        <template slot="title">选项4</template>
-                        <el-menu-item index="2-4-1">选项4-1</el-menu-item>
-                    </el-submenu>
-                </el-submenu>
-                <el-submenu index="3">
-                    <template slot="title"><i class="el-icon-setting"></i>导航三</template>
-                    <el-menu-item-group>
-                        <template slot="title">分组一</template>
-                        <el-menu-item index="3-1">选项1</el-menu-item>
-                        <el-menu-item index="3-2">选项2</el-menu-item>
-                    </el-menu-item-group>
-                    <el-menu-item-group title="分组2">
-                        <el-menu-item index="3-3">选项3</el-menu-item>
-                    </el-menu-item-group>
-                    <el-submenu index="3-4">
-                        <template slot="title">选项4</template>
-                        <el-menu-item index="3-4-1">选项4-1</el-menu-item>
-                    </el-submenu>
-                </el-submenu>
-            </el-menu>
-        </el-aside>
+    <el-container>
+        <el-header>
+            <el-container>
+                <el-header style="text-align: right; font-size: 12px">
+                    <el-dropdown>
+                        <i class="el-icon-setting" style="margin-right: 15px"></i>
+                        <el-dropdown-menu slot="dropdown">
+                            <el-dropdown-item>查看</el-dropdown-item>
+                            <el-dropdown-item>新增</el-dropdown-item>
+                            <el-dropdown-item>删除</el-dropdown-item>
+                        </el-dropdown-menu>
+                    </el-dropdown>
+                    <span>王小虎</span>
+                </el-header>
+            </el-container>
+        </el-header>
         <el-container>
-            <el-header style="text-align: right; font-size: 12px">
-                <el-dropdown>
-                    <i class="el-icon-setting" style="margin-right: 15px"></i>
-                    <el-dropdown-menu slot="dropdown">
-                        <el-dropdown-item>查看</el-dropdown-item>
-                        <el-dropdown-item>新增</el-dropdown-item>
-                        <el-dropdown-item>删除</el-dropdown-item>
-                    </el-dropdown-menu>
-                </el-dropdown>
-                <span>王小虎</span>
-            </el-header>
+            <el-aside width="200px">
+                <el-container>
+                    <el-menu
+                            default-active="2"
+                            class="el-menu-vertical-demo"
+                            @open="handleOpen"
+                            @close="handleClose"
+                            background-color="#545c64"
+                            text-color="#fff"
+                            active-text-color="#ffd04b">
+                        <el-submenu index="1">
+                            <template slot="title">
+                                <i class="el-icon-location"></i>
+                                <span>信息管理</span>
+                            </template>
+                            <el-menu-item index="1-1">缓存管理</el-menu-item>
+                            <el-menu-item index="1-2">任务管理</el-menu-item>
+                            <el-menu-item index="1-3">镜像管理</el-menu-item>
+                        </el-submenu>
+                        <el-menu-item index="2">
+                            <i class="el-icon-menu"></i>
+                            <span slot="title">导航二</span>
+                        </el-menu-item>
+                        <el-menu-item index="3" disabled>
+                            <i class="el-icon-document"></i>
+                            <span slot="title">导航三</span>
+                        </el-menu-item>
+                        <el-menu-item index="4">
+                            <i class="el-icon-setting"></i>
+                            <span slot="title">导航四</span>
+                        </el-menu-item>
+                    </el-menu>
+                </el-container>
+            </el-aside>
             <el-main>
-                <el-table :data="tableData" style="width:100%;height: 500px;overflow: auto;" border>
-                    <el-table-column prop="date" label="日期" width="140">
-                    </el-table-column>
-                    <el-table-column prop="name" label="姓名" width="120">
-                    </el-table-column>
-                    <el-table-column prop="address" label="地址">
-                    </el-table-column>
-                </el-table>
+                <el-tabs v-model="editableTabsValue" type="card" closable @tab-remove="removeTab">
+                    <el-tab-pane
+                            v-for="(item, index) in editableTabs"
+                            :key="item.name"
+                            :label="item.title"
+                            :name="item.name"
+                    >
+                        {{item.content}}
+                    </el-tab-pane>
+                </el-tabs>
             </el-main>
-            <div class="block">
-                <span class="demonstration">完整功能</span>
-                <el-pagination
-                        background
-                        @size-change="handleSizeChange"
-                        @current-change="handleCurrentChange"
-                        :current-page="currentPage"
-                        :page-sizes="[100, 200, 300, 400]"
-                        :page-size="100"
-                        layout="total, sizes, prev, pager, next, jumper"
-                        :total="400">
-                </el-pagination>
-            </div>
         </el-container>
     </el-container>
 </div>
@@ -143,10 +146,23 @@
              },
              tableData: [],
              currentPage: 1,
+             editableTabsValue: '2',
+             editableTabs: [],
+             tabIndex: 2
         },
+
         methods: {
             initData: function() {
                 this.tableData = Array(20).fill(this.item)
+                this.editableTabs = [{
+                  title: 'Tab 1',
+                  name: '1',
+                  content: 'Tab 1 content'
+                }, {
+                  title: 'Tab 2',
+                  name: '2',
+                  content: 'Tab 2 content'
+                }]
             },
             handleSizeChange: function (val) {
                 this.pagesize = val;
