@@ -52,7 +52,7 @@
                          if (res['success'] == true) {
                              success("登录成功.")
                              console.log("login success")
-                             window.location.href="/jobManager";
+                             window.location.href="/layout";
                              return;
                          } else {
                              error(res['errorMessage'])
@@ -224,7 +224,7 @@
                                 if (response.data.success == true) {
                                     this.dialogFormVisible = false;
                                     this.$message.error('success')
-                                    window.location.href="/jobManager";
+                                    window.location.href="/layout";
                                     return;
                                 } else {
                                     console.log('错误')

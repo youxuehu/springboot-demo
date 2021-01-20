@@ -49,9 +49,17 @@ public class LoginController extends BaseController {
     @Autowired
     I18nMessageUtil i18nMessageUtil;
 
+    @RequestMapping("/easyui")
+    public String easyui(Model model, SessionInfo sessionInfo, HttpServletRequest request, HttpServletResponse response) {
+        LOGGER.info("easyui");
+        model.addAttribute("sessionInfo", sessionInfo);
+        return "easyui";
+    }
+
     @RequestMapping("/layout")
-    public String layout(HttpServletRequest request, HttpServletResponse response) {
+    public String layout(Model model, SessionInfo sessionInfo, HttpServletRequest request, HttpServletResponse response) {
         LOGGER.info("layout");
+        model.addAttribute("sessionInfo", sessionInfo);
         return "layout";
     }
 
@@ -86,10 +94,11 @@ public class LoginController extends BaseController {
     }
 
     @RequestMapping("/logout")
-    public String logout(HttpServletRequest request, HttpServletResponse response) {
+    @ResponseBody
+    public ModelMap logout(HttpServletRequest request, HttpServletResponse response) {
         LOGGER.info("登出");
         removeCookie(request, response);
-        return "redirect:/login";
+        return success();
     }
 
     @RequestMapping("/doLogin")

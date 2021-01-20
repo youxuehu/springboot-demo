@@ -22,6 +22,9 @@
     <link rel="stylesheet" th:href="@{/css/1.4.2/index.css}">
     <script type="text/javascript" th:src="@{/css/1.4.2/vue.js}" charset="utf-8"></script>
     <script type="text/javascript" th:src="@{/css/1.4.2/index.js}" charset="utf-8"></script>
+    <script type="text/javascript" th:src="@{/js/iview.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/axios.min.js}" charset="utf-8"></script>
+    <script type="text/javascript" th:src="@{/js/vue-resource.js}" charset="utf-8"></script>
 
   <!--  <link rel="stylesheet" th:href="@{/js/td-message/td-msessage.css}" />
     <script type="text/javascript" th:src="@{/js/jquery.min.js}" charset="utf-8"></script>
@@ -50,7 +53,7 @@
         background-color: #E9EEF3;
         color: #333;
         text-align: center;
-        line-height: 160px;
+        line-height: 10px;
       }
 
       body > .el-container {
@@ -66,6 +69,118 @@
         line-height: 320px;
       }
     </style>
+    <style>
+        #top {
+            background: #20A0FF;
+            padding: 5px;
+            overflow: hidden
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font: 15px/1.3 'Open Sans', sans-serif;
+            color: #5e5b64;
+            text-align: center;
+        }
+
+        a, a:visited {
+            outline: none;
+            color: #389dc1;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        section, footer, header, aside, nav {
+            display: block;
+        }
+
+        /*-------------------------
+            菜鸟
+        --------------------------*/
+
+        nav {
+            display: inline-block;
+            margin: 0px 0px 0px 0px;
+            background-color: #5597b4;
+            box-shadow: 0 1px 1px #ccc;
+            border-radius: 2px;
+            width: 100%;
+            height: 20%;
+        }
+
+        nav a {
+            display: inline-block;
+            padding: 50px 80px;
+            color: #fff !important;
+            font-weight: bold;
+            font-size: 16px;
+            text-decoration: none !important;
+            line-height: 1;
+            text-transform: uppercase;
+            background-color: transparent;
+            -webkit-transition: background-color 0.25s;
+            -moz-transition: background-color 0.25s;
+            transition: background-color 0.25s;
+        }
+
+        nav a:first-child {
+            border-radius: 2px 0 0 2px;
+        }
+
+        nav a:last-child {
+            border-radius: 0 2px 2px 0;
+        }
+
+        nav.home .home,
+        nav.best .best,
+        nav.animal .animal,
+        nav.hello .hello {
+            background-color: #e35885;
+        }
+    </style>
+    <style type="text/css">
+        #test #app ul li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #test #app {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+        }
+        #test #app .tab-tilte{
+            width: 100%;
+        }
+        #test #app .tab-tilte li{
+            float: left;
+            width: 25%;
+            text-align: center;
+            background-color:#f4f4f4;
+            cursor: pointer;
+        }
+        /* 点击对应的标题添加对应的背景颜色 */
+        #test #app .tab-tilte .active{
+            background-color: indianred;
+            color: indianred;
+        }
+        #test #app .tab-content #JobManagerDiv,#OtherDiv2,#OtherDiv3,#OtherDiv4{
+            width: 100%;
+            height: 100%;
+        }
+
+        #test #app .tab-content #OtherDiv2 .Hadoop-iframe{
+            width: 100%;
+            height: 600px;
+        }
+    </style>
 </head>
 <body>
 <div id="layout">
@@ -73,15 +188,14 @@
         <el-header>
             <el-container>
                 <el-header style="text-align: right; font-size: 12px">
-                    <el-dropdown>
+                    <el-dropdown @command="handleCommand">
                         <i class="el-icon-setting" style="margin-right: 15px"></i>
                         <el-dropdown-menu slot="dropdown">
-                            <el-dropdown-item>查看</el-dropdown-item>
-                            <el-dropdown-item>新增</el-dropdown-item>
-                            <el-dropdown-item>删除</el-dropdown-item>
+                            <el-dropdown-item command="userInfo">用户信息</el-dropdown-item>
+                            <el-dropdown-item command="logout">退出</el-dropdown-item>
                         </el-dropdown-menu>
                     </el-dropdown>
-                    <span>王小虎</span>
+                    <span th:text="${sessionInfo.userId}"></span>
                 </el-header>
             </el-container>
         </el-header>
@@ -101,9 +215,9 @@
                                 <i class="el-icon-location"></i>
                                 <span>信息管理</span>
                             </template>
-                            <el-menu-item index="1-1">缓存管理</el-menu-item>
-                            <el-menu-item index="1-2">任务管理</el-menu-item>
-                            <el-menu-item index="1-3">镜像管理</el-menu-item>
+                            <el-menu-item index="1-1" @click="addTab(editableTabsValue, '缓存管理')">缓存管理</el-menu-item>
+                            <el-menu-item index="1-2" @click="addTab(editableTabsValue, '任务管理')">任务管理</el-menu-item>
+                            <el-menu-item index="1-3" @click="addTab(editableTabsValue, '镜像管理')">镜像管理</el-menu-item>
                         </el-submenu>
                         <el-menu-item index="2">
                             <i class="el-icon-menu"></i>
@@ -129,6 +243,115 @@
                             :name="item.name"
                     >
                         {{item.content}}
+                        <div id="test">
+                            <div id="app">
+                                <div class="tab-content">
+                                    <div id="JobManagerDiv" v-show="cur==0">
+                                        <div>
+                                            <div id="top">
+                                                <el-form :model="insertForm">
+                                                    <el-form-item label="">
+                                                        <el-input v-model="insertForm.keyString" placeholder="key" auto-complete="off"></el-input>
+                                                        <el-input v-model="insertForm.valString" placeholder="value" auto-complete="off"></el-input>
+                                                        <el-button type="text" @click="doAdd" style="color:white">添加</el-button>
+                                                    </el-form-item>
+                                                </el-form>
+                                                <el-form :model="searchForm">
+                                                    <el-form-item label="">
+                                                        <el-input v-model="searchForm.keyword" placeholder="请输入关键字" auto-complete="off"></el-input>
+                                                        <el-button type="text" @click="search" style="color:white">查询</el-button>
+                                                    </el-form-item>
+                                                </el-form>
+                                                <el-button type="text" @click="handleadd" style="color:white">添加</el-button>
+                                                </span>
+                                            </div>
+                                            <br/>
+                                            <div>
+                                                <el-table
+                                                        ref="testTable"
+                                                        :data="tableData"
+                                                        style="width:100%;height: 500px;overflow: auto;"
+                                                        border
+                                                >
+                                                    <el-table-column
+                                                            prop="keyString"
+                                                            label="keyString"
+                                                            sortable
+                                                            show-overflow-tooltip>
+                                                    </el-table-column>
+                                                    <el-table-column
+                                                            prop="valueString"
+                                                            label="valueString"
+                                                            sortable
+                                                            show-overflow-tooltip>
+                                                    </el-table-column>
+                                                    <el-table-column label="操作" width="300">
+                                                        <template scope="scope">
+                                                            <el-button
+                                                                    size="small"
+                                                                    type="danger"
+                                                                    @click="handleDelete(scope.$index, scope.row)">删除
+                                                            </el-button>
+                                                            <el-button
+                                                                    size="small"
+                                                                    type="success"
+                                                                    @click="handleUpdate(scope.$index, scope.row)">修改
+                                                            </el-button>
+                                                        </template>
+                                                    </el-table-column>
+                                                </el-table>
+                                                <div align="center">
+                                                    <el-pagination
+                                                            background
+                                                            @size-change="handleSizeChange"
+                                                            @current-change="handleCurrentChange"
+                                                            :current-page="currentPage"
+                                                            :page-sizes="[10, 20, 30, 40]"
+                                                            :page-size="pagesize"
+                                                            layout="total, sizes, prev, pager, next, jumper"
+                                                            :total="totalCount">
+                                                    </el-pagination>
+                                                </div>
+                                            </div>
+                                            <el-dialog title="添加缓存" :visible.syn="dialogFormVisible">
+                                                <el-form :model="form">
+                                                    <el-form-item label="keyString" label-width="120px" style="width:60%">
+                                                        <el-input v-model="form.keyString" auto-complete="off"></el-input>
+                                                    </el-form-item>
+                                                    <el-form-item label="valString" label-width="120px" style="width:60%">
+                                                        <el-input v-model="form.valString" auto-complete="off"></el-input>
+                                                    </el-form-item>
+                                                </el-form>
+                                                <div slot="footer" class="dialog-footer">
+                                                    <el-button @click="dialogFormVisible = false">取 消</el-button>
+                                                    <el-button type="primary" @click="add">确 定</el-button>
+                                                </div>
+                                            </el-dialog>
+                                            <el-dialog title="登录超时" :visible.syn="dialogLoginTimeout" :showClose="false" width="40%">
+                                                <div>登录超时，请重新登录</div>
+                                                <div slot="footer" class="dialog-footer">
+                                                    <el-button type="primary" @click="redirectLogin">确 定</el-button>
+                                                </div>
+                                            </el-dialog>
+                                            <el-dialog title="修改缓存" :visible.syn="updateFormVisible">
+                                                <el-form :model="updateform">
+                                                    <el-form-item label="keyString" label-width="120px" style="width:60%">
+                                                        <el-input v-model="updateform.keyString" auto-complete="off" disabled></el-input>
+                                                    </el-form-item>
+                                                    <el-form-item label="valString" label-width="120px" style="width:60%">
+                                                        <el-input v-model="updateform.valString" auto-complete="off"></el-input>
+                                                    </el-form-item>
+                                                </el-form>
+                                                <div slot="footer" class="dialog-footer">
+                                                    <el-button @click="updateFormVisible = false">取 消</el-button>
+                                                    <el-button type="primary" @click="update">确 定</el-button>
+                                                </div>
+                                            </el-dialog>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </el-tab-pane>
                 </el-tabs>
             </el-main>
@@ -146,23 +369,58 @@
              },
              tableData: [],
              currentPage: 1,
-             editableTabsValue: '2',
+             editableTabsValue: '0',
              editableTabs: [],
-             tabIndex: 2
+             tabIndex: 0,
+             cur: 0,
+            active: 'home',
+            //表格当前页数据
+            tableData: [],
+            //请求的URL
+            url: 'cache/savefront/queryByKeyword',
+            //默认每页数据量
+            pagesize: 10,
+            //当前页码
+            currentPage: 1,
+            //查询的页码
+            start: 1,
+            //默认数据总数
+            totalCount: 1000,
+            //添加对话框默认可见性
+            dialogFormVisible: false,
+            dialogLoginTimeout: false,
+            //修改对话框默认可见性
+            updateFormVisible: false,
+            searchForm: {
+                keyword: ''
+            },
+            //提交的表单
+            form: {
+                keyString: '',
+                valString: '',
+            },
+            insertForm: {
+                keyString: '',
+                valString: '',
+            },
+            updateform: {
+                keyString: '',
+                valString: '',
+            },
         },
 
         methods: {
             initData: function() {
                 this.tableData = Array(20).fill(this.item)
-                this.editableTabs = [{
-                  title: 'Tab 1',
-                  name: '1',
-                  content: 'Tab 1 content'
-                }, {
-                  title: 'Tab 2',
-                  name: '2',
-                  content: 'Tab 2 content'
-                }]
+                //this.editableTabs = [{
+                //  title: 'Tab 1',
+                //  name: '1',
+                //  content: 'Tab 1 content'
+                //}, {
+                //  title: 'Tab 2',
+                //  name: '2',
+                //  content: 'Tab 2 content'
+                //}]
             },
             handleSizeChange: function (val) {
                 this.pagesize = val;
@@ -172,9 +430,264 @@
                 this.currentPage = val;
                 this.loadData(this.currentPage, this.pagesize);
             },
+            addTab(targetName, title) {
+                let tabs = this.editableTabs;
+                let activeName = this.editableTabsValue;
+                if (tabs.findIndex(item => item.title === title) === -1) {
+                    let newTabName = ++this.tabIndex + '';
+                    this.editableTabs.push({
+                      title: title,
+                      name: newTabName,
+                      content: title
+                    });
+                    this.editableTabsValue = newTabName;
+                } else {
+                    tabs.forEach((tab, index) => {
+                        if (tab.title === title) {
+                          activeName = tab.name;
+                        }
+                    });
+                    this.editableTabsValue = activeName;
+                }
+            },
+            removeTab(targetName) {
+                let tabs = this.editableTabs;
+                let activeName = this.editableTabsValue;
+                if (activeName === targetName) {
+                  tabs.forEach((tab, index) => {
+                    if (tab.name === targetName) {
+                      let nextTab = tabs[index + 1] || tabs[index - 1];
+                      if (nextTab) {
+                        activeName = nextTab.name;
+                      }
+                    }
+                  });
+                }
+                this.editableTabsValue = activeName;
+                this.editableTabs = tabs.filter(tab => tab.name !== targetName);
+            },
+            loadData: function (pageNum, pageSize) {
+                this.$http.get('cache/savefront/queryByKeyword?keyword=' + this.searchForm.keyword + '&' + 'pageIndex=' + pageNum + '&pageSize=' + pageSize).then(function (res) {
+                    if (res.body.errorMessage) {
+                        this.dialogLoginTimeout = true
+                        return
+                    }
+                    this.tableData = res.body.data;
+                    this.totalCount = res.body.total;
+                }, function () {
+                    console.log('failed');
+                });
+            },
+            //单行删除
+            handleDelete: function (index, row) {
+                this.$confirm('将删除该数据, 是否确定?', '提示', {
+                  confirmButtonText: '确定',
+                  cancelButtonText: '取消',
+                  type: 'warning'
+                }).then(() => {
+                    this.$http.post('cache/savefront/delete', {
+                        "keyString": row.keyString,
+                    }, {emulateJSON: true}).then(function (res) {
+                        this.loadData(this.currentPage, this.pagesize);
+                        this.$message({
+                            type: 'success',
+                            message: '删除成功'
+                        });
+                    }, function () {
+                        this.$message({
+                            type: 'error',
+                            message: '删除失败'
+                        });
+                    });
+                }).catch(() => {
+                  this.$message({
+                    type: 'info',
+                    message: '已取消删除'
+                  });
+                });
+            },
+            //搜索
+            search: function () {
+                this.loadData(this.currentPage, this.pagesize);
+            },
+            //弹出对话框
+            handleadd: function () {
+                this.dialogFormVisible = true;
+            },
+            //添加
+            add: function () {
+                if (this.validate(this.form.keyString)) {
+                    // this.error("keyString不为空！！", false)
+                    this.$message({
+                        type: 'error',
+                        message: 'keyString不为空！！'
+                    });
+                    return
+                }
+                if (this.validate(this.form.valString)) {
+                    //this.error("valString不为空！！", false)
+                    this.$message({
+                        type: 'error',
+                        message: 'valString不为空！！'
+                    });
+                    return
+                }
+                this.$http.post('cache/savefront/insertOrUpdate', {
+                    "keyString": this.form.keyString,
+                    "valString": this.form.valString,
+                }, {emulateJSON: true}).then(function (res) {
+                    console.log(res);
+                    this.loadData(this.currentPage, this.pagesize);
+                    this.dialogFormVisible = false;
+                    this.$message({
+                        type: 'success',
+                        message: '添加成功'
+                    });
+                }, function (error) {
+                    this.$message({
+                        type: 'error',
+                        message: '添加失败' + JSON.stringify(error)
+                    });
+                });
+            },
+            validate: function (val) {
+                // val.split(" ").join("").length === 0
+                // Vue中可用的判断对象是否为空的方法，两种方法：
+                // Object.keys(msg).length === 0
+                // JSON.stringify(msg) === '{}'
+                if (Object.keys(val).length === 0) {
+                     return true
+                }
+                return false
+            },
+            error: function (msg, nodesc) {
+                //$.message({
+                //  type: "error",
+                 // text: msg,
+                //  duration: 5000,
+                //  positon: "top-right",
+                //  showClose: true
+               // });
+
+                    this.$Notice.error({
+                        title: '提示',
+                        desc: nodesc ? '' : msg
+                    });
+             },
+             success: function (msg, nodesc) {
+               // $.message({
+               //  type: "success",
+               //   text: msg,
+               //   duration: 5000,
+               //   positon: "top-right",
+               //   showClose: true
+               // });
+                this.$Notice.success({
+                        title: '提示',
+                        desc: nodesc ? '' : msg
+                });
+             },
+            doAdd: function () {
+                if (this.validate(this.insertForm.keyString)) {
+                    //this.error("keyString不为空！！", false)
+                    this.$notify.error({
+                      title: '错误',
+                      message: 'keyString不为空！！'
+                    });
+                    return
+                }
+                if (this.validate(this.insertForm.valString)) {
+                    //this.error("valString不为空！！", false)
+                    this.$notify.error({
+                      title: '错误',
+                      message: 'valString不为空！！'
+                    });
+                    return
+                }
+                this.$http.post('cache/savefront/insertOrUpdate', {
+                    "keyString": this.insertForm.keyString,
+                    "valString": this.insertForm.valString,
+                }, {emulateJSON: true}).then(function (res) {
+                    console.log(res);
+                    this.loadData(this.currentPage, this.pagesize);
+                    //this.$message({
+                    //    type: 'success',
+                    //    message: '添加成功'
+                    //});
+                    this.$notify({
+                      title: '成功',
+                      message: '添加成功',
+                      type: 'success'
+                    });
+                }, function (error) {
+                    //this.$message({
+                    //    type: 'error',
+                    //    message: '添加失败' + JSON.stringify(error)
+                    //});
+                    this.$notify.error({
+                      title: '错误',
+                      message: '添加失败' + JSON.stringify(error)
+                    });
+                });
+            },
+            //更新
+            handleUpdate: function (index, row) {
+                console.log(row)
+                this.updateFormVisible = true;
+                this.updateform.keyString = row.keyString;
+                this.updateform.valString = row.valueString;
+            },
+            //更新任务
+            update: function () {
+                this.$http.post
+                ('cache/savefront/insertOrUpdate',
+                    {
+                        "keyString": this.updateform.keyString,
+                        "valString": this.updateform.valString,
+                    }, {emulateJSON: true}
+                ).then(function (res) {
+                    this.loadData(this.currentPage, this.pagesize);
+                    this.updateFormVisible = false;
+                    this.$message({
+                        type: 'success',
+                        message: '更新成功' + JSON.stringify(res)
+                    });
+                }, function () {
+                    console.log('failed');
+                    this.$message({
+                        type: 'error',
+                        message: '更新失败' + JSON.stringify(error)
+                    });
+                });
+            },
+            //每页显示数据量变更
+            handleSizeChange: function (val) {
+                this.pagesize = val;
+                this.loadData(this.currentPage, this.pagesize);
+            },
+            //页码变更
+            handleCurrentChange: function (val) {
+                this.currentPage = val;
+                this.loadData(this.currentPage, this.pagesize);
+            },
+            redirectLogin: function () {
+                window.location.href = '/login2'
+            },
+            handleCommand: function(command) {
+                if (command === 'logout') {
+                    this.$http.get('logout').then(function (res) {
+                        if (res.body.success) {
+                            this.redirectLogin()
+                        }
+                    }, function () {
+                        console.log('failed');
+                    })
+                }
+            },
         }
     });
     vue.initData(vue.currentPage, vue.pagesize);
+    vue.loadData(vue.currentPage, vue.pagesize);
 </script>
 </body>
 </html>
