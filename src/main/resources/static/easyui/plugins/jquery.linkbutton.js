@@ -1,7 +1,7 @@
 /**
- * EasyUI for jQuery 1.6.8
+ * EasyUI for jQuery 1.8.6
  * 
- * Copyright (c) 2009-2018 www.jeasyui.com. All rights reserved.
+ * Copyright (c) 2009-2019 www.jeasyui.com. All rights reserved.
  *
  * Licensed under the freeware license: http://www.jeasyui.com/license_freeware.php
  * To use it on other terms please contact us: info@jeasyui.com
@@ -127,6 +127,7 @@ if(_16.onclick){
 _14.onclick=_16.onclick;
 }
 }
+$(_14)._propAttr("disabled",_15);
 };
 $.fn.linkbutton=function(_19,_1a){
 if(typeof _19=="string"){
