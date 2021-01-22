@@ -28,4 +28,13 @@ public class TimeUtils {
         int nano = localDateTime.getNano();
         return "" + year + monthValue + dayOfMonth + hour + minute + second + nano;
     }
+
+    public static String ymd() {
+        LocalDateTime localDateTime = LocalDateTime.now();
+        // 年月日时分秒纳秒
+        int year = localDateTime.getYear();
+        int monthValue = localDateTime.getMonthValue();
+        int dayOfMonth = localDateTime.getDayOfMonth();
+        return "" + year + monthValue + dayOfMonth;
+    }
 }

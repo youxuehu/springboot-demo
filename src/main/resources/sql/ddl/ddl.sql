@@ -10,3 +10,10 @@ create table permission(
     id bigint primary key not null auto_increment,
     userNumber varchar(255)
 );
+
+create table execution_log(
+    id bigint primary key not null auto_increment,
+    gmt_create timestamp,
+    job_id varchar(32),
+    content text
+);

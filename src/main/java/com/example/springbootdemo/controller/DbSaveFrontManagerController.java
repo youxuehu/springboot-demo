@@ -1,7 +1,7 @@
 package com.example.springbootdemo.controller;
 
 import com.example.springbootdemo.common.db.dao.dbsavefront.model.DbSaveFront;
-import com.example.springbootdemo.common.service.DbSaveFrontService;
+import com.example.springbootdemo.common.db.service.DbSaveFrontService;
 import com.example.springbootdemo.controller.params.MyResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 //@Service
 public class WorkerSyncer implements InitializingBean {
 
-    Logger LOG = LoggerFactory.getLogger(WorkerSyncer.class);
+    private static final Logger LOG = LoggerFactory.getLogger(WorkerSyncer.class);
 
     ScheduledExecutorService executorService = Executors.newScheduledThreadPool(2);
 

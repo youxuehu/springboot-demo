@@ -4,10 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.example.springbootdemo.common.db.dao.quartz.jobandtrigger.model.JobAndTrigger;
-import com.example.springbootdemo.common.db.service.quartz.IJobAndTriggerService;
+import com.example.springbootdemo.common.db.service.IJobAndTriggerService;
 import com.example.springbootdemo.common.quartz.componment.BaseJob;
 import com.github.pagehelper.PageInfo;
-import org.apache.commons.lang3.StringUtils;
 import org.quartz.CronScheduleBuilder;
 import org.quartz.CronTrigger;
 import org.quartz.JobBuilder;

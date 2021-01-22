@@ -1,6 +1,6 @@
 package com.example.springbootdemo.common.thread.threadpool;
 
-import com.example.springbootdemo.common.service.DbSaveFrontService;
+import com.example.springbootdemo.common.db.service.DbSaveFrontService;
 import com.example.springbootdemo.utils.enums.SwitchEnum;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

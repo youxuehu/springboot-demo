@@ -6,6 +6,8 @@ import com.example.springbootdemo.controller.hadoop.param.TaskVO;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -25,8 +27,12 @@ import static com.example.springbootdemo.utils.ShellUtil.runShell;
 @Controller
 @RequestMapping("/yarn")
 public class YarnJobController extends BaseController {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(YarnJobController.class);
+
     @Value("${hadoop_client}")
     String hadoopClient;
+
     @Value("${yarn_client}")
     String yarnClient;
 

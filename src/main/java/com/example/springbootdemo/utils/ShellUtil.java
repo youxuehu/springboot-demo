@@ -9,7 +9,9 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class ShellUtil {
+
     private static Logger LOGGER = LoggerFactory.getLogger(ShellUtil.class);
+
     public static List<String> runShell(List<String> cmds) throws Exception{
         ProcessBuilder processBuilder = new ProcessBuilder();
         processBuilder.command(cmds);
