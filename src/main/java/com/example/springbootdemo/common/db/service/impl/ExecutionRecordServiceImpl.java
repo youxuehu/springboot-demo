@@ -1,5 +1,6 @@
 package com.example.springbootdemo.common.db.service.impl;
 
+import com.example.springbootdemo.common.aop.Log;
 import com.example.springbootdemo.common.db.dao.executionrecord.mapper.ExecutionRecordMapper;
 import com.example.springbootdemo.common.db.dao.executionrecord.model.ExecutionRecord;
 import com.example.springbootdemo.common.db.dao.executionrecord.model.ExecutionRecordExample;
@@ -16,6 +17,7 @@ public class ExecutionRecordServiceImpl implements ExecutionRecordService {
     @Autowired
     ExecutionRecordMapper executionRecordMapper;
 
+    @Log(value = "ExecutionRecordServiceImpl insert")
     @Override
     public void insert(ExecutionRecord executionRecord) {
         executionRecord.setGmtCreate(new Date());
@@ -25,16 +27,19 @@ public class ExecutionRecordServiceImpl implements ExecutionRecordService {
     }
 
     @Override
+    @Log(value = "ExecutionRecordServiceImpl updateByPrimaryKey")
     public void updateByPrimaryKey(ExecutionRecord executionRecord) {
         executionRecordMapper.updateByPrimaryKeySelective(executionRecord);
     }
 
     @Override
+    @Log(value = "ExecutionRecordServiceImpl queryById")
     public ExecutionRecord queryById(Long id) {
         return executionRecordMapper.selectByPrimaryKey(id);
     }
 
     @Override
+    @Log(value = "ExecutionRecordServiceImpl queryByPage")
     public List<ExecutionRecord> queryByPage(ExecutionRecord executionRecord, Integer pageIndex, Integer pageSize) {
         ExecutionRecordExample condition = new ExecutionRecordExample();
         int offSet = pageIndex == 1 ? pageSize * (pageIndex - 1) : pageSize * (pageIndex - 1) + 1;
@@ -45,6 +50,7 @@ public class ExecutionRecordServiceImpl implements ExecutionRecordService {
     }
 
     @Override
+    @Log(value = "ExecutionRecordServiceImpl queryByCount")
     public int queryByCount(ExecutionRecord executionRecord) {
         ExecutionRecordExample condition = new ExecutionRecordExample();
         return executionRecordMapper.countByExample(condition);

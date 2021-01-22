@@ -1,5 +1,6 @@
 package com.example.springbootdemo.common.db.service.impl;
 
+import com.example.springbootdemo.common.aop.Log;
 import com.example.springbootdemo.common.db.dao.dbsavefront.mapper.DbSaveFrontMapper;
 import com.example.springbootdemo.common.db.dao.dbsavefront.model.DbSaveFront;
 import com.example.springbootdemo.common.db.dao.dbsavefront.model.DbSaveFrontExample;
@@ -17,6 +18,7 @@ public class DbSaveFrontServiceImpl implements DbSaveFrontService {
     @Autowired
     DbSaveFrontMapper dbSaveFrontMapper;
 
+    @Log(value = "DbSaveFrontServiceImpl insertOrUpdate")
     @Override
     public void insertOrUpdate(String keyString, String valueString) {
         DbSaveFront dbSaveFront = queryByKeyString(keyString);
@@ -34,6 +36,7 @@ public class DbSaveFrontServiceImpl implements DbSaveFrontService {
     }
 
     @Override
+    @Log(value = "DbSaveFrontServiceImpl queryValueByKeyString")
     public String queryValueByKeyString(String keyString) {
         DbSaveFront saveFront = queryByKeyString(keyString);
         if (saveFront == null) {
@@ -43,6 +46,7 @@ public class DbSaveFrontServiceImpl implements DbSaveFrontService {
     }
 
     @Override
+    @Log(value = "DbSaveFrontServiceImpl queryByKeyString")
     public DbSaveFront queryByKeyString(String keyString) {
         DbSaveFrontExample condition = new DbSaveFrontExample();
         condition.createCriteria().andKeyStringEqualTo(keyString);
@@ -51,6 +55,7 @@ public class DbSaveFrontServiceImpl implements DbSaveFrontService {
     }
 
     @Override
+    @Log(value = "DbSaveFrontServiceImpl queryLikeKeyword")
     public List<DbSaveFront> queryLikeKeyword(String keyword, Integer pageIndex, Integer pageSize) {
         DbSaveFrontExample condition = new DbSaveFrontExample();
         DbSaveFrontExample.Criteria criteria = condition.createCriteria();
@@ -72,12 +77,14 @@ public class DbSaveFrontServiceImpl implements DbSaveFrontService {
     }
 
     @Override
+    @Log(value = "DbSaveFrontServiceImpl checkExists")
     public boolean checkExists(String keyString) {
         String valueString = queryValueByKeyString(keyString);
         return StringUtils.isBlank(valueString) ? false : true;
     }
 
     @Override
+    @Log(value = "DbSaveFrontServiceImpl deleteByKeyString")
     public void deleteByKeyString(String keyString) {
         DbSaveFrontExample condition = new DbSaveFrontExample();
         DbSaveFrontExample.Criteria criteria = condition.createCriteria();
@@ -86,6 +93,7 @@ public class DbSaveFrontServiceImpl implements DbSaveFrontService {
     }
 
     @Override
+    @Log(value = "DbSaveFrontServiceImpl queryCountByKeyWord")
     public Integer queryCountByKeyWord(String keyword) {
         DbSaveFrontExample condition = new DbSaveFrontExample();
         DbSaveFrontExample.Criteria criteria = condition.createCriteria();

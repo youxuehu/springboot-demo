@@ -1,6 +1,7 @@
 package com.example.springbootdemo.common.db.service.impl;
 
 import com.alibaba.fastjson.JSON;
+import com.example.springbootdemo.common.aop.Log;
 import com.example.springbootdemo.common.db.service.ExecutionService;
 import com.example.springbootdemo.common.db.service.TestSpringService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,7 @@ public class TestSpringServiceImpl implements TestSpringService {
     @Autowired
     private ExecutionService executionService;
     @Override
+    @Log(value = "TestSpringServiceImpl sayHello")
     public String sayHello(String name) {
         Map<String, Object> json = new HashMap<>();
         json.put("name", "游学虎");

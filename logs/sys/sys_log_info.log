@@ -112,3 +112,109 @@
 2021-01-22 23:14:38.770 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
 2021-01-22 23:14:38.773 [restartedMain] INFO  c.example.springbootdemo.SpringbootDemoApplication - Started SpringbootDemoApplication in 10.349 seconds (JVM running for 11.455)
 2021-01-22 23:14:38.859 [restartedMain] INFO  c.example.springbootdemo.SpringbootDemoApplication - name:  result{"name":"游学虎","age":20}
+2021-01-22 23:16:13.852 [http-nio-9090-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-22 23:16:13.910 [http-nio-9090-exec-1] INFO  c.e.s.interceptor.LoginCheckInterceptor - 登录拦截器
+2021-01-22 23:16:13.911 [http-nio-9090-exec-1] INFO  c.e.s.interceptor.LoginCheckInterceptor - http://localhost:9090/
+2021-01-22 23:16:14.584 [http-nio-9090-exec-2] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.592 [http-nio-9090-exec-2] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.600 [http-nio-9090-exec-2] INFO  c.e.springbootdemo.controller.LoginController - 登录
+2021-01-22 23:16:14.639 [http-nio-9090-exec-3] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.640 [http-nio-9090-exec-3] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.641 [http-nio-9090-exec-3] INFO  c.e.springbootdemo.controller.LoginController - 登录
+2021-01-22 23:16:14.653 [http-nio-9090-exec-8] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.654 [http-nio-9090-exec-6] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.654 [http-nio-9090-exec-7] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.654 [http-nio-9090-exec-5] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.654 [http-nio-9090-exec-6] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.654 [http-nio-9090-exec-7] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.654 [http-nio-9090-exec-5] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.653 [http-nio-9090-exec-4] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.655 [http-nio-9090-exec-4] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.654 [http-nio-9090-exec-8] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.655 [http-nio-9090-exec-9] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.655 [http-nio-9090-exec-9] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.672 [http-nio-9090-exec-10] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.673 [http-nio-9090-exec-10] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.676 [http-nio-9090-exec-5] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.676 [http-nio-9090-exec-5] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.677 [http-nio-9090-exec-4] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.677 [http-nio-9090-exec-4] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.680 [http-nio-9090-exec-5] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.680 [http-nio-9090-exec-5] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.689 [http-nio-9090-exec-5] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.689 [http-nio-9090-exec-5] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.694 [http-nio-9090-exec-8] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.695 [http-nio-9090-exec-3] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.695 [http-nio-9090-exec-8] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.695 [http-nio-9090-exec-3] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.695 [http-nio-9090-exec-9] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.695 [http-nio-9090-exec-9] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.695 [http-nio-9090-exec-2] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.696 [http-nio-9090-exec-2] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.699 [http-nio-9090-exec-4] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.700 [http-nio-9090-exec-4] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.701 [http-nio-9090-exec-10] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.702 [http-nio-9090-exec-10] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.704 [http-nio-9090-exec-6] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.704 [http-nio-9090-exec-6] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.708 [http-nio-9090-exec-7] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.708 [http-nio-9090-exec-7] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.713 [http-nio-9090-exec-5] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.713 [http-nio-9090-exec-5] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.714 [http-nio-9090-exec-9] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.714 [http-nio-9090-exec-9] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.714 [http-nio-9090-exec-7] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.715 [http-nio-9090-exec-7] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.719 [http-nio-9090-exec-8] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.719 [http-nio-9090-exec-8] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.728 [http-nio-9090-exec-1] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.731 [http-nio-9090-exec-1] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.995 [http-nio-9090-exec-10] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.995 [http-nio-9090-exec-10] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:17.205 [http-nio-9090-exec-2] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:17.205 [http-nio-9090-exec-2] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:17.253 [http-nio-9090-exec-2] INFO  c.e.s.common.cache.RedisCacheServiceImpl - 开始写入Redis缓存>>>>>>>>>>>>>>>key:
+2021-01-22 23:16:17.283 [http-nio-9090-exec-2] INFO  c.e.s.common.cache.RedisCacheServiceImpl - 写入Redis缓存>>>>>>>>>>>>>>>结束
+2021-01-22 23:16:17.284 [http-nio-9090-exec-2] INFO  c.example.springbootdemo.controller.BaseController - {
+	"success":true
+}
+2021-01-22 23:16:17.307 [http-nio-9090-exec-6] INFO  c.e.s.interceptor.LoginCheckInterceptor - 登录拦截器
+2021-01-22 23:16:17.307 [http-nio-9090-exec-6] INFO  c.e.s.interceptor.LoginCheckInterceptor - http://localhost:9090/layout
+2021-01-22 23:16:17.323 [http-nio-9090-exec-6] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:17.323 [http-nio-9090-exec-6] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:17.324 [http-nio-9090-exec-6] INFO  c.e.springbootdemo.interceptor.UserArgsResolver - <<<<<<<<<<< 获取用户 >>>>>>>>>>>>>>>
+2021-01-22 23:16:17.324 [http-nio-9090-exec-6] INFO  c.e.springbootdemo.controller.LoginController - layout
+2021-01-22 23:16:17.352 [http-nio-9090-exec-4] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:17.353 [http-nio-9090-exec-4] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:17.352 [http-nio-9090-exec-5] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:17.353 [http-nio-9090-exec-3] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:17.353 [http-nio-9090-exec-5] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:17.353 [http-nio-9090-exec-3] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:17.354 [http-nio-9090-exec-7] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:17.354 [http-nio-9090-exec-7] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:17.355 [http-nio-9090-exec-3] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:17.355 [http-nio-9090-exec-3] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:17.355 [http-nio-9090-exec-7] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:17.355 [http-nio-9090-exec-7] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:17.476 [http-nio-9090-exec-1] INFO  c.e.s.interceptor.LoginCheckInterceptor - 登录拦截器
+2021-01-22 23:16:17.477 [http-nio-9090-exec-1] INFO  c.e.s.interceptor.LoginCheckInterceptor - http://localhost:9090/cache/savefront/queryByKeyword
+2021-01-22 23:16:17.479 [http-nio-9090-exec-1] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:17.479 [http-nio-9090-exec-1] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:17.489 [http-nio-9090-exec-10] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:17.489 [http-nio-9090-exec-10] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:30.475 [http-nio-9090-exec-2] INFO  c.e.s.interceptor.LoginCheckInterceptor - 登录拦截器
+2021-01-22 23:16:30.476 [http-nio-9090-exec-2] INFO  c.e.s.interceptor.LoginCheckInterceptor - http://localhost:9090/cache/savefront/queryByKeyword
+2021-01-22 23:16:30.479 [http-nio-9090-exec-2] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:30.479 [http-nio-9090-exec-2] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:32.466 [http-nio-9090-exec-6] INFO  c.e.s.interceptor.LoginCheckInterceptor - 登录拦截器
+2021-01-22 23:16:32.466 [http-nio-9090-exec-6] INFO  c.e.s.interceptor.LoginCheckInterceptor - http://localhost:9090/cache/savefront/queryByKeyword
+2021-01-22 23:16:32.469 [http-nio-9090-exec-6] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:32.470 [http-nio-9090-exec-6] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:35:28.933 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler schedulerFactory_$_NON_CLUSTERED paused.
+2021-01-22 23:35:28.935 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2021-01-22 23:35:28.936 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-22 23:35:28.938 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler schedulerFactory_$_NON_CLUSTERED shutting down.
+2021-01-22 23:35:28.938 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler schedulerFactory_$_NON_CLUSTERED paused.
+2021-01-22 23:35:28.941 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler schedulerFactory_$_NON_CLUSTERED shutdown complete.
+2021-01-22 23:35:28.942 [SpringContextShutdownHook] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2021-01-22 23:35:28.949 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed

@@ -1,6 +1,7 @@
 package com.example.springbootdemo.common.db.service.impl;
 
 import com.alibaba.excel.util.CollectionUtils;
+import com.example.springbootdemo.common.aop.Log;
 import com.example.springbootdemo.common.db.dao.executionlog.mapper.ExecutionLogMapper;
 import com.example.springbootdemo.common.db.dao.executionlog.model.ExecutionLog;
 import com.example.springbootdemo.common.db.dao.executionlog.model.ExecutionLogExample;
@@ -18,11 +19,13 @@ public class ExecutionLogServiceImpl implements ExecutionLogService {
     ExecutionLogMapper executionLogMapper;
 
     @Override
+    @Log(value = "ExecutionLogServiceImpl insert")
     public void insert(ExecutionLog executionLog) {
         executionLogMapper.insertSelective(executionLog);
     }
 
     @Override
+    @Log(value = "ExecutionLogServiceImpl queryLogsByJobIds")
     public List<ExecutionLog> queryLogsByJobIds(String jobId) {
         ExecutionLogExample condition = new ExecutionLogExample();
         condition.createCriteria().andJobIdEqualTo(jobId);

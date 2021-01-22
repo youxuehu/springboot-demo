@@ -1,5 +1,6 @@
 package com.example.springbootdemo.common.db.service.impl;
 
+import com.example.springbootdemo.common.aop.Log;
 import com.example.springbootdemo.common.db.dao.testtable.mapper.TestTableMapper;
 import com.example.springbootdemo.common.db.dao.testtable.model.TestTable;
 import com.example.springbootdemo.common.db.dao.testtable.model.TestTableExample;
@@ -25,6 +26,7 @@ public class TestTableServiceImpl implements TestTableService {
     private TestTableMapper testTableMapper;
 
     @Override
+    @Log(value = "TestTableServiceImpl queryTestTableByKeyword")
     @Cacheable(cacheNames = "testtable", key = "#keyword")
     public PageInfo<TestTable> queryTestTableByKeyword(String keyword, Integer pageSize, Integer pageIndex) {
         if (pageIndex == null) {
@@ -49,11 +51,13 @@ public class TestTableServiceImpl implements TestTableService {
     }
 
     @Override
+    @Log(value = "TestTableServiceImpl queryById")
     public TestTable queryById(Long testId) {
         return testTableMapper.selectByPrimaryKey(testId);
     }
 
     @Override
+    @Log(value = "TestTableServiceImpl queryByName")
     public TestTable queryByName(String testName) {
         TestTableExample condition = new TestTableExample();
         condition.createCriteria().andTestNameEqualTo(testName);
@@ -62,6 +66,7 @@ public class TestTableServiceImpl implements TestTableService {
     }
 
     @Override
+    @Log(value = "TestTableServiceImpl insertTestTable")
     @CachePut(key = "#testTable.testName")
     public TestTable insertTestTable(TestTable testTable) {
         Integer id = testTableMapper.insertSelective(testTable);
@@ -71,6 +76,7 @@ public class TestTableServiceImpl implements TestTableService {
 
     @Override
     @CachePut(key = "#testTable.testId")
+    @Log(value = "TestTableServiceImpl updateTestTable")
     public TestTable updateTestTable(TestTable testTable) {
         testTableMapper.updateByPrimaryKeySelective(testTable);
         return testTable;
@@ -78,6 +84,7 @@ public class TestTableServiceImpl implements TestTableService {
 
     // 删除数据时删除缓存的value
     @Override
+    @Log(value = "TestTableServiceImpl deleteTestTable")
     @CacheEvict(key = "#testId", allEntries = true) // allEntries = true 删除数据时删除缓存的key和value
     public void deleteTestTable(Long testId) {
         testTableMapper.deleteByPrimaryKey(testId);

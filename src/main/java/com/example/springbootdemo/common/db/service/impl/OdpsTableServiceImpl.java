@@ -1,5 +1,6 @@
 package com.example.springbootdemo.common.db.service.impl;
 
+import com.example.springbootdemo.common.aop.Log;
 import com.example.springbootdemo.common.db.dao.odps.mapper.OdpsMapper;
 import com.example.springbootdemo.common.db.dao.odps.model.Odps;
 import com.example.springbootdemo.common.db.dao.odps.model.OdpsExample;
@@ -17,6 +18,7 @@ public class OdpsTableServiceImpl implements OdpsTableService {
     OdpsMapper odpsMapper;
 
     @Override
+    @Log(value = "OdpsTableServiceImpl queryOdpsTableByKeyword")
     public PageInfo<Odps> queryOdpsTableByKeyword(String keyword, Integer pageSize, Integer pageIndex) {
         if (pageIndex == null) {
             pageIndex = 1;

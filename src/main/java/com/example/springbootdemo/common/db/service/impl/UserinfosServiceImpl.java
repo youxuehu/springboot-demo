@@ -1,5 +1,6 @@
 package com.example.springbootdemo.common.db.service.impl;
 
+import com.example.springbootdemo.common.aop.Log;
 import com.example.springbootdemo.common.db.dao.userinfos.mapper.UserinfosMapper;
 import com.example.springbootdemo.common.db.dao.userinfos.model.Userinfos;
 import com.example.springbootdemo.common.db.service.UserinfosService;
@@ -21,6 +22,7 @@ public class UserinfosServiceImpl implements UserinfosService {
     UserinfosMapper userinfosMapper;
 
     @Override
+    @Log(value = "UserinfosServiceImpl insertUserinfos")
     public List<Integer> insertUserinfos() {
         LOG.info("insert into table userinfos .....");
         List<Integer> ids = new ArrayList<>();

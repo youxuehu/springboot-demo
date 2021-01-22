@@ -1,5 +1,6 @@
 package com.example.springbootdemo.common.db.service.impl;
 
+import com.example.springbootdemo.common.aop.Log;
 import com.example.springbootdemo.common.db.dao.quartz.jobandtrigger.mapper.JobAndTriggerMapper;
 import com.example.springbootdemo.common.db.dao.quartz.jobandtrigger.model.JobAndTrigger;
 import com.example.springbootdemo.common.db.service.IJobAndTriggerService;
@@ -16,7 +17,8 @@ public class JobAndTriggerImpl implements IJobAndTriggerService {
 
 	@Autowired
 	private JobAndTriggerMapper jobAndTriggerMapper;
-	
+
+	@Log(value = "JobAndTriggerImpl getJobAndTriggerDetails")
 	public PageInfo<JobAndTrigger> getJobAndTriggerDetails(String keyword, Integer pageNum, Integer pageSize) {
 		if (pageNum == null) {
 			pageNum = 1;

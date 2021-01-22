@@ -17,3 +17,10 @@ create table execution_log(
     job_id varchar(32),
     content text
 );
+
+create table admin_operate_log(
+    id bigint primary key not null auto_increment,
+    operator varchar(255),
+    gmt_create timestamp,
+    content text
+);
