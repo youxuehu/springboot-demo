@@ -39,10 +39,6 @@ public class ResultLog {
 
     @Override
     public String toString() {
-        return "ResultLog{" +
-                "gmtCreate=" + gmtCreate +
-                ", content='" + content + '\'' +
-                ", jobId='" + jobId + '\'' +
-                '}';
+        return gmtCreate + "    " + content ;
     }
 }

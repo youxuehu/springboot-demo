@@ -12,6 +12,7 @@ import com.google.common.collect.Lists;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -35,6 +36,7 @@ public class JobManagerImpl implements JobManager, InitializingBean {
 
     private ScheduledExecutorService threadPool;
     private static final Integer MESSAGE_LOG_COUNT = 4;
+    @Autowired
     private SaveDbLogHandler saveDbLogHandler;
 
     protected List<BlockingQueue<ResultLog>> queues = new ArrayList<>();

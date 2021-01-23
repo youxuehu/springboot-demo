@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http:www.thymeleaf.org" xmlns:el="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>EasyUI</title>
+    <link rel="stylesheet" type="text/css" href="/easyui/themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="/easyui/themes/default/easyui.css">
+    <script type="text/javascript" src="/easyui/jquery.min.js"></script>
+    <script type="text/javascript" src="/easyui/jquery.easyui.min.js"></script>
+    <script src="/easyui/locale/easyui-lang-zh_CN.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            var jobId = $("#JobId").val()
+            var pageIndex = 1
+            var pageSize = 10
+            getCache(pageIndex, pageSize, jobId)
+            function getCache(pageIndex, pageSize, jobId){
+                var data = $.ajax({
+                    //请求方式
+                    type : "GET",
+                    //请求地址
+                    url : "/task/log/query?pageIndex=" + pageIndex + "&pageSize=" + pageSize + "&jobId=" + jobId,
+                    //请求成功
+                    success : function(data) {
+                        console.log(data)
+                        $('#dg').datagrid({
+                            data:data.data
+                        });
+                        $('#pp_cache').pagination({
+                            pageList: [10,20,50,100],
+                            total:data.total,
+                            pageSize:data.pageSize,
+                            pageNumber:data.pageIndex
+                        });
+                    },
+                    //请求失败，包含具体的错误信息
+                    error : function(e){
+                        console.log(e)
+                        message("查询信息失败，")
+                    }
+                });
+            }
+
+            $('#pp_cache').pagination({
+                onSelectPage:function(pageNumber, pageSize){
+                    getCache(pageNumber, pageSize, jobId)
+                },
+                onRefresh:function(pageNumber, pageSize){
+                    getCache(pageNumber, pageSize, jobId)
+                }
+            });
+
+            $("#btn").click(function(){
+                var jobId = $("#JobId").val()
+                getCache(pageIndex, pageSize, jobId)
+            })
+
+            $("#btncmd").click(function(){
+                var cmd = $("#cmd").val()
+                exec(pageIndex, pageSize, cmd)
+            })
+            var ref = "";
+            function exec(pageIndex, pageSize, cmd) {
+                clearInterval(ref)
+                var list = {cmd:cmd};
+                var data = $.ajax({
+                    //请求方式
+                    type : "POST",
+                    //请求的媒体类型
+                    contentType: "application/json;charset=UTF-8",
+                    //请求地址
+                    url : "/api/v1/execute",
+                    //数据，json字符串
+                    data : JSON.stringify(list),
+                    dataType: "json",
+                    //请求成功
+                    success : function(data) {
+                        console.log(data);
+                        message("成功")
+                        return data
+                    },
+                    //请求失败，包含具体的错误信息
+                    error : function(e){
+                        console.log(e.status);
+                        console.log(e.responseText);
+                        message(e.responseText)
+                    }
+                });
+                console.log(data)
+                ref = setInterval(function(){
+                   getCache(1, 50000, data.responseJSON.data.jobId)
+                },2000);
+            }
+
+            function message(msg) {
+                $.messager.show({
+                    title:'我的消息',
+                    msg:msg,
+                    timeout:5000,
+                    showType:'slide'
+                });
+            }
+        })
+    </script>
+</head>
+<div>
+    <label for="JobId">JobId:</label>
+    <input id="JobId" class="easyui-validatebox" type="text" name="JobId" data-options="required:true">
+    <a id="btn" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-search'">查询</a>
+</div>
+
+<div>
+    <label for="cmd">cmd:</label>
+    <textarea id="cmd" rows="5" cols="100" name="cmd" class="textarea easyui-validatebox" data-options="required:true"></textarea>
+    <a id="btncmd" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-search'">执行</a>
+</div>
+
+<table id="dg" class="easyui-datagrid" style="height:400px" data-options="fitColumns:true,singleSelect:true">
+    <thead>
+    <tr>
+        <th data-options="field:'id',width:10">ID</th>
+        <th data-options="field:'jobId',width:60">JobId</th>
+        <th data-options="field:'content',width:200">content</th>
+        <th data-options="field:'gmtCreate',width:80">gmtCreate</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+<div id="pp_cache" class="easyui-pagination" style="background:#efefef;border:1px solid #ccc;"></div>
+
+

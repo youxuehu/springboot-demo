@@ -23,11 +23,21 @@ public class MsgSender {
     public MsgSender(String logRootPath, BlockingQueue<ResultLog> queue, String jobId) {
         this.logRootPath = logRootPath;
         this.queue = queue;
-        String ymd = TimeUtils.ymd();
-        File file = new File(logRootPath + "/" + ymd + jobId + ".log");
-        file.mkdirs();
         try {
-            loggerPrint = new PrintWriter(new FileWriter(file));
+            String ymd = TimeUtils.ymd();
+            String path = logRootPath + "/" + ymd;
+            File file = new File(path);
+            if (!file.exists()) {
+                file.mkdirs();
+            }
+            String filePath = path+ "/" +jobId + ".log";
+            file = new File(filePath);
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+            if (this.loggerPrint == null) {
+                this.loggerPrint = new PrintWriter(new FileWriter(file));
+            }
         } catch (IOException e) {
             LOGGER.warn("new PrintWriter", e);
         }
@@ -38,5 +48,6 @@ public class MsgSender {
             queue.add(log);
         }
         loggerPrint.println(log);
+        loggerPrint.flush();
     }
 }
