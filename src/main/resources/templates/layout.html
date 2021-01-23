@@ -191,6 +191,7 @@
                     <el-dropdown @command="handleCommand">
                         <i class="el-icon-setting" style="margin-right: 15px"></i>
                         <el-dropdown-menu slot="dropdown">
+                            <el-dropdown-item command="easyui">easyui</el-dropdown-item>
                             <el-dropdown-item command="userInfo">用户信息</el-dropdown-item>
                             <el-dropdown-item command="logout">退出</el-dropdown-item>
                         </el-dropdown-menu>
@@ -682,6 +683,8 @@
                     }, function () {
                         console.log('failed');
                     })
+                } else if (command === 'easyui') {
+                    window.location.href = '/easyui'
                 }
             },
         }

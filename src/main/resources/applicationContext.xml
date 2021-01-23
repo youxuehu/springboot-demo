@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:aop="http://www.springframework.org/schema/aop"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-                           http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+                           http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+                           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
         <mvc:interceptors>
             <!-- 谁配置在前preHandle就先执行 -->
@@ -34,4 +36,9 @@
             </mvc:interceptor>
         </mvc:interceptors>
 
+
+    <aop:config>
+        <aop:pointcut id="logPC" expression="@annotation(com.example.springbootdemo.common.aop.Log)"/>
+        <aop:advisor advice-ref="logHandlerAdapter" pointcut-ref="logPC"/>
+    </aop:config>
 </beans>

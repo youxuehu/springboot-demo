@@ -1,0 +1,220 @@
+2021-01-22 23:14:29.088 [restartedMain] INFO  c.example.springbootdemo.SpringbootDemoApplication - Starting SpringbootDemoApplication on youxuehudeiMac.lan with PID 5058 (/Users/youxuehu/IdeaProjects/springboot-demo/target/classes started by youxuehu in /Users/youxuehu/IdeaProjects/springboot-demo)
+2021-01-22 23:14:29.093 [restartedMain] INFO  c.example.springbootdemo.SpringbootDemoApplication - No active profile set, falling back to default profiles: default
+2021-01-22 23:14:29.251 [restartedMain] INFO  o.s.boot.devtools.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar referenced one or more files that do not exist: file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_cs.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_de_DE.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_es.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_fr.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_hu.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_it.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_ja_JP.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_ko_KR.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_pl.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_pt_BR.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_ru.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_zh_CN.jar,file:/Users/youxuehu/.m2/repository/org/apache/derby/derby/10.14.2.0/derbyLocale_zh_TW.jar
+2021-01-22 23:14:29.252 [restartedMain] INFO  o.s.boot.devtools.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/youxuehu/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/jaxb-impl-2.2.3-1.jar referenced one or more files that do not exist: file:/Users/youxuehu/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/jaxb-api.jar,file:/Users/youxuehu/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/activation.jar,file:/Users/youxuehu/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/jsr173_1.0_api.jar,file:/Users/youxuehu/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/jaxb1-impl.jar
+2021-01-22 23:14:29.252 [restartedMain] INFO  o.s.boot.devtools.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/Users/youxuehu/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2021-01-22 23:14:29.252 [restartedMain] INFO  o.s.boot.devtools.restart.ChangeableUrls - The Class-Path manifest attribute in /Users/youxuehu/.m2/repository/com/mchange/c3p0/0.9.5.5/c3p0-0.9.5.5.jar referenced one or more files that do not exist: file:/Users/youxuehu/.m2/repository/com/mchange/c3p0/0.9.5.5/mchange-commons-java-0.2.19.jar
+2021-01-22 23:14:29.252 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-01-22 23:14:29.252 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-01-22 23:14:31.218 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-01-22 23:14:31.223 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-01-22 23:14:31.459 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 213ms. Found 0 repository interfaces.
+2021-01-22 23:14:32.216 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-22 23:14:32.874 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+2021-01-22 23:14:32.886 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9090"]
+2021-01-22 23:14:32.887 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-01-22 23:14:32.887 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2021-01-22 23:14:32.992 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-01-22 23:14:32.993 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3741 ms
+2021-01-22 23:14:33.073 [restartedMain] INFO  org.quartz.ee.servlet.QuartzInitializerListener - Quartz Initializer Servlet loaded, initializing Scheduler...
+2021-01-22 23:14:33.119 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Using ConnectionProvider class 'org.quartz.utils.C3p0PoolingConnectionProvider' for data source 'qzDS'
+2021-01-22 23:14:33.331 [MLog-Init-Reporter] INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+2021-01-22 23:14:33.393 [restartedMain] INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.5 [built 11-December-2019 22:18:33 -0800; debug? true; trace: 10]
+2021-01-22 23:14:33.557 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2021-01-22 23:14:33.560 [restartedMain] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: restartedMain
+2021-01-22 23:14:33.571 [restartedMain] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-01-22 23:14:33.571 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2021-01-22 23:14:33.572 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2021-01-22 23:14:33.573 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - JobStoreTX initialized.
+2021-01-22 23:14:33.573 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 5 threads.
+  Using job-store 'org.quartz.impl.jdbcjobstore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2021-01-22 23:14:33.574 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'QuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2021-01-22 23:14:33.574 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2021-01-22 23:14:33.605 [restartedMain] INFO  c.m.v2.c3p0.impl.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge2niafbu4qhx1hqxwct|4be8c3ab, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge2niafbu4qhx1hqxwct|4be8c3ab, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/test?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 10, maxStatements -> 0, maxStatementsPerConnection -> 120, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2021-01-22 23:14:33.948 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Freed 0 triggers from 'acquired' / 'blocked' state.
+2021-01-22 23:14:33.974 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2021-01-22 23:14:33.975 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovery complete.
+2021-01-22 23:14:33.976 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 'complete' triggers.
+2021-01-22 23:14:33.978 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 stale fired job entries.
+2021-01-22 23:14:33.981 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2021-01-22 23:14:33.981 [restartedMain] INFO  org.quartz.ee.servlet.QuartzInitializerListener - Scheduler has been started...
+2021-01-22 23:14:33.981 [restartedMain] INFO  org.quartz.ee.servlet.QuartzInitializerListener - Storing the Quartz Scheduler Factory in the servlet context at key: org.quartz.impl.StdSchedulerFactory.KEY
+2021-01-22 23:14:34.732 [restartedMain] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2021-01-22 23:14:34.941 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2021-01-22 23:14:35.689 [restartedMain] INFO  io.lettuce.core.EpollProvider - Starting without optional epoll library
+2021-01-22 23:14:35.704 [restartedMain] INFO  io.lettuce.core.KqueueProvider - Starting without optional kqueue library
+2021-01-22 23:14:35.910 [restartedMain] INFO  c.e.springbootdemo.common.redis.RedisComonent - 测试redis的String数据类型，查询name=>recommend system
+2021-01-22 23:14:35.920 [restartedMain] INFO  c.e.springbootdemo.common.redis.RedisComonent - 测试redis的List数据类型{leftPush， leftPop}，查询list=>[a, b]
+2021-01-22 23:14:35.931 [restartedMain] INFO  c.e.springbootdemo.common.redis.RedisComonent - 测试redis的Hash数据类型{put， get}，查询hash=>{name=zhang3, age=28}
+2021-01-22 23:14:35.943 [restartedMain] INFO  c.e.springbootdemo.common.redis.RedisComonent - 测试redis的Set数据类型{add， members}，查询setMembers=>[[jack, tom]]
+2021-01-22 23:14:35.946 [restartedMain] INFO  c.e.springbootdemo.common.redis.RedisComonent - 测试redis的Set数据类型{add， randomMember}，查询randomMember=>[jack, tom]
+2021-01-22 23:14:35.950 [restartedMain] INFO  c.e.springbootdemo.common.redis.RedisComonent - 测试redis的Set数据类型{add， pop}，查询setPop=>[jack, tom]
+2021-01-22 23:14:35.951 [restartedMain] INFO  c.e.springbootdemo.common.redis.RedisComonent - 测试redis的Set数据类型{add， pop}，再次查询setPop2=>null
+2021-01-22 23:14:35.966 [restartedMain] INFO  c.e.springbootdemo.common.redis.RedisComonent - 测试redis的ZSet数据类型{add， range}，查询zSetName=>[]
+2021-01-22 23:14:35.972 [restartedMain] INFO  c.e.springbootdemo.common.redis.RedisComonent - 测试redis的keys *，查询keys=>[]
+2021-01-22 23:14:35.973 [restartedMain] INFO  c.e.s.common.cache.RedisCacheServiceImpl - SCAN 0 MATCH key1234* COUNT 10000
+2021-01-22 23:14:35.979 [restartedMain] INFO  c.e.s.common.cache.RedisCacheServiceImpl - return size:0
+2021-01-22 23:14:35.979 [restartedMain] INFO  c.e.springbootdemo.common.redis.RedisComonent - 测试redis的keys *，查询keys=>[]
+2021-01-22 23:14:36.355 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Using ConnectionProvider class 'org.quartz.utils.C3p0PoolingConnectionProvider' for data source 'qzDS'
+2021-01-22 23:14:36.380 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2021-01-22 23:14:36.380 [restartedMain] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: restartedMain
+2021-01-22 23:14:36.381 [restartedMain] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-01-22 23:14:36.381 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2021-01-22 23:14:36.381 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2021-01-22 23:14:36.381 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - JobStoreTX initialized.
+2021-01-22 23:14:36.381 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'schedulerFactory' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 5 threads.
+  Using job-store 'org.quartz.impl.jdbcjobstore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2021-01-22 23:14:36.382 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'schedulerFactory' initialized from an externally provided properties instance.
+2021-01-22 23:14:36.382 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2021-01-22 23:14:36.384 [restartedMain] INFO  org.quartz.core.QuartzScheduler - JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@4402cf74
+2021-01-22 23:14:37.205 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-01-22 23:14:37.383 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-22 23:14:37.412 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-01-22 23:14:37.461 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2021-01-22 23:14:37.908 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2021-01-22 23:14:38.037 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2021-01-22 23:14:38.058 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-01-22 23:14:38.165 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2021-01-22 23:14:38.404 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: helloUsingGET_1
+2021-01-22 23:14:38.412 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: indexUsingGET_1
+2021-01-22 23:14:38.558 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteUsingPOST_1
+2021-01-22 23:14:38.618 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: indexUsingGET_2
+2021-01-22 23:14:38.630 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: queryLogUsingGET_1
+2021-01-22 23:14:38.631 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: queryLogUsingHEAD_1
+2021-01-22 23:14:38.631 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: queryLogUsingPOST_1
+2021-01-22 23:14:38.632 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: queryLogUsingPUT_1
+2021-01-22 23:14:38.632 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: queryLogUsingPATCH_1
+2021-01-22 23:14:38.633 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: queryLogUsingDELETE_1
+2021-01-22 23:14:38.633 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: queryLogUsingOPTIONS_1
+2021-01-22 23:14:38.634 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: queryLogUsingTRACE_1
+2021-01-22 23:14:38.655 [restartedMain] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Starting Quartz Scheduler now
+2021-01-22 23:14:38.666 [restartedMain] INFO  c.m.v2.c3p0.impl.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge2niafbu4qhx1hqxwct|1cff47a, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge2niafbu4qhx1hqxwct|1cff47a, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:3306/test?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 10, maxStatements -> 0, maxStatementsPerConnection -> 120, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2021-01-22 23:14:38.693 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Freed 0 triggers from 'acquired' / 'blocked' state.
+2021-01-22 23:14:38.697 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovering 0 jobs that were in-progress at the time of the last shut-down.
+2021-01-22 23:14:38.697 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Recovery complete.
+2021-01-22 23:14:38.698 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 'complete' triggers.
+2021-01-22 23:14:38.700 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Removed 0 stale fired job entries.
+2021-01-22 23:14:38.702 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler schedulerFactory_$_NON_CLUSTERED started.
+2021-01-22 23:14:38.715 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9090"]
+2021-01-22 23:14:38.745 [restartedMain] INFO  org.mortbay.log - Logging to Logger[org.mortbay.log] via org.mortbay.log.Slf4jLog
+2021-01-22 23:14:38.770 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
+2021-01-22 23:14:38.773 [restartedMain] INFO  c.example.springbootdemo.SpringbootDemoApplication - Started SpringbootDemoApplication in 10.349 seconds (JVM running for 11.455)
+2021-01-22 23:14:38.859 [restartedMain] INFO  c.example.springbootdemo.SpringbootDemoApplication - name:  result{"name":"游学虎","age":20}
+2021-01-22 23:16:13.852 [http-nio-9090-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-22 23:16:13.910 [http-nio-9090-exec-1] INFO  c.e.s.interceptor.LoginCheckInterceptor - 登录拦截器
+2021-01-22 23:16:13.911 [http-nio-9090-exec-1] INFO  c.e.s.interceptor.LoginCheckInterceptor - http://localhost:9090/
+2021-01-22 23:16:14.584 [http-nio-9090-exec-2] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.592 [http-nio-9090-exec-2] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.600 [http-nio-9090-exec-2] INFO  c.e.springbootdemo.controller.LoginController - 登录
+2021-01-22 23:16:14.639 [http-nio-9090-exec-3] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.640 [http-nio-9090-exec-3] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.641 [http-nio-9090-exec-3] INFO  c.e.springbootdemo.controller.LoginController - 登录
+2021-01-22 23:16:14.653 [http-nio-9090-exec-8] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.654 [http-nio-9090-exec-6] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.654 [http-nio-9090-exec-7] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.654 [http-nio-9090-exec-5] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.654 [http-nio-9090-exec-6] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.654 [http-nio-9090-exec-7] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.654 [http-nio-9090-exec-5] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.653 [http-nio-9090-exec-4] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.655 [http-nio-9090-exec-4] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.654 [http-nio-9090-exec-8] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.655 [http-nio-9090-exec-9] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.655 [http-nio-9090-exec-9] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.672 [http-nio-9090-exec-10] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.673 [http-nio-9090-exec-10] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.676 [http-nio-9090-exec-5] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.676 [http-nio-9090-exec-5] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.677 [http-nio-9090-exec-4] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.677 [http-nio-9090-exec-4] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.680 [http-nio-9090-exec-5] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.680 [http-nio-9090-exec-5] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.689 [http-nio-9090-exec-5] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.689 [http-nio-9090-exec-5] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.694 [http-nio-9090-exec-8] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.695 [http-nio-9090-exec-3] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.695 [http-nio-9090-exec-8] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.695 [http-nio-9090-exec-3] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.695 [http-nio-9090-exec-9] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.695 [http-nio-9090-exec-9] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.695 [http-nio-9090-exec-2] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.696 [http-nio-9090-exec-2] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.699 [http-nio-9090-exec-4] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.700 [http-nio-9090-exec-4] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.701 [http-nio-9090-exec-10] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.702 [http-nio-9090-exec-10] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.704 [http-nio-9090-exec-6] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.704 [http-nio-9090-exec-6] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.708 [http-nio-9090-exec-7] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.708 [http-nio-9090-exec-7] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.713 [http-nio-9090-exec-5] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.713 [http-nio-9090-exec-5] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.714 [http-nio-9090-exec-9] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.714 [http-nio-9090-exec-9] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.714 [http-nio-9090-exec-7] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.715 [http-nio-9090-exec-7] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.719 [http-nio-9090-exec-8] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.719 [http-nio-9090-exec-8] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.728 [http-nio-9090-exec-1] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.731 [http-nio-9090-exec-1] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:14.995 [http-nio-9090-exec-10] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:14.995 [http-nio-9090-exec-10] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:17.205 [http-nio-9090-exec-2] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:17.205 [http-nio-9090-exec-2] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:17.253 [http-nio-9090-exec-2] INFO  c.e.s.common.cache.RedisCacheServiceImpl - 开始写入Redis缓存>>>>>>>>>>>>>>>key:
+2021-01-22 23:16:17.283 [http-nio-9090-exec-2] INFO  c.e.s.common.cache.RedisCacheServiceImpl - 写入Redis缓存>>>>>>>>>>>>>>>结束
+2021-01-22 23:16:17.284 [http-nio-9090-exec-2] INFO  c.example.springbootdemo.controller.BaseController - {
+	"success":true
+}
+2021-01-22 23:16:17.307 [http-nio-9090-exec-6] INFO  c.e.s.interceptor.LoginCheckInterceptor - 登录拦截器
+2021-01-22 23:16:17.307 [http-nio-9090-exec-6] INFO  c.e.s.interceptor.LoginCheckInterceptor - http://localhost:9090/layout
+2021-01-22 23:16:17.323 [http-nio-9090-exec-6] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:17.323 [http-nio-9090-exec-6] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:17.324 [http-nio-9090-exec-6] INFO  c.e.springbootdemo.interceptor.UserArgsResolver - <<<<<<<<<<< 获取用户 >>>>>>>>>>>>>>>
+2021-01-22 23:16:17.324 [http-nio-9090-exec-6] INFO  c.e.springbootdemo.controller.LoginController - layout
+2021-01-22 23:16:17.352 [http-nio-9090-exec-4] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:17.353 [http-nio-9090-exec-4] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:17.352 [http-nio-9090-exec-5] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:17.353 [http-nio-9090-exec-3] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:17.353 [http-nio-9090-exec-5] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:17.353 [http-nio-9090-exec-3] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:17.354 [http-nio-9090-exec-7] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:17.354 [http-nio-9090-exec-7] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:17.355 [http-nio-9090-exec-3] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:17.355 [http-nio-9090-exec-3] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:17.355 [http-nio-9090-exec-7] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:17.355 [http-nio-9090-exec-7] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:17.476 [http-nio-9090-exec-1] INFO  c.e.s.interceptor.LoginCheckInterceptor - 登录拦截器
+2021-01-22 23:16:17.477 [http-nio-9090-exec-1] INFO  c.e.s.interceptor.LoginCheckInterceptor - http://localhost:9090/cache/savefront/queryByKeyword
+2021-01-22 23:16:17.479 [http-nio-9090-exec-1] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:17.479 [http-nio-9090-exec-1] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:17.489 [http-nio-9090-exec-10] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:17.489 [http-nio-9090-exec-10] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:30.475 [http-nio-9090-exec-2] INFO  c.e.s.interceptor.LoginCheckInterceptor - 登录拦截器
+2021-01-22 23:16:30.476 [http-nio-9090-exec-2] INFO  c.e.s.interceptor.LoginCheckInterceptor - http://localhost:9090/cache/savefront/queryByKeyword
+2021-01-22 23:16:30.479 [http-nio-9090-exec-2] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:30.479 [http-nio-9090-exec-2] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:16:32.466 [http-nio-9090-exec-6] INFO  c.e.s.interceptor.LoginCheckInterceptor - 登录拦截器
+2021-01-22 23:16:32.466 [http-nio-9090-exec-6] INFO  c.e.s.interceptor.LoginCheckInterceptor - http://localhost:9090/cache/savefront/queryByKeyword
+2021-01-22 23:16:32.469 [http-nio-9090-exec-6] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 进入LocaleRequestFilter过滤器
+2021-01-22 23:16:32.470 [http-nio-9090-exec-6] INFO  c.e.s.interceptor.LocaleRequestInterceptor - 设置语言----- en
+2021-01-22 23:35:28.933 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler schedulerFactory_$_NON_CLUSTERED paused.
+2021-01-22 23:35:28.935 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2021-01-22 23:35:28.936 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-22 23:35:28.938 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler schedulerFactory_$_NON_CLUSTERED shutting down.
+2021-01-22 23:35:28.938 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler schedulerFactory_$_NON_CLUSTERED paused.
+2021-01-22 23:35:28.941 [SpringContextShutdownHook] INFO  org.quartz.core.QuartzScheduler - Scheduler schedulerFactory_$_NON_CLUSTERED shutdown complete.
+2021-01-22 23:35:28.942 [SpringContextShutdownHook] INFO  o.s.scheduling.quartz.SchedulerFactoryBean - Shutting down Quartz Scheduler
+2021-01-22 23:35:28.949 [SpringContextShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed

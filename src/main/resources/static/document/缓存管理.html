@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http:www.thymeleaf.org" xmlns:el="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>EasyUI</title>
+    <link rel="stylesheet" type="text/css" href="/easyui/themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="/easyui/themes/default/easyui.css">
+    <script type="text/javascript" src="/easyui/jquery.min.js"></script>
+    <script type="text/javascript" src="/easyui/jquery.easyui.min.js"></script>
+    <script src="/easyui/locale/easyui-lang-zh_CN.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            var keyword = $("#keyword").val()
+            var pageIndex = 1
+            var pageSize = 10
+            getCache(pageIndex, pageSize, keyword)
+            function getCache(pageIndex, pageSize, keyword){
+                $.get("/cache/savefront/queryByKeyword?pageIndex=" + pageIndex + "&pageSize=" + pageSize + "&keyword=" + keyword ,function(data,status){
+                    console.log(data)
+                    console.log(status)
+                    if (status === 'success') {
+                        $('#dg').datagrid({
+                            data:data.data
+                        });
+                        $('#pp_cache').pagination({
+                            pageList: [10,20,50,100],
+                            total:data.total,
+                            pageSize:data.pageSize,
+                            pageNumber:data.pageIndex
+                        });
+                    }
+                });
+            }
+
+            $('#pp_cache').pagination({
+                onSelectPage:function(pageNumber, pageSize){
+                    getCache(pageNumber, pageSize, keyword)
+                },
+                onRefresh:function(pageNumber, pageSize){
+                    getCache(pageNumber, pageSize, keyword)
+                }
+            });
+
+            $('#btn').bind('click', function(){
+                $('#ff').form({
+                    url:"/cache/savefront/queryByKeyword?pageIndex=" + pageIndex + "&pageSize=" + pageSize + "&keyword=" + keyword,
+                    onSubmit: function(){
+                        // do some check
+                        // return false to prevent submit;
+                    },
+                    success:function(data){
+                        alert(data)
+                    }
+                });
+            });
+        })
+
+    </script>
+</head>
+<form id="ff" method="post">
+    <div>
+        <label for="keyString">keyString:</label>
+        <input id="keyword" class="easyui-validatebox" type="text" name="keyString" data-options="required:true">
+    </div>
+    <a id="btn" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-search'">查询</a>
+</form>
+<table id="dg" class="easyui-datagrid" style="height:400px" data-options="fitColumns:true,singleSelect:true">
+    <thead>
+    <tr>
+        <th data-options="field:'id',width:100">ID</th>
+        <th data-options="field:'keyString',width:100">缓存KEY</th>
+        <th data-options="field:'valueString',width:100">缓存VALUE</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+<div id="pp_cache" class="easyui-pagination" style="background:#efefef;border:1px solid #ccc;"></div>
+
+

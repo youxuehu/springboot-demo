@@ -15,6 +15,7 @@ import java.util.List;
 public class AdminServiceImpl implements AdminService {
     @Autowired
     AdminMapper adminMapper;
+
     @Override
     @Log(value = "查询admin列表")
     public List<Admin> queryAdmins() {

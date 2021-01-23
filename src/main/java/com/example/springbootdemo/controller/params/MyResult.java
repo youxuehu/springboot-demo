@@ -11,6 +11,8 @@ public class MyResult<T> implements Serializable {
     private String errorMessage;
     private T data;
     private Integer total;
+    private Integer pageIndex;
+    private Integer pageSize;
 
     public MyResult<T> appenderrorMessage(String errorMessage){
         this.errorMessage = errorMessage;
@@ -95,6 +97,22 @@ public class MyResult<T> implements Serializable {
 
     public void setTotal(Integer total) {
         this.total = total;
+    }
+
+    public Integer getPageIndex() {
+        return pageIndex;
+    }
+
+    public void setPageIndex(Integer pageIndex) {
+        this.pageIndex = pageIndex;
+    }
+
+    public Integer getPageSize() {
+        return pageSize;
+    }
+
+    public void setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
     }
 
     @Override

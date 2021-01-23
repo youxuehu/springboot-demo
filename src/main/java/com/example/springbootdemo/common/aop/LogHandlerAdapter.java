@@ -28,10 +28,11 @@ public class LogHandlerAdapter implements MethodInterceptor {
         String value = annotation.value();
         AdminOperateLog adminOperateLog = new AdminOperateLog();
         adminOperateLog.setContent(value);
-        adminOperateLog.setOperator(ThreadLocalHolder.get().getUserName());
+        adminOperateLog.setOperator(ThreadLocalHolder.get() == null ? "系统自动" : ThreadLocalHolder.get().getUserName());
         adminOperateLog.setGmtCreate(new Date());
         adminOperateLogMapper.insertSelective(adminOperateLog);
         Object result = methodInvocation.proceed();
         return result;
     }
+
 }

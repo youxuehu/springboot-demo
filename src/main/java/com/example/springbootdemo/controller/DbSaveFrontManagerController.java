@@ -26,6 +26,8 @@ public class DbSaveFrontManagerController {
         Integer total = dbSaveFrontService.queryCountByKeyWord(keyword);
         myResult.success(dbSaveFronts);
         myResult.setTotal(total);
+        myResult.setPageSize(pageSize);
+        myResult.setPageIndex(pageIndex);
         return myResult;
     }
 

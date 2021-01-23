@@ -69,6 +69,7 @@ public class LoginCheckInterceptor extends HandlerInterceptorAdapter {
         }
         // 存线程里面
         ThreadLocalHolder.set(JSON.parseObject(cacheValue, SessionInfo.class));
+        request.getSession().setAttribute(SESSION_KET, JSON.parseObject(cacheValue));
         return false;
     }
 }

@@ -123,6 +123,9 @@
     <if test="orderByClause != null" >
       order by ${orderByClause}
     </if>
+    <if test="limitStart != null and limitStart >=0 " >
+      limit ${limitStart} , ${limitEnd}
+    </if>
   </select>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.example.springbootdemo.common.db.dao.adminoperatelog.model.AdminOperateLogExample" >
     <!--
