@@ -41,23 +41,15 @@
                 }
             });
 
-            $('#btn').bind('click', function(){
-                $('#ff').form({
-                    url:"/cache/savefront/queryByKeyword?pageIndex=" + pageIndex + "&pageSize=" + pageSize + "&keyword=" + keyword,
-                    onSubmit: function(){
-                        // do some check
-                        // return false to prevent submit;
-                    },
-                    success:function(data){
-                        alert(data)
-                    }
-                });
+            $('#btn').click(function(){
+                var keyword = $("#keyword").val()
+                getCache(pageIndex, pageSize, keyword)
             });
         })
 
     </script>
 </head>
-<form id="ff" method="post">
+<form id="ff">
     <div>
         <label for="keyword">关键字:</label>
         <input id="keyword" class="easyui-validatebox" type="text" name="keyString" data-options="required:true">
