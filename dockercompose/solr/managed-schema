@@ -1,0 +1,18 @@
+<!--IK分词器-->
+<fieldType name="text_ik" class="solr.TextField">
+    <analyzer class="org.wltea.analyzer.lucene.IKAnalyzer"/>
+</fieldType>
+
+<!--字段--->
+<field name="filename" type="text_ik" indexed="true" stored="true"/>
+<field name="pid" type="string" indexed="true" stored="true"/>
+<field name="filemd5" type="string" indexed="true" stored="true"/>
+<field name="filesize" type="string" indexed="true" stored="true"/>
+<field name="typecode" type="string" indexed="true" stored="true"/>
+<field name="filesuffix" type="string" indexed="true" stored="true"/>
+<field name="fileicon" type="string" indexed="true" stored="true"/>
+<field name="filetype" type="string" indexed="true" stored="true"/>
+<field name="createuserid" type="string" indexed="true" stored="true"/>
+<field name="createusername" type="string" indexed="true" stored="true"/>
+<field name="createtime" type="string" indexed="true" stored="true"/>
+<field name="pname" type="string" indexed="true" stored="true"/>

@@ -1,54 +1,72 @@
 version: '2'
 services:
-  mysql:
+#  mysql:
+#    restart: always
+#    image: mysql:latest
+#    container_name: mysql
+#    volumes:
+#      - ./dockercompose/mysql/data/db:/var/lib/mysql/
+#      - ./dockercompose/mysql/mysql-3346.sock:/var/run/mysql.sock
+#      - ./dockercompose/mysql/data/conf:/etc/mysql/conf.d
+#      - ./dockercompose/mysql/data/init:/docker-entrypoint-initdb.d/
+#      - ./dockercompose/mysql/data/sql:/opt/sql
+#    ports:
+#      - 3306:3306
+#    command:
+#      --default-authentication-plugin=mysql_native_password
+#      --lower_case_table_names=1
+#    environment:
+#      MYSQL_ROOT_PASSWORD: zhf123..
+#      TZ: Asia/Shanghai
+#  redis:
+#    image: redis
+#    restart: always
+#    container_name: docker_redis
+#    volumes:
+#      - ./dockercompose/redis/data:/data
+#      - ./dockercompose/redis/conf/redis.conf:/usr/local/etc/redis/redis.conf
+#      - ./dockercompose/redis/logs:/logs
+#    command:
+#      redis-server /usr/local/etc/redis/redis.conf
+#    ports:
+#      - 6379:6379
+#  rabbitmq:
+#    image: rabbitmq:3.8.3-management
+#    container_name: rabbitmq
+#    restart: always
+#    hostname: myRabbitmq
+#    ports:
+#      - 15672:15672
+#      - 5672:5672
+#    volumes:
+#      - ./dockercompose/rabbitmq/data:/var/lib/rabbitmq
+#    environment:
+#      - RABBITMQ_DEFAULT_USER=root
+#      - RABBITMQ_DEFAULT_PASS=root
+#  zookeeper:
+#    container_name: zookeeper
+#    restart: always
+#    image: zookeeper:3.6.1
+#    volumes:
+#      - ./dockercompose/zookeeper/data:/data
+#      - ./dockercompose/zookeeper/datalog:/datalog
+#    ports:
+#      - "2181:2181"
+#  nacos:
+#    image: nacos/nacos-server:1.4.0
+#    restart: always
+#    ports:
+#      - "8848:8848"
+#      - "9555:9555"
+#    volumes:
+#      - ./dockercompose/nacos/log:/home/nacos/logs
+#      - ./dockercompose/nacos/init.d/custom.properties:/home/nacos/init.d/custom.properties
+#    container_name: nacos
+#    env_file:
+#      - ./dockercompose/nacos/env/nacos-standlone-mysql.env
+  solr:
+    image: solr:5.5.5
     restart: always
-    image: mysql:latest
-    container_name: mysql
-    volumes:
-      - ./dockercompose/mysql/data/db:/var/lib/mysql/
-      - ./dockercompose/mysql/mysql-3346.sock:/var/run/mysql.sock
-      - ./dockercompose/mysql/data/conf:/etc/mysql/conf.d
-      - ./dockercompose/mysql/data/init:/docker-entrypoint-initdb.d/
-      - ./dockercompose/mysql/data/sql:/opt/sql
     ports:
-      - 3306:3306
-    command:
-      --default-authentication-plugin=mysql_native_password
-      --lower_case_table_names=1
-    environment:
-      MYSQL_ROOT_PASSWORD: zhf123..
-      TZ: Asia/Shanghai
-  redis:
-    image: redis
-    restart: always
-    container_name: docker_redis
-    volumes:
-      - ./dockercompose/redis/data:/data
-      - ./dockercompose/redis/conf/redis.conf:/usr/local/etc/redis/redis.conf
-      - ./dockercompose/redis/logs:/logs
-    command:
-      redis-server /usr/local/etc/redis/redis.conf
-    ports:
-      - 6379:6379
-  rabbitmq:
-    image: rabbitmq:3.8.3-management
-    container_name: rabbitmq
-    restart: always
-    hostname: myRabbitmq
-    ports:
-      - 15672:15672
-      - 5672:5672
-    volumes:
-      - ./dockercompose/rabbitmq/data:/var/lib/rabbitmq
-    environment:
-      - RABBITMQ_DEFAULT_USER=root
-      - RABBITMQ_DEFAULT_PASS=root
-  zookeeper:
-    container_name: zookeeper
-    restart: always
-    image: zookeeper:3.6.1
-    volumes:
-      - ./dockercompose/zookeeper/data:/data
-      - ./dockercompose/zookeeper/datalog:/datalog
-    ports:
-      - "2181:2181"
+      - "8983:8983"
+    command: bash -c '/opt/solr/bin/solr start -f -z zookeeper:2181'
