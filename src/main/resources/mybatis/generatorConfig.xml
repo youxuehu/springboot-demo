@@ -19,20 +19,20 @@
             <property name="forceBigDecimals" value="false" />
         </javaTypeResolver>
         <!-- targetProject:自动生成代码的位置 -->
-        <javaModelGenerator targetPackage="com.example.springbootdemo.common.db.dao.adminoperatelog.model"
+        <javaModelGenerator targetPackage="com.example.springbootdemo.common.db.dao.zkdata.model"
                             targetProject="src/main/java">
             <property name="enableSubPackages" value="true" />
             <property name="trimStrings" value="true" />
         </javaModelGenerator>
-        <sqlMapGenerator targetPackage="com.example.springbootdemo.common.db.dao.adminoperatelog.mapper.xml"
+        <sqlMapGenerator targetPackage="com.example.springbootdemo.common.db.dao.zkdata.mapper.xml"
                          targetProject="src/main/java">
             <property name="enableSubPackages" value="true" />
         </sqlMapGenerator>
         <javaClientGenerator type="MAPPER"
-                             targetPackage="com.example.springbootdemo.common.db.dao.adminoperatelog.mapper" targetProject="src/main/java">
+                             targetPackage="com.example.springbootdemo.common.db.dao.zkdata.mapper" targetProject="src/main/java">
             <property name="enableSubPackages" value="true" />
         </javaClientGenerator>
         <!-- tableName:用于自动生成代码的数据库表；domainObjectName:对应于数据库表的javaBean类名-->
-        <table tableName="admin_operate_log" domainObjectName="AdminOperateLog" />
+        <table tableName="zk_data" domainObjectName="ZkData" />
     </context>
 </generatorConfiguration>

@@ -24,3 +24,11 @@ create table admin_operate_log(
     gmt_create timestamp,
     content text
 );
+create table zk_data(
+    id bigint primary key not null auto_increment,
+    gmt_create datetime,
+    gmt_update datetime,
+    root varchar(128),
+    path varchar(256),
+    data longblob
+);

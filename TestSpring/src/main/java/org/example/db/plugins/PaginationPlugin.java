@@ -40,7 +40,16 @@ public class PaginationPlugin extends PluginAdapter {
         isNotNullElement.addElement(new TextElement("limit ${limitStart} , ${limitEnd} "));
         element.addElement(isNotNullElement);
         // LIMIT 5;//检索前 5个记录行
-        return super.sqlMapUpdateByExampleWithoutBLOBsElementGenerated(element,introspectedTable);
+        return super.sqlMapSelectByExampleWithoutBLOBsElementGenerated(element,introspectedTable);
+    }
+
+    @Override
+    public boolean sqlMapSelectByExampleWithBLOBsElementGenerated(XmlElement element, IntrospectedTable introspectedTable) {
+        XmlElement isNotNullElement= new XmlElement("if");//$NON-NLS-1$
+        isNotNullElement.addAttribute(new Attribute("test","limitStart != null and limitStart >=0 "));//$NON-NLS-1$ //$NON-NLS-2$
+        isNotNullElement.addElement(new TextElement("limit ${limitStart} , ${limitEnd} "));
+        element.addElement(isNotNullElement);
+        return super.sqlMapSelectByExampleWithBLOBsElementGenerated(element, introspectedTable);
     }
 
     private void addLimit(TopLevelClass topLevelClass, IntrospectedTable introspectedTable, String name){
