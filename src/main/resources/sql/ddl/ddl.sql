@@ -26,9 +26,18 @@ create table admin_operate_log(
 );
 create table zk_data(
     id bigint primary key not null auto_increment,
+    job_id varchar(255),
     gmt_create datetime,
     gmt_update datetime,
     root varchar(128),
     path varchar(256),
     data longblob
+);
+
+create table worker(
+    id bigint primary key not null auto_increment,
+    host varchar(255),
+    memory bigint,
+    free_memory bigint,
+    job_count bigint
 );

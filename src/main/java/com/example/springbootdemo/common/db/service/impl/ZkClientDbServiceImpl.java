@@ -24,8 +24,18 @@ public class ZkClientDbServiceImpl implements ZkClientService {
     private ZkDataMapper zkDataMapper;
 
     @Override
-    public String getSubmittedPath(String jobId) {
-        return "/submitted_jobs/" + jobId;
+    public String getSubmittedPath() {
+        return "/submitted_jobs/";
+    }
+
+    @Override
+    public String getHeartBeatsPath() {
+        return "/heartbeats/";
+    }
+
+    @Override
+    public String getAssignmentsPath() {
+        return "/assignments/";
     }
 
     @Override

@@ -2,12 +2,15 @@ package com.example.springbootdemo.common.db.service;
 
 import org.apache.zookeeper.CreateMode;
 
-import java.io.Serializable;
 import java.util.List;
 
 public interface ZkClientService {
 
-    String getSubmittedPath(String jobId);
+    String getSubmittedPath();
+
+    String getHeartBeatsPath();
+
+    String getAssignmentsPath();
 
     void create(String path, byte[] serializable);
 
