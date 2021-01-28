@@ -25,17 +25,17 @@ public class ZkClientDbServiceImpl implements ZkClientService {
 
     @Override
     public String getSubmittedPath() {
-        return "/submitted_jobs/";
+        return "/submitted_jobs";
     }
 
     @Override
     public String getHeartBeatsPath() {
-        return "/heartbeats/";
+        return "/heartbeats";
     }
 
     @Override
     public String getAssignmentsPath() {
-        return "/assignments/";
+        return "/assignments";
     }
 
     @Override

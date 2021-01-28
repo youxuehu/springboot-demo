@@ -1,5 +1,6 @@
 package com.example.springbootdemo.manager.impl;
 
+import com.example.springbootdemo.common.db.service.ZkClientService;
 import com.example.springbootdemo.handler.JobHandler;
 import com.example.springbootdemo.handler.JobHandlerFactory;
 import com.example.springbootdemo.handler.TaskTypeEnum;
@@ -8,6 +9,7 @@ import com.example.springbootdemo.manager.ExecutionContext;
 import com.example.springbootdemo.manager.JobManager;
 import com.example.springbootdemo.manager.res.ResultLog;
 import com.example.springbootdemo.utils.JobIdGenerator;
+import com.example.springbootdemo.utils.ObjectByteConvert;
 import com.google.common.collect.Lists;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,6 +20,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.RejectedExecutionException;
@@ -36,8 +39,12 @@ public class JobManagerImpl implements JobManager, InitializingBean {
 
     private ScheduledExecutorService threadPool;
     private static final Integer MESSAGE_LOG_COUNT = 4;
+
     @Autowired
     private SaveDbLogHandler saveDbLogHandler;
+
+    @Autowired
+    private ZkClientService zkClientService;
 
     protected List<BlockingQueue<ResultLog>> queues = new ArrayList<>();
 
@@ -65,10 +72,8 @@ public class JobManagerImpl implements JobManager, InitializingBean {
     @Override
     public String submit(String content) {
         String jobId = JobIdGenerator.generateJobId();
-        // init sender
-        ExecutionContext executionContext = new ExecutionContext();
-        initSender(executionContext, queues.get(0), jobId);
-        execute(executionContext, content);
+        //execute(executionContext, content);
+        zkClientService.create(zkClientService.getSubmittedPath() + jobId, ObjectByteConvert.obj2Byte(content));
         return jobId;
     }
 
@@ -81,7 +86,13 @@ public class JobManagerImpl implements JobManager, InitializingBean {
         return null;
     }
 
-    private void initSender(ExecutionContext executionContext, BlockingQueue<ResultLog> queue, String jobId) {
+    @Override
+    public BlockingQueue<ResultLog> getRandomQueue() {
+        return queues.get(new Random().nextInt(queues.size()));
+    }
+
+    @Override
+    public void initSender(ExecutionContext executionContext, BlockingQueue<ResultLog> queue, String jobId) {
         MsgSender sender = new MsgSender(logRootPath, queue, jobId);
         executionContext.setMsgSender(sender);
         executionContext.setJobId(jobId);

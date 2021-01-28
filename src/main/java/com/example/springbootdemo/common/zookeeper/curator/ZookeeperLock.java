@@ -20,7 +20,7 @@ import java.util.concurrent.locks.Lock;
 //@Service
 public class ZookeeperLock implements Lock {
 
-    Logger LOG = LoggerFactory.getLogger(ZookeeperLock.class);
+    private static final Logger LOG = LoggerFactory.getLogger(ZookeeperLock.class);
 
 //    @Autowired
     CuratorFramework zkClient;

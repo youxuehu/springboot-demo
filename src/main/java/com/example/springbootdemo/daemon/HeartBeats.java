@@ -30,7 +30,7 @@ public class HeartBeats implements Runnable, InitializingBean {
     @Override
     public void run() {
         String localHost = InetAddressUtil.getLocalHost();
-        String heartBeatsPath = zkClientService.getHeartBeatsPath() + localHost;
+        String heartBeatsPath = zkClientService.getHeartBeatsPath() + "/" + localHost;
         OperatingSystemMXBean mem = (OperatingSystemMXBean) ManagementFactory.getOperatingSystemMXBean();
         Worker worker = new Worker();
         worker.setHost(localHost);
@@ -44,6 +44,6 @@ public class HeartBeats implements Runnable, InitializingBean {
     @Override
     public void afterPropertiesSet() throws Exception {
         scheduledThreadPoolExecutor = new ScheduledThreadPoolExecutor(1);
-        scheduledThreadPoolExecutor.scheduleAtFixedRate(this, 10, 10, TimeUnit.MILLISECONDS);
+        scheduledThreadPoolExecutor.scheduleAtFixedRate(this, 10, 1, TimeUnit.SECONDS);
     }
 }

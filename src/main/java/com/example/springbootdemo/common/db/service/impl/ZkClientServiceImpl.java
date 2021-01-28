@@ -40,17 +40,17 @@ public class ZkClientServiceImpl implements ZkClientService, InitializingBean {
 
     @Override
     public String getSubmittedPath() {
-        return "/submitted_jobs/";
+        return "/submitted_jobs";
     }
 
     @Override
     public String getHeartBeatsPath() {
-        return "/heartbeats/";
+        return "/heartbeats";
     }
 
     @Override
     public String getAssignmentsPath() {
-        return "/assignments/";
+        return "/assignments";
     }
 
     @Override
@@ -65,6 +65,10 @@ public class ZkClientServiceImpl implements ZkClientService, InitializingBean {
     @Override
     public void createWithModel(String path, byte[] serializable, CreateMode createMode) {
         try {
+            boolean check = checkExists(path);
+            if (check) {
+                return;
+            }
             client.create().withMode(createMode).forPath(path, serializable);
         } catch (Exception e) {
             LOGGER.error("create zk node error", e);

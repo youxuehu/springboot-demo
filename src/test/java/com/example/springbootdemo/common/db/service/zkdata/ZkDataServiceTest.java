@@ -19,7 +19,7 @@ public class ZkDataServiceTest extends SpringbootDemoApplicationTests {
     @Test
     public void insert() {
         String jobId = JobIdGenerator.generateJobId();
-        String submittedPath = zkClientService.getSubmittedPath(jobId);
+        String submittedPath = zkClientService.getSubmittedPath();
         ZkData zkData = new ZkData();
         zkData.setId(1L);
         zkData.setRoot("/root");
@@ -34,7 +34,7 @@ public class ZkDataServiceTest extends SpringbootDemoApplicationTests {
     @Test
     public void get() {
         String jobId = JobIdGenerator.generateJobId();
-        String submittedPath = zkClientService.getSubmittedPath(jobId);
+        String submittedPath = zkClientService.getSubmittedPath();
         ZkData zkData = new ZkData();
         zkData.setId(1L);
         zkData.setRoot("/root");
