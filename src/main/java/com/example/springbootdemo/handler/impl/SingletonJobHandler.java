@@ -20,6 +20,8 @@ public class SingletonJobHandler extends AbstractJobHandler implements JobHandle
 
     @Override
     public void invoke(ExecutionContext executionContext, String content) {
+        // 替换特殊字符掩码
+        content = content.replaceAll("user_access_key=\\w+", "user_access_key=******");
         executionContext.getMsgSender().send(new ResultLog(new Date(), "start SingletonJobHandler", executionContext.getJobId()));
         executionContext.getMsgSender().send(new ResultLog(new Date(), content, executionContext.getJobId()));
         try {

@@ -50,4 +50,12 @@ public class MsgSender {
         loggerPrint.println(log);
         loggerPrint.flush();
     }
+
+    public void flush() {
+        loggerPrint.flush();
+    }
+
+    public void close() {
+        loggerPrint.close();
+    }
 }
