@@ -1,10 +1,11 @@
 package com.example.springbootdemo.handler.job;
 
 import com.alibaba.fastjson.annotation.JSONType;
+import org.eclipse.persistence.oxm.annotations.XmlClassExtractor;
 
 import javax.xml.bind.annotation.XmlSeeAlso;
 
-//@XmlClassExtractor(JobClassExtractor.class)
+@XmlClassExtractor(JobClassExtractor.class)
 @XmlSeeAlso({SqlJob.class, StopJob.class})
 @JSONType(seeAlso = {
         OdpsJob.class,
@@ -17,4 +18,8 @@ import javax.xml.bind.annotation.XmlSeeAlso;
         KubemakerJob.class
 })
 public interface Job {
+
+    JobType getJobType();
+
+    String getCodeName();
 }

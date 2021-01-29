@@ -178,3 +178,21 @@
 
 2021-01-29 21:55:13,635 WARN clearConfigHistory start
 
+2021-01-29 22:03:01,593 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2d6d2efd (The last packet successfully received from the server was 1,770,691 milliseconds ago.  The last packet sent successfully to the server was 1,770,691 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-01-29 22:03:21,602 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@78f64c9b (The last packet successfully received from the server was 1,790,523 milliseconds ago.  The last packet sent successfully to the server was 1,790,523 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-01-29 22:03:21,605 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@68c3d83a (The last packet successfully received from the server was 1,790,449 milliseconds ago.  The last packet sent successfully to the server was 1,790,449 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-01-29 22:05:13,498 INFO [capacityManagement] start correct usage
+
+2021-01-29 22:05:13,507 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-01-29 22:05:13,666 WARN clearConfigHistory start
+
+2021-01-29 22:15:13,533 INFO [capacityManagement] start correct usage
+
+2021-01-29 22:15:13,543 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-01-29 22:15:13,694 WARN clearConfigHistory start
+
