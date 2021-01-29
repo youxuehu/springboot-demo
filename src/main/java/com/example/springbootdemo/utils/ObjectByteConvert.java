@@ -26,7 +26,9 @@ public class ObjectByteConvert {
     }
 
     public static Object byte2Obj(byte[] bytes) {
-
+        if (bytes == null) {
+            return null;
+        }
         try {
             ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(bytes);
             ObjectInputStream objectInputStream = new ObjectInputStream(byteArrayInputStream);

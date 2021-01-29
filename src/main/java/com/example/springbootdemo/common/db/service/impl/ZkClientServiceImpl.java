@@ -109,6 +109,9 @@ public class ZkClientServiceImpl implements ZkClientService, InitializingBean {
     @Override
     public void delete(String path, boolean force) {
         try {
+            if (!checkExists(path)) {
+                return;
+            }
             if (force) {
                 // 级联删除子节点
                 client.delete().guaranteed().deletingChildrenIfNeeded().forPath(path);

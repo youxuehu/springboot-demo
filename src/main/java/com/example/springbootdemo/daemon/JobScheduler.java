@@ -75,6 +75,6 @@ public class JobScheduler implements Runnable, InitializingBean {
     @Override
     public void afterPropertiesSet() throws Exception {
         scheduledThreadPoolExecutor = new ScheduledThreadPoolExecutor(1);
-        scheduledThreadPoolExecutor.scheduleAtFixedRate(this, 50, 50, TimeUnit.MILLISECONDS);
+        scheduledThreadPoolExecutor.scheduleAtFixedRate(this, 10, 1, TimeUnit.SECONDS);
     }
 }
