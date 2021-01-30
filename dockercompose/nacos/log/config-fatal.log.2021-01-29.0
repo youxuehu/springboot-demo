@@ -1,0 +1,4 @@
+2021-01-29 20:05:09,127 WARN [master-db] jdbc:mysql://mysql:3306/nacos?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true
+
+2021-01-29 20:05:13,195 WARN isQuickStart:false
+

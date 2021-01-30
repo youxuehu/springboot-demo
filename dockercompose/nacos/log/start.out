@@ -4,7 +4,7 @@
    ,--,:  : |                                           Nacos 1.4.0
 ,`--.'`|  ' :                       ,---.               Running in stand alone mode, All function modules
 |   :  :  | |                      '   ,'\   .--.--.    Port: 8848
-:   |   \ | :  ,--.--.     ,---.  /   /   | /  /    '   Pid: 25
+:   |   \ | :  ,--.--.     ,---.  /   /   | /  /    '   Pid: 26
 |   : '  '; | /       \   /     \.   ; ,. :|  :  /`./   Console: http://a508a02af551:8848/nacos/index.html
 '   ' ;.    ;.--.  .-. | /    / ''   | |: :|  :  ;_
 |   | | \   | \__\/: . ..    ' / '   | .; : \  \    `.      https://nacos.io
@@ -14,33 +14,33 @@
 ;   |.'     |  ,     .-./\   \  /            `--'---'
 '---'        `--`---'     `----'
 
-2021-01-29 20:05:05,226 INFO Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@39d9314d' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-30 13:11:52,991 INFO Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@45d2ade3' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 
-2021-01-29 20:05:05,239 INFO Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-30 13:11:52,999 INFO Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
 
-2021-01-29 20:05:06,269 INFO Tomcat initialized with port(s): 8848 (http)
+2021-01-30 13:11:53,804 INFO Tomcat initialized with port(s): 8848 (http)
 
-2021-01-29 20:05:06,963 INFO Root WebApplicationContext: initialization completed in 6757 ms
+2021-01-30 13:11:54,471 INFO Root WebApplicationContext: initialization completed in 6340 ms
 
-2021-01-29 20:05:13,854 INFO Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-30 13:12:02,121 INFO Initializing ExecutorService 'applicationTaskExecutor'
 
-2021-01-29 20:05:14,065 INFO Adding welcome page: class path resource [static/index.html]
+2021-01-30 13:12:02,391 INFO Adding welcome page: class path resource [static/index.html]
 
-2021-01-29 20:05:14,825 INFO Creating filter chain: Ant [pattern='/**'], []
+2021-01-30 13:12:02,974 INFO Creating filter chain: Ant [pattern='/**'], []
 
-2021-01-29 20:05:14,878 INFO Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@50b0bc4c, org.springframework.security.web.context.SecurityContextPersistenceFilter@53bc1328, org.springframework.security.web.header.HeaderWriterFilter@2c282004, org.springframework.security.web.csrf.CsrfFilter@70f43b45, org.springframework.security.web.authentication.logout.LogoutFilter@6a1ebcff, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3c1e3314, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@54a3ab8f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@c20be82, org.springframework.security.web.session.SessionManagementFilter@7bfc3126, org.springframework.security.web.access.ExceptionTranslationFilter@10ad20cb]
+2021-01-30 13:12:03,025 INFO Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@41de5768, org.springframework.security.web.context.SecurityContextPersistenceFilter@1968a49c, org.springframework.security.web.header.HeaderWriterFilter@3c1e3314, org.springframework.security.web.csrf.CsrfFilter@7bfc3126, org.springframework.security.web.authentication.logout.LogoutFilter@6b739528, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@19868320, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@13c612bd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5f577419, org.springframework.security.web.session.SessionManagementFilter@78e16155, org.springframework.security.web.access.ExceptionTranslationFilter@53bc1328]
 
-2021-01-29 20:05:14,997 INFO Initializing ExecutorService 'taskScheduler'
+2021-01-30 13:12:03,204 INFO Initializing ExecutorService 'taskScheduler'
 
-2021-01-29 20:05:15,023 INFO Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-01-30 13:12:03,236 INFO Exposing 2 endpoint(s) beneath base path '/actuator'
 
-2021-01-29 20:05:15,228 INFO Tomcat started on port(s): 8848 (http) with context path '/nacos'
+2021-01-30 13:12:03,390 INFO Tomcat started on port(s): 8848 (http) with context path '/nacos'
 
-2021-01-29 20:05:15,234 INFO Nacos Log files: /home/nacos/logs
+2021-01-30 13:12:03,401 INFO Nacos Log files: /home/nacos/logs
 
-2021-01-29 20:05:15,236 INFO Nacos Log files: /home/nacos/conf
+2021-01-30 13:12:03,403 INFO Nacos Log files: /home/nacos/conf
 
-2021-01-29 20:05:15,237 INFO Nacos Log files: /home/nacos/data
+2021-01-30 13:12:03,404 INFO Nacos Log files: /home/nacos/data
 
-2021-01-29 20:05:15,238 INFO Nacos started successfully in stand alone mode. use external storage
+2021-01-30 13:12:03,405 INFO Nacos started successfully in stand alone mode. use external storage
 
