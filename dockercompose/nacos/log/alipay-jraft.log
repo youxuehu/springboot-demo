@@ -50,3 +50,47 @@ peers: "a508a02af551:7848"
 
 2021-01-30 13:42:05,715 INFO Connection disconnected: /172.20.0.2:52996
 
+2021-01-30 17:21:58,240 INFO SPI service [com.alipay.sofa.jraft.JRaftServiceFactory - com.alipay.sofa.jraft.core.DefaultJRaftServiceFactory] loading.
+
+2021-01-30 17:21:58,404 INFO SPI service [com.alipay.sofa.jraft.rpc.RaftRpcFactory - com.alipay.sofa.jraft.rpc.impl.GrpcRaftRpcFactory] loading.
+
+2021-01-30 17:21:59,648 INFO SPI service [com.alipay.sofa.jraft.util.JRaftSignalHandler - com.alipay.sofa.jraft.NodeDescribeSignalHandler] loading.
+
+2021-01-30 17:21:59,651 INFO SPI service [com.alipay.sofa.jraft.util.JRaftSignalHandler - com.alipay.sofa.jraft.NodeMetricsSignalHandler] loading.
+
+2021-01-30 17:21:59,651 INFO SPI service [com.alipay.sofa.jraft.util.JRaftSignalHandler - com.alipay.sofa.jraft.ThreadPoolMetricsSignalHandler] loading.
+
+2021-01-30 17:21:59,657 INFO SPI service [com.alipay.sofa.jraft.util.timer.RaftTimerFactory - com.alipay.sofa.jraft.util.timer.DefaultRaftTimerFactory] loading.
+
+2021-01-30 17:21:59,666 INFO The number of active nodes increment to 1.
+
+2021-01-30 17:22:00,840 INFO Starts FSMCaller successfully.
+
+2021-01-30 17:22:00,851 INFO Loading snapshot, meta=last_included_index: 7
+last_included_term: 7
+peers: "a508a02af551:7848"
+.
+
+2021-01-30 17:22:01,041 INFO Node <naming_persistent_service/a508a02af551:7848> onSnapshotLoadDone, last_included_index: 7
+last_included_term: 7
+peers: "a508a02af551:7848"
+
+
+2021-01-30 17:22:01,044 INFO Node <naming_persistent_service/a508a02af551:7848> target priority value has changed from: 0, to: -1.
+
+2021-01-30 17:22:01,093 INFO Node <naming_persistent_service/a508a02af551:7848> init, term=7, lastLogId=LogId [index=7, term=7], conf=a508a02af551:7848, oldConf=.
+
+2021-01-30 17:22:01,097 INFO Node <naming_persistent_service/a508a02af551:7848> start vote and grant vote self, term=7.
+
+2021-01-30 17:22:01,134 INFO Save raft meta, path=/home/nacos/data/protocol/raft/naming_persistent_service/meta-data, term=8, votedFor=a508a02af551:7848, cost time=30 ms
+
+2021-01-30 17:22:01,134 INFO Node <naming_persistent_service/a508a02af551:7848> become leader of group, term=8, conf=a508a02af551:7848, oldConf=.
+
+2021-01-30 17:22:01,138 INFO -Djraft.recyclers.maxCapacityPerThread: 4096.
+
+2021-01-30 17:22:01,147 WARN RPC server is not started in RaftGroupService.
+
+2021-01-30 17:22:01,149 INFO Start the RaftGroupService successfully.
+
+2021-01-30 17:22:01,151 INFO onLeaderStart: term=8.
+
