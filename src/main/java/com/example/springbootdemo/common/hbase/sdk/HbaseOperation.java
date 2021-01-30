@@ -20,20 +20,22 @@ import org.apache.hadoop.hbase.filter.Filter;
 import org.apache.hadoop.hbase.filter.SingleColumnValueFilter;
 import org.apache.hadoop.hbase.filter.CompareFilter.CompareOp;
 import org.apache.hadoop.hbase.util.Bytes;
+import org.springframework.stereotype.Service;
 
+@Service
 public class HbaseOperation {
 
-    public Connection connection;
+    private Connection connection;
 
-    public Admin admin;
+    private Admin admin;
 
     /**
      * 初始化连接
      * @throws Exception
      */
     public void initconnection() throws Exception {
-        File workaround = new File(".");
-        System.getProperties().put("hadoop.home.dir", workaround.getAbsolutePath());
+//        File workaround = new File(".");
+//        System.getProperties().put("hadoop.home.dir", workaround.getAbsolutePath());
         // window
 //        new File("./bin").mkdirs();
 //        try {
@@ -42,8 +44,8 @@ public class HbaseOperation {
 //            e.printStackTrace();
 //        }
         Configuration conf = HBaseConfiguration.create();
-        conf.set("hbase.zookeeper.quorum", "master,slave1,slave2");
-        conf.set("hbase.zookeeper.property.clientPort", "2181");
+        conf.set("hbase.zookeeper.quorum", "127.0.0.1");
+        conf.set("hbase.zookeeper.property.clientPort", "2171");
         connection = ConnectionFactory.createConnection(conf);
         admin = connection.getAdmin();
     }

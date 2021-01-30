@@ -5,18 +5,16 @@ import com.alibaba.fastjson.serializer.SerializerFeature;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.hadoop.hbase.client.HTableInterface;
 import org.apache.hadoop.hbase.client.Put;
-import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.hadoop.hbase.HbaseTemplate;
 import org.springframework.data.hadoop.hbase.TableCallback;
 import org.springframework.stereotype.Service;
-
 import java.util.ArrayList;
 import java.util.List;
 
-//@Service
+@Service
 @Slf4j
-public class TestHbase  implements InitializingBean {
+public class TestHbase {
 
     @Autowired
     private HbaseTemplate hbaseTemplate;
@@ -68,11 +66,5 @@ public class TestHbase  implements InitializingBean {
                 return true;
             }
         });
-    }
-
-    @Override
-    public void afterPropertiesSet() throws Exception {
-        //        insertTableData();
-        insertUserinfo();
     }
 }

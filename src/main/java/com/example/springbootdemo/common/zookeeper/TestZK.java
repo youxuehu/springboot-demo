@@ -25,9 +25,9 @@ public class TestZK implements Watcher {
         }
     }
 
-    public void createPath(String path, String data) {
+    public void createPath(String path, String data, CreateMode createMode) {
         try {
-            zk.create(path, data.getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL);
+            zk.create(path, data.getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, createMode);
         } catch (KeeperException e) {
             e.printStackTrace();
         } catch (InterruptedException e) {
@@ -87,23 +87,24 @@ public class TestZK implements Watcher {
 
     public static void main(String[] args) {
         TestZK zk = new TestZK();
-        zk.createConnect("master:2181", 5000);
-        String s = zk.existsNode("/aa");
-        System.out.printf(s);
-        String s1 = zk.readNode("/aa");
-        System.out.printf(s1);
-        zk.createPath("/aa", "1111");
-        zk.readNode("/aa");
-        while (zk.bk) {
-            System.out.print(".");
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
-
-        zk.closeConnect();
+        zk.createConnect("127.0.0.1:2171", 5000);
+        zk.createPath("/daa", "aaa", CreateMode.PERSISTENT);
+//        String s = zk.existsNode("/aa");
+//        System.out.printf(s);
+//        String s1 = zk.readNode("/aa");
+//        System.out.printf(s1);
+//        zk.createPath("/aa", "1111");
+//        zk.readNode("/aa");
+//        while (zk.bk) {
+//            System.out.print(".");
+//            try {
+//                Thread.sleep(1000);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+//        }
+//
+//        zk.closeConnect();
     }
 
 

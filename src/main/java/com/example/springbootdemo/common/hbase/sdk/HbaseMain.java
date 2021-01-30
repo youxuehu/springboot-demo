@@ -6,7 +6,7 @@ public class HbaseMain {
         try {
             HbaseOperation baseOperation = new HbaseOperation();
             baseOperation.initconnection();
-//            baseOperation.createTable();
+            baseOperation.createTable("test", "info", "class");
 //            baseOperation.insert();
 //            baseOperation.queryTable("tableName");
 //            baseOperation.queryTableByRowKey("row1");

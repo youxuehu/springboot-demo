@@ -25,7 +25,7 @@ import java.util.stream.Collectors;
 @Slf4j
 public class HBaseService implements InitializingBean {
 
-//    @Autowired
+    @Autowired
     private HbaseTemplate hbaseTemplate;
 
     public void readTable(String tableName, String rowName) {

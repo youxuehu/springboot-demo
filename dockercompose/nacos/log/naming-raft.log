@@ -80,3 +80,85 @@
 
 2021-01-30 17:22:02,792 WARN clean old cache datum for old raft
 
+2021-01-30 18:55:45,667 INFO raft peers changed: [Member{ip='a508a02af551', port=8848, state=UP, extendInfo={adWeight=0, raftPort=7848, site=unknow, weight=1}}]
+
+2021-01-30 18:55:45,884 INFO initializing Raft sub-system
+
+2021-01-30 18:55:45,897 INFO finish loading all datums, size: 0 cost 13 ms.
+
+2021-01-30 18:55:45,906 INFO cache loaded, datum count: 0, current term: 0
+
+2021-01-30 18:55:45,906 INFO finish to load data from disk, cost: 22 ms.
+
+2021-01-30 18:55:45,909 INFO timer started: leader timeout ms: 15000, heart-beat timeout ms: 5000
+
+2021-01-30 18:55:48,004 INFO leader timeout, start voting,leader: {"ip":"a508a02af551:8848","term":0,"leaderDueMs":16714,"heartbeatDueMs":4500,"state":"FOLLOWER"}, term: 0
+
+2021-01-30 18:55:49,667 INFO snapshot load from : /home/nacos/data/protocol/raft/naming_persistent_service/snapshot/snapshot_8/naming_persistent
+
+2021-01-30 18:55:49,686 INFO raft peers changed: [Member{ip='a508a02af551', port=8848, state=UP, extendInfo={adWeight=0, lastRefreshTime=1612004149683, raftMetaData=com.alibaba.nacos.consistency.ProtocolMetaData@fc1f443, raftPort=7848, site=unknow, version=1.4.0, weight=1}}]
+
+2021-01-30 18:55:50,595 WARN start to close old raft protocol!!!
+
+2021-01-30 18:55:50,595 WARN stop old raft protocol task for notifier
+
+2021-01-30 18:55:50,595 WARN stop old raft protocol task for master task
+
+2021-01-30 18:55:50,595 WARN stop old raft protocol task for heartbeat task
+
+2021-01-30 18:55:50,595 WARN clean old cache datum for old raft
+
+2021-01-30 18:55:50,595 WARN start to close old raft protocol!!!
+
+2021-01-30 18:55:50,595 WARN stop old raft protocol task for notifier
+
+2021-01-30 18:55:50,595 WARN stop old raft protocol task for master task
+
+2021-01-30 18:55:50,595 WARN stop old raft protocol task for heartbeat task
+
+2021-01-30 18:55:50,595 WARN clean old cache datum for old raft
+
+2021-01-30 18:55:50,899 INFO add listener: com.alibaba.nacos.naming.domains.meta.00-00---000-NACOS_SWITCH_DOMAIN-000---00-00
+
+2021-01-30 18:55:50,979 INFO add listener: com.alibaba.nacos.naming.domains.meta.
+
+2021-01-30 21:46:56,655 INFO raft peers changed: [Member{ip='a508a02af551', port=8848, state=UP, extendInfo={adWeight=0, raftPort=7848, site=unknow, weight=1}}]
+
+2021-01-30 21:46:56,748 INFO initializing Raft sub-system
+
+2021-01-30 21:46:56,764 INFO finish loading all datums, size: 0 cost 16 ms.
+
+2021-01-30 21:46:56,767 INFO cache loaded, datum count: 0, current term: 0
+
+2021-01-30 21:46:56,767 INFO finish to load data from disk, cost: 19 ms.
+
+2021-01-30 21:46:56,773 INFO timer started: leader timeout ms: 15000, heart-beat timeout ms: 5000
+
+2021-01-30 21:47:00,449 INFO snapshot load from : /home/nacos/data/protocol/raft/naming_persistent_service/snapshot/snapshot_9/naming_persistent
+
+2021-01-30 21:47:00,524 INFO raft peers changed: [Member{ip='a508a02af551', port=8848, state=UP, extendInfo={adWeight=0, lastRefreshTime=1612014420503, raftMetaData=com.alibaba.nacos.consistency.ProtocolMetaData@1f2ec2c4, raftPort=7848, site=unknow, version=1.4.0, weight=1}}]
+
+2021-01-30 21:47:01,618 WARN start to close old raft protocol!!!
+
+2021-01-30 21:47:01,618 WARN stop old raft protocol task for notifier
+
+2021-01-30 21:47:01,618 WARN stop old raft protocol task for master task
+
+2021-01-30 21:47:01,618 WARN stop old raft protocol task for heartbeat task
+
+2021-01-30 21:47:01,618 WARN clean old cache datum for old raft
+
+2021-01-30 21:47:01,619 WARN start to close old raft protocol!!!
+
+2021-01-30 21:47:01,619 WARN stop old raft protocol task for notifier
+
+2021-01-30 21:47:01,619 WARN stop old raft protocol task for master task
+
+2021-01-30 21:47:01,619 WARN stop old raft protocol task for heartbeat task
+
+2021-01-30 21:47:01,619 WARN clean old cache datum for old raft
+
+2021-01-30 21:47:01,845 INFO add listener: com.alibaba.nacos.naming.domains.meta.00-00---000-NACOS_SWITCH_DOMAIN-000---00-00
+
+2021-01-30 21:47:01,989 INFO add listener: com.alibaba.nacos.naming.domains.meta.
+
