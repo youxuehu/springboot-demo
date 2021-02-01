@@ -1,0 +1,32 @@
+2021-01-30 13:11:57,041 INFO GlobalConfig{taskDispatchPeriod=200, batchSyncKeyCount=1000, syncRetryDelay=5000, dataWarmup=true, expireInstance=true, loadDataRetryDelayMillis=30000}
+
+2021-01-30 13:11:59,720 INFO [NACOS-DISTRO] healthy server list changed, old: [a508a02af551:8848], new: [a508a02af551:8848]
+
+2021-01-30 13:12:01,086 INFO open empty service auto clean job, initialDelay : 50000 ms, period : 30000 ms
+
+2021-01-30 13:12:01,087 INFO listen for service meta change
+
+2021-01-30 17:21:57,864 INFO GlobalConfig{taskDispatchPeriod=200, batchSyncKeyCount=1000, syncRetryDelay=5000, dataWarmup=true, expireInstance=true, loadDataRetryDelayMillis=30000}
+
+2021-01-30 17:22:01,038 INFO [NACOS-DISTRO] healthy server list changed, old: [a508a02af551:8848], new: [a508a02af551:8848]
+
+2021-01-30 17:22:02,219 INFO open empty service auto clean job, initialDelay : 50000 ms, period : 30000 ms
+
+2021-01-30 17:22:02,220 INFO listen for service meta change
+
+2021-01-30 18:55:45,718 INFO GlobalConfig{taskDispatchPeriod=200, batchSyncKeyCount=1000, syncRetryDelay=5000, dataWarmup=true, expireInstance=true, loadDataRetryDelayMillis=30000}
+
+2021-01-30 18:55:49,687 INFO [NACOS-DISTRO] healthy server list changed, old: [a508a02af551:8848], new: [a508a02af551:8848]
+
+2021-01-30 18:55:50,977 INFO open empty service auto clean job, initialDelay : 50000 ms, period : 30000 ms
+
+2021-01-30 18:55:50,979 INFO listen for service meta change
+
+2021-01-30 21:46:56,697 INFO GlobalConfig{taskDispatchPeriod=200, batchSyncKeyCount=1000, syncRetryDelay=5000, dataWarmup=true, expireInstance=true, loadDataRetryDelayMillis=30000}
+
+2021-01-30 21:47:00,524 INFO [NACOS-DISTRO] healthy server list changed, old: [a508a02af551:8848], new: [a508a02af551:8848]
+
+2021-01-30 21:47:01,980 INFO open empty service auto clean job, initialDelay : 50000 ms, period : 30000 ms
+
+2021-01-30 21:47:01,989 INFO listen for service meta change
+

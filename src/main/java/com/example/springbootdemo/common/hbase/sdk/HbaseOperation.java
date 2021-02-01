@@ -45,7 +45,7 @@ public class HbaseOperation {
 //        }
         Configuration conf = HBaseConfiguration.create();
         conf.set("hbase.zookeeper.quorum", "127.0.0.1");
-        conf.set("hbase.zookeeper.property.clientPort", "2171");
+        conf.set("hbase.zookeeper.property.clientPort", "2181");
         connection = ConnectionFactory.createConnection(conf);
         admin = connection.getAdmin();
     }

@@ -13,9 +13,7 @@ services:
       - ./hadoop.env
     ports:
       - 50070:50070
-      - 50075:50075
       - 9000:9000
-      - 8088:8088
 
   datanode:
     image: bde2020/hadoop-datanode:2.0.0-hadoop2.7.4-java8
@@ -27,11 +25,6 @@ services:
       SERVICE_PRECONDITION: "namenode:50070"
     env_file:
       - ./hadoop.env
-    ports:
-      - 50070:50070
-      - 50075:50075
-      - 9000:9000
-      - 8088:8088
 
   resourcemanager:
     image: bde2020/hadoop-resourcemanager:2.0.0-hadoop2.7.4-java8
@@ -42,9 +35,6 @@ services:
     env_file:
       - ./hadoop.env
     ports:
-      - 50070:50070
-      - 50075:50075
-      - 9000:9000
       - 8088:8088
 
   nodemanager1:
@@ -55,11 +45,6 @@ services:
       SERVICE_PRECONDITION: "namenode:50070 datanode:50075 resourcemanager:8088"
     env_file:
       - ./hadoop.env
-    ports:
-      - 50070:50070
-      - 50075:50075
-      - 9000:9000
-      - 8088:8088
 
   historyserver:
     image: bde2020/hadoop-historyserver:2.0.0-hadoop2.7.4-java8
@@ -71,11 +56,6 @@ services:
       SERVICE_PRECONDITION: "namenode:50070 datanode:50075 resourcemanager:8088"
     env_file:
       - ./hadoop.env
-    ports:
-      - 50070:50070
-      - 50075:50075
-      - 9000:9000
-      - 8088:8088
 
   hbase:
     image: bde2020/hbase-standalone:1.0.0-hbase1.2.6
