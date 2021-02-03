@@ -1,0 +1,294 @@
+2021-02-01 18:43:10,148 INFO Starting Nacos v1.4.0 on a508a02af551 with PID 27 (/home/nacos/target/nacos-server.jar started by root in /home/nacos)
+
+2021-02-01 18:43:10,158 INFO The following profiles are active: standalone
+
+2021-02-01 18:43:22,264 INFO Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@c7045b9' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+2021-02-01 18:43:22,295 INFO Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+2021-02-01 18:43:24,655 INFO Tomcat initialized with port(s): 8848 (http)
+
+2021-02-01 18:43:24,828 INFO Starting service [Tomcat]
+
+2021-02-01 18:43:24,829 INFO Starting Servlet engine: [Apache Tomcat/9.0.38]
+
+2021-02-01 18:43:26,296 INFO At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+
+2021-02-01 18:43:26,368 INFO Initializing Spring embedded WebApplicationContext
+
+2021-02-01 18:43:26,370 INFO Root WebApplicationContext: initialization completed in 15912 ms
+
+2021-02-01 18:43:27,427 INFO HikariPool-1 - Starting...
+
+2021-02-01 18:43:30,459 INFO HikariPool-1 - Start completed.
+
+2021-02-01 18:43:31,225 INFO Nacos-related cluster resource initialization
+
+2021-02-01 18:43:31,239 INFO The cluster resource is initialized
+
+2021-02-01 18:43:36,276 INFO Reflections took 72 ms to scan 1 urls, producing 6 keys and 26 values 
+
+2021-02-01 18:43:36,360 INFO Reflections took 3 ms to scan 1 urls, producing 2 keys and 12 values 
+
+2021-02-01 18:43:36,368 INFO Reflections took 4 ms to scan 1 urls, producing 3 keys and 15 values 
+
+2021-02-01 18:43:37,343 INFO Initializing ExecutorService 'applicationTaskExecutor'
+
+2021-02-01 18:43:37,496 INFO Adding welcome page: class path resource [static/index.html]
+
+2021-02-01 18:43:38,039 INFO Creating filter chain: Ant [pattern='/**'], []
+
+2021-02-01 18:43:38,073 INFO Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@13c612bd, org.springframework.security.web.context.SecurityContextPersistenceFilter@3c1e3314, org.springframework.security.web.header.HeaderWriterFilter@7bfc3126, org.springframework.security.web.csrf.CsrfFilter@10ad20cb, org.springframework.security.web.authentication.logout.LogoutFilter@50b0bc4c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@78e16155, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6a1ebcff, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3ef41c66, org.springframework.security.web.session.SessionManagementFilter@53bc1328, org.springframework.security.web.access.ExceptionTranslationFilter@2c282004]
+
+2021-02-01 18:43:38,186 INFO Initializing ExecutorService 'taskScheduler'
+
+2021-02-01 18:43:38,210 INFO Exposing 2 endpoint(s) beneath base path '/actuator'
+
+2021-02-01 18:43:38,387 INFO Tomcat started on port(s): 8848 (http) with context path '/nacos'
+
+2021-02-01 18:43:38,394 INFO Started Nacos in 43.595 seconds (JVM running for 82.077)
+
+2021-02-01 18:43:38,395 INFO Nacos Log files: /home/nacos/logs
+
+2021-02-01 18:43:38,396 INFO Nacos Log files: /home/nacos/conf
+
+2021-02-01 18:43:38,400 INFO Nacos Log files: /home/nacos/data
+
+2021-02-01 18:43:38,401 INFO Nacos started successfully in stand alone mode. use external storage
+
+2021-02-01 18:53:36,665 INFO [capacityManagement] start correct usage
+
+2021-02-01 18:53:36,698 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-02-01 18:53:36,882 WARN clearConfigHistory start
+
+2021-02-01 19:03:36,734 INFO [capacityManagement] start correct usage
+
+2021-02-01 19:03:36,737 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-02-01 19:03:36,926 WARN clearConfigHistory start
+
+2021-02-01 19:13:28,928 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@575934fa (The last packet successfully received from the server was 1,798,189 milliseconds ago.  The last packet sent successfully to the server was 1,798,189 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 19:13:36,749 INFO [capacityManagement] start correct usage
+
+2021-02-01 19:13:36,753 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-02-01 19:13:36,943 WARN clearConfigHistory start
+
+2021-02-01 19:23:36,795 INFO [capacityManagement] start correct usage
+
+2021-02-01 19:23:36,805 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-02-01 19:23:36,988 WARN clearConfigHistory start
+
+2021-02-01 19:33:36,825 INFO [capacityManagement] start correct usage
+
+2021-02-01 19:33:36,827 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-02-01 19:33:37,008 WARN clearConfigHistory start
+
+2021-02-01 19:42:21,462 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@64bb7b83 (The last packet successfully received from the server was 1,771,268 milliseconds ago.  The last packet sent successfully to the server was 1,771,268 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 19:42:29,448 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@33de4b71 (The last packet successfully received from the server was 1,771,748 milliseconds ago.  The last packet sent successfully to the server was 1,771,748 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 19:42:29,450 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@197519 (The last packet successfully received from the server was 1,770,872 milliseconds ago.  The last packet sent successfully to the server was 1,770,872 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 19:42:29,452 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@23870759 (The last packet successfully received from the server was 1,765,095 milliseconds ago.  The last packet sent successfully to the server was 1,765,095 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 19:42:29,454 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@c5069b1 (The last packet successfully received from the server was 1,763,468 milliseconds ago.  The last packet sent successfully to the server was 1,763,468 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 19:42:29,455 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4d142e89 (The last packet successfully received from the server was 1,758,986 milliseconds ago.  The last packet sent successfully to the server was 1,758,987 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 19:42:29,457 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6ee3b8f (The last packet successfully received from the server was 1,754,546 milliseconds ago.  The last packet sent successfully to the server was 1,754,546 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 19:42:29,458 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1d4859c4 (The last packet successfully received from the server was 1,752,205 milliseconds ago.  The last packet sent successfully to the server was 1,752,205 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 19:42:29,459 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@12dab63d (The last packet successfully received from the server was 1,751,499 milliseconds ago.  The last packet sent successfully to the server was 1,751,499 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 19:42:29,460 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7ed6b289 (The last packet successfully received from the server was 1,751,462 milliseconds ago.  The last packet sent successfully to the server was 1,751,462 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 19:42:29,463 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@913cc9f (The last packet successfully received from the server was 1,750,205 milliseconds ago.  The last packet sent successfully to the server was 1,750,205 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 19:42:29,465 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@564a2200 (The last packet successfully received from the server was 1,744,901 milliseconds ago.  The last packet sent successfully to the server was 1,744,901 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 19:42:29,467 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@11e61daa (The last packet successfully received from the server was 1,743,599 milliseconds ago.  The last packet sent successfully to the server was 1,743,599 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 19:42:29,468 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5a6fb7e5 (The last packet successfully received from the server was 1,743,491 milliseconds ago.  The last packet sent successfully to the server was 1,743,491 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 19:42:29,471 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4a528e80 (The last packet successfully received from the server was 1,740,577 milliseconds ago.  The last packet sent successfully to the server was 1,740,577 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 19:42:29,474 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6bf8c12d (The last packet successfully received from the server was 1,740,528 milliseconds ago.  The last packet sent successfully to the server was 1,740,528 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 19:43:36,861 INFO [capacityManagement] start correct usage
+
+2021-02-01 19:43:36,872 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-02-01 19:43:37,045 WARN clearConfigHistory start
+
+2021-02-01 19:53:36,902 INFO [capacityManagement] start correct usage
+
+2021-02-01 19:53:36,912 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-02-01 19:53:37,078 WARN clearConfigHistory start
+
+2021-02-01 20:03:36,931 INFO [capacityManagement] start correct usage
+
+2021-02-01 20:03:36,941 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-02-01 20:03:37,098 WARN clearConfigHistory start
+
+2021-02-01 20:12:01,835 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1ac58dfd (The last packet successfully received from the server was 1,780,357 milliseconds ago.  The last packet sent successfully to the server was 1,780,358 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 20:12:11,838 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2b06ca67 (The last packet successfully received from the server was 1,782,369 milliseconds ago.  The last packet sent successfully to the server was 1,782,369 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 20:12:11,843 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@660a2282 (The last packet successfully received from the server was 1,782,321 milliseconds ago.  The last packet sent successfully to the server was 1,782,321 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 20:12:11,843 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@277fd31 (The last packet successfully received from the server was 1,782,330 milliseconds ago.  The last packet sent successfully to the server was 1,782,330 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 20:12:11,845 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@67a3abf7 (The last packet successfully received from the server was 1,782,316 milliseconds ago.  The last packet sent successfully to the server was 1,782,316 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 20:13:36,965 INFO [capacityManagement] start correct usage
+
+2021-02-01 20:13:36,975 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-02-01 20:13:37,124 WARN clearConfigHistory start
+
+2021-02-01 20:23:37,010 INFO [capacityManagement] start correct usage
+
+2021-02-01 20:23:37,020 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-02-01 20:23:37,162 WARN clearConfigHistory start
+
+2021-02-01 20:33:37,038 INFO [capacityManagement] start correct usage
+
+2021-02-01 20:33:37,043 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-02-01 20:33:37,183 WARN clearConfigHistory start
+
+2021-02-01 20:41:02,247 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4e9b97b6 (The last packet successfully received from the server was 1,755,542 milliseconds ago.  The last packet sent successfully to the server was 1,755,543 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 20:41:22,250 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2338e1c7 (The last packet successfully received from the server was 1,767,923 milliseconds ago.  The last packet sent successfully to the server was 1,767,923 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 20:41:22,257 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@15830c22 (The last packet successfully received from the server was 1,762,340 milliseconds ago.  The last packet sent successfully to the server was 1,762,340 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 20:41:22,257 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1c63bbde (The last packet successfully received from the server was 1,767,458 milliseconds ago.  The last packet sent successfully to the server was 1,767,458 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 20:41:22,260 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5bc49372 (The last packet successfully received from the server was 1,761,171 milliseconds ago.  The last packet sent successfully to the server was 1,761,171 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 20:41:22,260 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@450322f6 (The last packet successfully received from the server was 1,761,958 milliseconds ago.  The last packet sent successfully to the server was 1,761,958 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 20:41:22,263 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@f87d860 (The last packet successfully received from the server was 1,760,419 milliseconds ago.  The last packet sent successfully to the server was 1,760,419 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 20:41:22,263 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2b74aee6 (The last packet successfully received from the server was 1,759,708 milliseconds ago.  The last packet sent successfully to the server was 1,759,708 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 20:41:22,266 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4fa64496 (The last packet successfully received from the server was 1,755,535 milliseconds ago.  The last packet sent successfully to the server was 1,755,536 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 20:41:22,266 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@518d323d (The last packet successfully received from the server was 1,758,234 milliseconds ago.  The last packet sent successfully to the server was 1,758,234 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 20:41:22,269 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4249a35c (The last packet successfully received from the server was 1,754,287 milliseconds ago.  The last packet sent successfully to the server was 1,754,288 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 20:41:22,270 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@50b1ce99 (The last packet successfully received from the server was 1,753,704 milliseconds ago.  The last packet sent successfully to the server was 1,753,704 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 20:41:22,275 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2f9188fe (The last packet successfully received from the server was 1,750,413 milliseconds ago.  The last packet sent successfully to the server was 1,750,413 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 20:41:22,275 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1e013d71 (The last packet successfully received from the server was 1,750,420 milliseconds ago.  The last packet sent successfully to the server was 1,750,421 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 20:41:22,283 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@108cb3c9 (The last packet successfully received from the server was 1,750,413 milliseconds ago.  The last packet sent successfully to the server was 1,750,413 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 20:41:22,283 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1e6401b4 (The last packet successfully received from the server was 1,750,406 milliseconds ago.  The last packet sent successfully to the server was 1,750,406 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 20:43:37,073 INFO [capacityManagement] start correct usage
+
+2021-02-01 20:43:37,083 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-02-01 20:43:37,215 WARN clearConfigHistory start
+
+2021-02-01 20:53:37,114 INFO [capacityManagement] start correct usage
+
+2021-02-01 20:53:37,124 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-02-01 20:53:37,247 WARN clearConfigHistory start
+
+2021-02-01 21:03:37,144 INFO [capacityManagement] start correct usage
+
+2021-02-01 21:03:37,148 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-02-01 21:03:37,267 WARN clearConfigHistory start
+
+2021-02-01 21:10:22,647 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@2baa8113 (The last packet successfully received from the server was 1,751,113 milliseconds ago.  The last packet sent successfully to the server was 1,751,113 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 21:11:00,894 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@38eb3073 (The last packet successfully received from the server was 1,785,637 milliseconds ago.  The last packet sent successfully to the server was 1,785,637 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 21:11:00,898 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@57bab8a4 (The last packet successfully received from the server was 1,778,620 milliseconds ago.  The last packet sent successfully to the server was 1,778,620 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 21:11:00,901 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@31ebc595 (The last packet successfully received from the server was 1,778,610 milliseconds ago.  The last packet sent successfully to the server was 1,778,610 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 21:11:00,905 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1937f357 (The last packet successfully received from the server was 1,778,607 milliseconds ago.  The last packet sent successfully to the server was 1,778,607 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 21:11:00,908 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@78be30aa (The last packet successfully received from the server was 1,778,602 milliseconds ago.  The last packet sent successfully to the server was 1,778,602 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 21:11:00,909 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7ac3c881 (The last packet successfully received from the server was 1,778,548 milliseconds ago.  The last packet sent successfully to the server was 1,778,548 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 21:11:00,911 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@15eb7d21 (The last packet successfully received from the server was 1,778,543 milliseconds ago.  The last packet sent successfully to the server was 1,778,543 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 21:11:00,912 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@33e09980 (The last packet successfully received from the server was 1,778,520 milliseconds ago.  The last packet sent successfully to the server was 1,778,521 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 21:13:37,175 INFO [capacityManagement] start correct usage
+
+2021-02-01 21:13:37,185 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-02-01 21:13:37,297 WARN clearConfigHistory start
+
+2021-02-01 21:23:37,213 INFO [capacityManagement] start correct usage
+
+2021-02-01 21:23:37,218 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-02-01 21:23:37,328 WARN clearConfigHistory start
+
+2021-02-01 21:33:37,240 INFO [capacityManagement] start correct usage
+
+2021-02-01 21:33:37,247 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-02-01 21:33:37,351 WARN clearConfigHistory start
+
+2021-02-01 21:35:46,336 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7c1a9385 (Server shutdown in progress). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 21:35:46,338 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6738db4b (Server shutdown in progress). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 21:35:46,343 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@56f8a5b1 (The last packet successfully received from the server was 1,509,731 milliseconds ago.  The last packet sent successfully to the server was 1,509,731 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 21:35:46,345 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7ed68250 (The last packet successfully received from the server was 1,501,923 milliseconds ago.  The last packet sent successfully to the server was 1,501,923 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 21:35:46,348 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3e6bfcc8 (The last packet successfully received from the server was 1,494,099 milliseconds ago.  The last packet sent successfully to the server was 1,494,100 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 21:35:46,350 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1fa88acd (The last packet successfully received from the server was 1,493,044 milliseconds ago.  The last packet sent successfully to the server was 1,493,044 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 21:35:46,359 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@c6e61a4 (The last packet successfully received from the server was 1,492,823 milliseconds ago.  The last packet sent successfully to the server was 1,492,823 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 21:35:46,360 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4660b67b (The last packet successfully received from the server was 1,492,092 milliseconds ago.  The last packet sent successfully to the server was 1,492,092 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 21:35:46,362 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@270c8fc3 (The last packet successfully received from the server was 1,490,066 milliseconds ago.  The last packet sent successfully to the server was 1,490,066 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 21:35:46,363 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@7c29870d (The last packet successfully received from the server was 1,488,876 milliseconds ago.  The last packet sent successfully to the server was 1,488,877 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 21:35:46,366 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3b5aa6d (The last packet successfully received from the server was 1,487,248 milliseconds ago.  The last packet sent successfully to the server was 1,487,248 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 21:35:46,370 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4025070e (The last packet successfully received from the server was 1,486,966 milliseconds ago.  The last packet sent successfully to the server was 1,486,966 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 21:35:46,376 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@394fa5e (The last packet successfully received from the server was 1,485,460 milliseconds ago.  The last packet sent successfully to the server was 1,485,460 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 21:35:46,380 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@33b504ce (The last packet successfully received from the server was 1,485,456 milliseconds ago.  The last packet sent successfully to the server was 1,485,456 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 21:35:46,383 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@1d7d2617 (The last packet successfully received from the server was 1,485,449 milliseconds ago.  The last packet sent successfully to the server was 1,485,449 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 21:35:46,385 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@75884fc1 (The last packet successfully received from the server was 1,485,444 milliseconds ago.  The last packet sent successfully to the server was 1,485,444 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 21:35:46,388 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@516a1d24 (The last packet successfully received from the server was 1,485,437 milliseconds ago.  The last packet sent successfully to the server was 1,485,437 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 21:35:46,391 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@4a62f0b3 (The last packet successfully received from the server was 1,485,433 milliseconds ago.  The last packet sent successfully to the server was 1,485,433 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 21:35:46,397 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3edb3a76 (The last packet successfully received from the server was 1,485,430 milliseconds ago.  The last packet sent successfully to the server was 1,485,430 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-02-01 21:35:46,401 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@99a8c2b (The last packet successfully received from the server was 1,485,426 milliseconds ago.  The last packet sent successfully to the server was 1,485,426 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+

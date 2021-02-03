@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.concurrent.BlockingQueue;
 
-@Service
+//@Service
 public class JobFetcher implements Runnable {
 
     @Autowired
