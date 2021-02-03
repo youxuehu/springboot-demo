@@ -64,6 +64,7 @@ def write_data():
         pay_platform = 0 if random.random() < 0.9 else 1
         province_id = randint(0, 6)
         cur_data = {"createTime": ts, "orderId": order_id, "payAmount": pay_amount, "payPlatform": pay_platform, "provinceId": province_id}
+        print(cur_data)
         producer.send(topic, value=cur_data)
         sleep(0.5)
 
