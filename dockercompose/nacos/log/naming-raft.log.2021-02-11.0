@@ -1,0 +1,44 @@
+2021-02-11 14:09:19,347 INFO raft peers changed: [Member{ip='a4f275205d98', port=8848, state=UP, extendInfo={adWeight=0, raftPort=7848, site=unknow, weight=1}}]
+
+2021-02-11 14:09:19,496 INFO initializing Raft sub-system
+
+2021-02-11 14:09:19,498 INFO finish loading all datums, size: 0 cost 1 ms.
+
+2021-02-11 14:09:19,530 INFO cache loaded, datum count: 0, current term: 0
+
+2021-02-11 14:09:19,530 INFO finish to load data from disk, cost: 33 ms.
+
+2021-02-11 14:09:19,535 INFO timer started: leader timeout ms: 15000, heart-beat timeout ms: 5000
+
+2021-02-11 14:09:20,063 INFO leader timeout, start voting,leader: {"ip":"a4f275205d98:8848","term":0,"leaderDueMs":15999,"heartbeatDueMs":4000,"state":"FOLLOWER"}, term: 0
+
+2021-02-11 14:09:24,367 INFO snapshot load from : /home/nacos/data/protocol/raft/naming_persistent_service/snapshot/snapshot_7/naming_persistent
+
+2021-02-11 14:09:24,375 INFO raft peers changed: [Member{ip='a4f275205d98', port=8848, state=UP, extendInfo={adWeight=0, lastRefreshTime=1613023764375, raftMetaData=com.alibaba.nacos.consistency.ProtocolMetaData@64f231b8, raftPort=7848, site=unknow, version=1.4.0, weight=1}}]
+
+2021-02-11 14:09:26,450 INFO add listener: com.alibaba.nacos.naming.domains.meta.00-00---000-NACOS_SWITCH_DOMAIN-000---00-00
+
+2021-02-11 14:09:26,472 INFO add listener: com.alibaba.nacos.naming.domains.meta.
+
+2021-02-11 14:09:29,176 WARN start to close old raft protocol!!!
+
+2021-02-11 14:09:29,176 WARN stop old raft protocol task for notifier
+
+2021-02-11 14:09:29,176 WARN stop old raft protocol task for master task
+
+2021-02-11 14:09:29,176 WARN stop old raft protocol task for heartbeat task
+
+2021-02-11 14:09:29,176 WARN clean old cache datum for old raft
+
+2021-02-11 14:09:29,176 WARN start to close old raft protocol!!!
+
+2021-02-11 14:09:29,176 WARN stop old raft protocol task for notifier
+
+2021-02-11 14:09:29,176 WARN stop old raft protocol task for master task
+
+2021-02-11 14:09:29,176 WARN stop old raft protocol task for heartbeat task
+
+2021-02-11 14:09:29,176 WARN clean old cache datum for old raft
+
+2021-02-11 14:09:29,178 WARN start to move old raft protocol metadata
+

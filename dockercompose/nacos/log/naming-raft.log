@@ -1,40 +1,44 @@
-2021-02-03 22:58:33,429 INFO raft peers changed: [Member{ip='a4f275205d98', port=8848, state=UP, extendInfo={adWeight=0, raftPort=7848, site=unknow, weight=1}}]
+2021-02-12 19:16:55,661 INFO raft peers changed: [Member{ip='a4f275205d98', port=8848, state=UP, extendInfo={adWeight=0, raftPort=7848, site=unknow, weight=1}}]
 
-2021-02-03 22:58:33,485 INFO initializing Raft sub-system
+2021-02-12 19:16:55,817 INFO initializing Raft sub-system
 
-2021-02-03 22:58:33,486 INFO finish loading all datums, size: 0 cost 0 ms.
+2021-02-12 19:16:55,841 INFO finish loading all datums, size: 0 cost 24 ms.
 
-2021-02-03 22:58:33,490 INFO cache loaded, datum count: 0, current term: 0
+2021-02-12 19:16:55,866 INFO cache loaded, datum count: 0, current term: 0
 
-2021-02-03 22:58:33,490 INFO finish to load data from disk, cost: 4 ms.
+2021-02-12 19:16:55,866 INFO finish to load data from disk, cost: 49 ms.
 
-2021-02-03 22:58:33,503 INFO timer started: leader timeout ms: 15000, heart-beat timeout ms: 5000
+2021-02-12 19:16:55,870 INFO timer started: leader timeout ms: 15000, heart-beat timeout ms: 5000
 
-2021-02-03 22:58:36,660 INFO leader timeout, start voting,leader: {"ip":"a4f275205d98:8848","term":0,"leaderDueMs":18707,"heartbeatDueMs":4500,"state":"FOLLOWER"}, term: 0
+2021-02-12 19:16:57,247 INFO leader timeout, start voting,leader: {"ip":"a4f275205d98:8848","term":0,"leaderDueMs":18438,"heartbeatDueMs":4500,"state":"FOLLOWER"}, term: 0
 
-2021-02-03 22:58:37,282 INFO raft peers changed: [Member{ip='a4f275205d98', port=8848, state=UP, extendInfo={adWeight=0, lastRefreshTime=1612364317267, raftMetaData=com.alibaba.nacos.consistency.ProtocolMetaData@28b53f25, raftPort=7848, site=unknow, version=1.4.0, weight=1}}]
+2021-02-12 19:17:00,901 INFO snapshot load from : /home/nacos/data/protocol/raft/naming_persistent_service/snapshot/snapshot_8/naming_persistent
 
-2021-02-03 22:58:38,364 WARN start to close old raft protocol!!!
+2021-02-12 19:17:00,916 INFO raft peers changed: [Member{ip='a4f275205d98', port=8848, state=UP, extendInfo={adWeight=0, lastRefreshTime=1613128620915, raftMetaData=com.alibaba.nacos.consistency.ProtocolMetaData@57dce759, raftPort=7848, site=unknow, version=1.4.0, weight=1}}]
 
-2021-02-03 22:58:38,364 WARN stop old raft protocol task for notifier
+2021-02-12 19:17:02,987 INFO add listener: com.alibaba.nacos.naming.domains.meta.00-00---000-NACOS_SWITCH_DOMAIN-000---00-00
 
-2021-02-03 22:58:38,364 WARN stop old raft protocol task for master task
+2021-02-12 19:17:03,009 INFO add listener: com.alibaba.nacos.naming.domains.meta.
 
-2021-02-03 22:58:38,364 WARN stop old raft protocol task for heartbeat task
+2021-02-12 19:17:05,585 WARN start to close old raft protocol!!!
 
-2021-02-03 22:58:38,364 WARN clean old cache datum for old raft
+2021-02-12 19:17:05,585 WARN stop old raft protocol task for notifier
 
-2021-02-03 22:58:38,364 WARN start to close old raft protocol!!!
+2021-02-12 19:17:05,585 WARN stop old raft protocol task for master task
 
-2021-02-03 22:58:38,364 WARN stop old raft protocol task for notifier
+2021-02-12 19:17:05,585 WARN stop old raft protocol task for heartbeat task
 
-2021-02-03 22:58:38,364 WARN stop old raft protocol task for master task
+2021-02-12 19:17:05,585 WARN clean old cache datum for old raft
 
-2021-02-03 22:58:38,364 WARN stop old raft protocol task for heartbeat task
+2021-02-12 19:17:05,585 WARN start to close old raft protocol!!!
 
-2021-02-03 22:58:38,364 WARN clean old cache datum for old raft
+2021-02-12 19:17:05,585 WARN stop old raft protocol task for notifier
 
-2021-02-03 22:58:39,072 INFO add listener: com.alibaba.nacos.naming.domains.meta.00-00---000-NACOS_SWITCH_DOMAIN-000---00-00
+2021-02-12 19:17:05,585 WARN stop old raft protocol task for master task
 
-2021-02-03 22:58:39,338 INFO add listener: com.alibaba.nacos.naming.domains.meta.
+2021-02-12 19:17:05,585 WARN stop old raft protocol task for heartbeat task
+
+2021-02-12 19:17:05,585 WARN clean old cache datum for old raft
+
+2021-02-12 19:17:05,585 WARN start to move old raft protocol metadata
 

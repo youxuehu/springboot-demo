@@ -1,0 +1,54 @@
+2021-02-09 18:42:53,735 INFO SPI service [com.alipay.sofa.jraft.JRaftServiceFactory - com.alipay.sofa.jraft.core.DefaultJRaftServiceFactory] loading.
+
+2021-02-09 18:42:54,561 INFO SPI service [com.alipay.sofa.jraft.rpc.RaftRpcFactory - com.alipay.sofa.jraft.rpc.impl.GrpcRaftRpcFactory] loading.
+
+2021-02-09 18:42:56,984 INFO SPI service [com.alipay.sofa.jraft.util.JRaftSignalHandler - com.alipay.sofa.jraft.NodeDescribeSignalHandler] loading.
+
+2021-02-09 18:42:56,986 INFO SPI service [com.alipay.sofa.jraft.util.JRaftSignalHandler - com.alipay.sofa.jraft.NodeMetricsSignalHandler] loading.
+
+2021-02-09 18:42:56,987 INFO SPI service [com.alipay.sofa.jraft.util.JRaftSignalHandler - com.alipay.sofa.jraft.ThreadPoolMetricsSignalHandler] loading.
+
+2021-02-09 18:42:56,991 INFO SPI service [com.alipay.sofa.jraft.util.timer.RaftTimerFactory - com.alipay.sofa.jraft.util.timer.DefaultRaftTimerFactory] loading.
+
+2021-02-09 18:42:56,994 INFO The number of active nodes increment to 1.
+
+2021-02-09 18:42:57,973 INFO Starts FSMCaller successfully.
+
+2021-02-09 18:42:58,111 INFO Loading snapshot, meta=last_included_index: 5
+last_included_term: 5
+peers: "a4f275205d98:7848"
+.
+
+2021-02-09 18:42:58,452 INFO Node <naming_persistent_service/a4f275205d98:7848> onSnapshotLoadDone, last_included_index: 5
+last_included_term: 5
+peers: "a4f275205d98:7848"
+
+
+2021-02-09 18:42:58,458 INFO Node <naming_persistent_service/a4f275205d98:7848> target priority value has changed from: 0, to: -1.
+
+2021-02-09 18:42:58,533 INFO Node <naming_persistent_service/a4f275205d98:7848> init, term=5, lastLogId=LogId [index=5, term=5], conf=a4f275205d98:7848, oldConf=.
+
+2021-02-09 18:42:58,536 INFO Node <naming_persistent_service/a4f275205d98:7848> start vote and grant vote self, term=5.
+
+2021-02-09 18:42:58,594 INFO Save raft meta, path=/home/nacos/data/protocol/raft/naming_persistent_service/meta-data, term=6, votedFor=a4f275205d98:7848, cost time=56 ms
+
+2021-02-09 18:42:58,595 INFO Node <naming_persistent_service/a4f275205d98:7848> become leader of group, term=6, conf=a4f275205d98:7848, oldConf=.
+
+2021-02-09 18:42:58,599 INFO -Djraft.recyclers.maxCapacityPerThread: 4096.
+
+2021-02-09 18:42:58,601 WARN RPC server is not started in RaftGroupService.
+
+2021-02-09 18:42:58,602 INFO Start the RaftGroupService successfully.
+
+2021-02-09 18:42:58,656 INFO onLeaderStart: term=6.
+
+2021-02-09 18:42:59,892 ERROR Fail to connect a4f275205d98:7848, remoting exception: java.util.concurrent.ExecutionException: io.grpc.StatusRuntimeException: DEADLINE_EXCEEDED: deadline exceeded after 853443095ns. [buffered_nanos=865674346, waiting_for_connection].
+
+2021-02-09 18:42:59,894 ERROR Fail to connect peer a4f275205d98:7848 to get leader for group naming_persistent_service.
+
+2021-02-09 19:08:20,179 INFO Deleting snapshot /home/nacos/data/protocol/raft/naming_persistent_service/snapshot/snapshot_6.
+
+2021-02-09 19:08:20,180 INFO Renaming /home/nacos/data/protocol/raft/naming_persistent_service/snapshot/temp to /home/nacos/data/protocol/raft/naming_persistent_service/snapshot/snapshot_6.
+
+2021-02-09 19:08:20,180 INFO Deleting snapshot /home/nacos/data/protocol/raft/naming_persistent_service/snapshot/snapshot_5.
+

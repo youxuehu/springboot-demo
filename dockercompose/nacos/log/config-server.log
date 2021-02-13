@@ -1,34 +1,34 @@
-2021-02-03 22:58:11,519 INFO notifyConnectTimeout:200
+2021-02-12 19:16:27,324 INFO notifyConnectTimeout:200
 
-2021-02-03 22:58:11,686 INFO notifySocketTimeout:8000
+2021-02-12 19:16:27,409 INFO notifySocketTimeout:8000
 
-2021-02-03 22:58:11,689 INFO isHealthCheck:true
+2021-02-12 19:16:27,410 INFO isHealthCheck:true
 
-2021-02-03 22:58:11,690 INFO maxHealthCheckFailCount:12
+2021-02-12 19:16:27,411 INFO maxHealthCheckFailCount:12
 
-2021-02-03 22:58:11,691 INFO maxContent:10485760
+2021-02-12 19:16:27,411 INFO maxContent:10485760
 
-2021-02-03 22:58:11,693 INFO spring.datasource.platform:mysql
+2021-02-12 19:16:27,413 INFO spring.datasource.platform:mysql
 
-2021-02-03 22:58:39,549 WARN DumpService start
+2021-02-12 19:17:03,208 WARN DumpService start
 
-2021-02-03 22:58:39,553 INFO start clear all config-info.
+2021-02-12 19:17:03,212 INFO start clear all config-info.
 
-2021-02-03 22:58:39,554 WARN clear all config-info failed.
+2021-02-12 19:17:03,270 INFO clear all config-info success.
 
-2021-02-03 22:58:39,555 WARN clear all config-info-tenant failed.
+2021-02-12 19:17:03,271 WARN clear all config-info-tenant failed.
 
-2021-02-03 22:58:39,697 INFO [all-dump] 21 / 21
+2021-02-12 19:17:03,333 INFO [all-dump] 21 / 21
 
-2021-02-03 22:58:39,698 INFO start clear all config-info-beta.
+2021-02-12 19:17:03,333 INFO start clear all config-info-beta.
 
-2021-02-03 22:58:39,698 WARN clear all config-info-beta failed.
+2021-02-12 19:17:03,334 WARN clear all config-info-beta failed.
 
-2021-02-03 22:58:39,700 WARN clear all config-info-beta-tenant failed.
+2021-02-12 19:17:03,334 WARN clear all config-info-beta-tenant failed.
 
-2021-02-03 22:58:39,703 INFO start clear all config-info-tag.
+2021-02-12 19:17:03,353 INFO start clear all config-info-tag.
 
-2021-02-03 22:58:39,703 WARN clear all config-info-tag failed.
+2021-02-12 19:17:03,354 WARN clear all config-info-tag failed.
 
-2021-02-03 22:58:39,704 WARN clear all config-info-tag-tenant failed.
+2021-02-12 19:17:03,354 WARN clear all config-info-tag-tenant failed.
 

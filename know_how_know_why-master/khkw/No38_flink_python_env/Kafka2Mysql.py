@@ -1,6 +1,7 @@
 from pyflink.datastream import StreamExecutionEnvironment
 from pyflink.table import EnvironmentSettings, StreamTableEnvironment, DataTypes
 
+
 def kafka_to_mysql():
     """
     从Kafka Source读取Json数据，然后导入到Mysql。{"msg": "welcome flink users..."}
@@ -10,15 +11,18 @@ def kafka_to_mysql():
     t_env = StreamTableEnvironment.create(stream_execution_environment=env, environment_settings=settings)
     t_env.get_config().get_configuration().set_boolean("python.fn-execution.memory.managed", True)
 
-    #JARS_DIR=/Users/jincheng.sunjc/work/PlaygroundEnv/myJars/
-    #wget -P ${JARS_DIR} https://repo.maven.apache.org/maven2/org/apache/flink/flink-json/1.11.1/flink-json-1.11.1.jar; \
-    #wget -P ${JARS_DIR} https://repo.maven.apache.org/maven2/org/apache/flink/flink-sql-connector-kafka-0.11_2.11/1.11.1/flink-sql-connector-kafka-0.11_2.11-1.11.1.jar; \
-    #wget -P ${JARS_DIR} https://repo.maven.apache.org/maven2/org/apache/flink/flink-connector-jdbc_2.11/1.11.1/flink-connector-jdbc_2.11-1.11.1.jar; \
-    #wget -P ${JARS_DIR} https://repo.maven.apache.org/maven2/mysql/mysql-connector-java/5.1.40/mysql-connector-java-5.1.40.jar; \
-    #wget -P ${JARS_DIR} https://repo.maven.apache.org/maven2/org/apache/flink/flink-table-common/1.11.1/flink-table-common-1.11.1.jar ; \
+    """
+    
+        JARS_DIR=/Users/youxuehu/IdeaProjects/springboot-demo/know_how_know_why-master/khkw/No38_flink_python_env/myJars/
+        wget -P ${JARS_DIR} https://repo.maven.apache.org/maven2/org/apache/flink/flink-json/1.11.1/flink-json-1.11.1.jar; \
+        wget -P ${JARS_DIR} https://repo.maven.apache.org/maven2/org/apache/flink/flink-sql-connector-kafka-0.11_2.11/1.11.1/flink-sql-connector-kafka-0.11_2.11-1.11.1.jar; \
+        wget -P ${JARS_DIR} https://repo.maven.apache.org/maven2/org/apache/flink/flink-connector-jdbc_2.11/1.11.1/flink-connector-jdbc_2.11-1.11.1.jar; \
+        wget -P ${JARS_DIR} https://repo.maven.apache.org/maven2/mysql/mysql-connector-java/5.1.40/mysql-connector-java-5.1.40.jar; \
+        wget -P ${JARS_DIR} https://repo.maven.apache.org/maven2/org/apache/flink/flink-table-common/1.11.1/flink-table-common-1.11.1.jar ; \
+    
+    """
 
-    # 添加依赖
-    base_dir = "file:///Users/jincheng.sunjc/work/PlaygroundEnv/myJars/"
+    base_dir = "file:////Users/youxuehu/IdeaProjects/springboot-demo/know_how_know_why-master/khkw/No38_flink_python_env/myJars/"
 
     kafka_jar = f"{base_dir}flink-sql-connector-kafka-0.11_2.11-1.11.1.jar"
     jdbc_jar = f"{base_dir}flink-connector-jdbc_2.11-1.11.1.jar"
@@ -33,7 +37,11 @@ def kafka_to_mysql():
 
     source_ddl = """
                     CREATE TABLE kafka_source (
-                        msg STRING
+                        createTime STRING,
+                        orderId STRING,
+                        payAmount STRING,
+                        payPlatform STRING,
+                        provinceId STRING
                     ) WITH (
                         'connector' = 'kafka-0.11',
                         'topic' = 'cdn-log',
@@ -45,7 +53,11 @@ def kafka_to_mysql():
 
     sink_ddl = """
                   CREATE TABLE mysql_sink (
-                    msg STRING 
+                    createTime STRING,
+                    orderId STRING,
+                    payAmount STRING,
+                    payPlatform STRING,
+                    provinceId STRING
                 ) WITH (
                    'connector' = 'jdbc',
                    'url' = 'jdbc:mysql://localhost:3306/flinkdb?characterEncoding=utf-8&useSSL=false',

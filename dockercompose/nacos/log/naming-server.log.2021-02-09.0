@@ -1,0 +1,8 @@
+2021-02-09 18:42:52,905 INFO GlobalConfig{taskDispatchPeriod=200, batchSyncKeyCount=1000, syncRetryDelay=5000, dataWarmup=true, expireInstance=true, loadDataRetryDelayMillis=30000}
+
+2021-02-09 18:42:58,459 INFO [NACOS-DISTRO] healthy server list changed, old: [a4f275205d98:8848], new: [a4f275205d98:8848]
+
+2021-02-09 18:43:00,470 INFO open empty service auto clean job, initialDelay : 50000 ms, period : 30000 ms
+
+2021-02-09 18:43:00,471 INFO listen for service meta change
+
