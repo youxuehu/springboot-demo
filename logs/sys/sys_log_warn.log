@@ -1,210 +1,173 @@
-2021-02-03 22:58:47.614 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
-2021-02-03 22:58:50.017 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NoSuchMethodError: com.google.common.collect.Multimaps.asMap(Lcom/google/common/collect/ListMultimap;)Ljava/util/Map;
-2021-02-03 22:58:50.206 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+2021-02-20 22:42:14.206 [C3P0PooledConnectionPoolManager[identityToken->1hge2niaf1h8q7p51829xh|39dd66e1]-HelperThread-#0] WARN  com.mchange.v2.resourcepool.BasicResourcePool - com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask@7c6ae7fc -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (30). Last acquisition attempt exception: 
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:175)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:220)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:206)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:203)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1176)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquireAndDecrementPendingAcquiresWithinLockOnSuccess(BasicResourcePool.java:1163)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$700(BasicResourcePool.java:44)
+	at com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask.run(BasicResourcePool.java:1908)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:696)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.GeneratedConstructorAccessor47.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:91)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:144)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:956)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:826)
+	... 12 common frames omitted
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65)
+	... 15 common frames omitted
+2021-02-20 22:42:14.206 [C3P0PooledConnectionPoolManager[identityToken->1hge2niaf1h8q7p51829xh|39dd66e1]-HelperThread-#1] WARN  com.mchange.v2.resourcepool.BasicResourcePool - com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask@477f94ac -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (30). Last acquisition attempt exception: 
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:175)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:220)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:206)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:203)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1176)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquireAndDecrementPendingAcquiresWithinLockOnSuccess(BasicResourcePool.java:1163)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$700(BasicResourcePool.java:44)
+	at com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask.run(BasicResourcePool.java:1908)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:696)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.GeneratedConstructorAccessor47.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:91)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:144)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:956)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:826)
+	... 12 common frames omitted
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65)
+	... 15 common frames omitted
+2021-02-20 22:42:14.206 [C3P0PooledConnectionPoolManager[identityToken->1hge2niaf1h8q7p51829xh|39dd66e1]-HelperThread-#2] WARN  com.mchange.v2.resourcepool.BasicResourcePool - com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask@7f4b8cb5 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (30). Last acquisition attempt exception: 
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:199)
+	at com.mchange.v2.c3p0.DriverManagerDataSource.getConnection(DriverManagerDataSource.java:175)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:220)
+	at com.mchange.v2.c3p0.WrapperConnectionPoolDataSource.getPooledConnection(WrapperConnectionPoolDataSource.java:206)
+	at com.mchange.v2.c3p0.impl.C3P0PooledConnectionPool$1PooledConnectionResourcePoolManager.acquireResource(C3P0PooledConnectionPool.java:203)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquire(BasicResourcePool.java:1176)
+	at com.mchange.v2.resourcepool.BasicResourcePool.doAcquireAndDecrementPendingAcquiresWithinLockOnSuccess(BasicResourcePool.java:1163)
+	at com.mchange.v2.resourcepool.BasicResourcePool.access$700(BasicResourcePool.java:44)
+	at com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask.run(BasicResourcePool.java:1908)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:696)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.GeneratedConstructorAccessor47.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:91)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:144)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:956)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:826)
+	... 12 common frames omitted
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65)
+	... 15 common frames omitted
+2021-02-20 22:42:14.210 [C3P0PooledConnectionPoolManager[identityToken->1hge2niaf1h8q7p51829xh|39dd66e1]-HelperThread-#0] WARN  com.mchange.v2.resourcepool.BasicResourcePool - Having failed to acquire a resource, com.mchange.v2.resourcepool.BasicResourcePool@8ecb62f is interrupting all Threads waiting on a resource to check out. Will try again in response to new client requests.
+2021-02-20 22:42:14.213 [C3P0PooledConnectionPoolManager[identityToken->1hge2niaf1h8q7p51829xh|39dd66e1]-HelperThread-#2] WARN  com.mchange.v2.resourcepool.BasicResourcePool - Having failed to acquire a resource, com.mchange.v2.resourcepool.BasicResourcePool@8ecb62f is interrupting all Threads waiting on a resource to check out. Will try again in response to new client requests.
+2021-02-20 22:42:14.214 [C3P0PooledConnectionPoolManager[identityToken->1hge2niaf1h8q7p51829xh|39dd66e1]-HelperThread-#1] WARN  com.mchange.v2.resourcepool.BasicResourcePool - Having failed to acquire a resource, com.mchange.v2.resourcepool.BasicResourcePool@8ecb62f is interrupting all Threads waiting on a resource to check out. Will try again in response to new client requests.
+2021-02-20 22:42:14.986 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'logHandlerAdapter': Unsatisfied dependency expressed through field 'adminOperateLogMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adminOperateLogMapper' defined in file [/Users/youxuehu/IdeaProjects/springboot-demo/target/classes/com/example/springbootdemo/common/db/dao/adminoperatelog/mapper/AdminOperateLogMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/DruidDataSourceAutoConfigure.class]: Invocation of init method failed; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2021-02-20 22:42:15.004 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
  java.lang.Object.wait(Native Method)
  org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
-2021-02-03 22:58:50.206 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-2] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+2021-02-20 22:42:15.008 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-2] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
  java.lang.Object.wait(Native Method)
  org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
-2021-02-03 22:58:50.207 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-3] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+2021-02-20 22:42:15.009 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-3] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
  java.lang.Object.wait(Native Method)
  org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
-2021-02-03 22:58:50.207 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-4] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+2021-02-20 22:42:15.009 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-4] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
  java.lang.Object.wait(Native Method)
  org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
-2021-02-03 22:58:50.208 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-5] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+2021-02-20 22:42:15.010 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-5] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
  java.lang.Object.wait(Native Method)
  org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
-2021-02-03 22:58:50.208 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [C3P0PooledConnectionPoolManager[identityToken->1hge2niafsyugu73dju4w|30c6b19]-AdminTaskTimer] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.lang.Object.wait(Native Method)
- java.util.TimerThread.mainLoop(Timer.java:552)
- java.util.TimerThread.run(Timer.java:505)
-2021-02-03 22:58:50.209 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [C3P0PooledConnectionPoolManager[identityToken->1hge2niafsyugu73dju4w|30c6b19]-HelperThread-#0] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.lang.Object.wait(Native Method)
- com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:683)
-2021-02-03 22:58:50.210 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [C3P0PooledConnectionPoolManager[identityToken->1hge2niafsyugu73dju4w|30c6b19]-HelperThread-#1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.lang.Object.wait(Native Method)
- com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:683)
-2021-02-03 22:58:50.211 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [C3P0PooledConnectionPoolManager[identityToken->1hge2niafsyugu73dju4w|30c6b19]-HelperThread-#2] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.lang.Object.wait(Native Method)
- com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:683)
-2021-02-03 22:58:56.084 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":138956800,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:58:56.086 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 22:58:56.811 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 22:58:56.811 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":70443008,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:58:57.809 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 22:58:57.809 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":142778368,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:58:58.811 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 22:58:58.812 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":186884096,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:58:59.810 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 22:58:59.813 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":180543488,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:59:00.813 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":165797888,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:59:00.813 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 22:59:01.810 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 22:59:01.823 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":107102208,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:59:02.808 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":72826880,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:59:02.809 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 22:59:03.810 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":60461056,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:59:03.810 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 22:59:04.809 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":57434112,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:59:04.811 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 22:59:05.812 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 22:59:05.812 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":31776768,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:59:06.813 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 22:59:06.813 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":25051136,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:59:07.809 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 22:59:07.809 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":22069248,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:59:08.810 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 22:59:08.810 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":35454976,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:59:09.811 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 22:59:09.811 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":40415232,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:59:10.814 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 22:59:10.814 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":35516416,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:59:11.808 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":20045824,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:59:11.810 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 22:59:12.813 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 22:59:12.813 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":18456576,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:59:13.810 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 22:59:13.814 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":23703552,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:59:14.812 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 22:59:14.812 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":25010176,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:59:15.812 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":30597120,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:59:15.814 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 22:59:16.810 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 22:59:16.813 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":33308672,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:59:17.811 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 22:59:17.814 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":27729920,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:59:18.815 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 22:59:18.815 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":25837568,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:59:19.815 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 22:59:19.815 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":25083904,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:59:20.808 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":23523328,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:59:20.810 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 22:59:21.816 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":21647360,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:59:21.816 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 22:59:22.813 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 22:59:22.813 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":22032384,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:59:23.810 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 22:59:23.813 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":21348352,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:59:24.808 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":21798912,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:59:24.809 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 22:59:25.813 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 22:59:25.833 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":32653312,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:59:26.816 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 22:59:26.817 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":37740544,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:59:27.815 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 22:59:27.815 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":32931840,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:59:28.804 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":40099840,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:59:28.810 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 22:59:29.810 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 22:59:29.813 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":32608256,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:59:30.807 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":39870464,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:59:30.810 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 22:59:31.810 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":46690304,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:59:31.811 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 22:59:32.808 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":53063680,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:59:32.810 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 22:59:33.809 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":52867072,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:59:33.810 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 22:59:34.815 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":52916224,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:59:34.815 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 22:59:35.812 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 22:59:35.818 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":50126848,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:59:36.812 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 22:59:36.812 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":47636480,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:59:37.810 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":54231040,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:59:37.810 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 22:59:38.815 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 22:59:38.815 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":180809728,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:59:39.808 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":293339136,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:59:39.812 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 22:59:40.817 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 22:59:40.817 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":275161088,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:59:41.811 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":319127552,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:59:41.811 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 22:59:42.809 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":236482560,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
-2021-02-03 22:59:42.811 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - zkDataList: []
-2021-02-03 23:00:03.743 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'heartBeats': Unsatisfied dependency expressed through field 'zkClientService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.example.springbootdemo.common.db.service.ZkClientService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true), @org.springframework.beans.factory.annotation.Qualifier(value=zkClientService)}
-2021-02-03 23:00:03.888 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.lang.Object.wait(Native Method)
- org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
-2021-02-03 23:00:03.889 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-2] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.lang.Object.wait(Native Method)
- org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
-2021-02-03 23:00:03.889 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-3] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.lang.Object.wait(Native Method)
- org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
-2021-02-03 23:00:03.890 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-4] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.lang.Object.wait(Native Method)
- org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
-2021-02-03 23:00:03.890 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-5] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.lang.Object.wait(Native Method)
- org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
-2021-02-03 23:00:03.891 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [C3P0PooledConnectionPoolManager[identityToken->1hge2niafsyw8jfiq6k0f|54adf0dd]-AdminTaskTimer] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.lang.Object.wait(Native Method)
- java.util.TimerThread.mainLoop(Timer.java:552)
- java.util.TimerThread.run(Timer.java:505)
-2021-02-03 23:00:03.891 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [C3P0PooledConnectionPoolManager[identityToken->1hge2niafsyw8jfiq6k0f|54adf0dd]-HelperThread-#0] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.lang.Object.wait(Native Method)
- com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:683)
-2021-02-03 23:00:03.891 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [C3P0PooledConnectionPoolManager[identityToken->1hge2niafsyw8jfiq6k0f|54adf0dd]-HelperThread-#1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.lang.Object.wait(Native Method)
- com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:683)
-2021-02-03 23:00:03.892 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [C3P0PooledConnectionPoolManager[identityToken->1hge2niafsyw8jfiq6k0f|54adf0dd]-HelperThread-#2] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.lang.Object.wait(Native Method)
- com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:683)
-2021-02-03 23:00:44.712 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
-2021-02-03 23:00:45.856 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NoSuchMethodError: com.google.common.collect.Multimaps.asMap(Lcom/google/common/collect/ListMultimap;)Ljava/util/Map;
-2021-02-03 23:00:46.010 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.lang.Object.wait(Native Method)
- org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
-2021-02-03 23:00:46.011 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-2] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.lang.Object.wait(Native Method)
- org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
-2021-02-03 23:00:46.011 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-3] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.lang.Object.wait(Native Method)
- org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
-2021-02-03 23:00:46.012 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-4] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.lang.Object.wait(Native Method)
- org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
-2021-02-03 23:00:46.012 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-5] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.lang.Object.wait(Native Method)
- org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
-2021-02-03 23:00:46.012 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [C3P0PooledConnectionPoolManager[identityToken->1hge2niafsyx43uhym2h9|3a2c71cb]-AdminTaskTimer] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.lang.Object.wait(Native Method)
- java.util.TimerThread.mainLoop(Timer.java:552)
- java.util.TimerThread.run(Timer.java:505)
-2021-02-03 23:00:46.013 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [C3P0PooledConnectionPoolManager[identityToken->1hge2niafsyx43uhym2h9|3a2c71cb]-HelperThread-#0] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.lang.Object.wait(Native Method)
- com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:683)
-2021-02-03 23:00:46.013 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [C3P0PooledConnectionPoolManager[identityToken->1hge2niafsyx43uhym2h9|3a2c71cb]-HelperThread-#1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.lang.Object.wait(Native Method)
- com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:683)
-2021-02-03 23:00:46.014 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [C3P0PooledConnectionPoolManager[identityToken->1hge2niafsyx43uhym2h9|3a2c71cb]-HelperThread-#2] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.lang.Object.wait(Native Method)
- com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:683)
-2021-02-03 23:08:44.733 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
-2021-02-03 23:08:46.023 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
-2021-02-03 23:08:46.024 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
-2021-02-03 23:08:46.025 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
-2021-02-03 23:08:46.026 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
-2021-02-03 23:08:46.027 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
-2021-02-03 23:08:46.027 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
-2021-02-03 23:08:46.028 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
-2021-02-03 23:08:46.029 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
-2021-02-03 23:08:46.032 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
-2021-02-03 23:08:46.033 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
-2021-02-03 23:08:46.033 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
-2021-02-03 23:08:46.034 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
-2021-02-03 23:08:46.035 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
-2021-02-03 23:08:46.036 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
-2021-02-03 23:08:46.037 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
-2021-02-03 23:08:46.038 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
-2021-02-03 23:08:46.063 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-02-03 23:08:46.064 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-02-03 23:08:46.064 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-02-03 23:08:46.065 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-02-03 23:08:46.066 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-02-03 23:08:46.067 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-02-03 23:08:46.067 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
-2021-02-03 23:08:46.068 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-02-20 22:42:15.010 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [logback-8] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1088)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2021-02-20 22:42:15.011 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [logback-9] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1088)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)

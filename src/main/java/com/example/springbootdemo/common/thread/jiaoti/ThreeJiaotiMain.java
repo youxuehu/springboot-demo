@@ -1,6 +1,8 @@
 package com.example.springbootdemo.common.thread.jiaoti;
 
 import com.alibaba.druid.util.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
@@ -10,6 +12,8 @@ import java.util.concurrent.locks.ReentrantLock;
  * 三个线程顺序交替执行
  */
 public class ThreeJiaotiMain {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(ThreeJiaotiMain.class);
 
     public static void main(String[] args) {
         new ThreeJiaotiMain().execute();
@@ -37,7 +41,7 @@ public class ThreeJiaotiMain {
                         }
                         business.c1();
                         try {
-                            Thread.sleep(1000);
+                            Thread.sleep(0);
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
@@ -67,7 +71,7 @@ public class ThreeJiaotiMain {
                         }
                         business.c2();
                         try {
-                            Thread.sleep(1000);
+                            Thread.sleep(0);
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
@@ -97,7 +101,7 @@ public class ThreeJiaotiMain {
                         }
                         business.c3();
                         try {
-                            Thread.sleep(1000);
+                            Thread.sleep(0);
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
@@ -130,13 +134,13 @@ public class ThreeJiaotiMain {
         }
 
         public void c1() {
-            System.out.println(Thread.currentThread().getName() + " >>>>>> A");
+            LOGGER.info(Thread.currentThread().getName() + " >>>>>> A");
         }
         public void c2() {
-            System.out.println(Thread.currentThread().getName() + " >>>>>> B");
+            LOGGER.info(Thread.currentThread().getName() + " >>>>>> B");
         }
         public void c3() {
-            System.out.println(Thread.currentThread().getName() + " >>>>>> C");
+            LOGGER.info(Thread.currentThread().getName() + " >>>>>> C");
         }
     }
 }

@@ -1,0 +1,87 @@
+2021-02-17 11:05:21  [ main-SendThread(127:2181):0 ] - [ ERROR ]  Unable to open socket to 127/0.0.0.127:2181
+2021-02-17 11:05:22  [ main-SendThread(127:2181):1111 ] - [ ERROR ]  Unable to open socket to 127/0.0.0.127:2181
+2021-02-17 11:05:23  [ main-SendThread(127:2181):2215 ] - [ ERROR ]  Unable to open socket to 127/0.0.0.127:2181
+2021-02-17 11:05:24  [ main-SendThread(127:2181):3322 ] - [ ERROR ]  Unable to open socket to 127/0.0.0.127:2181
+2021-02-17 11:05:25  [ main-SendThread(127:2181):4427 ] - [ ERROR ]  Unable to open socket to 127/0.0.0.127:2181
+2021-02-17 11:05:26  [ main-SendThread(127:2181):5532 ] - [ ERROR ]  Unable to open socket to 127/0.0.0.127:2181
+2021-02-17 11:05:27  [ main-SendThread(127:2181):6634 ] - [ ERROR ]  Unable to open socket to 127/0.0.0.127:2181
+2021-02-17 11:05:29  [ main-SendThread(127:2181):7744 ] - [ ERROR ]  Unable to open socket to 127/0.0.0.127:2181
+2021-02-17 11:05:30  [ main-SendThread(127:2181):8849 ] - [ ERROR ]  Unable to open socket to 127/0.0.0.127:2181
+2021-02-17 11:05:31  [ main-SendThread(127:2181):9950 ] - [ ERROR ]  Unable to open socket to 127/0.0.0.127:2181
+2021-02-17 11:05:32  [ main-SendThread(127:2181):11053 ] - [ ERROR ]  Unable to open socket to 127/0.0.0.127:2181
+2021-02-17 11:05:33  [ main-SendThread(127:2181):12159 ] - [ ERROR ]  Unable to open socket to 127/0.0.0.127:2181
+2021-02-17 11:05:34  [ main-SendThread(127:2181):13268 ] - [ ERROR ]  Unable to open socket to 127/0.0.0.127:2181
+2021-02-17 11:05:35  [ main-SendThread(127:2181):14369 ] - [ ERROR ]  Unable to open socket to 127/0.0.0.127:2181
+2021-02-17 11:05:36  [ main-SendThread(127:2181):15471 ] - [ ERROR ]  Unable to open socket to 127/0.0.0.127:2181
+2021-02-17 11:05:37  [ main-SendThread(127:2181):16572 ] - [ ERROR ]  Unable to open socket to 127/0.0.0.127:2181
+2021-02-17 11:05:38  [ main:16675 ] - [ ERROR ]  ZooKeeper exists failed after 4 attempts
+2021-02-17 11:05:38  [ main:16676 ] - [ ERROR ]  hconnection-0x5a4041cc0x0, quorum=127/0/0/1:2181, baseZNode=/hbase Received unexpected KeeperException, re-throwing exception
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /hbase/hbaseid
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:99)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.exists(ZooKeeper.java:1102)
+	at org.apache.hadoop.hbase.zookeeper.RecoverableZooKeeper.exists(RecoverableZooKeeper.java:231)
+	at org.apache.hadoop.hbase.zookeeper.ZKUtil.checkExists(ZKUtil.java:425)
+	at org.apache.hadoop.hbase.zookeeper.ZKClusterId.readClusterIdZNode(ZKClusterId.java:65)
+	at org.apache.hadoop.hbase.client.ZooKeeperRegistry.getClusterId(ZooKeeperRegistry.java:105)
+	at org.apache.hadoop.hbase.client.ConnectionManager$HConnectionImplementation.retrieveClusterId(ConnectionManager.java:945)
+	at org.apache.hadoop.hbase.client.ConnectionManager$HConnectionImplementation.<init>(ConnectionManager.java:721)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:238)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:218)
+	at org.apache.hadoop.hbase.client.ConnectionFactory.createConnection(ConnectionFactory.java:119)
+	at com.example.hbase.HbaseOperation.initconnection(HbaseOperation.java:54)
+	at com.example.hbase.HbaseMain.main(HbaseMain.java:10)
+2021-02-17 11:05:39  [ main-SendThread(127:2181):17676 ] - [ ERROR ]  Unable to open socket to 127/0.0.0.127:2181
+2021-02-17 11:05:40  [ main-SendThread(127:2181):18786 ] - [ ERROR ]  Unable to open socket to 127/0.0.0.127:2181
+2021-02-17 11:05:41  [ main-SendThread(127:2181):19890 ] - [ ERROR ]  Unable to open socket to 127/0.0.0.127:2181
+2021-02-17 11:05:42  [ main-SendThread(127:2181):20992 ] - [ ERROR ]  Unable to open socket to 127/0.0.0.127:2181
+2021-02-17 11:05:43  [ main-SendThread(127:2181):22101 ] - [ ERROR ]  Unable to open socket to 127/0.0.0.127:2181
+2021-02-17 11:05:44  [ main-SendThread(127:2181):23208 ] - [ ERROR ]  Unable to open socket to 127/0.0.0.127:2181
+2021-02-17 11:05:45  [ main-SendThread(127:2181):24309 ] - [ ERROR ]  Unable to open socket to 127/0.0.0.127:2181
+2021-02-17 11:05:46  [ main-SendThread(127:2181):25411 ] - [ ERROR ]  Unable to open socket to 127/0.0.0.127:2181
+2021-02-17 11:05:47  [ main-SendThread(127:2181):26517 ] - [ ERROR ]  Unable to open socket to 127/0.0.0.127:2181
+2021-02-17 11:05:48  [ main-SendThread(127:2181):27620 ] - [ ERROR ]  Unable to open socket to 127/0.0.0.127:2181
+2021-02-17 11:05:50  [ main-SendThread(127:2181):28722 ] - [ ERROR ]  Unable to open socket to 127/0.0.0.127:2181
+2021-02-17 11:05:51  [ main-SendThread(127:2181):29829 ] - [ ERROR ]  Unable to open socket to 127/0.0.0.127:2181
+2021-02-17 11:05:52  [ main-SendThread(127:2181):30933 ] - [ ERROR ]  Unable to open socket to 127/0.0.0.127:2181
+2021-02-17 11:05:53  [ main-SendThread(127:2181):32037 ] - [ ERROR ]  Unable to open socket to 127/0.0.0.127:2181
+2021-02-17 11:05:54  [ main-SendThread(127:2181):33142 ] - [ ERROR ]  Unable to open socket to 127/0.0.0.127:2181
+2021-02-17 11:05:55  [ main-SendThread(127:2181):34244 ] - [ ERROR ]  Unable to open socket to 127/0.0.0.127:2181
+2021-02-17 11:05:55  [ main:34345 ] - [ ERROR ]  ZooKeeper getData failed after 4 attempts
+2021-02-17 11:05:55  [ main:34345 ] - [ ERROR ]  hconnection-0x5a4041cc0x0, quorum=127/0/0/1:2181, baseZNode=/hbase Received unexpected KeeperException, re-throwing exception
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /hbase/meta-region-server
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:99)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.getData(ZooKeeper.java:1212)
+	at org.apache.hadoop.hbase.zookeeper.RecoverableZooKeeper.getData(RecoverableZooKeeper.java:397)
+	at org.apache.hadoop.hbase.zookeeper.ZKUtil.getData(ZKUtil.java:629)
+	at org.apache.hadoop.hbase.zookeeper.MetaTableLocator.getMetaRegionState(MetaTableLocator.java:487)
+	at org.apache.hadoop.hbase.zookeeper.MetaTableLocator.getMetaRegionLocation(MetaTableLocator.java:168)
+	at org.apache.hadoop.hbase.zookeeper.MetaTableLocator.blockUntilAvailable(MetaTableLocator.java:607)
+	at org.apache.hadoop.hbase.zookeeper.MetaTableLocator.blockUntilAvailable(MetaTableLocator.java:588)
+	at org.apache.hadoop.hbase.zookeeper.MetaTableLocator.blockUntilAvailable(MetaTableLocator.java:561)
+	at org.apache.hadoop.hbase.client.ZooKeeperRegistry.getMetaRegionLocation(ZooKeeperRegistry.java:61)
+	at org.apache.hadoop.hbase.client.ConnectionManager$HConnectionImplementation.locateMeta(ConnectionManager.java:1251)
+	at org.apache.hadoop.hbase.client.ConnectionManager$HConnectionImplementation.locateRegion(ConnectionManager.java:1218)
+	at org.apache.hadoop.hbase.client.RpcRetryingCallerWithReadReplicas.getRegionLocations(RpcRetryingCallerWithReadReplicas.java:356)
+	at org.apache.hadoop.hbase.client.ScannerCallableWithReplicas.call(ScannerCallableWithReplicas.java:153)
+	at org.apache.hadoop.hbase.client.ScannerCallableWithReplicas.call(ScannerCallableWithReplicas.java:58)
+	at org.apache.hadoop.hbase.client.RpcRetryingCaller.callWithoutRetries(RpcRetryingCaller.java:219)
+	at org.apache.hadoop.hbase.client.ClientScanner.call(ClientScanner.java:277)
+	at org.apache.hadoop.hbase.client.ClientScanner.loadCache(ClientScanner.java:438)
+	at org.apache.hadoop.hbase.client.ClientScanner.next(ClientScanner.java:312)
+	at org.apache.hadoop.hbase.MetaTableAccessor.fullScan(MetaTableAccessor.java:604)
+	at org.apache.hadoop.hbase.MetaTableAccessor.tableExists(MetaTableAccessor.java:366)
+	at org.apache.hadoop.hbase.client.HBaseAdmin.tableExists(HBaseAdmin.java:409)
+	at com.example.hbase.HbaseOperation.createTable(HbaseOperation.java:63)
+	at com.example.hbase.HbaseMain.main(HbaseMain.java:11)
+2021-02-17 11:05:56  [ main-SendThread(127:2181):35349 ] - [ ERROR ]  Unable to open socket to 127/0.0.0.127:2181
+2021-02-17 11:05:57  [ main-SendThread(127:2181):36455 ] - [ ERROR ]  Unable to open socket to 127/0.0.0.127:2181
+2021-02-17 11:05:58  [ main-SendThread(127:2181):37560 ] - [ ERROR ]  Unable to open socket to 127/0.0.0.127:2181
+2021-02-17 11:05:59  [ main-SendThread(127:2181):38665 ] - [ ERROR ]  Unable to open socket to 127/0.0.0.127:2181
+2021-02-17 11:06:01  [ main-SendThread(127:2181):39772 ] - [ ERROR ]  Unable to open socket to 127/0.0.0.127:2181
+2021-02-17 11:06:02  [ main-SendThread(127:2181):40875 ] - [ ERROR ]  Unable to open socket to 127/0.0.0.127:2181
