@@ -7,13 +7,14 @@ import com.example.springbootdemo.common.db.service.AdminService;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
 public class BloomFilterTask implements InitializingBean {
+
     @Autowired
     AdminService adminService;
+
     @Override
     public void afterPropertiesSet() throws Exception {
         List<Admin> admins = adminService.queryAdmins();

@@ -2,6 +2,9 @@ package com.example.springbootdemo.utils;
 
 import org.apache.commons.codec.digest.DigestUtils;
 
+/**
+ * 加盐加密
+ */
 public class MD5Util {
     private static final String SALT = "youxuehu";
     public static String md5(String input) {

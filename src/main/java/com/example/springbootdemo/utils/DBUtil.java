@@ -5,6 +5,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.util.Properties;
 
+/**
+ * JDBC数据库连接工具
+ */
 public class DBUtil {
 
     private static Properties properties;

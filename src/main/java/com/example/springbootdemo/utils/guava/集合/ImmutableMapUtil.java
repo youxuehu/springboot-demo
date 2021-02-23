@@ -1,6 +1,7 @@
 package com.example.springbootdemo.utils.guava.集合;
 
 import com.google.common.collect.ImmutableMap;
+import org.apache.commons.collections.MapUtils;
 
 public class ImmutableMapUtil {
     /**
@@ -22,5 +23,8 @@ public class ImmutableMapUtil {
 
         String name = map1.get("name");
         System.out.println(name);
+
+        boolean empty = MapUtils.isEmpty(map1);
+        System.out.println(empty);
     }
 }

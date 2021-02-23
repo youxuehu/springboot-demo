@@ -5,7 +5,7 @@ public class TestHashIndex {
         /**
          * 雨露均沾，分散性
          */
-        Integer key = 17;
+        Integer key = 221;
         int h;
         int n = 28;
         int hash = (key == null) ? 0 : (h = key.hashCode()) ^ (h >>> 16);

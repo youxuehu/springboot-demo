@@ -28,6 +28,13 @@
     </properties>
 
     <dependencies>
+        <!-- 反射 -->
+        <dependency>
+            <groupId>org.reflections</groupId>
+            <artifactId>reflections</artifactId>
+            <version>0.9.11</version>
+        </dependency>
+
         <!-- k8s -->
         <dependency>
             <groupId>io.kubernetes</groupId>

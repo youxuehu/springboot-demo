@@ -12,6 +12,11 @@ public class PatternUtil {
         matchStr(regex, data);
     }
 
+    /**
+     * 匹配日期
+     * @param regex
+     * @param data
+     */
     private static void matchStr(String regex, String data) {
 
         Pattern pattern = Pattern.compile(regex);
