@@ -1,0 +1,24 @@
+2021-03-06 13:24:13,490 INFO Initializes the Raft protocol, raft-config info : {}
+
+2021-03-06 13:24:13,978 INFO ========= The raft protocol is starting... =========
+
+2021-03-06 13:24:14,648 INFO ========= The raft protocol start finished... =========
+
+2021-03-06 13:24:14,692 INFO create raft group : naming_persistent_service
+
+2021-03-06 13:24:15,404 INFO This Raft event changes : RaftEvent{groupId='naming_persistent_service', leader='null', term=null, raftClusterInfo=[982ac144cb1d:7848]}
+
+2021-03-06 13:24:15,506 INFO This Raft event changes : RaftEvent{groupId='naming_persistent_service', leader='982ac144cb1d:7848', term=3, raftClusterInfo=[982ac144cb1d:7848]}
+
+2021-03-06 18:54:10,844 INFO Initializes the Raft protocol, raft-config info : {}
+
+2021-03-06 18:54:11,120 INFO ========= The raft protocol is starting... =========
+
+2021-03-06 18:54:11,763 INFO ========= The raft protocol start finished... =========
+
+2021-03-06 18:54:11,784 INFO create raft group : naming_persistent_service
+
+2021-03-06 18:54:12,655 INFO This Raft event changes : RaftEvent{groupId='naming_persistent_service', leader='null', term=null, raftClusterInfo=[982ac144cb1d:7848]}
+
+2021-03-06 18:54:12,799 INFO This Raft event changes : RaftEvent{groupId='naming_persistent_service', leader='982ac144cb1d:7848', term=4, raftClusterInfo=[982ac144cb1d:7848]}
+

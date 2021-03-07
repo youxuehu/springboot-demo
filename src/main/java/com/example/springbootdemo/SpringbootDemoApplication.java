@@ -1,6 +1,7 @@
 package com.example.springbootdemo;
 
 import com.example.springbootdemo.common.db.service.TestSpringService;
+import com.thebeastshop.forest.springboot.annotation.ForestScan;
 import lombok.extern.slf4j.Slf4j;
 import org.mybatis.spring.annotation.MapperScan;
 import org.slf4j.Logger;
@@ -23,6 +24,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableScheduling
 @EnableCaching
 @ImportResource(locations = {"classpath:applicationContext.xml"})
+@ForestScan(basePackages = "com.example.springbootdemo.utils.http.api")
 public class SpringbootDemoApplication implements ApplicationRunner {
     private static final Logger LOGGER = LoggerFactory.getLogger(SpringbootDemoApplication.class);
 
