@@ -42,3 +42,47 @@
 
 2021-03-07 12:48:00,130 WARN start to move old raft protocol metadata
 
+2021-03-07 18:01:05,838 INFO raft peers changed: [Member{ip='982ac144cb1d', port=8848, state=UP, extendInfo={adWeight=0, raftPort=7848, site=unknow, weight=1}}]
+
+2021-03-07 18:01:05,901 INFO initializing Raft sub-system
+
+2021-03-07 18:01:05,902 INFO finish loading all datums, size: 0 cost 1 ms.
+
+2021-03-07 18:01:05,911 INFO cache loaded, datum count: 0, current term: 0
+
+2021-03-07 18:01:05,911 INFO finish to load data from disk, cost: 10 ms.
+
+2021-03-07 18:01:05,919 INFO timer started: leader timeout ms: 15000, heart-beat timeout ms: 5000
+
+2021-03-07 18:01:07,979 INFO snapshot load from : /home/nacos/data/protocol/raft/naming_persistent_service/snapshot/snapshot_5/naming_persistent
+
+2021-03-07 18:01:08,006 INFO raft peers changed: [Member{ip='982ac144cb1d', port=8848, state=UP, extendInfo={adWeight=0, lastRefreshTime=1615111267997, raftMetaData=com.alibaba.nacos.consistency.ProtocolMetaData@7b4998ef, raftPort=7848, site=unknow, version=1.4.0, weight=1}}]
+
+2021-03-07 18:01:08,924 INFO add listener: com.alibaba.nacos.naming.domains.meta.00-00---000-NACOS_SWITCH_DOMAIN-000---00-00
+
+2021-03-07 18:01:08,957 INFO add listener: com.alibaba.nacos.naming.domains.meta.
+
+2021-03-07 18:01:09,446 INFO leader timeout, start voting,leader: {"ip":"982ac144cb1d:8848","term":0,"leaderDueMs":15336,"heartbeatDueMs":5000,"state":"FOLLOWER"}, term: 0
+
+2021-03-07 18:01:10,800 WARN start to close old raft protocol!!!
+
+2021-03-07 18:01:10,800 WARN stop old raft protocol task for notifier
+
+2021-03-07 18:01:10,800 WARN stop old raft protocol task for master task
+
+2021-03-07 18:01:10,800 WARN stop old raft protocol task for heartbeat task
+
+2021-03-07 18:01:10,800 WARN clean old cache datum for old raft
+
+2021-03-07 18:01:10,800 WARN start to close old raft protocol!!!
+
+2021-03-07 18:01:10,800 WARN stop old raft protocol task for notifier
+
+2021-03-07 18:01:10,800 WARN stop old raft protocol task for master task
+
+2021-03-07 18:01:10,800 WARN stop old raft protocol task for heartbeat task
+
+2021-03-07 18:01:10,800 WARN clean old cache datum for old raft
+
+2021-03-07 18:01:10,800 WARN start to move old raft protocol metadata
+

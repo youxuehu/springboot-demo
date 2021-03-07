@@ -2,3 +2,7 @@
 
 2021-03-07 12:47:58,397 WARN isQuickStart:false
 
+2021-03-07 18:01:05,260 WARN [master-db] jdbc:mysql://mysql:3306/nacos?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true
+
+2021-03-07 18:01:09,169 WARN isQuickStart:false
+
