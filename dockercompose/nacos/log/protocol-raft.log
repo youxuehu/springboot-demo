@@ -1,24 +1,12 @@
-2021-03-07 12:47:55,402 INFO Initializes the Raft protocol, raft-config info : {}
+2021-03-12 22:13:15,994 INFO Initializes the Raft protocol, raft-config info : {}
 
-2021-03-07 12:47:55,775 INFO ========= The raft protocol is starting... =========
+2021-03-12 22:13:16,335 INFO ========= The raft protocol is starting... =========
 
-2021-03-07 12:47:56,435 INFO ========= The raft protocol start finished... =========
+2021-03-12 22:13:17,060 INFO ========= The raft protocol start finished... =========
 
-2021-03-07 12:47:56,456 INFO create raft group : naming_persistent_service
+2021-03-12 22:13:17,367 INFO create raft group : naming_persistent_service
 
-2021-03-07 12:47:57,161 INFO This Raft event changes : RaftEvent{groupId='naming_persistent_service', leader='null', term=null, raftClusterInfo=[982ac144cb1d:7848]}
+2021-03-12 22:13:17,768 INFO This Raft event changes : RaftEvent{groupId='naming_persistent_service', leader='null', term=null, raftClusterInfo=[982ac144cb1d:7848]}
 
-2021-03-07 12:47:57,232 INFO This Raft event changes : RaftEvent{groupId='naming_persistent_service', leader='982ac144cb1d:7848', term=5, raftClusterInfo=[982ac144cb1d:7848]}
-
-2021-03-07 18:01:06,044 INFO Initializes the Raft protocol, raft-config info : {}
-
-2021-03-07 18:01:06,426 INFO ========= The raft protocol is starting... =========
-
-2021-03-07 18:01:07,216 INFO ========= The raft protocol start finished... =========
-
-2021-03-07 18:01:07,246 INFO create raft group : naming_persistent_service
-
-2021-03-07 18:01:07,981 INFO This Raft event changes : RaftEvent{groupId='naming_persistent_service', leader='null', term=null, raftClusterInfo=[982ac144cb1d:7848]}
-
-2021-03-07 18:01:08,105 INFO This Raft event changes : RaftEvent{groupId='naming_persistent_service', leader='982ac144cb1d:7848', term=6, raftClusterInfo=[982ac144cb1d:7848]}
+2021-03-12 22:13:17,884 INFO This Raft event changes : RaftEvent{groupId='naming_persistent_service', leader='982ac144cb1d:7848', term=8, raftClusterInfo=[982ac144cb1d:7848]}
 

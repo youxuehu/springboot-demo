@@ -1,0 +1,88 @@
+2021-03-08 20:38:53,629 INFO Starting Nacos v1.4.0 on 982ac144cb1d with PID 26 (/home/nacos/target/nacos-server.jar started by root in /home/nacos)
+
+2021-03-08 20:38:53,643 INFO The following profiles are active: standalone
+
+2021-03-08 20:38:59,781 INFO Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@b978d10' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+2021-03-08 20:38:59,791 INFO Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+2021-03-08 20:39:00,417 INFO Tomcat initialized with port(s): 8848 (http)
+
+2021-03-08 20:39:00,468 INFO Starting service [Tomcat]
+
+2021-03-08 20:39:00,469 INFO Starting Servlet engine: [Apache Tomcat/9.0.38]
+
+2021-03-08 20:39:01,045 INFO At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+
+2021-03-08 20:39:01,119 INFO Initializing Spring embedded WebApplicationContext
+
+2021-03-08 20:39:01,119 INFO Root WebApplicationContext: initialization completed in 7100 ms
+
+2021-03-08 20:39:01,625 INFO HikariPool-1 - Starting...
+
+2021-03-08 20:39:03,033 INFO HikariPool-1 - Start completed.
+
+2021-03-08 20:39:03,701 INFO Nacos-related cluster resource initialization
+
+2021-03-08 20:39:03,718 INFO The cluster resource is initialized
+
+2021-03-08 20:39:06,441 INFO Reflections took 112 ms to scan 1 urls, producing 6 keys and 26 values 
+
+2021-03-08 20:39:06,490 INFO Reflections took 3 ms to scan 1 urls, producing 2 keys and 12 values 
+
+2021-03-08 20:39:06,497 INFO Reflections took 4 ms to scan 1 urls, producing 3 keys and 15 values 
+
+2021-03-08 20:39:07,551 INFO Initializing ExecutorService 'applicationTaskExecutor'
+
+2021-03-08 20:39:07,747 INFO Adding welcome page: class path resource [static/index.html]
+
+2021-03-08 20:39:08,313 INFO Creating filter chain: Ant [pattern='/**'], []
+
+2021-03-08 20:39:08,349 INFO Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@51abf713, org.springframework.security.web.context.SecurityContextPersistenceFilter@f325091, org.springframework.security.web.header.HeaderWriterFilter@4102b1b1, org.springframework.security.web.csrf.CsrfFilter@6a175569, org.springframework.security.web.authentication.logout.LogoutFilter@6bd51ed8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@77b325b3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@49ef32e0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@eadb475, org.springframework.security.web.session.SessionManagementFilter@3a71c100, org.springframework.security.web.access.ExceptionTranslationFilter@3f3c966c]
+
+2021-03-08 20:39:08,462 INFO Initializing ExecutorService 'taskScheduler'
+
+2021-03-08 20:39:08,486 INFO Exposing 2 endpoint(s) beneath base path '/actuator'
+
+2021-03-08 20:39:08,712 INFO Tomcat started on port(s): 8848 (http) with context path '/nacos'
+
+2021-03-08 20:39:08,717 INFO Started Nacos in 23.382 seconds (JVM running for 47.944)
+
+2021-03-08 20:39:08,718 INFO Nacos Log files: /home/nacos/logs
+
+2021-03-08 20:39:08,719 INFO Nacos Log files: /home/nacos/conf
+
+2021-03-08 20:39:08,720 INFO Nacos Log files: /home/nacos/data
+
+2021-03-08 20:39:08,721 INFO Nacos started successfully in stand alone mode. use external storage
+
+2021-03-08 20:49:06,714 INFO [capacityManagement] start correct usage
+
+2021-03-08 20:49:06,780 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-03-08 20:49:06,965 WARN clearConfigHistory start
+
+2021-03-08 20:59:06,844 INFO [capacityManagement] start correct usage
+
+2021-03-08 20:59:06,854 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-03-08 20:59:07,039 WARN clearConfigHistory start
+
+2021-03-08 21:08:53,717 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@5a600295 (The last packet successfully received from the server was 1,790,497 milliseconds ago.  The last packet sent successfully to the server was 1,790,497 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-03-08 21:08:53,717 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@3ffe2ea0 (The last packet successfully received from the server was 1,790,312 milliseconds ago.  The last packet sent successfully to the server was 1,790,312 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-03-08 21:08:53,731 WARN HikariPool-1 - Failed to validate connection com.mysql.cj.jdbc.ConnectionImpl@6b40c734 (The last packet successfully received from the server was 1,790,283 milliseconds ago.  The last packet sent successfully to the server was 1,790,283 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.). Possibly consider using a shorter maxLifetime value.
+
+2021-03-08 21:09:06,855 INFO [capacityManagement] start correct usage
+
+2021-03-08 21:09:06,858 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-03-08 21:09:07,044 WARN clearConfigHistory start
+
+2021-03-08 21:19:06,897 INFO [capacityManagement] start correct usage
+
+2021-03-08 21:19:06,900 INFO [capacityManagement] end correct usage, cost: 0s
+
+2021-03-08 21:19:07,086 WARN clearConfigHistory start
+
