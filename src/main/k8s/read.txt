@@ -11,3 +11,9 @@ http://localhot:31496
 
 kubectl delete services example-service
 kubectl delete deployment hello-world
+
+强制删除pod
+kubectl delete pod mysql-rc-cb86n -n default --grace-period=0 --force
+
+查看namespace
+kubectl get namespace

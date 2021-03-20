@@ -26,7 +26,7 @@ public class Kafka2Mysql {
                 ") WITH (\n" +
                 " 'connector' = 'kafka-0.11',\n" +
                 " 'topic' = 'cdn-log',\n" +
-                " 'properties.bootstrap.servers' = 'kafka:9092',\n" +
+                " 'properties.bootstrap.servers' = 'localhost:9092',\n" +
                 " 'format' = 'json',\n" +
                 " 'scan.startup.mode' = 'latest-offset'\n" +
                 ")";
@@ -36,7 +36,7 @@ public class Kafka2Mysql {
                 " msg STRING \n" +
                 ") WITH (\n" +
                 "  'connector' = 'jdbc',\n" +
-                "   'url' = 'jdbc:mysql://mysql:3306/flinkdb?characterEncoding=utf-8&useSSL=false',\n" +
+                "   'url' = 'jdbc:mysql://localhost:3306/flinkdb?characterEncoding=utf-8&useSSL=false',\n" +
                 "   'table-name' = 'cdn_log',\n" +
                 "   'username' = 'root',\n" +
                 "   'password' = '123456',\n" +
