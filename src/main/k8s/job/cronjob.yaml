@@ -5,7 +5,7 @@ metadata:
 spec:
   successfulJobsHistoryLimit: 10
   failedJobsHistoryLimit: 10
-  schedule: "*/1 * * * *" # 定时执行：1分钟后执行
+  schedule: "*/1 * * * *" # 定时执行：没分钟执行一次
   jobTemplate:
     spec:
       template:
