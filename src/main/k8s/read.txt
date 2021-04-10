@@ -17,3 +17,21 @@ kubectl delete pod mysql-rc-cb86n -n default --grace-period=0 --force
 
 查看namespace
 kubectl get namespace
+
+查看job
+kubectl get job
+查看pod
+kubectl get pod
+kubectl get pod --show-all
+查看pod日志
+kubectl logs pod名称
+
+提交任务
+kubectl apply -f job.yaml
+查看job
+kubectl get jobs
+查看cronjob
+kubectl get cronjobs
+删除cronjob
+kubectl delete cronjob cronjob-demo
+

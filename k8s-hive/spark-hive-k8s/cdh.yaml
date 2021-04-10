@@ -1,0 +1,114 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: hadoop
+  name: hadoop-master
+  namespace: hadoop
+spec:
+  selector:
+    app: hadoop
+  ports:
+  # HDFS ports
+  - port: 1004
+    name: cdh-1004
+  - port: 1006
+    name: cdh-1006
+  - port: 8020
+    name: cdh-8020
+  - port: 9000
+    name: cdh-9000
+  - port: 50010
+    name: cdh-50010
+  - port: 50020
+    name: cdh-50020
+  - port: 50070
+    name: cdh-50070
+  - port: 50075
+    name: cdh-50075
+  - port: 50470
+    name: cdh-50470
+  # YARN ports
+  - port: 8030
+    name: cdh-8030
+  - port: 8031
+    name: cdh-8031
+  - port: 8032
+    name: cdh-8032
+  - port: 8033
+    name: cdh-8033
+  - port: 8040
+    name: cdh-8040
+  - port: 8041
+    name: cdh-8041
+  - port: 8042
+    name: cdh-8042
+  - port: 8088
+    name: cdh-8088
+  - port: 10020
+    name: cdh-10020
+  - port: 19888
+    name: cdh-19888
+  # HIVE port
+  - port: 9083
+    name: cdh-9083
+  - port: 10000
+    name: cdh-10000
+  # SOCKS port
+  - port: 1180
+    name: cdh-1180
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hadoop-master
+  namespace: hadoop
+spec:
+  selector:
+    matchLabels:
+      app: hadoop
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: hadoop
+    spec:
+      containers:
+      - name: hadoop
+        image: akirillov/hive:cdh1.16
+        env:
+        - name: HIVE_DO_AS
+          value: "false"
+        - name: POD_IP
+          valueFrom:
+            fieldRef:
+              fieldPath: status.podIP
+        command: ["bash", "/entrypoint.sh"]
+        ports:
+        # HDFS ports
+        - containerPort: 1004
+        - containerPort: 1006
+        - containerPort: 8020
+        - containerPort: 9000
+        - containerPort: 50010
+        - containerPort: 50020
+        - containerPort: 50070
+        - containerPort: 50075
+        - containerPort: 50470
+        # YARN ports
+        - containerPort: 8030
+        - containerPort: 8031
+        - containerPort: 8032
+        - containerPort: 8033
+        - containerPort: 8040
+        - containerPort: 8041
+        - containerPort: 8042
+        - containerPort: 8088
+        - containerPort: 10020
+        - containerPort: 19888
+        # HIVE port
+        - containerPort: 9083
+        - containerPort: 10000
+        # SOCKS port
+        - containerPort: 1180

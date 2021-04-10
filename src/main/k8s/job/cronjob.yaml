@@ -1,0 +1,20 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: cronjob-demo
+spec:
+  successfulJobsHistoryLimit: 10
+  failedJobsHistoryLimit: 10
+  schedule: "*/1 * * * *" # 定时执行：1分钟后执行
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          restartPolicy: OnFailure
+          containers:
+            - name: cronjob-demo
+              image: busybox
+              args:
+                - "bin/sh"
+                - "-c"
+                - "for i in 10 9 8 7 6 5 4 3 2 1; do echo $i; done"
