@@ -5,6 +5,7 @@ import org.reflections.scanners.MethodAnnotationsScanner;
 import org.reflections.scanners.MethodParameterNamesScanner;
 import org.reflections.scanners.SubTypesScanner;
 import org.reflections.scanners.TypeAnnotationsScanner;
+import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
@@ -26,7 +27,7 @@ public class FansheMain {
                         new MethodParameterNamesScanner(),
                         new MethodAnnotationsScanner(),
                         new TypeAnnotationsScanner()));
-        Set<Class<?>> classes = reflections.getTypesAnnotatedWith(Service.class);
+        Set<Class<?>> classes = reflections.getTypesAnnotatedWith(Controller.class);
         classes.stream().forEach(clazz -> {
             System.out.println(clazz);
         });

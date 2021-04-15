@@ -1,5 +1,7 @@
 package com.example.springbootdemo.common.list;
 
+import io.kubernetes.client.util.Yaml;
+
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -33,5 +35,7 @@ public class MapMainTest {
             }
         }).start();
 
+        String dump = Yaml.dump(map);
+        System.out.println(dump);
     }
 }
