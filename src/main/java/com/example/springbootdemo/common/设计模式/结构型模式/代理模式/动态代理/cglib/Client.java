@@ -11,6 +11,8 @@ public class Client {
     public static void main(String[] args) {
         CglibProxyFactory proxyFactory = new CglibProxyFactory();
         TranAction proxyObject = proxyFactory.proxyObject();
+        System.out.println(proxyObject.getClass());
         proxyObject.sell();
+        while (true) {}
     }
 }
