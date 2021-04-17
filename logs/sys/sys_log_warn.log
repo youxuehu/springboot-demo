@@ -1,4 +1,4 @@
-2021-03-21 13:12:07.980 [C3P0PooledConnectionPoolManager[identityToken->1hge2niagn30pkp1o7z4ga|cd62c4b]-HelperThread-#1] WARN  com.mchange.v2.resourcepool.BasicResourcePool - com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask@2fc112f1 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (30). Last acquisition attempt exception: 
+2021-04-17 11:46:32.166 [C3P0PooledConnectionPoolManager[identityToken->1hge2niag1pkumvp1ald9yb|40bce7b6]-HelperThread-#1] WARN  com.mchange.v2.resourcepool.BasicResourcePool - com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask@4cb5980 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (30). Last acquisition attempt exception: 
 com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
 
 The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
@@ -20,7 +20,7 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
 
 The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at sun.reflect.GeneratedConstructorAccessor46.newInstance(Unknown Source)
+	at sun.reflect.GeneratedConstructorAccessor45.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
 	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
@@ -42,7 +42,7 @@ Caused by: java.net.ConnectException: Connection refused (Connection refused)
 	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65)
 	... 15 common frames omitted
-2021-03-21 13:12:07.980 [C3P0PooledConnectionPoolManager[identityToken->1hge2niagn30pkp1o7z4ga|cd62c4b]-HelperThread-#0] WARN  com.mchange.v2.resourcepool.BasicResourcePool - com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask@2be59e02 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (30). Last acquisition attempt exception: 
+2021-04-17 11:46:32.166 [C3P0PooledConnectionPoolManager[identityToken->1hge2niag1pkumvp1ald9yb|40bce7b6]-HelperThread-#0] WARN  com.mchange.v2.resourcepool.BasicResourcePool - com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask@3e48ad13 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (30). Last acquisition attempt exception: 
 com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
 
 The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
@@ -64,7 +64,7 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
 
 The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at sun.reflect.GeneratedConstructorAccessor46.newInstance(Unknown Source)
+	at sun.reflect.GeneratedConstructorAccessor45.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
 	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
@@ -86,7 +86,7 @@ Caused by: java.net.ConnectException: Connection refused (Connection refused)
 	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65)
 	... 15 common frames omitted
-2021-03-21 13:12:07.980 [C3P0PooledConnectionPoolManager[identityToken->1hge2niagn30pkp1o7z4ga|cd62c4b]-HelperThread-#2] WARN  com.mchange.v2.resourcepool.BasicResourcePool - com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask@7d2a5ad5 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (30). Last acquisition attempt exception: 
+2021-04-17 11:46:32.166 [C3P0PooledConnectionPoolManager[identityToken->1hge2niag1pkumvp1ald9yb|40bce7b6]-HelperThread-#2] WARN  com.mchange.v2.resourcepool.BasicResourcePool - com.mchange.v2.resourcepool.BasicResourcePool$ScatteredAcquireTask@148d3cf3 -- Acquisition Attempt Failed!!! Clearing pending acquires. While trying to acquire a needed new resource, we failed to succeed more than the maximum number of allowed acquisition attempts (30). Last acquisition attempt exception: 
 com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
 
 The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
@@ -108,7 +108,7 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
 
 The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-	at sun.reflect.GeneratedConstructorAccessor46.newInstance(Unknown Source)
+	at sun.reflect.GeneratedConstructorAccessor45.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
 	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
@@ -130,28 +130,28 @@ Caused by: java.net.ConnectException: Connection refused (Connection refused)
 	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65)
 	... 15 common frames omitted
-2021-03-21 13:12:07.982 [C3P0PooledConnectionPoolManager[identityToken->1hge2niagn30pkp1o7z4ga|cd62c4b]-HelperThread-#1] WARN  com.mchange.v2.resourcepool.BasicResourcePool - Having failed to acquire a resource, com.mchange.v2.resourcepool.BasicResourcePool@66f6fc39 is interrupting all Threads waiting on a resource to check out. Will try again in response to new client requests.
-2021-03-21 13:12:07.982 [C3P0PooledConnectionPoolManager[identityToken->1hge2niagn30pkp1o7z4ga|cd62c4b]-HelperThread-#2] WARN  com.mchange.v2.resourcepool.BasicResourcePool - Having failed to acquire a resource, com.mchange.v2.resourcepool.BasicResourcePool@66f6fc39 is interrupting all Threads waiting on a resource to check out. Will try again in response to new client requests.
-2021-03-21 13:12:07.982 [C3P0PooledConnectionPoolManager[identityToken->1hge2niagn30pkp1o7z4ga|cd62c4b]-HelperThread-#0] WARN  com.mchange.v2.resourcepool.BasicResourcePool - Having failed to acquire a resource, com.mchange.v2.resourcepool.BasicResourcePool@66f6fc39 is interrupting all Threads waiting on a resource to check out. Will try again in response to new client requests.
-2021-03-21 13:12:08.534 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'logHandlerAdapter': Unsatisfied dependency expressed through field 'adminOperateLogMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adminOperateLogMapper' defined in file [/Users/youxuehu/IdeaProjects/springboot-demo/target/classes/com/example/springbootdemo/common/db/dao/adminoperatelog/mapper/AdminOperateLogMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/DruidDataSourceAutoConfigure.class]: Invocation of init method failed; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+2021-04-17 11:46:32.169 [C3P0PooledConnectionPoolManager[identityToken->1hge2niag1pkumvp1ald9yb|40bce7b6]-HelperThread-#1] WARN  com.mchange.v2.resourcepool.BasicResourcePool - Having failed to acquire a resource, com.mchange.v2.resourcepool.BasicResourcePool@5b97d0b0 is interrupting all Threads waiting on a resource to check out. Will try again in response to new client requests.
+2021-04-17 11:46:32.169 [C3P0PooledConnectionPoolManager[identityToken->1hge2niag1pkumvp1ald9yb|40bce7b6]-HelperThread-#2] WARN  com.mchange.v2.resourcepool.BasicResourcePool - Having failed to acquire a resource, com.mchange.v2.resourcepool.BasicResourcePool@5b97d0b0 is interrupting all Threads waiting on a resource to check out. Will try again in response to new client requests.
+2021-04-17 11:46:32.169 [C3P0PooledConnectionPoolManager[identityToken->1hge2niag1pkumvp1ald9yb|40bce7b6]-HelperThread-#0] WARN  com.mchange.v2.resourcepool.BasicResourcePool - Having failed to acquire a resource, com.mchange.v2.resourcepool.BasicResourcePool@5b97d0b0 is interrupting all Threads waiting on a resource to check out. Will try again in response to new client requests.
+2021-04-17 11:46:32.798 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'logHandlerAdapter': Unsatisfied dependency expressed through field 'adminOperateLogMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adminOperateLogMapper' defined in file [/Users/youxuehu/IdeaProjects/springboot-demo/target/classes/com/example/springbootdemo/common/db/dao/adminoperatelog/mapper/AdminOperateLogMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/DruidDataSourceAutoConfigure.class]: Invocation of init method failed; nested exception is com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
 
 The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-2021-03-21 13:12:08.545 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+2021-04-17 11:46:32.812 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
  java.lang.Object.wait(Native Method)
  org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
-2021-03-21 13:12:08.546 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-2] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+2021-04-17 11:46:32.813 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-2] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
  java.lang.Object.wait(Native Method)
  org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
-2021-03-21 13:12:08.546 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-3] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+2021-04-17 11:46:32.814 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-3] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
  java.lang.Object.wait(Native Method)
  org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
-2021-03-21 13:12:08.547 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-4] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+2021-04-17 11:46:32.816 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-4] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
  java.lang.Object.wait(Native Method)
  org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
-2021-03-21 13:12:08.547 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-5] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+2021-04-17 11:46:32.817 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-5] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
  java.lang.Object.wait(Native Method)
  org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
-2021-03-21 13:12:08.548 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [logback-7] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+2021-04-17 11:46:32.817 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [logback-7] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
  sun.misc.Unsafe.park(Native Method)
  java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
  java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
@@ -161,7 +161,17 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
  java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
  java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
  java.lang.Thread.run(Thread.java:748)
-2021-03-21 13:12:08.548 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [logback-8] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+2021-04-17 11:46:32.818 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [logback-8] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1088)
+ java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:809)
+ java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1074)
+ java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1134)
+ java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+ java.lang.Thread.run(Thread.java:748)
+2021-04-17 11:46:32.819 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [logback-9] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
  sun.misc.Unsafe.park(Native Method)
  java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
  java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
