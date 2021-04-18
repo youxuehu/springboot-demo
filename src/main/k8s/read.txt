@@ -35,3 +35,10 @@ kubectl get cronjobs
 删除cronjob
 kubectl delete cronjob cronjob-demo
 
+删除replication controller后对应的pod也会随之删除
+kubectl delete -n default replicationcontroller mysql-rc
+
+
+从本地向k8s pod 复制文件
+kubectl cp ./dockercompose/mysql/data/sql/nacos-mysql.sql  mysql-rc-wr9c5:/root/nacos-mysql.sql
+
