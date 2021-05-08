@@ -1,0 +1,35 @@
+2021-04-28 23:19:38.844 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-28 23:19:38.853 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-04-28 23:19:39.093 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 202ms. Found 0 repository interfaces.
+2021-04-28 23:19:42.646 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9999"]
+2021-04-28 23:19:42.647 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-04-28 23:19:42.647 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.27]
+2021-04-28 23:19:42.858 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-04-28 23:19:43.373 [restartedMain] INFO  org.quartz.ee.servlet.QuartzInitializerListener - Quartz Initializer Servlet loaded, initializing Scheduler...
+2021-04-28 23:19:43.428 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Using ConnectionProvider class 'org.quartz.utils.C3p0PoolingConnectionProvider' for data source 'qzDS'
+2021-04-28 23:19:43.733 [MLog-Init-Reporter] INFO  com.mchange.v2.log.MLog - MLog clients using slf4j logging.
+2021-04-28 23:19:43.835 [restartedMain] INFO  com.mchange.v2.c3p0.C3P0Registry - Initializing c3p0-0.9.5.5 [built 11-December-2019 22:18:33 -0800; debug? true; trace: 10]
+2021-04-28 23:19:44.161 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Using default implementation for ThreadExecutor
+2021-04-28 23:19:44.166 [restartedMain] INFO  org.quartz.simpl.SimpleThreadPool - Job execution threads will use class loader of thread: restartedMain
+2021-04-28 23:19:44.180 [restartedMain] INFO  org.quartz.core.SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-04-28 23:19:44.180 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Quartz Scheduler v.2.3.2 created.
+2021-04-28 23:19:44.181 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - Using thread monitor-based data access locking (synchronization).
+2021-04-28 23:19:44.182 [restartedMain] INFO  org.quartz.impl.jdbcjobstore.JobStoreTX - JobStoreTX initialized.
+2021-04-28 23:19:44.183 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 5 threads.
+  Using job-store 'org.quartz.impl.jdbcjobstore.JobStoreTX' - which supports persistence. and is not clustered.
+
+2021-04-28 23:19:44.183 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler 'QuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2021-04-28 23:19:44.183 [restartedMain] INFO  org.quartz.impl.StdSchedulerFactory - Quartz scheduler version: 2.3.2
+2021-04-28 23:19:44.222 [restartedMain] INFO  c.m.v2.c3p0.impl.AbstractPoolBackedDataSource - Initializing c3p0 pool... com.mchange.v2.c3p0.ComboPooledDataSource [ acquireIncrement -> 3, acquireRetryAttempts -> 30, acquireRetryDelay -> 1000, autoCommitOnClose -> false, automaticTestTable -> null, breakAfterAcquireFailure -> false, checkoutTimeout -> 0, connectionCustomizerClassName -> null, connectionTesterClassName -> com.mchange.v2.c3p0.impl.DefaultConnectionTester, contextClassLoaderSource -> caller, dataSourceName -> 1hge2niah6yd2311b0j6ms|29b32562, debugUnreturnedConnectionStackTraces -> false, description -> null, driverClass -> com.mysql.cj.jdbc.Driver, extensions -> {}, factoryClassLocation -> null, forceIgnoreUnresolvedTransactions -> false, forceSynchronousCheckins -> false, forceUseNamedDriverClass -> false, identityToken -> 1hge2niah6yd2311b0j6ms|29b32562, idleConnectionTestPeriod -> 0, initialPoolSize -> 3, jdbcUrl -> jdbc:mysql://localhost:30306/test?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true, maxAdministrativeTaskTime -> 0, maxConnectionAge -> 0, maxIdleTime -> 0, maxIdleTimeExcessConnections -> 0, maxPoolSize -> 10, maxStatements -> 0, maxStatementsPerConnection -> 120, minPoolSize -> 1, numHelperThreads -> 3, preferredTestQuery -> null, privilegeSpawnedThreads -> false, properties -> {user=******, password=******}, propertyCycle -> 0, statementCacheNumDeferredCloseThreads -> 0, testConnectionOnCheckin -> false, testConnectionOnCheckout -> false, unreturnedConnectionTimeout -> 0, userOverrides -> {}, usesTraditionalReflectiveProxies -> false ]
+2021-04-28 23:20:14.923 [restartedMain] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2021-04-28 23:20:15.212 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2021-04-28 23:20:15.220 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-04-28 23:20:15.222 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED shutting down.
+2021-04-28 23:20:15.223 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED paused.
+2021-04-28 23:20:15.224 [restartedMain] INFO  org.quartz.core.QuartzScheduler - Scheduler QuartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-04-28 23:20:15.225 [restartedMain] INFO  org.quartz.ee.servlet.QuartzInitializerListener - Quartz Scheduler successful shutdown.
