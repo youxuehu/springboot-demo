@@ -32,4 +32,11 @@ public class JobHandlerFactory {
         });
         return handlers;
     }
+
+    public static JobHandler getJobHandler(TaskTypeEnum taskTypeEnum) {
+        if (taskTypeEnumMap.containsKey(taskTypeEnum)) {
+            return taskTypeEnumMap.get(taskTypeEnum);
+        }
+        return null;
+    }
 }

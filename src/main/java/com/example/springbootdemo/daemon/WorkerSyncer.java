@@ -12,14 +12,14 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-//@Service
+@Service
 public class WorkerSyncer implements InitializingBean {
 
     private static final Logger LOG = LoggerFactory.getLogger(WorkerSyncer.class);
 
-    ScheduledExecutorService executorService = Executors.newScheduledThreadPool(2);
+    private ScheduledExecutorService executorService = Executors.newScheduledThreadPool(2);
 
-//    @Autowired
+    @Autowired
     ZkManager zkManager;
 
     @Override

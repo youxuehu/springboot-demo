@@ -1,21 +1,27 @@
 package com.example.springbootdemo.common.zookeeper;
 
+import com.example.springbootdemo.common.db.service.ZkClientService;
+import com.example.springbootdemo.utils.InetAddressUtil;
 import com.example.springbootdemo.utils.time.TimeUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-//@Service
+@Service
 public class ZkManager implements InitializingBean {
 
-    Logger LOG = LoggerFactory.getLogger(ZkManager.class);
+    private static final Logger LOG = LoggerFactory.getLogger(ZkManager.class);
 
-//    @Autowired
-    ZkService zkService;
+    @Autowired
+    private ZkService zkService;
+
+    @Autowired @Qualifier(value = "zkClientService")
+    private ZkClientService zkClientService;
 
     public void createNode() {
         String path = "/test_zk/" + TimeUtils.currentTimeTrnn();
@@ -36,5 +42,14 @@ public class ZkManager implements InitializingBean {
 
     public String readData(String s) {
         return zkService.readNode(s);
+    }
+
+    public List<String> getAssignments() {
+        String assignmentsPath = zkClientService.getAssignmentsPath();
+        String localHost = InetAddressUtil.getLocalHost();
+        String myJobPath = assignmentsPath + "/" + localHost;
+        List<String> jobIds = zkClientService.getChildren(myJobPath);
+        LOG.warn("当前代执行的job: {}", jobIds);
+        return jobIds;
     }
 }

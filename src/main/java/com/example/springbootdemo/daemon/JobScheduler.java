@@ -1,6 +1,5 @@
 package com.example.springbootdemo.daemon;
 
-import com.alibaba.fastjson.JSON;
 import com.example.springbootdemo.common.db.dao.worker.model.Worker;
 import com.example.springbootdemo.common.db.dao.zkdata.model.ZkData;
 import com.example.springbootdemo.common.db.service.ZkClientService;
@@ -17,8 +16,9 @@ import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 
-//@Service
+@Service
 public class JobScheduler implements Runnable, InitializingBean {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(JobScheduler.class);
@@ -40,7 +40,9 @@ public class JobScheduler implements Runnable, InitializingBean {
                 zkDataList.add(zkData);
             }
         });
-        LOGGER.warn("zkDataList: {}", JSON.toJSONString(zkDataList));
+        LOGGER.warn("已提交列表的任务个数: {}", zkDataList.size());
+
+        // 查询服务正常的worker
         String heartBeatsPath = zkClientService.getHeartBeatsPath();
         List<String> heartBeatsList = zkClientService.getChildren(heartBeatsPath);
         List<Worker> workers = new ArrayList<>();
@@ -51,13 +53,15 @@ public class JobScheduler implements Runnable, InitializingBean {
                 workers.add(worker);
             }
         });
+        LOGGER.warn("服务正常的worker: {}", workers.stream().map(Worker::getHost).collect(Collectors.toList()));
+        // 选择空闲的把任务分配给它
         String assignmentsPath = zkClientService.getAssignmentsPath();
         for (ZkData zkData : zkDataList) {
             String host = getMaxFreeMemory(workers);
             zkClientService.create(assignmentsPath + "/" + host + "/" + zkData.getJobId(),  zkData.getData());
         }
 
-        // 删除
+        // 从已提交的列表删除任务
         for (String path : submittedJobList) {
             zkClientService.delete(submittedPath + "/" + path, true);
         }
@@ -75,6 +79,6 @@ public class JobScheduler implements Runnable, InitializingBean {
     @Override
     public void afterPropertiesSet() throws Exception {
         scheduledThreadPoolExecutor = new ScheduledThreadPoolExecutor(1);
-        scheduledThreadPoolExecutor.scheduleAtFixedRate(this, 10, 1, TimeUnit.SECONDS);
+        scheduledThreadPoolExecutor.scheduleAtFixedRate(this, 10, 9, TimeUnit.SECONDS);
     }
 }

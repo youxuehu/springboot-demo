@@ -43,5 +43,4 @@ public class SingletonJobHandler extends AbstractJobHandler implements JobHandle
         return TaskTypeEnum.SINGLETON;
     }
 
-
 }

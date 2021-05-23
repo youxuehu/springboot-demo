@@ -17,7 +17,7 @@ import java.lang.management.ManagementFactory;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
-//@Service
+@Service
 public class HeartBeats implements Runnable, InitializingBean {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(HeartBeats.class);
@@ -44,6 +44,6 @@ public class HeartBeats implements Runnable, InitializingBean {
     @Override
     public void afterPropertiesSet() throws Exception {
         scheduledThreadPoolExecutor = new ScheduledThreadPoolExecutor(1);
-        scheduledThreadPoolExecutor.scheduleAtFixedRate(this, 10, 1, TimeUnit.SECONDS);
+        scheduledThreadPoolExecutor.scheduleAtFixedRate(this, 10, 10, TimeUnit.SECONDS);
     }
 }

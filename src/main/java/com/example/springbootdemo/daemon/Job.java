@@ -1,5 +1,7 @@
 package com.example.springbootdemo.daemon;
 
+import com.example.springbootdemo.handler.TaskTypeEnum;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -15,6 +17,8 @@ public class Job implements Serializable {
 
     private String content;
 
+    private TaskTypeEnum taskTypeEnum;
+
     private String workerIp;
 
     private JobStatus jobStatus;
@@ -24,6 +28,14 @@ public class Job implements Serializable {
     private Date gmtSchedule;
 
     private Date gmtFinished;
+
+    public TaskTypeEnum getTaskTypeEnum() {
+        return taskTypeEnum;
+    }
+
+    public void setTaskTypeEnum(TaskTypeEnum taskTypeEnum) {
+        this.taskTypeEnum = taskTypeEnum;
+    }
 
     public String getAppName() {
         return appName;
@@ -113,6 +125,7 @@ public class Job implements Serializable {
                 ", userName='" + userName + '\'' +
                 ", jobId='" + jobId + '\'' +
                 ", content='" + content + '\'' +
+                ", taskTypeEnum=" + taskTypeEnum +
                 ", workerIp='" + workerIp + '\'' +
                 ", jobStatus=" + jobStatus +
                 ", gmtSubmitted=" + gmtSubmitted +

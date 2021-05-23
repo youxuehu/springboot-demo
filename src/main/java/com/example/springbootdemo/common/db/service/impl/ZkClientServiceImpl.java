@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-//@Service(value = "zkClientService")
+@Service(value = "zkClientService")
 public class ZkClientServiceImpl implements ZkClientService, InitializingBean {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ZkClientServiceImpl.class);
