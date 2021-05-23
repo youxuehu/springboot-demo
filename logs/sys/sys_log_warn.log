@@ -1015,3 +1015,507 @@ Caused by: java.net.ConnectException: Connection refused (Connection refused)
 2021-05-23 07:26:54.902 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
 2021-05-23 07:26:56.901 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
 2021-05-23 07:26:56.903 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:24:13.181 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
+2021-05-23 22:24:13.182 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-2] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
+2021-05-23 22:24:13.182 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-3] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
+2021-05-23 22:24:13.182 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-4] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
+2021-05-23 22:24:13.183 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-5] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
+2021-05-23 22:26:13.068 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
+2021-05-23 22:26:13.070 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-2] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
+2021-05-23 22:26:13.070 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-3] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
+2021-05-23 22:26:13.071 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-4] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
+2021-05-23 22:26:13.071 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-5] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
+2021-05-23 22:26:13.072 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [C3P0PooledConnectionPoolManager[identityToken->1hge2niah16mggqn18ddttf|1bcbe986]-AdminTaskTimer] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.util.TimerThread.mainLoop(Timer.java:552)
+ java.util.TimerThread.run(Timer.java:505)
+2021-05-23 22:26:13.072 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [C3P0PooledConnectionPoolManager[identityToken->1hge2niah16mggqn18ddttf|1bcbe986]-HelperThread-#0] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:683)
+2021-05-23 22:26:13.072 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [C3P0PooledConnectionPoolManager[identityToken->1hge2niah16mggqn18ddttf|1bcbe986]-HelperThread-#1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:683)
+2021-05-23 22:26:13.073 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [C3P0PooledConnectionPoolManager[identityToken->1hge2niah16mggqn18ddttf|1bcbe986]-HelperThread-#2] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:683)
+2021-05-23 22:26:13.994 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:26:15.926 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:26:17.931 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:26:19.927 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:26:21.937 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:26:22.930 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:26:22.933 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: []
+2021-05-23 22:26:23.043 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":102744064,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:26:23.927 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:26:25.925 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:26:27.930 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:26:29.926 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:26:31.932 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:26:31.933 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:26:31.955 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:26:32.925 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":23097344,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:26:33.931 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:26:35.926 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:26:37.938 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:26:39.926 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:26:40.926 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:26:40.930 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:26:41.927 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:26:42.926 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":17879040,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:26:43.930 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:26:45.928 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:26:47.931 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:26:49.927 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:26:49.933 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:26:49.937 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:26:51.925 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:26:52.926 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":27475968,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:26:53.928 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:26:55.943 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:26:57.930 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:26:58.928 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:26:58.932 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:26:59.932 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:27:01.925 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:27:02.931 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":17915904,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:27:03.928 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:27:05.930 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:27:07.927 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:27:07.927 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:27:07.931 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:27:09.929 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:27:11.930 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:27:12.942 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":17121280,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:27:13.934 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:27:15.931 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:27:16.931 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:27:16.934 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:27:17.925 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:27:19.940 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:27:21.928 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:27:22.925 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":20008960,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:27:23.926 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:27:25.928 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:27:25.928 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:27:25.932 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:27:27.926 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:27:29.936 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:27:31.938 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:27:32.927 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":19464192,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:27:33.927 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:27:34.927 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:27:34.931 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:27:35.931 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:27:37.927 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:27:39.938 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:27:41.931 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:27:42.927 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":28733440,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:27:43.926 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:27:43.926 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:27:43.930 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:27:45.927 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:27:47.936 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:27:49.934 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:27:51.932 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:27:52.933 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:27:52.934 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":22196224,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:27:52.936 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:27:53.926 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:27:55.933 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:27:57.927 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:27:59.927 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:28:01.928 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:28:01.928 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:28:01.932 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:28:02.928 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":17387520,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:28:03.936 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:28:05.963 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:28:07.929 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:28:09.929 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:28:10.929 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:28:10.938 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:28:11.931 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:28:12.931 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":21889024,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:28:27.640 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
+2021-05-23 22:28:27.640 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-2] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
+2021-05-23 22:28:27.640 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-3] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
+2021-05-23 22:28:27.641 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-4] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
+2021-05-23 22:28:27.641 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [QuartzScheduler_Worker-5] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
+2021-05-23 22:28:27.642 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [C3P0PooledConnectionPoolManager[identityToken->1hge2niah16mjcm0ntse7m|2d1e694f]-AdminTaskTimer] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ java.util.TimerThread.mainLoop(Timer.java:552)
+ java.util.TimerThread.run(Timer.java:505)
+2021-05-23 22:28:27.642 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [C3P0PooledConnectionPoolManager[identityToken->1hge2niah16mjcm0ntse7m|2d1e694f]-HelperThread-#0] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:683)
+2021-05-23 22:28:27.642 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [C3P0PooledConnectionPoolManager[identityToken->1hge2niah16mjcm0ntse7m|2d1e694f]-HelperThread-#1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:683)
+2021-05-23 22:28:27.643 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [C3P0PooledConnectionPoolManager[identityToken->1hge2niah16mjcm0ntse7m|2d1e694f]-HelperThread-#2] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Object.wait(Native Method)
+ com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:683)
+2021-05-23 22:28:28.524 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:28:37.485 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:28:37.593 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:28:37.599 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":16838656,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:28:38.485 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:28:46.488 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:28:46.490 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: []
+2021-05-23 22:28:47.497 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":18354176,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:28:48.485 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:28:55.487 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:28:55.496 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:28:57.489 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":23056384,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:28:58.484 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:29:04.489 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:29:04.493 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:29:07.488 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":18259968,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:29:08.484 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:29:13.484 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:29:13.488 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:29:17.494 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":16326656,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:29:18.485 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:29:22.490 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:29:22.493 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:29:27.484 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":19750912,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:29:28.488 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:29:31.486 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:29:31.490 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:29:37.502 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":18452480,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:29:38.484 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:29:40.489 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:29:40.495 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:29:47.489 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":111177728,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:29:48.485 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:29:49.486 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:29:49.640 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:29:57.498 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":78692352,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:29:58.490 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:29:58.490 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:29:58.493 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:30:07.484 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":44580864,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:30:07.486 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:30:07.488 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:30:08.485 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:30:16.486 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:30:16.489 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:30:17.497 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":26247168,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:30:18.486 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:30:25.489 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:30:25.498 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:30:27.488 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":23887872,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:30:28.487 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:30:34.487 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:30:34.490 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:30:37.499 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":21622784,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:30:38.611 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:30:43.491 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:30:43.494 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:30:47.489 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":32309248,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:30:48.492 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:30:52.487 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:30:52.491 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:30:57.502 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":25882624,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:30:58.491 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:31:01.491 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:31:01.495 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:31:07.492 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":24018944,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:31:08.536 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:31:10.489 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:31:10.492 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:31:17.498 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":21209088,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:31:18.490 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:31:19.493 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:31:19.503 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:31:27.488 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":38752256,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:31:28.487 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:31:28.489 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:31:28.491 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:31:37.489 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:31:37.497 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:31:37.500 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":25075712,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:31:38.488 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:31:46.489 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:31:46.494 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:31:47.489 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":25661440,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:31:48.488 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:31:55.489 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:31:55.499 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:31:57.491 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":31752192,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:31:58.492 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:32:04.488 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:32:04.493 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:32:07.489 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":20766720,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:32:08.493 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:32:13.497 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:32:13.499 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:32:17.507 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":224288768,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:32:18.500 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:32:22.499 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:32:22.505 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:32:27.497 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":214917120,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:32:28.503 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:32:31.498 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:32:31.508 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:32:37.510 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":205811712,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:32:38.670 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:32:40.501 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:32:40.505 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:32:47.501 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":181239808,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:32:48.504 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:32:49.501 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:32:49.505 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:32:57.511 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":176087040,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:32:58.500 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:32:58.501 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:32:58.503 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:33:07.501 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:33:07.501 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":162983936,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:33:07.504 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:33:08.644 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:33:16.503 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:33:16.506 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:33:17.513 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":158842880,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:33:18.505 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:33:25.503 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:33:25.506 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:33:27.502 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":153505792,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:33:28.503 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:33:34.513 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:33:34.516 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:33:37.514 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":143577088,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:33:38.511 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:33:43.505 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:33:43.508 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:33:47.504 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":130875392,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:33:48.503 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:33:52.502 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:33:52.505 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:33:57.518 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":61640704,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:33:58.503 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:34:01.506 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:34:01.509 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:34:07.508 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":39878656,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:34:08.514 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:34:10.504 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:34:10.507 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:34:17.518 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":35393536,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:34:18.509 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:34:19.508 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:34:19.512 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:34:27.504 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":30691328,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:34:28.513 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:34:28.513 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:34:28.516 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:34:37.510 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:34:37.515 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:34:37.515 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":28393472,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:34:38.623 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:34:46.507 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:34:46.510 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:34:47.509 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":22507520,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:34:48.507 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:34:55.506 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:34:55.509 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:34:57.508 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":27873280,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:34:58.511 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:35:04.508 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:35:04.512 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:35:07.510 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":18411520,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:35:08.516 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:35:13.511 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:35:13.521 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:35:17.512 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":50888704,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:35:18.510 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:35:22.509 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:35:22.513 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:35:27.510 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":20246528,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:35:28.530 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:35:31.506 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:35:31.517 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:35:37.523 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":28499968,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:35:38.513 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:35:40.506 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:35:40.508 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:35:47.509 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":25317376,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:35:48.515 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:35:49.506 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:35:49.515 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:35:57.520 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":38498304,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:35:58.510 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:35:58.511 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:35:58.520 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:36:07.508 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:36:07.509 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":25833472,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:36:07.517 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:36:08.554 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:36:16.510 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:36:16.521 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:36:17.516 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":48762880,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:36:18.510 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:36:25.508 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:36:25.517 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:36:27.513 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":43044864,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:36:28.515 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:36:34.510 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:36:34.520 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:36:37.518 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":29007872,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:36:38.657 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:36:43.514 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:36:43.518 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:36:47.509 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":23277568,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:36:48.509 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:37:06.828 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:37:06.996 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-05-23 22:37:08.731 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-05-23 22:37:08.732 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-05-23 22:37:08.733 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-05-23 22:37:08.734 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-05-23 22:37:08.735 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-05-23 22:37:08.736 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-05-23 22:37:08.737 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-05-23 22:37:08.738 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-05-23 22:37:08.740 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-05-23 22:37:08.742 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-05-23 22:37:08.742 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-05-23 22:37:08.743 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-05-23 22:37:08.744 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-05-23 22:37:08.746 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-05-23 22:37:08.747 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-05-23 22:37:08.748 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-05-23 22:37:08.779 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-05-23 22:37:08.780 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-05-23 22:37:08.780 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-05-23 22:37:08.781 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-05-23 22:37:08.782 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-05-23 22:37:08.783 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-05-23 22:37:08.783 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-05-23 22:37:08.784 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-05-23 22:37:15.772 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:37:15.808 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:37:15.811 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":18587648,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:37:16.770 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:37:24.782 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:37:24.784 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: []
+2021-05-23 22:37:25.773 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":17223680,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:37:26.770 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:37:33.769 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:37:33.778 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:37:35.768 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":18030592,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:37:36.769 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:37:42.769 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:37:42.778 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:37:45.769 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":47824896,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:37:46.769 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:37:51.770 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:37:51.775 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:37:55.841 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":78237696,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:37:56.770 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:38:00.774 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:38:00.777 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:38:05.771 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":52322304,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:38:06.772 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:38:09.772 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:38:09.774 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:38:15.769 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":17506304,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:38:16.769 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:38:18.770 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:38:18.774 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:38:25.771 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":16474112,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:38:26.771 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:38:27.770 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:38:27.778 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:38:35.771 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":33165312,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:38:36.770 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:38:36.770 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:38:36.775 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:38:45.771 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:38:45.771 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":19746816,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:38:45.775 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:38:46.775 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:38:54.772 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:38:54.775 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:38:55.773 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":27348992,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:38:56.774 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:39:03.774 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:39:03.779 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:39:05.777 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":19853312,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:39:06.770 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:39:12.775 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:39:12.780 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:39:15.787 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":19419136,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:39:16.771 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:39:21.772 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:39:21.777 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:39:25.772 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":21667840,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:39:26.771 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:39:30.772 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:39:30.778 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:39:35.787 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":23678976,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:39:36.772 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:39:39.772 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:39:39.782 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:39:54.606 [restartedMain] WARN  org.thymeleaf.templatemode.TemplateMode - [THYMELEAF][restartedMain] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2021-05-23 22:39:54.789 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:39:55.691 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-05-23 22:39:55.698 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-05-23 22:39:55.698 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-05-23 22:39:55.699 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-05-23 22:39:55.700 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-05-23 22:39:55.701 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-05-23 22:39:55.702 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-05-23 22:39:55.702 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-05-23 22:39:55.704 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-05-23 22:39:55.705 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-05-23 22:39:55.706 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-05-23 22:39:55.707 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-05-23 22:39:55.707 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-05-23 22:39:55.708 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-05-23 22:39:55.709 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-05-23 22:39:55.710 [restartedMain] WARN  s.d.s.web.readers.parameter.ParameterTypeReader - @ModelAttribute annotated parameters should have already been expanded via the ExpandedParameterBuilderPlugin
+2021-05-23 22:39:55.734 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-05-23 22:39:55.735 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-05-23 22:39:55.736 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-05-23 22:39:55.736 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-05-23 22:39:55.737 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-05-23 22:39:55.737 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-05-23 22:39:55.738 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-05-23 22:39:55.739 [restartedMain] WARN  s.d.s.w.readers.parameter.ParameterDataTypeReader - Trying to infer dataType org.springframework.ui.ModelMap
+2021-05-23 22:40:03.750 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:40:03.778 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: [192.168.8.238]
+2021-05-23 22:40:03.779 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":64139264,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:40:04.749 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []
+2021-05-23 22:40:12.748 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 已提交列表的任务个数: 0
+2021-05-23 22:40:12.752 [pool-10-thread-1] WARN  com.example.springbootdemo.daemon.JobScheduler - 服务正常的worker: []
+2021-05-23 22:40:13.757 [pool-8-thread-1] WARN  com.example.springbootdemo.daemon.HeartBeats - HeartBeats task alive , localHost: 192.168.8.238, worker info : {"@type":"com.example.springbootdemo.common.db.dao.worker.model.Worker","freeMemory":15454208,"host":"192.168.8.238","jobCount":0,"memory":17179869184}
+2021-05-23 22:40:14.748 [pool-9-thread-1] WARN  com.example.springbootdemo.daemon.JobFetcher - fetch jobs list: []

@@ -1,11 +1,13 @@
 package com.example.springbootdemo.daemon;
 
+import com.example.springbootdemo.common.db.service.ZkClientService;
 import com.example.springbootdemo.common.zookeeper.ZkManager;
 import com.example.springbootdemo.utils.time.TimeUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.concurrent.Executors;
@@ -19,8 +21,8 @@ public class WorkerSyncer implements InitializingBean {
 
     private ScheduledExecutorService executorService = Executors.newScheduledThreadPool(2);
 
-    @Autowired
-    ZkManager zkManager;
+    @Autowired @Qualifier(value = "zkClientService")
+    private ZkClientService zkClientService;
 
     @Override
     public void afterPropertiesSet() throws Exception {
@@ -28,7 +30,7 @@ public class WorkerSyncer implements InitializingBean {
 //        5秒后执行线程
 //        executorService.schedule(new ScheduleSyncer(), 5, TimeUnit.SECONDS);
 //        1秒后执行线程，以后每隔5秒执行一次线程
-        executorService.scheduleAtFixedRate(new ScheduleSyncer(zkManager), 1, 5, TimeUnit.SECONDS);
+        executorService.scheduleAtFixedRate(new ScheduleSyncer(zkClientService), 1, 5, TimeUnit.SECONDS);
         LOG.info("线程定时调度启动完成, 当前时间：{}", TimeUtils.currentTime());
     }
 }

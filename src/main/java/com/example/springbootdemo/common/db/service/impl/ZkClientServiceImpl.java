@@ -89,6 +89,9 @@ public class ZkClientServiceImpl implements ZkClientService, InitializingBean {
     @Override
     public List<String> getChildren(String path) {
         try {
+            if (client.checkExists().forPath(path) == null) {
+                return Collections.emptyList();
+            }
             List<String> childrenPath = client.getChildren().forPath(path);
             return CollectionUtils.isEmpty(childrenPath) ? new ArrayList<>() : childrenPath;
         } catch (Exception e) {

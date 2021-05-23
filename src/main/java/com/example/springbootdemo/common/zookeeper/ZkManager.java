@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+//@Service
 public class ZkManager implements InitializingBean {
 
     private static final Logger LOG = LoggerFactory.getLogger(ZkManager.class);
