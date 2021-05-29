@@ -73,7 +73,7 @@ public class JobManagerImpl implements JobManager, InitializingBean {
     public String submit(String content) {
         String jobId = JobIdGenerator.generateJobId();
         //execute(executionContext, content);
-        zkClientService.create(zkClientService.getSubmittedPath() + jobId, ObjectByteConvert.obj2Byte(content));
+        zkClientService.create(zkClientService.getSubmittedPath() + "/" + jobId, ObjectByteConvert.obj2Byte(content));
         return jobId;
     }
 
