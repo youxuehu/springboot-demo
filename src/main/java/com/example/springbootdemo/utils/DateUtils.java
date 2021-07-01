@@ -1,11 +1,14 @@
 package com.example.springbootdemo.utils;
 
+import org.joda.time.DateTime;
+
 import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 public class DateUtils {
 
@@ -23,9 +26,34 @@ public class DateUtils {
      * @param time
      * @return
      */
-    private static Date getDate(long time) {
+    public static Date getDate(long time) {
         Calendar calendar = Calendar.getInstance();
         calendar.setTimeInMillis(System.currentTimeMillis() - time);
         return calendar.getTime();
+    }
+
+    public static Date getEndDate(int time, TimeUnit timeUnit) {
+        DateTime dateTime = DateTime.now();
+        long millis;
+        switch (timeUnit) {
+            case DAYS:
+                millis = dateTime.minusDays(time).toDateTime().getMillis();
+                break;
+            case HOURS:
+                millis = dateTime.minusHours(time).toDateTime().getMillis();
+                break;
+            case MINUTES:
+                millis = dateTime.minusMinutes(time).toDateTime().getMillis();
+                break;
+            case SECONDS:
+                millis = dateTime.minusSeconds(time).toDateTime().getMillis();
+                break;
+            case MILLISECONDS:
+                millis = dateTime.minusMillis(time).toDateTime().getMillis();
+                break;
+            default:
+                throw new RuntimeException("no support time type");
+        }
+        return new Date(millis);
     }
 }
