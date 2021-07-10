@@ -118,6 +118,7 @@ public class ZkClientServiceImpl implements ZkClientService, InitializingBean {
             if (force) {
                 // 级联删除子节点
                 client.delete().guaranteed().deletingChildrenIfNeeded().forPath(path);
+                return;
             }
             client.delete().forPath(path);
         } catch (Exception e) {

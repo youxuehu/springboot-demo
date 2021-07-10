@@ -12,13 +12,14 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import java.lang.management.ManagementFactory;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 @Service
-public class HeartBeats implements Runnable, InitializingBean {
+public class HeartBeats {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(HeartBeats.class);
 
@@ -27,7 +28,7 @@ public class HeartBeats implements Runnable, InitializingBean {
     @Autowired @Qualifier(value = "zkClientService")
     ZkClientService zkClientService;
 
-    @Override
+    @Scheduled(fixedRate = 3000)
     public void run() {
         String localHost = InetAddressUtil.getLocalHost();
         String heartBeatsPath = zkClientService.getHeartBeatsPath() + "/" + localHost;
@@ -37,13 +38,13 @@ public class HeartBeats implements Runnable, InitializingBean {
         worker.setMemory(mem.getTotalPhysicalMemorySize());
         worker.setFreeMemory(mem.getFreePhysicalMemorySize());
         worker.setJobCount(0L);
-        zkClientService.createWithModel(heartBeatsPath, ObjectByteConvert.obj2Byte(ObjectConverter.obj2Json(worker)), CreateMode.EPHEMERAL);
+        zkClientService.createWithModel(heartBeatsPath, ObjectByteConvert.obj2Byte(ObjectConverter.obj2Json(worker)), CreateMode.PERSISTENT);
         LOGGER.warn("HeartBeats task alive , localHost: {}, worker info : {}", localHost, ObjectConverter.obj2Json(worker));
     }
 
-    @Override
-    public void afterPropertiesSet() throws Exception {
-        scheduledThreadPoolExecutor = new ScheduledThreadPoolExecutor(1);
-        scheduledThreadPoolExecutor.scheduleAtFixedRate(this, 10, 10, TimeUnit.SECONDS);
-    }
+//    @Override
+//    public void afterPropertiesSet() throws Exception {
+//        scheduledThreadPoolExecutor = new ScheduledThreadPoolExecutor(1);
+//        scheduledThreadPoolExecutor.scheduleAtFixedRate(this, 10, 10, TimeUnit.SECONDS);
+//    }
 }

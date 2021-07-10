@@ -13,14 +13,17 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
+import org.springframework.util.CollectionUtils;
+
 import java.util.List;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 @Service
-public class JobFetcher implements Runnable, InitializingBean {
+public class JobFetcher {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(JobFetcher.class);
 
@@ -30,27 +33,40 @@ public class JobFetcher implements Runnable, InitializingBean {
     @Autowired
     private JobManager jobManager;
 
-    @Override
+    @Scheduled(fixedRate = 3000)
     public void run() {
-        String assignmentsPath = zkClientService.getAssignmentsPath();
-        String taskPath = assignmentsPath + "/" + InetAddressUtil.getLocalHost();
-        List<String> jobList = zkClientService.getChildren(taskPath);
-        LOGGER.warn("fetch jobs list: {}", jobList);
-        jobList.forEach(item -> {
-            Object data = zkClientService.getData(taskPath + "/" +item);
-            ZkData zkData = ObjectConverter.json2Obj((String) data, ZkData.class);
-            Object content = ObjectByteConvert.byte2Obj(zkData.getData());
-            // init sender
-            ExecutionContext executionContext = new ExecutionContext();
-            BlockingQueue<ResultLog> queue = jobManager.getRandomQueue();
-            jobManager.initSender(executionContext, queue, zkData.getJobId());
-            jobManager.execute(executionContext, (String) content);
-        });
+        List<String> jobList = null;
+        String taskPath = null;
+        try {
+            String assignmentsPath = zkClientService.getAssignmentsPath();
+            taskPath = assignmentsPath + "/" + InetAddressUtil.getLocalHost();
+            jobList = zkClientService.getChildren(taskPath);
+            LOGGER.warn("fetch jobs list: {}", jobList);
+            final String finalTaskPath = taskPath;
+            jobList.forEach(item -> {
+                Object data = zkClientService.getData(finalTaskPath + "/" +item);
+                Submit submit = ObjectConverter.json2Obj((String) data, Submit.class);
+//                Object content = ObjectByteConvert.byte2Obj(zkData.getData());
+                // init sender
+                ExecutionContext executionContext = new ExecutionContext();
+                BlockingQueue<ResultLog> queue = jobManager.getRandomQueue();
+                jobManager.initSender(executionContext, queue, submit.getJob().getJobId());
+                jobManager.execute(executionContext, submit.getJob().getContent());
+            });
+        } catch (Exception e) {
+            LOGGER.warn("", e);
+        } finally {
+            if (!CollectionUtils.isEmpty(jobList)) {
+                for (String jobId : jobList) {
+                    zkClientService.delete(taskPath + "/" + jobId, true);
+                }
+            }
+        }
     }
 
-    @Override
-    public void afterPropertiesSet() throws Exception {
-        ScheduledThreadPoolExecutor threadPoolExecutor = new ScheduledThreadPoolExecutor(1);
-        threadPoolExecutor.scheduleAtFixedRate(this, 1, 10, TimeUnit.SECONDS);
-    }
+//    @Override
+//    public void afterPropertiesSet() throws Exception {
+//        ScheduledThreadPoolExecutor threadPoolExecutor = new ScheduledThreadPoolExecutor(1);
+//        threadPoolExecutor.scheduleAtFixedRate(this, 1, 10, TimeUnit.SECONDS);
+//    }
 }

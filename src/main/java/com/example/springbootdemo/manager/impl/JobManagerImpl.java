@@ -1,6 +1,10 @@
 package com.example.springbootdemo.manager.impl;
 
+import com.alibaba.fastjson.JSON;
+import com.example.springbootdemo.common.db.dao.zkdata.model.ZkData;
 import com.example.springbootdemo.common.db.service.ZkClientService;
+import com.example.springbootdemo.daemon.Job;
+import com.example.springbootdemo.daemon.Submit;
 import com.example.springbootdemo.handler.JobHandler;
 import com.example.springbootdemo.handler.JobHandlerFactory;
 import com.example.springbootdemo.handler.TaskTypeEnum;
@@ -18,8 +22,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -73,7 +81,17 @@ public class JobManagerImpl implements JobManager, InitializingBean {
     public String submit(String content) {
         String jobId = JobIdGenerator.generateJobId();
         //execute(executionContext, content);
-        zkClientService.create(zkClientService.getSubmittedPath() + "/" + jobId, ObjectByteConvert.obj2Byte(content));
+        Map<String, String> data = new HashMap<>();
+        data.put("jobId", jobId);
+        data.put("content", content);
+
+        Job job = new Job();
+        job.setJobId(jobId);
+        job.setContent(content);
+        Submit submit = new Submit(job, false);
+        zkClientService.create(zkClientService.getSubmittedPath() + "/" + jobId, ObjectByteConvert.obj2Byte(JSON.toJSONString(submit)));
+        Object data1 = zkClientService.getData(zkClientService.getSubmittedPath() + "/" + jobId);
+        System.out.println("data1: " + data1);
         return jobId;
     }
 

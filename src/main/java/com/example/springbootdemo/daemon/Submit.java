@@ -13,6 +13,9 @@ public class Submit implements Serializable {
         this.isStop = isStop;
     }
 
+    public Submit() {
+    }
+
     public Job getJob() {
         return job;
     }
