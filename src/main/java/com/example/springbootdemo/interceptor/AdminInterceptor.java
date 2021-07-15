@@ -2,10 +2,10 @@ package com.example.springbootdemo.interceptor;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.TypeReference;
+import com.example.common.db.dao.permission.mapper.PermissionMapper;
+import com.example.common.db.dao.permission.model.Permission;
+import com.example.common.db.dao.permission.model.PermissionExample;
 import com.example.springbootdemo.common.cache.CacheService;
-import com.example.springbootdemo.common.db.dao.permission.mapper.PermissionMapper;
-import com.example.springbootdemo.common.db.dao.permission.model.Permission;
-import com.example.springbootdemo.common.db.dao.permission.model.PermissionExample;
 import com.example.springbootdemo.controller.userinfos.param.SessionInfo;
 import com.example.springbootdemo.utils.CookieUtil;
 import org.apache.commons.lang3.StringUtils;

@@ -1,7 +1,8 @@
 package com.example.springbootdemo.common.aop;
 
-import com.example.springbootdemo.common.db.dao.adminoperatelog.mapper.AdminOperateLogMapper;
-import com.example.springbootdemo.common.db.dao.adminoperatelog.model.AdminOperateLog;
+import com.example.common.anno.Log;
+import com.example.common.db.dao.adminoperatelog.mapper.AdminOperateLogMapper;
+import com.example.common.db.dao.adminoperatelog.model.AdminOperateLog;
 import com.example.springbootdemo.holder.ThreadLocalHolder;
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;

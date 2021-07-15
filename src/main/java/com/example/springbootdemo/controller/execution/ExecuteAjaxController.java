@@ -1,9 +1,9 @@
 package com.example.springbootdemo.controller.execution;
 
-import com.example.springbootdemo.common.db.dao.executionlog.model.ExecutionLog;
-import com.example.springbootdemo.common.db.dao.zkdata.model.ZkData;
-import com.example.springbootdemo.common.db.service.ExecutionLogService;
-import com.example.springbootdemo.common.db.service.ZkClientService;
+import com.example.common.db.dao.executionlog.model.ExecutionLog;
+import com.example.common.db.dao.zkdata.model.ZkData;
+import com.example.common.db.service.executionlog.ExecutionLogService;
+import com.example.common.db.service.zk.ZkClientService;
 import com.example.springbootdemo.controller.BaseController;
 import com.example.springbootdemo.controller.execution.param.ParamVo;
 import com.example.springbootdemo.manager.JobManager;
@@ -67,7 +67,7 @@ public class ExecuteAjaxController extends BaseController {
 
     @RequestMapping("/exec/task")
     public ModelMap exec(String content) {
-        String submittedPath = zkClientService.getSubmittedPath();
+        String submittedPath = zkClientService.getZkPath4SubmittedJobs();
         String jobId = UUIDUtil.getUniqueId().toString();
         String subPath = submittedPath + "/" + jobId;
         ZkData zkData = new ZkData();
@@ -76,7 +76,10 @@ public class ExecuteAjaxController extends BaseController {
         zkData.setGmtCreate(new Date());
         zkData.setPath(subPath);
         zkData.setRoot("/root");
-        zkClientService.createWithModel(subPath, ObjectByteConvert.obj2Byte(ObjectConverter.obj2Json(zkData)), CreateMode.EPHEMERAL);
+        zkClientService.create(
+                subPath,
+                ObjectByteConvert.obj2Byte(ObjectConverter.obj2Json(zkData)),
+                CreateMode.EPHEMERAL);
         return success("success", true);
     }
 }

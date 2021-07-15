@@ -1,8 +1,8 @@
 package com.example.springbootdemo.controller.user;
 
-import com.example.springbootdemo.common.db.dao.admin.mapper.AdminMapper;
-import com.example.springbootdemo.common.db.dao.admin.model.Admin;
-import com.example.springbootdemo.common.db.dao.admin.model.AdminExample;
+import com.example.common.db.dao.admin.mapper.AdminMapper;
+import com.example.common.db.dao.admin.model.Admin;
+import com.example.common.db.dao.admin.model.AdminExample;
 import com.example.springbootdemo.controller.params.MyResult;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;

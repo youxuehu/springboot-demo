@@ -1,6 +1,6 @@
 package com.example.springbootdemo.controller.userinfos;
 
-import com.example.springbootdemo.common.db.service.UserinfosService;
+import com.example.common.db.service.userinfos.UserinfosService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

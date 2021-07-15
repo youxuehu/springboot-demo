@@ -1,8 +1,8 @@
 package com.example.springbootdemo.user;
 
 import com.alibaba.fastjson.JSON;
-import com.example.springbootdemo.common.db.dao.user.model.User;
-import com.example.springbootdemo.common.db.service.UserService;
+import com.example.common.db.dao.user.model.User;
+import com.example.common.db.service.user.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;

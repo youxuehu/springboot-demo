@@ -1,6 +1,6 @@
 package com.example.springbootdemo;
 
-import com.example.springbootdemo.common.db.service.TestSpringService;
+import com.example.common.db.service.testspring.TestSpringService;
 import com.thebeastshop.forest.springboot.annotation.ForestScan;
 import lombok.extern.slf4j.Slf4j;
 import org.mybatis.spring.annotation.MapperScan;
@@ -13,18 +13,20 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.kafka.KafkaAutoConfiguration;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ImportResource;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 @Slf4j
 @SpringBootApplication(exclude = {KafkaAutoConfiguration.class})
 //@ComponentScan("com.tiger.elasticsearch")
-@MapperScan(basePackages={"com.example.springbootdemo.**.mapper"})
+@MapperScan(basePackages={"com.example.common.**.mapper"})
 //@Order(1)
 @EnableScheduling
 @EnableCaching
 @ImportResource(locations = {"classpath:applicationContext.xml"})
 @ForestScan(basePackages = "com.example.springbootdemo.utils.http.api")
+@ComponentScan(value = "com.example.common.db")
 public class SpringbootDemoApplication implements ApplicationRunner {
     private static final Logger LOGGER = LoggerFactory.getLogger(SpringbootDemoApplication.class);
 

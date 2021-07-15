@@ -1,11 +1,12 @@
 package com.example.springbootdemo.common.db.service.zkdata;
 
+import com.example.common.db.dao.zkdata.model.ZkData;
+import com.example.common.db.service.zk.ZkClientService;
 import com.example.springbootdemo.SpringbootDemoApplicationTests;
-import com.example.springbootdemo.common.db.dao.zkdata.model.ZkData;
-import com.example.springbootdemo.common.db.service.ZkClientService;
 import com.example.springbootdemo.utils.JobIdGenerator;
 import com.example.springbootdemo.utils.ObjectByteConvert;
 import com.example.springbootdemo.utils.ObjectConverter;
+import org.apache.zookeeper.CreateMode;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -19,7 +20,7 @@ public class ZkDataServiceTest extends SpringbootDemoApplicationTests {
     @Test
     public void insert() {
         String jobId = JobIdGenerator.generateJobId();
-        String submittedPath = zkClientService.getSubmittedPath();
+        String submittedPath = zkClientService.getZkPath4SubmittedJobs();
         ZkData zkData = new ZkData();
         zkData.setId(1L);
         zkData.setRoot("/root");
@@ -27,14 +28,14 @@ public class ZkDataServiceTest extends SpringbootDemoApplicationTests {
         zkData.setGmtCreate(new Date());
         byte[] bytes = ObjectByteConvert.obj2Byte(zkData);
         zkData.setData(bytes);
-        zkClientService.create(submittedPath, bytes);
+        zkClientService.create(submittedPath, bytes, CreateMode.EPHEMERAL);
     }
 
 
     @Test
     public void get() {
         String jobId = JobIdGenerator.generateJobId();
-        String submittedPath = zkClientService.getSubmittedPath();
+        String submittedPath = zkClientService.getZkPath4SubmittedJobs();
         ZkData zkData = new ZkData();
         zkData.setId(1L);
         zkData.setRoot("/root");
@@ -43,11 +44,10 @@ public class ZkDataServiceTest extends SpringbootDemoApplicationTests {
 
         byte[] bytes = ObjectByteConvert.obj2Byte(ObjectConverter.obj2Json(zkData));
         zkData.setData(bytes);
-        zkClientService.create(submittedPath, bytes);
+        zkClientService.create(submittedPath, bytes, CreateMode.PERSISTENT);
 
-        Object data = zkClientService.getData(submittedPath);
-        ZkData json2Obj = ObjectConverter.json2Obj((String) data, ZkData.class);
-        System.out.println(ObjectConverter.obj2Json(json2Obj));
+        ZkData data = zkClientService.getData(submittedPath, ZkData.class);
+        System.out.println(ObjectConverter.obj2Json(data));
     }
 
 }

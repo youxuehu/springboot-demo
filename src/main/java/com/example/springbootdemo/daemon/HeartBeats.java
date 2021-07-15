@@ -1,7 +1,7 @@
 package com.example.springbootdemo.daemon;
 
-import com.example.springbootdemo.common.db.dao.worker.model.Worker;
-import com.example.springbootdemo.common.db.service.ZkClientService;
+import com.example.common.db.dao.worker.model.Worker;
+import com.example.common.db.service.zk.ZkClientService;
 import com.example.springbootdemo.utils.InetAddressUtil;
 import com.example.springbootdemo.utils.ObjectByteConvert;
 import com.example.springbootdemo.utils.ObjectConverter;
@@ -31,14 +31,14 @@ public class HeartBeats {
     @Scheduled(fixedRate = 3000)
     public void run() {
         String localHost = InetAddressUtil.getLocalHost();
-        String heartBeatsPath = zkClientService.getHeartBeatsPath() + "/" + localHost;
+        String heartBeatsPath = zkClientService.getZkPath4Workers() + "/" + localHost;
         OperatingSystemMXBean mem = (OperatingSystemMXBean) ManagementFactory.getOperatingSystemMXBean();
         Worker worker = new Worker();
         worker.setHost(localHost);
         worker.setMemory(mem.getTotalPhysicalMemorySize());
         worker.setFreeMemory(mem.getFreePhysicalMemorySize());
         worker.setJobCount(0L);
-        zkClientService.createWithModel(heartBeatsPath, ObjectByteConvert.obj2Byte(ObjectConverter.obj2Json(worker)), CreateMode.PERSISTENT);
+        zkClientService.create(heartBeatsPath, ObjectByteConvert.obj2Byte(ObjectConverter.obj2Json(worker)), CreateMode.PERSISTENT);
         LOGGER.warn("HeartBeats task alive , localHost: {}, worker info : {}", localHost, ObjectConverter.obj2Json(worker));
     }
 

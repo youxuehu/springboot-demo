@@ -3,8 +3,8 @@ package com.example.springbootdemo.controller;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.example.springbootdemo.common.db.dao.quartz.jobandtrigger.model.JobAndTrigger;
-import com.example.springbootdemo.common.db.service.IJobAndTriggerService;
+import com.example.common.db.dao.quartz.jobandtrigger.model.JobAndTrigger;
+import com.example.common.db.service.jobandtrigger.IJobAndTriggerService;
 import com.example.springbootdemo.common.quartz.componment.BaseJob;
 import com.github.pagehelper.PageInfo;
 import org.quartz.CronScheduleBuilder;
@@ -30,7 +30,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(value = "/job")
 public class JobController {
+
     private static final Logger LOGGER = LoggerFactory.getLogger(JobController.class);
+
     @Autowired
     private IJobAndTriggerService iJobAndTriggerService;
 

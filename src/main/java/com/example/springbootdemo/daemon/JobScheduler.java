@@ -1,11 +1,11 @@
 package com.example.springbootdemo.daemon;
 
 import com.alibaba.fastjson.JSON;
-import com.example.springbootdemo.common.db.dao.worker.model.Worker;
-import com.example.springbootdemo.common.db.dao.zkdata.model.ZkData;
-import com.example.springbootdemo.common.db.service.ZkClientService;
+import com.example.common.db.dao.worker.model.Worker;
+import com.example.common.db.service.zk.ZkClientService;
 import com.example.springbootdemo.utils.ObjectByteConvert;
 import com.example.springbootdemo.utils.ObjectConverter;
+import org.apache.zookeeper.CreateMode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.InitializingBean;
@@ -52,44 +52,45 @@ public class JobScheduler {
         public void run() {
             try {
                 LOGGER.warn("任务调度开始");
-                String submittedPath = zkClientService.getSubmittedPath();
-                List<String> submittedJobList = zkClientService.getChildren(submittedPath);
+                String submittedPath = zkClientService.getZkPath4SubmittedJobs();
+                List<String> submittedJobList = zkClientService.ls(submittedPath);
                 List<Submit> submits = new ArrayList<>();
 
                 for (String item : submittedJobList) {
-                    Object data = zkClientService.getData(submittedPath +"/"+item);
-                    if (data != null) {
-                        Submit submit = ObjectConverter.json2Obj((String) data, Submit.class);
+                    Submit submit = zkClientService.getData(submittedPath +"/"+item, Submit.class);
+                    if (submit != null) {
                         submits.add(submit);
                     }
                 }
                 LOGGER.warn("已提交列表的任务个数: {}", submits.size());
 
                 // 查询服务正常的worker
-                String heartBeatsPath = zkClientService.getHeartBeatsPath();
-                List<String> heartBeatsList = zkClientService.getChildren(heartBeatsPath);
+                String heartBeatsPath = zkClientService.getZkPath4Workers();
+                List<String> heartBeatsList = zkClientService.ls(heartBeatsPath);
                 List<Worker> workers = new ArrayList<>();
                 heartBeatsList.forEach(item -> {
-                    Object data = zkClientService.getData(heartBeatsPath+"/"+item);
-                    if (data != null) {
-                        Worker worker = ObjectConverter.json2Obj((String) data, Worker.class);
+                    Worker worker = zkClientService.getData(heartBeatsPath+"/"+item, Worker.class);
+                    if (worker != null) {
                         workers.add(worker);
                     }
                 });
                 LOGGER.warn("服务正常的worker: {}", workers.stream().map(Worker::getHost).collect(Collectors.toList()));
                 // 选择空闲的把任务分配给它
-                String assignmentsPath = zkClientService.getAssignmentsPath();
+                String assignmentsPath = zkClientService.getZkPath4Assignments();
                 for (Submit submit : submits) {
                     String host = getMaxFreeMemory(workers);
-                    if (!zkClientService.checkExists(assignmentsPath + "/" + host)) {
-                        zkClientService.create(assignmentsPath + "/" + host, "1".getBytes(StandardCharsets.UTF_8));
+                    if (!zkClientService.exists(assignmentsPath + "/" + host)) {
+                        zkClientService.create(assignmentsPath + "/" + host, "1".getBytes(StandardCharsets.UTF_8), CreateMode.PERSISTENT);
                     }
-                    zkClientService.create(assignmentsPath + "/" + host + "/" + submit.getJob().getJobId(),  ObjectByteConvert.obj2Byte(JSON.toJSONString(submit)));
+                    zkClientService.create(
+                            assignmentsPath + "/" + host + "/" + submit.getJob().getJobId(),
+                            ObjectByteConvert.obj2Byte(JSON.toJSONString(submit)),
+                            CreateMode.PERSISTENT);
                 }
 
                 // 从已提交的列表删除任务
                 for (String path : submittedJobList) {
-                    zkClientService.delete(submittedPath + "/" + path, true);
+                    zkClientService.delete(submittedPath + "/" + path);
                 }
             } catch (Exception e) {
                 LOGGER.warn("", e);

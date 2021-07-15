@@ -1,7 +1,7 @@
 package com.example.springbootdemo;
 
-import com.example.springbootdemo.common.db.dao.user.model.User;
-import com.example.springbootdemo.common.db.service.UserService;
+import com.example.common.db.dao.user.model.User;
+import com.example.common.db.service.user.UserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

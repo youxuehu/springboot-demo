@@ -1,8 +1,8 @@
 package com.example.springbootdemo.controller.log;
 
-import com.example.springbootdemo.common.db.dao.adminoperatelog.mapper.AdminOperateLogMapper;
-import com.example.springbootdemo.common.db.dao.adminoperatelog.model.AdminOperateLog;
-import com.example.springbootdemo.common.db.dao.adminoperatelog.model.AdminOperateLogExample;
+import com.example.common.db.dao.adminoperatelog.mapper.AdminOperateLogMapper;
+import com.example.common.db.dao.adminoperatelog.model.AdminOperateLog;
+import com.example.common.db.dao.adminoperatelog.model.AdminOperateLogExample;
 import com.example.springbootdemo.controller.params.MyResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

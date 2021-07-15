@@ -1,6 +1,6 @@
 package com.example.springbootdemo.daemon;
 
-import com.example.springbootdemo.common.db.service.ZkClientService;
+import com.example.common.db.service.zk.ZkClientService;
 import com.example.springbootdemo.common.zookeeper.ZkManager;
 import com.example.springbootdemo.utils.time.TimeUtils;
 import org.slf4j.Logger;

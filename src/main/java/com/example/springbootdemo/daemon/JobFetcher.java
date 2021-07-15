@@ -1,7 +1,6 @@
 package com.example.springbootdemo.daemon;
 
-import com.example.springbootdemo.common.db.dao.zkdata.model.ZkData;
-import com.example.springbootdemo.common.db.service.ZkClientService;
+import com.example.common.db.service.zk.ZkClientService;
 import com.example.springbootdemo.manager.ExecutionContext;
 import com.example.springbootdemo.manager.JobManager;
 import com.example.springbootdemo.manager.res.ResultLog;
@@ -38,14 +37,13 @@ public class JobFetcher {
         List<String> jobList = null;
         String taskPath = null;
         try {
-            String assignmentsPath = zkClientService.getAssignmentsPath();
+            String assignmentsPath = zkClientService.getZkPath4Assignments();
             taskPath = assignmentsPath + "/" + InetAddressUtil.getLocalHost();
-            jobList = zkClientService.getChildren(taskPath);
+            jobList = zkClientService.ls(taskPath);
             LOGGER.warn("fetch jobs list: {}", jobList);
             final String finalTaskPath = taskPath;
             jobList.forEach(item -> {
-                Object data = zkClientService.getData(finalTaskPath + "/" +item);
-                Submit submit = ObjectConverter.json2Obj((String) data, Submit.class);
+                Submit submit = zkClientService.getData(finalTaskPath + "/" +item, Submit.class);
 //                Object content = ObjectByteConvert.byte2Obj(zkData.getData());
                 // init sender
                 ExecutionContext executionContext = new ExecutionContext();
@@ -58,7 +56,7 @@ public class JobFetcher {
         } finally {
             if (!CollectionUtils.isEmpty(jobList)) {
                 for (String jobId : jobList) {
-                    zkClientService.delete(taskPath + "/" + jobId, true);
+                    zkClientService.delete(taskPath + "/" + jobId);
                 }
             }
         }

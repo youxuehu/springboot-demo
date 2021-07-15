@@ -1,6 +1,6 @@
 package com.example.springbootdemo.common.scheduling;
 
-import com.example.springbootdemo.common.db.service.DbSaveFrontService;
+import com.example.common.db.service.dbsavefront.DbSaveFrontService;
 import com.example.springbootdemo.utils.enums.SwitchEnum;
 import com.example.springbootdemo.utils.time.TimeUtils;
 import org.slf4j.Logger;

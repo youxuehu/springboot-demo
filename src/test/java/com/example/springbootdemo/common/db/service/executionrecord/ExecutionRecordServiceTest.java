@@ -1,9 +1,9 @@
 package com.example.springbootdemo.common.db.service.executionrecord;
 
 import com.alibaba.fastjson.JSON;
+import com.example.common.db.dao.executionrecord.model.ExecutionRecord;
+import com.example.common.db.service.executionrecord.ExecutionRecordService;
 import com.example.springbootdemo.SpringbootDemoApplicationTests;
-import com.example.springbootdemo.common.db.dao.executionrecord.model.ExecutionRecord;
-import com.example.springbootdemo.common.db.service.ExecutionRecordService;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 

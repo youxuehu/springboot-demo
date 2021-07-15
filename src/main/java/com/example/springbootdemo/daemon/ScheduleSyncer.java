@@ -2,7 +2,7 @@ package com.example.springbootdemo.daemon;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.TypeReference;
-import com.example.springbootdemo.common.db.service.ZkClientService;
+import com.example.common.db.service.zk.ZkClientService;
 import com.example.springbootdemo.common.zookeeper.ZkManager;
 import com.example.springbootdemo.handler.JobHandler;
 import com.example.springbootdemo.handler.JobHandlerFactory;
@@ -47,8 +47,8 @@ public class ScheduleSyncer implements Runnable {
 //            }
 //            jobHandler.invoke(new ExecutionContext(), job.getContent());
 //        }
-        String assignmentsPath = zkClientService.getAssignmentsPath();
+        String assignmentsPath = zkClientService.getZkPath4Assignments();
         String taskPath = assignmentsPath + "/" + InetAddressUtil.getLocalHost();
-        zkClientService.createWithModel(taskPath, "11".getBytes(), CreateMode.EPHEMERAL);
+        zkClientService.create(taskPath, "11".getBytes(), CreateMode.EPHEMERAL);
     }
 }

@@ -1,8 +1,8 @@
 package com.example.springbootdemo.controller.execution;
 
-import com.example.springbootdemo.common.db.dao.executionlog.mapper.ExecutionLogMapper;
-import com.example.springbootdemo.common.db.dao.executionlog.model.ExecutionLog;
-import com.example.springbootdemo.common.db.dao.executionlog.model.ExecutionLogExample;
+import com.example.common.db.dao.executionlog.mapper.ExecutionLogMapper;
+import com.example.common.db.dao.executionlog.model.ExecutionLog;
+import com.example.common.db.dao.executionlog.model.ExecutionLogExample;
 import com.example.springbootdemo.controller.params.MyResult;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;

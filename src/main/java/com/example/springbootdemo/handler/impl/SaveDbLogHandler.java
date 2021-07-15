@@ -1,7 +1,7 @@
 package com.example.springbootdemo.handler.impl;
 
-import com.example.springbootdemo.common.db.dao.executionlog.model.ExecutionLog;
-import com.example.springbootdemo.common.db.service.ExecutionLogService;
+import com.example.common.db.dao.executionlog.model.ExecutionLog;
+import com.example.common.db.service.executionlog.ExecutionLogService;
 import com.example.springbootdemo.manager.res.ResultLog;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

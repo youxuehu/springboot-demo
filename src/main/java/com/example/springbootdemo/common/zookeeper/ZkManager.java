@@ -1,6 +1,6 @@
 package com.example.springbootdemo.common.zookeeper;
 
-import com.example.springbootdemo.common.db.service.ZkClientService;
+import com.example.common.db.service.zk.ZkClientService;
 import com.example.springbootdemo.utils.InetAddressUtil;
 import com.example.springbootdemo.utils.time.TimeUtils;
 import org.slf4j.Logger;
@@ -45,10 +45,10 @@ public class ZkManager implements InitializingBean {
     }
 
     public List<String> getAssignments() {
-        String assignmentsPath = zkClientService.getAssignmentsPath();
+        String assignmentsPath = zkClientService.getZkPath4Assignments();
         String localHost = InetAddressUtil.getLocalHost();
         String myJobPath = assignmentsPath + "/" + localHost;
-        List<String> jobIds = zkClientService.getChildren(myJobPath);
+        List<String> jobIds = zkClientService.ls(myJobPath);
         LOG.warn("当前代执行的job: {}", jobIds);
         return jobIds;
     }

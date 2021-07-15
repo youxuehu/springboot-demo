@@ -1,6 +1,6 @@
 package com.example.springbootdemo.init;
 
-import com.example.springbootdemo.common.db.dao.admin.model.Admin;
+import com.example.common.db.dao.admin.model.Admin;
 import com.example.springbootdemo.utils.DBUtil;
 import com.example.springbootdemo.utils.MD5Util;
 
