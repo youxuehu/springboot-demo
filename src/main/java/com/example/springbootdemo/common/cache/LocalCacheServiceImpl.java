@@ -19,7 +19,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-@Service
+@Service("local")
 public class LocalCacheServiceImpl implements CacheService {
     private static final Map<String, CachedObj> CACHED = new ConcurrentHashMap<>();
     private AtomicBoolean atomicBoolean = new AtomicBoolean(false);

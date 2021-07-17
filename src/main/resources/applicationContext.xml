@@ -7,6 +7,8 @@
                            http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
                            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
+        <bean id="redisCacheServiceImpl" class="com.example.springbootdemo.common.cache.RedisCacheServiceImpl"/>
+        <bean id="localCacheServiceImpl" class="com.example.springbootdemo.common.cache.LocalCacheServiceImpl"/>
         <mvc:interceptors>
             <!-- 谁配置在前preHandle就先执行 -->
             <mvc:interceptor>
@@ -20,7 +22,9 @@
                 <mvc:exclude-mapping path="/css/**"/>
                 <mvc:exclude-mapping path="/favicon.ico"/>
                 <mvc:exclude-mapping path="/changeLang"/>
-                <bean class="com.example.springbootdemo.interceptor.LoginCheckInterceptor"/>
+                <bean class="com.example.springbootdemo.interceptor.LoginCheckInterceptor">
+                    <property name="cacheService" ref="redisCacheServiceImpl"/>
+                </bean>
             </mvc:interceptor>
             <mvc:interceptor>
                 <mvc:mapping path="/admin"/>
@@ -37,9 +41,9 @@
             </mvc:interceptor>
         </mvc:interceptors>
 
-
+    <bean id="logHandlerAdapter" class="com.example.springbootdemo.common.aop.LogHandlerAdapter"/>
     <aop:config>
-        <aop:pointcut id="logPC" expression="@annotation(com.example.springbootdemo.common.aop.Log)"/>
+        <aop:pointcut id="logPC" expression="@annotation(com.example.common.anno.Log)"/>
         <aop:advisor advice-ref="logHandlerAdapter" pointcut-ref="logPC"/>
     </aop:config>
 </beans>

@@ -15,6 +15,7 @@ import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ImportResource;
+import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 @Slf4j
@@ -24,8 +25,9 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 //@Order(1)
 @EnableScheduling
 @EnableCaching
+@EnableAsync
 @ImportResource(locations = {"classpath:applicationContext.xml"})
-@ForestScan(basePackages = "com.example.springbootdemo.utils.http.api")
+@ForestScan(basePackages = "com.example.common.utils.http.api")
 @ComponentScan(value = "com.example.common.db")
 public class SpringbootDemoApplication implements ApplicationRunner {
     private static final Logger LOGGER = LoggerFactory.getLogger(SpringbootDemoApplication.class);

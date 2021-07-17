@@ -16,7 +16,6 @@ import java.util.Date;
  * 	AfterReturningAdvice    后置的额外功能
  * 	MethodInterceptor        环绕的额外功能
  */
-@Service
 public class LogHandlerAdapter implements MethodInterceptor {
 
     @Autowired

@@ -30,8 +30,6 @@ public class AdminInterceptor extends HandlerInterceptorAdapter {
     @Autowired
     PermissionMapper permissionMapper;
 
-    @Autowired
-    @Qualifier("redisCacheServiceImpl")
     CacheService cacheService;
 
     @Override
@@ -71,5 +69,9 @@ public class AdminInterceptor extends HandlerInterceptorAdapter {
         condition.createCriteria().andUsernumberEqualTo(userNumber);
         List<Permission> permissions = permissionMapper.selectByExample(condition);
         return CollectionUtils.isEmpty(permissions) ? false : true;
+    }
+
+    public void setCacheService(CacheService cacheService) {
+        this.cacheService = cacheService;
     }
 }

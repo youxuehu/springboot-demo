@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
-import static com.example.springbootdemo.utils.GenerateChineseName.getChineseName;
+import static com.example.common.utils.GenerateChineseName.getChineseName;
 
 public class ExecutionRecordServiceTest extends SpringbootDemoApplicationTests {
 

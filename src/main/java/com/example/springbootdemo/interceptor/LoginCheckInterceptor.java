@@ -20,7 +20,6 @@ import static com.example.common.utils.constant.CommonConst.SESSION_KET;
 
 public class LoginCheckInterceptor extends HandlerInterceptorAdapter {
     private static final Logger LOGGER = LoggerFactory.getLogger(LoginCheckInterceptor.class);
-    @Autowired  @Qualifier("redisCacheServiceImpl")
     CacheService cacheService;
 
     @Override
@@ -72,5 +71,9 @@ public class LoginCheckInterceptor extends HandlerInterceptorAdapter {
         ThreadLocalHolder.set(JSON.parseObject(cacheValue, SessionInfo.class));
         request.getSession().setAttribute(SESSION_KET, JSON.parseObject(cacheValue));
         return false;
+    }
+
+    public void setCacheService(CacheService cacheService) {
+        this.cacheService = cacheService;
     }
 }

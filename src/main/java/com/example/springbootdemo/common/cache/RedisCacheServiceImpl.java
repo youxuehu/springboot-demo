@@ -21,7 +21,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
-@Service
+@Service("redis")
 public class RedisCacheServiceImpl implements CacheService {
     private static final Logger LOGGER = LoggerFactory.getLogger(RedisCacheServiceImpl.class);
     @Autowired
