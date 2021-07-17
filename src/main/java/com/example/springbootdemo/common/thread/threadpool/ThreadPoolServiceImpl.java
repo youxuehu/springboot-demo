@@ -1,7 +1,7 @@
 package com.example.springbootdemo.common.thread.threadpool;
 
 import com.example.common.db.service.dbsavefront.DbSaveFrontService;
-import com.example.springbootdemo.utils.enums.SwitchEnum;
+import com.example.common.utils.enums.SwitchEnum;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.InitializingBean;
@@ -11,7 +11,8 @@ import java.util.TimerTask;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import static com.example.springbootdemo.utils.constant.CommonConst.SCHEDULE_SWITCH;
+import static com.example.common.utils.constant.CommonConst.SCHEDULE_SWITCH;
+
 
 /**
  * 线程池创建

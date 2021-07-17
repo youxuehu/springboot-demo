@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-import static com.example.springbootdemo.utils.constant.I18nConstant.SESSION_LANG_KEY;
+import static com.example.common.utils.constant.I18nConstant.SESSION_LANG_KEY;
 
 @Controller
 public class LanguageController {

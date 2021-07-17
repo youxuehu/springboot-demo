@@ -5,8 +5,10 @@ import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.stereotype.Component;
 
 import java.util.Locale;
+
 @Component
 public class I18nMessageUtil {
+
     @Autowired
     SpringBeanUtil springBeanUtil;
     
@@ -20,6 +22,6 @@ public class I18nMessageUtil {
 
     public String getMessage(String code, Object[] args, String defaultMessage) {
         Locale locale = LocaleContextHolder.getLocale();
-        return springBeanUtil.getContext().getMessage(code, args, defaultMessage, locale);
+        return springBeanUtil.getApplicationContext().getMessage(code, args, defaultMessage, locale);
     }
 }

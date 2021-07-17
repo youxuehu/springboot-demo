@@ -3,14 +3,14 @@ package com.example.springbootdemo.controller;
 import com.alibaba.fastjson.JSON;
 import com.example.common.db.dao.admin.model.Admin;
 import com.example.common.db.service.admin.AdminService;
+import com.example.common.utils.MD5Util;
+import com.example.common.utils.enums.ErrorCodeEnum;
 import com.example.springbootdemo.bloomFilter.BloomFilterCache;
 import com.example.springbootdemo.common.cache.CacheService;
 import com.example.springbootdemo.controller.params.LoginDTO;
 import com.example.springbootdemo.controller.userinfos.param.SessionInfo;
 import com.example.springbootdemo.utils.CookieUtil;
-import com.example.springbootdemo.utils.enums.ErrorCodeEnum;
 import com.example.springbootdemo.utils.I18nMessageUtil;
-import com.example.springbootdemo.utils.MD5Util;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,8 +30,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.UUID;
 
-import static com.example.springbootdemo.utils.constant.CommonConst.SESSION_KET;
-import static com.example.springbootdemo.utils.constant.I18nConstant.SESSION_LANG_KEY;
+import static com.example.common.utils.constant.CommonConst.SESSION_KET;
+import static com.example.common.utils.constant.I18nConstant.SESSION_LANG_KEY;
+
 
 @Controller
 @SessionAttributes(SESSION_LANG_KEY)

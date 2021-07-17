@@ -1,15 +1,12 @@
 package com.example.springbootdemo.daemon;
 
 import com.example.common.db.service.zk.ZkClientService;
+import com.example.common.utils.InetAddressUtil;
 import com.example.springbootdemo.manager.ExecutionContext;
 import com.example.springbootdemo.manager.JobManager;
 import com.example.springbootdemo.manager.res.ResultLog;
-import com.example.springbootdemo.utils.InetAddressUtil;
-import com.example.springbootdemo.utils.ObjectByteConvert;
-import com.example.springbootdemo.utils.ObjectConverter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -18,8 +15,6 @@ import org.springframework.util.CollectionUtils;
 
 import java.util.List;
 import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.ScheduledThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
 
 @Service
 public class JobFetcher {

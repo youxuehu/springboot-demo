@@ -1,7 +1,7 @@
 package com.example.springbootdemo.manager.impl;
 
+import com.example.common.utils.time.TimeUtils;
 import com.example.springbootdemo.manager.res.ResultLog;
-import com.example.springbootdemo.utils.time.TimeUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

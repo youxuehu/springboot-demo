@@ -15,7 +15,8 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import static com.example.springbootdemo.utils.constant.CommonConst.SESSION_KET;
+
+import static com.example.common.utils.constant.CommonConst.SESSION_KET;
 
 public class LoginCheckInterceptor extends HandlerInterceptorAdapter {
     private static final Logger LOGGER = LoggerFactory.getLogger(LoginCheckInterceptor.class);

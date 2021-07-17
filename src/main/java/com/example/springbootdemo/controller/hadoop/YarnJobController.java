@@ -22,7 +22,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.example.springbootdemo.utils.ShellUtil.runShell;
+import static com.example.common.utils.ShellUtil.runShell;
 
 @Controller
 @RequestMapping("/yarn")

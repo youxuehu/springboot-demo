@@ -1,8 +1,8 @@
 package com.example.springbootdemo.common.scheduling;
 
 import com.example.common.db.service.dbsavefront.DbSaveFrontService;
-import com.example.springbootdemo.utils.enums.SwitchEnum;
-import com.example.springbootdemo.utils.time.TimeUtils;
+import com.example.common.utils.enums.SwitchEnum;
+import com.example.common.utils.time.TimeUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.InitializingBean;
@@ -10,7 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import java.util.Date;
-import static com.example.springbootdemo.utils.constant.CommonConst.SCHEDULE_SWITCH;
+
+import static com.example.common.utils.constant.CommonConst.SCHEDULE_SWITCH;
 
 @Component
 public class ScheduleService implements InitializingBean {

@@ -11,7 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.util.Locale;
 
-import static com.example.springbootdemo.utils.constant.I18nConstant.SESSION_LANG_KEY;
+import static com.example.common.utils.constant.I18nConstant.SESSION_LANG_KEY;
+
 
 public class LocaleRequestInterceptor extends HandlerInterceptorAdapter {
     private static final Logger LOGGER = LoggerFactory.getLogger(LocaleRequestInterceptor.class);

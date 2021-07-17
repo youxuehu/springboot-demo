@@ -1,8 +1,8 @@
 package com.example.springbootdemo.init;
 
 import com.example.common.db.dao.admin.model.Admin;
-import com.example.springbootdemo.utils.DBUtil;
-import com.example.springbootdemo.utils.MD5Util;
+import com.example.common.utils.DBUtil;
+import com.example.common.utils.MD5Util;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

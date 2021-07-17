@@ -5,7 +5,6 @@ import com.example.common.db.service.zk.ZkClientService;
 import com.example.springbootdemo.SpringbootDemoApplicationTests;
 import com.example.springbootdemo.utils.JobIdGenerator;
 import com.example.springbootdemo.utils.ObjectByteConvert;
-import com.example.springbootdemo.utils.ObjectConverter;
 import org.apache.zookeeper.CreateMode;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
