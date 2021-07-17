@@ -78,7 +78,7 @@ public class ExecuteAjaxController extends BaseController {
         zkData.setRoot("/root");
         zkClientService.create(
                 subPath,
-                ObjectByteConvert.obj2Byte(ObjectConverter.obj2Json(zkData)),
+                zkData,
                 CreateMode.EPHEMERAL);
         return success("success", true);
     }

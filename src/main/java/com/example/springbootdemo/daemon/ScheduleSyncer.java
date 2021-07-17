@@ -49,6 +49,6 @@ public class ScheduleSyncer implements Runnable {
 //        }
         String assignmentsPath = zkClientService.getZkPath4Assignments();
         String taskPath = assignmentsPath + "/" + InetAddressUtil.getLocalHost();
-        zkClientService.create(taskPath, "11".getBytes(), CreateMode.EPHEMERAL);
+        zkClientService.create(taskPath, 1, CreateMode.EPHEMERAL);
     }
 }

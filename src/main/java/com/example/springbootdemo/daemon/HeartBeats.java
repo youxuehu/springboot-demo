@@ -1,5 +1,6 @@
 package com.example.springbootdemo.daemon;
 
+import com.alibaba.fastjson.JSON;
 import com.example.common.db.dao.worker.model.Worker;
 import com.example.common.db.service.zk.ZkClientService;
 import com.example.common.utils.InetAddressUtil;
@@ -39,8 +40,9 @@ public class HeartBeats {
         worker.setMemory(mem.getTotalPhysicalMemorySize());
         worker.setFreeMemory(mem.getFreePhysicalMemorySize());
         worker.setJobCount(0L);
-        zkClientService.create(heartBeatsPath, ObjectByteConvert.obj2Byte(ObjectConverter.obj2Json(worker)), CreateMode.PERSISTENT);
-        LOGGER.warn("HeartBeats task alive , localHost: {}, worker info : {}", localHost, ObjectConverter.obj2Json(worker));
+        zkClientService.create(heartBeatsPath, worker, CreateMode.PERSISTENT);
+        LOGGER.warn("HeartBeats task alive , localHost: {}, worker info : {}",
+                localHost, JSON.toJSONString(worker, true));
     }
 
 //    @Override

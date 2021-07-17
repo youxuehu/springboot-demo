@@ -13,6 +13,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
+import org.springframework.util.CollectionUtils;
 
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
@@ -53,21 +54,24 @@ public class JobScheduler {
                 String submittedPath = zkClientService.getZkPath4SubmittedJobs();
                 List<String> submittedJobList = zkClientService.ls(submittedPath);
                 List<Submit> submits = new ArrayList<>();
-
+                if (CollectionUtils.isEmpty(submittedJobList)) {
+                    LOGGER.warn("已提交列表的任务是空");
+                    return;
+                }
                 for (String item : submittedJobList) {
                     Submit submit = zkClientService.getData(submittedPath +"/"+item, Submit.class);
                     if (submit != null) {
                         submits.add(submit);
                     }
                 }
-                LOGGER.warn("已提交列表的任务个数: {}", submits.size());
+                LOGGER.warn("已提交列表的任务个数： {} , 任务列表：{}", submits.size(), JSON.toJSONString(submits, true));
 
                 // 查询服务正常的worker
                 String heartBeatsPath = zkClientService.getZkPath4Workers();
                 List<String> heartBeatsList = zkClientService.ls(heartBeatsPath);
                 List<Worker> workers = new ArrayList<>();
                 heartBeatsList.forEach(item -> {
-                    Worker worker = zkClientService.getData(heartBeatsPath+"/"+item, Worker.class);
+                    Worker worker = zkClientService.getData(heartBeatsPath + "/" + item, Worker.class);
                     if (worker != null) {
                         workers.add(worker);
                     }
@@ -78,11 +82,11 @@ public class JobScheduler {
                 for (Submit submit : submits) {
                     String host = getMaxFreeMemory(workers);
                     if (!zkClientService.exists(assignmentsPath + "/" + host)) {
-                        zkClientService.create(assignmentsPath + "/" + host, "1".getBytes(StandardCharsets.UTF_8), CreateMode.PERSISTENT);
+                        zkClientService.create(assignmentsPath + "/" + host, 1, CreateMode.PERSISTENT);
                     }
                     zkClientService.create(
                             assignmentsPath + "/" + host + "/" + submit.getJob().getJobId(),
-                            ObjectByteConvert.obj2Byte(JSON.toJSONString(submit)),
+                            submit,
                             CreateMode.PERSISTENT);
                 }
 

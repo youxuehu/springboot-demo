@@ -1,5 +1,6 @@
 package com.example.springbootdemo.daemon;
 
+import com.alibaba.fastjson.JSON;
 import com.example.common.db.service.zk.ZkClientService;
 import com.example.common.utils.InetAddressUtil;
 import com.example.springbootdemo.manager.ExecutionContext;
@@ -38,7 +39,11 @@ public class JobFetcher {
             String assignmentsPath = zkClientService.getZkPath4Assignments();
             taskPath = assignmentsPath + "/" + InetAddressUtil.getLocalHost();
             jobList = zkClientService.ls(taskPath);
-            LOGGER.warn("fetch jobs list: {}", jobList);
+            if (CollectionUtils.isEmpty(jobList)) {
+                LOGGER.warn("fetch jobs list is empty");
+                return;
+            }
+            LOGGER.warn("fetch jobs size: {},  list: {}", jobList.size(), JSON.toJSONString(jobList, true));
             final String finalTaskPath = taskPath;
             jobList.forEach(item -> {
                 Submit submit = zkClientService.getData(finalTaskPath + "/" +item, Submit.class);

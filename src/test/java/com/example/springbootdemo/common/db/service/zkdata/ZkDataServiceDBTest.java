@@ -29,7 +29,7 @@ public class ZkDataServiceDBTest extends SpringbootDemoApplicationTests {
         zkData.setGmtCreate(new Date());
         byte[] bytes = ObjectByteConvert.obj2Byte(zkData);
         zkData.setData(bytes);
-        zkClientService.create(submittedPath, bytes, CreateMode.PERSISTENT);
+        zkClientService.create(submittedPath, zkData, CreateMode.PERSISTENT);
     }
 
 
@@ -45,7 +45,7 @@ public class ZkDataServiceDBTest extends SpringbootDemoApplicationTests {
 
         byte[] bytes = ObjectByteConvert.obj2Byte(ObjectConverter.obj2Json(zkData));
         zkData.setData(bytes);
-        zkClientService.create(submittedPath, bytes, CreateMode.PERSISTENT);
+        zkClientService.create(submittedPath, zkData, CreateMode.PERSISTENT);
 
         ZkData data = zkClientService.getData(submittedPath, ZkData.class);
         System.out.println(ObjectConverter.obj2Json(data));

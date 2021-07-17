@@ -92,7 +92,7 @@ public class JobManagerImpl implements JobManager, InitializingBean {
         Submit submit = new Submit(job, false);
         zkClientService.create(
                 zkClientService.getZkPath4SubmittedJobs() + "/" + jobId,
-                ObjectByteConvert.obj2Byte(JSON.toJSONString(submit)),
+                submit,
                 CreateMode.PERSISTENT);
         Submit sub = zkClientService.getData(zkClientService.getZkPath4SubmittedJobs() + "/" + jobId, Submit.class);
         System.out.println("sub: " + sub);
