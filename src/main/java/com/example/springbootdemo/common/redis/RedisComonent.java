@@ -19,7 +19,7 @@ public class RedisComonent implements InitializingBean {
     @Autowired
     RedisTemplate redisTemplate;
 
-    @Autowired @Qualifier("redisCacheServiceImpl")
+    @Autowired @Qualifier("redis")
     CacheService cacheService;
 
     @Override

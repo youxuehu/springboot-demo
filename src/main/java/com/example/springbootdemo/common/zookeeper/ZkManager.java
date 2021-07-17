@@ -20,7 +20,7 @@ public class ZkManager implements InitializingBean {
     @Autowired
     private ZkService zkService;
 
-    @Autowired @Qualifier(value = "zkClientService")
+    @Autowired
     private ZkClientService zkClientService;
 
     public void createNode() {

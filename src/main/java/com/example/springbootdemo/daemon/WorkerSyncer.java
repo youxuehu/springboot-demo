@@ -21,7 +21,7 @@ public class WorkerSyncer implements InitializingBean {
 
     private ScheduledExecutorService executorService = Executors.newScheduledThreadPool(2);
 
-    @Autowired @Qualifier(value = "zkClientService")
+    @Autowired
     private ZkClientService zkClientService;
 
     @Override

@@ -27,7 +27,7 @@ public class JobScheduler {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(JobScheduler.class);
 
-    @Autowired @Qualifier(value = "zkClientService")
+    @Autowired
     private ZkClientService zkClientService;
 
     private String getMaxFreeMemory(List<Worker> workers) {

@@ -41,7 +41,7 @@ public class LoginController extends BaseController {
     private static final Logger LOGGER = LoggerFactory.getLogger(LoginController.class);
 
     @Autowired
-    @Qualifier("redisCacheServiceImpl")
+    @Qualifier("redis")
     CacheService cacheService;
 
     @Autowired

@@ -39,7 +39,7 @@ public class ExecuteAjaxController extends BaseController {
     @Autowired
     ExecutionLogService executionLogService;
 
-    @Autowired @Qualifier(value = "zkClientService")
+    @Autowired
     ZkClientService zkClientService;
 
     /**

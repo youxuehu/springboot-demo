@@ -28,7 +28,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableAsync
 @ImportResource(locations = {"classpath:applicationContext.xml"})
 @ForestScan(basePackages = "com.example.common.utils.http.api")
-@ComponentScan(value = "com.example.common.db")
+@ComponentScan(basePackages = {"com.example.common,com.example.springbootdemo"})
 public class SpringbootDemoApplication implements ApplicationRunner {
     private static final Logger LOGGER = LoggerFactory.getLogger(SpringbootDemoApplication.class);
 

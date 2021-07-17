@@ -24,7 +24,7 @@ public class JobFetcher {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(JobFetcher.class);
 
-    @Autowired @Qualifier(value = "zkClientService")
+    @Autowired
     private ZkClientService zkClientService;
 
     @Autowired

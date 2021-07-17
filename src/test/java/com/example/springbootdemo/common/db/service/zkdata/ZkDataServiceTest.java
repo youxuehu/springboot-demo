@@ -14,7 +14,7 @@ import java.util.Date;
 
 public class ZkDataServiceTest extends SpringbootDemoApplicationTests {
 
-    @Autowired @Qualifier(value = "zkClientService")
+    @Autowired
     ZkClientService zkClientService;
 
     @Test

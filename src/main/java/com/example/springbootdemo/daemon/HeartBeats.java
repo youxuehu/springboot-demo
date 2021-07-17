@@ -26,7 +26,7 @@ public class HeartBeats {
 
     private ScheduledThreadPoolExecutor scheduledThreadPoolExecutor;
 
-    @Autowired @Qualifier(value = "zkClientService")
+    @Autowired
     ZkClientService zkClientService;
 
     @Scheduled(fixedRate = 3000)
