@@ -1,7 +1,7 @@
 package com.example.springbootdemo.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.example.springbootdemo.controller.userinfos.param.SessionInfo;
+import com.example.common.utils.holder.SessionInfo;
 import com.example.springbootdemo.vo.TestVO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1014,6 +1014,21 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
+        <!-- dubbo api -->
+        <dependency>
+            <groupId>org.example</groupId>
+            <artifactId>job-dubbo-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!--引入dubbo环境-->
+        <dependency>
+            <groupId>com.alibaba.boot</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+            <version>0.2.0</version>
+        </dependency>
     </dependencies>
 
     <dependencyManagement>

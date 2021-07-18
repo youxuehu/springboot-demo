@@ -14,7 +14,7 @@ import java.util.concurrent.ScheduledThreadPoolExecutor;
  */
 
 @Configuration
-public class ThreadPoolBean {
+public class ThreadPoolConfig {
 
     @Bean
     public ScheduledThreadPoolExecutor scheduledThreadPoolExecutor() {

@@ -3,11 +3,11 @@ package com.example.springbootdemo.common.aop;
 import com.example.common.anno.Log;
 import com.example.common.db.dao.adminoperatelog.mapper.AdminOperateLogMapper;
 import com.example.common.db.dao.adminoperatelog.model.AdminOperateLog;
-import com.example.springbootdemo.holder.ThreadLocalHolder;
+import com.example.common.utils.holder.SessionInfoHolder;
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 import java.lang.reflect.Method;
 import java.util.Date;
 
@@ -16,6 +16,7 @@ import java.util.Date;
  * 	AfterReturningAdvice    后置的额外功能
  * 	MethodInterceptor        环绕的额外功能
  */
+@Component
 public class LogHandlerAdapter implements MethodInterceptor {
 
     @Autowired
@@ -28,7 +29,8 @@ public class LogHandlerAdapter implements MethodInterceptor {
         String value = annotation.value();
         AdminOperateLog adminOperateLog = new AdminOperateLog();
         adminOperateLog.setContent(value);
-        adminOperateLog.setOperator(ThreadLocalHolder.get() == null ? "系统自动" : ThreadLocalHolder.get().getUserName());
+        adminOperateLog.setOperator(SessionInfoHolder.get() == null ?
+                "系统自动" : SessionInfoHolder.get().getUserName());
         adminOperateLog.setGmtCreate(new Date());
         adminOperateLogMapper.insertSelective(adminOperateLog);
         Object result = methodInvocation.proceed();

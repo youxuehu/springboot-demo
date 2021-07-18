@@ -37,7 +37,6 @@
             </mvc:interceptor>
         </mvc:interceptors>
 
-    <bean id="logHandlerAdapter" class="com.example.springbootdemo.common.aop.LogHandlerAdapter"/>
     <aop:config>
         <aop:pointcut id="logPC" expression="@annotation(com.example.common.anno.Log)"/>
         <aop:advisor advice-ref="logHandlerAdapter" pointcut-ref="logPC"/>

@@ -5,8 +5,8 @@ import com.alibaba.fastjson.TypeReference;
 import com.example.common.db.dao.permission.mapper.PermissionMapper;
 import com.example.common.db.dao.permission.model.Permission;
 import com.example.common.db.dao.permission.model.PermissionExample;
+import com.example.common.utils.holder.SessionInfo;
 import com.example.springbootdemo.common.cache.CacheService;
-import com.example.springbootdemo.controller.userinfos.param.SessionInfo;
 import com.example.springbootdemo.utils.CookieUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
@@ -23,13 +23,17 @@ import java.util.List;
 import static com.example.common.utils.constant.CommonConst.SESSION_KET;
 
 public class AdminInterceptor extends HandlerInterceptorAdapter {
+
     private static final Logger LOGGER = LoggerFactory.getLogger(AdminInterceptor.class);
+
     @Value("${admin.userNumber}")
     private String userNumber;
 
     @Autowired
     PermissionMapper permissionMapper;
 
+    @Autowired
+    @Qualifier("redis")
     CacheService cacheService;
 
     @Override
@@ -69,9 +73,5 @@ public class AdminInterceptor extends HandlerInterceptorAdapter {
         condition.createCriteria().andUsernumberEqualTo(userNumber);
         List<Permission> permissions = permissionMapper.selectByExample(condition);
         return CollectionUtils.isEmpty(permissions) ? false : true;
-    }
-
-    public void setCacheService(CacheService cacheService) {
-        this.cacheService = cacheService;
     }
 }

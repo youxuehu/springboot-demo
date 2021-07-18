@@ -1,21 +1,19 @@
 package com.example.springbootdemo.controller.execution;
 
+import com.alibaba.dubbo.config.annotation.Reference;
 import com.example.common.db.dao.executionlog.model.ExecutionLog;
 import com.example.common.db.dao.zkdata.model.ZkData;
 import com.example.common.db.service.executionlog.ExecutionLogService;
 import com.example.common.db.service.zk.ZkClientService;
-import com.example.common.utils.ObjectByteConvert;
-import com.example.common.utils.ObjectConverter;
 import com.example.common.utils.UUIDUtil;
 import com.example.springbootdemo.controller.BaseController;
 import com.example.springbootdemo.controller.execution.param.ParamVo;
-import com.example.springbootdemo.manager.JobManager;
 import org.apache.commons.lang.StringUtils;
 import org.apache.zookeeper.CreateMode;
+import org.example.dubbo.api.job.JobControlService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -33,8 +31,8 @@ public class ExecuteAjaxController extends BaseController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ExecuteAjaxController.class);
 
-    @Autowired
-    JobManager jobManager;
+    @Reference
+    JobControlService jobControlService;
 
     @Autowired
     ExecutionLogService executionLogService;
@@ -54,7 +52,7 @@ public class ExecuteAjaxController extends BaseController {
         if (StringUtils.isBlank(cmd)) {
             return error("errorMessage", "cmd为空");
         }
-        String jobId = jobManager.submit(cmd);
+        String jobId = jobControlService.submit(cmd);
         return success("jobId", jobId);
     }
 

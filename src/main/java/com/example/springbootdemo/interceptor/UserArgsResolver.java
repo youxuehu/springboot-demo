@@ -1,7 +1,7 @@
 package com.example.springbootdemo.interceptor;
 
-import com.example.springbootdemo.controller.userinfos.param.SessionInfo;
-import com.example.springbootdemo.holder.ThreadLocalHolder;
+import com.example.common.utils.holder.SessionInfo;
+import com.example.common.utils.holder.SessionInfoHolder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.MethodParameter;
@@ -21,8 +21,9 @@ public class UserArgsResolver implements HandlerMethodArgumentResolver {
     }
 
     @Override
-    public Object resolveArgument(MethodParameter parameter, ModelAndViewContainer mavContainer, NativeWebRequest webRequest, WebDataBinderFactory binderFactory) throws Exception {
+    public Object resolveArgument(MethodParameter parameter, ModelAndViewContainer mavContainer,
+                                  NativeWebRequest webRequest, WebDataBinderFactory binderFactory) throws Exception {
         LOGGER.info("<<<<<<<<<<< 获取用户 >>>>>>>>>>>>>>>");
-        return ThreadLocalHolder.get();
+        return SessionInfoHolder.get();
     }
 }

@@ -2,9 +2,9 @@ package com.example.springbootdemo.interceptor;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.example.common.utils.holder.SessionInfo;
+import com.example.common.utils.holder.SessionInfoHolder;
 import com.example.springbootdemo.common.cache.CacheService;
-import com.example.springbootdemo.controller.userinfos.param.SessionInfo;
-import com.example.springbootdemo.holder.ThreadLocalHolder;
 import com.example.springbootdemo.utils.CookieUtil;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
@@ -19,6 +19,7 @@ import javax.servlet.http.HttpServletResponse;
 import static com.example.common.utils.constant.CommonConst.SESSION_KET;
 
 public class LoginCheckInterceptor extends HandlerInterceptorAdapter {
+
     private static final Logger LOGGER = LoggerFactory.getLogger(LoginCheckInterceptor.class);
 
     @Autowired
@@ -26,7 +27,8 @@ public class LoginCheckInterceptor extends HandlerInterceptorAdapter {
     CacheService cacheService;
 
     @Override
-    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
+            throws Exception {
         LOGGER.info("登录拦截器");
         LOGGER.info(request.getRequestURL().toString());
         if (checkLogin(request)) {
@@ -72,7 +74,7 @@ public class LoginCheckInterceptor extends HandlerInterceptorAdapter {
             return true;
         }
         // 存线程里面
-        ThreadLocalHolder.set(JSON.parseObject(cacheValue, SessionInfo.class));
+        SessionInfoHolder.set(JSON.parseObject(cacheValue, SessionInfo.class));
         request.getSession().setAttribute(SESSION_KET, JSON.parseObject(cacheValue));
         return false;
     }

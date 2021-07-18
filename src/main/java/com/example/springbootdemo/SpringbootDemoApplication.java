@@ -1,5 +1,6 @@
 package com.example.springbootdemo;
 
+import com.alibaba.dubbo.config.spring.context.annotation.EnableDubbo;
 import com.example.common.db.service.testspring.TestSpringService;
 import com.thebeastshop.forest.springboot.annotation.ForestScan;
 import lombok.extern.slf4j.Slf4j;
@@ -23,12 +24,13 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 //@ComponentScan("com.tiger.elasticsearch")
 @MapperScan(basePackages={"com.example.common.**.mapper"})
 //@Order(1)
-@EnableScheduling
-@EnableCaching
-@EnableAsync
 @ImportResource(locations = {"classpath:applicationContext.xml"})
 @ForestScan(basePackages = "com.example.common.utils.http.api")
 @ComponentScan(basePackages = {"com.example.common,com.example.springbootdemo"})
+@EnableScheduling
+@EnableCaching
+@EnableAsync
+@EnableDubbo
 public class SpringbootDemoApplication implements ApplicationRunner {
     private static final Logger LOGGER = LoggerFactory.getLogger(SpringbootDemoApplication.class);
 

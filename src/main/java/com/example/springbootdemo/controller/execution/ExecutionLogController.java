@@ -37,7 +37,7 @@ public class ExecutionLogController {
         int offSet = pageIndex == 1 ? pageSize * (pageIndex - 1) : pageSize * (pageIndex - 1) + 1;
         condition.setLimitStart(offSet);
         condition.setLimitEnd(pageSize);
-        condition.setOrderByClause("id desc");
+        condition.setOrderByClause("id ASC");
         List<ExecutionLog> executionLogs = executionLogMapper.selectByExampleWithBLOBs(condition);
         result.setTotal(total);
         result.setPageIndex(pageIndex);
