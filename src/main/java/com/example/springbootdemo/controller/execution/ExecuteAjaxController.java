@@ -5,6 +5,7 @@ import com.example.common.db.dao.executionlog.model.ExecutionLog;
 import com.example.common.db.dao.zkdata.model.ZkData;
 import com.example.common.db.service.executionlog.ExecutionLogService;
 import com.example.common.db.service.zk.ZkClientService;
+import com.example.common.model.RequestContext;
 import com.example.common.utils.UUIDUtil;
 import com.example.springbootdemo.controller.BaseController;
 import com.example.springbootdemo.controller.execution.param.ParamVo;
@@ -21,6 +22,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
 import java.nio.charset.StandardCharsets;
 import java.util.Date;
 import java.util.List;
@@ -47,12 +49,13 @@ public class ExecuteAjaxController extends BaseController {
      */
     @RequestMapping("/execute")
     @ResponseBody
-    public ModelMap execute(@RequestBody ParamVo paramVo) {
+    public ModelMap execute(HttpServletRequest request, @RequestBody ParamVo paramVo) {
         String cmd = paramVo.getCmd();
         if (StringUtils.isBlank(cmd)) {
             return error("errorMessage", "cmd为空");
         }
-        String jobId = jobControlService.submit(cmd);
+        RequestContext requestContext = initRequestContext(request);
+        String jobId = jobControlService.submit(requestContext, cmd);
         return success("jobId", jobId);
     }
 
