@@ -16,7 +16,7 @@ public class MyController extends BaseController {
     @ResponseBody
     @RequestMapping()
     public ModelMap model(HttpServletRequest request, HttpServletResponse response) {
-        return success("name", "jack", "age", 20, "message", "I am jack");
+        return success(request, "name", "jack", "age", 20, "message", "I am jack");
     }
 
     @Autowired

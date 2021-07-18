@@ -10,6 +10,8 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
+
 @Controller
 public class SessionInfoController extends BaseController {
 
@@ -17,13 +19,13 @@ public class SessionInfoController extends BaseController {
 
     @RequestMapping("/session")
     @ResponseBody
-    public ModelMap session(SessionInfo sessionInfo, TestVO testVO) {
+    public ModelMap session(HttpServletRequest request, SessionInfo sessionInfo, TestVO testVO) {
         if (LOGGER.isInfoEnabled()) {
             LOGGER.info("sessionInfo=>" + JSON.toJSONString(sessionInfo));
         }
         if (LOGGER.isInfoEnabled()) {
             LOGGER.info("testVO=>" + JSON.toJSONString(testVO));
         }
-        return success("sessionInfo", sessionInfo, "testVO", testVO);
+        return success(request, "sessionInfo", sessionInfo, "testVO", testVO);
     }
 }

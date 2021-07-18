@@ -23,11 +23,11 @@ public class BaseController {
         return requestContextService.initRequestContext(request);
     }
 
-    protected ModelMap success(Object... param) {
+    protected ModelMap success(HttpServletRequest request, Object... param) {
+        String requestUrl = request.getRequestURL().toString();
         ModelMap modelMap = new ModelMap();
         modelMap.put("success", true);
         if (param.length == 0) {
-            LOGGER.info(JSON.toJSONString(modelMap, true));
             return modelMap;
         }
         if (param.length % 2 == 1) {
@@ -45,11 +45,12 @@ public class BaseController {
             }
         }
         modelMap.put("data", data);
-        LOGGER.info(JSON.toJSONString(modelMap, true));
+        LOGGER.info(requestUrl + " ------> " + JSON.toJSONString(modelMap, true));
         return modelMap;
     }
 
-    protected ModelMap error(Object... param) {
+    protected ModelMap error(HttpServletRequest request, Object... param) {
+        String requestUrl = request.getRequestURL().toString();
         ModelMap modelMap = new ModelMap();
         modelMap.put("success", false);
         if (param.length == 0) {
@@ -70,7 +71,7 @@ public class BaseController {
                 modelMap.put((String) key, value);
             }
         }
-        LOGGER.error(JSON.toJSONString(modelMap, true));
+        LOGGER.info(requestUrl + " ------> " + JSON.toJSONString(modelMap, true));
         return modelMap;
     }
 }

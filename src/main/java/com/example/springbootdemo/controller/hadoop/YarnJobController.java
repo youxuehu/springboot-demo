@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
+
+import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -51,7 +53,7 @@ public class YarnJobController extends BaseController {
      */
     @RequestMapping("submit")
     @ResponseBody
-    public ModelMap submit(TaskVO taskVO) {
+    public ModelMap submit(HttpServletRequest request, TaskVO taskVO) {
         List<String> cmds = new ArrayList<>();
         MultipartFile jarPath = taskVO.getJarPath();
         if (jarPath.isEmpty()) {
@@ -61,7 +63,7 @@ public class YarnJobController extends BaseController {
         String jarFilePath = "/tmp/" + jarFileName;
         try {
             if (!hdfs2Utils.isExistsFile(taskVO.getInputPath())) {
-                return error("errorMessage", "input path not exists!");
+                return error(request, "errorMessage", "input path not exists!");
             }
             hdfs2Utils.delete(taskVO.getOutputPath());
             InputStream inputStream = jarPath.getInputStream();
@@ -85,11 +87,11 @@ public class YarnJobController extends BaseController {
                 }
             }
             if (StringUtils.isBlank(appId)) {
-                return error("errorMessage", logs);
+                return error(request, "errorMessage", logs);
             }
-            return success("appId", appId);
+            return success(request, "appId", appId);
         } catch (Exception e) {
-            return error("errorMessage", e.toString());
+            return error(request, "errorMessage", e.toString());
         } finally {
             try {
                 FileUtils.forceDeleteOnExit(new File(jarFilePath));
@@ -106,7 +108,7 @@ public class YarnJobController extends BaseController {
      */
     @RequestMapping("queryStatus")
     @ResponseBody
-    public ModelMap queryStatus(String appId) {
+    public ModelMap queryStatus(HttpServletRequest request, String appId) {
         List<String> cmds = new ArrayList<>();
         cmds.add("/bin/sh");
         cmds.add("-c");
@@ -120,24 +122,24 @@ public class YarnJobController extends BaseController {
                     break;
                 }
             }
-            return success("status", status);
+            return success(request, "status", status);
         } catch (Exception e) {
-            return error("errorMessage", e.toString());
+            return error(request, "errorMessage", e.toString());
         }
     }
 
     @RequestMapping("queryLog")
     @ResponseBody
-    public ModelMap queryLog(@RequestParam String appId) {
+    public ModelMap queryLog(HttpServletRequest request, @RequestParam String appId) {
         List<String> cmds = new ArrayList<>();
         cmds.add("/bin/sh");
         cmds.add("-c");
         cmds.add(yarnClient + " logs -applicationId " + appId);
         try {
             List<String> logs = runShell(cmds);
-            return success("logs", logs);
+            return success(request, "logs", logs);
         } catch (Exception e) {
-            return error("errorMessage", e.toString());
+            return error(request, "errorMessage", e.toString());
         }
     }
 }

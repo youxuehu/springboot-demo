@@ -52,22 +52,22 @@ public class ExecuteAjaxController extends BaseController {
     public ModelMap execute(HttpServletRequest request, @RequestBody ParamVo paramVo) {
         String cmd = paramVo.getCmd();
         if (StringUtils.isBlank(cmd)) {
-            return error("errorMessage", "cmd为空");
+            return error(request, "errorMessage", "cmd为空");
         }
         RequestContext requestContext = initRequestContext(request);
         String jobId = jobControlService.submit(requestContext, cmd);
-        return success("jobId", jobId);
+        return success(request, "jobId", jobId);
     }
 
     @RequestMapping("/queryLog")
     @ResponseBody
-    public ModelMap queryLog(@RequestParam String jobId) {
+    public ModelMap queryLog(HttpServletRequest request, @RequestParam String jobId) {
         List<ExecutionLog> logs = executionLogService.queryLogsByJobIds(jobId);
-        return success("logs", logs);
+        return success(request, "logs", logs);
     }
 
     @RequestMapping("/exec/task")
-    public ModelMap exec(String content) {
+    public ModelMap exec(HttpServletRequest request, String content) {
         String submittedPath = zkClientService.getZkPath4SubmittedJobs();
         String jobId = UUIDUtil.getUniqueId().toString();
         String subPath = submittedPath + "/" + jobId;
@@ -81,6 +81,6 @@ public class ExecuteAjaxController extends BaseController {
                 subPath,
                 zkData,
                 CreateMode.EPHEMERAL);
-        return success("success", true);
+        return success(request, "success", true);
     }
 }

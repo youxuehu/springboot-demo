@@ -99,7 +99,7 @@ public class LoginController extends BaseController {
     public ModelMap logout(HttpServletRequest request, HttpServletResponse response) {
         LOGGER.info("登出");
         removeCookie(request, response);
-        return success();
+        return success(request);
     }
 
     @RequestMapping("/doLogin")
@@ -115,37 +115,37 @@ public class LoginController extends BaseController {
 //            model.addAttribute("errorMessage", "userName不能为空");
 //            return "login";
             String message = i18nMessageUtil.getMessage(ErrorCodeEnum.USER_NAME_IS_NULL.getCode());
-            return error("errorMessage", message);
+            return error(request, "errorMessage", message);
         }
         if (StringUtils.isBlank(password)) {
             LOGGER.error("password不能为空");
 //            model.addAttribute("errorMessage", "password不能为空");
 //            return "login";
             String message = i18nMessageUtil.getMessage(ErrorCodeEnum.USER_PASSWORD_IS_NULL.getCode());
-            return error("errorMessage", message);
+            return error(request, "errorMessage", message);
         }
         if (!BloomFilterCache.bloomFilter.check(userName)) {
             LOGGER.error("该用户不存在（未通过布隆过滤器）");
             String message = i18nMessageUtil.getMessage(ErrorCodeEnum.USER_NOT_FOUND_WITH_BLOOM_FILTER.getCode());
-            return error("errorMessage", String.format(message, userName));
+            return error(request, "errorMessage", String.format(message, userName));
         }
         Admin admin = adminService.queryById(userName);
         if (admin == null) {
             LOGGER.error("errorMessage", "用户" + userName + "不存在");
             String message = i18nMessageUtil.getMessage(ErrorCodeEnum.USER_NOT_FOUND.getCode());
-            return error("errorMessage", String.format(message, userName));
+            return error(request, "errorMessage", String.format(message, userName));
         }
         String contractPassword = MD5Util.addSalt(password, admin.getSalt());
         String passWordDB = admin.getPassWord();
         if (!StringUtils.equals(passWordDB, contractPassword)) {
             LOGGER.error("用户名或密码不正确");
             String message = i18nMessageUtil.getMessage(ErrorCodeEnum.USER_OR_PASSWORD_ERROR.getCode());
-            return error("errorMessage", message);
+            return error(request, "errorMessage", message);
         }
         SessionInfo sessionInfo = new SessionInfo(userName, admin.getNickName());
         storeCookie(request, response, sessionInfo);
 //        return "redirect:/jobManager";
-        return success();
+        return success(request);
     }
 
     @RequestMapping("/doLogin2")
