@@ -1,29 +1,7 @@
-2020-11-12 21:45:47,552 INFO  main                             - Welcome! Loading SOFA RPC Framework : 5.4.7_20181025093119, PID is:3608
-2020-11-12 21:45:47,559 INFO  main                             - Install Module: fault-tolerance
-2020-11-12 21:45:47,563 INFO  main                             - Install Module: sofaTracer-resteasy
-2020-11-12 21:45:47,582 INFO  main                             - The module lookout does not need to be loaded.
-2020-11-12 21:45:47,582 INFO  main                             - Install Module: sofaTracer
-2020-11-12 21:45:47,611 INFO  main                             - Refer consumer config : h2c://org.example.service.HelloSyncService: with bean id helloSyncGenericServiceReference
-2020-11-12 21:45:48,217 INFO  main                             - Refer consumer config : h2c://org.example.service.TestService: with bean id testGenericServiceReference
-2020-11-12 22:00:33,414 WARN  SOFA-RPC-ShutdownHook            - SOFA RPC Framework catch JVM shutdown event, Run shutdown hook now.
-2020-11-12 22:00:33,415 INFO  SOFA-RPC-ShutdownHook            - UnRefer consumer config : h2c://org.example.service.TestService: with bean id testGenericServiceReference
-2020-11-12 22:00:33,416 INFO  SOFA-RPC-ShutdownHook            - UnRefer consumer config : h2c://org.example.service.HelloSyncService: with bean id helloSyncGenericServiceReference
-2020-11-12 22:00:33,417 INFO  SOFA-RPC-ShutdownHook            - Uninstall Module: fault-tolerance
-2020-11-12 22:00:33,417 INFO  SOFA-RPC-ShutdownHook            - Uninstall Module: sofaTracer-resteasy
-2020-11-12 22:00:33,417 INFO  SOFA-RPC-ShutdownHook            - Uninstall Module: sofaTracer
-2020-11-12 22:00:33,417 WARN  SOFA-RPC-ShutdownHook            - SOFA RPC Framework has been release all resources ...
-2020-11-12 22:00:48,775 INFO  main                             - Welcome! Loading SOFA RPC Framework : 5.4.7_20181025093119, PID is:3927
-2020-11-12 22:00:48,781 INFO  main                             - Install Module: fault-tolerance
-2020-11-12 22:00:48,785 INFO  main                             - Install Module: sofaTracer-resteasy
-2020-11-12 22:00:48,803 INFO  main                             - The module lookout does not need to be loaded.
-2020-11-12 22:00:48,803 INFO  main                             - Install Module: sofaTracer
-2020-11-12 22:00:48,821 INFO  main                             - Refer consumer config : h2c://org.example.service.HelloSyncService: with bean id helloSyncGenericServiceReference
-2020-11-12 22:00:49,218 INFO  main                             - Refer consumer config : h2c://org.example.service.TestService: with bean id testGenericServiceReference
-2020-11-12 22:01:25,763 INFO  http-nio-8888-exec-1             - Load tracer impl success: sofaTracer, com.alipay.sofa.rpc.tracer.sofatracer.RpcSofaTracer@288066c5
-2020-11-12 22:02:04,370 WARN  SOFA-RPC-ShutdownHook            - SOFA RPC Framework catch JVM shutdown event, Run shutdown hook now.
-2020-11-12 22:02:04,371 INFO  SOFA-RPC-ShutdownHook            - UnRefer consumer config : h2c://org.example.service.HelloSyncService: with bean id helloSyncGenericServiceReference
-2020-11-12 22:02:04,372 INFO  SOFA-RPC-ShutdownHook            - UnRefer consumer config : h2c://org.example.service.TestService: with bean id testGenericServiceReference
-2020-11-12 22:02:04,373 INFO  SOFA-RPC-ShutdownHook            - Uninstall Module: fault-tolerance
-2020-11-12 22:02:04,373 INFO  SOFA-RPC-ShutdownHook            - Uninstall Module: sofaTracer-resteasy
-2020-11-12 22:02:04,373 INFO  SOFA-RPC-ShutdownHook            - Uninstall Module: sofaTracer
-2020-11-12 22:02:04,373 WARN  SOFA-RPC-ShutdownHook            - SOFA RPC Framework has been release all resources ...
+2024-07-03 21:56:57,744 INFO  main                             - Welcome! Loading SOFA RPC Framework : 5.4.7_20181025093119, PID is:7363
+2024-07-03 21:56:57,812 INFO  main                             - Install Module: fault-tolerance
+2024-07-03 21:56:57,930 INFO  main                             - Install Module: sofaTracer-resteasy
+2024-07-03 21:56:58,028 INFO  main                             - The module lookout does not need to be loaded.
+2024-07-03 21:56:58,029 INFO  main                             - Install Module: sofaTracer
+2024-07-03 21:56:58,089 INFO  main                             - Refer consumer config : h2c://org.example.service.HelloSyncService: with bean id helloSyncGenericServiceReference
+2024-07-03 21:56:58,317 INFO  main                             - Refer consumer config : h2c://org.example.service.TestService: with bean id testGenericServiceReference

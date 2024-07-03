@@ -1,4 +1,2 @@
-2020-11-12 21:45:47.578[WARN]  rpc-client-stat.log configured stat_log_interval=60 second and default cycle=60
-2020-11-12 21:45:47.580[WARN]  rpc-server-stat.log configured stat_log_interval=60 second and default cycle=60
-2020-11-12 22:00:48.798[WARN]  rpc-client-stat.log configured stat_log_interval=60 second and default cycle=60
-2020-11-12 22:00:48.801[WARN]  rpc-server-stat.log configured stat_log_interval=60 second and default cycle=60
+2024-07-03 21:56:57.978[WARN]  rpc-client-stat.log configured stat_log_interval=60 second and default cycle=60
+2024-07-03 21:56:58.010[WARN]  rpc-server-stat.log configured stat_log_interval=60 second and default cycle=60

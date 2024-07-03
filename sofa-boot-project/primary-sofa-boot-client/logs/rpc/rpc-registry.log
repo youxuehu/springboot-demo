@@ -1,2 +1,1 @@
-2020-11-12 21:45:47,632 INFO  main                             com.alipay.sofa.rpc.registry.local.LocalRegistryHelper - Load backup file from /Users/youxuehu/localFileRegistry/localRegistry.reg
-2020-11-12 22:00:48,840 INFO  main                             com.alipay.sofa.rpc.registry.local.LocalRegistryHelper - Load backup file from /Users/youxuehu/localFileRegistry/localRegistry.reg
+2024-07-03 21:56:58,149 INFO  main                             com.alipay.sofa.rpc.registry.local.LocalRegistryHelper - Load backup file from /Users/youxuehu/localFileRegistry/localRegistry.reg
