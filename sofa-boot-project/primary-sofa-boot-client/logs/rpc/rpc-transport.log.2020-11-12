@@ -1,0 +1,4 @@
+2020-11-12 22:00:33,417 INFO  SOFA-RPC-ShutdownHook            com.alipay.sofa.rpc.transport.ClientTransportFactory - Shutdown all client transport now!
+2020-11-12 22:02:04,359 INFO  SOFA-CLI-IO-6-T1                 com.alipay.sofa.rpc.transport.http.Http2ClientChannelHandler - Channel inactive: [id: 0x4b5e3d46, L:/192.168.8.238:50249 ! R:/192.168.8.238:12300]
+2020-11-12 22:02:04,358 INFO  SOFA-CLI-IO-6-T2                 com.alipay.sofa.rpc.transport.http.Http2ClientChannelHandler - Channel inactive: [id: 0x4d0a30bd, L:/192.168.8.238:50250 ! R:/192.168.8.238:12300]
+2020-11-12 22:02:04,373 INFO  SOFA-RPC-ShutdownHook            com.alipay.sofa.rpc.transport.ClientTransportFactory - Shutdown all client transport now!

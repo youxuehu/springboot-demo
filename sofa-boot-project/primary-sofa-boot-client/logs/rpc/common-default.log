@@ -5,3 +5,10 @@
 2024-07-03 21:56:58,029 INFO  main                             - Install Module: sofaTracer
 2024-07-03 21:56:58,089 INFO  main                             - Refer consumer config : h2c://org.example.service.HelloSyncService: with bean id helloSyncGenericServiceReference
 2024-07-03 21:56:58,317 INFO  main                             - Refer consumer config : h2c://org.example.service.TestService: with bean id testGenericServiceReference
+2024-07-03 22:02:33,898 WARN  SOFA-RPC-ShutdownHook            - SOFA RPC Framework catch JVM shutdown event, Run shutdown hook now.
+2024-07-03 22:02:33,920 INFO  SOFA-RPC-ShutdownHook            - UnRefer consumer config : h2c://org.example.service.TestService: with bean id testGenericServiceReference
+2024-07-03 22:02:33,921 INFO  SOFA-RPC-ShutdownHook            - UnRefer consumer config : h2c://org.example.service.HelloSyncService: with bean id helloSyncGenericServiceReference
+2024-07-03 22:02:33,925 INFO  SOFA-RPC-ShutdownHook            - Uninstall Module: fault-tolerance
+2024-07-03 22:02:33,925 INFO  SOFA-RPC-ShutdownHook            - Uninstall Module: sofaTracer-resteasy
+2024-07-03 22:02:33,925 INFO  SOFA-RPC-ShutdownHook            - Uninstall Module: sofaTracer
+2024-07-03 22:02:33,926 WARN  SOFA-RPC-ShutdownHook            - SOFA RPC Framework has been release all resources ...
