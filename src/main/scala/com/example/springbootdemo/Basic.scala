@@ -1,9 +1,8 @@
 package com.example.springbootdemo
 
-import org.apache.spark.{SparkConf, SparkContext}
+//import org.apache.spark.{SparkConf, SparkContext}
 
 class Basic {
-
 }
 
 object Basic {
