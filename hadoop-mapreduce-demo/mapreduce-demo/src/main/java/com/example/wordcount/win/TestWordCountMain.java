@@ -23,8 +23,8 @@ public class TestWordCountMain {
     public static void main(String[] args) {
         try {
             Configuration conf =new Configuration();
-            conf.addResource("core-site.xml");
-            conf.addResource("hdfs-site.xml");
+            conf.addResource("core-site.xml.bak");
+            conf.addResource("hdfs-site.xml.bak");
             conf.addResource("mapred-site.xml");
             conf.addResource("yarn-site.xml");
             System.setProperty("HADOOP_USER_NAME", "root");

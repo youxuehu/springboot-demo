@@ -15,8 +15,8 @@ import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
 public class Main {
     public static void main(String[] args) {
         Configuration conf = new Configuration();
-        conf.addResource("core-site.xml");
-        conf.addResource("hdfs-site.xml");
+        conf.addResource("core-site.xml.bak");
+        conf.addResource("hdfs-site.xml.bak");
         conf.addResource("yarn-site.xml");
         conf.addResource("mapred-site.xml");
         conf.set("fs.defaultFS", "hdfs://master:9000");

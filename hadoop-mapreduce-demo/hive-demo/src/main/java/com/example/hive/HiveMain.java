@@ -18,7 +18,7 @@ import java.sql.Statement;
  * mv hive-hwi-1.2.1.tar.gz hive-hwi-1.2.1.war
  * hive-hwi-1.2.1.war
  * 增加hwi服务的配置
- * hive-site.xml 添加属性
+ * hive-site.xml.bak 添加属性
  *     <property>
  *         <name>hive.querylog.location</name>
  *         <value>/usr/hive/log</value>
